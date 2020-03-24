@@ -24,21 +24,17 @@ fig/A0301-pt-02-HPistCylPlot.pdf: fig/A0301-pt-02-HPistCylPlot.svg
 		--file=fig/A0301-pt-02-HPistCylPlot.svg \
 		--export-pdf=fig/A0301-pt-02-HPistCylPlot.pdf
 
-${PRES}.pdf: ${PRES}.tex bibfile.bib \
+${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		root/00-res/logo/CNThermSci-logo-A.pdf \
 		fig/A0301-pt-01-VPistCyl.pdf \
 		fig/A0301-pt-02-HPistCylPlot.pdf
 	pdflatex --enable-write18 ${PRES}.tex
-	bibtex ${PRES}
-	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
 
-${HOUT}.pdf: ${HOUT}.tex bibfile.bib \
+${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		../../../../00-res/logo/CNThermSci-logo-A.pdf \
 		fig/A0301-pt-01-VPistCyl.pdf \
 		fig/A0301-pt-02-HPistCylPlot.pdf
-	pdflatex --enable-write18 ${HOUT}.tex
-	bibtex ${HOUT}
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex
 

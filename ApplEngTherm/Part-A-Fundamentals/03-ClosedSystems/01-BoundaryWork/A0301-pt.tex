@@ -11,6 +11,9 @@
 %-----------------------------------------------------------------------------------------------
 \newcommand{\enfa}[1]{{\color{enfa}{#1}}}
 \newcommand{\gray}[1]{{\color{gray}{#1}}}
+\newcommand{\txtpic}[1]{%
+    \fcolorbox{lightgray}{white!90!black}{{#1}} 
+}
 %-----------------------------------------------------------------------------------------------
 \makeatletter
 \immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
@@ -25,9 +28,23 @@
 %-----------------------------------------------------------------------------------------------
 \logo{\includegraphics[height=0.8cm]{root/00-res/logo/CNThermSci-logo-A.pdf}} % Alpha logo
 %-----------------------------------------------------------------------------------------------
-\frame{\titlepage}
+%{%
+%    \usebackgroundtemplate{%
+%        \parbox{\paperwidth}{%
+%            \vspace*{1sp}\centering\includegraphics[height=\paperheight]%
+%                {art/landscape-615428_1280.jpg}
+%    }}
+    \frame{\titlepage}
+%}
 %-----------------------------------------------------------------------------------------------
-%\frame{\tableofcontents}
+%{%
+%    \usebackgroundtemplate{%
+%         \parbox{\paperwidth}{%
+%             \vspace*{1sp}\centering\includegraphics[height=\paperheight]%
+%                 {art/mountains-landscape-1149580_1280.jpg}
+%    }}
+%    \frame{\tableofcontents}
+%}
 %-----------------------------------------------------------------------------------------------
 \section{Trabalho de Fronteira}
 

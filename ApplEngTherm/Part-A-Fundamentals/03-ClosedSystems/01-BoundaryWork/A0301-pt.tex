@@ -1,0 +1,67 @@
+%-----------------------------------------------------------------------------------------------
+\usepackage{beamerthemeCopenhagen}
+\usepackage[utf8]{inputenc}
+\usepackage[english,brazil]{babel} % last becomes the active one
+\usepackage{pslatex}
+\usepackage{amssymb,amsmath}
+\usepackage{soul}
+\usepackage{xspace}
+%-----------------------------------------------------------------------------------------------
+\definecolor{enfa}{rgb}{0.71,0.69,0.67} % Emphasis
+%-----------------------------------------------------------------------------------------------
+\newcommand{\enfa}[1]{{\color{enfa}{#1}}}
+\newcommand{\gray}[1]{{\color{gray}{#1}}}
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\title{A.03.01 -- Sistemas Fechados}
+\subtitle{Trabalho de Fronteira}
+\author{Prof.~C.~Naaktgeboren}
+\date{\tt Compiled on \input{\jobname.info}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{\includegraphics[height=0.8cm]{root/00-res/logo/CNThermSci-logo-A.pdf}} % Alpha logo
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+%\frame{\tableofcontents}
+%-----------------------------------------------------------------------------------------------
+\section{Trabalho de Fronteira}
+
+    %-------------------------------------------------------------------------------------------
+    \frame{
+        \frametitle{Trabalho de Fronteira}\vspace*{-2em}
+
+        Some text\par
+
+        \begin{figure}
+            \includegraphics[height=4.0cm]{fig/A0301-pt-01-VPistCyl.pdf}
+        \end{figure}
+
+    }
+    %-------------------------------------------------------------------------------------------
+
+\section{Tópicos de Leitura}
+
+    %------------------------------------------------------------------------------------------
+    \frame{
+        \frametitle{Tópicos de Leitura}\vspace*{-2em}
+
+        \begin{thebibliography}{Çengel, Y.~A., 2013}
+
+            \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
+                Çengel, Y.~A. e Boles, M.~A.
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Ed.} \enfa{Sec.~4--1}.}
+                \newblock{AMGH. Porto Alegre. 978-85-8055-200-3.}
+
+        \end{thebibliography}
+    }
+    %------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

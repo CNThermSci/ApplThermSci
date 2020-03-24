@@ -6,10 +6,10 @@ clean:
 	rm ${PREF}.blg
 	rm ${PREF}.bbl
 
-../../../../00-res/logo/CNThermSci-logo-A.pdf: ../../../../00-res/logo/CNThermSci-logo-A.svg
+root/00-res/logo/CNThermSci-logo-A.pdf: root/00-res/logo/CNThermSci-logo-A.svg
 	inkscape \
-		--file=../../../../00-res/logo/CNThermSci-logo-A.svg \
-		--export-pdf=../../../../00-res/logo/CNThermSci-logo-A.pdf
+		--file=root/00-res/logo/CNThermSci-logo-A.svg \
+		--export-pdf=root/00-res/logo/CNThermSci-logo-A.pdf
 
 fig/A0301-pt-01-VPistCyl.pdf: fig/A0301-pt-01-VPistCyl.svg
 	inkscape \

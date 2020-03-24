@@ -5,3 +5,8 @@ root
 JULIA
 THEO
 THER
+bibfile.bkp
+
+# Compiling metadata
+*.info
+

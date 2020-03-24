@@ -6,6 +6,11 @@ clean:
 	rm ${PREF}.blg
 	rm ${PREF}.bbl
 
+../../../../00-res/logo/CNThermSci-logo-A.pdf: ../../../../00-res/logo/CNThermSci-logo-A.svg
+	inkscape \
+		--file=../../../../00-res/logo/CNThermSci-logo-A.svg \
+		--export-pdf=../../../../00-res/logo/CNThermSci-logo-A.pdf
+
 fig/A0301-pt-01-VPistCyl.pdf: fig/A0301-pt-01-VPistCyl.svg
 	inkscape \
 		--file=fig/A0301-pt-01-VPistCyl.svg \
@@ -17,6 +22,7 @@ fig/A0301-pt-02-HPistCylPlot.pdf: fig/A0301-pt-02-HPistCylPlot.svg
 		--export-pdf=fig/A0301-pt-02-HPistCylPlot.pdf
 
 ${PREF}.pdf: ${PREF}.tex bibfile.bib \
+		../../../../00-res/logo/CNThermSci-logo-A.pdf \
 		fig/A0301-pt-01-VPistCyl.pdf \
 		fig/A0301-pt-02-HPistCylPlot.pdf
 	pdflatex --enable-write18 ${PREF}.tex

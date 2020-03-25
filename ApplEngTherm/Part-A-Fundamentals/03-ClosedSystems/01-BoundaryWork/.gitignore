@@ -10,3 +10,6 @@ bibfile.bkp
 # Compiling metadata
 *.info
 
+# Beamer themes
+beamer
+beamer*theme*

@@ -32,7 +32,11 @@
 %-----------------------------------------------------------------------------------------------
 \begin{document}
 %-----------------------------------------------------------------------------------------------
-\logo{\includegraphics[height=0.8cm]{root/00-res/logo/CNThermSci-logo-A.pdf}} % Alpha logo
+\logo{%
+    \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
+        \includegraphics[height=7.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+        \includegraphics[height=7.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+}} % Alpha logos
 %-----------------------------------------------------------------------------------------------
 %{%
 %    \usebackgroundtemplate{%

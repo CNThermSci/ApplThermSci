@@ -14,7 +14,7 @@
 %-----------------------------------------------------------------------------------------------
 \usefonttheme{serif}
 %-----------------------------------------------------------------------------------------------
-\definecolor{enfa}{rgb}{0.71,0.69,0.67} % Emphasis
+\definecolor{enfa}{rgb}{0.90,0.10,0.10} % Emphasis
 %-----------------------------------------------------------------------------------------------
 \newcommand{\enfa}[1]{{\color{enfa}{#1}}}
 \newcommand{\gray}[1]{{\color{gray}{#1}}}
@@ -43,10 +43,13 @@
     \BkgImgW{root/../art/#1.#2}
     \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
 }
-
+\newcommand{\ImgColW}[3]{% Inserts a full-width image in a column
+    \includegraphics[width=\columnwidth]{root/../art/#1.#2}\\[-0.6em]
+    \parbox{\columnwidth}{\tiny\hfill\input{root/../art/#1.#3}}
+}
 %-----------------------------------------------------------------------------------------------
-\title{A.03.01 -- Sistemas Fechados}
-\subtitle{Trabalho de Fronteira}
+\title{A.03.01 -- Trabalho de Fronteira}
+\subtitle{(Sistemas Fechados)}
 \author{Prof.~C.~Naaktgeboren}
 \date{%
     \texttt{Compiled on \input{\jobname.info}}\\[\medskipamount]
@@ -57,8 +60,8 @@
 %-----------------------------------------------------------------------------------------------
 \logo{%
     \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
-        \includegraphics[height=7.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
-        \includegraphics[height=7.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+        \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
 }} % Alpha logos
 %-----------------------------------------------------------------------------------------------
 %{%
@@ -81,55 +84,61 @@
 %-----------------------------------------------------------------------------------------------
 \section{Trabalho de Fronteira}
 
+\subsection{Qualitativo}
+
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Trabalho de Fronteira}\vspace*{-2em}
+    \begin{frame}{Trabalho de Fronteira -- Definição}\vspace*{-2em}
         \begin{columns}
-        \column{0.60\textwidth}
-        Trabalho de fronteira, $W_f$ (\kilo\joule)              \\[\medskipamount]
-        \begin{enumerate}
-            \item<1-> É a \enfa{interação  energética}          \\[\medskipamount]
-            \item<2-> de um \enfa{sistema compressível simples} \\[\medskipamount]
-            \item<3-> capaz de \enfa{diretamente} realizar      \\[\medskipamount]
-            \item<4-> \enfa{trabalho mecânico}                  \\[\medskipamount]
-            \item<5-> por meio de uma \enfa{fronteira móvel}
-        \end{enumerate}
-        \column{0.40\textwidth}
-        \uncover<1->{\includegraphics[width=\columnwidth]{fig/A0301-pt-VPistCyl.pdf}}
+        \column{0.70\textwidth}
+        Trabalho de fronteira, $W_f$ (\kilo\joule)                          \\[\medskipamount]
+        \begin{itemize}
+            \item É a \enfa{interação  energética}                          \\[\medskipamount]
+            \item de um \enfa{sistema compressível simples}                 \\[\medskipamount]
+            \item capaz de \enfa{diretamente} realizar                      \\[\medskipamount]
+            \item \enfa{trabalho mecânico}                                  \\[\medskipamount]
+            \item por meio de uma \enfa{fronteira móvel}.
+        \end{itemize}
+        \column{0.30\textwidth}
+        \includegraphics[width=\columnwidth]{fig/A0301-pt-VPistCyl.pdf}
         \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \frame{
-        \frametitle{Trabalho de Fronteira}\vspace*{-2em}
-
-        Trabalho de fronteira, $W_f$  (\kilo\joule),  é  a  \enfa{interação  energética}  de  um
-        sistema  compressível  simples  capaz  de  \enfa{diretamente}  realizar   \enfa{trabalho
-        mecânico},   $W_m   \equiv   \vet{F}\cdot\vet{\ell}$   (\kilo\joule),   por   meio    do
-        \enfa{deslocamento} de uma \enfa{fronteira móvel}:
-
-        \begin{figure}
-            \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCyl.pdf}
-        \end{figure}
-    }
+    \begin{frame}{Trabalho de Fronteira -- Aplicações}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+        Aplicações incluem:                                             \\[\medskipamount]
+        \begin{itemize}
+            \item Motores de combustão interna                          \\[\medskipamount]
+            \item Motores \bf\alt<1>{\enfa{Stirling}}{Stirling}\rm      \\[\medskipamount]
+            \item Compressores alternativos                             \\[\medskipamount]
+            \item Motores \bf\alt<2>{\enfa{lineares}}{lineares}\rm      \\[\medskipamount]
+            \item Elevadores de carga e atuadores                       \\[\medskipamount]
+            \item Expansores \bf\alt<3>{\enfa{criogênicos}}{criogênicos}\rm
+        \end{itemize}
+        \column{0.45\textwidth}
+            \only<1>{\ImgColW{EuroDishSBP_front}{jpg}{txt}}
+            \only<2>{\ImgColW{vintage-4273640_1280}{jpg}{txt}}
+            \only<3>{\ImgColW{6350734512_4ca40e0711_o}{jpg}{txt}}
+        \end{columns}
+    \end{frame}
     %-------------------------------------------------------------------------------------------
+
+\subsection{Quantitativo}
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \frame{
-        \frametitle{Trabalho de Fronteira}\vspace*{-2em}
-
-        Trabalho de fronteira, $W_f$  (\kilo\joule),  é  a  \enfa{interação  energética}  de  um
-        sistema  compressível  simples  capaz  de  \enfa{diretamente}  realizar   \enfa{trabalho
-        mecânico},   $W_m   \equiv   \vet{F}\cdot\vet{\ell}$   (\kilo\joule),   por   meio    do
-        \enfa{deslocamento} de uma \enfa{fronteira móvel}:
-
+    \begin{frame}{Trabalho de Fronteira -- Em Termos de Propriedades}\vspace*{-2em}
+        \uncover<1->{$$\delta{W_f} \equiv \vec{F} \cdot d\vec\ell \rightharpoondown$$}
+        \uncover<2->{$$\delta{W_f} = \frac{F}{A} d\ell{A} \rightharpoondown$$}
+        \uncover<3->{$$\delta{W_f} = PdV$$}
         \begin{figure}
-            \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylForc.pdf}
+            \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCyl.pdf}
         \end{figure}
-    }
+    \end{frame}
     %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8

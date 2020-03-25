@@ -1,10 +1,15 @@
 %-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
 \usepackage{beamerthemeCopenhagen}
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazil]{babel} % last becomes the active one
 \usepackage{pslatex}
 \usepackage{amssymb,amsmath}
 \usepackage{soul}
+\usepackage[squaren,Gray]{SIunits}
 \usepackage{xspace}
 %-----------------------------------------------------------------------------------------------
 \definecolor{enfa}{rgb}{0.71,0.69,0.67} % Emphasis
@@ -15,9 +20,10 @@
     \fcolorbox{lightgray}{white!90!black}{{#1}} 
 }
 %-----------------------------------------------------------------------------------------------
-\makeatletter
-\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
-\makeatother
+\newcommand{\vet}[1]{\underline{{#1}}}
+\newcommand{\mat}[1]{\underline{\underline{{#1}}}}
+\newcommand{\cub}[1]{\underline{\underline{\underline{{#1}}}}}
+\newcommand{\eqdef}{{\ensuremath\stackrel{\text{\tiny def}}{=}}}
 %-----------------------------------------------------------------------------------------------
 \title{A.03.01 -- Sistemas Fechados}
 \subtitle{Trabalho de Fronteira}
@@ -48,11 +54,26 @@
 %-----------------------------------------------------------------------------------------------
 \section{Trabalho de Fronteira}
 
+    % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \frame{
         \frametitle{Trabalho de Fronteira}\vspace*{-2em}
 
-        Some text\par
+        Trabalho de fronteira, $W_f$  (\kilo\joule),  é  a  \enfa{interação  energética}  de  um
+        sistema  compressível  simples  capaz  de  \enfa{diretamente}  realizar   \enfa{trabalho
+        mecânico},   $W_m   \equiv   \vet{F}\cdot\vet{\ell}$   (\kilo\joule),   por   meio    do
+        \enfa{deslocamento} de uma \enfa{fronteira móvel}:
+
+        \begin{figure}
+            \includegraphics[width=4.0cm]{fig/A0301-pt-01-VPistCyl.pdf}
+        \end{figure}
+    }
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \frame{
+        \frametitle{Trabalho de Fronteira}\vspace*{-2em}
 
         \begin{figure}
             \includegraphics[height=4.0cm]{fig/A0301-pt-01-VPistCyl.pdf}

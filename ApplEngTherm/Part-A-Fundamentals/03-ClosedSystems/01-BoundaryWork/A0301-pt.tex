@@ -25,10 +25,31 @@
 \newcommand{\cub}[1]{\underline{\underline{\underline{{#1}}}}}
 \newcommand{\eqdef}{{\ensuremath\stackrel{\text{\tiny def}}{=}}}
 %-----------------------------------------------------------------------------------------------
+\newcommand{\BkgImgH}[1]{% Places an image centered on the slide background filling the height
+    \usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering\includegraphics[height=\paperheight]{{#1}}
+}}}
+\newcommand{\BkgImgW}[1]{% Places an image centered on the slide background filling the width
+    \usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering\includegraphics[width=\paperwidth]{{#1}}
+}}}
+\newcommand{\ArtEndH}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
+    \BkgImgH{root/../art/#1.#2}
+    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
+}
+\newcommand{\ArtEndW}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
+    \BkgImgW{root/../art/#1.#2}
+    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
+}
+
+%-----------------------------------------------------------------------------------------------
 \title{A.03.01 -- Sistemas Fechados}
 \subtitle{Trabalho de Fronteira}
 \author{Prof.~C.~Naaktgeboren}
-\date{\tt Compiled on \input{\jobname.info}}
+\date{%
+    \texttt{Compiled on \input{\jobname.info}}\\[\medskipamount]
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}
+}
 %-----------------------------------------------------------------------------------------------
 \begin{document}
 %-----------------------------------------------------------------------------------------------
@@ -95,29 +116,29 @@
     \frame{
         \frametitle{Trabalho de Fronteira}\vspace*{-2em}
 
-        \begin{figure}
+       \begin{figure}
             \includegraphics[width=5.0cm]{fig/A0301-pt-03-HPistCylPlot.pdf}
         \end{figure}
 
     }
     %-------------------------------------------------------------------------------------------
 
+
 \section{Tópicos de Leitura}
 
     %------------------------------------------------------------------------------------------
-    \frame{
-        \frametitle{Tópicos de Leitura}\vspace*{-2em}
-
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
         \begin{thebibliography}{Çengel, Y.~A., 2013}
-
             \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
                 Çengel, Y.~A. e Boles, M.~A.
-                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Ed.} \enfa{Sec.~4--1}.}
-                \newblock{AMGH. Porto Alegre. 978-85-8055-200-3.}
-
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \enfa{Seção~4-1.}}
+                \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
         \end{thebibliography}
-    }
+    \end{frame}
     %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndH{italy-1587287_1280}{jpg}{txt}
 
 %-----------------------------------------------------------------------------------------------
 \end{document}

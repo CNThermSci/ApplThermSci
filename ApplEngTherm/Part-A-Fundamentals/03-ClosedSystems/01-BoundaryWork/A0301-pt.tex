@@ -3,51 +3,9 @@
 \immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
 \makeatother
 %-----------------------------------------------------------------------------------------------
-\usetheme{Copenhagen}
-\usepackage{beamercolorthemeUTF2}
-\usefonttheme{serif}
+\input{root/ApplEngTherm/packages.tex}
 %-----------------------------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}
-\usepackage[english,brazil]{babel} % last becomes the active one
-\usepackage{pslatex}
-\usepackage{amssymb,amsmath}
-\usepackage{soul}
-\usepackage[squaren,Gray]{SIunits}
-\usepackage{xspace}
-%-----------------------------------------------------------------------------------------------
-\definecolor{enfa}{rgb}{0.90,0.30,0.30} % Emphasis
-%-----------------------------------------------------------------------------------------------
-\newcommand{\enfa}[1]{{\color{enfa}{#1}}}
-\newcommand{\gray}[1]{{\color{gray}{#1}}}
-\newcommand{\txtpic}[1]{%
-    \fcolorbox{lightgray}{white!90!black}{{#1}} 
-}
-%-----------------------------------------------------------------------------------------------
-\newcommand{\vet}[1]{\underline{{#1}}}
-\newcommand{\mat}[1]{\underline{\underline{{#1}}}}
-\newcommand{\cub}[1]{\underline{\underline{\underline{{#1}}}}}
-\newcommand{\eqdef}{{\ensuremath\stackrel{\text{\tiny def}}{=}}}
-%-----------------------------------------------------------------------------------------------
-\newcommand{\BkgImgH}[1]{% Places an image centered on the slide background filling the height
-    \usebackgroundtemplate{\parbox{\paperwidth}{%
-        \vspace*{1sp}\centering\includegraphics[height=\paperheight]{{#1}}
-}}}
-\newcommand{\BkgImgW}[1]{% Places an image centered on the slide background filling the width
-    \usebackgroundtemplate{\parbox{\paperwidth}{%
-        \vspace*{1sp}\centering\includegraphics[width=\paperwidth]{{#1}}
-}}}
-\newcommand{\ArtEndH}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
-    \BkgImgH{root/../art/#1.#2}
-    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
-}
-\newcommand{\ArtEndW}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
-    \BkgImgW{root/../art/#1.#2}
-    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
-}
-\newcommand{\ImgColW}[3]{% Inserts a full-width image in a column
-    \includegraphics[width=\columnwidth]{root/../art/#1.#2}\\[-0.6em]
-    \parbox{\columnwidth}{\tiny\hfill\input{root/../art/#1.#3}}
-}
+\input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
 \title{A.03.01 -- Trabalho de Fronteira}
 \subtitle{(Sistemas Fechados)}
@@ -65,23 +23,9 @@
         \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
 }} % Alpha logos
 %-----------------------------------------------------------------------------------------------
-%{%
-%    \usebackgroundtemplate{%
-%        \parbox{\paperwidth}{%
-%            \vspace*{1sp}\centering\includegraphics[height=\paperheight]%
-%                {art/landscape-615428_1280.jpg}
-%    }}
-    \frame{\titlepage}
-%}
+\frame{\titlepage}
 %-----------------------------------------------------------------------------------------------
-%{%
-%    \usebackgroundtemplate{%
-%         \parbox{\paperwidth}{%
-%             \vspace*{1sp}\centering\includegraphics[height=\paperheight]%
-%                 {art/mountains-landscape-1149580_1280.jpg}
-%    }}
-%    \frame{\tableofcontents}
-%}
+\frame{\tableofcontents}
 %-----------------------------------------------------------------------------------------------
 \section{Trabalho de Fronteira}
 
@@ -95,10 +39,10 @@
         Trabalho de fronteira, $W_f$ (\kilo\joule)                          \\[\medskipamount]
         \begin{itemize}
             \item É a \alert{interação  energética}                         \\[\medskipamount]
-            \item de um \enfa{sistema compressível simples}                 \\[\medskipamount]
-            \item capaz de \enfa{diretamente} realizar                      \\[\medskipamount]
-            \item \enfa{trabalho mecânico}                                  \\[\medskipamount]
-            \item por meio de uma \enfa{fronteira móvel}.
+            \item de um \alert{sistema compressível simples}                \\[\medskipamount]
+            \item capaz de \alert{diretamente} realizar                     \\[\medskipamount]
+            \item \alert{trabalho mecânico}                                 \\[\medskipamount]
+            \item por meio de uma \alert{fronteira móvel}.
         \end{itemize}
         \column{0.30\textwidth}
         \includegraphics[width=\columnwidth]{fig/A0301-pt-VPistCyl.pdf}
@@ -110,17 +54,17 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Trabalho de Fronteira -- Aplicações}\vspace*{-2em}
         \begin{columns}
-        \column{0.55\textwidth}
+        \column{0.60\textwidth}
         Aplicações incluem:                                             \\[\medskipamount]
         \begin{itemize}
             \item Motores de combustão interna                          \\[\medskipamount]
-            \item Motores \bf\alt<1>{\enfa{Stirling}}{Stirling}\rm      \\[\medskipamount]
+            \item Motores \bf\alt<1>{\alert{Stirling}}{Stirling}\rm     \\[\medskipamount]
             \item Compressores alternativos                             \\[\medskipamount]
-            \item Motores \bf\alt<2>{\enfa{lineares}}{lineares}\rm      \\[\medskipamount]
+            \item Motores \bf\alt<2>{\alert{lineares}}{lineares}\rm     \\[\medskipamount]
             \item Elevadores de carga e atuadores                       \\[\medskipamount]
-            \item Expansores \bf\alt<3>{\enfa{criogênicos}}{criogênicos}\rm
+            \item Expansores \bf\alt<3>{\alert{criogênicos}}{criogênicos}\rm
         \end{itemize}
-        \column{0.45\textwidth}
+        \column{0.40\textwidth}
             \only<1>{\ImgColW{EuroDishSBP_front}{jpg}{txt}}
             \only<2>{\ImgColW{vintage-4273640_1280}{jpg}{txt}}
             \only<3>{\ImgColW{6350734512_4ca40e0711_o}{jpg}{txt}}
@@ -132,24 +76,44 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Trabalho de Fronteira -- Em Termos de Propriedades}\vspace*{-2em}
-        \uncover<1->{$$\delta{W_f} \equiv \vec{F} \cdot d\vec\ell \rightharpoondown$$}
-        \uncover<2->{$$\delta{W_f} = \frac{F}{A} d\ell{A} \rightharpoondown$$}
-        \uncover<3->{$$\delta{W_f} = PdV$$}
-        \begin{figure}
-            \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCyl.pdf}
-        \end{figure}
+    \begin{frame}{Trabalho de Fronteira -- Diferencial}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+            \uncover<1->{$$\delta{W_f} \equiv \vec{F} \cdot d\vec\ell \rightharpoondown$$}
+            \uncover<2->{$$\delta{W_f} = \frac{F}{A} d\ell{A} \rightharpoondown$$}
+            \uncover<3->{\alt<3>%
+                {$$\delta{W_f} = PdV$$}%
+                {$$\delta{W_f} = PdV \rightharpoondown (/m)$$}%
+            }
+            \uncover<4->{$$\delta{w_f} = Pdv$$}
+        \column{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCyl.pdf}
+            \end{figure}
+        \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
+    \begin{frame}{Trabalho de Fronteira -- Processo}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+            \uncover<1->{\alt<1>%
+                {$$\delta{W_f} = PdV$$}%
+                {$$\delta{W_f} = PdV \rightharpoondown (/m)$$}%
+            }
+            \uncover<2->{For a \alert{quasi-equilibrium} process $1$-$2$:}
+            \uncover<3->{$$w_{12} = \int_1^2\delta{w_f} = \int_1^2P\,dv$$}
+        \column{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylPlot.pdf}
+            \end{figure}
+        \end{columns}
+    \end{frame}
     \frame{
         \frametitle{Trabalho de Fronteira}\vspace*{-2em}
 
-       \begin{figure}
-            \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylPlot.pdf}
-        \end{figure}
 
     }
     %-------------------------------------------------------------------------------------------
@@ -175,7 +139,7 @@
         \begin{thebibliography}{Çengel, Y.~A., 2013}
             \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
                 Çengel, Y.~A. e Boles, M.~A.
-                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \enfa{Seção~4-1.}}
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \alert{Seção~4-1.}}
                 \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
         \end{thebibliography}
     \end{frame}

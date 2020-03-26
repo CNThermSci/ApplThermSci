@@ -26,7 +26,7 @@
 \definecolor{enfa}{rgb}{0.170,0.170,0.170} % Emphasis
 
 %-----------------------------------------------------------------------------------------------
-\mode<all>
+\mode<presentation>
 
 % Normal text FG and BG
 \setbeamercolor{normal text}{fg=black,bg=white}                     % Slide background
@@ -55,4 +55,13 @@
 \setbeamercolor*{block body alerted}{}
 \setbeamercolor*{block body example}{}
 \setbeamercolor*{titlelike}{parent=structure}
+
+%-----------------------------------------------------------------------------------------------
+\mode<handout>{% Go easier on printers
+    \setbeamercolor*{palette primary}{bg=uyel!25!white,fg=black}
+    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=uyel!25!black}
+    \setbeamercolor*{palette tertiary}{bg=ared!25!white,fg=black}
+    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=uyel!25!black}
+}
+
 

@@ -18,12 +18,14 @@
 }}}
 \newcommand{\ArtEndH}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
     \BkgImgH{root/../art/#1.#2}
-    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
-}
+    \frame[plain]<handout:0>{%
+        \transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}
+}}
 \newcommand{\ArtEndW}[3]{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
     \BkgImgW{root/../art/#1.#2}
-    \frame[plain]{\transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}}
-}
+    \frame[plain]<handout:0>{%
+        \transdissolve\vspace*{80mm}\color{white}\bf\input{root/../art/#1.#3}
+}}
 \newcommand{\ImgColW}[3]{% Inserts a full-width image in a column
     \includegraphics[width=\columnwidth]{root/../art/#1.#2}\\[-0.5\baselineskip]
     \parbox{\columnwidth}{\tiny\hfill\scalebox{0.65}{\input{root/../art/#1.#3}}}

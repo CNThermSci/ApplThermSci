@@ -1,0 +1,60 @@
+% Based on the Beetle color theme 
+
+\ProvidesPackageRCS $Header: ./beamercolorthemeUTF1.sty,v 000000000000 2014/08/18 10:11:00 grace$
+
+\mode<presentation>
+
+% UTFPR Palette - from logo
+\definecolor{uyel}{rgb}{0.992,0.797,0.000} % UTFPR yellow
+\definecolor{aogr}{rgb}{0.710,0.690,0.670} % Orangeish gray
+\definecolor{ared}{rgb}{0.870,0.190,0.080} % Red
+\definecolor{adgr}{rgb}{0.170,0.170,0.170} % Dark gray
+\definecolor{enfa}{rgb}{1.000,1.000,1.000} % Emphasis
+
+% Normal text FG and BG
+\setbeamercolor{normal text}{fg=uyel,bg=black}
+\setbeamercolor{structure}{fg=aogr}
+\setbeamercolor{alerted text}{fg=ared}
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!75}
+\setbeamercolor*{palette primary}{fg=white,bg=adgr}
+\setbeamercolor*{palette secondary}{fg=black,bg=uyel}
+\setbeamercolor*{palette tertiary}{fg=black,bg=ared}
+\setbeamercolor*{palette quaternary}{fg=black,bg=uyel}
+\setbeamercolor*{sidebar}{parent=palette primary}
+\setbeamercolor*{palette sidebar primary}{fg=white}
+\setbeamercolor*{palette sidebar secondary}{fg=black}
+\setbeamercolor*{palette sidebar tertiary}{fg=white}
+\setbeamercolor*{palette sidebar quaternary}{fg=black}
+
+\setbeamercolor{framesubtitle}{fg=black}
+
+\setbeamercolor*{subtitle}{fg=black}
+
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+
+\setbeamercolor*{titlelike}{parent=structure}
+
+\mode<handout>{
+
+% Anhanguera Palette - from website
+\definecolor{uyel}{rgb}{0.992,0.797,0.000} % UTFPR yellow
+\definecolor{aogr}{rgb}{0.710,0.690,0.670} % Orangeish gray
+\definecolor{ared}{rgb}{0.870,0.190,0.080} % Red
+\definecolor{adgr}{rgb}{0.170,0.170,0.170} % Dark gray
+\definecolor{enfa}{rgb}{0.170,0.170,0.170} % Emphasis
+
+\setbeamercolor*{navigation symbols}{use=structure,fg=structure.fg!40!bg}
+\setbeamercolor*{navigation symbols dimmed}{use=structure,fg=structure.fg!60!bg}
+%\setbeamercolor{navigation symbols}{fg=adgr,bg=aogr}
+
+% Normal text FG and BG
+\setbeamercolor{normal text}{fg=uyel!75!black,bg=white}
+\setbeamercolor{structure}{fg=black}
+}
+
+\mode<all>

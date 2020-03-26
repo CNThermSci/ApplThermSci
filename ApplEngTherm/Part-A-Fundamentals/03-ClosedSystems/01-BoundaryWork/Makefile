@@ -8,6 +8,8 @@ clean:
 			rm -vf $$TRG.$$EXT; \
 		done; \
 	done
+
+wipe: clean
 	rm -vf fig/*pdf
 
 root/00-res/logo/%.pdf: root/00-res/logo/%.svg

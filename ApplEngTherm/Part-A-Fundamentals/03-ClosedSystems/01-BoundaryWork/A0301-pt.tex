@@ -39,7 +39,7 @@
         Trabalho de fronteira, $W_f$ (\kilo\joule)                          \\[\medskipamount]
         \begin{itemize}
             \item É a \alert{interação  energética}                         \\[\medskipamount]
-            \item de um \alert{sistema compressível simples}                \\[\medskipamount]
+            \item de um \alert{sistema compressível}                        \\[\medskipamount]
             \item capaz de \alert{diretamente} realizar                     \\[\medskipamount]
             \item \alert{trabalho mecânico}                                 \\[\medskipamount]
             \item por meio de uma \alert{fronteira móvel}.
@@ -79,13 +79,25 @@
     \begin{frame}{Trabalho de Fronteira -- Diferencial}\vspace*{-2em}
         \begin{columns}
         \column{0.55\textwidth}
-            \uncover<1->{$$\delta{W_f} \equiv \vec{F} \cdot d\vec\ell \rightharpoondown$$}
-            \uncover<2->{$$\delta{W_f} = \frac{F}{A} d\ell{A} \rightharpoondown$$}
-            \uncover<3->{\alt<3>%
-                {$$\delta{W_f} = PdV$$}%
-                {$$\delta{W_f} = PdV \rightharpoondown (/m)$$}%
-            }
-            \uncover<4->{$$\delta{w_f} = Pdv$$}
+            \begin{align*}
+                \uncover<1->{%
+                    \delta W_f & \equiv
+                    \uncover<2->{(|}\vec{F}\uncover<2->{|} \cdot \uncover<2->{|}d\vec\ell
+                    \uncover<2->{|)\times\frac{A}{A}\rightharpoondown} \\}
+                \uncover<3->{%
+                    \delta W_f & = \frac{F}{A} \cdot A\,d\ell
+                    \rightharpoondown \\[\medskipamount]}
+                \uncover<4->{%
+                    \biggl(
+                        \frac{F}{A} & \equiv P,\quad
+                        A\,d\ell      \equiv dv
+                    \biggr) \rightharpoondown \\[\medskipamount]}
+                \uncover<5->{%
+                    \uncover<6->{(} \delta W_f & = P\,dV
+                    \uncover<6->{)/m \rightharpoondown} \\[\medskipamount]}
+                \uncover<7->{%
+                    \delta w_f & = P\,dv }
+            \end{align*}
         \column{0.45\textwidth}
             \begin{figure}
                 \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCyl.pdf}
@@ -99,15 +111,24 @@
     \begin{frame}{Trabalho de Fronteira -- Processo}\vspace*{-2em}
         \begin{columns}
         \column{0.55\textwidth}
-            \uncover<1->{\alt<1>%
-                {$$\delta{W_f} = PdV$$}%
-                {$$\delta{W_f} = PdV \rightharpoondown (/m)$$}%
-            }
-            \uncover<2->{For a \alert{quasi-equilibrium} process $1$-$2$:}
-            \uncover<3->{$$w_{12} = \int_1^2\delta{w_f} = \int_1^2P\,dv$$}
+            Processo de \alert{quase-equilíbrio} $1$-$2$:
+            \begin{align*}
+                \uncover<1->{%
+                    \delta w_f & = P\,dv \\[\medskipamount]}
+                \uncover<2->{%
+                    \uncover<3->{\biggl(}
+                        w_{12} & = \int_1^2 \delta w_f = \int_1^2 P\,dv
+                    \uncover<3->{\biggr)\times m \rightharpoondown} \\[\medskipamount]}
+                \uncover<4->{%
+                    W_{12} & = \int_1^2 \delta W_f = \int_1^2 P\,dV
+                    \uncover<5->{\quad\therefore} \\[\medskipamount]}
+            \end{align*}
+            \uncover<6->{$W_f$ é a \alert{área} sob o processo em \alert{coordenadas $P-v$}.}
         \column{0.45\textwidth}
             \begin{figure}
-                \includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylPlot.pdf}
+                \alt<1-5>%
+                    {\includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylPlot.pdf}}
+                    {\includegraphics[width=5.0cm]{fig/A0301-pt-HPistCylPlot.pdf}}
             \end{figure}
         \end{columns}
     \end{frame}

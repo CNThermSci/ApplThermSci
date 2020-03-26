@@ -13,3 +13,6 @@ bibfile.bkp
 # Beamer themes
 beamer
 beamer*theme*
+
+# Converted figures
+fig/*pdf

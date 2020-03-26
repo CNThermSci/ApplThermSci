@@ -3,8 +3,10 @@
 \immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
 \makeatother
 %-----------------------------------------------------------------------------------------------
-\usepackage{beamerthemeCopenhagen}
+\usetheme{Copenhagen}
 \usepackage{beamercolorthemeUTF2}
+\usefonttheme{serif}
+%-----------------------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazil]{babel} % last becomes the active one
 \usepackage{pslatex}
@@ -12,8 +14,6 @@
 \usepackage{soul}
 \usepackage[squaren,Gray]{SIunits}
 \usepackage{xspace}
-%-----------------------------------------------------------------------------------------------
-\usefonttheme{serif}
 %-----------------------------------------------------------------------------------------------
 \definecolor{enfa}{rgb}{0.90,0.30,0.30} % Emphasis
 %-----------------------------------------------------------------------------------------------
@@ -51,7 +51,7 @@
 %-----------------------------------------------------------------------------------------------
 \title{A.03.01 -- Trabalho de Fronteira}
 \subtitle{(Sistemas Fechados)}
-\author{Prof.~C.~Naaktgeboren}
+\author{Prof.~C.~Naaktgeboren, PhD}
 \date{%
     \texttt{Compiled on \input{\jobname.info}}\\[\medskipamount]
     \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}
@@ -94,7 +94,7 @@
         \column{0.70\textwidth}
         Trabalho de fronteira, $W_f$ (\kilo\joule)                          \\[\medskipamount]
         \begin{itemize}
-            \item É a \enfa{interação  energética}                          \\[\medskipamount]
+            \item É a \alert{interação  energética}                         \\[\medskipamount]
             \item de um \enfa{sistema compressível simples}                 \\[\medskipamount]
             \item capaz de \enfa{diretamente} realizar                      \\[\medskipamount]
             \item \enfa{trabalho mecânico}                                  \\[\medskipamount]
@@ -152,6 +152,19 @@
         \end{figure}
 
     }
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Trabalho de Fronteira -- Teorema}\vspace*{-2em}
+        \framesubtitle{Here's a subtitle}
+        \begin{theorem}
+            Colors do mix.
+        \end{theorem}
+        \begin{proof}
+            It's all over this presentation!
+        \end{proof}
+    \end{frame}
     %-------------------------------------------------------------------------------------------
 
 

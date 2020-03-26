@@ -16,7 +16,7 @@
    version="1.1"
    id="svg1097"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="A0301-pt-01-HPistCyl.svg">
+   sodipodi:docname="A0301-pt-HPistCyl.svg">
   <defs
      id="defs1091">
     <marker
@@ -596,9 +596,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.638947"
-     inkscape:cx="159.77203"
-     inkscape:cy="101.25296"
+     inkscape:zoom="4.6944444"
+     inkscape:cx="120"
+     inkscape:cy="90"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -634,7 +634,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -905,7 +905,7 @@
          x="69.956955"
          y="689.15259"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;text-anchor:middle;fill:#00007e;fill-opacity:1;stroke:none"
-         id="tspan19784-9-4-97-9">Gas</tspan></text>
+         id="tspan19784-9-4-97-9">Gás</tspan></text>
     <text
        xml:space="preserve"
        x="65.591721"

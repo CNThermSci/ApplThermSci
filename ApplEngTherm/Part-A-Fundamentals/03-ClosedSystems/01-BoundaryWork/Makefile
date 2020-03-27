@@ -28,7 +28,13 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/A0301-pt-HPistCyl.pdf \
 		fig/A0301-pt-HPistCylForc.pdf \
 		fig/A0301-pt-HPistCylPlot.pdf \
-		fig/A0301-pt-HPistCylPlotInt.pdf
+		fig/A0301-pt-HPistCylPlotInt.pdf \
+		fig/A0301-pt-HPistCylPlotCycle-00.svg \
+		fig/A0301-pt-HPistCylPlotCycle-01.svg \
+		fig/A0301-pt-HPistCylPlotCycle-02.svg \
+		fig/A0301-pt-HPistCylPlotCycle-03.svg \
+		fig/A0301-pt-HPistCylPlotCycle-04.svg \
+		fig/A0301-pt-HPistCylPlotCycle-05.svg
 	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
 
@@ -38,7 +44,13 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/A0301-pt-HPistCyl.pdf \
 		fig/A0301-pt-HPistCylForc.pdf \
 		fig/A0301-pt-HPistCylPlot.pdf \
-		fig/A0301-pt-HPistCylPlotInt.pdf
+		fig/A0301-pt-HPistCylPlotInt.pdf \
+		fig/A0301-pt-HPistCylPlotCycle-00.svg \
+		fig/A0301-pt-HPistCylPlotCycle-01.svg \
+		fig/A0301-pt-HPistCylPlotCycle-02.svg \
+		fig/A0301-pt-HPistCylPlotCycle-03.svg \
+		fig/A0301-pt-HPistCylPlotCycle-04.svg \
+		fig/A0301-pt-HPistCylPlotCycle-05.svg
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex
 

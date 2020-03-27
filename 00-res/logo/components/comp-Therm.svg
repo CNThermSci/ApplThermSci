@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg1097"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14"
+   sodipodi:docname="comp-Therm.svg"
+   inkscape:export-filename="/home/BACK/trendy/local/dev/CNThermSci/ApplThermSci/00-res/logo/components/comp-Therm.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300">
+  <defs
+     id="defs1091" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="6.8083333"
+     inkscape:cx="60"
+     inkscape:cy="60"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1646"
+       spacingx="10"
+       spacingy="10"
+       empspacing="2"
+       dotted="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       visible="true" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid1648"
+       spacingx="20"
+       spacingy="20"
+       empspacing="5"
+       dotted="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata1094">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-618.24998)">
+    <g
+       id="g2037"
+       transform="translate(0,3.9999762)">
+      <path
+         style="fill:#8b3d8a;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path3822-6"
+         sodipodi:type="arc"
+         sodipodi:cx="60.000107"
+         sodipodi:cy="-674.25"
+         sodipodi:rx="59.999897"
+         sodipodi:ry="60.000004"
+         sodipodi:start="3.1379275"
+         sodipodi:end="3.137587"
+         sodipodi:open="true"
+         d="M 6.1280773e-4,-674.03009 A 59.999897,60.000004 0 0 1 59.775091,-734.24958 a 59.999897,60.000004 0 0 1 60.224469,59.76946 59.999897,60.000004 0 0 1 -59.764222,60.22966 59.999897,60.000004 0 0 1 -60.2346468353,-59.7592"
+         transform="scale(1,-1)" />
+      <g
+         id="g1414"
+         transform="translate(25.09386,-28.048606)">
+        <text
+           id="text4657-2-9-4"
+           y="736.79163"
+           x="33.809029"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.55555725px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#0000bb;fill-opacity:1;stroke:none;stroke-width:1.33333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:99.55555725px;fill:#000000;fill-opacity:1;stroke-width:1.33333337"
+             y="736.79163"
+             x="33.809029"
+             id="tspan4655-8-3-6"
+             sodipodi:role="line">Θ</tspan></text>
+        <text
+           id="text4657-2-4-3-2"
+           y="734.79163"
+           x="35.809029"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.55555725px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#0000bb;fill-opacity:1;stroke:none;stroke-width:1.33333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:99.55555725px;fill:#000000;fill-opacity:1;stroke-width:1.33333337"
+             y="734.79163"
+             x="35.809029"
+             id="tspan4655-8-7-8-6"
+             sodipodi:role="line">Θ</tspan></text>
+        <text
+           id="text4657-2-2-0-7"
+           y="734.79163"
+           x="33.809029"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.55555725px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#0000bb;fill-opacity:1;stroke:none;stroke-width:1.33333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:99.55555725px;fill:#000000;fill-opacity:1;stroke-width:1.33333337"
+             y="734.79163"
+             x="33.809029"
+             id="tspan4655-8-4-5-5"
+             sodipodi:role="line">Θ</tspan></text>
+        <text
+           id="text4657-2-29-6-6"
+           y="736.79163"
+           x="35.809029"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.55555725px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#0000bb;fill-opacity:1;stroke:none;stroke-width:1.33333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:99.55555725px;fill:#000000;fill-opacity:1;stroke-width:1.33333337"
+             y="736.79163"
+             x="35.809029"
+             id="tspan4655-8-9-6-9"
+             sodipodi:role="line">Θ</tspan></text>
+        <text
+           id="text4657-4-8"
+           y="735.79163"
+           x="34.809029"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.55555725px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit, Normal';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:center;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:middle;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#d9daca;fill-opacity:1;stroke:none;stroke-width:1.33333337;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             style="font-size:99.55555725px;fill:#d9daca;fill-opacity:1;stroke-width:1.33333337"
+             y="735.79163"
+             x="34.809029"
+             id="tspan4655-0-7"
+             sodipodi:role="line">Θ</tspan></text>
+      </g>
+      <g
+         id="g1250-3"
+         transform="translate(121.0005,104.21626)">
+        <path
+           style="fill:none;fill-opacity:1;stroke:#d9daca;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path1231-5"
+           sodipodi:type="arc"
+           sodipodi:cx="-61.000397"
+           sodipodi:cy="570.03369"
+           sodipodi:rx="59"
+           sodipodi:ry="59"
+           sodipodi:start="3.1379275"
+           sodipodi:end="3.1375784"
+           sodipodi:open="true"
+           d="m -120,570.24993 a 59,59 0 0 1 58.778211,-59.21582 59,59 0 0 1 59.2209573,58.77304 59,59 0 0 1 -58.7678743,59.22609 59,59 0 0 1 -59.231214,-58.76271" />
+        <path
+           style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path1231-3-6"
+           sodipodi:type="arc"
+           sodipodi:cx="-61.000397"
+           sodipodi:cy="570.03369"
+           sodipodi:rx="58"
+           sodipodi:ry="58"
+           sodipodi:start="3.1379275"
+           sodipodi:end="3.1375784"
+           sodipodi:open="true"
+           d="m -119.00001,570.24627 a 58,58 0 0 1 57.781973,-58.21217 58,58 0 0 1 58.2172127,57.77689 58,58 0 0 1 -57.7718087,58.22225 58,58 0 0 1 -58.227297,-57.76672" />
+      </g>
+    </g>
+  </g>
+</svg>

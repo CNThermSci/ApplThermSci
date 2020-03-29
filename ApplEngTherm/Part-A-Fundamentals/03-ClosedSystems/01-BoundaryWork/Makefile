@@ -14,8 +14,8 @@ wipe: clean
 
 root/00-res/logo/%.pdf: root/00-res/logo/%.svg
 	inkscape \
-		--file=root/00-res/logo/$< \
-		--export-pdf=root/00-res/logo/$@
+		--file=$< \
+		--export-pdf=$@
 
 fig/%.pdf: fig/%.svg
 	inkscape \

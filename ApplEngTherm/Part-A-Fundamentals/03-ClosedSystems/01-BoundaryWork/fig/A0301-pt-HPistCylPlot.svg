@@ -570,8 +570,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.640625"
-     inkscape:cx="74.751479"
+     inkscape:zoom="2.553125"
+     inkscape:cx="140"
      inkscape:cy="160"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -608,7 +608,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -900,15 +900,15 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       x="107.25586"
+       x="110.45703"
        y="583.07031"
        id="text15583-2-4-2-0-8"
        style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none;stroke-width:0.66666669;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          sodipodi:role="line"
          id="tspan15581-6-9-1-4-5"
-         x="107.25586"
+         x="110.45703"
          y="583.07031"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';fill:#00007e;fill-opacity:1;stroke:none;stroke-width:0.66666669;stroke-miterlimit:4;stroke-dasharray:none">dV</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';fill:#00007e;fill-opacity:1;stroke:none;stroke-width:0.66666669;stroke-miterlimit:4;stroke-dasharray:none">dv</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path15577-2-1-7-1-8-6-0"

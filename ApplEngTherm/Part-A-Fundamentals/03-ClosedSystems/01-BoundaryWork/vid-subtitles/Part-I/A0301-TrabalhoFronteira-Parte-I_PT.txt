@@ -1,0 +1,50 @@
+﻿# Exported by Aegisub 3.2.2
+[Música de Introdução]
+Olá estudantes de ciências térmicas!
+Neste vídeo veremos a Parte-I do tópico
+Trabalho de Fronteira,\Num subtópico de Sistemas Fechados.
+Este vídeo dispõe de legendas
+A apresentação sobre a qual este vídeo se baseia\Nencontra-se disponível no endereço mostrado
+sob licensa Creative Commons de atribuição, não\Ncomercial, e não derivados, CC-BY-NC-ND,
+uma licensa aberta que restringe o uso comercial,\Nassim como modificações do conteúdo.
+Vamos ao conteúdo!
+A Parte-I, coberta neste vídeo, define\Ntrabalho de fronteira e dá aplicações.
+Na Eng. Mec. da UTFPR Campus Guarapuava, este\Ntópico é coberto na disciplina de Termodinâmica A.
+Tópicos de leitura do livro-texto da disciplina\Nsão fornecidos ao final do vídeo.
+A Parte-II é coberta em outro vídeo, e trata de\Ntrabalho de fronteira em processos e ciclos.
+Uma definição de trabalho de fronteira é a\Ninteração energética de um sistema compressível
+capaz de diretamente realizar trabalho\Nmecânico por meio de uma fronteira móvel.
+A figura ao lado ilustra um sistema capaz de trocar\Ntrabalho de fronteira com suas vizinhanças.
+O sistema é definido pelo gás confinado no espaço\Nfechado, porém de volume variável, visualmente
+delimitado pela linha tracejada---as fronteiras,\Ndentre as quais uma é móvel e indicada na figura.
+A definição enfatiza os principais conceitos:
+Primeiramente, trabalho é uma INTERAÇÃO, portanto\Nnão se trata de uma propriedade do sistema
+(lembrando que propriedades são características\Ndo sistema que independem de histórico).
+O trabalho, por ser interação, faz parte da "histó-\Nria energética", entre o sistema e suas vizinhanças.
+Outro destaque é que o sistema precisa ser\NCOMPRESSÍVEL para que possa haver interações de
+trabalho de fronteira. Ou seja: em sistemas\Nrígidos o trabalho de fronteira é ZERO!
+Assim, em sistemas de engenharia como tanques rígi-\Ndos e tubulações, o trabalho de fronteira é zero.
+A expansão ou compressão do gás no interior do sistema\Né acompanhada pelo movimento vertical do pistão,
+que é acoplado à haste vertical.
+Assim, o trabalho de fronteira realiza trabalho\Nmecânico de forma direta (sem conversões).
+É importante ressaltar que o trabalho de fronteira nem sempre\Né igual ao trabalho mecânico observado na haste,
+em razão da contra-pressão do lado\Noposto do pistão (geralmente a atmosfera).
+Aplicações de trabalho de fronteira incluem:
+* Motores de combustão interna;\N* Motores Stirling, conforme o ilustrado,
+o qual recebe energia solar concentrada\N(uma entrada de calor) e produz trabalho.
+O motor Stirling encontra-se na caixa suspensa, logo\Natrás do ponto focal do coletor solar---os espelhos,
+e inclui dois conjuntos pistão-cilindros, projetados\Npara interações de trabalho de fronteira.
+Outras aplicações incluem
+* Compressores alternativos e\N* Motores lineares, como o ilustrado.
+O trabalho mecânico obtido do conjunto pistão-\Ncilindro mais volumoso na altura das rodas
+é utilizado diretamente na propulsão do conjunto,\Natravés do mecanismo biela-manivelas.
+Finalmente, (a lista de aplicações não é exaustiva),\Ntrabalho de fronteira encontra aplicação em
+* Elevadores de carga e atuadores\N(pneumáticos ou hidráulicos), além de
+* Expansores criogênicos, empregados em\N"cryocoolers", como o ilustrado, na redução
+da temperatura de um gás tipicamente abaixo dos -100°C,
+classificada como a faixa de temperaturas criogênicas.
+Dentre os Tópicos de Leitura da disciplina,\Nsepara-se para este assunto a Seção 4-1.
+Muito obrigado pela audiência!
+Desejo a todos ótimos estudos em ciências térmicas!
+Até a próxima oportunidade!
+[Música de Encerramento]

@@ -1,0 +1,230 @@
+﻿1
+00:00:00,200 --> 00:00:05,360
+[Música de Introdução]
+
+2
+00:00:06,250 --> 00:00:07,780
+Olá estudantes de ciências térmicas!
+
+3
+00:00:08,370 --> 00:00:10,420
+Neste vídeo veremos a Parte-I do tópico
+
+4
+00:00:10,500 --> 00:00:13,270
+Trabalho de Fronteira,
+um subtópico de Sistemas Fechados.
+
+5
+00:00:13,810 --> 00:00:15,270
+Este vídeo dispõe de legendas
+
+6
+00:00:15,590 --> 00:00:19,990
+A apresentação sobre a qual este vídeo se baseia
+encontra-se disponível no endereço mostrado
+
+7
+00:00:20,340 --> 00:00:26,980
+sob licensa Creative Commons de atribuição, não
+comercial, e não derivados, CC-BY-NC-ND,
+
+8
+00:00:27,280 --> 00:00:31,320
+uma licensa aberta que restringe o uso comercial,
+assim como modificações do conteúdo.
+
+9
+00:00:31,640 --> 00:00:32,580
+Vamos ao conteúdo!
+
+10
+00:00:33,530 --> 00:00:37,600
+A Parte-I, coberta neste vídeo, define
+trabalho de fronteira e dá aplicações.
+
+11
+00:00:38,250 --> 00:00:43,390
+Na Eng. Mec. da UTFPR Campus Guarapuava, este
+tópico é coberto na disciplina de Termodinâmica A.
+
+12
+00:00:44,120 --> 00:00:47,360
+Tópicos de leitura do livro-texto da disciplina
+são fornecidos ao final do vídeo.
+
+13
+00:00:48,580 --> 00:00:53,220
+A Parte-II é coberta em outro vídeo, e trata de
+trabalho de fronteira em processos e ciclos.
+
+14
+00:00:56,730 --> 00:01:01,000
+Uma definição de trabalho de fronteira é a
+interação energética de um sistema compressível
+
+15
+00:01:01,210 --> 00:01:04,850
+capaz de diretamente realizar trabalho
+mecânico por meio de uma fronteira móvel.
+
+16
+00:01:05,260 --> 00:01:09,260
+A figura ao lado ilustra um sistema capaz de trocar
+trabalho de fronteira com suas vizinhanças.
+
+17
+00:01:09,690 --> 00:01:14,810
+O sistema é definido pelo gás confinado no espaço
+fechado, porém de volume variável, visualmente
+
+18
+00:01:14,860 --> 00:01:20,840
+delimitado pela linha tracejada---as fronteiras,
+dentre as quais uma é móvel e indicada na figura.
+
+19
+00:01:21,240 --> 00:01:23,520
+A definição enfatiza os principais conceitos:
+
+20
+00:01:23,880 --> 00:01:28,050
+Primeiramente, trabalho é uma INTERAÇÃO, portanto
+não se trata de uma propriedade do sistema
+
+21
+00:01:28,480 --> 00:01:31,780
+(lembrando que propriedades são características
+do sistema que independem de histórico).
+
+22
+00:01:32,180 --> 00:01:37,030
+O trabalho, por ser interação, faz parte da "histó-
+ria energética", entre o sistema e suas vizinhanças.
+
+23
+00:01:37,410 --> 00:01:41,570
+Outro destaque é que o sistema precisa ser
+COMPRESSÍVEL para que possa haver interações de
+
+24
+00:01:41,570 --> 00:01:45,760
+trabalho de fronteira. Ou seja: em sistemas
+rígidos o trabalho de fronteira é ZERO!
+
+25
+00:01:46,140 --> 00:01:51,460
+Assim, em sistemas de engenharia como tanques rígi-
+dos e tubulações, o trabalho de fronteira é zero.
+
+26
+00:01:51,830 --> 00:01:56,810
+A expansão ou compressão do gás no interior do sistema
+é acompanhada pelo movimento vertical do pistão,
+
+27
+00:01:57,150 --> 00:01:58,720
+que é acoplado à haste vertical.
+
+28
+00:01:59,080 --> 00:02:04,080
+Assim, o trabalho de fronteira realiza trabalho
+mecânico de forma direta (sem conversões).
+
+29
+00:02:04,480 --> 00:02:09,380
+É importante ressaltar que o trabalho de fronteira nem sempre
+é igual ao trabalho mecânico observado na haste,
+
+30
+00:02:09,750 --> 00:02:13,680
+em razão da contra-pressão do lado
+oposto do pistão (geralmente a atmosfera).
+
+31
+00:02:14,890 --> 00:02:16,800
+Aplicações de trabalho de fronteira incluem:
+
+32
+00:02:17,050 --> 00:02:20,360
+* Motores de combustão interna;
+* Motores Stirling, conforme o ilustrado,
+
+33
+00:02:20,740 --> 00:02:25,390
+o qual recebe energia solar concentrada
+(uma entrada de calor) e produz trabalho.
+
+34
+00:02:25,710 --> 00:02:30,930
+O motor Stirling encontra-se na caixa suspensa, logo
+atrás do ponto focal do coletor solar---os espelhos,
+
+35
+00:02:31,220 --> 00:02:35,580
+e inclui dois conjuntos pistão-cilindros, projetados
+para interações de trabalho de fronteira.
+
+36
+00:02:36,760 --> 00:02:38,040
+Outras aplicações incluem
+
+37
+00:02:38,400 --> 00:02:41,970
+* Compressores alternativos e
+* Motores lineares, como o ilustrado.
+
+38
+00:02:42,330 --> 00:02:46,510
+O trabalho mecânico obtido do conjunto pistão-
+cilindro mais volumoso na altura das rodas
+
+39
+00:02:46,880 --> 00:02:51,360
+é utilizado diretamente na propulsão do conjunto,
+através do mecanismo biela-manivelas.
+
+40
+00:02:52,560 --> 00:02:57,680
+Finalmente, (a lista de aplicações não é exaustiva),
+trabalho de fronteira encontra aplicação em
+
+41
+00:02:58,060 --> 00:03:02,080
+* Elevadores de carga e atuadores
+(pneumáticos ou hidráulicos), além de
+
+42
+00:03:02,400 --> 00:03:07,690
+* Expansores criogênicos, empregados em
+"cryocoolers", como o ilustrado, na redução
+
+43
+00:03:07,840 --> 00:03:11,720
+da temperatura de um gás tipicamente abaixo dos -100°C,
+
+44
+00:03:12,080 --> 00:03:14,240
+classificada como a faixa de temperaturas criogênicas.
+
+45
+00:03:15,410 --> 00:03:20,160
+Dentre os Tópicos de Leitura da disciplina,
+separa-se para este assunto a Seção 4-1.
+
+46
+00:03:21,290 --> 00:03:22,490
+Muito obrigado pela audiência!
+
+47
+00:03:22,610 --> 00:03:24,750
+Desejo a todos ótimos estudos em ciências térmicas!
+
+48
+00:03:25,010 --> 00:03:26,340
+Até a próxima oportunidade!
+
+49
+00:03:26,670 --> 00:03:32,670
+[Música de Encerramento]
+

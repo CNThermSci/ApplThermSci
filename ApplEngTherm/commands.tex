@@ -33,6 +33,18 @@
         \transdissolve\vspace*{72mm}\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
     \usebackgroundtemplate{\mbox{~}}
 }
+\newcommand{\ArtEndHSE}[3]{% Same as \ArtEndH with SouthEast credit line
+    \BkgImgH{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \transdissolve\vspace*{72mm}\hfill\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}
+\newcommand{\ArtEndWSE}[3]{% Same as \ArtEndW with SouthEast credit line
+    \BkgImgW{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \transdissolve\vspace*{72mm}\hfill\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}
 \newcommand{\ImgColW}[3]{% Inserts a full-width image in a column
     \includegraphics[width=\columnwidth]{root/../art/#1.#2}\\[-0.5\baselineskip]
     \parbox{\columnwidth}{\tiny\hfill\scalebox{0.85}{\input{root/../art/#1.#3}}}

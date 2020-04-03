@@ -31,8 +31,31 @@
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\frame{\tableofcontents}
+\section*{Sumário Geral}
 %-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Parte~I: Apresentação de Processo Politrópico}
+%-----------------------------------------------------------------------------------------------
+
+\frame{
+    \frametitle{Sumário da Parte~I}
+    \tableofcontents[part=1]
+}
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Parte~II: Tópicos Especiais em Processos Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+\frame{
+    \frametitle{Sumário da Parte~II}
+    \tableofcontents[part=2]
+}
+
+%===============================================================================================
+\part{Apresentação de Processo Politrópico}
+\frame{\partpage}
+%===============================================================================================
 
 %-----------------------------------------------------------------------------------------------
 \section{Processos Politrópicos}
@@ -77,7 +100,7 @@
                 \\[\bigskipamount]
         \end{itemize}
         \uncover<4->{Um exemplo trivial é reconhecer que para $n=0$, tem-se:}
-        \uncover<5->{$$Pv^0 = \mbox{const.} \rightharpoondown\quad P = \mbox{const.}$$}
+        \uncover<4->{$$Pv^0 = \mbox{const.} \rightharpoondown\quad P = \mbox{const.}$$}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
@@ -92,7 +115,7 @@
                 \log(Pv^n) & = \log(c_1) \equiv c_2 \rightharpoondown \\[\medskipamount]
             }
             \uncover<5->{
-                \log P n\log v & = c_2 \rightharpoondown \\[\medskipamount]
+                \log P + n\log v & = c_2 \rightharpoondown \\[\medskipamount]
             }
             \uncover<6->{
                 \log P & = c_2 - n\log v
@@ -207,30 +230,42 @@
     %-------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\subsection{Resultados}
+\section{Tópicos de Leitura}
+%-----------------------------------------------------------------------------------------------
+
+    %------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+        \begin{thebibliography}{Çengel, Y.~A., 2013}
+            \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
+                Çengel, Y.~A. e Boles, M.~A.
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \alert{Seção~4-1.}}
+                \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
+        \end{thebibliography}
+    \end{frame}
+    %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{amden-875880_1280}{jpg}{txt}
+
+%===============================================================================================
+\part{Tópicos Especiais em Processos Politrópicos}
+\frame{\partpage}
+%===============================================================================================
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos Especiais em Processos Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Fundamentação Teórica}
 %-----------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Processos Politrópicos -- Etimologia}\vspace*{-2em}
-        O termo ``politrópico''
+    \begin{frame}{Processos Politrópicos -- Aplicações}\vspace*{-2em}
         \begin{itemize}
-            \item . \\[\medskipamount]
-            \item . \\[\medskipamount]
-            \item . \\[\medskipamount]
-            \item . \\[\medskipamount]
-            \item .
-        \end{itemize}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
-    % !j 96 -i8
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}{Processos Politrópicos -- Etimologia}\vspace*{-2em}
-        O termo ``politrópico''
-        \begin{itemize}
-            \item . \\[\medskipamount]
-            \item . \\[\medskipamount]
+            \item \alert{Medições} $P \times v$ frequentemente seguem relações politrópicas
+                \\[\medskipamount]
             \item . \\[\medskipamount]
             \item . \\[\medskipamount]
             \item .

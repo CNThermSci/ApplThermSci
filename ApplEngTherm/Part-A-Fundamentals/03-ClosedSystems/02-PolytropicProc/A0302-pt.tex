@@ -38,7 +38,7 @@
 \subsection{Parte~I: Apresentação de Processo Politrópico}
 %-----------------------------------------------------------------------------------------------
 
-\frame{
+\frame<handout:0>{
     \frametitle{Sumário da Parte~I}
     \tableofcontents[part=1]
 }
@@ -47,14 +47,14 @@
 \subsection{Parte~II: Tópicos Especiais em Processos Politrópicos}
 %-----------------------------------------------------------------------------------------------
 
-\frame{
+\frame<handout:0>{
     \frametitle{Sumário da Parte~II}
     \tableofcontents[part=2]
 }
 
 %===============================================================================================
 \part{Apresentação de Processo Politrópico}
-\frame{\partpage}
+\frame<handout:0>{\partpage}
 %===============================================================================================
 
 %-----------------------------------------------------------------------------------------------
@@ -228,10 +228,10 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Processos Politrópicos -- Trabalho de Fronteira -- Gases Ideais}\vspace*{-2em}
         \begin{columns}
-        \column{0.50\textwidth}
+        \column{0.45\textwidth}
         \uncover<1->{
-            \noindent Para gases ideais, \alert{$Pv = RT$}, passando por um processo
-            politrópico, \alert{$Pv^n = \mbox{const.}$}, o resultado \\[\medskipamount]
+            \par\noindent Para gases ideais, \alert{$Pv = RT$}, passando por um processo
+            politrópico, \alert{$Pv^n = \mbox{const.}$}, o resultado
         }
         \begin{equation*}
             \uncover<2->{
@@ -242,19 +242,25 @@
             \end{cases}\right.
             }
         \end{equation*}
-        \column{0.50\textwidth}
         \uncover<3->{
-            \noindent também pode ser escrito como: \\[\medskipamount]
+            \par\noindent é válido, mas pode ser escrito como: %\\[\medskipamount]
         }
+        \column{0.55\textwidth}
         \begin{equation*}
             \uncover<4->{\alert{
             w_f = \left.\begin{cases}
                 \displaystyle\frac{R(T_2 - T_1)}{1-n} & \text{para $n \neq 1$},
                     \\[\bigskipamount]
                 Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
-            \end{cases}\right..
-            }}
+            \end{cases}\right.}\text{(gás ideal)}
+            }
         \end{equation*}
+        \uncover<5->{
+            \par\noindent Para \alert{gases ideais}, expoente \alert{$n=1$} significa:
+        }
+        \uncover<6->{
+            $$Pv^1 = \mbox{const.} = RT \quad\rightharpoondown\quad \alert{T = \mbox{const.}}$$
+        }
         \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
@@ -279,7 +285,7 @@
 
 %===============================================================================================
 \part{Tópicos Especiais em Processos Politrópicos}
-\frame{\partpage}
+\frame<handout:0>{\partpage}
 %===============================================================================================
 
 %-----------------------------------------------------------------------------------------------

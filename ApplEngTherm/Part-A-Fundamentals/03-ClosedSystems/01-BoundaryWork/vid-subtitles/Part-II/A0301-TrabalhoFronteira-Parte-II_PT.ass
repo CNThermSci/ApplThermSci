@@ -22,9 +22,9 @@ Video File: A0301-TrabalhoFronteira-Parte-II.webm
 Video AR Mode: 4
 Video AR Value: 1.777778
 Video Zoom Percent: 0.250000
-Scroll Position: 94
-Active Line: 116
-Video Position: 18387
+Scroll Position: 114
+Active Line: 133
+Video Position: 20748
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -147,5 +147,22 @@ Dialogue: 0,0:09:46.66,0:09:49.12,Default,,0,0,0,,trata-se, portanto, de um CICL
 Dialogue: 0,0:09:50.06,0:09:51.58,Default,,0,0,0,,Vamos fazer o ciclo na sequência:
 Dialogue: 0,0:09:51.80,0:10:01.16,Default,,0,0,0,,No início, no estado "1", o pistão encontra-se mais\Nà esquerda, fazendo com que o volume (específico ou\Ntotal) do sistema seja mínimo e a pressão, máxima.
 Dialogue: 0,0:10:01.30,0:10:04.08,Default,,0,0,0,,O estado do sistema é indicado no diagrama de Andrews.
-Dialogue: 0,0:10:04.26,0:10:12.70,Default,,0,0,0,,À medida em que o ciclo termodinâmico é percorrido,\Na integração de trabalho de fronteira é feita, e o\Ntrabalho acumulado é mostrado pela área cumulativa sob os processos.
-Dialogue: 0,0:10:12.90,0:10:14.10,Default,,0,0,0,,Vamos percorrer o ciclo:
+Dialogue: 0,0:10:04.26,0:10:12.22,Default,,0,0,0,,À medida em que o ciclo termodinâmico é percorrido,\Na integração de trabalho de fronteira é feita, e o\Ntrabalho acumulado é mostrado pela área cumulativa sob os processos.
+Dialogue: 0,0:10:12.48,0:10:13.62,Default,,0,0,0,,Vamos percorrer o ciclo:
+Dialogue: 0,0:10:14.44,0:10:19.52,Default,,0,0,0,,A expansão "1-2" está produzindo trabalho W12>0.
+Dialogue: 0,0:10:20.32,0:10:22.18,Default,,0,0,0,,O processo "1-2" é completo.
+Dialogue: 0,0:10:22.40,0:10:25.12,Default,,0,0,0,,[lendo 4° tópico]
+Dialogue: 0,0:10:26.08,0:10:30.54,Default,,0,0,0,,A compressão "2-1" está produzindo trabalho W21<0.
+Dialogue: 0,0:10:30.80,0:10:33.66,Default,,0,0,0,,(A produção de trabalho negativo é o mesmo\Nque um consumo de trabalho.)
+Dialogue: 0,0:10:34.64,0:10:39.42,Default,,0,0,0,,Aqui o ciclo termina, e o trabalho líquido do ciclo\N(que é o trabalho acumulado ao final de um ciclo),
+Dialogue: 0,0:10:39.60,0:10:44.72,Default,,0,0,0,,é a soma dos trabalhos nos processos que compõem o\Nciclo, no caso, W12 e W21.
+Dialogue: 0,0:10:44.94,0:10:49.64,Default,,0,0,0,,Por propriedade de integrais, podemos afirmar que\No trabalho líquido deste ciclo motor é positivo
+Dialogue: 0,0:10:49.84,0:10:53.96,Default,,0,0,0,,e igual à área do interior do ciclo,\Nem coordenadas P-V (ou P-v).
+Dialogue: 0,0:10:54.24,0:10:57.20,Default,,0,0,0,,A animação é agora repetida sem narração:
+Dialogue: 0,0:10:57.37,0:11:13.45,Default,,0,0,0,,[Música]
+Dialogue: 0,0:11:14.55,0:11:20.00,Default,,0,0,0,,Dentre os Tópicos de Leitura da disciplina,\Nsepara-se para este assunto a Seção 4-1.
+Dialogue: 0,0:11:20.40,0:11:21.67,Default,,0,0,0,,Muito obrigado pela audiência!
+Dialogue: 0,0:11:21.75,0:11:23.97,Default,,0,0,0,,Desejo a todos ótimos estudos em ciências térmicas!
+Dialogue: 0,0:11:24.15,0:11:25.35,Default,,0,0,0,,Até a próxima oportunidade!
+Dialogue: 0,0:11:25.80,0:11:31.60,Default,,0,0,0,,[Música de Encerramento]
+Dialogue: 0,0:11:31.60,0:11:33.60,Default,,0,0,0,,

@@ -1,0 +1,653 @@
+﻿1
+00:00:00,200 --> 00:00:05,360
+[Música de Introdução]
+
+2
+00:00:06,250 --> 00:00:07,780
+Olá estudantes de ciências térmicas!
+
+3
+00:00:08,450 --> 00:00:10,420
+Neste vídeo veremos a Parte-II do tópico
+
+4
+00:00:10,510 --> 00:00:13,150
+Trabalho de Fronteira,
+um subtópico de Sistemas Fechados.
+
+5
+00:00:13,710 --> 00:00:15,160
+Este vídeo dispõe de legendas
+
+6
+00:00:15,520 --> 00:00:19,870
+A apresentação sobre a qual este vídeo se baseia
+encontra-se disponível no endereço mostrado
+
+7
+00:00:20,230 --> 00:00:26,870
+sob licensa Creative Commons de atribuição, não
+comercial, e não derivados, CC-BY-NC-ND,
+
+8
+00:00:27,180 --> 00:00:31,190
+uma licensa aberta que restringe o uso comercial,
+assim como modificações do conteúdo.
+
+9
+00:00:31,520 --> 00:00:32,580
+Vamos ao conteúdo!
+
+10
+00:00:33,380 --> 00:00:38,020
+A Parte-I, a qual já foi coberta em vídeo anterior,
+definiu trabalho de fronteira e deu aplicações.
+
+11
+00:00:39,090 --> 00:00:44,100
+A Parte-II, coberta neste vídeo, trata de trabalho
+de fronteira quantificado em processos e ciclos.
+
+12
+00:00:44,740 --> 00:00:49,850
+Na Eng. Mec. da UTFPR Campus Guarapuava, este
+tópico é coberto na disciplina de Termodinâmica A.
+
+13
+00:00:50,620 --> 00:00:53,860
+Tópicos de leitura do livro-texto da disciplina
+são fornecidos ao final do vídeo.
+
+14
+00:00:57,500 --> 00:01:02,170
+Considere um sistema definido como a massa de gás no
+interior de um arranjo pistão-cilindro, mostrado.
+
+15
+00:01:02,520 --> 00:01:07,180
+O sistema possui massa "m", pressão "P", indicadas,
+além de outras propriedades.
+
+16
+00:01:07,480 --> 00:01:12,050
+O pistão possui área de seção transversal "A",
+indicada, e pode mover-se lateralmente.
+
+17
+00:01:12,580 --> 00:01:20,680
+Em um processo, o gás sofre uma expansão volumétrica
+infinitesimal, percebida como um deslocamento
+infinitesimal dℓ, também indicado (fora de escala).
+
+18
+00:01:21,010 --> 00:01:26,600
+A diferencial de trabalho de fronteira, δWf, é
+mostrada através da definição de trabalho mecânico,
+
+19
+00:01:27,040 --> 00:01:31,850
+que é o produto interno entre vetores força, F, e
+diferencial de deslocamento, dℓ.
+
+20
+00:01:32,170 --> 00:01:37,870
+A diferencial inexata δ é utilizada em razão de que
+trabalho é uma INTERAÇÃO e não uma PROPRIEDADE.
+
+21
+00:01:38,140 --> 00:01:43,030
+A definição faz com que o trabalho de fronteira
+seja POSITIVO quando o sistema EXECUTA trabalho,
+
+22
+00:01:43,420 --> 00:01:48,270
+uma vez que a força de pressão de um fluido é sempre
+positiva e o deslocamento é positivo na expansão.
+
+23
+00:01:48,840 --> 00:01:53,430
+Importa reiterar que a interação energética δWf é
+aquela executada pelo SISTEMA,
+
+24
+00:01:53,740 --> 00:01:59,740
+e não aquela observada na haste do pistão, a qual depende da
+força RESULTANTE da soma vetorial de F ilustrado
+
+25
+00:02:00,000 --> 00:02:03,470
+com as forças de (i) atrito e de
+(ii) contra-pressão no pistão.
+
+26
+00:02:03,780 --> 00:02:09,080
+O objetivo da dedução que se segue é escrever δWf em
+termos de PROPRIEDADES termodinâmicas do sistema.
+
+27
+00:02:09,400 --> 00:02:11,530
+O primeiro passo é obter uma equação escalar:
+
+28
+00:02:12,540 --> 00:02:17,480
+O produto escalar de vetores é transformado em um
+produto de escalares tomando os vetores em módulo,
+
+29
+00:02:17,800 --> 00:02:22,960
+uma vez que a força de pressão é sempre normal às
+fronteiras do sistema e paralela ao deslocamento.
+
+30
+00:02:23,310 --> 00:02:29,070
+Esta operação é sem perda de informação para a força
+de pressão, uma vez que esta é sempre positiva em fluidos.
+
+31
+00:02:29,330 --> 00:02:34,980
+Entretanto, a informação de SENTIDO de deslocamento
+é perdida e deverá ser (e será) recuperada adiante.
+
+32
+00:02:35,270 --> 00:02:41,750
+Também multiplicamos o produto escalar por área
+sobre área, lembrando que "A" é a área de seção
+transversal da fronteira móvel, indicada.
+
+33
+00:02:42,830 --> 00:02:46,540
+Para que a diferencial de trabalho de fronteira
+seja escrita em termos de propriedades
+
+34
+00:02:46,540 --> 00:02:51,730
+termodinâmicas do sistema, agrupa-se os termos:
+(F/A) e (A·dℓ), como mostrado.
+
+35
+00:02:52,730 --> 00:02:56,850
+Reconhecendo a razão (F/A) como sendo a pressão
+absoluta, P, do sistema,
+
+36
+00:02:57,160 --> 00:03:02,230
+e o produto (A·dℓ) como sendo a diferencial de
+volume, dV do sistema, o objetivo de
+
+37
+00:03:02,410 --> 00:03:13,170
+(i) recuperar a informação de SENTIDO do vetor dℓ
+através do sinal de dV (pois dV<0 sempre que dℓ<0,
+e dV>0 sempre que dℓ>0), é alcançado.
+
+38
+00:03:14,200 --> 00:03:17,670
+Ainda, ao efetuar as substituições,
+como mostrado, o objetivo de
+
+39
+00:03:17,790 --> 00:03:22,330
+(ii) escrever δWf em termos de propriedades
+termodinâmicas do sistema, também é alcançado.
+
+40
+00:03:22,590 --> 00:03:30,100
+Assim, tem-se que a diferencial do trabalho de
+fronteira é P·dV, e segue a convenção de sinais
+de trabalho positivo quando o sistema o executa.
+
+41
+00:03:30,390 --> 00:03:35,050
+Esta convenção de sinais tem origem histórica,
+em associação a aplicações motoras da termodinâmica
+
+42
+00:03:35,050 --> 00:03:39,250
+em seu período clássico, a qual será referida como
+"convenção histórica de sinais".
+
+43
+00:03:39,520 --> 00:03:42,740
+A diferencial de trabalho obtida
+é uma INTERAÇÃO EXTENSIVA,
+
+44
+00:03:43,050 --> 00:03:45,350
+escrita em termos da propriedade extensiva "V"
+
+45
+00:03:45,670 --> 00:03:49,010
+(lembrando que propriedades extensivas
+dependem da extensão do sistema).
+
+46
+00:03:49,890 --> 00:03:57,150
+Para obter a diferencial de trabalho de fronteira
+por unidade de massa do sistema, divide-se ambos os
+lados da equação por "m", como mostrado:
+
+47
+00:03:58,210 --> 00:04:04,920
+Assim, δwf (com "w" minúsculo), é a diferencial de
+trabalho ESPECÍFICO de fronteira, ou seja,
+por unidade de massa do sistema,
+
+48
+00:04:05,280 --> 00:04:08,690
+uma INTERAÇÃO INTENSIVA,
+escrita em termos da propriedade intensiva "v"
+
+49
+00:04:09,050 --> 00:04:12,170
+(lembrando que propriedades intensivas
+independem da extensão do sistema).
+
+50
+00:04:12,480 --> 00:04:18,170
+Cada expressão (P·dV) ou (P·dv) será ponto de
+partida para avaliação do trabalho de fronteira
+
+51
+00:04:18,450 --> 00:04:25,880
+(extensivo ou intensivo) em processos e ciclos, via
+integração, lembrando que o resultado segue a
+convenção histórica de sinais para o trabalho.
+
+52
+00:04:26,920 --> 00:04:31,060
+Assim, a diferencial específica de trabalho de fron-
+teira ao longo de um processo é ilustrada.
+
+53
+00:04:31,370 --> 00:04:37,780
+Para que as hipóteses de equilíbrio termodinâmico,
+as quais se manifestam em termos de sistemas com
+propriedades uniformes, sejam satisfeitas,
+
+54
+00:04:38,070 --> 00:04:40,570
+considera-se apenas processos de quase equilíbrio.
+
+55
+00:04:40,870 --> 00:04:49,090
+Nomeamos processos em termos dos estados inicial e
+final. No caso ilustrado, o processo se dá entre
+estados "1" e "2": portanto o processo é "1-2".
+
+56
+00:04:49,370 --> 00:04:53,840
+Evidentemente, a quantificação do trabalho de
+fronteira no processo dar-se-á por integração.
+
+57
+00:04:54,140 --> 00:04:58,350
+O processo está descrito pela curva azul, no
+diagrama de Andrews, que é o diagrama P-v.
+
+58
+00:04:58,650 --> 00:05:06,650
+A curva azul é o caminho traçado pelo processo
+entre os estados inicial e final, e é descrito
+matematicamente por uma função P:P(v).
+
+59
+00:05:07,510 --> 00:05:14,100
+Assim, o trabalho de fronteira específico do
+processo "1-2", denominado "w12", é obtido pela
+integração mostrada.
+
+60
+00:05:14,350 --> 00:05:21,080
+A integração do lado esquedo da primeira equação,
+δwf, é w12: a INTERAÇÃO específica de trabalho.
+
+61
+00:05:21,360 --> 00:05:27,200
+A integração do lado direito da primeira equação
+segue indicada como a integral de "1" a "2" de P·dv,
+
+62
+00:05:27,540 --> 00:05:30,790
+a qual, para ser avaliada, requer o conhecimento da
+função P:P(v).
+
+63
+00:05:31,160 --> 00:05:35,940
+Todos os termos da equação possuem unidades de
+trabalho específico de fronteira: kJ/kg.
+
+64
+00:05:36,760 --> 00:05:43,490
+Multiplicando-se toda a equação pela massa "m" do
+sistema, obtém-se a expressão equivalente para
+trabalho de fronteira em kJ:
+
+65
+00:05:44,440 --> 00:05:47,810
+A qual resulta na equação de "W12" (com "W"
+maiúsculo), mostrada.
+
+66
+00:05:48,070 --> 00:05:53,620
+Se os valores de w12 (específico) e da massa "m"
+forem conhecidos, não é necessário refazer a integral,
+
+67
+00:05:53,900 --> 00:05:58,240
+basta multiplicar o trabalho específico
+pela massa para a obtenção do trabalho em kJ.
+
+68
+00:05:59,090 --> 00:06:01,420
+Portanto, pelo significado de integração:
+
+69
+00:06:02,240 --> 00:06:09,400
+O trabalho Wf (maiúsculo / extensivo / em kJ) é a
+área sob o processo em coordenadas P-V (extensivo),
+
+70
+00:06:10,370 --> 00:06:17,890
+e o trabalho wf (minúsculo / intensivo / em kJ/kg) é
+a área sob o processo em coordenadas P-v (específico).
+
+
+71
+00:06:18,940 --> 00:06:22,740
+Passamos a tratar da importância do caminho do
+processo para o trabalho de fronteira:
+
+72
+00:06:23,040 --> 00:06:27,940
+O trabalho de fronteira, seja intensivo ou
+extensivo, é uma quantidade dependente do caminho.
+
+73
+00:06:28,920 --> 00:06:36,060
+O integrando diferencial de trabalho de fronteira,
+indicado por "δ" (delta) e não por "d" (de),
+por ser inexato, integra de forma diferente.
+
+74
+00:06:36,280 --> 00:06:43,580
+É por esta razão que a integral da diferencial
+inexata δwf é "w12": o trabalho de fronteira do
+processo "1-2"...
+
+75
+00:06:44,320 --> 00:06:49,200
+...e NÃO a diferença entre valores extremos
+de uma suposta função "w" entre os limites de integração,
+
+76
+00:06:49,400 --> 00:06:52,560
+a saber: um suposto "w2" menos um suposto "w1".
+
+77
+00:06:52,820 --> 00:06:57,560
+Isto se dá em razão de que tal "função trabalho",
+ou "campo de trabalho" (ambos entre aspas),
+
+78
+00:06:57,780 --> 00:07:03,020
+não existe: não pode ser escrito em função de
+estados, não sendo, portanto, uma função de estados.
+
+79
+00:07:03,220 --> 00:07:11,040
+Todas as PROPRIEDADES termodinâmicas, em contraste,
+são tais funções, razão pela qual alguns autores
+chamam-nas de "funções de estado".
+
+80
+00:07:12,000 --> 00:07:17,660
+A figura ao lado mostra três caminhos, denominados
+"A", "B" e "C", que são 3 possíveis processos entre
+os estados "1" e "2".
+
+81
+00:07:17,860 --> 00:07:23,080
+Existem infinitos caminhos que conectam os estados
+"1" e "2"; portanto, há uma infinidade de processos
+"1-2" correspondentes.
+
+82
+00:07:23,280 --> 00:07:28,800
+Se atentarmos apenas a expansões monotônicas desde o
+volume específico v1 até o v2, como é o caso dos
+caminhos "A", "B" e "C",
+
+83
+00:07:29,000 --> 00:07:31,700
+alguém pode indagar em que consiste os diferentes caminhos traçados.
+
+84
+00:07:31,880 --> 00:07:33,480
+A resposta é indicada no terceiro tópico:
+
+85
+00:07:33,740 --> 00:07:38,260
+[lendo o 3° tópico]
+
+86
+00:07:38,400 --> 00:07:42,740
+Assim, em razão de que o trabalho de fronteira é UMA
+DAS DIVERSAS formas que um sistema pode interagir
+
+87
+00:07:42,740 --> 00:07:46,620
+energeticamente com suas vizinhanças, faz com que
+sua integração seja DEPENDENTE DO CAMINHO.
+
+88
+00:07:47,380 --> 00:07:51,480
+O quarto e último tópico aplica-se para sistemas
+compressíveis simples, e lê:
+
+89
+00:07:51,760 --> 00:07:55,780
+[lendo o 4° tópico]
+
+90
+00:07:56,020 --> 00:08:03,580
+Assim, diferentes interações de calor ao longo de
+cada processo é o que faz a diferença entre os
+caminhos "A", "B" ou "C", traçado pelo sistema.
+
+91
+00:08:04,540 --> 00:08:07,300
+Passamos a considerar trabalho de
+fronteira em ciclos:
+
+92
+00:08:07,560 --> 00:08:08,840
+O 1° tópico enuncia:
+
+93
+00:08:08,840 --> 00:08:18,220
+[lendo o 1° tópico]
+
+94
+00:08:19,020 --> 00:08:22,680
+Para isso, basta escolher diferentes processos
+termodinâmicos de ida e volta.
+
+95
+00:08:23,460 --> 00:08:30,120
+[lendo o 3° tópico]
+
+96
+00:08:30,380 --> 00:08:37,020
+E é EXATAMENTE essa a idéia por detrás do
+desenvolvimento de motores de combustão interna à
+gasolina ou à Diesel, por exemplo.
+
+97
+00:08:38,020 --> 00:08:42,460
+Vimos anteriormente neste vídeo que o trabalho de
+fronteira, seja extensivo ou intensivo,
+
+98
+00:08:42,720 --> 00:08:49,720
+de um processo é quantificado pela área sob o mesmo
+em um diagrama de Andrews correspondente, P-V ou P-v.
+
+99
+00:08:49,980 --> 00:08:53,640
+Seja um ciclo composto por processos "1-2" e "2-1".
+
+100
+00:08:53,940 --> 00:08:59,580
+O processo "1-2" é feito pelo caminho "C", e
+o processo "2-1" é feito pelo caminho "A".
+
+101
+00:08:59,800 --> 00:09:04,840
+Sabemos, por integração, que o processo "1-2"
+resultará em trabalho de fronteira positivo,
+
+102
+00:09:05,100 --> 00:09:08,700
+e que o processo "2-1" resultará em trabalho de
+fronteira negativo.
+
+103
+00:09:08,880 --> 00:09:12,160
+Chegaríamos às mesmas conclusões
+por meio de um raciocínio físico.
+
+104
+00:09:12,380 --> 00:09:18,360
+Generalizando, a expansão de um sistema é sempre um
+exercício de trabalho nas vizinhanças, ou seja:
+
+105
+00:09:18,520 --> 00:09:19,860
+"Expansão produz trabalho."
+
+106
+00:09:20,040 --> 00:09:25,620
+Por outro lado, a compressão de um sistema sempre
+demanda trabalho externo, das vizinhanças, ou seja:
+
+107
+00:09:25,880 --> 00:09:27,860
+"Compressão demanda trabalho." Ou:
+
+108
+00:09:28,080 --> 00:09:29,600
+"Compressão consome trabalho."
+
+109
+00:09:29,700 --> 00:09:35,980
+No ciclo considerado: ida via "C" e volta via "A",
+tem-se mais trabalho produzido do que consumido,
+
+110
+00:09:36,220 --> 00:09:38,560
+(uma vez que a área sob "C" > área sob "A"),
+
+111
+00:09:38,820 --> 00:09:46,440
+e assim, este ciclo é um que produz uma quantidade
+líquida de trabalho, "Wliq > 0", pela convenção
+histórica de sinais para o trabalho;
+
+112
+00:09:46,660 --> 00:09:49,120
+trata-se, portanto, de um CICLO MOTOR.
+
+113
+00:09:50,060 --> 00:09:51,580
+Vamos fazer o ciclo na sequência:
+
+114
+00:09:51,800 --> 00:10:01,160
+No início, no estado "1", o pistão encontra-se mais
+à esquerda, fazendo com que o volume (específico ou
+total) do sistema seja mínimo e a pressão, máxima.
+
+115
+00:10:01,300 --> 00:10:04,080
+O estado do sistema é indicado no diagrama de Andrews.
+
+116
+00:10:04,260 --> 00:10:12,220
+À medida em que o ciclo termodinâmico é percorrido,
+a integração de trabalho de fronteira é feita, e o
+trabalho acumulado é mostrado pela área cumulativa sob os processos.
+
+117
+00:10:12,480 --> 00:10:13,620
+Vamos percorrer o ciclo:
+
+118
+00:10:14,440 --> 00:10:19,520
+A expansão "1-2" está produzindo trabalho W12>0.
+
+119
+00:10:20,320 --> 00:10:22,180
+O processo "1-2" é completo.
+
+120
+00:10:22,400 --> 00:10:25,120
+[lendo 4° tópico]
+
+121
+00:10:26,080 --> 00:10:30,540
+A compressão "2-1" está produzindo trabalho W21<0.
+
+122
+00:10:30,800 --> 00:10:33,660
+(A produção de trabalho negativo é o mesmo
+que um consumo de trabalho.)
+
+123
+00:10:34,640 --> 00:10:39,420
+Aqui o ciclo termina, e o trabalho líquido do ciclo
+(que é o trabalho acumulado ao final de um ciclo),
+
+124
+00:10:39,600 --> 00:10:44,720
+é a soma dos trabalhos nos processos que compõem o
+ciclo, no caso, W12 e W21.
+
+125
+00:10:44,940 --> 00:10:49,640
+Por propriedade de integrais, podemos afirmar que
+o trabalho líquido deste ciclo motor é positivo
+
+126
+00:10:49,840 --> 00:10:53,960
+e igual à área do interior do ciclo,
+em coordenadas P-V (ou P-v).
+
+127
+00:10:54,240 --> 00:10:57,200
+A animação é agora repetida sem narração:
+
+128
+00:10:57,375 --> 00:11:13,450
+[Música]
+
+129
+00:11:14,550 --> 00:11:20,000
+Dentre os Tópicos de Leitura da disciplina,
+separa-se para este assunto a Seção 4-1.
+
+130
+00:11:20,400 --> 00:11:21,675
+Muito obrigado pela audiência!
+
+131
+00:11:21,750 --> 00:11:23,975
+Desejo a todos ótimos estudos em ciências térmicas!
+
+132
+00:11:24,150 --> 00:11:25,350
+Até a próxima oportunidade!
+
+133
+00:11:25,800 --> 00:11:31,600
+[Música de Encerramento]
+

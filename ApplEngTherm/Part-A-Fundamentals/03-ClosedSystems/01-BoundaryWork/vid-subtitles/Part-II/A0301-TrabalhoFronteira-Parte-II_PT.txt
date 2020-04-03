@@ -1,0 +1,134 @@
+﻿# Exported by Aegisub 3.2.2
+[Música de Introdução]
+Olá estudantes de ciências térmicas!
+Neste vídeo veremos a Parte-II do tópico
+Trabalho de Fronteira,\Num subtópico de Sistemas Fechados.
+Este vídeo dispõe de legendas
+A apresentação sobre a qual este vídeo se baseia\Nencontra-se disponível no endereço mostrado
+sob licensa Creative Commons de atribuição, não\Ncomercial, e não derivados, CC-BY-NC-ND,
+uma licensa aberta que restringe o uso comercial,\Nassim como modificações do conteúdo.
+Vamos ao conteúdo!
+A Parte-I, a qual já foi coberta em vídeo anterior,\Ndefiniu trabalho de fronteira e deu aplicações.
+A Parte-II, coberta neste vídeo, trata de trabalho\Nde fronteira quantificado em processos e ciclos.
+Na Eng. Mec. da UTFPR Campus Guarapuava, este\Ntópico é coberto na disciplina de Termodinâmica A.
+Tópicos de leitura do livro-texto da disciplina\Nsão fornecidos ao final do vídeo.
+Considere um sistema definido como a massa de gás no\Ninterior de um arranjo pistão-cilindro, mostrado.
+O sistema possui massa "m", pressão "P", indicadas,\Nalém de outras propriedades.
+O pistão possui área de seção transversal "A",\Nindicada, e pode mover-se lateralmente.
+Em um processo, o gás sofre uma expansão volumétrica\Ninfinitesimal, percebida como um deslocamento\Ninfinitesimal dℓ, também indicado (fora de escala).
+A diferencial de trabalho de fronteira, δWf, é\Nmostrada através da definição de trabalho mecânico,
+que é o produto interno entre vetores força, F, e\Ndiferencial de deslocamento, dℓ.
+A diferencial inexata δ é utilizada em razão de que\Ntrabalho é uma INTERAÇÃO e não uma PROPRIEDADE.
+A definição faz com que o trabalho de fronteira\Nseja POSITIVO quando o sistema EXECUTA trabalho,
+uma vez que a força de pressão de um fluido é sempre\Npositiva e o deslocamento é positivo na expansão.
+Importa reiterar que a interação energética δWf é\Naquela executada pelo SISTEMA,
+e não aquela observada na haste do pistão, a qual depende da\Nforça RESULTANTE da soma vetorial de F ilustrado
+com as forças de (i) atrito e de\N(ii) contra-pressão no pistão.
+O objetivo da dedução que se segue é escrever δWf em\Ntermos de PROPRIEDADES termodinâmicas do sistema.
+O primeiro passo é obter uma equação escalar:
+O produto escalar de vetores é transformado em um\Nproduto de escalares tomando os vetores em módulo,
+uma vez que a força de pressão é sempre normal às\Nfronteiras do sistema e paralela ao deslocamento.
+Esta operação é sem perda de informação para a força\Nde pressão, uma vez que esta é sempre positiva em fluidos.
+Entretanto, a informação de SENTIDO de deslocamento\Né perdida e deverá ser (e será) recuperada adiante.
+Também multiplicamos o produto escalar por área\Nsobre área, lembrando que "A" é a área de seção\Ntransversal da fronteira móvel, indicada.
+Para que a diferencial de trabalho de fronteira\Nseja escrita em termos de propriedades
+termodinâmicas do sistema, agrupa-se os termos:\N(F/A) e (A·dℓ), como mostrado.
+Reconhecendo a razão (F/A) como sendo a pressão\Nabsoluta, P, do sistema,
+e o produto (A·dℓ) como sendo a diferencial de\Nvolume, dV do sistema, o objetivo de
+(i) recuperar a informação de SENTIDO do vetor dℓ\Natravés do sinal de dV (pois dV<0 sempre que dℓ<0,\Ne dV>0 sempre que dℓ>0), é alcançado.
+Ainda, ao efetuar as substituições,\Ncomo mostrado, o objetivo de
+(ii) escrever δWf em termos de propriedades\Ntermodinâmicas do sistema, também é alcançado.
+Assim, tem-se que a diferencial do trabalho de\Nfronteira é P·dV, e segue a convenção de sinais\Nde trabalho positivo quando o sistema o executa.
+Esta convenção de sinais tem origem histórica,\Nem associação a aplicações motoras da termodinâmica
+em seu período clássico, a qual será referida como\N"convenção histórica de sinais".
+A diferencial de trabalho obtida\Né uma INTERAÇÃO EXTENSIVA,
+escrita em termos da propriedade extensiva "V"
+(lembrando que propriedades extensivas\Ndependem da extensão do sistema).
+Para obter a diferencial de trabalho de fronteira\Npor unidade de massa do sistema, divide-se ambos os\Nlados da equação por "m", como mostrado:
+Assim, δwf (com "w" minúsculo), é a diferencial de\Ntrabalho ESPECÍFICO de fronteira, ou seja,\Npor unidade de massa do sistema,
+uma INTERAÇÃO INTENSIVA,\Nescrita em termos da propriedade intensiva "v"
+(lembrando que propriedades intensivas\Nindependem da extensão do sistema).
+Cada expressão (P·dV) ou (P·dv) será ponto de\Npartida para avaliação do trabalho de fronteira
+(extensivo ou intensivo) em processos e ciclos, via\Nintegração, lembrando que o resultado segue a\Nconvenção histórica de sinais para o trabalho.
+Assim, a diferencial específica de trabalho de fron-\Nteira ao longo de um processo é ilustrada.
+Para que as hipóteses de equilíbrio termodinâmico,\Nas quais se manifestam em termos de sistemas com\Npropriedades uniformes, sejam satisfeitas,
+considera-se apenas processos de quase equilíbrio.
+Nomeamos processos em termos dos estados inicial e\Nfinal. No caso ilustrado, o processo se dá entre\Nestados "1" e "2": portanto o processo é "1-2".
+Evidentemente, a quantificação do trabalho de\Nfronteira no processo dar-se-á por integração.
+O processo está descrito pela curva azul, no\Ndiagrama de Andrews, que é o diagrama P-v.
+A curva azul é o caminho traçado pelo processo\Nentre os estados inicial e final, e é descrito\Nmatematicamente por uma função P:P(v).
+Assim, o trabalho de fronteira específico do\Nprocesso "1-2", denominado "w12", é obtido pela\Nintegração mostrada.
+A integração do lado esquedo da primeira equação,\Nδwf, é w12: a INTERAÇÃO específica de trabalho.
+A integração do lado direito da primeira equação\Nsegue indicada como a integral de "1" a "2" de P·dv,
+a qual, para ser avaliada, requer o conhecimento da\Nfunção P:P(v).
+Todos os termos da equação possuem unidades de\Ntrabalho específico de fronteira: kJ/kg.
+Multiplicando-se toda a equação pela massa "m" do\Nsistema, obtém-se a expressão equivalente para\Ntrabalho de fronteira em kJ:
+A qual resulta na equação de "W12" (com "W"\Nmaiúsculo), mostrada.
+Se os valores de w12 (específico) e da massa "m"\Nforem conhecidos, não é necessário refazer a integral,
+basta multiplicar o trabalho específico\Npela massa para a obtenção do trabalho em kJ.
+Portanto, pelo significado de integração:
+O trabalho Wf (maiúsculo / extensivo / em kJ) é a\Nárea sob o processo em coordenadas P-V (extensivo),
+e o trabalho wf (minúsculo / intensivo / em kJ/kg) é\Na área sob o processo em coordenadas P-v (específico).\N
+Passamos a tratar da importância do caminho do\Nprocesso para o trabalho de fronteira:
+O trabalho de fronteira, seja intensivo ou\Nextensivo, é uma quantidade dependente do caminho.
+O integrando diferencial de trabalho de fronteira,\Nindicado por "δ" (delta) e não por "d" (de),\Npor ser inexato, integra de forma diferente.
+É por esta razão que a integral da diferencial\Ninexata δwf é "w12": o trabalho de fronteira do\Nprocesso "1-2"...
+...e NÃO a diferença entre valores extremos\Nde uma suposta função "w" entre os limites de integração,
+a saber: um suposto "w2" menos um suposto "w1".
+Isto se dá em razão de que tal "função trabalho",\Nou "campo de trabalho" (ambos entre aspas),
+não existe: não pode ser escrito em função de\Nestados, não sendo, portanto, uma função de estados.
+Todas as PROPRIEDADES termodinâmicas, em contraste,\Nsão tais funções, razão pela qual alguns autores\Nchamam-nas de "funções de estado".
+A figura ao lado mostra três caminhos, denominados\N"A", "B" e "C", que são 3 possíveis processos entre\Nos estados "1" e "2".
+Existem infinitos caminhos que conectam os estados\N"1" e "2"; portanto, há uma infinidade de processos\N"1-2" correspondentes.
+Se atentarmos apenas a expansões monotônicas desde o\Nvolume específico v1 até o v2, como é o caso dos\Ncaminhos "A", "B" e "C",
+alguém pode indagar em que consiste os diferentes caminhos traçados.
+A resposta é indicada no terceiro tópico:
+[lendo o 3° tópico]
+Assim, em razão de que o trabalho de fronteira é UMA\NDAS DIVERSAS formas que um sistema pode interagir
+energeticamente com suas vizinhanças, faz com que\Nsua integração seja DEPENDENTE DO CAMINHO.
+O quarto e último tópico aplica-se para sistemas\Ncompressíveis simples, e lê:
+[lendo o 4° tópico]
+Assim, diferentes interações de calor ao longo de\Ncada processo é o que faz a diferença entre os\Ncaminhos "A", "B" ou "C", traçado pelo sistema.
+Passamos a considerar trabalho de\Nfronteira em ciclos:
+O 1° tópico enuncia:
+[lendo o 1° tópico]
+Para isso, basta escolher diferentes processos\Ntermodinâmicos de ida e volta.
+[lendo o 3° tópico]
+E é EXATAMENTE essa a idéia por detrás do\Ndesenvolvimento de motores de combustão interna à\Ngasolina ou à Diesel, por exemplo.
+Vimos anteriormente neste vídeo que o trabalho de\Nfronteira, seja extensivo ou intensivo,
+de um processo é quantificado pela área sob o mesmo\Nem um diagrama de Andrews correspondente, P-V ou P-v.
+Seja um ciclo composto por processos "1-2" e "2-1".
+O processo "1-2" é feito pelo caminho "C", e\No processo "2-1" é feito pelo caminho "A".
+Sabemos, por integração, que o processo "1-2"\Nresultará em trabalho de fronteira positivo,
+e que o processo "2-1" resultará em trabalho de\Nfronteira negativo.
+Chegaríamos às mesmas conclusões\Npor meio de um raciocínio físico.
+Generalizando, a expansão de um sistema é sempre um\Nexercício de trabalho nas vizinhanças, ou seja:
+"Expansão produz trabalho."
+Por outro lado, a compressão de um sistema sempre\Ndemanda trabalho externo, das vizinhanças, ou seja:
+"Compressão demanda trabalho." Ou:
+"Compressão consome trabalho."
+No ciclo considerado: ida via "C" e volta via "A",\Ntem-se mais trabalho produzido do que consumido,
+(uma vez que a área sob "C" > área sob "A"),
+e assim, este ciclo é um que produz uma quantidade\Nlíquida de trabalho, "Wliq > 0", pela convenção\Nhistórica de sinais para o trabalho;
+trata-se, portanto, de um CICLO MOTOR.
+Vamos fazer o ciclo na sequência:
+No início, no estado "1", o pistão encontra-se mais\Nà esquerda, fazendo com que o volume (específico ou\Ntotal) do sistema seja mínimo e a pressão, máxima.
+O estado do sistema é indicado no diagrama de Andrews.
+À medida em que o ciclo termodinâmico é percorrido,\Na integração de trabalho de fronteira é feita, e o\Ntrabalho acumulado é mostrado pela área cumulativa sob os processos.
+Vamos percorrer o ciclo:
+A expansão "1-2" está produzindo trabalho W12>0.
+O processo "1-2" é completo.
+[lendo 4° tópico]
+A compressão "2-1" está produzindo trabalho W21<0.
+(A produção de trabalho negativo é o mesmo\Nque um consumo de trabalho.)
+Aqui o ciclo termina, e o trabalho líquido do ciclo\N(que é o trabalho acumulado ao final de um ciclo),
+é a soma dos trabalhos nos processos que compõem o\Nciclo, no caso, W12 e W21.
+Por propriedade de integrais, podemos afirmar que\No trabalho líquido deste ciclo motor é positivo
+e igual à área do interior do ciclo,\Nem coordenadas P-V (ou P-v).
+A animação é agora repetida sem narração:
+[Música]
+Dentre os Tópicos de Leitura da disciplina,\Nsepara-se para este assunto a Seção 4-1.
+Muito obrigado pela audiência!
+Desejo a todos ótimos estudos em ciências térmicas!
+Até a próxima oportunidade!
+[Música de Encerramento]

@@ -99,8 +99,8 @@
             \item<3-> porém uma propriedade \alert{pode} ficar constante, como veremos.
                 \\[\bigskipamount]
         \end{itemize}
-        \uncover<4->{Um exemplo trivial é reconhecer que para $n=0$, tem-se:}
-        \uncover<4->{$$Pv^0 = \mbox{const.} \rightharpoondown\quad P = \mbox{const.}$$}
+        \uncover<4->{Um exemplo trivial é reconhecer que para \alert{$n = 0$}, tem-se:}
+        \uncover<5->{$$Pv^0 = \mbox{const.} \rightharpoondown\quad \alert{P = \mbox{const.}}$$}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
@@ -123,7 +123,7 @@
                 \\[\medskipamount]
             }
             \uncover<8->{
-                y & = A + Bx\qquad
+                \alert{y} & \alert{= A + Bx}\qquad
                 \mbox{para $y\equiv\log{P}$, $\quad x\equiv\log{v},\quad$ etc.}
             }
         \end{align*}
@@ -140,8 +140,12 @@
             \item \alert{Todo} processo \alert{politrópico} \\[\medskipamount]
             \item é representado por um \alert{segmento de reta} \\[\medskipamount]
             \item que une os estados \alert{inicial} e \alert{final} \\[\medskipamount]
-            \item em coordenadas \alert{$\log P \times \log v$}.
+            \item em coordenadas \alert{$\log P \times \log v$}. \\[\medskipamount]
         \end{itemize}
+        \uncover<2->{%
+            \noindent Logo, processos politrópicos a $\alert{v = \mbox{const.}}$, são obtidos
+            fazendo \alert{$n = \pm\infty$}.
+        }
         \column{0.45\textwidth}
             \begin{figure}
                 \includegraphics[width=5.0cm]{fig/A0302-pt-PolyProcPlotPv.pdf}
@@ -170,6 +174,10 @@
         \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Trabalho de Fronteira}
+%-----------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
@@ -218,14 +226,36 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Processos Politrópicos -- Aplicações}\vspace*{-2em}
-        \begin{itemize}
-            \item \alert{Medições} $P \times v$ frequentemente seguem relações politrópicas
-                \\[\medskipamount]
-            \item . \\[\medskipamount]
-            \item . \\[\medskipamount]
-            \item .
-        \end{itemize}
+    \begin{frame}{Processos Politrópicos -- Trabalho de Fronteira -- Gases Ideais}\vspace*{-2em}
+        \begin{columns}
+        \column{0.50\textwidth}
+        \uncover<1->{
+            \noindent Para gases ideais, \alert{$Pv = RT$}, passando por um processo
+            politrópico, \alert{$Pv^n = \mbox{const.}$}, o resultado \\[\medskipamount]
+        }
+        \begin{equation*}
+            \uncover<2->{
+            w_f = \left.\begin{cases}
+                \displaystyle\frac{P_2v_2 - P_1v_1}{1-n} & \text{para $n \neq 1$},
+                    \\[\bigskipamount]
+                Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
+            \end{cases}\right.
+            }
+        \end{equation*}
+        \column{0.50\textwidth}
+        \uncover<3->{
+            \noindent também pode ser escrito como: \\[\medskipamount]
+        }
+        \begin{equation*}
+            \uncover<4->{\alert{
+            w_f = \left.\begin{cases}
+                \displaystyle\frac{R(T_2 - T_1)}{1-n} & \text{para $n \neq 1$},
+                    \\[\bigskipamount]
+                Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
+            \end{cases}\right..
+            }}
+        \end{equation*}
+        \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
@@ -245,7 +275,7 @@
     %------------------------------------------------------------------------------------------
 
     % Finishes with stunning image, with credit
-    \ArtEndW{amden-875880_1280}{jpg}{txt}
+    \ArtEndW{fishermen-504098_1280}{jpg}{txt}
 
 %===============================================================================================
 \part{Tópicos Especiais em Processos Politrópicos}

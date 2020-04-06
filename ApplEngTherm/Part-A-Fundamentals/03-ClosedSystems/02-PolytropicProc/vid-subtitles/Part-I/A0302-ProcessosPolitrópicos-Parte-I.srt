@@ -1,0 +1,542 @@
+﻿1
+00:00:00,200 --> 00:00:05,360
+[Música de Introdução]
+
+2
+00:00:06,250 --> 00:00:07,780
+Olá estudantes de ciências térmicas!
+
+3
+00:00:08,450 --> 00:00:10,420
+Neste vídeo veremos a Parte-I do tópico
+
+4
+00:00:10,510 --> 00:00:13,150
+Processos politrópicos,
+um subtópico de Sistemas Fechados.
+
+5
+00:00:13,710 --> 00:00:15,160
+Este vídeo dispõe de legendas
+
+6
+00:00:15,520 --> 00:00:19,870
+A apresentação sobre a qual este vídeo se baseia
+encontra-se disponível no endereço mostrado
+
+7
+00:00:20,230 --> 00:00:26,870
+sob licensa Creative Commons de atribuição, não
+comercial, e não derivados, CC-BY-NC-ND,
+
+8
+00:00:27,180 --> 00:00:31,190
+uma licensa aberta que restringe o uso comercial,
+assim como modificações do conteúdo.
+
+9
+00:00:31,520 --> 00:00:32,580
+Vamos ao conteúdo!
+
+10
+00:00:33,270 --> 00:00:36,800
+A Parte-I, coberta neste vídeo, trata da
+apresentação de processos politrópicos,
+
+11
+00:00:37,100 --> 00:00:40,110
+assim como da quantificação do trabalho
+de fronteira em processos politrópicos.
+
+12
+00:00:40,680 --> 00:00:45,870
+Na Eng. Mec. da UTFPR Campus Guarapuava, este
+tópico é coberto na disciplina de Termodinâmica A.
+
+13
+00:00:46,570 --> 00:00:49,870
+Tópicos de leitura do livro-texto da disciplina
+são fornecidos ao final do vídeo.
+
+14
+00:00:50,960 --> 00:00:54,240
+A Parte-II, coberta em outro vídeo, trata da
+fundamentação teórica de processos politrópicos,
+
+15
+00:00:54,430 --> 00:00:56,200
+assim como de processos localmente politrópicos.
+
+16
+00:00:59,160 --> 00:01:04,520
+Como definição, um processo politrópico é todo process
+para o qual a relação entre pressão e volume obedece
+
+17
+00:01:04,780 --> 00:01:09,400
+Pv^n = alguma constante ao longo de
+todo o percurso do processo.
+
+18
+00:01:10,350 --> 00:01:12,220
+Onde "P" é a pressão do sistema,
+
+19
+00:01:13,180 --> 00:01:15,000
+"v" é o volume específico do sistema,
+
+20
+00:01:15,950 --> 00:01:18,910
+e "n" é o expoente politrópico,
+uma constante do processo.
+
+21
+00:01:19,920 --> 00:01:26,410
+A equação que define processo politrópico
+é utilizada na forma: P1v1^n = P2v2^n,
+
+22
+00:01:26,750 --> 00:01:28,510
+e resolve-se para o que for de interesse.
+
+23
+00:01:29,480 --> 00:01:33,640
+A versão extensiva PV (maiúsculo) ^n constante
+também é usual,
+
+24
+00:01:33,870 --> 00:01:36,730
+e terá constante diferente da
+equação na versão intensiva.
+
+25
+00:01:37,690 --> 00:01:44,380
+Aqui cabe ressaltar uma sutil particularidade de
+processos politrópicos, em relação aos demais tipos
+de processos vistos até então em termodinâmica:
+
+26
+00:01:44,670 --> 00:01:51,150
+Processos politrópicos são definidos por um EXPOENTE
+constante---um parâmetro do processo---ao invés de
+uma PROPRIEDADE isolada do sistema.
+
+27
+00:01:52,110 --> 00:01:56,830
+Assim, em processos politrópicos, não necessaria-
+mente uma propriedade do sistema será constante,
+
+28
+00:01:57,820 --> 00:02:01,000
+porém, uma propriedade PODE ficar constante,
+como veremos na sequência.
+
+29
+00:02:02,040 --> 00:02:05,640
+Um exemplo trivial é o processo politrópico de
+expoente nulo, para o qual
+
+30
+00:02:06,680 --> 00:02:10,890
+tem-se a influência de "v" eliminada, e o processo
+fica sendo um de pressão constante,
+
+31
+00:02:10,890 --> 00:02:13,320
+  ou seja, um processo isobárico, conforme mostrado.
+
+32
+00:02:14,320 --> 00:02:17,920
+A manipulação que se segue visa melhorar nossa
+visão sobre processos politrópicos:
+
+33
+00:02:18,140 --> 00:02:22,120
+Partindo da definição Pv^n constante,
+dá-se um nome à constante:
+
+34
+00:02:22,970 --> 00:02:23,820
+"c1"
+
+35
+00:02:24,620 --> 00:02:27,120
+Toma-se o logaritmo de ambos os lados da equação,
+
+36
+00:02:28,090 --> 00:02:31,310
+e dá-se à nova constante log(c1), o nome de "c2",
+
+37
+00:02:32,270 --> 00:02:35,920
+Transformando o log do produto na soma de logs, via
+propriedades de logaritmos,
+
+38
+00:02:36,120 --> 00:02:37,440
+tem-se a expressão mostrada,
+
+39
+00:02:38,300 --> 00:02:42,320
+a qual pode ser rearranjada para dar a relação
+mostrada entre log(P) e log(v),
+
+40
+00:02:43,290 --> 00:02:44,670
+a qual possui a forma
+
+41
+00:02:45,530 --> 00:02:48,520
+de uma relação afin: y = A + Bx,
+
+42
+00:02:48,760 --> 00:02:51,560
+para "y" sendo log(P) e "x" sendo log(v), etc.
+
+43
+00:02:51,840 --> 00:02:55,580
+Note que os dois parâmetros desta relação afin, A e
+B, advém dos valores:
+
+44
+00:02:55,800 --> 00:02:59,930
+(i) do expoente politrópico, e
+(ii) da constante c1 = P1v1^n.
+
+45
+00:03:00,910 --> 00:03:02,510
+Assim, todo processo politrópico
+
+46
+00:03:02,650 --> 00:03:04,460
+é representado por um segmento de reta
+
+47
+00:03:04,650 --> 00:03:06,360
+que une os estados inicial e final
+
+48
+00:03:06,600 --> 00:03:08,600
+em coordenadas log(P) versus log(v).
+
+49
+00:03:08,890 --> 00:03:13,850
+A elevação e orientação arbitrárias da reta que
+contém tal segmento são controladas por "A" e "B",
+
+50
+00:03:14,120 --> 00:03:16,590
+e o segmento, pelos estados
+inicial e final do processo.
+
+51
+00:03:16,800 --> 00:03:23,180
+O mesmo processo é traçado em azul nos gráficos P-v
+linear e log-log. No gráfico P-v log-log é possível
+
+52
+00:03:23,440 --> 00:03:28,200
+(i) identificar que o processo é politrópico,
+por tratar-se de um segmento de reta, além de
+
+53
+00:03:28,460 --> 00:03:32,940
+(ii) determinar o valor do expoente politrópico,
+que é o negativo da inclinação do segmento de reta.
+
+54
+00:03:33,180 --> 00:03:37,580
+Vê-se que é mais esclarecedor, do ponto de vista de
+classificação do processo como politrópico,
+
+55
+00:03:37,840 --> 00:03:40,910
+que um processo seja traçado em
+coordenadas P-v log-log.
+
+56
+00:03:41,870 --> 00:03:46,960
+Como a posição e orientação do segmento de reta são
+arbitrárias, é fácil conceber processos politrópicos
+
+57
+00:03:46,960 --> 00:03:50,570
+também a volume constante, bastando orientar o
+segmento de reta na vertical,
+
+58
+00:03:50,860 --> 00:03:55,530
+o que, pela analogia feita, implica em inclinação,
+ou, expoente politrópico, infinito.
+
+59
+00:03:55,800 --> 00:03:59,880
+Vimos, então, que processos politrópicos podem
+representar processos a volume constante,
+
+60
+00:04:00,120 --> 00:04:03,360
+denominados processos isocóricos ou isovolumétricos,
+
+61
+00:04:03,600 --> 00:04:06,960
+bem como processos a pressão constante,
+denominados de isobáricos.
+
+62
+00:04:07,840 --> 00:04:12,250
+Alguns devem estar curiosos da origem (ou seja,
+da etimologia) do termo "politrópico".
+
+63
+00:04:12,510 --> 00:04:16,030
+Utilizando o 《Dictionnaire étymologique
+de la langue grecque: histoire des mots》,
+
+64
+00:04:16,320 --> 00:04:18,960
+(Dicionário etimológico da língua grega:
+história das palavras)
+
+65
+00:04:19,230 --> 00:04:25,340
+de Pierre Chantraine, de 1968, ou seja: vamos passar
+do grego para o francês, e então para o português,
+
+66
+00:04:25,600 --> 00:04:26,970
+vê-se que o termo "politrópico"
+
+67
+00:04:27,230 --> 00:04:32,410
+origina do grego "πολύτροπος", um substantivo
+composto de "πολύς" e de "τρόπος".
+
+68
+00:04:33,340 --> 00:04:36,080
+O adjetivo "πολύς" inclui significados de
+
+69
+00:04:36,240 --> 00:04:41,420
+《nombreux, vaste, abondant》, que significam:
+"numeroso, vasto, abundante".
+
+70
+00:04:42,360 --> 00:04:45,530
+O substantivo grego "τρόπος" inclui significados de
+
+71
+00:04:45,800 --> 00:04:51,120
+《manière, façon, mode》, que significam:
+"maneira, forma, jeito, modo".
+
+72
+00:04:52,040 --> 00:04:54,720
+Ou seja, "muitas formas", "diversas maneiras".
+
+73
+00:04:55,630 --> 00:05:00,760
+O substantivo composto "πολύτροπος" também é lexical
+e inclui significados figurativos como
+
+74
+00:05:00,890 --> 00:05:07,040
+《souple, habile, industrieux》, que significam:
+"flexível, hábil, trabalhador", como também
+
+75
+00:05:07,240 --> 00:05:13,530
+《versatilité, très divers, très varie》, que significam:
+"versatilidade, muito diverso, muito variado",
+
+76
+00:05:13,740 --> 00:05:15,850
+ou seja, um grande variedade de formas,
+
+77
+00:05:16,910 --> 00:05:18,810
+indicando sua grande flexibilidade,
+
+78
+00:05:19,000 --> 00:05:22,060
+e a vasta variedade de processos que podem ser representados.
+
+79
+00:05:22,250 --> 00:05:25,320
+Assim, dizer "processo politrópico", significa dizer
+
+80
+00:05:25,360 --> 00:05:26,350
+"processo versátil"
+
+81
+00:05:26,490 --> 00:05:28,360
+(em termos de possibilidades matemáticas),
+
+82
+00:05:28,540 --> 00:05:30,590
+ou "processo de muitas variedades".
+
+83
+00:05:30,750 --> 00:05:33,400
+Desta forma, a etimologia do nome do processo
+
+84
+00:05:33,560 --> 00:05:36,360
+codifica exatamente sua habilidade de representar
+
+85
+00:05:36,440 --> 00:05:38,040
+uma grande variedade de processos,
+
+86
+00:05:38,240 --> 00:05:39,960
+dentre os quais muitos são reais.
+
+87
+00:05:40,120 --> 00:05:44,810
+Haja vista que muitos livros-texto afirmam que
+processo politrópico encontra suporte em medições.
+
+88
+00:05:45,680 --> 00:05:49,070
+Passa-se agora à quantificação do trabalho de
+fronteira de um processo politrópico.
+
+89
+00:05:49,310 --> 00:05:53,150
+No vídeo "A0301 - Trabalho de Fronteira - Parte-II",
+deste mesmo canal,
+
+90
+00:05:53,360 --> 00:05:58,800
+foi dito ser necessário conhecer a função P:P(v) para
+o cálculo do trabalho de fronteira em um processo.
+
+91
+00:05:58,960 --> 00:06:01,390
+O processo politrópico fornece exatamente isso,
+
+92
+00:06:01,580 --> 00:06:03,720
+assim, partindo-se da definição mostrada,
+
+93
+00:06:04,680 --> 00:06:09,260
+reconhece-se que o valor de "c1" pode ser obtido
+tanto pelo estado inicial ou final do processo.
+
+94
+00:06:10,040 --> 00:06:13,320
+Portanto isolando-se "P", obtemos P:P(v).
+
+95
+00:06:14,090 --> 00:06:18,670
+Como já visto, o trabalho de fronteira é dado
+pela integral de P·dv ao longo do processo,
+
+96
+00:06:19,560 --> 00:06:23,390
+Fazendo-se a substituição de "P" já evidenciando a
+constante "c1",
+
+97
+00:06:24,140 --> 00:06:28,160
+chegamos à expressão mostrada,
+com integrando v^-n,
+
+98
+00:06:28,830 --> 00:06:36,430
+cuja integração toma formas diferentes dependendo do
+valor do expoente, sendo n=1 um valor especial,
+que leva ao integrando dv/v.
+
+99
+00:06:37,180 --> 00:06:41,800
+O desdobramento é mostrado em destaque, já como
+resultado final, após simplificações.
+
+100
+00:06:41,920 --> 00:06:44,780
+Se preferir, pause o vídeo para assimilar o
+resultado.
+
+101
+00:06:45,040 --> 00:06:50,220
+Note que para o caso trivial de processo isocórico
+(à volume constante), cujo trabalho de fronteira = 0
+
+102
+00:06:50,480 --> 00:06:53,770
+é obtido pelo denominador infinito
+correspondete a tal processo.
+
+103
+00:06:54,590 --> 00:06:59,720
+Para o caso n≠1, termos P2v2 e P1v1
+aparecem no numerador da fórmula.
+
+104
+00:06:59,850 --> 00:07:05,930
+Para o caso n=1, o produto Pv (sem subscritos),
+pode ser tanto P1v1 quanto P2v2,
+
+105
+00:07:06,060 --> 00:07:12,920
+uma vez que com expoente politrópico unitário, a
+equação do processo simplifica para P1v1 = P2v2.
+
+106
+00:07:13,660 --> 00:07:19,870
+Para gases ideais, com equação de estado Pv=RT, o re-
+sultado anterior para trabalho de fronteira, mostrado
+
+107
+00:07:20,190 --> 00:07:22,990
+é válido, mas também pode ser escrito como
+
+108
+00:07:23,630 --> 00:07:29,690
+a expressão em destaque, na qual o caso n≠1 envolve
+as temperaturas inicial e final do processo.
+
+109
+00:07:30,300 --> 00:07:34,720
+Ainda, para gases ideais, expoente politrópico
+unitário significa
+
+110
+00:07:35,290 --> 00:07:40,040
+processo a temperatura constante, também chamado de
+isotérmico, uma vez que a constante do processo
+
+111
+00:07:40,240 --> 00:07:42,590
+coincide com o lado esquerdo da equação de estado,
+
+112
+00:07:42,730 --> 00:07:48,800
+fazendo com que RT seja constante; porém, como
+R já é uma constante, implica em "T" constante.
+
+113
+00:07:49,720 --> 00:07:55,170
+Dentre os Tópicos de Leitura da disciplina,
+separa-se para este assunto a Seção 4-1.
+
+114
+00:07:55,570 --> 00:07:56,840
+Muito obrigado pela audiência!
+
+115
+00:07:56,920 --> 00:07:59,140
+Desejo a todos ótimos estudos em ciências térmicas!
+
+116
+00:07:59,320 --> 00:08:00,520
+Até a próxima oportunidade!
+
+117
+00:08:00,970 --> 00:08:06,770
+[Música de Encerramento]
+

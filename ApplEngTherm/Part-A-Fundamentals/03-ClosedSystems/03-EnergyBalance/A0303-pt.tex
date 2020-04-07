@@ -1,0 +1,334 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\title{A.03.02 -- Processos Politrópicos}
+\subtitle{(Sistemas Fechados)}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \includegraphics[height=6.5mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+        \includegraphics[height=6.5mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+%   \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
+%       \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+%       \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+}} % Alpha logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section*{Sumário Geral}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Parte~I: Apresentação de Processo Politrópico}
+%-----------------------------------------------------------------------------------------------
+
+\frame<handout:0>{
+    \frametitle{Sumário da Parte~I}
+    \tableofcontents[part=1]
+}
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Parte~II: Tópicos Especiais em Processos Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+\frame<handout:0>{
+    \frametitle{Sumário da Parte~II}
+    \tableofcontents[part=2]
+}
+
+%===============================================================================================
+\part{Apresentação de Processo Politrópico}
+\frame<handout:0>{\partpage}
+%===============================================================================================
+
+%-----------------------------------------------------------------------------------------------
+\section{Processos Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Apresentação}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Definição}\vspace*{-2em}
+        \begin{columns}
+        \column{0.50\textwidth}
+        É todo o processo para o qual:
+        \alert{$$Pv^n = \mbox{const.}$$}%
+        \uncover<5->{%
+            \par\noindent A equação é utilizada na forma:
+            $$P_1v_1^n = P_2v_2^n.$$%
+        }%
+        \uncover<6->{%
+            \par\noindent A versão \alert{$PV^n = \mbox{const.}$}, também é usual.
+        }
+        \column{0.50\textwidth}
+        \uncover<2->{Onde:} \\[\bigskipamount]
+        \begin{itemize}
+            \item<2-> $P$ é a pressão do sistema \\[\bigskipamount]
+            \item<3-> $v$ é o volume específico do sistema \\[\bigskipamount]
+            \item<4-> $n$ é o \alert{expoente politrópico}
+        \end{itemize}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Apresentação}\vspace*{-2em}
+        Em processos politrópicos, \\[\medskipamount]
+        \begin{itemize}
+            \item<1-> um \alert{parâmetro} de processo, \alert{$n$}, é mantido constante
+                \\[\medskipamount]
+            \item<2-> e não \alert{necessariamente} uma \alert{propriedade} do sistema.
+                \\[\medskipamount]
+            \item<3-> porém uma propriedade \alert{pode} ficar constante, como veremos.
+                \\[\bigskipamount]
+        \end{itemize}
+        \uncover<4->{Um exemplo trivial é reconhecer que para \alert{$n = 0$}, tem-se:}
+        \uncover<5->{$$Pv^0 = \mbox{const.} \rightharpoondown\quad \alert{P = \mbox{const.}}$$}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Apresentação}\vspace*{-2em}
+        \begin{align*}
+            \uncover<3->{\log\big(}
+            Pv^n & \only<1>{= \mbox{const.}}\uncover<2->{= c_1}
+            \uncover<3->{\big)\rightharpoondown} \\[\medskipamount]
+            \uncover<4->{
+                \log(Pv^n) & = \log(c_1) \equiv c_2 \rightharpoondown \\[\medskipamount]
+            }
+            \uncover<5->{
+                \log P + n\log v & = c_2 \rightharpoondown \\[\medskipamount]
+            }
+            \uncover<6->{
+                \log P & = c_2 - n\log v
+                \uncover<7->{\qquad\therefore\qquad\mbox{uma equação na forma}}
+                \\[\medskipamount]
+            }
+            \uncover<8->{
+                \alert{y} & \alert{= A + Bx}\qquad
+                \mbox{para $y\equiv\log{P}$, $\quad x\equiv\log{v},\quad$ etc.}
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Apresentação}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+        Assim:
+        \begin{itemize}
+            \item \alert{Todo} processo \alert{politrópico} \\[\medskipamount]
+            \item é representado por um \alert{segmento de reta} \\[\medskipamount]
+            \item que une os estados \alert{inicial} e \alert{final} \\[\medskipamount]
+            \item em coordenadas \alert{$\log P \times \log v$}. \\[\medskipamount]
+        \end{itemize}
+        \uncover<2->{%
+            \noindent Logo, processos politrópicos a $\alert{v = \mbox{const.}}$, são obtidos
+            fazendo \alert{$n \to \pm\infty$}.
+        }
+        \column{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=5.0cm]{fig/A0302-pt-PolyProcPlotPv.pdf}
+            \end{figure}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Etimologia}\vspace*{-2em}
+        Segundo (Chantraine, 1968), o termo ``politrópico'': \\[\medskipamount]
+        \begin{itemize}
+            \item<1-> origina do grego \alert{``\GRtxt{pol'utropoc}''}, o qual é composto de
+                \alert{``\GRtxt{pol'uc}''} e de \alert{``\GRtxt{tr'opoc}''}. \\[\medskipamount]
+            \item<2-> \alert{``\GRtxt{pol'uc}''} inclui significados de \FRtxt{\og nombreux,
+                vaste\fg}, a saber, ``numeroso, vasto''. \\[\medskipamount]
+            \item<3-> \alert{``\GRtxt{tr'opoc}''} inclui significados de \FRtxt{\og manière,
+                mode\fg}, a saber, ``maneira, modo''. \\[\medskipamount]
+            \item<4-> Ou seja: \alert{``muitas formas ou maneiras''}. O termo composto
+                \\[\medskipamount]
+            \item<5-> \alert{``\GRtxt{pol'utropoc}''} inclui significados de \FRtxt{\og souple,
+                très varié\fg}: ``flexível, muito variado'', \\[\medskipamount]
+            \item<6-> indicando \alert{flexibilidade} e a vasta \alert{variedade} de processos
+                que pode representar!
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Trabalho de Fronteira}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Trabalho de Fronteira}\vspace*{-2em}
+        \begin{columns}
+        \column{0.40\textwidth}
+        \begin{align*}
+            \uncover<1->{
+                Pv^n & = c_1
+                \uncover<2->{= P_1v_1^n = P_2v_2^n \rightharpoondown}
+                \\[\medskipamount]
+            }
+            \uncover<3->{
+                P & = c_1v^{-n}; \\[\medskipamount]
+            }
+            \uncover<4->{
+                w_f & = \int_1^2 P\,dv \rightharpoondown \\[\medskipamount]
+            }
+            \uncover<5->{
+                w_f & = c_1 \int_1^2 v^{-n}\,dv \rightharpoondown \\[\medskipamount]
+            }
+            \uncover<6->{
+                w_f & = P_1v_1^n \int_1^2 v^{-n}\,dv.
+            }
+        \end{align*}
+        \column{0.60\textwidth}
+        \uncover<7->{A integração de $v^{-n}$ toma formas diferentes dependendo se $n=1$ ou
+            não: \\[\medskipamount]
+        }
+        \begin{equation*}
+            \uncover<8->{\alert{
+            w_f = \left.\begin{cases}
+                \displaystyle\frac{P_2v_2 - P_1v_1}{1-n} & \text{para $n \neq 1$},
+                    \\[\bigskipamount]
+                Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
+            \end{cases}\right.
+            }}
+        \end{equation*}
+        \uncover<9->{%
+            \par\noindent No último caso, o produto \alert{$Pv$} pode ser tanto \alert{$P_1v_1$}
+            ou \alert{$P_2v_2$}, em função do próprio processo.
+        }
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Trabalho de Fronteira -- Gases Ideais}\vspace*{-2em}
+        \begin{columns}
+        \column{0.45\textwidth}
+        \uncover<1->{
+            \par\noindent Para gases ideais, \alert{$Pv = RT$}, passando por um processo
+            politrópico, \alert{$Pv^n = \mbox{const.}$}, o resultado
+        }
+        \begin{equation*}
+            \uncover<1->{
+            w_f = \left.\begin{cases}
+                \displaystyle\frac{P_2v_2 - P_1v_1}{1-n} & \text{para $n \neq 1$},
+                    \\[\bigskipamount]
+                Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
+            \end{cases}\right.
+            }
+        \end{equation*}
+        \uncover<2->{
+            \par\noindent é válido, mas pode ser escrito como: %\\[\medskipamount]
+        }
+        \column{0.55\textwidth}
+        \begin{equation*}
+            \uncover<3->{\alert{
+            w_f = \left.\begin{cases}
+                \displaystyle\frac{R(T_2 - T_1)}{1-n} & \text{para $n \neq 1$},
+                    \\[\bigskipamount]
+                Pv \ln\left(\displaystyle\frac{v_2}{v_1}\right) & \text{para $n = 1$}.
+            \end{cases}\right.}\text{(gás ideal)}
+            }
+        \end{equation*}
+        \uncover<4->{
+            \par\noindent Para \alert{gases ideais}, expoente \alert{$n=1$} significa:
+        }
+        \uncover<5->{
+            $$Pv^1 = \mbox{const.} = RT \quad\rightharpoondown\quad \alert{T = \mbox{const.}}$$
+        }
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos de Leitura}
+%-----------------------------------------------------------------------------------------------
+
+    %------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+        \begin{thebibliography}{Çengel, Y.~A., 2013}
+            \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
+                Çengel, Y.~A. e Boles, M.~A.
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \alert{Seção~4-1.}}
+                \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
+        \end{thebibliography}
+    \end{frame}
+    %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndWSE{fishermen-504098_1280}{jpg}{txt}
+
+%===============================================================================================
+\part{Tópicos Especiais em Processos Politrópicos}
+\frame<handout:0>{\partpage}
+%===============================================================================================
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos Especiais em Processos Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Fundamentação Teórica}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Processos Localmente Politrópicos}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Processos Politrópicos -- Aplicações}\vspace*{-2em}
+        A SER CONTINUADO PARA A PARTE-II...
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos de Leitura}
+%-----------------------------------------------------------------------------------------------
+
+    %------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+        \begin{thebibliography}{Çengel, Y.~A., 2013}
+            \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
+                Çengel, Y.~A. e Boles, M.~A.
+                \newblock{{\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}. \alert{Seção~4-1.}}
+                \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
+        \end{thebibliography}
+    \end{frame}
+    %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{amden-875880_1280}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

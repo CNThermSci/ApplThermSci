@@ -144,7 +144,31 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Balanço de Energia -- Formas}\vspace*{-2em}
-        \uncover<1->{}
+        \begin{columns}
+        \column{0.55\textwidth}
+        \begin{align}
+            % divide by mass -->
+            \uncover<2->{\uncover<2-4>{d/dt}\bigl(}
+            \uncover<1->{E_{ent} - E_{sai} & = \Delta{E}_{sist} = E_2 - E_1}
+            \uncover<2->{\bigr)\quad\rightharpoondown}
+            \\[\medskipamount]
+            % process intensive
+            \uncover<6->{\bigl(}
+            \uncover<5->{e_{ent} - e_{sai} & = \Delta{e}_{sist} = e_2 - e_1}
+            \uncover<6->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
+        \end{align}
+        \column{0.45\textwidth}
+        \begin{align}
+            % divide by mass -->
+            \uncover<4->{\bigl(}
+            \uncover<3->{\dot{E}_{ent} - \dot{E}_{sai} & = \left.\frac{dE}{dt}\right|_{sist}}
+            \uncover<4->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
+            % process intensive
+            \uncover<8->{\bigl(}
+            \uncover<3->{\dot{e}_{ent} - \dot{e}_{sai} & = \left.\frac{de}{dt}\right|_{sist}}
+            \uncover<8->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
+        \end{align}
+        \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

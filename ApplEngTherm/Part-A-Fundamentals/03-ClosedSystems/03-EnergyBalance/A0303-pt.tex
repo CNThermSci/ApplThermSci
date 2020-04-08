@@ -144,31 +144,35 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Balanço de Energia -- Formas}\vspace*{-2em}
-        \begin{columns}
-        \column{0.55\textwidth}
-        \begin{align}
-            % divide by mass -->
-            \uncover<2->{\uncover<2-4>{d/dt}\bigl(}
-            \uncover<1->{E_{ent} - E_{sai} & = \Delta{E}_{sist} = E_2 - E_1}
-            \uncover<2->{\bigr)\quad\rightharpoondown}
-            \\[\medskipamount]
-            % process intensive
-            \uncover<6->{\bigl(}
-            \uncover<5->{e_{ent} - e_{sai} & = \Delta{e}_{sist} = e_2 - e_1}
-            \uncover<6->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
-        \end{align}
-        \column{0.45\textwidth}
-        \begin{align}
-            % divide by mass -->
-            \uncover<4->{\bigl(}
-            \uncover<3->{\dot{E}_{ent} - \dot{E}_{sai} & = \left.\frac{dE}{dt}\right|_{sist}}
-            \uncover<4->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
-            % process intensive
-            \uncover<8->{\bigl(}
-            \uncover<3->{\dot{e}_{ent} - \dot{e}_{sai} & = \left.\frac{de}{dt}\right|_{sist}}
-            \uncover<8->{\bigr)/m\quad\rightharpoondown} \\[\medskipamount]
-        \end{align}
-        \end{columns}
+        \begin{align*}
+            % --- first line
+            \uncover<1->{
+                \alt<1-2>%
+                {\alert{E_{ent} - E_{sai}} & \alert{= \Delta{E}_{sist} = E_2 - E_1}}%
+                {E_{ent} - E_{sai} & = \Delta{E}_{sist} = E_2 - E_1}%
+            } &
+            \uncover<2->{\quad\stackrel{(d/dt)}{\longrightarrow}\quad} & &
+            \uncover<3->{
+                \alt<3-4>%
+                {\alert{\dot{E}_{ent} - \dot{E}_{sai}} & \alert{= \left.\frac{dE}{dt}\right|_{sist}}}%
+                {\dot{E}_{ent} - \dot{E}_{sai} & = \left.\frac{dE}{dt}\right|_{sist}}%
+            } \\[\bigskipamount]
+            % --- second line
+            \uncover<4->{\downharpoonright & (\div m)} & & &
+            \uncover<6->{\downharpoonright & (\div m)} \\[\bigskipamount]
+            % --- third line
+            \uncover<5->{
+                \alt<5-6>%
+                {\alert{e_{ent} - e_{sai}} & \alert{= \Delta{e}_{sist} = e_2 - e_1}}%
+                {e_{ent} - e_{sai} & = \Delta{e}_{sist} = e_2 - e_1}%
+            } &
+            \uncover<6->{\quad\stackrel{(d/dt)}{\longrightarrow}\quad} & &
+            \uncover<7->{
+                \alt<7>%
+                {\alert{\dot{e}_{ent} - \dot{e}_{sai}} & \alert{= \left.\frac{de}{dt}\right|_{sist}}}%
+                {\dot{e}_{ent} - \dot{e}_{sai} & = \left.\frac{de}{dt}\right|_{sist}}%
+            } \\%[\medskipamount]
+        \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

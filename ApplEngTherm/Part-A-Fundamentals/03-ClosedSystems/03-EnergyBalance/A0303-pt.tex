@@ -179,34 +179,58 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Balanço de Energia -- Formas}\vspace*{-2em}
+        \small
         \begin{align*}
             % --- first line
             \uncover<1->{
-                \alt<1,2,4,8>%
+                \alt<1,2,6,12>%
                 {\alert{E_{ent} - E_{sai}} & \alert{= \Delta{E}_{sist} = E_2 - E_1}}%
                 {E_{ent} - E_{sai} & = \Delta{E}_{sist} = E_2 - E_1}%
             } &
-            \uncover<2->{\quad\stackrel{(d/dt)}{\longrightarrow}\quad} & &
+            \uncover<2->{
+                \stackrel{\scriptstyle d()}{\longrightarrow}
+            } & &
             \uncover<3->{
-                \alt<3,6,8>%
+                \alt<3,4,8,12>%
+                {\alert{\delta{E}_{ent} - \delta{E}_{sai}} & \alert{= dE_{sist}}}%
+                {\delta{E}_{ent} - \delta{E}_{sai} & = dE_{sist}}%
+            }
+            \uncover<4->{
+                \stackrel{\scriptstyle /dt}{\longrightarrow}
+            } & &
+            \uncover<5->{
+                \alt<5,10,12>%
                 {\alert{\dot{E}_{ent} - \dot{E}_{sai}} & \alert{= \left.\frac{dE}{dt}\right|_{sist}}}%
                 {\dot{E}_{ent} - \dot{E}_{sai} & = \left.\frac{dE}{dt}\right|_{sist}}%
-            } \\[\bigskipamount]
+            }
+            \\[\bigskipamount]
             % --- second line
-            \uncover<4->{\downharpoonright & (\div m)} & & &
-            \uncover<6->{\downharpoonright & (\div m)} \\[\bigskipamount]
+            \uncover<6->{\downharpoonright & {\scriptstyle \div m}} & & &
+            \uncover<8->{\downharpoonright & {\scriptstyle \div m}} & & &
+            \uncover<10->{\downharpoonright & {\scriptstyle \div m}}
+            \\[\bigskipamount]
             % --- third line
-            \uncover<5->{
-                \alt<5,6,8>%
+            \uncover<7->{
+                \alt<7,8,10,14>%
                 {\alert{e_{ent} - e_{sai}} & \alert{= \Delta{e}_{sist} = e_2 - e_1}}%
                 {e_{ent} - e_{sai} & = \Delta{e}_{sist} = e_2 - e_1}%
             } &
-            \uncover<6->{\quad\stackrel{(d/dt)}{\longrightarrow}\quad} & &
-            \uncover<7->{
-                \alt<7,8>%
+            \uncover<8->{
+                \stackrel{\scriptstyle d()}{\longrightarrow}
+            } & &
+            \uncover<9->{
+                \alt<9,12,14>%
+                {\alert{\delta{e}_{ent} - \delta{e}_{sai}} & \alert{= de_{sist}}}%
+                {\delta{e}_{ent} - \delta{e}_{sai} & = de_{sist}}%
+            }
+            \uncover<10->{
+                \stackrel{\scriptstyle /dt}{\longrightarrow}
+            } & &
+            \uncover<11->{
+                \alt<11,13,16>%
                 {\alert{\dot{e}_{ent} - \dot{e}_{sai}} & \alert{= \left.\frac{de}{dt}\right|_{sist}}}%
                 {\dot{e}_{ent} - \dot{e}_{sai} & = \left.\frac{de}{dt}\right|_{sist}}%
-            } \\%[\medskipamount]
+            }
         \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------

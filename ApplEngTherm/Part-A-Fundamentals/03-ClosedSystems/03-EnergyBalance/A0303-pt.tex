@@ -343,36 +343,35 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Balanço de Energia -- Em Processo (cont.)}\vspace*{-2em}
-        Negligenciando as variações das energias macroscópicas do sistema fechado:
+        \uncover<1->{$\Delta e_c$, $\Delta e_p$ não-negligíveis em sistemas fechados são de
+        aplicações específicas:}
         \begin{itemize}
             \item<1-> \alert{$\Delta e_c = \unit{1}{\kilo\joule\per\kilogram}$} implica, p.~ex.;
                 em: $(\mathbb{V}_1; \mathbb{V}_2) = \unit{(0;
                 \sqrt{2})}{\sqrt{\kilo\joule\per\kilogram}} \approx \alert{\unit{(0;
                 161)}{\kilo\meter\per\hour}}$;
+                \\[\medskipamount]
             \item<2-> ...ou em: $(\mathbb{V}_1; \mathbb{V}_2) = \ldots \approx
                 \alert{\unit{(110; 195)}{\kilo\meter\per\hour}}$;
+                \\[\medskipamount]
             \item<3-> \alert{$\Delta e_p = \unit{1}{\kilo\joule\per\kilogram}$} implica em:
                 $\Delta\mathbb{Z} \approx \unit{0,102}{\kilo\meter} =
                 \alert{\unit{102}{\meter}}$ para $g = \unit{9,81}{\meter\per\squaren\second}$.
+                \\[\medskipamount]
         \end{itemize}
-        \uncover<4->{Tais variações são específicas a certas aplicações. Assim:}
+        \uncover<4->{Assim, nos muitos outros casos, é possível negligenciá-las, simplificando o
+        balanço:}
         \begin{align*}
             \uncover<5->{
-                Q_{liq,ent} - W_{liq,sai} & = \Delta U_{sist}
-                \rightharpoondown & \text{o}&\text{u} &
-                Q - W & = \Delta U_{sist}
+                \alert{Q_{liq,ent} - W_{liq,sai}} & \alert{= U_2 - U_1 = m(u_2 - u_1)}
+                & \text{o}&\text{u} &
+                \alert{Q - W} & \alert{= U_2 - U_1 = m(u_2 - u_1)}
                 \rightharpoondown
             } \\[\medskipamount]
             \uncover<6->{
-                \alert{Q_{liq,ent} - W_{liq,sai}} & \alert{= m(u_2 - u_1)}
-                \rightharpoondown & \text{o}&\text{u} &
-                Q - W & = m(u_2 - u_1)
-                \rightharpoondown
-            } \\[\medskipamount]
-            \uncover<7->{
-                \alert{q_{liq,ent} - w_{liq,sai}} & \alert{= u_2 - u_1}.
-                & \text{o}&\text{u} &
-                q - w & = u_2 - u_1.
+                \alert{q_{liq,ent} - w_{liq,sai}} & \alert{= u_2 - u_1}
+                & & &
+                \alert{q - w} & \alert{= u_2 - u_1}.
             } %\\[\medskipamount]
         \end{align*}
     \end{frame}

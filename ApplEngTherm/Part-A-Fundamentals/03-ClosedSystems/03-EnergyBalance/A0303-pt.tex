@@ -303,10 +303,6 @@
                 E_{ent} - E_{sai} &
                 = \Delta{E}_{sist} = E_2 - E_1 \rightharpoondown
             } \\[\medskipamount]
-%            \uncover<2->{
-%                (Q_{ent} + W_{ent}) - (Q_{sai} + W_{sai}) &
-%                = \Delta{E}_{sist} = E_2 - E_1 \rightharpoondown
-%            } \\[\medskipamount]
             \uncover<2->{
                 (Q_{ent} + W_{ent}) - (Q_{sai} + W_{sai}) &
                 = \Delta{E}_{sist} = (U_2 + E_{c,2} + E_{p,2}) - (U_1 + E_{c,1} + E_{p,1})
@@ -332,6 +328,42 @@
                 \qquad\text{(expl.)}
             } \\[\medskipamount]
             \uncover<6->{
+                \alert{Q - W} &
+                \alert{= m\left[
+                    (u_2 - u_1) +
+                    (\mathbb{V}_2^2 - \mathbb{V}_1^2)/2 + 
+                    g(\mathbb{Z}_2 - \mathbb{Z}_1)
+                \right]}.
+                \qquad\text{(impl.)}
+            } %\\[\medskipamount]
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Balanço de Energia -- Em Processo (cont.)}\vspace*{-2em}
+        Negligenciando as variações das energias macroscópicas do sistema fechado:
+        \begin{itemize}
+            \item<1-> \alert{$\Delta e_c = \unit{1}{\kilo\joule\per\kilogram}$} implica, p.~ex.;
+                em: $(\mathbb{V}_1; \mathbb{V}_2) = \unit{(0;
+                \sqrt{2})}{\sqrt{\kilo\joule\per\kilogram}} \approx \alert{\unit{(0;
+                161)}{\kilo\meter\per\hour}}$;
+            \item<2-> \alert{$\Delta e_p = \unit{1}{\kilo\joule\per\kilogram}$} implica em:
+                $\Delta\mathbb{Z} \approx \unit{0.102}{\kilo\meter} =
+                \alert{\unit{102}{\meter}}$ para $g = \unit{9.81}{\meter\per\squaren\second}$;
+        \end{itemize}
+        \begin{align*}
+            \uncover<3->{
+                \alert{Q_{liq,ent} - W_{liq,sai}} &
+                \alert{= m\left[
+                    (u_2 - u_1) +
+                    (\mathbb{V}_2^2 - \mathbb{V}_1^2)/2 + 
+                    g(\mathbb{Z}_2 - \mathbb{Z}_1)
+                \right]}.
+                \qquad\text{(expl.)}
+            } \\[\medskipamount]
+            \uncover<4->{
                 \alert{Q - W} &
                 \alert{= m\left[
                     (u_2 - u_1) +

@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 199
-Active Line: 226
+Scroll Position: 200
+Active Line: 227
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -254,4 +254,5 @@ Dialogue: 0,0:14:03.13,0:14:08.41,GreenBold,,0,0,0,,Dentre os tópicos de leitur
 Dialogue: 0,0:14:09.23,0:14:13.36,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
 Dialogue: 0,0:14:14.11,0:14:17.74,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
 Dialogue: 0,0:14:17.82,0:14:19.18,GreenBold,,0,0,0,,Até a próxima oportunidade!
-Dialogue: 0,0:14:19.18,0:14:24.18,GreenBold,,0,0,0,,
+Dialogue: 0,0:14:19.52,0:14:25.29,GreenBold,,0,0,0,,[ Música de Encerramento ]
+Dialogue: 0,0:14:25.29,0:14:30.29,GreenBold,,0,0,0,,

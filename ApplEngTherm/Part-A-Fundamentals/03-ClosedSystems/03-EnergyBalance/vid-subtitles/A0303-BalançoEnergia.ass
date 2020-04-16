@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 154
-Active Line: 167
+Scroll Position: 160
+Active Line: 187
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -195,4 +195,24 @@ Dialogue: 0,0:10:16.72,0:10:19.61,GreenBold,,0,0,0,,[ BEEPS ]
 Dialogue: 0,0:10:21.68,0:10:25.66,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
 Dialogue: 0,0:10:25.69,0:10:27.32,GreenBold,,0,0,0,,para um sistema compressível simples.
 Dialogue: 0,0:10:27.36,0:10:30.12,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
-Dialogue: 0,0:10:30.12,0:10:35.12,GreenBold,,0,0,0,,
+Dialogue: 0,0:10:30.84,0:10:34.91,GreenBold,,0,0,0,,expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
+Dialogue: 0,0:10:34.92,0:10:36.83,GreenBold,,0,0,0,,correspondentes interações de calor e trabalho,
+Dialogue: 0,0:10:36.87,0:10:38.09,GreenBold,,0,0,0,,no lado esquerdo da equação,
+Dialogue: 0,0:10:38.14,0:10:42.43,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
+Dialogue: 0,0:10:42.52,0:10:46.81,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
+Dialogue: 0,0:10:47.55,0:10:51.53,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
+Dialogue: 0,0:10:51.60,0:10:55.45,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
+Dialogue: 0,0:10:55.50,0:10:59.02,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
+Dialogue: 0,0:10:59.08,0:11:03.00,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
+Dialogue: 0,0:11:03.05,0:11:04.24,GreenBold,,0,0,0,,no lado direito da equação.
+Dialogue: 0,0:11:04.32,0:11:09.53,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
+Dialogue: 0,0:11:09.56,0:11:12.00,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
+Dialogue: 0,0:11:12.08,0:11:15.05,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
+Dialogue: 0,0:11:15.10,0:11:18.01,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
+Dialogue: 0,0:11:18.04,0:11:20.97,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
+Dialogue: 0,0:11:21.08,0:11:24.99,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
+Dialogue: 0,0:11:25.05,0:11:28.49,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
+Dialogue: 0,0:11:28.57,0:11:33.98,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
+Dialogue: 0,0:11:34.06,0:11:37.40,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
+Dialogue: 0,0:11:37.51,0:11:39.21,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
+Dialogue: 0,0:11:39.21,0:11:44.21,GreenBold,,0,0,0,,

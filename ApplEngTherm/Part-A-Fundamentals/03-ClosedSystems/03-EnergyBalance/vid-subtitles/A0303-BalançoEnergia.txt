@@ -1,0 +1,228 @@
+﻿# Exported by Aegisub 3.2.2
+[Música de Introdução]
+Olá estudantes de ciências térmicas!
+Neste vídeo veremos o tópico Balanço de Energia\Nem Sistemas Fechados
+Este vídeo dispõe de legendas
+A apresentação sobre a qual este vídeo se baseia\Nencontra-se disponível no endereço mostrado
+sob licensa Creative Commons de atribuição, não\Ncomercial, e não derivados, CC-BY-NC-ND,
+uma licensa aberta que restringe o uso comercial,\Nassim como modificações do conteúdo.
+Vamos ao conteúdo!
+Trataremos da Primeira Lei da Termodinâmica,\Nassim como de Balanço de Energia.
+Na Eng. Mec. da UTFPR Campus Guarapuava, este\Ntópico é coberto na disciplina de Termodinâmica A.
+Tópicos de leitura do livro-texto da disciplina\Nsão fornecidos ao final do vídeo.
+A primeira lei da Termodinâmica estabelece que\Nenergia é uma quantidade naturalmente conservada.
+Isto é conhecido como o\N"Princípio da conservação da energia",
+o qual possui total confirmação experimental, desde\Nsua proposição por Gabrielle Émilie du Châtelet,
+a Marquesa de Châtelet (1706-1749), porém publicada\Npostumamente em 1756, em sua tradução
+e comentário de «Princípia», de Isaak Newton, no qual\Nela postula uma lei de conservação adicional,
+que eventualmente veio a ser\Na primeira lei da Termodinâmica.
+O Dicionário de Termos Técnicos e Científicos da\NMcGraw-Hill afirma:
+ "no violation of this principle has been found"
+ou seja: "nenhuma violação deste princípio foi\Nachada." (Link na descrição.)
+A falta de notícia sobre violação experimental\Ndeste princípio nos ~270 anos desde sua proposição
+faz com que o princípio da conservação da energia\Nesteja firmemente estabelecido de forma científica,
+o que, aliado à sua simplicidade, evidencia um\Nprincípio fundamental do universo físico.
+Assim:
+* Não há, no universo físico, processo que crie energia!
+* Nem processo que destrua energia!
+* Processos físicos podem apenas converter energia\N  de uma a outra das suas formas.
+Com relação a este assunto, podemos dizer que a\NRelatividade Especial de Einstein:
+* Unificou as conservações de massa e de energia;
+por meio da Equivalência entre massa e energia,\Nexpressa pela famosa equação
+energia equivalente é igual a uma constante de\Nproporção, c², vezes a massa,
+na qual "c" é a velocidade da luz no vácuo.
+O artigo "Conservation of energy" da wikipedia\N(link na descrição) afirma que
+"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
+a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
+Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
+Tal conclusão com base em uma lei científica firme
+oferece profundas consequências filosóficas
+sobre a massa-energia atualmente em existência:
+(i) ou ela sempre existiu; ou
+(ii) ela veio a ser por agência externa;
+(a saber, externa ao universo físico).
+A segunda lei da Termodinâmica equipar-nos-á\Nmelhor na abordagem de tais questões,
+eliminado a primeira possibilidade enunciada,\Nporém isso é tópico para outro vídeo.
+A primeira lei é central em Termodinâmica.\NEla é utilizada como princípio em várias deduções;
+como também é instrumental na\Ndefinição de certas propriedades,
+assim como em cálculos de processos energéticos,
+que talvez seja a aplicação mais frequente do\Ndia-a-dia do engenheiro termodinâmico.
+O contexto implora que a seguinte\Npergunta seja feita:
+"Afinal, o que É energia?"
+Aqui não se pede a definição de FORMAS de energia,\Nporém ENERGIA EM SI MESMA.
+Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
+e tente você mesmo dar resposta à pergunta.
+Pode pausar o vídeo agora...
+[ BEEPS ]
+Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
+Southern Methodist University,\Nminha Alma Mater,
+a seguinte definição:
+Energia é uma QUANTIDADE
+que é CONSERVADA na natureza
+e que possui unidades de kg·m²/s².
+Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
+(além de sua ordem tensorial e unidades físicas).
+Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
+O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
+Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
+Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
+O total de energia que ENTRA no sistema menos
+o total de energia que SAI do sistema, é igual
+à variação LÍQUIDA de energia no sistema.
+Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
+que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
+uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
+e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
+em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
+Assim, se E_1, E_ent e E_sai são conhecidos,
+ou seja: o estado inicial e as\Ninterações energéticas do processo,
+o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
+E_2 = E_1 + E_ent - E_sai.
+Esta última equação é exatamente\Nanáloga a balanços financeiros,
+(evolução do saldo em uma conta sem juros):
+Se a energia "E" representar o saldo em conta,
+"E_ent" os depósitos, e\N"E_sai" as retiradas,
+temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
+mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
+durante o período de contabilidade,\Nque é análogo ao processo.
+Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
+Primeiramente temos a forma de processo,
+na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
+a qual, ao ser diferenciada,
+leva à forma diferencial do\Nbalanço de energia em sistema fechado.
+Todos os termos da equação do balanço\Nnesta forma estão em kJ.
+ividindo a forma diferencial por\Numa diferencial de tempo, "dt",
+que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se
+o balanço de energia em sistema fechado\Nescrito na forma de taxa,
+ou seja, de forma instantânea,\Ncom todos os termos em unidades de kW.
+Note que as taxas de energia que entram e saem do\Nsistema são representadas por "Ė" (E ponto),
+seguindo convenção usual de engenharia\Npara derivadas temporais.
+Em seguida, dividindo a equação do balanço\Npara processos na forma extensiva,
+pela massa "m" do sistema fechado,
+chega-se à forma intensiva da equação\Ndo balanço de energia para um processo.
+Os termos em letras minúsculas correspondem aos\Nmaiúsculos por unidade de massa do sistema fechado,
+fazendo com que todos os termos\Ntenham unidades de kJ/kg.
+Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
+quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
+chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
+na qual todos os termos têm unidades de kJ/kg.
+Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
+quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
+chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
+O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
+Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
+bem como das conversões entre elas.\NPode pausar o vídeo agora...
+[ BEEPS ]
+Estudamos agora os termos correspondentes a
+"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
+Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
+(1) calor e de (2) trabalho.
+Assim, no balanço de energia:
+A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
+o calor que entra no sistema, "Q_ent",
+mais o trabalho que entra no sistema, "W_ent", e
+a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
+o calor que sai do sistema, "Q_sai",
+mais o trabalho que sai do sistema, "W_sai".
+Perceba que no balanço, a direção das interações\Nfica explícita, pelos subscritos "ent" e "sai".
+Estudamos agora os termos correspondentes a "E_sist"\Nnas equações de balanço de energia em sistemas fechados.
+Em sistemas clássicos, ou seja, da física que\Npré-datava as relatividades de Einstein,
+e não reativos, que não envolvam reações químicas,
+escrevemos que a energia total de um\Nsistema é a soma de todas as energias
+microscópicas e macroscópicas,\Ncom a seguinte interpretação:
+A propriedade termodinâmica energia interna é a\Ntotalidade das energias microscópicas do sistema,
+novamente, na ausência de reações\Nquímicas e nucleares.
+(A retirada de tais hipóteses implica\Nem termos adicionais em "E_micro").
+Em Termodinâmica de engenharia, a unidade usual de\Nenergia é o kJ (kilo-Joule), como mostrado.
+As energias cinética e potencial gravitacional\Ncompõem o inventório de energias macroscópicas
+do sistema fechado, as quais também são dadas em kJ.
+A energia cinética E_c extensiva (com "E" maiúsculo)
+é igual à massa "m" do sistema vezes a energia\Ncinética por unidade de massa
+específica do sistema, e_c, (com "e" minúsculo).
+Este produto também é igual a mV²/2 (com V\Nestilizado representando a velocidade do sistema)
+e denominador 2 (dois) adimensional.
+Uma vez que as unidades de E_c são dadas em kJ,\Nas unidades de "V" (estilizado) são de √(kJ/kg).
+Esta unidade "termodinâmica" de velocidade\Nvale √1000 m/s, ou, aproximadamente 114 km/h,
+não deve ser vista com total estranheza, porém como\Nalgo revelador da relativa pequena magnitude
+das energias macroscópicas em relação às microscópicas,
+indicando que um sistema a esta velocidade, possui\Napenas 0.5 kJ/kg de energia cinética específica.
+Por outro lado, a equação para a energia cinética\Ndo sistema com velocidade "v" (minúsculo, estilizado)
+em m/s deve ser ajustada como na linha 4,\Nna qual o denominador é 2000,
+uma vez que m/s = √(J/kg), e o valor numérico de E_c\Né explicitamente convertido em kJ pelo fator de 1000.
+O livro-texto adotado para a disciplina, fornece ao\Nmesmo tempo a equação com denominador 2 (dois)
+e velocidade em m/s; porém hora fazendo conversão\Nde unidades nos exercícios resolvidos,
+o que invariavelmente leva ao denominador 2000,
+e hora deixando e_c em J/kg, ao invés de kJ/kg.
+A diferença entre os slides deste vídeo e o\Nlivro-texto é meramente metodológica.
+A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
+a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ
+(maiúsculo, estilizado), dado em kilômetros.
+Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
+macroscópicas em relação às microscópicas.
+A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
+Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
+Se preferir, dê pausa ao vídeo\Npara revisar as equações.
+[ BEEPS ]
+Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
+para um sistema compressível simples.
+Tomando a equação do balanço\Npara um processo, mostrada,
+expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
+correspondentes interações de calor e trabalho,
+no lado esquerdo da equação,
+assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
+em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
+Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
+os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
+resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
+e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
+no lado direito da equação.
+Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
+uma mesma e consistente convenção de sinais:
+energia que ENTRA, AUMENTA a energia do sistema,
+e energia que SAI, DIMINUI a energia do sistema,
+independentemente da interação\Nser de calor ou de trabalho!
+Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
+é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
+Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
+revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
+(ou qualquer outra interação energética).
+É possível também apresentar o balanço de energia no
+sistema fechado de forma a recuperar a convenção
+histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
+como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
+o trabalho líquido que sai (fornecido pelo sistema)
+como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
+No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
+compressível simples fechado, as quais
+podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
+que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
+as quais são ou tabeláveis ou equacionáveis, e ainda
+colocar em evidência a massa "m"\Ndo sistema, como mostrado,
+nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
+sendo que em muitos livros-texto,\Na equação do balanço é apresentada
+numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
+como mostrado, sem subscritos em "Q" e em "W",
+em cujo caso vale a convenção "histórica" de sinais,
+ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
+Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
+são negligíveis se comparadas às variações\Nde energia interna específica
+e a interações específicas de calor e trabalho.
+Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
+do sistema fechado de zero a ~161 km/h,
+ou em uma variação de 110 a ~195 km/h.
+Já a mesma variação de 1 kJ/kg na forma potencial
+significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
+Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
+e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
+As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
+Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Tais simples equações "q - w = Δu"
+são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
+sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
+e na consolidação das habilidades\Nobjetivadas pela disciplina.
+Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
+Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
+Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
+Até a próxima oportunidade!
+[ Música de Encerramento ]

@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 28
-Active Line: 55
+Scroll Position: 59
+Active Line: 86
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -83,4 +83,35 @@ Dialogue: 0,0:03:14.20,0:03:18.17,GreenBold,,0,0,0,,Para apreciar a profundidade
 Dialogue: 0,0:03:18.24,0:03:20.12,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
 Dialogue: 0,0:03:20.25,0:03:21.42,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
 Dialogue: 0,0:03:21.70,0:03:25.17,GreenBold,,0,0,0,,[Beeps]
-Dialogue: 0,0:03:25.99,0:03:30.99,GreenBold,,0,0,0,,
+Dialogue: 0,0:03:25.99,0:03:30.27,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
+Dialogue: 0,0:03:30.29,0:03:32.52,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
+Dialogue: 0,0:03:32.64,0:03:33.66,GreenBold,,0,0,0,,a seguinte definição:
+Dialogue: 0,0:03:34.49,0:03:36.17,GreenBold,,0,0,0,,Energia é uma QUANTIDADE
+Dialogue: 0,0:03:36.30,0:03:38.00,GreenBold,,0,0,0,,que é CONSERVADA na natureza
+Dialogue: 0,0:03:38.12,0:03:41.60,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
+Dialogue: 0,0:03:41.64,0:03:44.84,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
+Dialogue: 0,0:03:44.92,0:03:47.13,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
+Dialogue: 0,0:03:48.44,0:03:51.93,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
+Dialogue: 0,0:03:52.00,0:03:56.03,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
+Dialogue: 0,0:03:56.12,0:03:59.48,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
+Dialogue: 0,0:04:00.20,0:04:04.19,GreenBold,,0,0,0,,Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
+Dialogue: 0,0:04:04.25,0:04:06.91,GreenBold,,0,0,0,,O total de energia que ENTRA no sistema menos
+Dialogue: 0,0:04:06.91,0:04:09.52,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
+Dialogue: 0,0:04:09.60,0:04:11.80,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
+Dialogue: 0,0:04:11.88,0:04:15.88,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
+Dialogue: 0,0:04:16.65,0:04:20.56,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
+Dialogue: 0,0:04:20.56,0:04:25.18,GreenBold,,0,0,0,,   uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
+Dialogue: 0,0:04:25.26,0:04:28.76,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
+Dialogue: 0,0:04:28.81,0:04:35.39,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
+Dialogue: 0,0:04:36.20,0:04:39.93,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
+Dialogue: 0,0:04:40.01,0:04:42.92,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
+Dialogue: 0,0:04:43.00,0:04:47.37,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
+Dialogue: 0,0:04:47.47,0:04:49.80,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
+Dialogue: 0,0:04:49.92,0:04:52.92,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
+Dialogue: 0,0:04:53.01,0:04:54.75,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
+Dialogue: 0,0:04:54.80,0:04:56.83,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
+Dialogue: 0,0:04:56.96,0:04:59.90,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
+Dialogue: 0,0:04:59.98,0:05:03.20,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
+Dialogue: 0,0:05:03.31,0:05:06.64,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
+Dialogue: 0,0:05:06.70,0:05:09.15,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
+Dialogue: 0,0:05:09.15,0:05:14.15,GreenBold,,0,0,0,,

@@ -17,10 +17,11 @@ Script Updated By: Prof. C. Naaktgeboren
 Update Details: Prof. C. Naaktgeboren
 
 [Aegisub Project Garbage]
+Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 74
-Active Line: 92
+Scroll Position: 89
+Active Line: 110
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -138,6 +139,7 @@ Dialogue: 0,0:06:20.14,0:06:22.94,GreenBold,,0,0,0,,na qual todos os termos têm
 Dialogue: 0,0:06:23.74,0:06:27.56,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
 Dialogue: 0,0:06:27.63,0:06:32.08,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
 Dialogue: 0,0:06:32.88,0:06:36.25,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
+Dialogue: 0,0:06:36.33,0:06:39.15,GreenBold,,0,0,0,,Na qual todos os termos possuem unidades de kW/kg.
 Dialogue: 0,0:06:39.98,0:06:44.16,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
 Dialogue: 0,0:06:44.25,0:06:48.73,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 Dialogue: 0,0:06:48.80,0:06:51.69,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...

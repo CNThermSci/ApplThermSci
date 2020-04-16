@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 148
-Active Line: 159
+Scroll Position: 154
+Active Line: 164
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -82,7 +82,7 @@ Dialogue: 0,0:03:09.72,0:03:14.12,GreenBold,,0,0,0,,Aqui não se pede a definiç
 Dialogue: 0,0:03:14.20,0:03:18.17,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
 Dialogue: 0,0:03:18.24,0:03:20.12,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
 Dialogue: 0,0:03:20.25,0:03:21.42,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
-Dialogue: 0,0:03:21.70,0:03:25.17,GreenBold,,0,0,0,,[Beeps]
+Dialogue: 0,0:03:21.70,0:03:25.17,GreenBold,,0,0,0,,[ BEEPS ]
 Dialogue: 0,0:03:25.99,0:03:30.27,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
 Dialogue: 0,0:03:30.29,0:03:32.52,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
 Dialogue: 0,0:03:32.64,0:03:33.66,GreenBold,,0,0,0,,a seguinte definição:
@@ -141,7 +141,7 @@ Dialogue: 0,0:06:32.88,0:06:36.25,GreenBold,,0,0,0,,chega-se à equação do bal
 Dialogue: 0,0:06:39.98,0:06:44.16,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
 Dialogue: 0,0:06:44.25,0:06:48.73,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 Dialogue: 0,0:06:48.80,0:06:51.69,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
-Dialogue: 0,0:06:52.04,0:06:54.80,GreenBold,,0,0,0,,[Beeps]
+Dialogue: 0,0:06:52.04,0:06:54.80,GreenBold,,0,0,0,,[ BEEPS ]
 Dialogue: 0,0:06:56.46,0:06:58.60,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
 Dialogue: 0,0:06:58.63,0:07:02.60,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
 Dialogue: 0,0:07:03.24,0:07:07.61,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
@@ -188,4 +188,8 @@ Dialogue: 0,0:09:46.11,0:09:51.72,GreenBold,,0,0,0,,a energia potencial gravitac
 Dialogue: 0,0:09:51.80,0:09:54.46,GreenBold,,0,0,0,,(maiúsculo, estilizado), dado em kilômetros.
 Dialogue: 0,0:09:54.51,0:10:00.25,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
 Dialogue: 0,0:10:00.33,0:10:02.92,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
-Dialogue: 0,0:10:02.92,0:10:07.92,GreenBold,,0,0,0,,
+Dialogue: 0,0:10:03.69,0:10:08.97,GreenBold,,0,0,0,,A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
+Dialogue: 0,0:10:09.04,0:10:13.58,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
+Dialogue: 0,0:10:13.64,0:10:16.41,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
+Dialogue: 0,0:10:16.72,0:10:19.61,GreenBold,,0,0,0,,[ BEEPS ]
+Dialogue: 0,0:10:19.61,0:10:24.61,GreenBold,,0,0,0,,

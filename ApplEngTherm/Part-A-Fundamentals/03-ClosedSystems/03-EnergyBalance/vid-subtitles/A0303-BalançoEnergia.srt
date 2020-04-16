@@ -518,546 +518,550 @@ chega-se à equação do balanço de energia
 na forma de taxa intensiva,
 
 112
+00:06:36,336 --> 00:06:39,152
+Na qual todos os termos possuem unidades de kW/kg.
+
+113
 00:06:39,980 --> 00:06:44,160
 O quadro apresentado destaca todas as formas
 trabalhadas de balanço de energia em sistema fechado,
 
-113
+114
 00:06:44,250 --> 00:06:48,730
 Sugere-se que se pause o vídeo para que,
 por inspeção, se ganhe familiaridade com as mesmas,
 
-114
+115
 00:06:48,800 --> 00:06:51,690
 bem como das conversões entre elas.
 Pode pausar o vídeo agora...
 
-115
+116
 00:06:52,040 --> 00:06:54,800
 [ BEEPS ]
 
-116
+117
 00:06:56,460 --> 00:06:58,600
 Estudamos agora os termos correspondentes a
 
-117
+118
 00:06:58,630 --> 00:07:02,600
 "E_ent" e "E_sai" nas equações de
 balanço de energia em sistemas fechados.
 
-118
+119
 00:07:03,240 --> 00:07:07,610
 Em sistemas compressíveis simples, "E_ent"
 e "E_sai" podem apenas ser nas formas de:
 
-119
+120
 00:07:07,660 --> 00:07:09,310
 (1) calor e de (2) trabalho.
 
-120
+121
 00:07:09,390 --> 00:07:10,760
 Assim, no balanço de energia:
 
-121
+122
 00:07:10,840 --> 00:07:14,880
 A interação de energia que entra no
 sistema fechado em um processo, "E_ent", é
 
-122
+123
 00:07:14,880 --> 00:07:17,100
 o calor que entra no sistema, "Q_ent",
 
-123
+124
 00:07:17,180 --> 00:07:20,360
 mais o trabalho que entra no sistema, "W_ent", e
 
-124
+125
 00:07:21,020 --> 00:07:24,760
 a interação de energia que sai do
 sistema fechado em um processo, "E_sai", é
 
-125
+126
 00:07:24,830 --> 00:07:26,750
 o calor que sai do sistema, "Q_sai",
 
-126
+127
 00:07:26,810 --> 00:07:29,130
 mais o trabalho que sai do sistema, "W_sai".
 
-127
+128
 00:07:29,230 --> 00:07:34,240
 Perceba que no balanço, a direção das interações
 fica explícita, pelos subscritos "ent" e "sai".
 
-128
+129
 00:07:35,000 --> 00:07:40,140
 Estudamos agora os termos correspondentes a "E_sist"
 nas equações de balanço de energia em sistemas fechados.
 
-129
+130
 00:07:40,190 --> 00:07:43,790
 Em sistemas clássicos, ou seja, da física que
 pré-datava as relatividades de Einstein,
 
-130
+131
 00:07:43,850 --> 00:07:46,110
 e não reativos, que não envolvam reações químicas,
 
-131
+132
 00:07:46,190 --> 00:07:49,660
 escrevemos que a energia total de um
 sistema é a soma de todas as energias
 
-132
+133
 00:07:49,740 --> 00:07:52,810
 microscópicas e macroscópicas,
 com a seguinte interpretação:
 
-133
+134
 00:07:53,500 --> 00:07:58,430
 A propriedade termodinâmica energia interna é a
 totalidade das energias microscópicas do sistema,
 
-134
+135
 00:07:58,480 --> 00:08:00,920
 novamente, na ausência de reações
 químicas e nucleares.
 
-135
+136
 00:08:00,990 --> 00:08:04,380
 (A retirada de tais hipóteses implica
 em termos adicionais em "E_micro").
 
-136
+137
 00:08:04,480 --> 00:08:08,480
 Em Termodinâmica de engenharia, a unidade usual de
 energia é o kJ (kilo-Joule), como mostrado.
 
-137
+138
 00:08:09,210 --> 00:08:13,450
 As energias cinética e potencial gravitacional
 compõem o inventório de energias macroscópicas
 
-138
+139
 00:08:13,450 --> 00:08:16,090
 do sistema fechado, as quais também são dadas em kJ.
 
-139
+140
 00:08:16,830 --> 00:08:19,660
 A energia cinética E_c extensiva (com "E" maiúsculo)
 
-140
+141
 00:08:19,720 --> 00:08:24,220
 é igual à massa "m" do sistema vezes a energia
 cinética por unidade de massa
 
-141
+142
 00:08:24,320 --> 00:08:26,860
 específica do sistema, e_c, (com "e" minúsculo).
 
-142
+143
 00:08:26,890 --> 00:08:32,520
 Este produto também é igual a mV²/2 (com V
 estilizado representando a velocidade do sistema)
 
-143
+144
 00:08:32,600 --> 00:08:34,540
 e denominador 2 (dois) adimensional.
 
-144
+145
 00:08:34,640 --> 00:08:41,480
 Uma vez que as unidades de E_c são dadas em kJ,
 as unidades de "V" (estilizado) são de √(kJ/kg).
 
-145
+146
 00:08:41,550 --> 00:08:48,200
 Esta unidade "termodinâmica" de velocidade
 vale √1000 m/s, ou, aproximadamente 114 km/h,
 
-146
+147
 00:08:48,300 --> 00:08:52,970
 não deve ser vista com total estranheza, porém como
 algo revelador da relativa pequena magnitude
 
-147
+148
 00:08:53,050 --> 00:08:55,820
 das energias macroscópicas em relação às microscópicas,
 
-148
+149
 00:08:55,880 --> 00:09:01,790
 indicando que um sistema a esta velocidade, possui
 apenas 0.5 kJ/kg de energia cinética específica.
 
-149
+150
 00:09:02,570 --> 00:09:07,320
 Por outro lado, a equação para a energia cinética
 do sistema com velocidade "v" (minúsculo, estilizado)
 
-150
+151
 00:09:07,420 --> 00:09:11,900
 em m/s deve ser ajustada como na linha 4,
 na qual o denominador é 2000,
 
-151
+152
 00:09:11,980 --> 00:09:19,150
 uma vez que m/s = √(J/kg), e o valor numérico de E_c
 é explicitamente convertido em kJ pelo fator de 1000.
 
-152
+153
 00:09:19,230 --> 00:09:23,640
 O livro-texto adotado para a disciplina, fornece ao
 mesmo tempo a equação com denominador 2 (dois)
 
-153
+154
 00:09:23,720 --> 00:09:29,020
 e velocidade em m/s; porém hora fazendo conversão
 de unidades nos exercícios resolvidos,
 
-154
+155
 00:09:29,100 --> 00:09:31,050
 o que invariavelmente leva ao denominador 2000,
 
-155
+156
 00:09:31,130 --> 00:09:35,820
 e hora deixando e_c em J/kg, ao invés de kJ/kg.
 
-156
+157
 00:09:35,880 --> 00:09:39,400
 A diferença entre os slides deste vídeo e o
 livro-texto é meramente metodológica.
 
-157
+158
 00:09:40,160 --> 00:09:46,040
 A energia potencial gravitacional E_p é dada como o
 produto da massa "m" do sistema e e_p (minúsculo),
 
-158
+159
 00:09:46,110 --> 00:09:51,720
 a energia potencial gravitacional específica do
 sistema, dada em kJ/kg, a qual é igual a gZ
 
-159
+160
 00:09:51,800 --> 00:09:54,460
 (maiúsculo, estilizado), dado em kilômetros.
 
-160
+161
 00:09:54,510 --> 00:10:00,250
 Esta unidade, digamos, "termodinâmica" de altitude também
 é reveladora da relativa pequena magnitude das energias
 
-161
+162
 00:10:00,330 --> 00:10:02,920
 macroscópicas em relação às microscópicas.
 
-162
+163
 00:10:03,690 --> 00:10:08,970
 A equação da linha 6 é escrita em termos de uma
 altitude "z" (minúsculo, estilizado), dado em metros.
 
-163
+164
 00:10:09,040 --> 00:10:13,580
 Como ocorrido na linha 4, um fator de 1/1000 é
 introduzido, para a consistência de unidades.
 
-164
+165
 00:10:13,640 --> 00:10:16,410
 Se preferir, dê pausa ao vídeo
 para revisar as equações.
 
-165
+166
 00:10:16,720 --> 00:10:19,610
 [ BEEPS ]
 
-166
+167
 00:10:21,680 --> 00:10:25,660
 Estamos em posição de fazer as substituições
 necessárias para obter o balanço de energia
 
-167
+168
 00:10:25,690 --> 00:10:27,320
 para um sistema compressível simples.
 
-168
+169
 00:10:27,360 --> 00:10:30,120
 Tomando a equação do balanço
 para um processo, mostrada,
 
-169
+170
 00:10:30,840 --> 00:10:34,910
 expandimos todos os termos de
 interação energética, E_ent e E_sai nas
 
-170
+171
 00:10:34,920 --> 00:10:36,830
 correspondentes interações de calor e trabalho,
 
-171
+172
 00:10:36,870 --> 00:10:38,090
 no lado esquerdo da equação,
 
-172
+173
 00:10:38,140 --> 00:10:42,430
 assim como os termos de energia do sistema nos
 estados "2" e "1" --- final e inicial,
 
-173
+174
 00:10:42,520 --> 00:10:46,810
 em energias interna, cinética e potencial,
 como mostrado no lado direito da equação.
 
-174
+175
 00:10:47,550 --> 00:10:51,530
 Agrupando-se os termos de calor e de trabalho,
 no lado esquerdo da equação, assim como
 
-175
+176
 00:10:51,600 --> 00:10:55,450
 os termos em energias interna, cinética e
 potencial, no lado direito da equação,
 
-176
+177
 00:10:55,500 --> 00:10:59,020
 resulta em interações energéticas líquidas
 no lado esquerdo da equação,
 
-177
+178
 00:10:59,080 --> 00:11:03,000
 e em variações líquidas de formas de
 energia do sistema em todo o processo,
 
-178
+179
 00:11:03,050 --> 00:11:04,240
 no lado direito da equação.
 
-179
+180
 00:11:04,320 --> 00:11:09,530
 Ambas as interações (entra - sai) de calor e de
 trabalho seguem, no balanço de energia,
 
-180
+181
 00:11:09,560 --> 00:11:12,000
 uma mesma e consistente convenção de sinais:
 
-181
+182
 00:11:12,080 --> 00:11:15,050
 energia que ENTRA, AUMENTA a energia do sistema,
 
-182
+183
 00:11:15,100 --> 00:11:18,010
 e energia que SAI, DIMINUI a energia do sistema,
 
-183
+184
 00:11:18,040 --> 00:11:20,970
 independentemente da interação
 ser de calor ou de trabalho!
 
-184
+185
 00:11:21,080 --> 00:11:24,990
 Note que esta convenção de sinais, digamos,
 "de balanço", ou "de sistema",
 
-185
+186
 00:11:25,050 --> 00:11:28,490
 é diferente da convenção "histórica" de sinais
 da Termodinâmica para o trabalho.
 
-186
+187
 00:11:28,570 --> 00:11:33,980
 Ainda, os mesmos sinais das interações de calor e de
 trabalho no balanço de energia, que advém da 1a lei,
 
-187
+188
 00:11:34,060 --> 00:11:37,400
 revelam que a primeira lei não faz
 distinção entre calor e trabalho
 
-188
+189
 00:11:37,510 --> 00:11:39,210
 (ou qualquer outra interação energética).
 
-189
+190
 00:11:39,930 --> 00:11:42,250
 É possível também apresentar o balanço de energia no
 
-190
+191
 00:11:42,320 --> 00:11:45,480
 sistema fechado de forma a recuperar a convenção
 
-191
+192
 00:11:45,520 --> 00:11:50,300
 histórica de sinais da Termodinâmica, definindo
 o calor líquido que entra (durante um processo)
 
-192
+193
 00:11:50,430 --> 00:11:56,680
 como o termo de calor da equação anterior,
 Q_liq,ent = Q_ent - Q_sai, e
 
-193
+194
 00:11:56,700 --> 00:11:59,470
 o trabalho líquido que sai (fornecido pelo sistema)
 
-194
+195
 00:11:59,610 --> 00:12:05,290
 como o negativo do termo de trabalho:
 W_liq,sai = W_sai - W_ent.
 
-195
+196
 00:12:05,390 --> 00:12:09,420
 No lado direito da equação, explicitamos as
 variações das formas de energia do sistema
 
-196
+197
 00:12:09,470 --> 00:12:11,710
 compressível simples fechado, as quais
 
-197
+198
 00:12:12,440 --> 00:12:16,460
 podem ser escritas em termos das energias
 específicas correspondentes, possibilitando
 
-198
+199
 00:12:16,520 --> 00:12:20,970
 que o lado direito da equação seja escrito apenas em
 termos de funções de ESTADO do sistema,
 
-199
+200
 00:12:21,080 --> 00:12:24,200
 as quais são ou tabeláveis ou equacionáveis, e ainda
 
-200
+201
 00:12:24,270 --> 00:12:27,200
 colocar em evidência a massa "m"
 do sistema, como mostrado,
 
-201
+202
 00:12:27,290 --> 00:12:31,610
 nesta forma que EXPLICITA a convenção de
 sinais para os termos do lado esquerdo,
 
-202
+203
 00:12:32,400 --> 00:12:35,960
 sendo que em muitos livros-texto,
 a equação do balanço é apresentada
 
-203
+204
 00:12:36,010 --> 00:12:39,930
 numa forma que deixa IMPLÍCITA a convenção de
 sinais para os termos do lado esquerdo,
 
-204
+205
 00:12:40,060 --> 00:12:42,910
 como mostrado, sem subscritos em "Q" e em "W",
 
-205
+206
 00:12:42,940 --> 00:12:45,760
 em cujo caso vale a convenção "histórica" de sinais,
 
-206
+207
 00:12:45,840 --> 00:12:50,620
 ou seja, "Q" é o calor líquido que ENTRA
 e "W" é o trabalho líquido que SAI.
 
-207
+208
 00:12:51,390 --> 00:12:55,080
 Em muitas aplicações de engenharia, as variações de
 energia cinética e potencial específicas
 
-208
+209
 00:12:55,130 --> 00:12:58,410
 são negligíveis se comparadas às variações
 de energia interna específica
 
-209
+210
 00:12:58,460 --> 00:13:00,490
 e a interações específicas de calor e trabalho.
 
-210
+211
 00:13:00,570 --> 00:13:06,040
 Uma variação relativamente pequena de 1 kJ/kg na
 forma cinética representa uma variação de velocidade
 
-211
+212
 00:13:06,140 --> 00:13:10,490
 do sistema fechado de zero a ~161 km/h,
 
-212
+213
 00:13:11,260 --> 00:13:15,550
 ou em uma variação de 110 a ~195 km/h.
 
-213
+214
 00:13:16,330 --> 00:13:19,640
 Já a mesma variação de 1 kJ/kg na forma potencial
 
-214
+215
 00:13:19,720 --> 00:13:25,230
 significa uma elevação de ~102m para o centro de
 massa do sistema fechado em gravidade padrão.
 
-215
+216
 00:13:26,010 --> 00:13:31,000
 Assim, nas muitas outras aplicações, o balanço de
 energia pode negligenciar as formas macroscópicas.
 
-216
+217
 00:13:31,820 --> 00:13:37,440
 e resultar nas expressões destacadas, sendo a da esquerda
 explícita na convenção de sinais, e a da direita, implícita.
 
-217
+218
 00:13:37,520 --> 00:13:41,400
 As duas formas são de natureza extensiva,
 com termos dados em unidades de kJ.
 
-218
+219
 00:13:42,240 --> 00:13:45,920
 Ainda, dividindo-se ambos os lados das equações
 de balanço pela massa "m" do sistema,
 
-219
+220
 00:13:45,980 --> 00:13:49,720
 chega-se às equações de balanço de energia
 de sistema fechado na forma intensiva.
 
-220
+221
 00:13:49,850 --> 00:13:52,360
 Tais simples equações "q - w = Δu"
 
-221
+222
 00:13:52,440 --> 00:13:55,440
 são de vasta aplicação em termodinâmica
 de engenharia de sistemas fechados,
 
-222
+223
 00:13:55,580 --> 00:13:59,560
 sendo necessária a resolução de diversos
 exercícios na apreciação deste fato,
 
-223
+224
 00:13:59,610 --> 00:14:02,360
 e na consolidação das habilidades
 objetivadas pela disciplina.
 
-224
+225
 00:14:03,130 --> 00:14:08,410
 Dentre os tópicos de leitura da disciplina,
 separam-se para este assunto as Seções 2-6 e 4-2.
 
-225
+226
 00:14:09,230 --> 00:14:13,360
 Deixo aqui uma vista do vale de Lauterbrunnen por
 Christopher Moore (link na descrição).
 
-226
+227
 00:14:14,110 --> 00:14:17,740
 Muito obrigado pela audiência! Desejo a todos
 ótimos estudos em Ciências Térmicas!
 
-227
+228
 00:14:17,820 --> 00:14:19,180
 Até a próxima oportunidade!
 
-228
+229
 00:14:19,520 --> 00:14:25,290
 [ Música de Encerramento ]
 

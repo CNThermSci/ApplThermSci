@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 186
-Active Line: 213
+Scroll Position: 187
+Active Line: 214
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -241,4 +241,5 @@ Dialogue: 0,0:13:06.14,0:13:10.49,GreenBold,,0,0,0,,do sistema fechado de zero a
 Dialogue: 0,0:13:11.26,0:13:15.55,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
 Dialogue: 0,0:13:16.33,0:13:19.64,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
 Dialogue: 0,0:13:19.72,0:13:25.23,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
-Dialogue: 0,0:13:25.23,0:13:30.23,GreenBold,,0,0,0,,
+Dialogue: 0,0:13:26.01,0:13:31.00,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
+Dialogue: 0,0:13:31.00,0:13:36.00,GreenBold,,0,0,0,,

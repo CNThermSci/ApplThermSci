@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 59
-Active Line: 86
+Scroll Position: 73
+Active Line: 100
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -114,4 +114,18 @@ Dialogue: 0,0:04:56.96,0:04:59.90,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E
 Dialogue: 0,0:04:59.98,0:05:03.20,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
 Dialogue: 0,0:05:03.31,0:05:06.64,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
 Dialogue: 0,0:05:06.70,0:05:09.15,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
-Dialogue: 0,0:05:09.15,0:05:14.15,GreenBold,,0,0,0,,
+Dialogue: 0,0:05:09.90,0:05:14.41,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
+Dialogue: 0,0:05:14.51,0:05:16.22,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
+Dialogue: 0,0:05:16.30,0:05:19.63,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
+Dialogue: 0,0:05:20.30,0:05:21.96,GreenBold,,0,0,0,,a qual, ao ser diferenciada,
+Dialogue: 0,0:05:22.08,0:05:25.23,GreenBold,,0,0,0,,leva à forma diferencial do\Nbalanço de energia em sistema fechado.
+Dialogue: 0,0:05:25.31,0:05:28.27,GreenBold,,0,0,0,,Todos os termos da equação do balanço\Nnesta forma estão em kJ.
+Dialogue: 0,0:05:29.02,0:05:31.74,GreenBold,,0,0,0,,ividindo a forma diferencial por\Numa diferencial de tempo, "dt",
+Dialogue: 0,0:05:31.79,0:05:35.40,GreenBold,,0,0,0,,que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se
+Dialogue: 0,0:05:35.96,0:05:39.18,GreenBold,,0,0,0,,o balanço de energia em sistema fechado\Nescrito na forma de taxa,
+Dialogue: 0,0:05:39.24,0:05:42.56,GreenBold,,0,0,0,,ou seja, de forma instantânea,\Ncom todos os termos em unidades de kW.
+Dialogue: 0,0:05:42.64,0:05:47.23,GreenBold,,0,0,0,,Note que as taxas de energia que entram e saem do\Nsistema são representadas por "Ė" (E ponto),
+Dialogue: 0,0:05:47.27,0:05:49.64,GreenBold,,0,0,0,,seguindo convenção usual de engenharia\Npara derivadas temporais.
+Dialogue: 0,0:05:50.40,0:05:53.52,GreenBold,,0,0,0,,Em seguida, dividindo a equação do balanço\Npara processos na forma extensiva,
+Dialogue: 0,0:05:53.58,0:05:55.15,GreenBold,,0,0,0,,pela massa "m" do sistema fechado,
+Dialogue: 0,0:05:55.15,0:06:00.15,GreenBold,,0,0,0,,

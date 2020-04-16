@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 172
-Active Line: 199
+Scroll Position: 178
+Active Line: 205
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -227,4 +227,10 @@ Dialogue: 0,0:12:12.44,0:12:16.46,GreenBold,,0,0,0,,podem ser escritas em termos
 Dialogue: 0,0:12:16.52,0:12:20.97,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
 Dialogue: 0,0:12:21.08,0:12:24.20,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
 Dialogue: 0,0:12:24.27,0:12:27.20,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
-Dialogue: 0,0:12:27.20,0:12:32.20,GreenBold,,0,0,0,,
+Dialogue: 0,0:12:27.29,0:12:31.61,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:12:32.40,0:12:35.96,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
+Dialogue: 0,0:12:36.01,0:12:39.93,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:12:40.06,0:12:42.91,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
+Dialogue: 0,0:12:42.94,0:12:45.76,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
+Dialogue: 0,0:12:45.84,0:12:50.62,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
+Dialogue: 0,0:12:50.62,0:12:55.62,GreenBold,,0,0,0,,

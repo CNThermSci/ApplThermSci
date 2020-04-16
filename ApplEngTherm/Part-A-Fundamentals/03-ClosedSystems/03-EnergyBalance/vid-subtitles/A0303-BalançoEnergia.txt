@@ -91,7 +91,7 @@ na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
 a qual, ao ser diferenciada,
 leva à forma diferencial do\Nbalanço de energia em sistema fechado.
 Todos os termos da equação do balanço\Nnesta forma estão em kJ.
-ividindo a forma diferencial por\Numa diferencial de tempo, "dt",
+Dividindo a forma diferencial por\Numa diferencial de tempo, "dt",
 que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se
 o balanço de energia em sistema fechado\Nescrito na forma de taxa,
 ou seja, de forma instantânea,\Ncom todos os termos em unidades de kW.

@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 127
-Active Line: 154
+Scroll Position: 148
+Active Line: 159
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -183,3 +183,9 @@ Dialogue: 0,0:09:23.72,0:09:29.02,GreenBold,,0,0,0,,e velocidade em m/s; porém 
 Dialogue: 0,0:09:29.10,0:09:31.05,GreenBold,,0,0,0,,o que invariavelmente leva ao denominador 2000,
 Dialogue: 0,0:09:31.13,0:09:35.82,GreenBold,,0,0,0,,e hora deixando e_c em J/kg, ao invés de kJ/kg.
 Dialogue: 0,0:09:35.88,0:09:39.40,GreenBold,,0,0,0,,A diferença entre os slides deste vídeo e o\Nlivro-texto é meramente metodológica.
+Dialogue: 0,0:09:40.16,0:09:46.04,GreenBold,,0,0,0,,A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
+Dialogue: 0,0:09:46.11,0:09:51.72,GreenBold,,0,0,0,,a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ
+Dialogue: 0,0:09:51.80,0:09:54.46,GreenBold,,0,0,0,,(maiúsculo, estilizado), dado em kilômetros.
+Dialogue: 0,0:09:54.51,0:10:00.25,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
+Dialogue: 0,0:10:00.33,0:10:02.92,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
+Dialogue: 0,0:10:02.92,0:10:07.92,GreenBold,,0,0,0,,

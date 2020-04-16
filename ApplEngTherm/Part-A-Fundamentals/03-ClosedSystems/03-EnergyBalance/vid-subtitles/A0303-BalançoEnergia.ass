@@ -18,12 +18,8 @@ Update Details: Prof. C. Naaktgeboren
 
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
-Video File: A0303-BalançoEnergia.webm
-Video AR Mode: 4
-Video AR Value: 1.777778
 Video Zoom Percent: 0.375000
-Active Line: 18
-Video Position: 2343
+Active Line: 27
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -49,16 +45,16 @@ Dialogue: 0,0:00:57.66,0:01:05.68,GreenBold,,0,0,0,,a Marquesa de Châtelet (170
 Dialogue: 0,0:01:05.79,0:01:11.12,GreenBold,,0,0,0,,e comentário de «Princípia», de Isaak Newton, no qual\Nela postula uma lei de conservação adicional,
 Dialogue: 0,0:01:11.26,0:01:13.52,GreenBold,,0,0,0,,que eventualmente veio a ser\Na primeira lei da Termodinâmica.
 Dialogue: 0,0:01:13.64,0:01:16.81,GreenBold,,0,0,0,,O Dicionário de Termos Técnicos e Científicos da\NMcGraw-Hill afirma:
-Dialogue: 0,0:01:18.08,0:01:20.54,GreenBold,,0,0,0,, "no violation of this principle has been found"
-Dialogue: 0,0:01:20.72,0:01:24.51,GreenBold,,0,0,0,,ou seja: "nenhuma violação deste princípio foi\Nachada." (Link na descrição.)
-Dialogue: 0,0:01:25.39,0:01:31.32,GreenBold,,0,0,0,,A falta de notícia sobre violação experimental\Ndeste princípio nos ~270 anos desde sua proposição
-Dialogue: 0,0:01:31.55,0:01:35.96,GreenBold,,0,0,0,,faz com que o princípio da conservação da energia\Nesteja firmemente estabelecido de forma científica,
-Dialogue: 0,0:01:36.17,0:01:40.72,GreenBold,,0,0,0,,o que, aliado à sua simplicidade, evidencia um\Nprincípio fundamental do universo físico.
-Dialogue: 0,0:01:40.91,0:01:41.42,GreenBold,,0,0,0,,Assim:
-Dialogue: 0,0:01:41.60,0:01:45.12,GreenBold,,0,0,0,,* Não há, no universo físico, processo que crie energia!
-Dialogue: 0,0:01:46.04,0:01:48.62,GreenBold,,0,0,0,,* Nem processo que destrua energia!
-Dialogue: 0,0:01:49.45,0:01:53.80,GreenBold,,0,0,0,,* Processos físicos podem apenas converter energia\N  de uma a outra das suas formas.
-Dialogue: 0,0:01:54.54,0:01:58.22,GreenBold,,0,0,0,,Com relação a este assunto, podemos dizer que a\NRelatividade Especial de Einstein:
+Dialogue: 0,0:01:17.02,0:01:19.48,GreenBold,,0,0,0,, "no violation of this principle has been found"
+Dialogue: 0,0:01:19.64,0:01:23.43,GreenBold,,0,0,0,,ou seja: "nenhuma violação deste princípio foi\Nachada." (Link na descrição.)
+Dialogue: 0,0:01:24.25,0:01:30.18,GreenBold,,0,0,0,,A falta de notícia sobre violação experimental\Ndeste princípio nos ~270 anos desde sua proposição
+Dialogue: 0,0:01:30.35,0:01:34.76,GreenBold,,0,0,0,,faz com que o princípio da conservação da energia\Nesteja firmemente estabelecido de forma científica,
+Dialogue: 0,0:01:34.85,0:01:39.40,GreenBold,,0,0,0,,o que, aliado à sua simplicidade, evidencia um\Nprincípio fundamental do universo físico.
+Dialogue: 0,0:01:39.58,0:01:40.09,GreenBold,,0,0,0,,Assim:
+Dialogue: 0,0:01:40.25,0:01:43.77,GreenBold,,0,0,0,,* Não há, no universo físico, processo que crie energia!
+Dialogue: 0,0:01:44.60,0:01:47.18,GreenBold,,0,0,0,,* Nem processo que destrua energia!
+Dialogue: 0,0:01:47.96,0:01:52.31,GreenBold,,0,0,0,,* Processos físicos podem apenas converter energia\N  de uma a outra das suas formas.
+Dialogue: 0,0:01:53.05,0:01:56.73,GreenBold,,0,0,0,,Com relação a este assunto, podemos dizer que a\NRelatividade Especial de Einstein:
 Dialogue: 0,0:01:58.41,0:02:00.97,GreenBold,,0,0,0,,* Unificou as conservações de massa e de energia;
 Dialogue: 0,0:02:01.88,0:02:05.26,GreenBold,,0,0,0,,por meio da Equivalência entre massa e energia,\Nexpressa pela famosa equação
 Dialogue: 0,0:02:05.42,0:02:09.02,GreenBold,,0,0,0,,energia equivalente é igual a uma constante de\Nproporção, c², vezes a massa,

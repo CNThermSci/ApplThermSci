@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 189
-Active Line: 216
+Scroll Position: 195
+Active Line: 222
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -244,4 +244,10 @@ Dialogue: 0,0:13:19.72,0:13:25.23,GreenBold,,0,0,0,,significa uma elevação de 
 Dialogue: 0,0:13:26.01,0:13:31.00,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
 Dialogue: 0,0:13:31.82,0:13:37.44,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
 Dialogue: 0,0:13:37.52,0:13:41.40,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
-Dialogue: 0,0:13:41.40,0:13:46.40,GreenBold,,0,0,0,,
+Dialogue: 0,0:13:42.24,0:13:45.92,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+Dialogue: 0,0:13:45.98,0:13:49.72,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Dialogue: 0,0:13:49.85,0:13:52.36,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
+Dialogue: 0,0:13:52.44,0:13:55.44,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
+Dialogue: 0,0:13:55.58,0:13:59.56,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
+Dialogue: 0,0:13:59.61,0:14:02.36,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
+Dialogue: 0,0:14:03.13,0:14:08.41,GreenBold,,0,0,0,,

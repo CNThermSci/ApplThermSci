@@ -20,7 +20,7 @@ Update Details: Prof. C. Naaktgeboren
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 154
-Active Line: 164
+Active Line: 167
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -192,4 +192,7 @@ Dialogue: 0,0:10:03.69,0:10:08.97,GreenBold,,0,0,0,,A equação da linha 6 é es
 Dialogue: 0,0:10:09.04,0:10:13.58,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
 Dialogue: 0,0:10:13.64,0:10:16.41,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
 Dialogue: 0,0:10:16.72,0:10:19.61,GreenBold,,0,0,0,,[ BEEPS ]
-Dialogue: 0,0:10:19.61,0:10:24.61,GreenBold,,0,0,0,,
+Dialogue: 0,0:10:21.68,0:10:25.66,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
+Dialogue: 0,0:10:25.69,0:10:27.32,GreenBold,,0,0,0,,para um sistema compressível simples.
+Dialogue: 0,0:10:27.36,0:10:30.12,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
+Dialogue: 0,0:10:30.12,0:10:35.12,GreenBold,,0,0,0,,

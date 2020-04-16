@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 73
-Active Line: 100
+Scroll Position: 108
+Active Line: 134
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -100,7 +100,7 @@ Dialogue: 0,0:04:06.91,0:04:09.52,GreenBold,,0,0,0,,o total de energia que SAI d
 Dialogue: 0,0:04:09.60,0:04:11.80,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
 Dialogue: 0,0:04:11.88,0:04:15.88,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
 Dialogue: 0,0:04:16.65,0:04:20.56,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
-Dialogue: 0,0:04:20.56,0:04:25.18,GreenBold,,0,0,0,,   uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
+Dialogue: 0,0:04:20.56,0:04:25.18,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
 Dialogue: 0,0:04:25.26,0:04:28.76,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
 Dialogue: 0,0:04:28.81,0:04:35.39,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
 Dialogue: 0,0:04:36.20,0:04:39.93,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
@@ -128,4 +128,39 @@ Dialogue: 0,0:05:42.64,0:05:47.23,GreenBold,,0,0,0,,Note que as taxas de energia
 Dialogue: 0,0:05:47.27,0:05:49.64,GreenBold,,0,0,0,,seguindo convenção usual de engenharia\Npara derivadas temporais.
 Dialogue: 0,0:05:50.40,0:05:53.52,GreenBold,,0,0,0,,Em seguida, dividindo a equação do balanço\Npara processos na forma extensiva,
 Dialogue: 0,0:05:53.58,0:05:55.15,GreenBold,,0,0,0,,pela massa "m" do sistema fechado,
-Dialogue: 0,0:05:55.15,0:06:00.15,GreenBold,,0,0,0,,
+Dialogue: 0,0:05:55.96,0:05:59.34,GreenBold,,0,0,0,,chega-se à forma intensiva da equação\Ndo balanço de energia para um processo.
+Dialogue: 0,0:05:59.42,0:06:03.79,GreenBold,,0,0,0,,Os termos em letras minúsculas correspondem aos\Nmaiúsculos por unidade de massa do sistema fechado,
+Dialogue: 0,0:06:03.87,0:06:07.10,GreenBold,,0,0,0,,fazendo com que todos os termos\Ntenham unidades de kJ/kg.
+Dialogue: 0,0:06:07.76,0:06:11.23,GreenBold,,0,0,0,,Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
+Dialogue: 0,0:06:11.31,0:06:16.11,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:16.83,0:06:20.09,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
+Dialogue: 0,0:06:20.14,0:06:22.94,GreenBold,,0,0,0,,na qual todos os termos têm unidades de kJ/kg.
+Dialogue: 0,0:06:23.74,0:06:27.56,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
+Dialogue: 0,0:06:27.63,0:06:32.08,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:32.88,0:06:36.25,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
+Dialogue: 0,0:06:39.98,0:06:44.16,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
+Dialogue: 0,0:06:44.25,0:06:48.73,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
+Dialogue: 0,0:06:48.80,0:06:51.69,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
+Dialogue: 0,0:06:52.04,0:06:54.80,GreenBold,,0,0,0,,[Beeps]
+Dialogue: 0,0:06:56.46,0:06:58.60,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
+Dialogue: 0,0:06:58.63,0:07:02.60,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
+Dialogue: 0,0:07:03.24,0:07:07.61,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
+Dialogue: 0,0:07:07.66,0:07:09.31,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
+Dialogue: 0,0:07:09.39,0:07:10.76,GreenBold,,0,0,0,,Assim, no balanço de energia:
+Dialogue: 0,0:07:10.84,0:07:14.88,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
+Dialogue: 0,0:07:14.88,0:07:17.10,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
+Dialogue: 0,0:07:17.18,0:07:20.36,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
+Dialogue: 0,0:07:21.02,0:07:24.76,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
+Dialogue: 0,0:07:24.83,0:07:26.75,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",
+Dialogue: 0,0:07:26.81,0:07:29.13,GreenBold,,0,0,0,,mais o trabalho que sai do sistema, "W_sai".
+Dialogue: 0,0:07:29.23,0:07:34.24,GreenBold,,0,0,0,,Perceba que no balanço, a direção das interações\Nfica explícita, pelos subscritos "ent" e "sai".
+Dialogue: 0,0:07:35.00,0:07:40.14,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a "E_sist"\Nnas equações de balanço de energia em sistemas fechados.
+Dialogue: 0,0:07:40.19,0:07:43.79,GreenBold,,0,0,0,,Em sistemas clássicos, ou seja, da física que\Npré-datava as relatividades de Einstein,
+Dialogue: 0,0:07:43.85,0:07:46.11,GreenBold,,0,0,0,,e não reativos, que não envolvam reações químicas,
+Dialogue: 0,0:07:46.19,0:07:49.66,GreenBold,,0,0,0,,escrevemos que a energia total de um\Nsistema é a soma de todas as energias
+Dialogue: 0,0:07:49.74,0:07:52.81,GreenBold,,0,0,0,,microscópicas e macroscópicas,\Ncom a seguinte interpretação:
+Dialogue: 0,0:07:53.50,0:07:58.43,GreenBold,,0,0,0,,A propriedade termodinâmica energia interna é a\Ntotalidade das energias microscópicas do sistema,
+Dialogue: 0,0:07:58.48,0:08:00.92,GreenBold,,0,0,0,,novamente, na ausência de reações\Nquímicas e nucleares.
+Dialogue: 0,0:08:00.99,0:08:04.38,GreenBold,,0,0,0,,(A retirada de tais hipóteses implica\Nem termos adicionais em "E_micro").
+Dialogue: 0,0:08:04.48,0:08:08.48,GreenBold,,0,0,0,,Em Termodinâmica de engenharia, a unidade usual de\Nenergia é o kJ (kilo-Joule), como mostrado.
+Dialogue: 0,0:08:08.48,0:08:13.48,GreenBold,,0,0,0,,

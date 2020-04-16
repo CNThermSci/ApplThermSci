@@ -19,7 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Active Line: 27
+Scroll Position: 28
+Active Line: 55
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -55,31 +56,31 @@ Dialogue: 0,0:01:40.25,0:01:43.77,GreenBold,,0,0,0,,* Não há, no universo fís
 Dialogue: 0,0:01:44.60,0:01:47.18,GreenBold,,0,0,0,,* Nem processo que destrua energia!
 Dialogue: 0,0:01:47.96,0:01:52.31,GreenBold,,0,0,0,,* Processos físicos podem apenas converter energia\N  de uma a outra das suas formas.
 Dialogue: 0,0:01:53.05,0:01:56.73,GreenBold,,0,0,0,,Com relação a este assunto, podemos dizer que a\NRelatividade Especial de Einstein:
-Dialogue: 0,0:01:58.41,0:02:00.97,GreenBold,,0,0,0,,* Unificou as conservações de massa e de energia;
-Dialogue: 0,0:02:01.88,0:02:05.26,GreenBold,,0,0,0,,por meio da Equivalência entre massa e energia,\Nexpressa pela famosa equação
-Dialogue: 0,0:02:05.42,0:02:09.02,GreenBold,,0,0,0,,energia equivalente é igual a uma constante de\Nproporção, c², vezes a massa,
-Dialogue: 0,0:02:09.16,0:02:11.13,GreenBold,,0,0,0,,na qual "c" é a velocidade da luz no vácuo.
-Dialogue: 0,0:02:11.29,0:02:15.58,GreenBold,,0,0,0,,O artigo "Conservation of energy" da wikipedia\N(link na descrição) afirma que
-Dialogue: 0,0:02:15.74,0:02:19.53,GreenBold,,0,0,0,,"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
-Dialogue: 0,0:02:19.72,0:02:23.10,GreenBold,,0,0,0,,a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
-Dialogue: 0,0:02:23.96,0:02:29.23,GreenBold,,0,0,0,,Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
-Dialogue: 0,0:02:29.45,0:02:31.90,GreenBold,,0,0,0,,Tal conclusão com base em uma lei científica firme
-Dialogue: 0,0:02:32.00,0:02:34.25,GreenBold,,0,0,0,,oferece profundas consequências filosóficas
-Dialogue: 0,0:02:34.33,0:02:36.91,GreenBold,,0,0,0,,sobre a massa-energia atualmente em existência:
-Dialogue: 0,0:02:37.00,0:02:38.92,GreenBold,,0,0,0,,(i) ou ela sempre existiu; ou
-Dialogue: 0,0:02:39.05,0:02:41.21,GreenBold,,0,0,0,,(ii) ela veio a ser por agência externa;
-Dialogue: 0,0:02:41.31,0:02:43.20,GreenBold,,0,0,0,,(a saber, externa ao universo físico).
-Dialogue: 0,0:02:43.36,0:02:47.39,GreenBold,,0,0,0,,A segunda lei da Termodinâmica equipar-nos-á\Nmelhor na abordagem de tais questões,
-Dialogue: 0,0:02:47.50,0:02:51.32,GreenBold,,0,0,0,,eliminado a primeira possibilidade enunciada,\Nporém isso é tópico para outro vídeo.
-Dialogue: 0,0:02:52.24,0:02:56.76,GreenBold,,0,0,0,,A primeira lei é central em Termodinâmica.\NEla é utilizada como princípio em várias deduções;
-Dialogue: 0,0:02:57.56,0:03:00.46,GreenBold,,0,0,0,,como também é instrumental na\Ndefinição de certas propriedades,
-Dialogue: 0,0:03:01.24,0:03:03.56,GreenBold,,0,0,0,,assim como em cálculos de processos energéticos,
-Dialogue: 0,0:03:03.58,0:03:07.04,GreenBold,,0,0,0,,que talvez seja a aplicação mais frequente do\Ndia-a-dia do engenheiro termodinâmico.
-Dialogue: 0,0:03:07.93,0:03:10.32,GreenBold,,0,0,0,,O contexto implora que a seguinte\Npergunta seja feita:
-Dialogue: 0,0:03:10.48,0:03:12.30,GreenBold,,0,0,0,,"Afinal, o que É energia?"
-Dialogue: 0,0:03:12.40,0:03:16.80,GreenBold,,0,0,0,,Aqui não se pede a definição de FORMAS de energia,\Nporém ENERGIA EM SI MESMA.
-Dialogue: 0,0:03:16.92,0:03:20.89,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
-Dialogue: 0,0:03:21.04,0:03:22.92,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
-Dialogue: 0,0:03:23.07,0:03:24.24,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
-Dialogue: 0,0:03:24.62,0:03:28.09,GreenBold,,0,0,0,,[Beeps]
-Dialogue: 0,0:03:28.09,0:03:33.09,GreenBold,,0,0,0,,
+Dialogue: 0,0:01:56.79,0:01:59.35,GreenBold,,0,0,0,,* Unificou as conservações de massa e de energia;
+Dialogue: 0,0:02:00.24,0:02:03.62,GreenBold,,0,0,0,,por meio da Equivalência entre massa e energia,\Nexpressa pela famosa equação
+Dialogue: 0,0:02:03.72,0:02:07.32,GreenBold,,0,0,0,,energia equivalente é igual a uma constante de\Nproporção, c², vezes a massa,
+Dialogue: 0,0:02:07.43,0:02:09.40,GreenBold,,0,0,0,,na qual "c" é a velocidade da luz no vácuo.
+Dialogue: 0,0:02:09.53,0:02:13.82,GreenBold,,0,0,0,,O artigo "Conservation of energy" da wikipedia\N(link na descrição) afirma que
+Dialogue: 0,0:02:13.90,0:02:17.69,GreenBold,,0,0,0,,"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
+Dialogue: 0,0:02:17.83,0:02:21.21,GreenBold,,0,0,0,,a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
+Dialogue: 0,0:02:22.02,0:02:27.29,GreenBold,,0,0,0,,Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
+Dialogue: 0,0:02:27.41,0:02:29.86,GreenBold,,0,0,0,,Tal conclusão com base em uma lei científica firme
+Dialogue: 0,0:02:29.92,0:02:32.17,GreenBold,,0,0,0,,oferece profundas consequências filosóficas
+Dialogue: 0,0:02:32.23,0:02:34.81,GreenBold,,0,0,0,,sobre a massa-energia atualmente em existência:
+Dialogue: 0,0:02:34.93,0:02:36.85,GreenBold,,0,0,0,,(i) ou ela sempre existiu; ou
+Dialogue: 0,0:02:36.89,0:02:39.05,GreenBold,,0,0,0,,(ii) ela veio a ser por agência externa;
+Dialogue: 0,0:02:39.07,0:02:40.96,GreenBold,,0,0,0,,(a saber, externa ao universo físico).
+Dialogue: 0,0:02:41.12,0:02:45.15,GreenBold,,0,0,0,,A segunda lei da Termodinâmica equipar-nos-á\Nmelhor na abordagem de tais questões,
+Dialogue: 0,0:02:45.18,0:02:49.00,GreenBold,,0,0,0,,eliminado a primeira possibilidade enunciada,\Nporém isso é tópico para outro vídeo.
+Dialogue: 0,0:02:49.77,0:02:54.29,GreenBold,,0,0,0,,A primeira lei é central em Termodinâmica.\NEla é utilizada como princípio em várias deduções;
+Dialogue: 0,0:02:55.08,0:02:57.98,GreenBold,,0,0,0,,como também é instrumental na\Ndefinição de certas propriedades,
+Dialogue: 0,0:02:58.69,0:03:01.01,GreenBold,,0,0,0,,assim como em cálculos de processos energéticos,
+Dialogue: 0,0:03:01.00,0:03:04.46,GreenBold,,0,0,0,,que talvez seja a aplicação mais frequente do\Ndia-a-dia do engenheiro termodinâmico.
+Dialogue: 0,0:03:05.32,0:03:07.71,GreenBold,,0,0,0,,O contexto implora que a seguinte\Npergunta seja feita:
+Dialogue: 0,0:03:07.80,0:03:09.62,GreenBold,,0,0,0,,"Afinal, o que É energia?"
+Dialogue: 0,0:03:09.72,0:03:14.12,GreenBold,,0,0,0,,Aqui não se pede a definição de FORMAS de energia,\Nporém ENERGIA EM SI MESMA.
+Dialogue: 0,0:03:14.20,0:03:18.17,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
+Dialogue: 0,0:03:18.24,0:03:20.12,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
+Dialogue: 0,0:03:20.25,0:03:21.42,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
+Dialogue: 0,0:03:21.70,0:03:25.17,GreenBold,,0,0,0,,[Beeps]
+Dialogue: 0,0:03:25.99,0:03:30.99,GreenBold,,0,0,0,,

@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 168
-Active Line: 195
+Scroll Position: 172
+Active Line: 199
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -223,4 +223,8 @@ Dialogue: 0,0:11:56.70,0:11:59.47,GreenBold,,0,0,0,,o trabalho líquido que sai 
 Dialogue: 0,0:11:59.61,0:12:05.29,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
 Dialogue: 0,0:12:05.39,0:12:09.42,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
 Dialogue: 0,0:12:09.47,0:12:11.71,GreenBold,,0,0,0,,compressível simples fechado, as quais
-Dialogue: 0,0:12:11.71,0:12:16.71,GreenBold,,0,0,0,,
+Dialogue: 0,0:12:12.44,0:12:16.46,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
+Dialogue: 0,0:12:16.52,0:12:20.97,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
+Dialogue: 0,0:12:21.08,0:12:24.20,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
+Dialogue: 0,0:12:24.27,0:12:27.20,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
+Dialogue: 0,0:12:27.20,0:12:32.20,GreenBold,,0,0,0,,

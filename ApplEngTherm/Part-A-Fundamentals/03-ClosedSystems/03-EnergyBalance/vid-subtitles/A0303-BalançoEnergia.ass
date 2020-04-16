@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 183
-Active Line: 210
+Scroll Position: 184
+Active Line: 211
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -238,4 +238,5 @@ Dialogue: 0,0:12:55.13,0:12:58.41,GreenBold,,0,0,0,,são negligíveis se compara
 Dialogue: 0,0:12:58.46,0:13:00.49,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
 Dialogue: 0,0:13:00.57,0:13:06.04,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
 Dialogue: 0,0:13:06.14,0:13:10.49,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
-Dialogue: 0,0:13:11.26,0:13:15.55,GreenBold,,0,0,0,,
+Dialogue: 0,0:13:11.26,0:13:15.55,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
+Dialogue: 0,0:13:15.55,0:13:20.55,GreenBold,,0,0,0,,

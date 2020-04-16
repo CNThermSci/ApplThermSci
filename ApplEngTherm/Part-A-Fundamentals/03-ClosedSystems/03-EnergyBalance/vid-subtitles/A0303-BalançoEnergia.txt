@@ -109,6 +109,7 @@ na qual todos os termos têm unidades de kJ/kg.
 Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
 quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
 chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
+Na qual todos os termos possuem unidades de kW/kg.
 O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
 Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 bem como das conversões entre elas.\NPode pausar o vídeo agora...

@@ -19,8 +19,8 @@ Update Details: Prof. C. Naaktgeboren
 [Aegisub Project Garbage]
 Audio File: A0303-BalançoEnergia.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 160
-Active Line: 187
+Scroll Position: 168
+Active Line: 195
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -215,4 +215,12 @@ Dialogue: 0,0:11:25.05,0:11:28.49,GreenBold,,0,0,0,,é diferente da convenção 
 Dialogue: 0,0:11:28.57,0:11:33.98,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
 Dialogue: 0,0:11:34.06,0:11:37.40,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
 Dialogue: 0,0:11:37.51,0:11:39.21,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
-Dialogue: 0,0:11:39.21,0:11:44.21,GreenBold,,0,0,0,,
+Dialogue: 0,0:11:39.93,0:11:42.25,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
+Dialogue: 0,0:11:42.32,0:11:45.48,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
+Dialogue: 0,0:11:45.52,0:11:50.30,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
+Dialogue: 0,0:11:50.43,0:11:56.68,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
+Dialogue: 0,0:11:56.70,0:11:59.47,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
+Dialogue: 0,0:11:59.61,0:12:05.29,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
+Dialogue: 0,0:12:05.39,0:12:09.42,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
+Dialogue: 0,0:12:09.47,0:12:11.71,GreenBold,,0,0,0,,compressível simples fechado, as quais
+Dialogue: 0,0:12:11.71,0:12:16.71,GreenBold,,0,0,0,,

@@ -23,11 +23,13 @@ fig/%.pdf: fig/%.svg
 		--export-pdf=$@
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
+		fig/A0304-pt-ConstVHeating.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
+		fig/A0304-pt-ConstVHeating.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex

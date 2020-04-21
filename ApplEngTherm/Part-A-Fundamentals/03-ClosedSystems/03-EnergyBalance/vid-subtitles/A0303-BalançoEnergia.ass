@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 53
-Active Line: 80
+Scroll Position: 65
+Active Line: 85
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -109,11 +109,11 @@ Dialogue: 0,0:04:49.17,0:04:53.54,GreenBold,,0,0,0,,o balanço de energia permit
 Dialogue: 0,0:04:53.64,0:04:55.97,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
 Dialogue: 0,0:04:56.09,0:04:59.09,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
 Dialogue: 0,0:04:59.18,0:05:00.92,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
-Dialogue: 0,0:05:01.60,0:05:03.63,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
-Dialogue: 0,0:05:03.76,0:05:06.70,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
-Dialogue: 0,0:05:06.78,0:05:10.00,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
-Dialogue: 0,0:05:10.11,0:05:13.44,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
-Dialogue: 0,0:05:13.50,0:05:15.95,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
+Dialogue: 0,0:05:00.99,0:05:03.02,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
+Dialogue: 0,0:05:03.15,0:05:06.09,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
+Dialogue: 0,0:05:06.17,0:05:09.39,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
+Dialogue: 0,0:05:09.50,0:05:12.83,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
+Dialogue: 0,0:05:12.89,0:05:15.34,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
 Dialogue: 0,0:05:16.70,0:05:21.21,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
 Dialogue: 0,0:05:21.31,0:05:23.02,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
 Dialogue: 0,0:05:23.10,0:05:26.43,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.

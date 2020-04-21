@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 30
-Active Line: 53
+Scroll Position: 33
+Active Line: 54
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -83,178 +83,177 @@ Dialogue: 0,0:03:08.44,0:03:12.84,GreenBold,,0,0,0,,Aqui não se pede a definiç
 Dialogue: 0,0:03:12.92,0:03:16.89,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
 Dialogue: 0,0:03:16.96,0:03:18.84,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
 Dialogue: 0,0:03:18.97,0:03:20.14,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
-Dialogue: 0,0:03:21.70,0:03:25.17,GreenBold,,0,0,0,,[ BEEPS ]
-Dialogue: 0,0:03:25.99,0:03:30.27,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
-Dialogue: 0,0:03:30.29,0:03:32.52,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
-Dialogue: 0,0:03:32.64,0:03:33.66,GreenBold,,0,0,0,,a seguinte definição:
-Dialogue: 0,0:03:34.49,0:03:36.17,GreenBold,,0,0,0,,Energia é uma QUANTIDADE
-Dialogue: 0,0:03:36.30,0:03:38.00,GreenBold,,0,0,0,,que é CONSERVADA na natureza
-Dialogue: 0,0:03:38.12,0:03:41.60,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
-Dialogue: 0,0:03:41.64,0:03:44.84,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
-Dialogue: 0,0:03:44.92,0:03:47.13,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
-Dialogue: 0,0:03:48.44,0:03:51.93,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
-Dialogue: 0,0:03:52.00,0:03:56.03,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
-Dialogue: 0,0:03:56.12,0:03:59.48,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
-Dialogue: 0,0:04:00.20,0:04:04.19,GreenBold,,0,0,0,,Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
-Dialogue: 0,0:04:04.25,0:04:06.91,GreenBold,,0,0,0,,O total de energia que ENTRA no sistema menos
-Dialogue: 0,0:04:06.91,0:04:09.52,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
-Dialogue: 0,0:04:09.60,0:04:11.80,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
-Dialogue: 0,0:04:11.88,0:04:15.88,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
-Dialogue: 0,0:04:16.65,0:04:20.56,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
-Dialogue: 0,0:04:20.56,0:04:25.18,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
-Dialogue: 0,0:04:25.26,0:04:28.76,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
-Dialogue: 0,0:04:28.81,0:04:35.39,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
-Dialogue: 0,0:04:36.20,0:04:39.93,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
-Dialogue: 0,0:04:40.01,0:04:42.92,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
-Dialogue: 0,0:04:43.00,0:04:47.37,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
-Dialogue: 0,0:04:47.47,0:04:49.80,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
-Dialogue: 0,0:04:49.92,0:04:52.92,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
-Dialogue: 0,0:04:53.01,0:04:54.75,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
-Dialogue: 0,0:04:54.80,0:04:56.83,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
-Dialogue: 0,0:04:56.96,0:04:59.90,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
-Dialogue: 0,0:04:59.98,0:05:03.20,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
-Dialogue: 0,0:05:03.31,0:05:06.64,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
-Dialogue: 0,0:05:06.70,0:05:09.15,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
-Dialogue: 0,0:05:09.90,0:05:14.41,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
-Dialogue: 0,0:05:14.51,0:05:16.22,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
-Dialogue: 0,0:05:16.30,0:05:19.63,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
-Dialogue: 0,0:05:20.30,0:05:21.96,GreenBold,,0,0,0,,a qual, ao ser diferenciada,
-Dialogue: 0,0:05:22.08,0:05:25.23,GreenBold,,0,0,0,,leva à forma diferencial do\Nbalanço de energia em sistema fechado.
-Dialogue: 0,0:05:25.31,0:05:28.27,GreenBold,,0,0,0,,Todos os termos da equação do balanço\Nnesta forma estão em kJ.
-Dialogue: 0,0:05:29.02,0:05:31.74,GreenBold,,0,0,0,,Dividindo a forma diferencial por\Numa diferencial de tempo, "dt",
-Dialogue: 0,0:05:31.79,0:05:35.40,GreenBold,,0,0,0,,que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se
-Dialogue: 0,0:05:35.96,0:05:39.18,GreenBold,,0,0,0,,o balanço de energia em sistema fechado\Nescrito na forma de taxa,
-Dialogue: 0,0:05:39.24,0:05:42.56,GreenBold,,0,0,0,,ou seja, de forma instantânea,\Ncom todos os termos em unidades de kW.
-Dialogue: 0,0:05:42.64,0:05:47.23,GreenBold,,0,0,0,,Note que as taxas de energia que entram e saem do\Nsistema são representadas por "Ė" (E ponto),
-Dialogue: 0,0:05:47.27,0:05:49.64,GreenBold,,0,0,0,,seguindo convenção usual de engenharia\Npara derivadas temporais.
-Dialogue: 0,0:05:50.40,0:05:53.52,GreenBold,,0,0,0,,Em seguida, dividindo a equação do balanço\Npara processos na forma extensiva,
-Dialogue: 0,0:05:53.58,0:05:55.15,GreenBold,,0,0,0,,pela massa "m" do sistema fechado,
-Dialogue: 0,0:05:55.96,0:05:59.34,GreenBold,,0,0,0,,chega-se à forma intensiva da equação\Ndo balanço de energia para um processo.
-Dialogue: 0,0:05:59.42,0:06:03.79,GreenBold,,0,0,0,,Os termos em letras minúsculas correspondem aos\Nmaiúsculos por unidade de massa do sistema fechado,
-Dialogue: 0,0:06:03.87,0:06:07.10,GreenBold,,0,0,0,,fazendo com que todos os termos\Ntenham unidades de kJ/kg.
-Dialogue: 0,0:06:07.76,0:06:11.23,GreenBold,,0,0,0,,Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
-Dialogue: 0,0:06:11.31,0:06:16.11,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
-Dialogue: 0,0:06:16.83,0:06:20.09,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
-Dialogue: 0,0:06:20.14,0:06:22.94,GreenBold,,0,0,0,,na qual todos os termos têm unidades de kJ/kg.
-Dialogue: 0,0:06:23.74,0:06:27.56,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
-Dialogue: 0,0:06:27.63,0:06:32.08,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
-Dialogue: 0,0:06:32.88,0:06:36.25,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
-Dialogue: 0,0:06:36.33,0:06:39.15,GreenBold,,0,0,0,,Na qual todos os termos possuem unidades de kW/kg.
-Dialogue: 0,0:06:39.98,0:06:44.16,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
-Dialogue: 0,0:06:44.25,0:06:48.73,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
-Dialogue: 0,0:06:48.80,0:06:51.69,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
-Dialogue: 0,0:06:52.04,0:06:54.80,GreenBold,,0,0,0,,[ BEEPS ]
-Dialogue: 0,0:06:56.46,0:06:58.60,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
-Dialogue: 0,0:06:58.63,0:07:02.60,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
-Dialogue: 0,0:07:03.24,0:07:07.61,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
-Dialogue: 0,0:07:07.66,0:07:09.31,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
-Dialogue: 0,0:07:09.39,0:07:10.76,GreenBold,,0,0,0,,Assim, no balanço de energia:
-Dialogue: 0,0:07:10.84,0:07:14.88,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
-Dialogue: 0,0:07:14.88,0:07:17.10,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
-Dialogue: 0,0:07:17.18,0:07:20.36,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
-Dialogue: 0,0:07:21.02,0:07:24.76,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
-Dialogue: 0,0:07:24.83,0:07:26.75,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",
-Dialogue: 0,0:07:26.81,0:07:29.13,GreenBold,,0,0,0,,mais o trabalho que sai do sistema, "W_sai".
-Dialogue: 0,0:07:29.23,0:07:34.24,GreenBold,,0,0,0,,Perceba que no balanço, a direção das interações\Nfica explícita, pelos subscritos "ent" e "sai".
-Dialogue: 0,0:07:35.00,0:07:40.14,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a "E_sist"\Nnas equações de balanço de energia em sistemas fechados.
-Dialogue: 0,0:07:40.19,0:07:43.79,GreenBold,,0,0,0,,Em sistemas clássicos, ou seja, da física que\Npré-datava as relatividades de Einstein,
-Dialogue: 0,0:07:43.85,0:07:46.11,GreenBold,,0,0,0,,e não reativos, que não envolvam reações químicas,
-Dialogue: 0,0:07:46.19,0:07:49.66,GreenBold,,0,0,0,,escrevemos que a energia total de um\Nsistema é a soma de todas as energias
-Dialogue: 0,0:07:49.74,0:07:52.81,GreenBold,,0,0,0,,microscópicas e macroscópicas,\Ncom a seguinte interpretação:
-Dialogue: 0,0:07:53.50,0:07:58.43,GreenBold,,0,0,0,,A propriedade termodinâmica energia interna é a\Ntotalidade das energias microscópicas do sistema,
-Dialogue: 0,0:07:58.48,0:08:00.92,GreenBold,,0,0,0,,novamente, na ausência de reações\Nquímicas e nucleares.
-Dialogue: 0,0:08:00.99,0:08:04.38,GreenBold,,0,0,0,,(A retirada de tais hipóteses implica\Nem termos adicionais em "E_micro").
-Dialogue: 0,0:08:04.48,0:08:08.48,GreenBold,,0,0,0,,Em Termodinâmica de engenharia, a unidade usual de\Nenergia é o kJ (kilo-Joule), como mostrado.
-Dialogue: 0,0:08:09.21,0:08:13.45,GreenBold,,0,0,0,,As energias cinética e potencial gravitacional\Ncompõem o inventório de energias macroscópicas
-Dialogue: 0,0:08:13.45,0:08:16.09,GreenBold,,0,0,0,,do sistema fechado, as quais também são dadas em kJ.
-Dialogue: 0,0:08:16.83,0:08:19.66,GreenBold,,0,0,0,,A energia cinética E_c extensiva (com "E" maiúsculo)
-Dialogue: 0,0:08:19.72,0:08:24.22,GreenBold,,0,0,0,,é igual à massa "m" do sistema vezes a energia\Ncinética por unidade de massa
-Dialogue: 0,0:08:24.32,0:08:26.86,GreenBold,,0,0,0,,específica do sistema, e_c, (com "e" minúsculo).
-Dialogue: 0,0:08:26.89,0:08:32.52,GreenBold,,0,0,0,,Este produto também é igual a mV²/2 (com V\Nestilizado representando a velocidade do sistema)
-Dialogue: 0,0:08:32.60,0:08:34.54,GreenBold,,0,0,0,,e denominador 2 (dois) adimensional.
-Dialogue: 0,0:08:34.64,0:08:41.48,GreenBold,,0,0,0,,Uma vez que as unidades de E_c são dadas em kJ,\Nas unidades de "V" (estilizado) são de √(kJ/kg).
-Dialogue: 0,0:08:41.55,0:08:48.20,GreenBold,,0,0,0,,Esta unidade "termodinâmica" de velocidade\Nvale √1000 m/s, ou, aproximadamente 114 km/h,
-Dialogue: 0,0:08:48.30,0:08:52.97,GreenBold,,0,0,0,,não deve ser vista com total estranheza, porém como\Nalgo revelador da relativa pequena magnitude
-Dialogue: 0,0:08:53.05,0:08:55.82,GreenBold,,0,0,0,,das energias macroscópicas em relação às microscópicas,
-Dialogue: 0,0:08:55.88,0:09:01.79,GreenBold,,0,0,0,,indicando que um sistema a esta velocidade, possui\Napenas 0.5 kJ/kg de energia cinética específica.
-Dialogue: 0,0:09:02.57,0:09:07.32,GreenBold,,0,0,0,,Por outro lado, a equação para a energia cinética\Ndo sistema com velocidade "v" (minúsculo, estilizado)
-Dialogue: 0,0:09:07.42,0:09:11.90,GreenBold,,0,0,0,,em m/s deve ser ajustada como na linha 4,\Nna qual o denominador é 2000,
-Dialogue: 0,0:09:11.98,0:09:19.15,GreenBold,,0,0,0,,uma vez que m/s = √(J/kg), e o valor numérico de E_c\Né explicitamente convertido em kJ pelo fator de 1000.
-Dialogue: 0,0:09:19.23,0:09:23.64,GreenBold,,0,0,0,,O livro-texto adotado para a disciplina, fornece ao\Nmesmo tempo a equação com denominador 2 (dois)
-Dialogue: 0,0:09:23.72,0:09:29.02,GreenBold,,0,0,0,,e velocidade em m/s; porém hora fazendo conversão\Nde unidades nos exercícios resolvidos,
-Dialogue: 0,0:09:29.10,0:09:31.05,GreenBold,,0,0,0,,o que invariavelmente leva ao denominador 2000,
-Dialogue: 0,0:09:31.13,0:09:35.82,GreenBold,,0,0,0,,e hora deixando e_c em J/kg, ao invés de kJ/kg.
-Dialogue: 0,0:09:35.88,0:09:39.40,GreenBold,,0,0,0,,A diferença entre os slides deste vídeo e o\Nlivro-texto é meramente metodológica.
-Dialogue: 0,0:09:40.16,0:09:46.04,GreenBold,,0,0,0,,A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
-Dialogue: 0,0:09:46.11,0:09:51.72,GreenBold,,0,0,0,,a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ
-Dialogue: 0,0:09:51.80,0:09:54.46,GreenBold,,0,0,0,,(maiúsculo, estilizado), dado em kilômetros.
-Dialogue: 0,0:09:54.51,0:10:00.25,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
-Dialogue: 0,0:10:00.33,0:10:02.92,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
-Dialogue: 0,0:10:03.69,0:10:08.97,GreenBold,,0,0,0,,A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
-Dialogue: 0,0:10:09.04,0:10:13.58,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
-Dialogue: 0,0:10:13.64,0:10:16.41,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
-Dialogue: 0,0:10:16.72,0:10:19.61,GreenBold,,0,0,0,,[ BEEPS ]
-Dialogue: 0,0:10:21.68,0:10:25.66,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
-Dialogue: 0,0:10:25.69,0:10:27.32,GreenBold,,0,0,0,,para um sistema compressível simples.
-Dialogue: 0,0:10:27.36,0:10:30.12,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
-Dialogue: 0,0:10:30.84,0:10:34.91,GreenBold,,0,0,0,,expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
-Dialogue: 0,0:10:34.92,0:10:36.83,GreenBold,,0,0,0,,correspondentes interações de calor e trabalho,
-Dialogue: 0,0:10:36.87,0:10:38.09,GreenBold,,0,0,0,,no lado esquerdo da equação,
-Dialogue: 0,0:10:38.14,0:10:42.43,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
-Dialogue: 0,0:10:42.52,0:10:46.81,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
-Dialogue: 0,0:10:47.55,0:10:51.53,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
-Dialogue: 0,0:10:51.60,0:10:55.45,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
-Dialogue: 0,0:10:55.50,0:10:59.02,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
-Dialogue: 0,0:10:59.08,0:11:03.00,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
-Dialogue: 0,0:11:03.05,0:11:04.24,GreenBold,,0,0,0,,no lado direito da equação.
-Dialogue: 0,0:11:04.32,0:11:09.53,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
-Dialogue: 0,0:11:09.56,0:11:12.00,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
-Dialogue: 0,0:11:12.08,0:11:15.05,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
-Dialogue: 0,0:11:15.10,0:11:18.01,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
-Dialogue: 0,0:11:18.04,0:11:20.97,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
-Dialogue: 0,0:11:21.08,0:11:24.99,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
-Dialogue: 0,0:11:25.05,0:11:28.49,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
-Dialogue: 0,0:11:28.57,0:11:33.98,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
-Dialogue: 0,0:11:34.06,0:11:37.40,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
-Dialogue: 0,0:11:37.51,0:11:39.21,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
-Dialogue: 0,0:11:39.93,0:11:42.25,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
-Dialogue: 0,0:11:42.32,0:11:45.48,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
-Dialogue: 0,0:11:45.52,0:11:50.30,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
-Dialogue: 0,0:11:50.43,0:11:56.68,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
-Dialogue: 0,0:11:56.70,0:11:59.47,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
-Dialogue: 0,0:11:59.61,0:12:05.29,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
-Dialogue: 0,0:12:05.39,0:12:09.42,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
-Dialogue: 0,0:12:09.47,0:12:11.71,GreenBold,,0,0,0,,compressível simples fechado, as quais
-Dialogue: 0,0:12:12.44,0:12:16.46,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
-Dialogue: 0,0:12:16.52,0:12:20.97,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
-Dialogue: 0,0:12:21.08,0:12:24.20,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
-Dialogue: 0,0:12:24.27,0:12:27.20,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
-Dialogue: 0,0:12:27.29,0:12:31.61,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:12:32.40,0:12:35.96,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
-Dialogue: 0,0:12:36.01,0:12:39.93,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:12:40.06,0:12:42.91,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
-Dialogue: 0,0:12:42.94,0:12:45.76,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
-Dialogue: 0,0:12:45.84,0:12:50.62,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
-Dialogue: 0,0:12:51.39,0:12:55.08,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
-Dialogue: 0,0:12:55.13,0:12:58.41,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
-Dialogue: 0,0:12:58.46,0:13:00.49,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
-Dialogue: 0,0:13:00.57,0:13:06.04,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
-Dialogue: 0,0:13:06.14,0:13:10.49,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
-Dialogue: 0,0:13:11.26,0:13:15.55,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
-Dialogue: 0,0:13:16.33,0:13:19.64,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
-Dialogue: 0,0:13:19.72,0:13:25.23,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
-Dialogue: 0,0:13:26.01,0:13:31.00,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
-Dialogue: 0,0:13:31.82,0:13:37.44,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
-Dialogue: 0,0:13:37.52,0:13:41.40,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
-Dialogue: 0,0:13:42.24,0:13:45.92,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
-Dialogue: 0,0:13:45.98,0:13:49.72,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
-Dialogue: 0,0:13:49.85,0:13:52.36,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
-Dialogue: 0,0:13:52.44,0:13:55.44,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
-Dialogue: 0,0:13:55.58,0:13:59.56,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
-Dialogue: 0,0:13:59.61,0:14:02.36,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
-Dialogue: 0,0:14:03.13,0:14:08.41,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
-Dialogue: 0,0:14:09.23,0:14:13.36,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
-Dialogue: 0,0:14:14.11,0:14:17.74,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
-Dialogue: 0,0:14:17.82,0:14:19.18,GreenBold,,0,0,0,,Até a próxima oportunidade!
-Dialogue: 0,0:14:19.52,0:14:25.29,GreenBold,,0,0,0,,[ Música de Encerramento ]
-Dialogue: 0,0:14:25.29,0:14:30.29,GreenBold,,0,0,0,,
+Dialogue: 0,0:03:32.79,0:03:37.07,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
+Dialogue: 0,0:03:37.09,0:03:39.32,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
+Dialogue: 0,0:03:39.44,0:03:40.46,GreenBold,,0,0,0,,a seguinte definição:
+Dialogue: 0,0:03:41.29,0:03:42.97,GreenBold,,0,0,0,,Energia é uma QUANTIDADE
+Dialogue: 0,0:03:43.10,0:03:44.80,GreenBold,,0,0,0,,que é CONSERVADA na natureza
+Dialogue: 0,0:03:44.92,0:03:48.40,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
+Dialogue: 0,0:03:48.44,0:03:51.64,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
+Dialogue: 0,0:03:51.72,0:03:53.93,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
+Dialogue: 0,0:03:55.24,0:03:58.73,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
+Dialogue: 0,0:03:58.80,0:04:02.83,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
+Dialogue: 0,0:04:02.92,0:04:06.28,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
+Dialogue: 0,0:04:07.00,0:04:10.99,GreenBold,,0,0,0,,Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
+Dialogue: 0,0:04:11.05,0:04:13.71,GreenBold,,0,0,0,,O total de energia que ENTRA no sistema menos
+Dialogue: 0,0:04:13.71,0:04:16.32,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
+Dialogue: 0,0:04:16.40,0:04:18.60,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
+Dialogue: 0,0:04:18.68,0:04:22.68,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
+Dialogue: 0,0:04:23.45,0:04:27.36,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
+Dialogue: 0,0:04:27.36,0:04:31.98,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
+Dialogue: 0,0:04:32.06,0:04:35.56,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
+Dialogue: 0,0:04:35.61,0:04:42.19,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
+Dialogue: 0,0:04:43.00,0:04:46.73,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
+Dialogue: 0,0:04:46.81,0:04:49.72,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
+Dialogue: 0,0:04:49.80,0:04:54.17,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
+Dialogue: 0,0:04:54.27,0:04:56.60,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
+Dialogue: 0,0:04:56.72,0:04:59.72,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
+Dialogue: 0,0:04:59.81,0:05:01.55,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
+Dialogue: 0,0:05:01.60,0:05:03.63,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
+Dialogue: 0,0:05:03.76,0:05:06.70,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
+Dialogue: 0,0:05:06.78,0:05:10.00,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
+Dialogue: 0,0:05:10.11,0:05:13.44,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
+Dialogue: 0,0:05:13.50,0:05:15.95,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
+Dialogue: 0,0:05:16.70,0:05:21.21,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
+Dialogue: 0,0:05:21.31,0:05:23.02,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
+Dialogue: 0,0:05:23.10,0:05:26.43,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
+Dialogue: 0,0:05:27.10,0:05:28.76,GreenBold,,0,0,0,,a qual, ao ser diferenciada,
+Dialogue: 0,0:05:28.88,0:05:32.03,GreenBold,,0,0,0,,leva à forma diferencial do\Nbalanço de energia em sistema fechado.
+Dialogue: 0,0:05:32.11,0:05:35.07,GreenBold,,0,0,0,,Todos os termos da equação do balanço\Nnesta forma estão em kJ.
+Dialogue: 0,0:05:35.82,0:05:38.54,GreenBold,,0,0,0,,Dividindo a forma diferencial por\Numa diferencial de tempo, "dt",
+Dialogue: 0,0:05:38.59,0:05:42.20,GreenBold,,0,0,0,,que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se
+Dialogue: 0,0:05:42.76,0:05:45.98,GreenBold,,0,0,0,,o balanço de energia em sistema fechado\Nescrito na forma de taxa,
+Dialogue: 0,0:05:46.04,0:05:49.36,GreenBold,,0,0,0,,ou seja, de forma instantânea,\Ncom todos os termos em unidades de kW.
+Dialogue: 0,0:05:49.44,0:05:54.03,GreenBold,,0,0,0,,Note que as taxas de energia que entram e saem do\Nsistema são representadas por "Ė" (E ponto),
+Dialogue: 0,0:05:54.07,0:05:56.44,GreenBold,,0,0,0,,seguindo convenção usual de engenharia\Npara derivadas temporais.
+Dialogue: 0,0:05:57.20,0:06:00.32,GreenBold,,0,0,0,,Em seguida, dividindo a equação do balanço\Npara processos na forma extensiva,
+Dialogue: 0,0:06:00.38,0:06:01.95,GreenBold,,0,0,0,,pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:02.76,0:06:06.14,GreenBold,,0,0,0,,chega-se à forma intensiva da equação\Ndo balanço de energia para um processo.
+Dialogue: 0,0:06:06.22,0:06:10.59,GreenBold,,0,0,0,,Os termos em letras minúsculas correspondem aos\Nmaiúsculos por unidade de massa do sistema fechado,
+Dialogue: 0,0:06:10.67,0:06:13.90,GreenBold,,0,0,0,,fazendo com que todos os termos\Ntenham unidades de kJ/kg.
+Dialogue: 0,0:06:14.56,0:06:18.03,GreenBold,,0,0,0,,Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
+Dialogue: 0,0:06:18.11,0:06:22.91,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:23.63,0:06:26.89,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
+Dialogue: 0,0:06:26.94,0:06:29.74,GreenBold,,0,0,0,,na qual todos os termos têm unidades de kJ/kg.
+Dialogue: 0,0:06:30.54,0:06:34.36,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
+Dialogue: 0,0:06:34.43,0:06:38.88,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:39.68,0:06:43.05,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
+Dialogue: 0,0:06:43.13,0:06:45.95,GreenBold,,0,0,0,,Na qual todos os termos possuem unidades de kW/kg.
+Dialogue: 0,0:06:46.78,0:06:50.96,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
+Dialogue: 0,0:06:51.05,0:06:55.53,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
+Dialogue: 0,0:06:55.60,0:06:58.49,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
+Dialogue: 0,0:06:58.84,0:07:01.60,GreenBold,,0,0,0,,[ BEEPS ]
+Dialogue: 0,0:07:03.26,0:07:05.40,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
+Dialogue: 0,0:07:05.43,0:07:09.40,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
+Dialogue: 0,0:07:10.04,0:07:14.41,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
+Dialogue: 0,0:07:14.46,0:07:16.11,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
+Dialogue: 0,0:07:16.19,0:07:17.56,GreenBold,,0,0,0,,Assim, no balanço de energia:
+Dialogue: 0,0:07:17.64,0:07:21.68,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
+Dialogue: 0,0:07:21.68,0:07:23.90,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
+Dialogue: 0,0:07:23.98,0:07:27.16,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
+Dialogue: 0,0:07:27.82,0:07:31.56,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
+Dialogue: 0,0:07:31.63,0:07:33.55,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",
+Dialogue: 0,0:07:33.61,0:07:35.93,GreenBold,,0,0,0,,mais o trabalho que sai do sistema, "W_sai".
+Dialogue: 0,0:07:36.03,0:07:41.04,GreenBold,,0,0,0,,Perceba que no balanço, a direção das interações\Nfica explícita, pelos subscritos "ent" e "sai".
+Dialogue: 0,0:07:41.80,0:07:46.94,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a "E_sist"\Nnas equações de balanço de energia em sistemas fechados.
+Dialogue: 0,0:07:46.99,0:07:50.59,GreenBold,,0,0,0,,Em sistemas clássicos, ou seja, da física que\Npré-datava as relatividades de Einstein,
+Dialogue: 0,0:07:50.65,0:07:52.91,GreenBold,,0,0,0,,e não reativos, que não envolvam reações químicas,
+Dialogue: 0,0:07:52.99,0:07:56.46,GreenBold,,0,0,0,,escrevemos que a energia total de um\Nsistema é a soma de todas as energias
+Dialogue: 0,0:07:56.54,0:07:59.61,GreenBold,,0,0,0,,microscópicas e macroscópicas,\Ncom a seguinte interpretação:
+Dialogue: 0,0:08:00.30,0:08:05.23,GreenBold,,0,0,0,,A propriedade termodinâmica energia interna é a\Ntotalidade das energias microscópicas do sistema,
+Dialogue: 0,0:08:05.28,0:08:07.72,GreenBold,,0,0,0,,novamente, na ausência de reações\Nquímicas e nucleares.
+Dialogue: 0,0:08:07.79,0:08:11.18,GreenBold,,0,0,0,,(A retirada de tais hipóteses implica\Nem termos adicionais em "E_micro").
+Dialogue: 0,0:08:11.28,0:08:15.28,GreenBold,,0,0,0,,Em Termodinâmica de engenharia, a unidade usual de\Nenergia é o kJ (kilo-Joule), como mostrado.
+Dialogue: 0,0:08:16.01,0:08:20.25,GreenBold,,0,0,0,,As energias cinética e potencial gravitacional\Ncompõem o inventório de energias macroscópicas
+Dialogue: 0,0:08:20.25,0:08:22.89,GreenBold,,0,0,0,,do sistema fechado, as quais também são dadas em kJ.
+Dialogue: 0,0:08:23.63,0:08:26.46,GreenBold,,0,0,0,,A energia cinética E_c extensiva (com "E" maiúsculo)
+Dialogue: 0,0:08:26.52,0:08:31.02,GreenBold,,0,0,0,,é igual à massa "m" do sistema vezes a energia\Ncinética por unidade de massa
+Dialogue: 0,0:08:31.12,0:08:33.66,GreenBold,,0,0,0,,específica do sistema, e_c, (com "e" minúsculo).
+Dialogue: 0,0:08:33.69,0:08:39.32,GreenBold,,0,0,0,,Este produto também é igual a mV²/2 (com V\Nestilizado representando a velocidade do sistema)
+Dialogue: 0,0:08:39.40,0:08:41.34,GreenBold,,0,0,0,,e denominador 2 (dois) adimensional.
+Dialogue: 0,0:08:41.44,0:08:48.28,GreenBold,,0,0,0,,Uma vez que as unidades de E_c são dadas em kJ,\Nas unidades de "V" (estilizado) são de √(kJ/kg).
+Dialogue: 0,0:08:48.35,0:08:55.00,GreenBold,,0,0,0,,Esta unidade "termodinâmica" de velocidade\Nvale √1000 m/s, ou, aproximadamente 114 km/h,
+Dialogue: 0,0:08:55.10,0:08:59.77,GreenBold,,0,0,0,,não deve ser vista com total estranheza, porém como\Nalgo revelador da relativa pequena magnitude
+Dialogue: 0,0:08:59.85,0:09:02.62,GreenBold,,0,0,0,,das energias macroscópicas em relação às microscópicas,
+Dialogue: 0,0:09:02.68,0:09:08.59,GreenBold,,0,0,0,,indicando que um sistema a esta velocidade, possui\Napenas 0.5 kJ/kg de energia cinética específica.
+Dialogue: 0,0:09:09.37,0:09:14.12,GreenBold,,0,0,0,,Por outro lado, a equação para a energia cinética\Ndo sistema com velocidade "v" (minúsculo, estilizado)
+Dialogue: 0,0:09:14.22,0:09:18.70,GreenBold,,0,0,0,,em m/s deve ser ajustada como na linha 4,\Nna qual o denominador é 2000,
+Dialogue: 0,0:09:18.78,0:09:25.95,GreenBold,,0,0,0,,uma vez que m/s = √(J/kg), e o valor numérico de E_c\Né explicitamente convertido em kJ pelo fator de 1000.
+Dialogue: 0,0:09:26.03,0:09:30.44,GreenBold,,0,0,0,,O livro-texto adotado para a disciplina, fornece ao\Nmesmo tempo a equação com denominador 2 (dois)
+Dialogue: 0,0:09:30.52,0:09:35.82,GreenBold,,0,0,0,,e velocidade em m/s; porém hora fazendo conversão\Nde unidades nos exercícios resolvidos,
+Dialogue: 0,0:09:35.90,0:09:37.85,GreenBold,,0,0,0,,o que invariavelmente leva ao denominador 2000,
+Dialogue: 0,0:09:37.93,0:09:42.62,GreenBold,,0,0,0,,e hora deixando e_c em J/kg, ao invés de kJ/kg.
+Dialogue: 0,0:09:42.68,0:09:46.20,GreenBold,,0,0,0,,A diferença entre os slides deste vídeo e o\Nlivro-texto é meramente metodológica.
+Dialogue: 0,0:09:46.96,0:09:52.84,GreenBold,,0,0,0,,A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
+Dialogue: 0,0:09:52.91,0:09:58.52,GreenBold,,0,0,0,,a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ
+Dialogue: 0,0:09:58.60,0:10:01.26,GreenBold,,0,0,0,,(maiúsculo, estilizado), dado em kilômetros.
+Dialogue: 0,0:10:01.31,0:10:07.05,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
+Dialogue: 0,0:10:07.13,0:10:09.72,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
+Dialogue: 0,0:10:10.49,0:10:15.77,GreenBold,,0,0,0,,A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
+Dialogue: 0,0:10:15.84,0:10:20.38,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
+Dialogue: 0,0:10:20.44,0:10:23.21,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
+Dialogue: 0,0:10:23.52,0:10:26.41,GreenBold,,0,0,0,,[ BEEPS ]
+Dialogue: 0,0:10:28.48,0:10:32.46,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
+Dialogue: 0,0:10:32.49,0:10:34.12,GreenBold,,0,0,0,,para um sistema compressível simples.
+Dialogue: 0,0:10:34.16,0:10:36.92,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
+Dialogue: 0,0:10:37.64,0:10:41.71,GreenBold,,0,0,0,,expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
+Dialogue: 0,0:10:41.72,0:10:43.63,GreenBold,,0,0,0,,correspondentes interações de calor e trabalho,
+Dialogue: 0,0:10:43.67,0:10:44.89,GreenBold,,0,0,0,,no lado esquerdo da equação,
+Dialogue: 0,0:10:44.94,0:10:49.23,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
+Dialogue: 0,0:10:49.32,0:10:53.61,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
+Dialogue: 0,0:10:54.35,0:10:58.33,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
+Dialogue: 0,0:10:58.40,0:11:02.25,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
+Dialogue: 0,0:11:02.30,0:11:05.82,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
+Dialogue: 0,0:11:05.88,0:11:09.80,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
+Dialogue: 0,0:11:09.85,0:11:11.04,GreenBold,,0,0,0,,no lado direito da equação.
+Dialogue: 0,0:11:11.12,0:11:16.33,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
+Dialogue: 0,0:11:16.36,0:11:18.80,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
+Dialogue: 0,0:11:18.88,0:11:21.85,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
+Dialogue: 0,0:11:21.90,0:11:24.81,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
+Dialogue: 0,0:11:24.84,0:11:27.77,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
+Dialogue: 0,0:11:27.88,0:11:31.79,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
+Dialogue: 0,0:11:31.85,0:11:35.29,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
+Dialogue: 0,0:11:35.37,0:11:40.78,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
+Dialogue: 0,0:11:40.86,0:11:44.20,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
+Dialogue: 0,0:11:44.31,0:11:46.01,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
+Dialogue: 0,0:11:46.73,0:11:49.05,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
+Dialogue: 0,0:11:49.12,0:11:52.28,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
+Dialogue: 0,0:11:52.32,0:11:57.10,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
+Dialogue: 0,0:11:57.23,0:12:03.48,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
+Dialogue: 0,0:12:03.50,0:12:06.27,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
+Dialogue: 0,0:12:06.41,0:12:12.09,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
+Dialogue: 0,0:12:12.19,0:12:16.22,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
+Dialogue: 0,0:12:16.27,0:12:18.51,GreenBold,,0,0,0,,compressível simples fechado, as quais
+Dialogue: 0,0:12:19.24,0:12:23.26,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
+Dialogue: 0,0:12:23.32,0:12:27.77,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
+Dialogue: 0,0:12:27.88,0:12:31.00,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
+Dialogue: 0,0:12:31.07,0:12:34.00,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
+Dialogue: 0,0:12:34.09,0:12:38.41,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:12:39.20,0:12:42.76,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
+Dialogue: 0,0:12:42.81,0:12:46.73,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:12:46.86,0:12:49.71,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
+Dialogue: 0,0:12:49.74,0:12:52.56,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
+Dialogue: 0,0:12:52.64,0:12:57.42,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
+Dialogue: 0,0:12:58.19,0:13:01.88,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
+Dialogue: 0,0:13:01.93,0:13:05.21,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
+Dialogue: 0,0:13:05.26,0:13:07.29,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
+Dialogue: 0,0:13:07.37,0:13:12.84,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
+Dialogue: 0,0:13:12.94,0:13:17.29,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
+Dialogue: 0,0:13:18.06,0:13:22.35,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
+Dialogue: 0,0:13:23.13,0:13:26.44,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
+Dialogue: 0,0:13:26.52,0:13:32.03,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
+Dialogue: 0,0:13:32.81,0:13:37.80,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
+Dialogue: 0,0:13:38.62,0:13:44.24,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
+Dialogue: 0,0:13:44.32,0:13:48.20,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
+Dialogue: 0,0:13:49.04,0:13:52.72,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+Dialogue: 0,0:13:52.78,0:13:56.52,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Dialogue: 0,0:13:56.65,0:13:59.16,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
+Dialogue: 0,0:13:59.24,0:14:02.24,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
+Dialogue: 0,0:14:02.38,0:14:06.36,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
+Dialogue: 0,0:14:06.41,0:14:09.16,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
+Dialogue: 0,0:14:09.93,0:14:15.21,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
+Dialogue: 0,0:14:16.03,0:14:20.16,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
+Dialogue: 0,0:14:20.91,0:14:24.54,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
+Dialogue: 0,0:14:24.62,0:14:25.98,GreenBold,,0,0,0,,Até a próxima oportunidade!
+Dialogue: 0,0:14:26.32,0:14:32.09,GreenBold,,0,0,0,,[ Música de Encerramento ]
+Dialogue: 0,0:14:32.09,0:14:37.09,GreenBold,,0,0,0,,

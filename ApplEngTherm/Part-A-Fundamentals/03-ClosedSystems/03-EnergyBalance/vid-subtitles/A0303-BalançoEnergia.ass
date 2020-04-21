@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 180
-Active Line: 194
+Active Line: 201
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -223,14 +223,14 @@ Dialogue: 0,0:12:14.59,0:12:17.75,GreenBold,,0,0,0,,sistema fechado de forma a r
 Dialogue: 0,0:12:17.79,0:12:22.57,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
 Dialogue: 0,0:12:22.70,0:12:28.95,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
 Dialogue: 0,0:12:28.97,0:12:31.74,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
-Dialogue: 0,0:12:32.43,0:12:38.11,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
-Dialogue: 0,0:12:38.21,0:12:42.24,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
-Dialogue: 0,0:12:42.29,0:12:44.53,GreenBold,,0,0,0,,compressível simples fechado, as quais
-Dialogue: 0,0:12:45.26,0:12:49.28,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
-Dialogue: 0,0:12:49.34,0:12:53.79,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
-Dialogue: 0,0:12:53.90,0:12:57.02,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
-Dialogue: 0,0:12:57.09,0:13:00.02,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
-Dialogue: 0,0:13:00.11,0:13:04.43,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:12:31.87,0:12:37.55,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
+Dialogue: 0,0:12:37.65,0:12:41.68,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
+Dialogue: 0,0:12:41.73,0:12:43.97,GreenBold,,0,0,0,,compressível simples fechado, as quais
+Dialogue: 0,0:12:44.70,0:12:48.72,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
+Dialogue: 0,0:12:48.78,0:12:53.23,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
+Dialogue: 0,0:12:53.34,0:12:56.46,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
+Dialogue: 0,0:12:56.53,0:12:59.46,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
+Dialogue: 0,0:12:59.55,0:13:03.87,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
 Dialogue: 0,0:13:05.22,0:13:08.78,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
 Dialogue: 0,0:13:08.83,0:13:12.75,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
 Dialogue: 0,0:13:12.88,0:13:15.73,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",

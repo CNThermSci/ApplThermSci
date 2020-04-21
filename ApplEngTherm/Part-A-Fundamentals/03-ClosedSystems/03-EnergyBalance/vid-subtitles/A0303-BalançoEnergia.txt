@@ -53,7 +53,7 @@ Aqui não se pede a definição de FORMAS de energia,\Nporém ENERGIA EM SI MESM
 Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
 e tente você mesmo dar resposta à pergunta.
 Pode pausar o vídeo agora...
-[ BEEPS ]
+[  INTERVALO PARA PAUSA ]
 Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
 Southern Methodist University,\Nminha Alma Mater,
 a seguinte definição:
@@ -85,6 +85,7 @@ Se a energia "E" representar o saldo em conta,
 temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
 mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
 durante o período de contabilidade,\Nque é análogo ao processo.
+[  INTERVALO PARA PAUSA ]
 Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
 Primeiramente temos a forma de processo,
 na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
@@ -113,7 +114,7 @@ Na qual todos os termos possuem unidades de kW/kg.
 O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
 Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 bem como das conversões entre elas.\NPode pausar o vídeo agora...
-[ BEEPS ]
+[  INTERVALO PARA PAUSA ]
 Estudamos agora os termos correspondentes a
 "E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
 Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
@@ -163,7 +164,7 @@ macroscópicas em relação às microscópicas.
 A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
 Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
 Se preferir, dê pausa ao vídeo\Npara revisar as equações.
-[ BEEPS ]
+[ INTERVALO PARA PAUSA ]
 Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
 para um sistema compressível simples.
 Tomando a equação do balanço\Npara um processo, mostrada,

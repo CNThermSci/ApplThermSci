@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 33
-Active Line: 54
+Scroll Position: 51
+Active Line: 62
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -83,14 +83,14 @@ Dialogue: 0,0:03:08.44,0:03:12.84,GreenBold,,0,0,0,,Aqui não se pede a definiç
 Dialogue: 0,0:03:12.92,0:03:16.89,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
 Dialogue: 0,0:03:16.96,0:03:18.84,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
 Dialogue: 0,0:03:18.97,0:03:20.14,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
-Dialogue: 0,0:03:32.79,0:03:37.07,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
-Dialogue: 0,0:03:37.09,0:03:39.32,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
-Dialogue: 0,0:03:39.44,0:03:40.46,GreenBold,,0,0,0,,a seguinte definição:
-Dialogue: 0,0:03:41.29,0:03:42.97,GreenBold,,0,0,0,,Energia é uma QUANTIDADE
-Dialogue: 0,0:03:43.10,0:03:44.80,GreenBold,,0,0,0,,que é CONSERVADA na natureza
-Dialogue: 0,0:03:44.92,0:03:48.40,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
-Dialogue: 0,0:03:48.44,0:03:51.64,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
-Dialogue: 0,0:03:51.72,0:03:53.93,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
+Dialogue: 0,0:03:32.63,0:03:36.91,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
+Dialogue: 0,0:03:36.93,0:03:39.16,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
+Dialogue: 0,0:03:39.28,0:03:40.30,GreenBold,,0,0,0,,a seguinte definição:
+Dialogue: 0,0:03:41.13,0:03:42.81,GreenBold,,0,0,0,,Energia é uma QUANTIDADE
+Dialogue: 0,0:03:42.94,0:03:44.64,GreenBold,,0,0,0,,que é CONSERVADA na natureza
+Dialogue: 0,0:03:44.84,0:03:48.32,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
+Dialogue: 0,0:03:48.36,0:03:51.56,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
+Dialogue: 0,0:03:51.64,0:03:53.85,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
 Dialogue: 0,0:03:55.24,0:03:58.73,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
 Dialogue: 0,0:03:58.80,0:04:02.83,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
 Dialogue: 0,0:04:02.92,0:04:06.28,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.

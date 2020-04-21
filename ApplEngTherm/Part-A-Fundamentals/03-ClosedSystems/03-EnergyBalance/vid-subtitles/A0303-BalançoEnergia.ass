@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 89
-Active Line: 101
+Active Line: 106
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -131,11 +131,11 @@ Dialogue: 0,0:06:11.46,0:06:13.03,GreenBold,,0,0,0,,pela massa "m" do sistema fe
 Dialogue: 0,0:06:13.84,0:06:17.22,GreenBold,,0,0,0,,chega-se à forma intensiva da equação\Ndo balanço de energia para um processo.
 Dialogue: 0,0:06:17.30,0:06:21.67,GreenBold,,0,0,0,,Os termos em letras minúsculas correspondem aos\Nmaiúsculos por unidade de massa do sistema fechado,
 Dialogue: 0,0:06:21.75,0:06:24.98,GreenBold,,0,0,0,,fazendo com que todos os termos\Ntenham unidades de kJ/kg.
-Dialogue: 0,0:06:25.58,0:06:29.05,GreenBold,,0,0,0,,Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
-Dialogue: 0,0:06:29.13,0:06:33.93,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
-Dialogue: 0,0:06:34.65,0:06:37.91,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
-Dialogue: 0,0:06:37.96,0:06:40.76,GreenBold,,0,0,0,,na qual todos os termos têm unidades de kJ/kg.
-Dialogue: 0,0:06:41.56,0:06:45.38,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
+Dialogue: 0,0:06:25.61,0:06:29.08,GreenBold,,0,0,0,,Tanto diferenciando a equação do balanço\Nem processo na forma intensiva,
+Dialogue: 0,0:06:29.16,0:06:33.96,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma diferencial\Nextensiva pela massa "m" do sistema fechado,
+Dialogue: 0,0:06:34.68,0:06:37.94,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma diferencial intensiva,
+Dialogue: 0,0:06:37.99,0:06:40.79,GreenBold,,0,0,0,,na qual todos os termos têm unidades de kJ/kg.
+Dialogue: 0,0:06:41.59,0:06:45.41,GreenBold,,0,0,0,,Tanto dividindo-se a equação do balanço\Nna forma diferencial intensiva por "dt",
 Dialogue: 0,0:06:45.45,0:06:49.90,GreenBold,,0,0,0,,quanto dividindo-se a equação na forma de taxa\Nextensiva pela massa "m" do sistema fechado,
 Dialogue: 0,0:06:50.70,0:06:54.07,GreenBold,,0,0,0,,chega-se à equação do balanço de energia\Nna forma de taxa intensiva,
 Dialogue: 0,0:06:54.15,0:06:56.97,GreenBold,,0,0,0,,Na qual todos os termos possuem unidades de kW/kg.

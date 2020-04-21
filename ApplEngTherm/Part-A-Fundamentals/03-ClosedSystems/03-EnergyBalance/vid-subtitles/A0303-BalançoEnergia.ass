@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 71
-Active Line: 85
+Active Line: 90
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -114,11 +114,11 @@ Dialogue: 0,0:05:03.15,0:05:06.09,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E
 Dialogue: 0,0:05:06.17,0:05:09.39,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",
 Dialogue: 0,0:05:09.50,0:05:12.83,GreenBold,,0,0,0,,mais os depósitos, "E_ent",\Nmenos as retiradas, "E_sai",
 Dialogue: 0,0:05:12.89,0:05:15.34,GreenBold,,0,0,0,,durante o período de contabilidade,\Nque é análogo ao processo.
-Dialogue: 0,0:05:27.72,0:05:32.23,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
-Dialogue: 0,0:05:32.33,0:05:34.04,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
-Dialogue: 0,0:05:34.12,0:05:37.45,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
-Dialogue: 0,0:05:38.12,0:05:39.78,GreenBold,,0,0,0,,a qual, ao ser diferenciada,
-Dialogue: 0,0:05:39.90,0:05:43.05,GreenBold,,0,0,0,,leva à forma diferencial do\Nbalanço de energia em sistema fechado.
+Dialogue: 0,0:05:27.76,0:05:32.27,GreenBold,,0,0,0,,Agora trataremos de diversas formas do balanço de\Nenergia, obtidas por operações matemáticas usuais:
+Dialogue: 0,0:05:32.37,0:05:34.08,GreenBold,,0,0,0,,Primeiramente temos a forma de processo,
+Dialogue: 0,0:05:34.16,0:05:37.49,GreenBold,,0,0,0,,na qual todos os termos possuem\Nunidades extensivas de energia: kJ.
+Dialogue: 0,0:05:38.16,0:05:39.82,GreenBold,,0,0,0,,a qual, ao ser diferenciada,
+Dialogue: 0,0:05:39.94,0:05:43.09,GreenBold,,0,0,0,,leva à forma diferencial do\Nbalanço de energia em sistema fechado.
 Dialogue: 0,0:05:43.13,0:05:46.09,GreenBold,,0,0,0,,Todos os termos da equação do balanço\Nnesta forma estão em kJ.
 Dialogue: 0,0:05:46.84,0:05:49.56,GreenBold,,0,0,0,,Dividindo a forma diferencial por\Numa diferencial de tempo, "dt",
 Dialogue: 0,0:05:49.61,0:05:53.22,GreenBold,,0,0,0,,que é equivalente à tomada da derivada temporal\Ndo balanço em processo, tem-se

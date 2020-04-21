@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 9
-Active Line: 32
+Scroll Position: 30
+Active Line: 36
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -61,10 +61,10 @@ Dialogue: 0,0:01:55.52,0:01:58.08,GreenBold,,0,0,0,,* Unificou as conservações
 Dialogue: 0,0:01:58.97,0:02:02.35,GreenBold,,0,0,0,,por meio da Equivalência entre massa e energia,\Nexpressa pela famosa equação
 Dialogue: 0,0:02:02.45,0:02:06.05,GreenBold,,0,0,0,,energia equivalente é igual a uma constante de\Nproporção, c², vezes a massa,
 Dialogue: 0,0:02:06.16,0:02:08.13,GreenBold,,0,0,0,,na qual "c" é a velocidade da luz no vácuo.
-Dialogue: 0,0:02:09.53,0:02:13.82,GreenBold,,0,0,0,,O artigo "Conservation of energy" da wikipedia\N(link na descrição) afirma que
-Dialogue: 0,0:02:13.90,0:02:17.69,GreenBold,,0,0,0,,"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
-Dialogue: 0,0:02:17.83,0:02:21.21,GreenBold,,0,0,0,,a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
-Dialogue: 0,0:02:22.02,0:02:27.29,GreenBold,,0,0,0,,Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
+Dialogue: 0,0:02:08.26,0:02:12.55,GreenBold,,0,0,0,,O artigo "Conservation of energy" da wikipedia\N(link na descrição) afirma que
+Dialogue: 0,0:02:12.63,0:02:16.42,GreenBold,,0,0,0,,"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
+Dialogue: 0,0:02:16.56,0:02:19.94,GreenBold,,0,0,0,,a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
+Dialogue: 0,0:02:20.75,0:02:26.02,GreenBold,,0,0,0,,Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
 Dialogue: 0,0:02:27.41,0:02:29.86,GreenBold,,0,0,0,,Tal conclusão com base em uma lei científica firme
 Dialogue: 0,0:02:29.92,0:02:32.17,GreenBold,,0,0,0,,oferece profundas consequências filosóficas
 Dialogue: 0,0:02:32.23,0:02:34.81,GreenBold,,0,0,0,,sobre a massa-energia atualmente em existência:

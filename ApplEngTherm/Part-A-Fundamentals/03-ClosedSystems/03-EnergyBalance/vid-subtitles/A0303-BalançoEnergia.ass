@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 180
-Active Line: 201
+Scroll Position: 213
+Active Line: 207
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -231,11 +231,11 @@ Dialogue: 0,0:12:48.78,0:12:53.23,GreenBold,,0,0,0,,que o lado direito da equaç
 Dialogue: 0,0:12:53.34,0:12:56.46,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
 Dialogue: 0,0:12:56.53,0:12:59.46,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
 Dialogue: 0,0:12:59.55,0:13:03.87,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:13:05.22,0:13:08.78,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
-Dialogue: 0,0:13:08.83,0:13:12.75,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:13:12.88,0:13:15.73,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
-Dialogue: 0,0:13:15.76,0:13:18.58,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
-Dialogue: 0,0:13:18.66,0:13:23.44,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
+Dialogue: 0,0:13:04.64,0:13:08.20,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
+Dialogue: 0,0:13:08.25,0:13:12.17,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:13:12.30,0:13:15.15,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
+Dialogue: 0,0:13:15.18,0:13:18.00,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
+Dialogue: 0,0:13:18.08,0:13:22.86,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
 Dialogue: 0,0:13:24.21,0:13:27.90,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
 Dialogue: 0,0:13:27.95,0:13:31.23,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
 Dialogue: 0,0:13:31.28,0:13:33.31,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.

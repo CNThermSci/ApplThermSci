@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 50
-Active Line: 54
+Scroll Position: 96
+Active Line: 123
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -145,13 +145,13 @@ Dialogue: 0,0:06:57.86,0:07:02.04,GreenBold,,0,0,0,,O quadro apresentado destaca
 Dialogue: 0,0:07:02.13,0:07:06.61,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 Dialogue: 0,0:07:06.68,0:07:09.57,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
 Dialogue: 0,0:07:10.03,0:07:21.42,GreenBold,,0,0,0,,[  INTERVALO PARA PAUSA ]
-Dialogue: 0,0:07:22.24,0:07:24.38,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
-Dialogue: 0,0:07:24.41,0:07:28.38,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
-Dialogue: 0,0:07:29.02,0:07:33.39,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
-Dialogue: 0,0:07:33.44,0:07:35.09,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
-Dialogue: 0,0:07:35.17,0:07:36.54,GreenBold,,0,0,0,,Assim, no balanço de energia:
-Dialogue: 0,0:07:36.62,0:07:40.66,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
-Dialogue: 0,0:07:40.66,0:07:42.88,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
+Dialogue: 0,0:07:22.01,0:07:24.15,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
+Dialogue: 0,0:07:24.18,0:07:28.15,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
+Dialogue: 0,0:07:28.79,0:07:33.16,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:
+Dialogue: 0,0:07:33.21,0:07:34.86,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
+Dialogue: 0,0:07:34.94,0:07:36.31,GreenBold,,0,0,0,,Assim, no balanço de energia:
+Dialogue: 0,0:07:36.39,0:07:40.43,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
+Dialogue: 0,0:07:40.43,0:07:42.65,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
 Dialogue: 0,0:07:42.96,0:07:46.14,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
 Dialogue: 0,0:07:46.80,0:07:50.54,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
 Dialogue: 0,0:07:50.61,0:07:52.53,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",

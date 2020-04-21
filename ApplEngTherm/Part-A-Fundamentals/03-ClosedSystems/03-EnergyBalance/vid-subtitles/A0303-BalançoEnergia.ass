@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 133
-Active Line: 160
+Scroll Position: 154
+Active Line: 164
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -189,11 +189,11 @@ Dialogue: 0,0:10:00.97,0:10:04.49,GreenBold,,0,0,0,,A diferença entre os slides
 Dialogue: 0,0:10:05.25,0:10:11.13,GreenBold,,0,0,0,,A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
 Dialogue: 0,0:10:11.20,0:10:16.81,GreenBold,,0,0,0,,a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ
 Dialogue: 0,0:10:16.89,0:10:19.55,GreenBold,,0,0,0,,(maiúsculo, estilizado), dado em kilômetros.
-Dialogue: 0,0:10:20.29,0:10:26.03,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
-Dialogue: 0,0:10:26.11,0:10:28.70,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
-Dialogue: 0,0:10:29.47,0:10:34.75,GreenBold,,0,0,0,,A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
-Dialogue: 0,0:10:34.82,0:10:39.36,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
-Dialogue: 0,0:10:39.42,0:10:42.19,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
+Dialogue: 0,0:10:19.58,0:10:25.32,GreenBold,,0,0,0,,Esta unidade, digamos, "termodinâmica" de altitude também\Né reveladora da relativa pequena magnitude das energias
+Dialogue: 0,0:10:25.40,0:10:27.99,GreenBold,,0,0,0,,macroscópicas em relação às microscópicas.
+Dialogue: 0,0:10:28.76,0:10:34.04,GreenBold,,0,0,0,,A equação da linha 6 é escrita em termos de uma\Naltitude "z" (minúsculo, estilizado), dado em metros.
+Dialogue: 0,0:10:34.11,0:10:38.65,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
+Dialogue: 0,0:10:38.71,0:10:41.48,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
 Dialogue: 0,0:10:42.50,0:10:45.39,GreenBold,,0,0,0,,[ BEEPS ]
 Dialogue: 0,0:10:47.46,0:10:51.44,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
 Dialogue: 0,0:10:51.47,0:10:53.10,GreenBold,,0,0,0,,para um sistema compressível simples.

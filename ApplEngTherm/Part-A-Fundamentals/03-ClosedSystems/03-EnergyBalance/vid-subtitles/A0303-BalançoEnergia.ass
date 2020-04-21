@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 51
-Active Line: 73
+Scroll Position: 53
+Active Line: 80
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -103,12 +103,12 @@ Dialogue: 0,0:04:22.82,0:04:26.73,GreenBold,,0,0,0,,que matematicamente se escre
 Dialogue: 0,0:04:26.73,0:04:31.35,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
 Dialogue: 0,0:04:31.43,0:04:34.93,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
 Dialogue: 0,0:04:34.98,0:04:41.56,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
-Dialogue: 0,0:04:43.00,0:04:46.73,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
-Dialogue: 0,0:04:46.81,0:04:49.72,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
-Dialogue: 0,0:04:49.80,0:04:54.17,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
-Dialogue: 0,0:04:54.27,0:04:56.60,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
-Dialogue: 0,0:04:56.72,0:04:59.72,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
-Dialogue: 0,0:04:59.81,0:05:01.55,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
+Dialogue: 0,0:04:42.37,0:04:46.10,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
+Dialogue: 0,0:04:46.18,0:04:49.09,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
+Dialogue: 0,0:04:49.17,0:04:53.54,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:
+Dialogue: 0,0:04:53.64,0:04:55.97,GreenBold,,0,0,0,,E_2 = E_1 + E_ent - E_sai.
+Dialogue: 0,0:04:56.09,0:04:59.09,GreenBold,,0,0,0,,Esta última equação é exatamente\Nanáloga a balanços financeiros,
+Dialogue: 0,0:04:59.18,0:05:00.92,GreenBold,,0,0,0,,(evolução do saldo em uma conta sem juros):
 Dialogue: 0,0:05:01.60,0:05:03.63,GreenBold,,0,0,0,,Se a energia "E" representar o saldo em conta,
 Dialogue: 0,0:05:03.76,0:05:06.70,GreenBold,,0,0,0,,"E_ent" os depósitos, e\N"E_sai" as retiradas,
 Dialogue: 0,0:05:06.78,0:05:10.00,GreenBold,,0,0,0,,temos que o saldo final, "E_2",\Né o saldo inicial, "E_1",

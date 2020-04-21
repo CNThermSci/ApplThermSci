@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 133
-Active Line: 151
+Active Line: 156
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -181,10 +181,10 @@ Dialogue: 0,0:09:20.95,0:09:26.86,GreenBold,,0,0,0,,indicando que um sistema a e
 Dialogue: 0,0:09:27.64,0:09:32.39,GreenBold,,0,0,0,,Por outro lado, a equação para a energia cinética\Ndo sistema com velocidade "v" (minúsculo, estilizado)
 Dialogue: 0,0:09:32.49,0:09:36.97,GreenBold,,0,0,0,,em m/s deve ser ajustada como na linha 4,\Nna qual o denominador é 2000,
 Dialogue: 0,0:09:37.05,0:09:44.22,GreenBold,,0,0,0,,uma vez que m/s = √(J/kg), e o valor numérico de E_c\Né explicitamente convertido em kJ pelo fator de 1000.
-Dialogue: 0,0:09:45.01,0:09:49.42,GreenBold,,0,0,0,,O livro-texto adotado para a disciplina, fornece ao\Nmesmo tempo a equação com denominador 2 (dois)
-Dialogue: 0,0:09:49.50,0:09:54.80,GreenBold,,0,0,0,,e velocidade em m/s; porém hora fazendo conversão\Nde unidades nos exercícios resolvidos,
-Dialogue: 0,0:09:54.88,0:09:56.83,GreenBold,,0,0,0,,o que invariavelmente leva ao denominador 2000,
-Dialogue: 0,0:09:56.91,0:10:01.60,GreenBold,,0,0,0,,e hora deixando e_c em J/kg, ao invés de kJ/kg.
+Dialogue: 0,0:09:44.30,0:09:48.71,GreenBold,,0,0,0,,O livro-texto adotado para a disciplina, fornece ao\Nmesmo tempo a equação com denominador 2 (dois)
+Dialogue: 0,0:09:48.79,0:09:54.09,GreenBold,,0,0,0,,e velocidade em m/s; porém hora fazendo conversão\Nde unidades nos exercícios resolvidos,
+Dialogue: 0,0:09:54.17,0:09:56.12,GreenBold,,0,0,0,,o que invariavelmente leva ao denominador 2000,
+Dialogue: 0,0:09:56.20,0:10:00.89,GreenBold,,0,0,0,,e hora deixando e_c em J/kg, ao invés de kJ/kg.
 Dialogue: 0,0:10:01.66,0:10:05.18,GreenBold,,0,0,0,,A diferença entre os slides deste vídeo e o\Nlivro-texto é meramente metodológica.
 Dialogue: 0,0:10:05.94,0:10:11.82,GreenBold,,0,0,0,,A energia potencial gravitacional E_p é dada como o\Nproduto da massa "m" do sistema e e_p (minúsculo),
 Dialogue: 0,0:10:11.89,0:10:17.50,GreenBold,,0,0,0,,a energia potencial gravitacional específica do\Nsistema, dada em kJ/kg, a qual é igual a gZ

@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 165
-Active Line: 188
+Scroll Position: 180
+Active Line: 194
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -218,11 +218,11 @@ Dialogue: 0,0:11:57.32,0:12:00.76,GreenBold,,0,0,0,,é diferente da convenção 
 Dialogue: 0,0:12:00.87,0:12:06.28,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
 Dialogue: 0,0:12:06.36,0:12:09.70,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
 Dialogue: 0,0:12:09.81,0:12:11.51,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
-Dialogue: 0,0:12:12.75,0:12:15.07,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
-Dialogue: 0,0:12:15.14,0:12:18.30,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
-Dialogue: 0,0:12:18.34,0:12:23.12,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
-Dialogue: 0,0:12:23.25,0:12:29.50,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
-Dialogue: 0,0:12:29.52,0:12:32.29,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
+Dialogue: 0,0:12:12.20,0:12:14.52,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
+Dialogue: 0,0:12:14.59,0:12:17.75,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
+Dialogue: 0,0:12:17.79,0:12:22.57,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
+Dialogue: 0,0:12:22.70,0:12:28.95,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
+Dialogue: 0,0:12:28.97,0:12:31.74,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
 Dialogue: 0,0:12:32.43,0:12:38.11,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
 Dialogue: 0,0:12:38.21,0:12:42.24,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
 Dialogue: 0,0:12:42.29,0:12:44.53,GreenBold,,0,0,0,,compressível simples fechado, as quais

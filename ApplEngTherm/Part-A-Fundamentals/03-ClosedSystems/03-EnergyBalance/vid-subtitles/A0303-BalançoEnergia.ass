@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 154
-Active Line: 164
+Scroll Position: 157
+Active Line: 165
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -195,67 +195,67 @@ Dialogue: 0,0:10:28.76,0:10:34.04,GreenBold,,0,0,0,,A equação da linha 6 é es
 Dialogue: 0,0:10:34.11,0:10:38.65,GreenBold,,0,0,0,,Como ocorrido na linha 4, um fator de 1/1000 é\Nintroduzido, para a consistência de unidades.
 Dialogue: 0,0:10:38.71,0:10:41.48,GreenBold,,0,0,0,,Se preferir, dê pausa ao vídeo\Npara revisar as equações.
 Dialogue: 0,0:10:42.50,0:10:45.39,GreenBold,,0,0,0,,[ BEEPS ]
-Dialogue: 0,0:10:47.46,0:10:51.44,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
-Dialogue: 0,0:10:51.47,0:10:53.10,GreenBold,,0,0,0,,para um sistema compressível simples.
-Dialogue: 0,0:10:53.14,0:10:55.90,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
-Dialogue: 0,0:10:56.62,0:11:00.69,GreenBold,,0,0,0,,expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
-Dialogue: 0,0:11:00.70,0:11:02.61,GreenBold,,0,0,0,,correspondentes interações de calor e trabalho,
-Dialogue: 0,0:11:02.65,0:11:03.87,GreenBold,,0,0,0,,no lado esquerdo da equação,
-Dialogue: 0,0:11:03.92,0:11:08.21,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
-Dialogue: 0,0:11:08.30,0:11:12.59,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
-Dialogue: 0,0:11:13.33,0:11:17.31,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
-Dialogue: 0,0:11:17.38,0:11:21.23,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
-Dialogue: 0,0:11:21.28,0:11:24.80,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
-Dialogue: 0,0:11:24.86,0:11:28.78,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
-Dialogue: 0,0:11:28.83,0:11:30.02,GreenBold,,0,0,0,,no lado direito da equação.
-Dialogue: 0,0:11:30.10,0:11:35.31,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
-Dialogue: 0,0:11:35.34,0:11:37.78,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
-Dialogue: 0,0:11:37.86,0:11:40.83,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
-Dialogue: 0,0:11:40.88,0:11:43.79,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
-Dialogue: 0,0:11:43.82,0:11:46.75,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
-Dialogue: 0,0:11:46.86,0:11:50.77,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
-Dialogue: 0,0:11:50.83,0:11:54.27,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
-Dialogue: 0,0:11:54.35,0:11:59.76,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
-Dialogue: 0,0:11:59.84,0:12:03.18,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
-Dialogue: 0,0:12:03.29,0:12:04.99,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
-Dialogue: 0,0:12:05.71,0:12:08.03,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
-Dialogue: 0,0:12:08.10,0:12:11.26,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
-Dialogue: 0,0:12:11.30,0:12:16.08,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
-Dialogue: 0,0:12:16.21,0:12:22.46,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
-Dialogue: 0,0:12:22.48,0:12:25.25,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
-Dialogue: 0,0:12:25.39,0:12:31.07,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
-Dialogue: 0,0:12:31.17,0:12:35.20,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
-Dialogue: 0,0:12:35.25,0:12:37.49,GreenBold,,0,0,0,,compressível simples fechado, as quais
-Dialogue: 0,0:12:38.22,0:12:42.24,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
-Dialogue: 0,0:12:42.30,0:12:46.75,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
-Dialogue: 0,0:12:46.86,0:12:49.98,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
-Dialogue: 0,0:12:50.05,0:12:52.98,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
-Dialogue: 0,0:12:53.07,0:12:57.39,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:12:58.18,0:13:01.74,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
-Dialogue: 0,0:13:01.79,0:13:05.71,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
-Dialogue: 0,0:13:05.84,0:13:08.69,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
-Dialogue: 0,0:13:08.72,0:13:11.54,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
-Dialogue: 0,0:13:11.62,0:13:16.40,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
-Dialogue: 0,0:13:17.17,0:13:20.86,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
-Dialogue: 0,0:13:20.91,0:13:24.19,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
-Dialogue: 0,0:13:24.24,0:13:26.27,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
-Dialogue: 0,0:13:26.35,0:13:31.82,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
-Dialogue: 0,0:13:31.92,0:13:36.27,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
-Dialogue: 0,0:13:37.04,0:13:41.33,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
-Dialogue: 0,0:13:42.11,0:13:45.42,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
-Dialogue: 0,0:13:45.50,0:13:51.01,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
-Dialogue: 0,0:13:51.79,0:13:56.78,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
-Dialogue: 0,0:13:57.60,0:14:03.22,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
-Dialogue: 0,0:14:03.30,0:14:07.18,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
-Dialogue: 0,0:14:08.02,0:14:11.70,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
-Dialogue: 0,0:14:11.76,0:14:15.50,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
-Dialogue: 0,0:14:15.63,0:14:18.14,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
-Dialogue: 0,0:14:18.22,0:14:21.22,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
-Dialogue: 0,0:14:21.36,0:14:25.34,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
-Dialogue: 0,0:14:25.39,0:14:28.14,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
-Dialogue: 0,0:14:28.91,0:14:34.19,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
-Dialogue: 0,0:14:35.01,0:14:39.14,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
-Dialogue: 0,0:14:39.89,0:14:43.52,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
-Dialogue: 0,0:14:43.60,0:14:44.96,GreenBold,,0,0,0,,Até a próxima oportunidade!
-Dialogue: 0,0:14:45.30,0:14:51.07,GreenBold,,0,0,0,,[ Música de Encerramento ]
-Dialogue: 0,0:14:51.07,0:14:56.07,GreenBold,,0,0,0,,
+Dialogue: 0,0:10:54.50,0:10:58.48,GreenBold,,0,0,0,,Estamos em posição de fazer as substituições\Nnecessárias para obter o balanço de energia
+Dialogue: 0,0:10:58.51,0:11:00.14,GreenBold,,0,0,0,,para um sistema compressível simples.
+Dialogue: 0,0:11:00.18,0:11:02.94,GreenBold,,0,0,0,,Tomando a equação do balanço\Npara um processo, mostrada,
+Dialogue: 0,0:11:03.66,0:11:07.73,GreenBold,,0,0,0,,expandimos todos os termos de\Ninteração energética, E_ent e E_sai nas
+Dialogue: 0,0:11:07.74,0:11:09.65,GreenBold,,0,0,0,,correspondentes interações de calor e trabalho,
+Dialogue: 0,0:11:09.69,0:11:10.91,GreenBold,,0,0,0,,no lado esquerdo da equação,
+Dialogue: 0,0:11:10.96,0:11:15.25,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
+Dialogue: 0,0:11:15.34,0:11:19.63,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
+Dialogue: 0,0:11:20.37,0:11:24.35,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
+Dialogue: 0,0:11:24.42,0:11:28.27,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
+Dialogue: 0,0:11:28.32,0:11:31.84,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
+Dialogue: 0,0:11:31.90,0:11:35.82,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
+Dialogue: 0,0:11:35.87,0:11:37.06,GreenBold,,0,0,0,,no lado direito da equação.
+Dialogue: 0,0:11:37.14,0:11:42.35,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
+Dialogue: 0,0:11:42.38,0:11:44.82,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
+Dialogue: 0,0:11:44.90,0:11:47.87,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
+Dialogue: 0,0:11:47.92,0:11:50.83,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
+Dialogue: 0,0:11:50.86,0:11:53.79,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
+Dialogue: 0,0:11:53.90,0:11:57.81,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
+Dialogue: 0,0:11:57.87,0:12:01.31,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
+Dialogue: 0,0:12:01.39,0:12:06.80,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
+Dialogue: 0,0:12:06.88,0:12:10.22,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
+Dialogue: 0,0:12:10.33,0:12:12.03,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
+Dialogue: 0,0:12:12.75,0:12:15.07,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
+Dialogue: 0,0:12:15.14,0:12:18.30,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
+Dialogue: 0,0:12:18.34,0:12:23.12,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)
+Dialogue: 0,0:12:23.25,0:12:29.50,GreenBold,,0,0,0,,como o termo de calor da equação anterior,\NQ_liq,ent = Q_ent - Q_sai, e
+Dialogue: 0,0:12:29.52,0:12:32.29,GreenBold,,0,0,0,,o trabalho líquido que sai (fornecido pelo sistema)
+Dialogue: 0,0:12:32.43,0:12:38.11,GreenBold,,0,0,0,,como o negativo do termo de trabalho:\NW_liq,sai = W_sai - W_ent.
+Dialogue: 0,0:12:38.21,0:12:42.24,GreenBold,,0,0,0,,No lado direito da equação, explicitamos as\Nvariações das formas de energia do sistema
+Dialogue: 0,0:12:42.29,0:12:44.53,GreenBold,,0,0,0,,compressível simples fechado, as quais
+Dialogue: 0,0:12:45.26,0:12:49.28,GreenBold,,0,0,0,,podem ser escritas em termos das energias\Nespecíficas correspondentes, possibilitando
+Dialogue: 0,0:12:49.34,0:12:53.79,GreenBold,,0,0,0,,que o lado direito da equação seja escrito apenas em\Ntermos de funções de ESTADO do sistema,
+Dialogue: 0,0:12:53.90,0:12:57.02,GreenBold,,0,0,0,,as quais são ou tabeláveis ou equacionáveis, e ainda
+Dialogue: 0,0:12:57.09,0:13:00.02,GreenBold,,0,0,0,,colocar em evidência a massa "m"\Ndo sistema, como mostrado,
+Dialogue: 0,0:13:00.11,0:13:04.43,GreenBold,,0,0,0,,nesta forma que EXPLICITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:13:05.22,0:13:08.78,GreenBold,,0,0,0,,sendo que em muitos livros-texto,\Na equação do balanço é apresentada
+Dialogue: 0,0:13:08.83,0:13:12.75,GreenBold,,0,0,0,,numa forma que deixa IMPLÍCITA a convenção de\Nsinais para os termos do lado esquerdo,
+Dialogue: 0,0:13:12.88,0:13:15.73,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
+Dialogue: 0,0:13:15.76,0:13:18.58,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
+Dialogue: 0,0:13:18.66,0:13:23.44,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
+Dialogue: 0,0:13:24.21,0:13:27.90,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
+Dialogue: 0,0:13:27.95,0:13:31.23,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
+Dialogue: 0,0:13:31.28,0:13:33.31,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
+Dialogue: 0,0:13:33.39,0:13:38.86,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
+Dialogue: 0,0:13:38.96,0:13:43.31,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
+Dialogue: 0,0:13:44.08,0:13:48.37,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
+Dialogue: 0,0:13:49.15,0:13:52.46,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
+Dialogue: 0,0:13:52.54,0:13:58.05,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
+Dialogue: 0,0:13:58.83,0:14:03.82,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
+Dialogue: 0,0:14:04.64,0:14:10.26,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
+Dialogue: 0,0:14:10.34,0:14:14.22,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
+Dialogue: 0,0:14:15.06,0:14:18.74,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+Dialogue: 0,0:14:18.80,0:14:22.54,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Dialogue: 0,0:14:22.67,0:14:25.18,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
+Dialogue: 0,0:14:25.26,0:14:28.26,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
+Dialogue: 0,0:14:28.40,0:14:32.38,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
+Dialogue: 0,0:14:32.43,0:14:35.18,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
+Dialogue: 0,0:14:35.95,0:14:41.23,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
+Dialogue: 0,0:14:42.05,0:14:46.18,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
+Dialogue: 0,0:14:46.93,0:14:50.56,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
+Dialogue: 0,0:14:50.64,0:14:52.00,GreenBold,,0,0,0,,Até a próxima oportunidade!
+Dialogue: 0,0:14:52.34,0:14:58.11,GreenBold,,0,0,0,,[ Música de Encerramento ]
+Dialogue: 0,0:14:58.11,0:15:03.11,GreenBold,,0,0,0,,

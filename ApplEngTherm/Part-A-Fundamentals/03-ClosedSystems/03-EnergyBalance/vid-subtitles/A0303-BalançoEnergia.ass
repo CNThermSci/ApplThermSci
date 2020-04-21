@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 120
-Active Line: 137
+Active Line: 142
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -166,11 +166,11 @@ Dialogue: 0,0:08:18.56,0:08:23.49,GreenBold,,0,0,0,,A propriedade termodinâmica
 Dialogue: 0,0:08:23.54,0:08:25.98,GreenBold,,0,0,0,,novamente, na ausência de reações\Nquímicas e nucleares.
 Dialogue: 0,0:08:26.05,0:08:29.44,GreenBold,,0,0,0,,(A retirada de tais hipóteses implica\Nem termos adicionais em "E_micro").
 Dialogue: 0,0:08:29.54,0:08:33.54,GreenBold,,0,0,0,,Em Termodinâmica de engenharia, a unidade usual de\Nenergia é o kJ (kilo-Joule), como mostrado.
-Dialogue: 0,0:08:34.99,0:08:39.23,GreenBold,,0,0,0,,As energias cinética e potencial gravitacional\Ncompõem o inventório de energias macroscópicas
-Dialogue: 0,0:08:39.23,0:08:41.87,GreenBold,,0,0,0,,do sistema fechado, as quais também são dadas em kJ.
-Dialogue: 0,0:08:42.61,0:08:45.44,GreenBold,,0,0,0,,A energia cinética E_c extensiva (com "E" maiúsculo)
-Dialogue: 0,0:08:45.50,0:08:50.00,GreenBold,,0,0,0,,é igual à massa "m" do sistema vezes a energia\Ncinética por unidade de massa
-Dialogue: 0,0:08:50.10,0:08:52.64,GreenBold,,0,0,0,,específica do sistema, e_c, (com "e" minúsculo).
+Dialogue: 0,0:08:34.30,0:08:38.54,GreenBold,,0,0,0,,As energias cinética e potencial gravitacional\Ncompõem o inventório de energias macroscópicas
+Dialogue: 0,0:08:38.54,0:08:41.18,GreenBold,,0,0,0,,do sistema fechado, as quais também são dadas em kJ.
+Dialogue: 0,0:08:41.92,0:08:44.75,GreenBold,,0,0,0,,A energia cinética E_c extensiva (com "E" maiúsculo)
+Dialogue: 0,0:08:44.81,0:08:49.31,GreenBold,,0,0,0,,é igual à massa "m" do sistema vezes a energia\Ncinética por unidade de massa
+Dialogue: 0,0:08:49.41,0:08:51.95,GreenBold,,0,0,0,,específica do sistema, e_c, (com "e" minúsculo).
 Dialogue: 0,0:08:52.67,0:08:58.30,GreenBold,,0,0,0,,Este produto também é igual a mV²/2 (com V\Nestilizado representando a velocidade do sistema)
 Dialogue: 0,0:08:58.38,0:09:00.32,GreenBold,,0,0,0,,e denominador 2 (dois) adimensional.
 Dialogue: 0,0:09:00.42,0:09:07.26,GreenBold,,0,0,0,,Uma vez que as unidades de E_c são dadas em kJ,\Nas unidades de "V" (estilizado) são de √(kJ/kg).

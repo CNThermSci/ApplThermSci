@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 213
-Active Line: 207
+Scroll Position: 204
+Active Line: 213
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -236,26 +236,26 @@ Dialogue: 0,0:13:08.25,0:13:12.17,GreenBold,,0,0,0,,numa forma que deixa IMPLÍC
 Dialogue: 0,0:13:12.30,0:13:15.15,GreenBold,,0,0,0,,como mostrado, sem subscritos em "Q" e em "W",
 Dialogue: 0,0:13:15.18,0:13:18.00,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
 Dialogue: 0,0:13:18.08,0:13:22.86,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
-Dialogue: 0,0:13:24.21,0:13:27.90,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
-Dialogue: 0,0:13:27.95,0:13:31.23,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
-Dialogue: 0,0:13:31.28,0:13:33.31,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
-Dialogue: 0,0:13:33.39,0:13:38.86,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
-Dialogue: 0,0:13:38.96,0:13:43.31,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
-Dialogue: 0,0:13:44.08,0:13:48.37,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
-Dialogue: 0,0:13:49.15,0:13:52.46,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
-Dialogue: 0,0:13:52.54,0:13:58.05,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
-Dialogue: 0,0:13:58.83,0:14:03.82,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
-Dialogue: 0,0:14:04.64,0:14:10.26,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
-Dialogue: 0,0:14:10.34,0:14:14.22,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
-Dialogue: 0,0:14:15.06,0:14:18.74,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
-Dialogue: 0,0:14:18.80,0:14:22.54,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
-Dialogue: 0,0:14:22.67,0:14:25.18,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
-Dialogue: 0,0:14:25.26,0:14:28.26,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
-Dialogue: 0,0:14:28.40,0:14:32.38,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
-Dialogue: 0,0:14:32.43,0:14:35.18,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
-Dialogue: 0,0:14:35.95,0:14:41.23,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
-Dialogue: 0,0:14:42.05,0:14:46.18,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
-Dialogue: 0,0:14:46.93,0:14:50.56,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
-Dialogue: 0,0:14:50.64,0:14:52.00,GreenBold,,0,0,0,,Até a próxima oportunidade!
-Dialogue: 0,0:14:52.34,0:14:58.11,GreenBold,,0,0,0,,[ Música de Encerramento ]
-Dialogue: 0,0:14:58.11,0:15:03.11,GreenBold,,0,0,0,,
+Dialogue: 0,0:13:35.33,0:13:39.02,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
+Dialogue: 0,0:13:39.07,0:13:42.35,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
+Dialogue: 0,0:13:42.44,0:13:44.47,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
+Dialogue: 0,0:13:44.55,0:13:50.02,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
+Dialogue: 0,0:13:50.12,0:13:54.47,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
+Dialogue: 0,0:13:55.24,0:13:59.53,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
+Dialogue: 0,0:14:00.27,0:14:03.58,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
+Dialogue: 0,0:14:03.66,0:14:09.17,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
+Dialogue: 0,0:14:09.95,0:14:14.94,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
+Dialogue: 0,0:14:15.76,0:14:21.38,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
+Dialogue: 0,0:14:21.46,0:14:25.34,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
+Dialogue: 0,0:14:26.18,0:14:29.86,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+Dialogue: 0,0:14:29.92,0:14:33.66,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Dialogue: 0,0:14:33.79,0:14:36.30,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
+Dialogue: 0,0:14:36.38,0:14:39.38,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
+Dialogue: 0,0:14:39.52,0:14:43.50,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,
+Dialogue: 0,0:14:43.55,0:14:46.30,GreenBold,,0,0,0,,e na consolidação das habilidades\Nobjetivadas pela disciplina.
+Dialogue: 0,0:14:47.07,0:14:52.35,GreenBold,,0,0,0,,Dentre os tópicos de leitura da disciplina,\Nseparam-se para este assunto as Seções 2-6 e 4-2.
+Dialogue: 0,0:14:53.17,0:14:57.30,GreenBold,,0,0,0,,Deixo aqui uma vista do vale de Lauterbrunnen por\NChristopher Moore (link na descrição).
+Dialogue: 0,0:14:58.05,0:15:01.68,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
+Dialogue: 0,0:15:01.76,0:15:03.12,GreenBold,,0,0,0,,Até a próxima oportunidade!
+Dialogue: 0,0:15:03.46,0:15:09.23,GreenBold,,0,0,0,,[ Música de Encerramento ]
+Dialogue: 0,0:15:09.23,0:15:14.23,GreenBold,,0,0,0,,

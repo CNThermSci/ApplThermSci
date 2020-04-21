@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 77
-Active Line: 85
+Scroll Position: 50
+Active Line: 54
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -83,6 +83,7 @@ Dialogue: 0,0:03:08.44,0:03:12.84,GreenBold,,0,0,0,,Aqui não se pede a definiç
 Dialogue: 0,0:03:12.92,0:03:16.89,GreenBold,,0,0,0,,Para apreciar a profundidade desta questão,\Nao final desta sentença, pause o vídeo,
 Dialogue: 0,0:03:16.96,0:03:18.84,GreenBold,,0,0,0,,e tente você mesmo dar resposta à pergunta.
 Dialogue: 0,0:03:18.97,0:03:20.14,GreenBold,,0,0,0,,Pode pausar o vídeo agora...
+Dialogue: 0,0:03:20.60,0:03:31.96,GreenBold,,0,0,0,,[  INTERVALO PARA PAUSA ]
 Dialogue: 0,0:03:32.63,0:03:36.91,GreenBold,,0,0,0,,Em comunicação pessoal, recebi do\NDr. Jack P. Holman, professor emérito da SMU
 Dialogue: 0,0:03:36.93,0:03:39.16,GreenBold,,0,0,0,,Southern Methodist University,\Nminha Alma Mater,
 Dialogue: 0,0:03:39.28,0:03:40.30,GreenBold,,0,0,0,,a seguinte definição:

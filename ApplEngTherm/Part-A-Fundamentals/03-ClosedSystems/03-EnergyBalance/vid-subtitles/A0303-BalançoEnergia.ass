@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 96
-Active Line: 123
+Scroll Position: 102
+Active Line: 124
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -152,10 +152,10 @@ Dialogue: 0,0:07:33.21,0:07:34.86,GreenBold,,0,0,0,,(1) calor e de (2) trabalho.
 Dialogue: 0,0:07:34.94,0:07:36.31,GreenBold,,0,0,0,,Assim, no balanço de energia:
 Dialogue: 0,0:07:36.39,0:07:40.43,GreenBold,,0,0,0,,A interação de energia que entra no\Nsistema fechado em um processo, "E_ent", é
 Dialogue: 0,0:07:40.43,0:07:42.65,GreenBold,,0,0,0,,o calor que entra no sistema, "Q_ent",
-Dialogue: 0,0:07:42.96,0:07:46.14,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
-Dialogue: 0,0:07:46.80,0:07:50.54,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
-Dialogue: 0,0:07:50.61,0:07:52.53,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",
-Dialogue: 0,0:07:52.59,0:07:54.91,GreenBold,,0,0,0,,mais o trabalho que sai do sistema, "W_sai".
+Dialogue: 0,0:07:42.73,0:07:45.91,GreenBold,,0,0,0,,mais o trabalho que entra no sistema, "W_ent", e
+Dialogue: 0,0:07:46.10,0:07:49.84,GreenBold,,0,0,0,,a interação de energia que sai do\Nsistema fechado em um processo, "E_sai", é
+Dialogue: 0,0:07:49.91,0:07:51.83,GreenBold,,0,0,0,,o calor que sai do sistema, "Q_sai",
+Dialogue: 0,0:07:51.89,0:07:54.21,GreenBold,,0,0,0,,mais o trabalho que sai do sistema, "W_sai".
 Dialogue: 0,0:07:55.01,0:08:00.02,GreenBold,,0,0,0,,Perceba que no balanço, a direção das interações\Nfica explícita, pelos subscritos "ent" e "sai".
 Dialogue: 0,0:08:00.78,0:08:05.92,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a "E_sist"\Nnas equações de balanço de energia em sistemas fechados.
 Dialogue: 0,0:08:05.97,0:08:09.57,GreenBold,,0,0,0,,Em sistemas clássicos, ou seja, da física que\Npré-datava as relatividades de Einstein,

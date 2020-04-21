@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 104
-Active Line: 114
+Active Line: 113
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -142,7 +142,7 @@ Dialogue: 0,0:06:54.18,0:06:57.00,GreenBold,,0,0,0,,Na qual todos os termos poss
 Dialogue: 0,0:06:57.86,0:07:02.04,GreenBold,,0,0,0,,O quadro apresentado destaca todas as formas\Ntrabalhadas de balanço de energia em sistema fechado,
 Dialogue: 0,0:07:02.13,0:07:06.61,GreenBold,,0,0,0,,Sugere-se que se pause o vídeo para que,\Npor inspeção, se ganhe familiaridade com as mesmas,
 Dialogue: 0,0:07:06.68,0:07:09.57,GreenBold,,0,0,0,,bem como das conversões entre elas.\NPode pausar o vídeo agora...
-Dialogue: 0,0:07:09.86,0:07:12.62,GreenBold,,0,0,0,,[ BEEPS ]
+Dialogue: 0,0:07:10.03,0:07:21.42,GreenBold,,0,0,0,,[  INTERVALO PARA PAUSA ]
 Dialogue: 0,0:07:22.24,0:07:24.38,GreenBold,,0,0,0,,Estudamos agora os termos correspondentes a
 Dialogue: 0,0:07:24.41,0:07:28.38,GreenBold,,0,0,0,,"E_ent" e "E_sai" nas equações de\Nbalanço de energia em sistemas fechados.
 Dialogue: 0,0:07:29.02,0:07:33.39,GreenBold,,0,0,0,,Em sistemas compressíveis simples, "E_ent"\Ne "E_sai" podem apenas ser nas formas de:

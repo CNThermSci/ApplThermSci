@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 30
-Active Line: 36
+Active Line: 46
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -65,17 +65,17 @@ Dialogue: 0,0:02:08.26,0:02:12.55,GreenBold,,0,0,0,,O artigo "Conservation of en
 Dialogue: 0,0:02:12.63,0:02:16.42,GreenBold,,0,0,0,,"science now takes the view that mass–energy as a\Nwhole is conserved", ou seja:
 Dialogue: 0,0:02:16.56,0:02:19.94,GreenBold,,0,0,0,,a ciência agora adota a visão de que massa-energia,\Ncomo um todo, é conservada.
 Dialogue: 0,0:02:20.75,0:02:26.02,GreenBold,,0,0,0,,Assim, a quantidade Etot = c²m + Eoutras do universo\Né conservada.
-Dialogue: 0,0:02:27.41,0:02:29.86,GreenBold,,0,0,0,,Tal conclusão com base em uma lei científica firme
-Dialogue: 0,0:02:29.92,0:02:32.17,GreenBold,,0,0,0,,oferece profundas consequências filosóficas
-Dialogue: 0,0:02:32.23,0:02:34.81,GreenBold,,0,0,0,,sobre a massa-energia atualmente em existência:
-Dialogue: 0,0:02:34.93,0:02:36.85,GreenBold,,0,0,0,,(i) ou ela sempre existiu; ou
-Dialogue: 0,0:02:36.89,0:02:39.05,GreenBold,,0,0,0,,(ii) ela veio a ser por agência externa;
-Dialogue: 0,0:02:39.07,0:02:40.96,GreenBold,,0,0,0,,(a saber, externa ao universo físico).
-Dialogue: 0,0:02:41.12,0:02:45.15,GreenBold,,0,0,0,,A segunda lei da Termodinâmica equipar-nos-á\Nmelhor na abordagem de tais questões,
-Dialogue: 0,0:02:45.18,0:02:49.00,GreenBold,,0,0,0,,eliminado a primeira possibilidade enunciada,\Nporém isso é tópico para outro vídeo.
-Dialogue: 0,0:02:49.77,0:02:54.29,GreenBold,,0,0,0,,A primeira lei é central em Termodinâmica.\NEla é utilizada como princípio em várias deduções;
-Dialogue: 0,0:02:55.08,0:02:57.98,GreenBold,,0,0,0,,como também é instrumental na\Ndefinição de certas propriedades,
-Dialogue: 0,0:02:58.69,0:03:01.01,GreenBold,,0,0,0,,assim como em cálculos de processos energéticos,
+Dialogue: 0,0:02:26.13,0:02:28.58,GreenBold,,0,0,0,,Tal conclusão com base em uma lei científica firme
+Dialogue: 0,0:02:28.65,0:02:30.90,GreenBold,,0,0,0,,oferece profundas consequências filosóficas
+Dialogue: 0,0:02:30.96,0:02:33.54,GreenBold,,0,0,0,,sobre a massa-energia atualmente em existência:
+Dialogue: 0,0:02:33.66,0:02:35.58,GreenBold,,0,0,0,,(i) ou ela sempre existiu; ou
+Dialogue: 0,0:02:35.62,0:02:37.78,GreenBold,,0,0,0,,(ii) ela veio a ser por agência externa;
+Dialogue: 0,0:02:37.80,0:02:39.69,GreenBold,,0,0,0,,(a saber, externa ao universo físico).
+Dialogue: 0,0:02:39.85,0:02:43.88,GreenBold,,0,0,0,,A segunda lei da Termodinâmica equipar-nos-á\Nmelhor na abordagem de tais questões,
+Dialogue: 0,0:02:43.88,0:02:47.70,GreenBold,,0,0,0,,eliminado a primeira possibilidade enunciada,\Nporém isso é tópico para outro vídeo.
+Dialogue: 0,0:02:48.47,0:02:52.99,GreenBold,,0,0,0,,A primeira lei é central em Termodinâmica.\NEla é utilizada como princípio em várias deduções;
+Dialogue: 0,0:02:53.78,0:02:56.68,GreenBold,,0,0,0,,como também é instrumental na\Ndefinição de certas propriedades,
+Dialogue: 0,0:02:57.39,0:02:59.71,GreenBold,,0,0,0,,assim como em cálculos de processos energéticos,
 Dialogue: 0,0:03:01.00,0:03:04.46,GreenBold,,0,0,0,,que talvez seja a aplicação mais frequente do\Ndia-a-dia do engenheiro termodinâmico.
 Dialogue: 0,0:03:05.32,0:03:07.71,GreenBold,,0,0,0,,O contexto implora que a seguinte\Npergunta seja feita:
 Dialogue: 0,0:03:07.80,0:03:09.62,GreenBold,,0,0,0,,"Afinal, o que É energia?"

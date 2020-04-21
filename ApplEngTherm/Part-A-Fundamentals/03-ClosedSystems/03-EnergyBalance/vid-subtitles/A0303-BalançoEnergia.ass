@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 157
-Active Line: 174
+Active Line: 179
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -203,12 +203,12 @@ Dialogue: 0,0:11:07.21,0:11:09.12,GreenBold,,0,0,0,,correspondentes interações
 Dialogue: 0,0:11:09.16,0:11:10.38,GreenBold,,0,0,0,,no lado esquerdo da equação,
 Dialogue: 0,0:11:10.43,0:11:14.72,GreenBold,,0,0,0,,assim como os termos de energia do sistema nos\Nestados "2" e "1" --- final e inicial,
 Dialogue: 0,0:11:14.81,0:11:19.10,GreenBold,,0,0,0,,em energias interna, cinética e potencial,\Ncomo mostrado no lado direito da equação.
-Dialogue: 0,0:11:20.37,0:11:24.35,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
-Dialogue: 0,0:11:24.42,0:11:28.27,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
-Dialogue: 0,0:11:28.32,0:11:31.84,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
-Dialogue: 0,0:11:31.90,0:11:35.82,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
-Dialogue: 0,0:11:35.87,0:11:37.06,GreenBold,,0,0,0,,no lado direito da equação.
-Dialogue: 0,0:11:37.14,0:11:42.35,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
+Dialogue: 0,0:11:19.84,0:11:23.82,GreenBold,,0,0,0,,Agrupando-se os termos de calor e de trabalho,\Nno lado esquerdo da equação, assim como
+Dialogue: 0,0:11:23.89,0:11:27.74,GreenBold,,0,0,0,,os termos em energias interna, cinética e\Npotencial, no lado direito da equação,
+Dialogue: 0,0:11:27.79,0:11:31.31,GreenBold,,0,0,0,,resulta em interações energéticas líquidas\Nno lado esquerdo da equação,
+Dialogue: 0,0:11:31.37,0:11:35.29,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
+Dialogue: 0,0:11:35.34,0:11:36.53,GreenBold,,0,0,0,,no lado direito da equação.
+Dialogue: 0,0:11:36.61,0:11:41.82,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
 Dialogue: 0,0:11:42.38,0:11:44.82,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
 Dialogue: 0,0:11:44.90,0:11:47.87,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
 Dialogue: 0,0:11:47.92,0:11:50.83,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,

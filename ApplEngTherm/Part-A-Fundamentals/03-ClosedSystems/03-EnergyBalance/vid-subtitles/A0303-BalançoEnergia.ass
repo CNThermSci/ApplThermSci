@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 51
-Active Line: 62
+Active Line: 69
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -91,14 +91,14 @@ Dialogue: 0,0:03:42.94,0:03:44.64,GreenBold,,0,0,0,,que é CONSERVADA na naturez
 Dialogue: 0,0:03:44.84,0:03:48.32,GreenBold,,0,0,0,,e que possui unidades de kg·m²/s².
 Dialogue: 0,0:03:48.36,0:03:51.56,GreenBold,,0,0,0,,Note como a primeira lei é utilizada na\NDEFINIÇÃO do que é energia
 Dialogue: 0,0:03:51.64,0:03:53.85,GreenBold,,0,0,0,,(além de sua ordem tensorial e unidades físicas).
-Dialogue: 0,0:03:55.24,0:03:58.73,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
-Dialogue: 0,0:03:58.80,0:04:02.83,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
-Dialogue: 0,0:04:02.92,0:04:06.28,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
-Dialogue: 0,0:04:07.00,0:04:10.99,GreenBold,,0,0,0,,Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
-Dialogue: 0,0:04:11.05,0:04:13.71,GreenBold,,0,0,0,,O total de energia que ENTRA no sistema menos
-Dialogue: 0,0:04:13.71,0:04:16.32,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
-Dialogue: 0,0:04:16.40,0:04:18.60,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
-Dialogue: 0,0:04:18.68,0:04:22.68,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
+Dialogue: 0,0:03:54.58,0:03:58.07,GreenBold,,0,0,0,,Matematicamente, a primeira lei é expressa em forma\Nde "balanço de energia".
+Dialogue: 0,0:03:58.14,0:04:02.17,GreenBold,,0,0,0,,O balanço de energia acabará sendo a ferramenta de\Nuso em cálculos de Termodinâmica de engenharia.
+Dialogue: 0,0:04:02.26,0:04:05.62,GreenBold,,0,0,0,,Como veremos a seguir, o balanço de energia pode\Nassumir diversas formas equivalentes.
+Dialogue: 0,0:04:06.37,0:04:10.36,GreenBold,,0,0,0,,Em um PROCESSO, o balanço de energia\Nem um sistema fechado definido é dado por:
+Dialogue: 0,0:04:10.42,0:04:13.08,GreenBold,,0,0,0,,O total de energia que ENTRA no sistema menos
+Dialogue: 0,0:04:13.08,0:04:15.69,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
+Dialogue: 0,0:04:15.77,0:04:17.97,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
+Dialogue: 0,0:04:18.05,0:04:22.05,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
 Dialogue: 0,0:04:23.45,0:04:27.36,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
 Dialogue: 0,0:04:27.36,0:04:31.98,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
 Dialogue: 0,0:04:32.06,0:04:35.56,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,

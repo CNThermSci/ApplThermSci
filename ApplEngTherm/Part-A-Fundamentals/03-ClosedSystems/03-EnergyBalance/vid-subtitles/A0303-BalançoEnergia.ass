@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 204
-Active Line: 215
+Active Line: 220
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -245,10 +245,10 @@ Dialogue: 0,0:13:55.28,0:13:59.57,GreenBold,,0,0,0,,ou em uma variação de 110 
 Dialogue: 0,0:14:00.31,0:14:03.62,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
 Dialogue: 0,0:14:03.70,0:14:09.21,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
 Dialogue: 0,0:14:09.95,0:14:14.94,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
-Dialogue: 0,0:14:15.76,0:14:21.38,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
-Dialogue: 0,0:14:21.46,0:14:25.34,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
-Dialogue: 0,0:14:26.18,0:14:29.86,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
-Dialogue: 0,0:14:29.92,0:14:33.66,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
+Dialogue: 0,0:14:15.80,0:14:21.42,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
+Dialogue: 0,0:14:21.50,0:14:25.38,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
+Dialogue: 0,0:14:26.22,0:14:29.90,GreenBold,,0,0,0,,Ainda, dividindo-se ambos os lados das equações\Nde balanço pela massa "m" do sistema,
+Dialogue: 0,0:14:29.96,0:14:33.70,GreenBold,,0,0,0,,chega-se às equações de balanço de energia\Nde sistema fechado na forma intensiva.
 Dialogue: 0,0:14:33.79,0:14:36.30,GreenBold,,0,0,0,,Tais simples equações "q - w = Δu"
 Dialogue: 0,0:14:36.38,0:14:39.38,GreenBold,,0,0,0,,são de vasta aplicação em termodinâmica\Nde engenharia de sistemas fechados,
 Dialogue: 0,0:14:39.52,0:14:43.50,GreenBold,,0,0,0,,sendo necessária a resolução de diversos\Nexercícios na apreciação deste fato,

@@ -20,8 +20,8 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 157
-Active Line: 179
+Scroll Position: 165
+Active Line: 188
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -209,15 +209,15 @@ Dialogue: 0,0:11:27.79,0:11:31.31,GreenBold,,0,0,0,,resulta em interações ener
 Dialogue: 0,0:11:31.37,0:11:35.29,GreenBold,,0,0,0,,e em variações líquidas de formas de\Nenergia do sistema em todo o processo,
 Dialogue: 0,0:11:35.34,0:11:36.53,GreenBold,,0,0,0,,no lado direito da equação.
 Dialogue: 0,0:11:36.61,0:11:41.82,GreenBold,,0,0,0,,Ambas as interações (entra - sai) de calor e de\Ntrabalho seguem, no balanço de energia,
-Dialogue: 0,0:11:42.38,0:11:44.82,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
-Dialogue: 0,0:11:44.90,0:11:47.87,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
-Dialogue: 0,0:11:47.92,0:11:50.83,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
-Dialogue: 0,0:11:50.86,0:11:53.79,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
-Dialogue: 0,0:11:53.90,0:11:57.81,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
-Dialogue: 0,0:11:57.87,0:12:01.31,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
-Dialogue: 0,0:12:01.39,0:12:06.80,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
-Dialogue: 0,0:12:06.88,0:12:10.22,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
-Dialogue: 0,0:12:10.33,0:12:12.03,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
+Dialogue: 0,0:11:41.83,0:11:44.27,GreenBold,,0,0,0,,uma mesma e consistente convenção de sinais:
+Dialogue: 0,0:11:44.35,0:11:47.32,GreenBold,,0,0,0,,energia que ENTRA, AUMENTA a energia do sistema,
+Dialogue: 0,0:11:47.37,0:11:50.28,GreenBold,,0,0,0,,e energia que SAI, DIMINUI a energia do sistema,
+Dialogue: 0,0:11:50.31,0:11:53.24,GreenBold,,0,0,0,,independentemente da interação\Nser de calor ou de trabalho!
+Dialogue: 0,0:11:53.35,0:11:57.26,GreenBold,,0,0,0,,Note que esta convenção de sinais, digamos,\N"de balanço", ou "de sistema",
+Dialogue: 0,0:11:57.32,0:12:00.76,GreenBold,,0,0,0,,é diferente da convenção "histórica" de sinais\Nda Termodinâmica para o trabalho.
+Dialogue: 0,0:12:00.87,0:12:06.28,GreenBold,,0,0,0,,Ainda, os mesmos sinais das interações de calor e de\Ntrabalho no balanço de energia, que advém da 1a lei,
+Dialogue: 0,0:12:06.36,0:12:09.70,GreenBold,,0,0,0,,revelam que a primeira lei não faz\Ndistinção entre calor e trabalho
+Dialogue: 0,0:12:09.81,0:12:11.51,GreenBold,,0,0,0,,(ou qualquer outra interação energética).
 Dialogue: 0,0:12:12.75,0:12:15.07,GreenBold,,0,0,0,,É possível também apresentar o balanço de energia no
 Dialogue: 0,0:12:15.14,0:12:18.30,GreenBold,,0,0,0,,sistema fechado de forma a recuperar a convenção
 Dialogue: 0,0:12:18.34,0:12:23.12,GreenBold,,0,0,0,,histórica de sinais da Termodinâmica, definindo\No calor líquido que entra (durante um processo)

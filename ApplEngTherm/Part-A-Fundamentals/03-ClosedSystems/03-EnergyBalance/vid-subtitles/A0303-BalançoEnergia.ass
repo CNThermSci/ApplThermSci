@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 51
-Active Line: 69
+Active Line: 73
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -99,10 +99,10 @@ Dialogue: 0,0:04:10.42,0:04:13.08,GreenBold,,0,0,0,,O total de energia que ENTRA
 Dialogue: 0,0:04:13.08,0:04:15.69,GreenBold,,0,0,0,,o total de energia que SAI do sistema, é igual
 Dialogue: 0,0:04:15.77,0:04:17.97,GreenBold,,0,0,0,,à variação LÍQUIDA de energia no sistema.
 Dialogue: 0,0:04:18.05,0:04:22.05,GreenBold,,0,0,0,,Onde variação líquida indica valor ao final d\N processo menos o valor inicial do processo.
-Dialogue: 0,0:04:23.45,0:04:27.36,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
-Dialogue: 0,0:04:27.36,0:04:31.98,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
-Dialogue: 0,0:04:32.06,0:04:35.56,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
-Dialogue: 0,0:04:35.61,0:04:42.19,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
+Dialogue: 0,0:04:22.82,0:04:26.73,GreenBold,,0,0,0,,que matematicamente se escreve, utilizando "E"\N(maiúsculo) para a energia total do sistema,
+Dialogue: 0,0:04:26.73,0:04:31.35,GreenBold,,0,0,0,,uma propriedade extensiva, e os subscritos\N"ent" e "sai" para entradas e saídas,
+Dialogue: 0,0:04:31.43,0:04:34.93,GreenBold,,0,0,0,,e os subscritos "1" e "2" para\Nestados inicial e final do sistema,
+Dialogue: 0,0:04:34.98,0:04:41.56,GreenBold,,0,0,0,,em um processo 1–2:\NE_ent - E_sai = ΔE_sist = E_2 - E_1.
 Dialogue: 0,0:04:43.00,0:04:46.73,GreenBold,,0,0,0,,Assim, se E_1, E_ent e E_sai são conhecidos,
 Dialogue: 0,0:04:46.81,0:04:49.72,GreenBold,,0,0,0,,ou seja: o estado inicial e as\Ninterações energéticas do processo,
 Dialogue: 0,0:04:49.80,0:04:54.17,GreenBold,,0,0,0,,o balanço de energia permite saber a energia do\Nsistema no estado final, após o processo, E_2:

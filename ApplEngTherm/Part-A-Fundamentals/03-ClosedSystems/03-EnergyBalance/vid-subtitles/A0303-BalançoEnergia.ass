@@ -21,7 +21,7 @@ Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
 Scroll Position: 204
-Active Line: 213
+Active Line: 215
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -237,13 +237,13 @@ Dialogue: 0,0:13:12.30,0:13:15.15,GreenBold,,0,0,0,,como mostrado, sem subscrito
 Dialogue: 0,0:13:15.18,0:13:18.00,GreenBold,,0,0,0,,em cujo caso vale a convenção "histórica" de sinais,
 Dialogue: 0,0:13:18.08,0:13:22.86,GreenBold,,0,0,0,,ou seja, "Q" é o calor líquido que ENTRA\Ne "W" é o trabalho líquido que SAI.
 Dialogue: 0,0:13:35.33,0:13:39.02,GreenBold,,0,0,0,,Em muitas aplicações de engenharia, as variações de\Nenergia cinética e potencial específicas
-Dialogue: 0,0:13:39.07,0:13:42.35,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
+Dialogue: 0,0:13:39.13,0:13:42.35,GreenBold,,0,0,0,,são negligíveis se comparadas às variações\Nde energia interna específica
 Dialogue: 0,0:13:42.44,0:13:44.47,GreenBold,,0,0,0,,e a interações específicas de calor e trabalho.
 Dialogue: 0,0:13:44.55,0:13:50.02,GreenBold,,0,0,0,,Uma variação relativamente pequena de 1 kJ/kg na\Nforma cinética representa uma variação de velocidade
 Dialogue: 0,0:13:50.12,0:13:54.47,GreenBold,,0,0,0,,do sistema fechado de zero a ~161 km/h,
-Dialogue: 0,0:13:55.24,0:13:59.53,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
-Dialogue: 0,0:14:00.27,0:14:03.58,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
-Dialogue: 0,0:14:03.66,0:14:09.17,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
+Dialogue: 0,0:13:55.28,0:13:59.57,GreenBold,,0,0,0,,ou em uma variação de 110 a ~195 km/h.
+Dialogue: 0,0:14:00.31,0:14:03.62,GreenBold,,0,0,0,,Já a mesma variação de 1 kJ/kg na forma potencial
+Dialogue: 0,0:14:03.70,0:14:09.21,GreenBold,,0,0,0,,significa uma elevação de ~102m para o centro de\Nmassa do sistema fechado em gravidade padrão.
 Dialogue: 0,0:14:09.95,0:14:14.94,GreenBold,,0,0,0,,Assim, nas muitas outras aplicações, o balanço de\Nenergia pode negligenciar as formas macroscópicas.
 Dialogue: 0,0:14:15.76,0:14:21.38,GreenBold,,0,0,0,,e resultar nas expressões destacadas, sendo a da esquerda\Nexplícita na convenção de sinais, e a da direita, implícita.
 Dialogue: 0,0:14:21.46,0:14:25.34,GreenBold,,0,0,0,,As duas formas são de natureza extensiva,\Ncom termos dados em unidades de kJ.
@@ -258,4 +258,4 @@ Dialogue: 0,0:14:53.17,0:14:57.30,GreenBold,,0,0,0,,Deixo aqui uma vista do vale
 Dialogue: 0,0:14:58.05,0:15:01.68,GreenBold,,0,0,0,,Muito obrigado pela audiência! Desejo a todos\Nótimos estudos em Ciências Térmicas!
 Dialogue: 0,0:15:01.76,0:15:03.12,GreenBold,,0,0,0,,Até a próxima oportunidade!
 Dialogue: 0,0:15:03.46,0:15:09.23,GreenBold,,0,0,0,,[ Música de Encerramento ]
-Dialogue: 0,0:15:09.23,0:15:14.23,GreenBold,,0,0,0,,
+Dialogue: 0,0:15:09.48,0:15:09.60,GreenBold,,0,0,0,,

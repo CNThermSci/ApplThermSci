@@ -20,8 +20,7 @@ Update Details: Prof. C. Naaktgeboren
 Export Encoding: Unicode (UTF-8)
 Audio File: A0303-BalançoEnergia-rev02.webm
 Video Zoom Percent: 0.375000
-Scroll Position: 89
-Active Line: 110
+Active Line: 9
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -30,15 +29,15 @@ Style: GreenBold,Arial,60,&H0000FF00,&H000000FF,&H00003F00,&H00000000,-1,0,0,0,1
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.20,0:00:05.36,GreenBold,,0,0,0,,[Música de Introdução]
-Dialogue: 0,0:00:06.19,0:00:07.78,GreenBold,,0,0,0,,Olá estudantes de ciências térmicas!
+Dialogue: 0,0:00:06.25,0:00:07.84,GreenBold,,0,0,0,,Olá estudantes de ciências térmicas!
 Dialogue: 0,0:00:08.32,0:00:11.39,GreenBold,,0,0,0,,Neste vídeo veremos o tópico Balanço de Energia\Nem Sistemas Fechados
 Dialogue: 0,0:00:11.77,0:00:13.31,GreenBold,,0,0,0,,Este vídeo dispõe de legendas
-Dialogue: 0,0:00:13.55,0:00:18.04,GreenBold,,0,0,0,,A apresentação sobre a qual este vídeo se baseia\Nencontra-se disponível no endereço mostrado
-Dialogue: 0,0:00:18.28,0:00:24.99,GreenBold,,0,0,0,,sob licensa Creative Commons de atribuição, não\Ncomercial, e não derivados, CC-BY-NC-ND,
-Dialogue: 0,0:00:25.24,0:00:29.34,GreenBold,,0,0,0,,uma licensa aberta que restringe o uso comercial,\Nassim como modificações do conteúdo.
-Dialogue: 0,0:00:29.58,0:00:30.44,GreenBold,,0,0,0,,Vamos ao conteúdo!
-Dialogue: 0,0:00:31.42,0:00:34.48,GreenBold,,0,0,0,,Trataremos da Primeira Lei da Termodinâmica,\Nassim como de Balanço de Energia.
-Dialogue: 0,0:00:34.94,0:00:40.24,GreenBold,,0,0,0,,Na Eng. Mec. da UTFPR Campus Guarapuava, este\Ntópico é coberto na disciplina de Termodinâmica A.
+Dialogue: 0,0:00:13.32,0:00:17.64,GreenBold,,0,0,0,,A apresentação sobre a qual este vídeo se baseia\Nencontra-se disponível no endereço mostrado
+Dialogue: 0,0:00:17.73,0:00:24.03,GreenBold,,0,0,0,,sob licensa Creative Commons de atribuição, não\Ncomercial, e não derivados, CC-BY-NC-ND,
+Dialogue: 0,0:00:24.16,0:00:28.14,GreenBold,,0,0,0,,uma licensa aberta que restringe o uso comercial,\Nassim como modificações do conteúdo.
+Dialogue: 0,0:00:28.31,0:00:29.17,GreenBold,,0,0,0,,Vamos ao conteúdo!
+Dialogue: 0,0:00:30.14,0:00:33.20,GreenBold,,0,0,0,,Trataremos da Primeira Lei da Termodinâmica,\Nassim como de Balanço de Energia.
+Dialogue: 0,0:00:33.67,0:00:38.97,GreenBold,,0,0,0,,Na Eng. Mec. da UTFPR Campus Guarapuava, este\Ntópico é coberto na disciplina de Termodinâmica A.
 Dialogue: 0,0:00:40.81,0:00:44.25,GreenBold,,0,0,0,,Tópicos de leitura do livro-texto da disciplina\Nsão fornecidos ao final do vídeo.
 Dialogue: 0,0:00:45.16,0:00:49.18,GreenBold,,0,0,0,,A primeira lei da Termodinâmica estabelece que\Nenergia é uma quantidade naturalmente conservada.
 Dialogue: 0,0:00:50.04,0:00:52.51,GreenBold,,0,0,0,,Isto é conhecido como o\N"Princípio da conservação da energia",

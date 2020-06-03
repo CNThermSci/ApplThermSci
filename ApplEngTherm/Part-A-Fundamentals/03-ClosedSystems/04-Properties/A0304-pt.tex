@@ -235,7 +235,7 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Gás Ideal --- $Pv = RT$}\vspace*{-2em}
+    \begin{frame}{Gás Ideal --- Substância com $Pv = RT$}\vspace*{-2em}
         \begin{columns}
         \column{0.50\textwidth}
             Experimentos mostraram que \alert{$u\!:\!u(T)$}, assim,
@@ -255,15 +255,17 @@
         \column{0.50\textwidth}
             \uncover<7->{Ainda, pela definição de \alert{$h$},}
             \begin{align}
-                \uncover<8->{h & \equiv du + Pv}
+                \uncover<8->{h & \equiv u + Pv}
                 \uncover<9->{\quad\rightharpoondown\nonumber\\}
                 \uncover<9->{h & = u + RT,\nonumber}
             \end{align}
-            \uncover<10->{\noindent fazendo \alert{$h\!:\!h(T)$} e ainda}
+            \uncover<10->{\noindent fazendo com que \alert{$h\!:\!h(T)$}, e ainda}
             \begin{align}
-                \uncover<10->{c_P(T) & = \frac{dh}{dT}}
+                \uncover<10->{c_P(T) & = \frac{dh}{dT} = \frac{du + R\,dT}{dT}}
                 \uncover<11->{\quad\rightharpoondown\nonumber\\}
-                \uncover<11->{h(T)   & = \int c_P(T)\,dT.\nonumber}
+                \uncover<11->{h(T)   & = \int c_P(T)\,dT}
+                \uncover<12->{\quad\mbox{and}\nonumber\\}
+                \uncover<13->{\alert{c_P(T)} & \alert{= c_v(T) + R}.\nonumber}
             \end{align}
         \end{columns}
     \end{frame}

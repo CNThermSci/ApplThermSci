@@ -118,11 +118,12 @@
         \column{0.55\textwidth}
             O sistema fechado de massa \alert{$m$}, ilustrado:\\[\smallskipamount]
             \begin{itemize}
-                \item<1-> Recebe uma diferencial de calor a  volume  constante:  \alert{$(\delta
-                    q)_V$};
-                \item<2-> \alert{$m$} e \alert{$V$}  constantes  implicam  em  \alert{$v  \equiv
-                    V/m$} constante, tal que \alert{$(\delta q)_V = (\delta q)_v$};
-                \item<3-> A temperatura experimenta uma variação de \alert{$(dT)_v$}.
+                \item<1-> Recebe uma diferencial de calor a pressão  constante,  \alert{$(\delta
+                    q)_P$};
+                \item<2->  Realiza  uma   diferencial   de   trabalho   a   pressão   constante,
+                    \alert{$(\delta w)_P = P\,dv$};
+                \item<3->  A  temperatura  experimenta   uma   variação   de   \alert{$(dT)_P$},
+                    possivelmente diferente de $(dT)_v$.
             \end{itemize}
         \column{0.45\textwidth}
             \begin{figure}
@@ -140,7 +141,36 @@
             O balanço de energia na forma diferencial do sistema fica:
             \begin{align}
                 \uncover<2->{\delta e_{ent} - \delta e_{sai} & = de_{sist}\quad}
-                \uncover<3->{\rightharpoondown\nonumber\\(\delta q)_v & = du.\nonumber}
+                \uncover<3->{\rightharpoondown\nonumber\\}
+                \uncover<3->{(\delta q)_P - (\delta w)_P & = du\quad}
+                \uncover<4->{\rightharpoondown\nonumber\\}
+                \uncover<4->{(\delta q)_P & = du + P\,dv = d(u + Pv).\nonumber}
+            \end{align}
+            \uncover<5->{
+                A quantidade $(u + Pv)$ aparece frequentemente o suficiente para ser definida
+                como uma nova propriedade, \alert{$h \equiv u + Pv$}, denominada
+                ``\alert{entalpia}''.
+            }
+        \column{0.45\textwidth}
+            \begin{figure}
+                \includegraphics[width=5.0cm]{fig/A0304-pt-ConstPHeating.pdf}
+            \end{figure}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Entalpia -- Relação com Temperatura (Cont.)}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+            O balanço de energia na forma diferencial do sistema fica:
+            \begin{align}
+                \uncover<2->{\delta e_{ent} - \delta e_{sai} & = de_{sist}\quad}
+                \uncover<3->{\rightharpoondown\nonumber\\}
+                \uncover<3->{(\delta q)_P - (\delta w)_P & = du\quad}
+                \uncover<4->{\rightharpoondown\nonumber\\}
+                \uncover<4->{(\delta q)_P & = du + P\,dv = d(u + Pv) \equiv dh.\nonumber}
             \end{align}
             \uncover<4->{
                 Assim, \alert{o calor transferido a volume constante a um sistema fechado é a

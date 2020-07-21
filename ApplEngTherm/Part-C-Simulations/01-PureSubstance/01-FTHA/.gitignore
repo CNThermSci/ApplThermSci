@@ -1,0 +1,15 @@
+# SYMLINKS
+root
+
+# Bibliography Databases
+bibfile.bkp
+
+# Compiling metadata
+*.info
+
+# Beamer themes
+beamer
+beamer*theme*
+
+# Converted figures
+fig/*pdf

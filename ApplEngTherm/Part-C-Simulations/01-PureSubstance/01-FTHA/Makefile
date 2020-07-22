@@ -14,8 +14,9 @@ wipe: clean
 
 root/00-res/logo/%.pdf: root/00-res/logo/%.svg
 	inkscape \
-		--file=$< \
-		--export-pdf=$@
+		--export-type=pdf \
+		--export-filename=$@ \
+		$<
 
 fig/P-V_diagram_deviations_to_Otto_cycle.svg:
 	wget \
@@ -24,8 +25,9 @@ fig/P-V_diagram_deviations_to_Otto_cycle.svg:
 
 fig/%.pdf: fig/%.svg
 	inkscape \
-		--file=$< \
-		--export-pdf=$@
+		--export-type=pdf \
+		--export-filename=$@ \
+		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/P-V_diagram_deviations_to_Otto_cycle.pdf \

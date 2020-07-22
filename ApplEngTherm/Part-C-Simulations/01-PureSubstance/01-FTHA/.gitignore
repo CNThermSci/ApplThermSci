@@ -14,3 +14,7 @@ beamer*theme*
 
 # Converted figures
 fig/*pdf
+
+# Downloaded figures
+fig/P-V_diagram_deviations_to_Otto_cycle.svg
+

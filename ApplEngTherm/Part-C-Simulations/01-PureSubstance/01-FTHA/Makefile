@@ -17,6 +17,11 @@ root/00-res/logo/%.pdf: root/00-res/logo/%.svg
 		--file=$< \
 		--export-pdf=$@
 
+fig/P-V_diagram_deviations_to_Otto_cycle.svg:
+	wget \
+		'https://upload.wikimedia.org/wikipedia/commons/6/6c/P-V_diagram_deviations_to_Otto_cycle.svg' \
+		-O fig/P-V_diagram_deviations_to_Otto_cycle.svg
+
 fig/%.pdf: fig/%.svg
 	inkscape \
 		--file=$< \

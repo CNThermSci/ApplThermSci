@@ -465,11 +465,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="36.311111"
-     inkscape:cx="38.086251"
-     inkscape:cy="77.380509"
+     inkscape:zoom="6.4189582"
+     inkscape:cx="45.944552"
+     inkscape:cy="94.88011"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g3040"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -518,57 +518,16 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="Hidden"
-     style="display:none"
-     sodipodi:insensitive="true">
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1147"
-       width="40"
-       height="20"
-       x="20"
-       y="588.25" />
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1149"
-       width="20"
-       height="20"
-       x="70"
-       y="598.25" />
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1151"
-       width="30"
-       height="20"
-       x="180"
-       y="698.25" />
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1153"
-       width="20"
-       height="20"
-       x="120"
-       y="578.25" />
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1155"
-       width="20"
-       height="20"
-       x="180"
-       y="638.25" />
-    <rect
-       transform="translate(0,-558.24998)"
-       style="fill:#ffff00;fill-opacity:0.252137;fill-rule:evenodd;stroke:#850000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect1157"
-       width="20"
-       height="20"
-       x="180"
-       y="668.25" />
+     style="display:inline">
+    <path
+       id="path3688"
+       d="m 40,80 9.449146,-3.273168"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
+  <g
+     inkscape:label="Invisible"
+     id="layer3"
+     inkscape:groupmode="layer" />
   <g
      style="display:inline"
      inkscape:label="Layer 1"
@@ -694,18 +653,18 @@
       </g>
     </g>
     <g
-       transform="translate(-20)"
+       transform="translate(-59.999998,2e-5)"
        id="g3040">
       <path
          sodipodi:nodetypes="cc"
          id="path1028-5"
          d="M 84.999998,615.33498 H 105"
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5,1.5;stroke-opacity:1;stroke-dashoffset:0" />
       <path
          sodipodi:nodetypes="cc"
          id="path1030-6"
          d="M 84.999998,628.25 H 105"
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5,1.5;stroke-opacity:1;stroke-dashoffset:0" />
       <g
          id="g2042-2"
          transform="rotate(90,78.957498,647.16866)">
@@ -730,7 +689,7 @@
     </g>
     <g
        id="g3228"
-       transform="rotate(70.894,18.929566,623.25)">
+       transform="rotate(70.894,22.441305,625.74999)">
       <path
          sodipodi:nodetypes="cc"
          id="path3216"
@@ -763,9 +722,5 @@
              style="font-size:10.6667px;stroke-width:1">L</tspan></text>
       </g>
     </g>
-    <path
-       id="path3672"
-       d="m 40,638.25 4.724574,-1.63658"
-       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   </g>
 </svg>

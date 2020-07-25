@@ -396,6 +396,34 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1034-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-7"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1037-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -404,11 +432,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.1"
-     inkscape:cx="51.750282"
-     inkscape:cy="17.0641"
+     inkscape:zoom="4.55"
+     inkscape:cx="50.221854"
+     inkscape:cy="77.448767"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g2042-2"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -599,31 +627,70 @@
        id="g1977">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 40,603.24998 v -30"
+         d="m 40,603.24999 v -20"
          id="path1028"
          sodipodi:nodetypes="cc" />
       <path
          style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 80,603.24998 v -30"
+         d="m 79.999996,603.24999 v -20"
          id="path1030"
          sodipodi:nodetypes="cc" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
-         d="M 41,583.25002 H 79"
-         id="path1032"
-         sodipodi:nodetypes="cc" />
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.333px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
-         x="60.162025"
-         y="581.22675"
-         id="text1934"
-         transform="scale(0.99998257,1.0000174)"><tspan
-           sodipodi:role="line"
-           id="tspan1932"
-           x="60.162025"
+      <g
+         transform="translate(0,5)"
+         id="g2042">
+        <path
+           sodipodi:nodetypes="cc"
+           id="path1032"
+           d="M 41,583.25002 H 79"
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)" />
+        <text
+           transform="scale(0.99998257,1.0000174)"
+           id="text1934"
            y="581.22675"
-           style="font-size:13.333px;stroke-width:1">D</tspan></text>
+           x="60.162025"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+           xml:space="preserve"><tspan
+             style="font-size:10.6667px;stroke-width:1"
+             y="581.22675"
+             x="60.162025"
+             id="tspan1932"
+             sodipodi:role="line">D</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="rotate(90,81.457498,649.66866)"
+       id="g1977-3">
+      <path
+         sodipodi:nodetypes="cc"
+         id="path1028-5"
+         d="m 47.123818,646.12616 v -20"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cc"
+         id="path1030-6"
+         d="m 60.038838,646.12616 v -20"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         id="g2042-2"
+         transform="translate(0,5)">
+        <path
+           style="fill:none;stroke:#000000;stroke-width:0.499998;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend-7)"
+           d="m 47.123824,626.12584 h 12"
+           id="path1032-9"
+           sodipodi:nodetypes="cc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+           x="-620.38287"
+           y="55.516136"
+           id="text1934-1"
+           transform="matrix(0,-0.9999826,1.0000174,0,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan1932-2"
+             x="-620.38287"
+             y="55.516136"
+             style="font-size:10.6667px;stroke-width:1">x</tspan></text>
+      </g>
     </g>
   </g>
 </svg>

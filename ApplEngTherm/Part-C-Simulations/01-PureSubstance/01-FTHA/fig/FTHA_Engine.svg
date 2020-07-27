@@ -7,15 +7,43 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="120"
+   width="140"
    height="180"
-   viewBox="0 0 120 180"
+   viewBox="0 0 140 180"
    version="1.1"
    id="svg1097"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    sodipodi:docname="FTHA_Engine.svg">
   <defs
      id="defs1091">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2108"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2106" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker2098"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path2096" />
+    </marker>
     <marker
        inkscape:isstock="true"
        style="overflow:visible"
@@ -45,14 +73,14 @@
          id="path3230" />
     </marker>
     <marker
+       inkscape:collect="always"
        inkscape:stockid="Arrow1Lend"
        orient="auto"
        refY="0"
        refX="0"
        id="Arrow1Lend"
        style="overflow:visible"
-       inkscape:isstock="true"
-       inkscape:collect="always">
+       inkscape:isstock="true">
       <path
          id="path1037"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
@@ -60,14 +88,14 @@
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
     </marker>
     <marker
+       inkscape:collect="always"
        inkscape:stockid="Arrow1Lstart"
        orient="auto"
        refY="0"
        refX="0"
        id="Arrow1Lstart"
        style="overflow:visible"
-       inkscape:isstock="true"
-       inkscape:collect="always">
+       inkscape:isstock="true">
       <path
          id="path1034"
          d="M 0,0 5,-5 -12.5,0 5,5 Z"
@@ -489,7 +517,7 @@
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      inkscape:cy="90"
-     inkscape:cx="60"
+     inkscape:cx="70"
      inkscape:zoom="4.55"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -561,8 +589,7 @@
      inkscape:label="Layer 1"
      style="display:inline">
     <g
-       id="g1114"
-       transform="translate(-20)">
+       id="g1114">
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
@@ -584,7 +611,7 @@
          sodipodi:arc-type="arc" />
     </g>
     <g
-       transform="rotate(-30,50,735.57049)"
+       transform="rotate(-30,60,698.24998)"
        id="g1087">
       <path
          style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -607,7 +634,7 @@
          sodipodi:arc-type="arc" />
     </g>
     <path
-       d="m 37.500017,698.2345 a 2.5,2.5 0 0 1 2.486947,-2.50912 2.5,2.5 0 0 1 2.512979,2.48305 2.5,2.5 0 0 1 -2.479161,2.51683 2.5,2.5 0 0 1 -2.52066,-2.47526"
+       d="m 57.500017,698.2345 a 2.5,2.5 0 0 1 2.486947,-2.50912 2.5,2.5 0 0 1 2.512979,2.48305 2.5,2.5 0 0 1 -2.479161,2.51683 2.5,2.5 0 0 1 -2.52066,-2.47526"
        sodipodi:arc-type="arc"
        sodipodi:open="true"
        sodipodi:end="3.1317303"
@@ -615,37 +642,36 @@
        sodipodi:ry="2.5"
        sodipodi:rx="2.5"
        sodipodi:cy="698.22534"
-       sodipodi:cx="40"
+       sodipodi:cx="60"
        sodipodi:type="arc"
        id="path49256-3-81-6"
        style="display:inline;fill:#3c3c44;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <circle
        r="20"
        cy="698.25"
-       cx="40"
+       cx="60"
        id="path1083"
        style="fill:none;fill-opacity:0.997646;fill-rule:evenodd;stroke:#bebebe;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:0.5, 2;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
        y="628.25"
-       x="20"
+       x="40"
        height="20"
        width="40"
        id="rect1118"
        style="fill:#4d4d4d;fill-opacity:0.5;fill-rule:evenodd;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <rect
        y="608.25"
-       x="20"
+       x="40"
        height="7.084981"
        width="40"
        id="rect1152"
        style="fill:#00ffff;fill-opacity:0.25;fill-rule:evenodd;stroke:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     <path
        id="path1120"
-       d="m 20,658.24998 v -50 h 40 v 50"
+       d="m 40,658.24998 v -50 h 40 v 50"
        style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
-       id="g1977"
-       transform="translate(-20)">
+       id="g1977">
       <path
          sodipodi:nodetypes="cc"
          id="path1028"
@@ -680,7 +706,7 @@
     </g>
     <g
        id="g3040"
-       transform="translate(-59.999998,2e-5)">
+       transform="translate(-39.999998,2e-5)">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5, 1.5;stroke-dashoffset:0;stroke-opacity:1"
          d="M 84.999998,615.33498 H 105"
@@ -714,7 +740,7 @@
       </g>
     </g>
     <g
-       transform="rotate(70.894,22.441305,625.74999)"
+       transform="rotate(70.894,32.441305,639.79694)"
        id="g3228">
       <path
          style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -749,7 +775,7 @@
       </g>
     </g>
     <g
-       transform="rotate(-120,98.935505,676.99975)"
+       transform="rotate(-120,108.9355,671.22625)"
        id="g3040-3"
        style="display:inline">
       <path
@@ -786,20 +812,55 @@
     </g>
     <path
        id="path1954"
-       d="m 55,613.25 20,-5"
+       d="m 75,613.25 20,-5"
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM)" />
     <text
        id="text1982"
        y="606.02521"
-       x="77.158852"
+       x="97.158852"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          style="font-size:10.6667px"
          y="606.02521"
-         x="77.158852"
+         x="97.158852"
          id="tspan1980"
          sodipodi:role="line">V<tspan
    id="tspan1984"
    style="font-size:65%;baseline-shift:sub">PMS</tspan></tspan></text>
+    <g
+       transform="rotate(-90,102.5,655.75)"
+       id="g2094">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5,1.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="m 40,603.24999 v -20"
+         id="path2082"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1.5,1.5;stroke-opacity:1;stroke-dashoffset:0"
+         d="m 79.999996,603.24999 v -20"
+         id="path2084"
+         sodipodi:nodetypes="cc" />
+      <g
+         transform="translate(0,5)"
+         id="g2092">
+        <path
+           sodipodi:nodetypes="cc"
+           id="path2086"
+           d="M 41,583.25002 H 79"
+           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker2098);marker-end:url(#marker2108)" />
+        <text
+           transform="scale(0.99998259,1.0000174)"
+           id="text2090"
+           y="581.22675"
+           x="59.982815"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+           xml:space="preserve"><tspan
+             style="font-size:10.6667px;stroke-width:1"
+             y="581.22675"
+             x="59.982815"
+             id="tspan2088"
+             sodipodi:role="line">S</tspan></text>
+      </g>
+    </g>
   </g>
 </svg>

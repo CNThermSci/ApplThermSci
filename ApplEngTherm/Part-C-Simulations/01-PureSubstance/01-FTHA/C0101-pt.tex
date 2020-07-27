@@ -7,6 +7,9 @@
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
+\newcommand{\VPMS}{{\ensuremath V_{\mathrm{PMS}}}}
+\newcommand{\VPMI}{{\ensuremath V_{\mathrm{PMI}}}}
+%-----------------------------------------------------------------------------------------------
 \title{C.01.01 -- Ciclo Otto de Tempo Finito de Adição de Calor}
 \subtitle{FTHA -- Finite-Time Heat Addition Otto Engine Model}
 \author{Prof.~C.~Naaktgeboren, PhD}
@@ -142,16 +145,18 @@
         \begin{columns}
         \column{0.50\textwidth}
         \begin{itemize}
-            \item<1-> \alert{Diâmetro} do pistão/cilindro, $D$;
-            \item<2-> \alert{Raio} da manivela, $R$;
-            \item<3-> \alert{Curso} do pistão, $S = 2R$;
-            \item<4-> \alert{Comprimento} da biela, $L$;
-            \item<5-> \alert{Volume} morto (do PMS), $V_{\mathrm{min}}$;
-            \item<6-> \alert{Posição} do pistão (rel.~PMS), $x$;
+            \item<1-> \alert{Diâmetro} do pistão/cilindro, \alert{$D$};
+            \item<2-> \alert{Raio} da manivela, \alert{$R$};
+            \item<3-> \alert{Curso} do pistão, \alert{$S = 2R$};
+            \item<4-> \alert{Comprimento} da biela, \alert{$L$};
+            \item<5-> \alert{Volume} morto (do PMS), \alert{$\VPMS$};
+            \item<6-> \alert{Posição} do pistão (rel.~PMS), \alert{$x$};
+            \item<7-> \alert{Volume} máximo (do PMI), \alert{$\VPMI$};
+            \item<8-> \alert{Razão de compressão}, \alert{$r = \dfrac{\VPMS}{\VPMI}$}.
         \end{itemize}
         \column{0.50\textwidth}
         \begin{center}
-            \uncover<1->{\includegraphics[height=60.0mm]{fig/FTHA_Engine.pdf}}
+            \uncover<1->{\vspace*{-5mm}\includegraphics[height=70.0mm]{fig/FTHA_Engine.pdf}}
         \end{center}
         \end{columns}
     \end{frame}

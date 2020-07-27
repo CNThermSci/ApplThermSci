@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="100"
+   width="120"
    height="180"
-   viewBox="0 0 100 180"
+   viewBox="0 0 120 180"
    version="1.1"
    id="svg1097"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
@@ -488,9 +488,9 @@
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="51.746281"
-     inkscape:cx="79.257055"
-     inkscape:zoom="9.1"
+     inkscape:cy="90"
+     inkscape:cx="60"
+     inkscape:zoom="4.55"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -524,7 +524,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -788,5 +788,18 @@
        id="path1954"
        d="m 55,613.25 20,-5"
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM)" />
+    <text
+       id="text1982"
+       y="606.02521"
+       x="77.158852"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-size:10.6667px"
+         y="606.02521"
+         x="77.158852"
+         id="tspan1980"
+         sodipodi:role="line">V<tspan
+   id="tspan1984"
+   style="font-size:65%;baseline-shift:sub">PMS</tspan></tspan></text>
   </g>
 </svg>

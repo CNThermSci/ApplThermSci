@@ -660,7 +660,12 @@
          style="font-size:8px;text-align:end;text-anchor:end"
          y="670.6087"
          x="25.253906"
-         sodipodi:role="line">25%</tspan></text>
+         sodipodi:role="line">25%</tspan><tspan
+         id="tspan2298"
+         style="font-size:8px;text-align:end;text-anchor:end"
+         y="690.6087"
+         x="25.253906"
+         sodipodi:role="line">0%</tspan></text>
     <path
        id="path2222"
        d="m 30,608.25 h 90"

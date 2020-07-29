@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="180"
-   height="160"
-   viewBox="0 0 180 160"
+   width="150"
+   height="140"
+   viewBox="0 0 150 140"
    version="1.1"
    id="svg1097"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
@@ -499,11 +499,11 @@
      inkscape:window-width="1920"
      units="px"
      showgrid="true"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="80"
-     inkscape:cx="90"
-     inkscape:zoom="5.11875"
+     inkscape:cy="70"
+     inkscape:cx="75"
+     inkscape:zoom="5.85"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -569,199 +569,203 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1"
      style="display:inline">
-    <path
-       id="path1954"
-       d="m 75,648.25 20,5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM)" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1472"
-       d="M 30,688.25 H 140"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1484)" />
-    <path
-       sodipodi:nodetypes="cc"
-       id="path1474"
-       d="m 30,688.25 v -110"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2108)" />
-    <text
-       id="text1704"
-       y="589.27344"
-       x="19.807276"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:10.6667px"
-         y="589.27344"
+    <g
+       transform="translate(0,-10)"
+       id="g2376">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#DotM)"
+         d="m 75,648.25 20,5"
+         id="path1954" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1484)"
+         d="M 30,688.25 H 140"
+         id="path1472"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker2108)"
+         d="m 30,688.25 v -110"
+         id="path1474"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="19.807276"
-         id="tspan1702"
-         sodipodi:role="line">y</tspan></text>
-    <text
-       id="text1708"
-       y="698.18359"
-       x="127.21614"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:10.6667px"
-         y="698.18359"
+         y="589.27344"
+         id="text1704"><tspan
+           sodipodi:role="line"
+           id="tspan1702"
+           x="19.807276"
+           y="589.27344"
+           style="font-size:10.6667px">y</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="127.21614"
-         id="tspan1706"
-         sodipodi:role="line">α</tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 60,685.75 v 5"
-       id="path1746" />
-    <path
-       id="path1748"
-       d="m 70,685.75 v 5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 90,685.75 v 5"
-       id="path1750" />
-    <path
-       id="path1752"
-       d="m 110,685.75 v 5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       id="path1732"
-       d="m 27.5,668.25 h 5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 27.5,648.25 h 5"
-       id="path1734" />
-    <path
-       id="path1736"
-       d="m 27.5,628.25 h 5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 27.5,608.25 h 5"
-       id="path1738" />
-    <text
-       id="text2141"
-       y="610.6087"
-       x="25.253906"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:2.5;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:8px;text-align:end;text-anchor:end"
+         y="698.18359"
+         id="text1708"><tspan
+           sodipodi:role="line"
+           id="tspan1706"
+           x="127.21614"
+           y="698.18359"
+           style="font-size:10.6667px">α</tspan></text>
+      <path
+         id="path1746"
+         d="m 60,685.75 v 5"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 70,685.75 v 5"
+         id="path1748" />
+      <path
+         id="path1750"
+         d="m 90,685.75 v 5"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 110,685.75 v 5"
+         id="path1752" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 27.5,668.25 h 5"
+         id="path1732" />
+      <path
+         id="path1734"
+         d="m 27.5,648.25 h 5"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 27.5,628.25 h 5"
+         id="path1736" />
+      <path
+         id="path1738"
+         d="m 27.5,608.25 h 5"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:2.5;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="25.253906"
          y="610.6087"
-         x="25.253906"
-         id="tspan2139"
-         sodipodi:role="line">100%</tspan><tspan
-         id="tspan2143"
-         style="font-size:8px;text-align:end;text-anchor:end"
-         y="630.6087"
-         x="25.253906"
-         sodipodi:role="line">75%</tspan><tspan
-         id="tspan2145"
-         style="font-size:8px;text-align:end;text-anchor:end"
-         y="650.6087"
-         x="25.253906"
-         sodipodi:role="line">50%</tspan><tspan
-         id="tspan2147"
-         style="font-size:8px;text-align:end;text-anchor:end"
-         y="670.6087"
-         x="25.253906"
-         sodipodi:role="line">25%</tspan><tspan
-         id="tspan2298"
-         style="font-size:8px;text-align:end;text-anchor:end"
-         y="690.6087"
-         x="25.253906"
-         sodipodi:role="line">0%</tspan></text>
-    <path
-       id="path2222"
-       d="m 30,608.25 h 90"
-       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2,2;stroke-dashoffset:0;stroke-opacity:1" />
-    <text
-       id="text2230"
-       y="698.17188"
-       x="58.322266"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:8px"
-         y="698.17188"
+         id="text2141"><tspan
+           sodipodi:role="line"
+           id="tspan2139"
+           x="25.253906"
+           y="610.6087"
+           style="font-size:8px;text-align:end;text-anchor:end">100%</tspan><tspan
+           sodipodi:role="line"
+           x="25.253906"
+           y="630.6087"
+           style="font-size:8px;text-align:end;text-anchor:end"
+           id="tspan2143">75%</tspan><tspan
+           sodipodi:role="line"
+           x="25.253906"
+           y="650.6087"
+           style="font-size:8px;text-align:end;text-anchor:end"
+           id="tspan2145">50%</tspan><tspan
+           sodipodi:role="line"
+           x="25.253906"
+           y="670.6087"
+           style="font-size:8px;text-align:end;text-anchor:end"
+           id="tspan2147">25%</tspan><tspan
+           sodipodi:role="line"
+           x="25.253906"
+           y="690.6087"
+           style="font-size:8px;text-align:end;text-anchor:end"
+           id="tspan2298">0%</tspan></text>
+      <path
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 30,608.25 h 90"
+         id="path2222" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="58.322266"
-         id="tspan2228"
-         sodipodi:role="line">θ</tspan></text>
-    <text
-       id="text2234"
-       y="698.17188"
-       x="84.078125"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:8px"
          y="698.17188"
+         id="text2230"><tspan
+           sodipodi:role="line"
+           id="tspan2228"
+           x="58.322266"
+           y="698.17188"
+           style="font-size:8px">θ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="84.078125"
-         id="tspan2232"
-         sodipodi:role="line">θ+δ</tspan></text>
-    <text
-       id="text2238"
-       y="698.18359"
-       x="26.283203"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:8px"
-         y="698.18359"
+         y="698.17188"
+         id="text2234"><tspan
+           sodipodi:role="line"
+           id="tspan2232"
+           x="84.078125"
+           y="698.17188"
+           style="font-size:8px">θ+δ</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="26.283203"
-         id="tspan2236"
-         sodipodi:role="line">-π</tspan></text>
-    <text
-       id="text2242"
-       y="698.18359"
-       x="68"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       xml:space="preserve"><tspan
-         style="font-size:8px"
          y="698.18359"
+         id="text2238"><tspan
+           sodipodi:role="line"
+           id="tspan2236"
+           x="26.283203"
+           y="698.18359"
+           style="font-size:8px">-π</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
          x="68"
-         id="tspan2240"
-         sodipodi:role="line">0</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       x="105.37598"
-       y="698.18359"
-       id="text2246"><tspan
-         sodipodi:role="line"
-         id="tspan2244"
-         x="105.37598"
          y="698.18359"
-         style="font-size:8px">+π</tspan></text>
-    <path
-       id="path2260"
-       d="m 30,685.75 v 5"
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 27.5,688.25 h 5"
-       id="path2272" />
-    <path
-       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 60,688.25 v -85"
-       id="path2280" />
-    <path
-       id="path2282"
-       d="m 90,688.25 v -85"
-       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
-       d="m 110,688.25 v -85"
-       id="path2284" />
-    <path
-       sodipodi:nodetypes="cccc"
-       id="path2278"
-       d="m 30,688.25 h 30 c 20,0 10,-80 30,-80 h 30"
-       style="fill:none;fill-opacity:0.5;fill-rule:evenodd;stroke:#008080;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5" />
-    <text
-       id="text2314"
-       y="654.07812"
-       x="110.84766"
-       style="font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         y="654.07812"
+         id="text2242"><tspan
+           sodipodi:role="line"
+           id="tspan2240"
+           x="68"
+           y="698.18359"
+           style="font-size:8px">0</tspan></text>
+      <text
+         id="text2246"
+         y="698.18359"
+         x="105.37598"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-size:8px"
+           y="698.18359"
+           x="105.37598"
+           id="tspan2244"
+           sodipodi:role="line">+π</tspan></text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 30,685.75 v 5"
+         id="path2260" />
+      <path
+         id="path2272"
+         d="m 27.5,688.25 h 5"
+         style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="path2280"
+         d="m 60,688.25 v -85"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 90,688.25 v -85"
+         id="path2282" />
+      <path
+         id="path2284"
+         d="m 110,688.25 v -85"
+         style="fill:none;stroke:#404040;stroke-width:0.25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-opacity:0.5;fill-rule:evenodd;stroke:#008080;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5"
+         d="m 30,688.25 h 30 c 20,0 10,-80 30,-80 h 30"
+         id="path2278"
+         sodipodi:nodetypes="cccc" />
+      <text
+         xml:space="preserve"
+         style="font-size:8px;line-height:1.25;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
          x="110.84766"
-         id="tspan2312"
-         sodipodi:role="line">g(α)</tspan></text>
+         y="654.07812"
+         id="text2314"><tspan
+           sodipodi:role="line"
+           id="tspan2312"
+           x="110.84766"
+           y="654.07812"
+           style="fill:#000000;fill-opacity:1;stroke:none">g(α)</tspan></text>
+    </g>
   </g>
 </svg>

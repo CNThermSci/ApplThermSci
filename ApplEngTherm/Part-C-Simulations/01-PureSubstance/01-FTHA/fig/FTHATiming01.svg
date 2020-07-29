@@ -501,7 +501,7 @@
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="94.047431"
+     inkscape:cy="88.107388"
      inkscape:cx="81.32049"
      inkscape:zoom="7.2390057"
      inkscape:pageshadow="2"
@@ -732,5 +732,9 @@
        id="path2274"
        d="M 30,688.25 H 60"
        style="fill:none;stroke:#008080;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:0.5;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       id="path2276"
+       d="m 60,688.25 30,-80 h 30"
+       style="fill:none;fill-opacity:0.5;fill-rule:evenodd;stroke:#008080;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.5" />
   </g>
 </svg>

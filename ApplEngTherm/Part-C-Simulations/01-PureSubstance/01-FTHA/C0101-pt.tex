@@ -221,12 +221,31 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Título}\vspace*{-2em}
+    \begin{frame}{Modelo de Fração Cumulativa de Adição de Calor, $y$}\vspace*{-2em}
         \begin{columns}
         \column{0.50\textwidth}
-        \uncover<1->{Um \alert{template} de slide.}
+        \begin{align}
+            y(\alpha)   &=
+            \begin{cases}
+                0           & \mbox{para }\alpha < \theta,\\
+                g(\alpha)   & \mbox{para }\theta \leqslant \alpha \leqslant \theta+\delta,\\
+                1           & \mbox{para }\alpha > \theta+\delta.
+            \end{cases} \nonumber
+        \end{align}
+        \begin{itemize}
+            \item<2-> \alert{$g(\alpha)$} modela o \alert{histórico} da lib.~de calor:
+            \begin{itemize}
+                \item<3-> \alert{$g(\theta) = 0$} e \alert{$g(\theta+\delta) = 1$};
+                \item<4-> \alert{Função} $g(\alpha)$ deve ser \alert{monotônica};
+                \item<5-> $g(\alpha)$ pode basear-se em \alert{experimentos};
+                \item<6-> Lit.:~$g(\alpha) = \frac{1}{2}-\frac{1}{2} \cos( \frac{\pi}{\delta}
+                    (\alpha - \theta) )$.
+            \end{itemize}
+        \end{itemize}
         \column{0.50\textwidth}
-        \uncover<2->{De \alert{duas} colunas.}
+        \begin{center}
+            \uncover<1->{\vspace*{-5mm}\includegraphics[height=70.0mm]{fig/FTHATiming01.pdf}}
+        \end{center}
         \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------

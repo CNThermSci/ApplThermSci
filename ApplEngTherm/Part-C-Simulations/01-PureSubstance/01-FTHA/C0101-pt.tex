@@ -317,16 +317,31 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
-    % !j 96 -i8
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}{Título}\vspace*{-2em}
-        \uncover<1->{Um \alert{template} de slide.}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
 %-----------------------------------------------------------------------------------------------
 \subsection{Procedimento de Solução}
 %-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Algoritmo de Inicialização}\vspace*{-2em}
+        \small
+        \begin{algorithmic}[1]
+            \REQUIRE{Parâmetros do motor: $\{\omega, D, L, R, \VPMS,$ e $V_{du}\}$;}
+            \REQUIRE{Ângulos $\theta$ e $\delta$ (via $\Delta t_c$);}
+            \REQUIRE{Refinamento da discretização, $I$;}
+            \REQUIRE{Estado inicial $(P_0, T_0)$ e modelo de substância;}
+            \REQUIRE{Função $g(\alpha)$ e $q_{ent}$;}
+            \REQUIRE{Tolerâncias de convergência $\epsilon_v$, $\epsilon_w$ e $\epsilon_u$.}
+            \STATE{Inicializa todas quant.~com índice $i$ como vetores vazios:
+                $\alpha_i$, $v_i$, $q_i$, $w_i$, $n_i$, $P_i$, $T_i$, and $u_i$;}
+            \STATE{Calcula todos $\alpha_i$}
+            \STATE{$v_0 \leftarrow $ volume específico, de $(P_0, T_0)$ e equação de estado;}
+            \STATE{$m \leftarrow V_0/v_0$;}
+            \STATE{Calcula todos $v_i = V(\alpha_i)/m$;}
+            \STATE{$i \leftarrow 0$}
+        \end{algorithmic}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------

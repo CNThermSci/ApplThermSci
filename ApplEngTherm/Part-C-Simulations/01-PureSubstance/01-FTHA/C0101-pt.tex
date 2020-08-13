@@ -285,7 +285,27 @@
         \vspace*{-0.7em}\begin{align}
             \uncover<6->{q_i + w_i &= \Delta u_i = u_{i+1} - u_i}
             \uncover<7->{\quad\rightharpoondown\nonumber\\}
-            \uncover<8->{\alert{u_{i+1}} &\alert{= u_i + q_i + w_i}. \nonumber}
+            \uncover<8->{\alert{u_{i+1}} &\alert{= u_i + q_i + w_i},\quad\mbox{com,}\nonumber}
+        \end{align}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
+        \begin{align}
+            \uncover<1->{q_i &= q_{ent} \cdot (y_{i+1} - y_i)}
+            \uncover<2->{\quad\rightharpoondown\nonumber\\}
+            \uncover<3->{q_i &= q_{ent} \cdot [y(\alpha_{i+1}) - y(\alpha_i)],}
+            \uncover<3->{\quad\mbox{e}\nonumber\\}
+            \uncover<4->{w_i &= \int_{v_i}^{v_{i+1}}(P_iv_i^{n_i})v^{-n_i}\,dv,}
+            \uncover<5->{\quad\rightharpoondown\nonumber\\}
+            \uncover<6->{w_i &= \begin{cases}
+                \dfrac{P_i}{1-n_i}\left(v_i - \dfrac{v_i^{n_i}}{v_{i+1}^{n_i-1}}\right) &
+                \mbox{, para }n_i \neq 1,\\[\medskipamount]
+                P_iv_i\ln\dfrac{v_i}{v_{i+1}} &
+                \mbox{, para }n_i = 1.
+            \end{cases}\nonumber}
         \end{align}
     \end{frame}
     %-------------------------------------------------------------------------------------------

@@ -205,7 +205,7 @@
     \begin{frame}{Parâmetros de tempo do motor}\vspace*{-2em}
         \begin{columns}
         \column{0.60\textwidth}
-        \begin{itemize}
+        \vspace*{-1.0em}\begin{itemize}
             \item<1-> \alert{Ângulo} de ignição (rel.~PMS), \alert{$\theta$};
             \item<2-> \alert{Duração} da combustão, \alert{$\Delta t_c$};
             \item<3-> \alert{Velocidade angular}, \alert{$\omega \equiv \dfrac{d\alpha}{dt} =
@@ -216,9 +216,14 @@
             \begin{itemize}
                 \item<5-> Intervalo de simulação: \alert{$-\pi \leqslant \alpha \leqslant +\pi$};
                 \item<6-> Intervalo de adição de calor: \alert{$\theta \leqslant \alpha \leqslant
-                    \theta+\delta$}.\\[\medskipamount]
+                    \theta+\delta$}.
+                \item<7-> \alert{$\alpha_i = -\pi + i\Delta\alpha$},
+                          \alert{$0 \leqslant i \leqslant 2I$}, with
+                \item<8-> \alert{$\Delta\alpha = \pi/I$},
+                          \alert{$I \in \mathbb{N}^*$}.
+                    \\[\medskipamount]
             \end{itemize}
-            \item<7-> Casos de \alert{$\omega$ variável}---discretização em $t$.
+            \item<9-> Casos de \alert{$\omega$ variável}---discretização em $t$.
         \end{itemize}
         \column{0.40\textwidth}
         \begin{center}
@@ -275,7 +280,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
-        \uncover<1->{(Sub-)Processo politrópico $i | i \in \mathbb{Z}$:}
+        \uncover<1->{(Sub-)Processo politrópico $i\,|\,i \in \mathbb{Z}$:}
         \begin{itemize}
             \item<2-> Sistema evolui do \alert{estado-$i$} para o \alert{estado-$(i+1)$}.
             \item<3-> \alert{Estados} com \alert{propriedades} $P_i$, $T_i$, $v_i$, $u_i$, etc.

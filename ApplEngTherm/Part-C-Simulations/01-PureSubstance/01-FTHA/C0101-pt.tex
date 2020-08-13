@@ -273,21 +273,20 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Abordagem de Solução}\vspace*{-2em}
-        \uncover<1->{A \alert{abordagem} de solução do ciclo será \alert{numérica}:}
+    \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
+        \uncover<1->{(Sub-)Processo politrópico $i | i \in \mathbb{Z}$:}
         \begin{itemize}
-            \item<2-> \alert{Métodos numéricos} empregam formas de \alert{discretização}.
-            \item<3-> \alert{Discretização} consiste em subdividir em \alert{finitas} partes.
-            \item<4-> O problema \alert{contínuo} é transformado em um \alert{discreto}.
-            \item<5-> Portanto sua \alert{solução} será também \alert{discreta}.
+            \item<2-> Sistema evolui do \alert{estado-$i$} para o \alert{estado-$(i+1)$}.
+            \item<3-> \alert{Estados} com \alert{propriedades} $P_i$, $T_i$, $v_i$, $u_i$, etc.
+            \item<4-> \alert{Interações} do \alert{processo} são $q_i$ e $w_i$.
+                \\[\bigskipamount]
         \end{itemize}
-        \uncover<6->{Subprocessos $i$, politrópicos, com $i \in \mathbb{Z}$, durante o qual:}
-        \begin{itemize}
-            \item<7-> o sistema evolve do \alert{estado-$i$} para o \alert{estado-$(i+1)$} e
-            \item<8-> as \alert{interações} de calor e de trabalho são $q_i$ e $w_i$; porém,
-            \item<9-> as \alert{propriedades} $P_i$, $T_i$, $v_i$, $u_i$, etc., correspondem aos
-                estados.
-        \end{itemize}
+        \uncover<5->{Balanço de energia de processo:}
+        \vspace*{-0.7em}\begin{align}
+            \uncover<6->{q_i + w_i &= \Delta u_i = u_{i+1} - u_i}
+            \uncover<7->{\quad\rightharpoondown\nonumber\\}
+            \uncover<8->{u_{i+1} &= u_i + q_i + w_i. \nonumber}
+        \end{align}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

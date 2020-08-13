@@ -228,7 +228,7 @@
     \begin{frame}{Modelo de Adição de Calor, $q(\alpha)$}\vspace*{-2em}
         \begin{columns}
         \column{0.50\textwidth}
-        \begin{align}
+        \vspace*{-1.0ex}\begin{align}
             \uncover<1->{
             q(\alpha)   &= q_{ent} \cdot y(\alpha),\quad\mbox{com}\nonumber\\
             }
@@ -241,7 +241,7 @@
             \end{cases}}\nonumber
             }
         \end{align}
-        \vspace*{-2.0ex}\begin{itemize}
+        \vspace*{-3.0ex}\begin{itemize}
             \item<3-> \alert{$g(\alpha)$} modela o \alert{histórico} da ad.~de calor:
                 \\[\smallskipamount]
             \begin{itemize}
@@ -260,6 +260,24 @@
             \uncover<2->{\vspace*{-5mm}\includegraphics[height=70.0mm]{fig/FTHATiming01.pdf}}
         \end{center}
         \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Abordagem de Solução}\vspace*{-2em}
+        \uncover<1->{A \alert{abordagem} de solução do ciclo será \alert{numérica}:}
+        \begin{itemize}
+            \item<2-> \alert{Métodos numéricos} empregam formas de \alert{discretização}.
+            \item<3-> \alert{Discretização} consiste em subdividir em \alert{finitas} partes.
+            \item<4-> O problema \alert{contínuo} é transformado em um \alert{discreto}.
+            \item<5-> Portanto sua \alert{solução} será também \alert{discreta}.
+        \end{itemize}
+        \uncover<6->{Divisão em subprocessos $i$, com $i \in \mathbb{Z}$, durante o qual:}
+        \begin{itemize}
+            \item<7-> O sistema evolve do estado-$i$ para o estado-$(i+1)$; e
+            \item<8-> As interações de calor e trabalho são $q_i$ e $w_i$.
+        \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

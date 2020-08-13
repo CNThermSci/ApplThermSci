@@ -221,19 +221,24 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de Fração Cumulativa de Adição de Calor, $y$}\vspace*{-2em}
+    \begin{frame}{Modelo de Adição de Calor, $q(\alpha)$}\vspace*{-2em}
         \begin{columns}
         \column{0.50\textwidth}
         \begin{align}
-            y(\alpha)   &=
+            \uncover<1->{
+            q(\alpha)   &= q_{ent} \cdot y(\alpha),\quad\mbox{com}\nonumber\\
+            }
+            \uncover<2->{
+            \alert{y(\alpha)}   &\alert{=
             \begin{cases}
                 0           & \mbox{para }\alpha < \theta,\\
                 g(\alpha)   & \mbox{para }\theta \leqslant \alpha \leqslant \theta+\delta,\\
                 1           & \mbox{para }\alpha > \theta+\delta.
-            \end{cases} \nonumber
+            \end{cases}}\nonumber
+            }
         \end{align}
         \vspace*{-2.0ex}\begin{itemize}
-            \item<2-> \alert{$g(\alpha)$} modela o \alert{histórico} da lib.~de calor:
+            \item<2-> \alert{$g(\alpha)$} modela o \alert{histórico} da ad.~de calor:
                 \\[\smallskipamount]
             \begin{itemize}
                 \item<3-> \alert{$g(\theta) = 0$} e \alert{$g(\theta+\delta) = 1$};

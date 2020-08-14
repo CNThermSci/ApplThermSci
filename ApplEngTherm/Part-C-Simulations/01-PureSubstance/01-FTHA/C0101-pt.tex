@@ -364,18 +364,26 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Algoritmo de Laço do Ciclo}\vspace*{-2em}
+    \begin{frame}{Algoritmo de Finalização}\vspace*{-2em}
         \small
         \begin{tcolorbox}[colback=uyel!15!white]\begin{algorithmic}[1]
-            \FOR{$i=0$ até $2I$}
-                \STATE{Calcula $q_i = q_{ent} \cdot [y(\alpha_{i+1}) - y(\alpha_i)]$;}
-                \STATE{Resolve para $w_i$, $n_i$, $u_{i+1}$, $P_{i+1}$ e $T_{i+1}$ (*);}
-            \ENDFOR
-            \STATE{$i \leftarrow i+1$;}
-            \STATE{$q_i \leftarrow u_0 - u_i$;}
-            \STATE{$w_i \leftarrow 0$;}
-            \STATE{Estado-($i$) = Estado-0}
-                \COMMENT{Para todas as funções de estado rastreadas}
+            \STATE{$w_{ent} \leftarrow \sum w_i \geqslant 0$;}
+                \COMMENT{Trabalho que entra no sistema}
+            \STATE{$w_{out} \leftarrow - \sum w_i < 0$;}
+                \COMMENT{Trabalho realizado pela sistema}
+            \STATE{$w_{net} \leftarrow w_{out} - w_{ent}$;}
+                \COMMENT{Trabalho líquido realizado pelo sistema}
+            \STATE{$q_{ent} \leftarrow \sum q_i \geqslant 0$;}
+                \COMMENT{Calor que entra no sistema}
+            \STATE{$q_{rej} \leftarrow - \sum q_i < 0$;}
+                \COMMENT{Calor rejeitado pelo sistema}
+            \STATE{$\eta_t  \leftarrow w_{net} / q_{ent}$;}
+                \COMMENT{Eficiência térmica}
+            \STATE{$r_{bw}  \leftarrow w_{ent} / w_{out}$;}
+                \COMMENT{Fração de comsumo de trabalho}
+            \STATE{MEP     $\leftarrow w_{net} / (V_{du} / m)$;}
+                \COMMENT{Pressão média efetiva}
+            \STATE{Salva dados da simulação para o pós-processamento (relatório).}
         \end{algorithmic}\end{tcolorbox}
     \end{frame}
     %-------------------------------------------------------------------------------------------

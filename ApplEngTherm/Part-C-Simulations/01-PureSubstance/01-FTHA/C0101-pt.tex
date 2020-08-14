@@ -337,9 +337,30 @@
             \alert{balanço de energia} do processo.
         \end{cnj}
         \vspace*{\smallskipamount}\uncover<2->{$\rightharpoondown$          Processo          de
-        \alert{estimativa} $(n_i^0)$ e $j$-ésima \alert{correção} $(n_i^j)$ até a convergência.}
-        \vspace*{\smallskipamount}\uncover<3->{Tolerâncias  de   convergência   $\epsilon_w$   e
-        $\epsilon_u$.}
+        \alert{estimativa}   $(n_i^0)$   e   $j$-ésima   \alert{correção}   $(n_i^j)$   até    a
+        convergência.}\\
+        \vspace*{\smallskipamount}\uncover<3->{$\rightharpoondown$ Tolerâncias  de  convergência
+        $\epsilon_w$ e $\epsilon_u$.}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Correção do Expoente Politrópico}\vspace*{-2em}
+        \begin{itemize}
+            \item<1-> Com $n_i^j$ é possível obter $w_i^j$ e $u_{i+1}^j$ por balanço de energia;
+            \item<2-> $P_{i+1}$ pode ser obtida via $u_{i+1}^j$ e modelo de substância;
+            \item<3-> O novo expoente $n_i^{j+1}$ pode ser achado pelo processo politrópico:
+        \end{itemize}
+        \begin{equation}
+            \uncover<4->{\alert{
+                n_i^{j+1} = \dfrac{
+                    \ln\dfrac{P_{i+1}^j}{P_i}
+                }{
+                    \ln\dfrac{v_i}{v_{i+1}}
+                }
+            }.}
+        \end{equation}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

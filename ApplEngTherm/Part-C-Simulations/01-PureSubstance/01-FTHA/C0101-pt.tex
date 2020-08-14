@@ -348,18 +348,26 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Correção do Expoente Politrópico}\vspace*{-2em}
         \begin{itemize}
-            \item<1-> Com $n_i^j$ é possível obter $w_i^j$ e $u_{i+1}^j$ por balanço de energia;
-            \item<2-> $P_{i+1}$ pode ser obtida via $u_{i+1}^j$ e modelo de substância;
-            \item<3-> O novo expoente $n_i^{j+1}$ pode ser achado pelo processo politrópico:
+            \item<1-> Com $n_i^j$ é possível obter $w_i^j$ e $u_{i+1}^j$ por  \alert{balanço  de
+                energia};
+            \item<2->  $P_{i+1}$  pode  ser  obtida  via  $u_{i+1}^j$  e  o   \alert{modelo   de
+                substância};
+            \item<3->  O  novo  expoente  $n_i^{j+1}$  pode  ser  achado  pelo   \alert{processo
+                politrópico}:\\[\bigskipamount]
         \end{itemize}
         \begin{equation}
-            \uncover<4->{\alert{
+            \uncover<4->{
+                P_iv_i^{n_i^{j+1}} = \;P_{i+1}^jv_{i+1}^{n_i^{j+1}}
+            }
+            \uncover<5->{
+                \quad\rightharpoondown\quad\alert{
                 n_i^{j+1} = \dfrac{
-                    \ln\dfrac{P_{i+1}^j}{P_i}
-                }{
-                    \ln\dfrac{v_i}{v_{i+1}}
-                }
-            }.}
+                        \ln\dfrac{P_{i+1}^j}{P_i}
+                    }{
+                        \ln\dfrac{v_i}{v_{i+1}}
+                    }
+                }.\nonumber
+            }
         \end{equation}
     \end{frame}
     %-------------------------------------------------------------------------------------------

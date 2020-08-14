@@ -345,8 +345,38 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Título}\vspace*{-2em}
-        \uncover<1->{Um \alert{template} de slide.}
+    \begin{frame}{Algoritmo de Laço do Ciclo}\vspace*{-2em}
+        \small
+        \begin{tcolorbox}[colback=uyel!15!white]\begin{algorithmic}[1]
+            \FOR{$i=0$ até $2I$}
+                \STATE{Calcula $q_i = q_{ent} \cdot [y(\alpha_{i+1}) - y(\alpha_i)]$;}
+                \STATE{Resolve para $w_i$, $n_i$, $u_{i+1}$, $P_{i+1}$ e $T_{i+1}$
+                    via algoritmo de solução de sub-processo;}
+            \ENDFOR
+            \STATE{$i \leftarrow i+1$;}
+            \STATE{$q_i \leftarrow u_0 - u_i$;}
+            \STATE{$w_i \leftarrow 0$;}
+            \STATE{Estado-($i$) = Estado-0}
+                \COMMENT{Para todas as funções de estado rastreadas}
+        \end{algorithmic}\end{tcolorbox}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Algoritmo de Laço do Ciclo}\vspace*{-2em}
+        \small
+        \begin{tcolorbox}[colback=uyel!15!white]\begin{algorithmic}[1]
+            \FOR{$i=0$ até $2I$}
+                \STATE{Calcula $q_i = q_{ent} \cdot [y(\alpha_{i+1}) - y(\alpha_i)]$;}
+                \STATE{Resolve para $w_i$, $n_i$, $u_{i+1}$, $P_{i+1}$ e $T_{i+1}$ (*);}
+            \ENDFOR
+            \STATE{$i \leftarrow i+1$;}
+            \STATE{$q_i \leftarrow u_0 - u_i$;}
+            \STATE{$w_i \leftarrow 0$;}
+            \STATE{Estado-($i$) = Estado-0}
+                \COMMENT{Para todas as funções de estado rastreadas}
+        \end{algorithmic}\end{tcolorbox}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

@@ -308,10 +308,12 @@
             \uncover<4->{w_i &= \int_{v_i}^{v_{i+1}}(P_iv_i^{n_i})v^{-n_i}\,dv,}
             \uncover<5->{\quad\rightharpoondown\nonumber\\[\medskipamount]}
             \uncover<6->{\alert{w_i} &\alert{= \begin{cases}
-                \dfrac{P_i}{1-n_i}\left(v_i - \dfrac{v_i^{n_i}}{v_{i+1}^{n_i-1}}\right), &
+                \dfrac{P_i}{1-n_i}\left(v_i - \dfrac{v_i^{n_i}}{v_{i+1}^{n_i-1}}\right),\quad &
                 \mbox{para }n_i \neq 1,\\[\bigskipamount]
                 P_iv_i\ln\dfrac{v_i}{v_{i+1}}, &
-                \mbox{para }n_i = 1.
+                \mbox{para }n_i = 1,\\[\bigskipamount]
+                0 & \mbox{para }v_i \approx v_{i+1} \quad\rightharpoondown\quad
+                |v_i - v_{i+1}| \leqslant \epsilon_v.
             \end{cases}}\nonumber}
         \end{align}
     \end{frame}
@@ -320,6 +322,25 @@
 %-----------------------------------------------------------------------------------------------
 \subsection{Procedimento de Solução}
 %-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Solução de Sub-Processo}\vspace*{-2em}
+        \begin{cnj}[de consistência termodinâmica]
+            Para  uma  dada  interação  de  calor,  $q_i$,  existe  um   \alert{único   expoente
+            politrópico,  $n_i$},  tal  que  o  processo   politrópico   $Pv^{n_i}   =   C_i   =
+            \mathrm{const.}$, aplicado entre estados ($i$) e ($i+1$) resulta em uma interação de
+            trabalho, $w_i$, e em uma variação de energia interna, $\Delta u_i = u_{i+1} - u_i$,
+            que é \alert{termodinamicamente consistente} com  a  \alert{equação  $P$-$v$-$T$  de
+            estado} da substância de trabalho em ambos estados finais e que  também  satisfaz  o
+            \alert{balanço de energia} do processo.
+        \end{cnj}
+        \vspace*{\smallskipamount}\uncover<2->{$\rightharpoondown$          Processo          de
+        \alert{estimativa} $(n_i^0)$ e $j$-ésima \alert{correção} $(n_i^j)$ até a convergência.}
+        \vspace*{\smallskipamount}\uncover<3->{Tolerâncias  de   convergência   $\epsilon_w$   e
+        $\epsilon_u$.}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
@@ -385,21 +406,6 @@
                 \COMMENT{Pressão média efetiva}
             \STATE{Salva dados da simulação para o pós-processamento (relatório).}
         \end{algorithmic}\end{tcolorbox}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
-    % !j 96 -i8
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}{Solução de Sub-Processo}\vspace*{-2em}
-        \begin{cnj}[de consistência termodinâmica]
-            Para  uma  dada  interação  de  calor,  $q_i$,  existe  um   \alert{único   expoente
-            politrópico,  $n_i$},  tal  que  o  processo   politrópico   $Pv^{n_i}   =   C_i   =
-            \mathrm{const.}$, aplicado entre estados ($i$) e ($i+1$) resulta em uma interação de
-            trabalho, $w_i$, e em uma variação de energia interna, $\Delta u_i = u_{i+1} - u_i$,
-            que é \alert{termodinamicamente consistente} com  a  \alert{equação  $P$-$v$-$T$  de
-            estado} da substância de trabalho em ambos estados finais e que  também  satisfaz  o
-            \alert{balanço de energia} do processo.
-        \end{cnj}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

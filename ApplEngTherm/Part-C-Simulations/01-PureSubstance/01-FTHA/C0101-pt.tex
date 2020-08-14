@@ -439,6 +439,37 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Algoritmo de Solução de Sub-Processo}\vspace*{-2em}
+        \small
+        \begin{tcolorbox}[colback=uyel!15!white]\begin{algorithmic}[1]
+            \IF{$|v_i - v_{i+1}| \leqslant \epsilon_v$}
+                \STATE{$u_{i+1} \leftarrow u_i + q_i$;}
+                \STATE{Calcula $T_{i+1}$ via $u_{i+1}$ pelo modelo (biblioteca) de substância;}
+                \STATE{Calcula $P_{i+1}$ pela equação de estado;}
+            \ELSE[Processo politrópico]
+                \STATE{$j \leftarrow 0$;}
+                \STATE{Inicializa vetores $n_i$, $w_i$, $u_{i+1}$, $T_{i+1}$ e $P_{i+1}$;}
+                \STATE{$n_i^j \leftarrow 1 + R_{gas}/c_v(T_i)$;}
+                    \COMMENT{Chute inicial isentrópico}
+                \STATE{Calcula $w_i^j$ com $n_i = n_i^j$;}
+                \WHILE{$j=0$ \OR $|w_i^{j-1} - w_i^{j}| \geqslant \epsilon_w$}
+                    \STATE{$u_{i+1}^j \leftarrow u_i + q_i + w_i^j$ com $w_i = w_i^j$;}
+                    \STATE{Calcula $T_{i+1}$ via $u_{i+1}$ pelo modelo (biblioteca) de substância;}
+                    \STATE{Calcula $P_{i+1}$ pela equação de estado;}
+                    \STATE{Corrige $n_i^{j+1}$ pelo proecsso politrópico;}
+                    \STATE{$j \leftarrow j+1$;}
+                    \STATE{Calcula $w_i^j$ com $n_i = n_i^j$;}
+                \ENDWHILE
+                \STATE{}\COMMENT{Reverte vetores (linha 7) aos valores convergidos;}
+                \STATE{$n_i$, $w_i$, $u_{i+1}$, $T_{i+1}$ e $P_{i+1}$ $\leftarrow$ seus últimos
+                    elementos $j$;}
+            \ENDIF
+        \end{algorithmic}\end{tcolorbox}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{Tópicos de Leitura}
 %-----------------------------------------------------------------------------------------------

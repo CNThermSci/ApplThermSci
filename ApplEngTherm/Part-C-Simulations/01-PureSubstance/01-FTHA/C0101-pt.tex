@@ -472,12 +472,12 @@
                 \STATE{$u_{i+1}^j \leftarrow u_i + q_i + w_i^j$ com $w_i = w_i^j$;}
                 \STATE{Calcula $T_{i+1}$ via $u_{i+1}$ pelo modelo (biblioteca) de substância;}
                 \STATE{Calcula $P_{i+1}$ pela equação de estado;}
-                \STATE{Corrige $n_i^{j+1}$ pelo proecsso politrópico;}
+                \STATE{Corrige $n_i^{j+1}$ pelo processo politrópico;}
                 \STATE{$j \leftarrow j+1$;}
                 \STATE{Calcula $w_i^j$ com $n_i = n_i^j$;}
             \ENDWHILE
             \STATE{$n_i$, $w_i$, $u_{i+1}$, $T_{i+1}$ e $P_{i+1}$ $\leftarrow$ seus últimos
-                elementos $j$;}\COMMENT{Reverte vetores (linha 3)}
+                elementos $j$;} \COMMENT{Reverte vetores (linha 3)}
         \end{algorithmic}\end{tcolorbox}
     \end{frame}
     %-------------------------------------------------------------------------------------------

@@ -36,6 +36,10 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/FTHAEngine03.pdf \
 		fig/FTHATiming01.pdf \
 		fig/val_r=12,0_k=1,334.pdf \
+		fig/test_r=12,0_speed.pdf \
+		fig/test_r=12,0_speed-T.pdf \
+		fig/test_r=12,0_speed-a.pdf \
+		fig/test_r=12,0_speed-P.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	#pdflatex --enable-write18 ${PRES}.tex
@@ -47,6 +51,10 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/FTHAEngine03.pdf \
 		fig/FTHATiming01.pdf \
 		fig/val_r=12,0_k=1,334.pdf \
+		fig/test_r=12,0_speed.pdf \
+		fig/test_r=12,0_speed-T.pdf \
+		fig/test_r=12,0_speed-a.pdf \
+		fig/test_r=12,0_speed-P.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex

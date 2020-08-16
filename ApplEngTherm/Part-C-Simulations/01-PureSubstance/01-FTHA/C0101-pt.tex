@@ -442,19 +442,19 @@
         \small
         \begin{tcolorbox}[colback=uyel!15!white]\begin{algorithmic}[1]
             \STATE{$w_{ent} \leftarrow \sum w_i \geqslant 0$;}
-                \COMMENT{Trabalho que entra no sistema}
+                \COMMENT{Trabalho que entra no sistema em um ciclo}
             \STATE{$w_{out} \leftarrow - \sum w_i < 0$;}
-                \COMMENT{Trabalho realizado pela sistema}
+                \COMMENT{Trabalho realizado pelo sistema em um ciclo}
             \STATE{$w_{net} \leftarrow w_{out} - w_{ent}$;}
-                \COMMENT{Trabalho líquido realizado pelo sistema}
+                \COMMENT{Trabalho líquido realizado pelo sistema no ciclo}
             \STATE{$q_{ent} \leftarrow \sum q_i \geqslant 0$;}
-                \COMMENT{Calor que entra no sistema}
+                \COMMENT{Calor que entra no sistema em um ciclo}
             \STATE{$q_{rej} \leftarrow - \sum q_i < 0$;}
-                \COMMENT{Calor rejeitado pelo sistema}
+                \COMMENT{Calor rejeitado pelo sistema em um ciclo}
             \STATE{$\eta_t  \leftarrow w_{net} / q_{ent}$;}
                 \COMMENT{Eficiência térmica}
             \STATE{$r_{bw}  \leftarrow w_{ent} / w_{out}$;}
-                \COMMENT{Fração de consumo de trabalho}
+                \COMMENT{Razão de consumo de trabalho}
             \STATE{MEP     $\leftarrow w_{net} / (V_{du} / m)$;}
                 \COMMENT{Pressão média efetiva}
             \STATE{Salva dados da simulação para o pós-processamento (relatório).}

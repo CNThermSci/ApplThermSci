@@ -470,6 +470,7 @@
             \IF{$|v_i - v_{i+1}| \leqslant \epsilon_v$}
                 \STATE{}\COMMENT{Processo isocórico}
                 \STATE{$u_{i+1} \leftarrow u_i + q_i$;}
+                \STATE{$n_i \leftarrow +\infty$;}
                 \STATE{Calcula $T_{i+1}$ via $u_{i+1}$ pelo modelo (biblioteca) de substância;}
                 \STATE{Calcula $P_{i+1}$ pela equação de estado;}
             \ELSE

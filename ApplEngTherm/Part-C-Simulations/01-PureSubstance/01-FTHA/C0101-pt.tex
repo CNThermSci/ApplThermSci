@@ -472,7 +472,7 @@
                 \STATE{$u_{i+1} \leftarrow u_i + q_i$;}
                 \STATE{Calcula $T_{i+1}$ via $u_{i+1}$ pelo modelo (biblioteca) de substância;}
                 \STATE{Calcula $P_{i+1}$ pela equação de estado;}
-                \STATE{Calcula $n_i$ pelo processo politrópico ou $n_i \leftarrow +\infty$;}
+                \STATE{Calcula $n_i$ pelo processo politrópico ou faz $n_i \leftarrow +\infty$ em caso de excessão;}
             \ELSE
                 \STATE{}\COMMENT{Processo politrópico}
                 \STATE{$\ldots$}

@@ -1,0 +1,789 @@
+Olá estudantes de ciências térmicas!
+
+Neste vídeo veremos o tópico
+Ciclo Otto de Tempo Finito de Adição de Calor
+conhecido como "FTHA", do inglês:
+Finite-Time Heat Addition Otto Engine Model
+
+Este vídeo pode dispor de legendas.
+A apresentação na qual este vídeo se baseia
+encontra-se disponível no endereço mostrado
+sob licensa Creative Commons de atribuição,
+não comercial e não derivados, CC-BY-NC-ND
+uma licensa aberta que restringe o uso comercial
+assim como modificações do conteúdo.
+Vamos ao conteúdo!
+
+Na Engenharia Mecânica da UTFPR Campus Guarapuava
+este tópico é coberto na disciplina de
+Máquinas Térmicas
+
+A Parte-I, coberta neste vídeo, trata da
+apresentação do modelo FTHA:
+
+Introdução, modelagem do motor, do ciclo
+e procedimento de solução.
+
+Tópicos de leitura são fornecidos
+ao final do vídeo
+
+A Parte-II, coberta em outro vídeo,
+trata da validação do modelo FTHA, e traz
+um estudo de caso com base no modelo.
+
+O ciclo Otto ideal,
+aquele visto em termodinâmica aplicada,
+
+assume todas as hipóteses do padrão a ar, que são:
+
+fluido de trabalho como gás ideal,
+
+ciclo composto de processos internamente
+reversíveis,
+
+a combustão é modelada, ou seja, substituída, por
+uma entrada de calor,
+
+a exaustão é modelada por uma saída de calor, tal
+que
+
+o ciclo de potência motor real, que tem entrada e
+saída de massa e reação química de combustão,
+é representado por um modelo que emprega ciclo
+fechado, cuja formulação e solução são
+significativamente mais simples.
+
+Além disso, a característica fundamental do ciclo
+Otto ideal, visto na termodinâmica aplicada, é o
+fato de que ele assume entrada de calor isocórica,
+a saber: a volume constante.
+
+Em razão de sua simplicidade, esse modelo possui
+apenas dois parâmetros de entrada: a razão de
+compressão, r, do motor, e o expoente de expansão
+isentrópica, k, do fluid de trabalho,
+
+assim, sendo esse modelo grandemente simplificado
+faz com que o mesmo possua
+solução analítica sob a hipótese de padrão a ar
+frio, a qual acrescenta à todas as hipóteses do
+padrão a ar,
+
+ainda a hipótese de calores específicos
+constantes, fazendo com que tanto cp quanto cv não
+sejam funções da temperatura, lembrando que para
+um gás ideal, a diferença entre cp e cv é a
+constante do gás, e assim se cv é constante, cp
+também o é e vice-versa.
+
+Em termos de eficiência térmica, a solução
+analítica do ciclo Otto ideal padrão a ar frio é
+mostrada, revelando analiticamente, ou seja, de
+forma funcional, as influências dos parâmetros do
+modelo na eficiência térmica.
+
+Assim, no ciclo Otto ideal, a eficiência térmica é
+função apenas dos parâmetros r e k, e nada mais!
+
+Sabemos que motores de combustão interna são
+máquinas muito mais complexas, e que a figura
+comunicada pelo modelo ideal capta apenas o básico
+do básico, sendo bastante incompleta.
+
+Onde está, por exemplo, a influência da rotação do
+motor? A do tempo de abertura de válvulas? Ou a do
+material do bloco do motor e esquema de
+refrigeração?
+
+A figura ilustra o diagrama P-V, também chamado de
+diagrama de Andrews, do ciclo Otto ideal com
+alguns de seus desvios.
+
+O ciclo Otto ideal é a linha de base traçada em
+preto, e os desvios são mostrados em diferentes
+cores.
+
+No ciclo Otto ideal de base é possível reconhecer
+os processos 1-2, de compressão isentrópica;
+
+2-3 de adição de calor isocórica, ou seja, a
+volume constante;
+
+3-4 de expansão isentrópica, e
+
+4-1 de rejeição de calor isocórica para retorno ao
+estado inicial.
+
+Os desvios incluem, porém não são limitados aos
+que estão ilustrados, dentre os quais são
+representados:
+
+em VERDE: efeitos de combustão não instantânea,
+que faz com que o ciclo perca, nos menores
+volumes, a aparência "pontuda" do ciclo ideal.
+Note-se que os trechos das curvas verde e vermelha,
+em volumes menores são curvos, suaves, e inscritos
+ao ciclo em preto---o que reduz a área do ciclo
+nas coordenadas P-V, representando uma redução de
+trabalho líquido produzido, assim como de
+eficiência térmica.
+
+em VERMELHO temos efeitos de transferência de
+calor entre o fluido de trabalho e as partes que
+delimitam o sistema, como bloco de motor, cabeçote
+e pistão, sendo todas estas refrigeradas.
+
+Os conceitos pré-requisitos de engenharia nos
+induzem a pensar que na realidade há uma
+sobreposição de efeitos de combustão não
+instantânea e de transferência de calor, e que uma
+figura mais exata seria mais complexa do que a
+mostrada.
+
+Finalmente em AZUL são mostrados desvios de
+bombeamento, ou seja, aqueles relacionados com a
+movimentação de massa de gases para dentro e fora
+do sistema câmara de combustão, uma vez que nos
+motores de ignição por centelha a câmara de
+combustão hora funciona como sistema fechado, e
+hora como aberto, por meio da abertura e
+fechamento controlados das válvulas.
+
+Dentre os desvios vistos, o ciclo Otto padrão a ar
+de tempo finito de adição de calor, FTHA,
+considera apenas o efeito da adição de calor não
+instantânea.
+
+Por isso, o FTHA:
+
+Contempla interações simultâneas de calor e
+trabalho;
+
+Discretiza, ou seja, subdivide os tempos de motor
+em sub-processos,
+
+cujo elemento computacional é o processo (ou
+sub-processo) localmente politrópico, indicando
+que todos os processos no modelo FTHA serão
+uniformemente modelados como sendo locais e
+politrópicos.
+
+Processos localmente politrópicos são processos
+politrópicos cujos caminhos aproximam o processo
+real que se queira modelar e cujos estados finais
+não se encontram muito longe da vizinhança dos
+estados iniciais.
+
+Ainda que a adição de calor ocorra em um intervalo
+de tempo finito, a remoção de calor no FTHA
+permanece isocórica, ou seja, instantânea.
+
+Esta escolha se deu em função da retirada de
+calor, nas hipóteses do padrão a ar, modelar todo
+o processo de exaustão e admissão, os quais estão
+relacionados aos desvios de bombeamento e não de
+combustão não instantânea.
+
+Este primeiro avanço em relação ao ciclo Otto
+ideal permitirá que se agregue uma série de
+parâmetros de motor e de funcionamento,
+
+Importa notar que o FTHA mantém-se como um modelo
+padrão a ar,
+
+no sentido de que ele evita capturar os desvios
+devidos a transferência de calor, que
+introduziriam irreversibilidades no modelo,
+violando a hipótese de processos internamente
+reversíveis do rol de hipóteses do padrão a ar;
+
+semelhantemente, as perdas de bombeamento envolvem
+sistemas e ciclos abertos, não contemplados pelas
+hipóteses do padrão a ar.
+
+É importante perceber que o FTHA mantém-se como um
+modelo de substância pura, que utiliza a familiar
+termodinâmica de substância pura,
+
+evitando a modelagem de processos de combustão e
+de equilíbrio químico, presentes nos modelos
+chamados de "ar-combustível", e
+
+evitando a modelagem termodinâmica de misturas
+reativas.
+
+Do ponto de vista do ensino, estas características
+contribuem para a simplificação do modelo de FTHA,
+fazendo com que este sirva de conteúdo
+intermediário entre os ciclos ideais, normalmente
+apresentados em termodinâmica aplicada, e os
+ciclos ar-combustível.
+
+O ciclo Otto padrão a ar de tempo finito de adição
+de calor inclui todos os parâmetros do ciclo Otto
+ideal, a saber,
+
+A razão de compressão do motor e
+
+os calores específicos do fluido de trabalho.
+
+Ainda, o modelo FTHA inclui padrâmetros
+construtivos do motor, a saber,
+
+os do conjunto pistão-cilindro e
+
+os do mecanismo biela-manivela.
+
+Além destes, o modelo FTHA inclui parâmetros
+operacionais do motor, a saber,
+
+a rotação, ou velocidade angular do motor,
+
+o ângulo de ignição e
+
+a duração da combustão.
+
+Os parâmetros do mecanismo são:
+- diâmetro do pistão / cilindro, D;
+
+- o raio da manivela, R;
+
+- o curso do pistão, S = 2R;
+
+- o comprimento da biela, L;
+
+- o volume morto, correspondente ao do ponto
+  morto superior, PMS, V_PMS;
+
+- o volume máximo, correspondente ao do ponto
+  morto inferior, PMI, V_PMI;
+
+- e a razão de compressão, r = V_PMS / V_PMI.
+
+Variáveis do mecanismo também incluem a
+
+- posição (instantânea) do pistão relativa ao PMS,
+  x;
+
+- o ângulo do virabrequim relativo ao PMS, α, e o
+
+- o volume instantâneo, V.
+
+A posição, x, do pistão pode ser escrita em função
+do ângulo do virabrequim, α, e dos parâmetros do
+mecanismo biela-manivela, como mostrado.
+
+A dedução desta equação é deixada como exercício.
+
+Note que para o limite de bielas longas, a
+influência do primeiro termo desaparece, restando
+apenas o termo cossenoidal puro. Por outro lado,
+para bielas relativamente curtas em relação à
+manivela, a não-linearidade do primeiro termo é
+ressaltada, fazendo com que o pistão experimente
+bruscas acelerações e hajam implicações dinâmicas.
+
+O volume instantâneo, mostrado, é uma função da
+posição instantânea, x, do pistão, e
+consequentemente uma função do ângulo, α, do
+virabrequim.
+
+Uma vez conhecida a massa inicial do sistema, a
+propriedade termodinâmica volume específico pode
+ser determinada.
+
+Esta constatação é de extrema importância na
+estratégia de solução do ciclo termodinâmico, uma
+vez que em problemas bem postos, ou seja, que não
+faltem os dados de entrada necessários, esta
+função de estado, ou propriedade volume
+específico, será sempre conhecida, faltando assim,
+pelo postulado de estado, apenas uma outra
+propriedade intensiva para a completa determinação
+do estado do sistema termodinâmico.
+
+Os parâmetros de tempo do motor são:
+
+- o ângulo de ignição, θ, em relação ao PMS;
+
+- a duração da combustão, Δtc;
+
+- a velocidade angular, ω, do motor, a qual é
+  proporcional à rotação, N, e cuja relação é
+  mostrada;
+
+- a duração angular da combustão, definida como o
+  ângulo percorrido pelo virabrequim durante o
+  tempo de combustão, δ = ω Δtc;
+
+É possível mostrar que o volume instantâneo é
+sempre variável com o ângulo do virabrequim---isso
+é deixado como exercício---isso faz com que
+qualquer processo a volume constante com o motor
+girando, seja um processo instantâneo.
+
+No ciclo Otto ideal, com adição de calor a volume
+constante, tem-se então Δtc = 0 e δ = 0.
+
+Ainda, vale notar que para um tempo fixo de
+combustão Δtc, a duração angular da combustão, δ,
+será proporcional à rotação do motor.
+
+Assim, a expectativa é de que operação em marcha
+lenta, ou seja, em baixas rotações, se aproxime
+daquela prevista pelo cilo Otto ideal, e que
+operações em altas rotações, se distanciem dela.
+
+No modelo FTHA, casos de ω constante possibilitam
+fácil discretização, ou seja, subdivisão dos
+processos, em termos de α,
+
+com intervalo de simulação de -π a π;
+
+e intervalo de adição de calor de θ a θ+δ.
+
+Assim, os valores discretos de α, α_i, são dados
+pela equação mostrada, na qual Δα é o intervalo
+angular da simulação,
+
+o qual deve ser um submúltiplo inteiro de π, a fim
+de que a simulação visite os estados de ponto
+morto inferior e superior.
+
+O parâmetro de refinamento de malha angular, I,
+deve ser um número inteiro razoavelmente grande,
+por exemplo, da ordem de 180, a fim de que a
+aproximação dos processos com processos localmente
+politrópicos seja adequada.
+
+É importante notar que este esquema de
+discretização é diferente daquele trazido no
+artigo que introduziu o FTHA na literatura,
+incluído nos tópicos de leitura, e representa uma
+melhoria daquele.
+
+Já em casos de velocidade angular variável, que
+por exemplo ocorrem quando o modelo FTHA é
+acoplado a um modelo dinâmico, a discretização
+temporal passa a ser vantajosa.
+
+A adição não instantânea de calor requer que a
+função cumulativa de calor adicionado, q(α), seja
+conhecida.
+
+Tal função pode ser expressa em termos do calor
+total que entra por ciclo, q_ent, o qual tem
+correspondência com o ciclo Otto ideal,
+
+e uma função normalizada cumulativa de calor
+adicionado, ou fração cumulativa de calor
+adicionado, y(α), com
+
+y(α) = 0 do início da simulação até a ignição, ou
+seja, para α < θ,
+
+y(α) = uma função g(α) entre a ignição e o final
+da combustão, ou seja, para α entre θ e θ + δ, e
+
+y(α) = 1 após o final da combustão, ou seja, para
+α > θ + δ, como mostrado na equação em destaque.
+
+Um possível gráfico de y(α) é mostrado ao lado.
+Note primeiramente que a escala vertical vai de 0
+a 100%, uma vez que y é normalizado.
+
+Nenhuma liberação cumulativa de calor é observada
+desde α = -π até α = θ.
+
+Desde α = θ até α = θ + δ, ou seja, do início ao
+final do intervalo de combustão, a adição de calor
+vai sendo acumulada até 100%.
+
+Após o término da combustão, a saber,
+para α > θ + δ, o calor adicionado permanece fixo
+em 100%.
+
+Desta forma, a função g(α) modela o histórico da
+adição de calor.
+
+Assim, g(α) deve ser definida no intervado de
+α entre θ e θ + δ; seu valor no início do
+intervalo deve ser zero---para coincidir com o
+valor inicial de y---e seu valor no final do
+intervalo deve ser unitário---para coincidir com o
+valor final e máximo de y.
+
+Além disso, pelo fato de g(α) representar o
+histórico da liberação de calor por parte de uma
+reação química exotérmica de combustão não
+reversível, a função g(α) deve ser sempre
+crescente, ou seja, deve ser monotônica, assim
+como a função g(α) ilustrada o é.
+
+Ainda, a função g(α) pode ser modelada com base em
+dados experimentais.
+
+Quando isso é feito em um estudo de caso, tem-se
+um modelo de substância pura que captura a
+"assinatura" de liberação de calor observada no
+experimento, permitindo que um modelo bastante
+simplificado, padrão a ar, como o FTHA,
+contabilize tal efeito.
+
+Em uma consideração mais geral, pode-se obter a
+função g(α) da literatura, conforme exemplificado
+pela equação destacada na última linha.
+
+Partido para a modelagem do ciclo termodinâmico,
+tem-se que no i-ésimo processo politrópico,
+
+- o sistema evolui do estado-i para o
+  estado-(i+1);
+
+- Em razão da discretização, as propriedades,
+  também chamadas de funções de estado, a exemplo
+  de Pi, Ti, etc., são definidas nos estados -i e
+  -(i+1), apenas!
+
+- As interações q_i e w_i não referem-se ao
+  estados, mas sim, aos processos que levam o
+  sistema de um estado ao próximo.
+
+Assim, o balanço de energia do processo discreto
+fica
+
+como mostrado, respeitando a convenção de sinais
+de balanço da termodinâmica, a saber: q_i e w_i
+positivos aumentam o inventário de energia interna
+no sistema, sendo, portanto, interações que entram
+no sistema.
+
+Em um esquema de solução em marcha, estados
+futuros são determinados com base em estados
+atuais já conhecidos---o estado-i,
+
+e nas interações conhecidas: q_i e w_i;
+
+assim,
+
+a equação do balanço pode ser reescrita na forma
+de solução em marcha,
+
+u (futuro) = u (atual) + interações do processo.
+
+Condições iniciais fornecem u (atual) por meio do
+estado atual;
+
+assim, solução em marcha sempre é possível
+quando se conhece as interações do processo.
+
+A vantagem de ter-se definido a função y(α)
+consiste na garantia de que o termo de calor é
+sempre conhecido, e o desafio residirá no termo de
+trabalho, a ser mostrado oportunamente.
+
+A i-ésima interação de calor é escrita como
+mostrado,
+
+a qual pode ser expandida
+
+para evidenciar os termos conhecidos, como na
+equação em destaque;
+
+já a i-ésima interação de trabalho é na forma de
+trabalho de fronteira, e deve ser obtida pela
+integração mostrada, se valendo da informação de
+que o elemento computacional da simulação é o
+processo localmente politrópico, cuja única
+incógnita é o expoente politrópico local, do
+proceso, n_i.
+
+A integração resulta em
+
+múltiplos casos, dependendo do valor do expoente
+politrópico n_i, mostrados na equação em destaque.
+
+Os dois primeiros casos correspondem aos casos
+clássicos de n_i ≠ 1 e de n_i = 1.
+
+Já o terceiro caso, correspondente a dv tendendo a
+0 e simultaneamente n_i tendendo ao infinito; tem
+sua resposta de trabalho zero explicitada, não
+apenas para evitar instabilidades numéricas, mas
+também para dar margem, na implementação da
+solução, a um caso no qual w_i é imediatamente
+conhecido, favorecendo a marcha da técnica de
+solução.
+
+Em razão da representação binária em ponto
+flutuante dos valores na memória dos computadores,
+a condição dv tendendo a zero deve ser escrita na
+implementação como ao final da última linha, ou
+seja, o módulo da diferença entre v_i e v_i+1
+menor ou igual a um limiar ϵ_v, escolhido
+adequadamente.
+
+Em geral, não se dispõe das informações
+necessárias para o simples avanço em marcha da
+solução numérica, uma vez que a equação para a
+i-ésima interação de trabalho, salvo raros
+processos localmente isocóricos, requer
+conhecimento do i-ésimo expoente politrópico
+local, n_i.
+
+Assim, a equação do trabalho substitui, no balanço
+de energia, a incógnita do trabalho w_i pela
+incógnita do expoente politrópico n_i.
+
+O impasse no procedimento de solução é desfeito
+por uma conjectura de consistência termodinâmica,
+mostrada, a qual lê:
+
+Para uma dada interação de calor, q_i, existe um
+único expoente politrópico, n_i, tal que o
+processo politrópico Pv^n_i = C_i = const.,
+aplicado entre estados (i) e (i+1) resulta em uma
+interação de trabalho, w_i, e em uma variação de
+energia interna, ∆u_i = u_i+1 − u_i , que é
+termodinamicamente consistente com a equação P-v-T
+de estado da substância de trabalho em ambos
+estados finais e que também satisfaz o balanço de
+energia do processo.
+
+Esta percepção física do problema aponta para uma
+técnica iterativa de solução, na qual
+
+uma estimativa inicial n_i^0 para n_i é
+progressivamente corrigida, em iterações "j", até
+a convergência do esquema.
+
+Esta técnica requer a definição de tolerâncias
+ϵ na detecção da convergência.
+
+A tolerância ϵ_w estabelece a maior diferença
+aceitável na interação w_i entre sucessivas
+iterações "j", do processo de estimativa e
+correção.
+
+Já a tolerância ϵ_u é empregada no método
+numérico que determina a temperatura T_i+1^j com
+base em uma energia interna específica u_i+1^j, e
+pode ser dispensada caso se faça uso de uma
+biblioteca de propriedades termodinâmicas que
+automatize este processo.
+
+
+
+O processo iterativo de convergência do expoente
+politrópico do i-ésimo processo é o seguinte:
+
+Com um valor n_i^j inicial ou previamente
+corrigido é possível obter o trabalho e a energia
+interna específica do estado seguinte através do
+balanço de energia.
+
+Tal energia interna específica, juntamente
+com o volume específico já conhecido,
+completamente determina o estado seguinte (i+1).
+
+Assim, a j-ésima aproximação da pressão do estado
+seguinte é obtida, empregando relações
+termodinâmicas pertinentes da substância em
+questão.
+
+Por exemplo, no caso de gas ideal, a temperatura
+pode ser encontrada pela energia interna---uma vez
+que em gases ideais esta é função apenas da
+temperatura---e a equação de estado Pv=RT, com
+conhecimento de v, R e T, pode ser utilizada para
+determinação da pressão.
+
+De posse da j-ésima aproximação da pressão do
+estado seguinte, o expoente politrópico corrigido
+pode ser encontrado pelo processo politrópico,
+
+Resolvendo a equação mostrada para n_i^j+1,
+
+o que resulta na equação em destaque, a qual
+envolve apenas pressão e volume específico nos
+estados limites do i-ésimo processo.
+
+O procedimento de solução é dividido em algoritmos
+de inicialização, laço geral do ciclo e
+finalização.
+
+A inicialização determina o estado inicial e
+prepara o código para o laço geral do ciclo.
+
+O laço geral do ciclo corresponde ao processo de
+marcha ao longo de todos os sub-processos
+localmente politrópicos, nos qual os estados
+seguintes são um a um determinados com base em
+estados já conhecidos, iniciando evidentemente,
+pelo estado inicial.
+
+O algoritmo de finalização calcula as quantidades
+de interesse e salva os dados para posterior
+pós-processamento.
+
+No quadro mostrado, são listados os requisitos
+para a simulação, que são os dados de entrada
+necessários, como os parâmetros do motor, da
+discretização, do estado inicial e as tolerâncias.
+
+Toda quantidade com índice deve ser implementada
+como um vetor na linguagem de programação
+selecionada.
+
+Pause o vídeo para examinar o algoritmo de
+inicialização.
+
+O algoritmo mostrado para o laço do ciclo inclui
+um laço "para", ou um loop for, em inglês, nas
+linhas de 1 a 4.
+
+Este laço em i é que percorre todos os processos
+do ciclo, conforme a linha 1.
+
+Note, pela linha 3, que a resolução em si é
+deixada para outro algoritmo, a ser apresentado na
+sequencia. Isso permite que a visão geral deste
+laço em i seja dada.
+
+O último processo, de rejeição de calor isocórica,
+é calculado nas linhas 5 a 8.
+
+Pause o vídeo para examinar o algoritmo de laço do
+ciclo.
+
+O algoritmo de finalização mostrado inclui os
+seguintes cálculos, linha a linha à partir da
+primeira:
+
+- Trabalho que entra no sistema por ciclo;
+- Trabalho realizado pelo sistema por ciclo;
+- Trabalho líquido realizado por ciclo;
+- Calor que entra no sistema,
+
+o qual deverá ser igual ao q_ent estipulado na
+inicialização;
+
+- Calor rejeitado pelo sistema por ciclo;
+- Eficiência térmica;
+- Razão de consumo de trabalho;
+- Pressão média efetiva;
+
+O último passo é o salvamento dos dados, cuja
+forma depende da implementação.
+
+Salvar os dados da simulação permite a separação
+dos conceitos de simulação e de pós-processamento,
+permitindo que sejam desenvolvidos, mantidos, ou
+melhorados de forma independente.
+
+Pause o vídeo para examinar o algoritmo de
+finalização.
+
+O algoritmo de solução de subprocesso visa
+determinar o valor do expoente politrópico do
+i-ésimo processo.
+
+Como visto anteriormente, isto requer outro
+procedimento iterativo, em j, exceto no caso de
+processo isocórico, para o qual o trabalho é nulo.
+Assim, o algortitmo possui duas vertentes.
+
+O quadro traz a cláusula SE que implementa a
+escolha. O algoritmo para o caso de processo
+isocórico está completo, e o outro caso, que é
+iterativo, é deixado para o slide seguinte.
+
+Pause o vídeo para examinar o algoritmo de
+solução de subprocesso.
+
+O quadro traz o algoritmo de solução de
+sub-processo politrópico via processo iterativo.
+
+A linha 1 inicializa j.
+
+Na linha 2, os i-ésimos valores dos vetores
+listados são reinicializados como vetores. Isto é
+relativamente fácil de fazer em certas linguagens,
+como Python, na qual uma lista, que é um tipo de
+vetor daquela linguagem, pode conter outras listas
+como seus elementos.
+
+Dependendo da linguagem escolhida para a
+implementação, esta prescrição pode mudar em
+função de fatores como capacidade para tal e/ou
+velocidade de execução.
+
+Na linha 3, temos a inicialização de n_i, com j=0,
+como sendo o valor correspondente ao caso
+isentrópico na temperatura T_i, o que acelera a
+convergência nos processos sem adição de calor,
+que tendem ser majoritários.
+
+A primeira condição do laço enquanto, que em
+inglês chama-se "while" loop, força a primeira
+execução do bloco das linhas 6 a 11, ao passo que
+a segunda verifica convergência.
+
+A linha 7 assume a disponibilidade de biblioteca
+de propriedades capaz de inverter a função energia
+interna específica em função da temperatura para
+gases ideais.
+
+Caso isso não seja verdade e você estiver
+implementando sua própria biblioteca, você deverá
+utilizar um método numérico de solução de raiz de
+funções no cálculo de T_i+1, como o de
+Newton-Raphson, ou da secante, da régula-falsi, ou
+até mesmo da bisseção, lembrando das diferenças de
+desempenho computacional e das limitações de cada
+um destes métodos.
+
+O artigo que introduziu o FTHA, listado como
+tópico de leitura, fornece uma versão do método de
+Newton-Raphson, aproveitando o fato de que a
+derivada da energia interna específica em função
+da temperatura, cv(T), já é conhecida.
+
+A linha 13 instrui a reversão dos vetores
+temporários em seus últimos valores. Os mesmos
+comentários feitos para a linha 2 cabem aqui.
+
+Pause o vídeo para examinar o algoritmo de
+solução de subprocesso.
+
+Dentre os tópicos de leitura da disciplina,
+separam-se para este assunto as Seções 9-3 a 9-5
+do livro-texto de Termodinâmica,
+
+além do artigo "An air-standard finite-time heat
+addition Otto engine model", publicado no
+International Journal of Mechanical Engineering
+Education.
+
+Os céus proclamam a glória de Deus,
+e o firmamento anuncia as obras das suas mãos.
+
+Um dia discursa a outro dia,
+e uma noite revela conhecimento a outra noite.
+
+Não há linguagem, nem há palavras,
+e deles não se ouve nenhum som;
+
+no entanto, por toda a terra se faz ouvir a sua
+voz, e as suas palavras, até aos confins do mundo.
+
+Salmos 19, de Davi.
+
+
+
+Muito obrigado a todos pela audiência,
+desejo a todos ótimos estudos em ciências
+térmicas.
+
+Até a próxima!
+

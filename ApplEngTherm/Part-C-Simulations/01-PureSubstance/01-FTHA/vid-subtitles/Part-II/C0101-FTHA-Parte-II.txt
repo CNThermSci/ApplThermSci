@@ -1,0 +1,534 @@
+Olá estudantes de ciências térmicas!
+
+Neste vídeo veremos a Parte-II do tópico
+Ciclo Otto de Tempo Finito de Adição de Calor
+conhecido como "FTHA", do inglês:
+Finite-Time Heat Addition Otto Engine Model
+
+Este vídeo pode dispor de legendas.
+A apresentação na qual este vídeo se baseia
+encontra-se disponível no endereço mostrado
+sob licensa Creative Commons de atribuição,
+não comercial e não derivados, CC-BY-NC-ND
+uma licensa aberta que restringe o uso comercial
+assim como modificações do conteúdo.
+Vamos ao conteúdo!
+
+Na Engenharia Mecânica da UTFPR Campus Guarapuava
+este tópico é coberto na disciplina de
+Máquinas Térmicas
+
+A Parte-I, coberta em outro vídeo, trata da
+apresentação do modelo FTHA.
+
+A Parte-II, coberta neste vídeo,
+trata da validação do modelo FTHA, e traz
+um estudo de caso com base no modelo.
+
+Tópicos de leitura são fornecidos
+ao final do vídeo.
+
+Falamos agora sobre a importância da validação, no
+contexto de soluções e métodos numéricos.
+
+Uma solução numérica é o resultado de muitas
+operações;
+
+As quais seguem um algoritmo implementado;
+
+Enquanto o algoritmo é a estratégia de solução
+do modelo matemático;
+
+O modelo matemático é a descrição do modelo
+fı́sico;
+
+O qual vêm da teoria;
+
+A própria teoria advém de hipóteses formuladas e
+testadas por cientistas;
+
+As quais são formulações da mente humana
+elaboradas após observação da realidade.
+
+Nesta exposição, procura-se mostrar que há um
+longo caminho entre a realidade e a solução
+numérica, e cada passo do processo está sujeito a
+erros. Se formos rigorosos, devemos admitir que:
+
+- Hipóteses podem estar erradas;
+- Hipóteses testadas podem ser incompletas;
+- e igualmente a teoria que nelas se baseia;
+
+No caso do modelo FTHA, que apóia-se sobre a
+primeira lei da termodinâmica, a qual está
+firmemente estabelecida (veja o vídeo sobre
+Balanço de Energia, neste canal), sequer
+consideramos tais possibilidades, porém,
+
+- O modelo físico pode estar equivocado, por
+  exemplo, caso processos localmente politrópicos
+  não sejam tão flexíveis a ponto de representar
+  todos os ciclos---o que não parece ser verdade;
+
+- Erros de manipulação das equações podem fazer
+  com que o modelo matemático esteja incorreto;
+
+- O algoritmo pode ser falho em certos casos e não
+  levar à convergência, em cujo caso algum while
+  loop pode executar indefinidamente, e ainda,
+
+- A implementação do algoritmo, a saber, o código,
+  pode estar falho, e conter um ou vários "bugs",
+  e finalmente,
+
+- Os dados de entrada podem estar equivocados.
+
+Como então saber se a solução numérica não retorna
+“garbage”? (quer dizer, lixo, em português).
+
+Sem esta certeza, afinal, os resultados produzidos
+pelo algoritmo implementado não podem (nem devem)
+ser confiados!
+
+A resposta está na validação!
+
+O que é, então, validação?
+
+Em um caso de validação, parâmetros do modelo são
+ajustados, de modo a que o modelo represente um
+problema cuja solução já seja conhecida.
+
+Evidentemente, tal solução conhecida deve ser
+confiável,
+
+a exemplo de resultados de experimentos
+cuidadosamente conduzidos, o que proporciona uma
+relação mais direta com a realidade,
+
+ou solução analítica do mesmo modelo matemático,
+devido à sua comprovada exatidão.
+
+Uma vez que o FTHA melhora o ciclo Otto ideal, o
+FTHA pode ser reduzido ao ciclo ideal, bastando
+ajustar δ=0 e igualar os demais parâmetros, como r
+e k.
+
+Lembrando que o ciclo Otto ideal sob as hipóteses
+do padrão a ar frio possui solução exata para a
+eficiência térmica,
+
+o FTHA pode ser validado por meio do ciclo Otto
+ideal, caso produza resultado próximo ao previsto
+por aquele modelo, com dados de entrada
+equivalentes.
+
+É importante notar que não se falou
+necessariamente em igualar os resultados, porém
+aproximá-los, uma vez que a técnica numérica está
+intrinsicamente sujeita a erros de discretização e
+de representação numérica na memória de um
+computador.
+
+Para um novo modelo, quanto mais casos de
+validação forem feitos, melhor.
+
+Isso é especialmente verdadeiro caso as
+simplificações a serem feitas de modo a reproduzir
+um caso de solução conhecida forem grandes.
+
+A figura ilustra um caso de validação para o FTHA
+com base no ciclo Otto ideal padrão a ar frio, com
+fluido de trabalho com calores específicos
+constantes.
+
+Os parâmetros empregados para reduzir o FTHA em um
+caso de ciclo Otto ideal padrão a ar frio incluem:
+
+- δ de um centésimo de grau (δ = 0.01°);
+- substância com cv constante e k = 1.3343; e
+- razão de compressão, r = 12:1.
+
+Os resultados obtidos com a implementação, em
+python, do FTHA são mostrados com marcadores azuis
+em xis (×), enquanto que a solução exata do ciclo
+Otto ideal padrão a ar frio é tracada em linha
+vermelha contínua.
+
+Em validação os resultados das duas técnicas, a
+saber, a validar e a de referência, são mostradas
+em sobreposição, de modo a permitir e a facilitar
+a comparação.
+
+No caso enunciado de validação, vemos resultados
+indistinguivelmente iguais entre as duas técnicas,
+indicando validação da implementação do modelo
+FTHA quanto a processos isentrópicos e a de adição
+e remoção de calor.
+
+Na legenda do gráfico são apresentados os valores
+de eficiência térmica obtidos por ambas as
+técnicas de resolução. Observa-se concordância de
+pelo menos 5 dígitos significativos.
+
+Note que não podemos afirmar, com base na figura,
+uma aproximação maior, uma vez que ela não fornece
+informações que permitam isso!
+
+O artigo traz um estudo de validação semelhante,
+porém com razão de compressão diferente. Mais
+casos de validação podem ser testados, incluindo:
+
+- Modelo padrão a ar, com gás ideal de calores
+  específicos variáveis, cuja solução de
+  referência deixa de ser analítica;
+
+Com ambos modelos de referência, padrão a ar frio
+ou quente, diversos valores dos parâmetros de
+entrada, razão de compressão e fluido de trabalho,
+podem ser variados.
+
+Com uma implementação validada, parte-se para a
+resolução de estudos de caso, que são a aplicação
+do modelo em situações desejadas, por meio da
+resolução do problema modelado com variações nos
+parâmetros de entrada.
+
+- São nos estudos de caso em que se coletam as
+  previsões do modelo.
+
+- É onde expectativas educadas podem ou não ser
+  confirmadas.
+
+- É onde se aprende com o modelo, pela análise dos
+  resultados previstos face aos parâmetros
+  variados.
+
+O artigo que traz o FTHA contém um estudo de caso,
+um teste de rotação, com a seguinte configuração:
+
+- Para um ∆t de combustão fixo, δ aumenta com a
+  rotação do motor modelado, assim:
+
+- Espera-se ciclos parecidos com o Otto ideal para
+  baixos valores de δ;
+
+- Espera-se desvios progressivos e queda na
+  eficiência com aumento de δ;
+
+- Espera-se quedas progressivas na pressão máxima
+  com aumento de δ; e
+
+- Espera-se diagramas P-v parecidos com o
+  ilustrado no início do vídeo da Parte-I:
+
+Espera-se que o FTHA prediga ciclos incorporando
+efeitos de combustão não instantânea, indicados em
+verde, porém não os demais efeitos de
+transferência de calor e de bombeamento,
+representados em vermelho e em azul.
+
+No estudo de caso a ser apresentado, tem-se como
+caso de interesse:
+
+- Um motor quadrado, de curso igual ao diâmetro,
+  com
+
+- Volume deslocado unitário de 250 cm³ --- se
+  imaginarmos um motor de 4 cilindros, o volume
+  deslocado total será de 1 litro, ou seja, de um
+  motor 1.0;
+
+- A relação biela/manivela, L/D = 5, a qual tende
+  para o regime de biela longa, caracterizado por
+  movimento quase cossenoidal puro do pistão em
+  função do ângulo de virabrequim; e
+
+- Razão de compressão de 12:1, a qual situa-se na
+  faixa superior para motores de ignição por
+  centelha, ou seja, de "ciclo Otto";
+
+- Como fluido de trabalho deste modelo padrão a
+  ar, utiliza-se o CO2 como gás ideal e
+
+- cv(T) em base molar modelado como um polinômio
+  de 5° grau;
+
+- A malha angular terá variações angulares no
+  virabrequim de 0.5° na adição de calor, com
+
+- adição específica de calor de 1000 kJ/kg em cada
+  ciclo;
+
+- O ângulo de ignição, θ, é mantido em -10°,
+  portanto ligeiramente avançado em relação ao
+  ponto morto superior, em todos os casos;
+
+- O parâmetro δ é variado --- a fim de representar
+  operações em rotações diferentes, com Δt de
+  combustão fixo --- de 20 em 20 graus entre 10 e
+  110 graus;
+
+- ou seja, desde uma suposta rotação de marcha
+  lenta com grande entrada específica de calor,
+  até uma rotação final 11 vezes maior, com a
+  mesma entrada específica de calor.
+
+É importante notar que no caso de menor rotação, a
+saber, de δ = 10°, a adição de calor termina
+exatamente no ponto morto superior, em razão do
+avanço de 10° da ignição em relação ao PMS,
+fazendo com que este caso mantenha a forma
+"pontuda" da parte superior do diagrama P-V do
+ciclo, à semelhança do que ocorre com o ciclo Otto
+ideal.
+
+A figura mostra, em coordenadas P-v logarítmicas,
+a sobreposição dos ciclos obtidos com variação do
+parâmetro δ, indicando operação em rotações
+diferentes mantendo todos os demais parâmetros
+iguais.
+
+
+A legenda informa a correspondência de cor e
+traçado de linhas com os valores de δ, e os
+valores correspondentes de eficiência térmica.
+
+Nota-se pela legenda, que a eficiência térmica cai
+sensivelmente à medida em que δ (ou a rotação)
+aumenta.
+
+Isso exemplifica o que se quer dizer com aprender
+com o modelo.
+
+A eficiência térmica cai de 38,1%, com δ = 10°,
+para 25,3%, com δ = 110°.
+
+
+Quanto ao aspecto dos ciclos no gráfico, todos
+seguem o mesmo caminho (portanto mesmos processos)
+desde o início do ciclo até o momento da ignição,
+onde se observa a divergência entre as curvas, com
+volume específico ligeiramente maior que 0.05
+m³/kg e pressão próxima de 2000 kPa.
+
+À partir da ignição, casos de rotação, e δ,
+menores registram um rápido aumento de pressão na
+passagem do pistão pela região do ponto morto
+superior, a exemplo das curvas vermelha e amarela,
+ao passo que casos de mais altas rotações,
+aumentos lentos de pressão pouco distintos do
+ergime de aumento de pressão por compressão
+apenas, como ilustrado pelas linhas roxa e azul.
+
+Casos intermediários como o da linha verde, exibem
+um aumento de pressão gradativo desde a ignição,
+ao final da compressão e ao início da expansão.
+
+
+O regime de expansão isentrópica, caracterizado
+pela trajetória paralela à da compressão neste
+caso de substância de calor específico constante,
+é atingido mais cedo (em volumes específicos
+menores) nos casos de rotação e δ menores.
+
+Ora, tais ângulos são conhecidos pela formulação
+do modelo, e expressos por α = θ + δ.
+
+
+Observa-se também que a pressão máxima atingida no
+ciclo decresce à media em que δ aumenta. Tal
+comportamento é observado em ensaios experimentais
+com motores instrumentados, particularmente à
+partir de rotações médias a altas, lembrando que
+naqueles testes a quantidade de calor fornecida
+por ciclo não tem a mesma configuração que nos
+resultados aqui apresentados, requerendo bastante
+cautela na comparação entre os resultados.
+
+
+Ao final da expansão, já de volta ao regime
+isentrópico, as linhas dos diferentes casos se
+agrupam em um feixe de segmentos paralelos, que é
+característica de processos isentrópicos com
+expoente de expansão isentrópica, k, constante em
+coordenadas P-v logarítmicas.
+
+(Aqui sugere-se uma revisão do vídeo de processos
+politrópicos do canal, caso esta conclusão não
+te tenha soado intuitiva).
+
+
+Um outro resultado, que surpreende à primeira
+análise, é que os ciclos de δ's e rotações maiores
+terminam com pressões progressivamente maiores, e
+que correspondem à eficiências menores.
+
+Uma interpretação é que com δ's pequenos, o calor
+é todo liberado até estágios iniciais da expansão,
+havendo maior oportunidade de expansão produtora
+de trabalho do fluido aquecido nestes casos; ao
+passo que com δ's significativamente maiores,
+grande parte do calor entra em estágios avançados
+da expansão, não sendo integralmente aproveitado
+na expansão do sistema, permanecendo parcialmente
+armazenadas no fluido de trabalho como energia
+interna, manifestada em temperatura e pressão
+maiores no estado final da expansão.
+
+Outra perspectiva é que casos com estados ao final
+da expansão mais energéticos (e exergéticos)
+resultarão em maior desperdício de potencial de
+realização de trabalho, quando no motor real a
+válvula de escape for aberta, ou, no modelo padrão
+a ar quando houver necessidade maior de retirada
+de calor de modo a trazer o sistema de volta ao
+estado inicial e fechar o ciclo.
+
+Observações como estas, ilustram o que se quer
+dizer com aprender com os resultados do modelo.
+
+Agora mostra-se o mesmo resultado do gráfico
+anterior, só que em coordenadas P-v lineares.
+
+Ao contrário do gráfico anterior, neste gráfico as
+áreas são uniformes em toda extensão do plano,
+fazendo com que as áreas realmente traçadas dos
+ciclos são proporcionais ao trabalho líquido
+desenvolvido em cada um deles.
+
+Ainda, pelo fato da adição de calor ser a mesma em
+todos os casos, as áreas dos ciclos são também
+proporcionais às eficiências térmicas dos ciclos.
+
+
+Este resultado explica a forte influência do
+intervalo angular de combustão --- uma forma de
+relação entre tempo de combustão e tempo de giro
+do motor --- à medida em que grande parte da área
+dos ciclos com adição de calor progressivamente
+instantâneas, encontra-se justamente na ponta
+correspondente à maior pressão e menor volume
+específico, a qual deixa de ser visitada à medida
+em que δ aumenta, como se vê.
+
+
+Ainda, a redução da pressão máxima com o aumento
+da rotação fica bem mais evidente neste gráfico em
+escala linear.
+
+Este gráfico mostra os resultados em coordenadas
+P-α, semelhante aos obtidos nos ensaios
+experimentais com traçadores de pressão (consulte
+o livro de motores de combustão interna, listado
+ao final do vídeo, para mais informações).
+
+
+Neste gráfico é também possível verificar o grande
+impacto do aumento de δ na pressão máxima do
+ciclo.
+
+
+A constância do ângulo de ignição, em todos os
+casos de -10° em relação ao PMS é bem evidente.
+
+
+Outro resultado interessante é que para os casos
+de menores valores de δ, é possível observar mais
+diretamente a assinatura da função g(α) na
+trajetória dos processos em coordenadas P-α.
+
+A função g(α) foi mantida uma cossenoidal pura em
+todos os casos.
+
+
+Observa-se semelhança qualitativa entre os
+tracados mostrados e aqueles obtidos de ensaios de
+motores reais em bancadas instrumentadas.
+
+A semelhança observada, é um forte indicativo de
+que a adição de calor não instantânea, ao invés da
+modelagem de reações químicas, é um fator
+preponderante na melhoria dos ciclos Otto ideais.
+
+Este novo gráfico mostra os resultados em
+coordenadas T-v, lineares.
+
+Enquanto observamos uma relativa pequena variação
+de pressão ao final da expansão, em termos de
+temperatura, estas diferenças são exacerbadas, cmo
+uma diferença de temperatura de escape de
+aproximadamente 150°C entre os casos extremos.
+
+
+Ainda, em termos de temperatura máxima do ciclo,
+vê-se que ela cai  e ocorre em volumes (e ângulos)
+maiores com o aumento de rotação.
+
+
+A entrada gradual de calor  nos casos de maiores
+δ's causa um crescente aumento da temperatura
+durante a expansão, seguido de uma pequena
+queda após o término do fornecimento de calor.
+
+As linhas se cruzam fazendo com que as curvas
+correspondentes aos casos de maiores δ's terminem
+o ciclo com as maiores temperaturas.
+
+Isso faz bastante sentido, se considerarmos um
+aumento ainda maior de δ, tal que a combustão
+ainda esteja incompleta ao final da expansão. No
+caso de motores reais, lembramo-nos das situações
+em que fogo é visto saindo pelo escapamento --- a
+condição chamada de "backfire" em inglês, a qual
+também é associada a motores mal regulados.
+
+Nestes casos é evidente que se a combutão em parte
+ocorre fora do motor, a mesma não pode ser por
+ele convertida em trabalho útil. Logo, altas
+temperaturas de escape indicam perdas de
+oportunidade de realização de trabalho e
+consequentes baixas eficiências.
+
+
+Note quantas conclusões razoáveis pudemos chegar
+com uma pequena melhoria do ciclo Otto ideal!
+
+
+Este estudo não é o único que pode ser feito com o
+modelo FTHA, o qual possui vários parâmetros!
+
+Espero que este vídeo tenha sido revelador da
+utilidade das simulações em engenharia, e tenha
+sido motivacional para que você faça a sua
+implementação do algoritmo de solução do FTHA,
+dado no vídeo da Parte-I, assim como seus estudos
+de caso!
+
+Como tópicos de leitura da disciplina, separam-se
+os capítulos 1 e 2 do livro "Motores de Combustão
+Interna", de Franco Brunetti,
+
+assim como o artigo "An air-standard, finite-time
+heat addition Otto engine model", publicado no
+International Journal of Mechanical Engineering
+Education.
+
+Digno és, Senhor meu e Deus meu,
+
+de receber a glória, e a honra, e o poder,
+
+porque tu criaste todas as coisas,
+
+e, pela tua vontade, existiram e foram criadas.
+
+Apocalipse 4 de João
+
+
+
+
+Muito obrigado a todos pela audiência,
+desejo a todos ótimos estudos em ciências
+térmicas.
+
+Até a próxima!
+

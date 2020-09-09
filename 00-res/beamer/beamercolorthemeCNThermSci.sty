@@ -1,0 +1,65 @@
+% Based on the UTF2 color theme 
+\ProvidesPackageRCS $Header: beamercolorthemeCNThermSci.sty,v 001 2020/03/25 16:12:00 pcyes$
+
+%-----------------------------------------------------------------------------------------------
+% CNThermSci Palette - from logo (plain black and white are already defined)
+\definecolor{Cbkg}{rgb}{0.239,0.239,0.545} % "CN"  background color
+\definecolor{Tbkg}{rgb}{0.239,0.545,0.239} % "Θ"   background color
+\definecolor{Sbkg}{rgb}{0.545,0.239,0.545} % "Sci" background color
+
+% CNThermSci Pallete PERMUTATIONS
+\definecolor{Lred}{rgb}{0.545,0.239,0.239} % logo red   --- 000°
+\definecolor{Lred}{rgb}{0.545,0.545,0.239} % logo yel   --- 060°
+\definecolor{Lgre}{rgb}{0.239,0.545,0.239} % logo gre   --- 120°
+\definecolor{Lcya}{rgb}{0.239,0.545,0.545} % logo cya   --- 180°
+\definecolor{Lblu}{rgb}{0.239,0.239,0.545} % logo blu   --- 240°
+\definecolor{Lmag}{rgb}{0.545,0.239,0.545} % logo mag   --- 300°
+
+% Pallete MIXTURES
+\definecolor{Mora}{Lred!50!Lyel} % orange mixture       --- 030°
+\definecolor{Mcan}{Lyel!50!Lgre} % canary mixture       --- 090°
+\definecolor{Mcgr}{Lgre!50!Lcya} % cyagre mixture       --- 150°
+\definecolor{Mbcy}{Lcya!50!Lblu} % blucya mixture       --- 210°
+\definecolor{Mvio}{Lblu!50!Lmag} % violet mixture       --- 270°
+\definecolor{Mmau}{Lmag!50!Lred} % Mauve  mixture       --- 330°
+
+%-----------------------------------------------------------------------------------------------
+\mode<presentation>
+
+% Normal text FG and BG
+\setbeamercolor{normal text}{fg=black,bg=white}                     % Slide background
+\setbeamercolor{structure}{fg=bcya!50!black}                        % Title + Controls
+\setbeamercolor{alerted text}{fg=uyel!75!black}                     % \alert{} contents
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!50}    % ???
+% Meanings of primary...quaternary are theme-dependent:
+% - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
+% - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
+% - The Copenhagen theme uses primary and secondary only, right to left on top & bottom
+\setbeamercolor*{palette primary}{bg=uyel,fg=black}                 % top+bot right strips
+\setbeamercolor*{palette secondary}{bg=black,fg=uyel}               % top+bot left strips
+\setbeamercolor*{palette tertiary}{bg=ared,fg=black}                % top+bot leftmost strip (out of 3)
+\setbeamercolor*{palette quaternary}{bg=black,fg=uyel!75!black}     % ???
+\setbeamercolor*{sidebar}{parent=palette primary}                   % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar primary}{fg=black}                 % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar secondary}{fg=white}               % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar tertiary}{fg=black}                % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar quaternary}{fg=white}              % Not tested (no sidebar)
+\setbeamercolor{framesubtitle}{fg=bcya!33!black}
+\setbeamercolor*{subtitle}{fg=black}
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+\setbeamercolor*{titlelike}{parent=structure}
+
+%-----------------------------------------------------------------------------------------------
+\mode<handout>{% Go easier on printers
+    \setbeamercolor*{palette primary}{bg=uyel!25!white,fg=black}
+    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=uyel!25!black}
+    \setbeamercolor*{palette tertiary}{bg=ared!25!white,fg=black}
+    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=uyel!25!black}
+}
+
+

@@ -38,7 +38,7 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Equação de Estado (EoS):}\vspace*{-2em}
+    \begin{frame}{Equação de Estado (EoS): Comportamento $P-T-v$}\vspace*{-2em}
         \begin{align*}
             \uncover<1->{
                 Pv &= RT            & P\bar{v}  &= \bar{R}T
@@ -69,30 +69,27 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de $\bar{c}_p(T)$ Polinomial}\vspace*{-2em}
-        \uncover<1->{Equação de Estado (EoS):}
+    \begin{frame}{Modelo de $\bar{c}_p(T)$ Polinomial:}\vspace*{-2em}
         \begin{align*}
+            \uncover<1->{
+                \bar{c}_p(T)    &= \sum_{i=1}^4 a_iT^{i-1},
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\rightharpoondown
+            }
             \uncover<2->{
-                Pv &= RT            & P\bar{v}  &= \bar{R}T
-                \qquad\rightharpoondown
+                \\[\medskipamount]
+                \bar{c}_p(T) &= a_1 + a_2T + a_3T^2 + a_4T^3,
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\rightharpoondown
             }
             \uncover<3->{
                 \\[\medskipamount]
-                P  &= \frac{RT}{v}  & P         &= \frac{\bar{R}T}{\bar{v}}
-                \qquad\rightharpoondown
-            }
-            \uncover<4->{
-                \\[\medskipamount]
-                T  &= \frac{Pv}{R}  & T         &= \frac{P\bar{v}}{\bar{R}}
-                \qquad\rightharpoondown
-            }
-            \uncover<5->{
-                \\[\medskipamount]
-                v  &= \frac{RT}{P}  & \bar{v}   &= \frac{\bar{R}T}{P}
-                \qquad\therefore
+                \bar{c}_v(T) = \bar{c}_p(T) - \bar{R} &= \sum_{i=1}^4 b_iT^{i-1},
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\rightharpoondown
             }
         \end{align*}
-        \uncover<6->{Cada equação com forma nas bases \alert{mássica}, e \alert{molar}.}
+        \uncover<4->{Cada equação com forma nas bases \alert{mássica}, e \alert{molar}.}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

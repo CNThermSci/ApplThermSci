@@ -34,7 +34,7 @@
 % Meanings of primary...quaternary are theme-dependent:
 % - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
 % - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
-% - The Copenhagen theme uses primary and secondary only, right to left on top & bottom
+% - The Copenhagen theme uses PRIMARY and QUATERNARY only, right to left on top & bottom
 \setbeamercolor*{palette primary}{bg=Lmag!40!black,fg=white}        % top+bot right strips
 \setbeamercolor*{palette secondary}{bg=Lblu!40!black,fg=white}      % ???
 \setbeamercolor*{palette tertiary}{bg=Lgre!40!black,fg=white}       % top+bot leftmost strip (out of 3)
@@ -56,10 +56,14 @@
 
 %-----------------------------------------------------------------------------------------------
 \mode<handout>{% Go easier on printers
-    \setbeamercolor*{palette primary}{bg=Lblu!25!white,fg=black}
-    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=Lblu!25!black}
-    \setbeamercolor*{palette tertiary}{bg=Lmag!25!white,fg=black}
-    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=Lblu!25!black}
+    \setbeamercolor*{normal text}{fg=black!50!white,bg=white}   % Slide background
+    \setbeamercolor*{structure}{fg=Lgre}                        % Title + Controls
+    \setbeamercolor*{alerted text}{fg=Lgre}                     % \alert{} contents
+    \setbeamercolor*{palette primary}{bg=Lmag!33!white,fg=black}
+    \setbeamercolor*{palette secondary}{bg=Lblu!33!white,fg=black}
+    \setbeamercolor*{palette tertiary}{bg=Lgre!33!white,fg=black}
+    \setbeamercolor*{palette quaternary}{bg=Lblu!33!white,fg=black}
+    \setbeamercolor*{subtitle}{fg=Lgre!85!white}                        % Subtitle
 }
 
 

@@ -62,7 +62,7 @@
         \end{align*}
         \uncover<5->{
             Cada equação com forma nas bases \alert{mássica}, e \alert{molar}, com
-            \alert{$R = \bar{R} / M$}.
+            \alert{$R = \bar{R} / M$} --- armazenar $\bar{R}$ e $M$!
         }
     \end{frame}
     %-------------------------------------------------------------------------------------------
@@ -78,18 +78,24 @@
             }
             \uncover<2->{
                 \\[\medskipamount]
-                \bar{c}_p(T) &= a_1 + a_2T + a_3T^2 + a_4T^3,
+                \bar{c}_p(T)    &= a_1 + a_2T + a_3T^2 + a_4T^3,
                                 & T_{min} \leqslant T \leqslant T_{max}
                                 & \qquad\rightharpoondown
             }
             \uncover<3->{
                 \\[\medskipamount]
-                \bar{c}_v(T) = \bar{c}_p(T) - \bar{R} &= \sum_{i=1}^4 b_iT^{i-1},
+                \bar{c}_v(T)    &= \bar{c}_p(T) - \bar{R} = \sum_{i=1}^4 b_iT^{i-1},
                                 & T_{min} \leqslant T \leqslant T_{max}
                                 & \qquad\rightharpoondown
             }
+            \uncover<4->{
+                \\[\medskipamount]
+                b_1             &= a_1 - \bar{R},
+                                & b_{i>1} = a_{i>1}
+                                & \qquad\therefore
+            }
         \end{align*}
-        \uncover<4->{Cada equação com forma nas bases \alert{mássica}, e \alert{molar}.}
+        \uncover<5->{Armazenar \alert{$a_i$}, saber \alert{converter $a_i \rightarrow b_i$}!}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

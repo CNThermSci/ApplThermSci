@@ -1,0 +1,84 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\VPMS}{{\ensuremath V_{\mathrm{PMS}}}}
+\newcommand{\VPMI}{{\ensuremath V_{\mathrm{PMI}}}}
+%-----------------------------------------------------------------------------------------------
+\title{C.01.01.Z1 -- FTHA Auxiliar 1}
+\subtitle{Biblioteca Simples de Gás Ideal}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \hfill%
+        \includegraphics[height=7.5mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+%   \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
+%       \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+%       \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+}} % Alpha logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Introdução}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Limitações do Ciclo Otto Ideal}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Melhorando o Ciclo Otto Ideal}\vspace*{-2em}
+        \uncover<1->{O ciclo Otto \alert{ideal}, da termodinâmica aplicada:}
+        \begin{columns}
+        \column{0.50\textwidth}
+        \begin{itemize}
+            \item<2->  Assume todas as \alert{hipóteses padrão a ar};
+            \item<8->  Assume entrada de calor \alert{isocórica};
+            \item<9->  Possui parâmetros \alert{$r$} e \alert{$k$}, e
+            \item<10-> Solução analítica, \alert{hip.~padrão a ar frio}:\\[\bigskipamount]
+        \end{itemize}
+        \begin{equation*}
+            \uncover<12->{\alert{\eta_t = 1 - r^{1-k}}\quad\rightharpoondown}
+        \end{equation*}%
+        \vspace*{-1em}
+        \begin{itemize}
+            \item<13-> $\eta_t\!:\!\eta_t(r, k)$ \alert{apenas}!
+        \end{itemize}
+        \column{0.50\textwidth}
+        \begin{itemize}
+            \item<3->  Gás \alert{ideal};
+            \item<4->  Processos \alert{internamente reversíveis};
+            \item<5->  Entrada de \alert{calor} modela a combustão;
+            \item<6->  Saída de \alert{calor} modela a exaustão;
+            \item<7->  Modelo em \alert{ciclo fechado};
+            \item<11-> Calores específicos \alert{constantes}.
+        \end{itemize}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{pexels-josh-sorenson-1154509}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

@@ -6,6 +6,7 @@
 \definecolor{Cbkg}{rgb}{0.239,0.239,0.545} % "CN"  background color
 \definecolor{Tbkg}{rgb}{0.239,0.545,0.239} % "Θ"   background color
 \definecolor{Sbkg}{rgb}{0.545,0.239,0.545} % "Sci" background color
+\definecolor{Lwhi}{rgb}{0.851,0.855,0.792} % Logo  yellowish  white
 
 % CNThermSci Pallete PERMUTATIONS
 \definecolor{Lred}{rgb}{0.545,0.239,0.239} % logo red   --- 000°
@@ -23,29 +24,32 @@
 \definecolor{Mvio}{rgb}{0.392,0.239,0.545} % violet mixture       --- 270°
 \definecolor{Mmau}{rgb}{0.545,0.239,0.392} % Mauve  mixture       --- 330°
 
+% Terminal Backgrounds
+\definecolor{Tcya}{rgb}{0.000,0.141,0.196} % Terminal cya
+
 %-----------------------------------------------------------------------------------------------
 \mode<presentation>
 
 % Normal text FG and BG
-\setbeamercolor{normal text}{fg=white!55!black,bg=Lblu!20!black}    % Slide background
-\setbeamercolor{structure}{fg=Lgre}                                 % Title + Controls
-\setbeamercolor{alerted text}{fg=Lgre}                              % \alert{} contents
-\setbeamercolor{item projected}{use=item,fg=white,bg=item.fg!50}    % ???
+\setbeamercolor{normal text}{fg=Lwhi!65!black,bg=Lblu!34!black}    % Slide background
+\setbeamercolor{structure}{fg=Lgre!75!white}                       % Title + Controls
+\setbeamercolor{alerted text}{fg=Lgre!75!white}                    % \alert{} contents
+\setbeamercolor{item projected}{use=item,fg=Lwhi,bg=item.fg!50}    % ???
 % Meanings of primary...quaternary are theme-dependent:
 % - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
 % - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
 % - The Copenhagen theme uses PRIMARY and QUATERNARY only, right to left on top & bottom
-\setbeamercolor*{palette primary}{bg=Lmag!40!black,fg=white}        % top+bot right strips
-\setbeamercolor*{palette secondary}{bg=Lblu!40!black,fg=white}      % ???
-\setbeamercolor*{palette tertiary}{bg=Lgre!40!black,fg=white}       % top+bot leftmost strip (out of 3)
-\setbeamercolor*{palette quaternary}{bg=Lblu!40!black,fg=white}     % top+bot left strips
-\setbeamercolor*{sidebar}{parent=palette primary}                   % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar primary}{fg=black}                 % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar secondary}{fg=white}               % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar tertiary}{fg=black}                % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar quaternary}{fg=white}              % Not tested (no sidebar)
-\setbeamercolor{framesubtitle}{fg=Lgre!85!white}
-\setbeamercolor*{subtitle}{fg=Lgre!85!white}                        % Subtitle
+\setbeamercolor*{palette primary}{bg=Lmag!40!black,fg=Lwhi}        % top+bot right strips
+\setbeamercolor*{palette secondary}{bg=Lblu!40!black,fg=Lwhi}      % ???
+\setbeamercolor*{palette tertiary}{bg=Lgre!40!black,fg=Lwhi}       % top+bot leftmost strip (out of 3)
+\setbeamercolor*{palette quaternary}{bg=Lblu!40!black,fg=Lwhi}     % top+bot left strips
+\setbeamercolor*{sidebar}{parent=palette primary}                  % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar primary}{fg=black}                % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar secondary}{fg=Lwhi}               % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar tertiary}{fg=black}               % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar quaternary}{fg=Lwhi}              % Not tested (no sidebar)
+\setbeamercolor{framesubtitle}{fg=Lgre!75!white}
+\setbeamercolor*{subtitle}{fg=Lgre!75!white}                       % Subtitle
 \setbeamercolor*{block title}{parent=structure}
 \setbeamercolor*{block title alerted}{parent=alerted text}
 \setbeamercolor*{block title example}{parent=example text}

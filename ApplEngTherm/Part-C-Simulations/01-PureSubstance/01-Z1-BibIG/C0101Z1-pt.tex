@@ -131,6 +131,33 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de $\bar{c}_p(T)$ Polinomial: $\bar{h}(T) = \bar{u}(T) + \bar{R}T$}%
+        \vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \bar{h}(T)      &= \int_{T_{ref}}^T \bar{c}_p(T) + \bar{R}T
+                                =  \int_{T_{ref}}^T \sum_{i=1}^4 a_iT^{i-1} + \bar{R}T,
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                \bar{h}(T)      &= \left(
+                    a_1T + \frac{a_2T^2}{2} + \frac{a_3T^3}{3} + \frac{a_4T^4}{4}
+                                   \right)_{T_{ref}}^{T} + \bar{R}T,
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\therefore
+            }
+        \end{align*}
+        \begin{itemize}
+            \item<3-> Compor \alert{eficientemente} a soma de produtos, e
+            \item<4-> Saber as \alert{conversões} \alert{$\bar{h}(T) \rightarrow h(T)$}.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{Tópicos de Implementação}
 %-----------------------------------------------------------------------------------------------

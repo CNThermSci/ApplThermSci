@@ -27,24 +27,24 @@
 \mode<presentation>
 
 % Normal text FG and BG
-\setbeamercolor{normal text}{fg=black,bg=white}                     % Slide background
-\setbeamercolor{structure}{fg=bcya!50!black}                        % Title + Controls
-\setbeamercolor{alerted text}{fg=uyel!75!black}                     % \alert{} contents
-\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!50}    % ???
+\setbeamercolor{normal text}{fg=black!50!white,bg=black}            % Slide background
+\setbeamercolor{structure}{fg=Mbcy!50!white}                        % Title + Controls
+\setbeamercolor{alerted text}{fg=Lred!75!white}                     % \alert{} contents
+\setbeamercolor{item projected}{use=item,fg=white,bg=item.fg!50}    % ???
 % Meanings of primary...quaternary are theme-dependent:
 % - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
 % - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
 % - The Copenhagen theme uses primary and secondary only, right to left on top & bottom
-\setbeamercolor*{palette primary}{bg=uyel,fg=black}                 % top+bot right strips
-\setbeamercolor*{palette secondary}{bg=black,fg=uyel}               % top+bot left strips
-\setbeamercolor*{palette tertiary}{bg=ared,fg=black}                % top+bot leftmost strip (out of 3)
-\setbeamercolor*{palette quaternary}{bg=black,fg=uyel!75!black}     % ???
+\setbeamercolor*{palette primary}{bg=Lblu,fg=white}                 % top+bot right strips
+\setbeamercolor*{palette secondary}{bg=black,fg=Lblu}               % top+bot left strips
+\setbeamercolor*{palette tertiary}{bg=Lmag,fg=Lyel}                % top+bot leftmost strip (out of 3)
+\setbeamercolor*{palette quaternary}{bg=black,fg=Lblu!75!black}     % ???
 \setbeamercolor*{sidebar}{parent=palette primary}                   % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar primary}{fg=black}                 % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar secondary}{fg=white}               % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar tertiary}{fg=black}                % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar quaternary}{fg=white}              % Not tested (no sidebar)
-\setbeamercolor{framesubtitle}{fg=bcya!33!black}
+\setbeamercolor{framesubtitle}{fg=Lgre!33!white}
 \setbeamercolor*{subtitle}{fg=black}
 \setbeamercolor*{block title}{parent=structure}
 \setbeamercolor*{block title alerted}{parent=alerted text}
@@ -56,10 +56,10 @@
 
 %-----------------------------------------------------------------------------------------------
 \mode<handout>{% Go easier on printers
-    \setbeamercolor*{palette primary}{bg=uyel!25!white,fg=black}
-    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=uyel!25!black}
-    \setbeamercolor*{palette tertiary}{bg=ared!25!white,fg=black}
-    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=uyel!25!black}
+    \setbeamercolor*{palette primary}{bg=Lblu!25!white,fg=black}
+    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=Lblu!25!black}
+    \setbeamercolor*{palette tertiary}{bg=Lmag!25!white,fg=black}
+    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=Lblu!25!black}
 }
 
 

@@ -104,6 +104,33 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de $\bar{c}_p(T)$ Polinomial: $\bar{u}(T)$}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \bar{u}(T)      &= \int_{T_{ref}}^T \bar{c}_v(T)
+                                =  \int_{T_{ref}}^T \sum_{i=1}^4 b_iT^{i-1},
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                \bar{u}(T)      &= \left(
+                    b_1T + \frac{b_2T^2}{2} + \frac{b_3T^3}{3} + \frac{b_4T^4}{4}
+                                   \right)_{T_{ref}}^{T},
+                                & T_{min} \leqslant T \leqslant T_{max}
+                                & \qquad\therefore
+            }
+        \end{align*}
+        \begin{itemize}
+            \item<3-> Armazenar \alert{$T_{ref}$},
+            \item<4-> Compor \alert{eficientemente} a soma de produtos, e
+            \item<5-> Saber as \alert{conversões} \alert{$\bar{u}(T) \rightarrow u(T)$}.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{Tópicos de Implementação}
 %-----------------------------------------------------------------------------------------------

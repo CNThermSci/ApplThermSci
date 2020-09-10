@@ -6,7 +6,7 @@ stdRef
 bibfile.bkp
 
 # Compiling metadata
-*.info
+# *.info
 
 # Beamer themes
 beamer

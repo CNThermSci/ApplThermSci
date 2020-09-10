@@ -137,7 +137,7 @@
         \vspace*{-2em}
         \begin{align*}
             \uncover<1->{
-                \bar{h}(T)      &= \int_{T_{ref}}^T \bar{c}_p(T)\,dT + \bar{R}T_{ref}
+                \bar{h}(T)      &= \int_{T_{ref}}^T \bar{c}_p(T)\,dT + \alert{\bar{R}T_{ref}}
                                 =  \int_{T_{ref}}^T \sum_{i=1}^4 a_iT^{i-1}\,dT + \bar{R}T_{ref},
                                 & T_{min} \leqslant T \leqslant T_{max}
                                 & \qquad\rightharpoondown
@@ -192,6 +192,32 @@
                 soma de produtos, e
             \item<5-> Saber as \alert{conversões} \alert{$\bar{s}^{\circ}(T) \rightarrow
                 s^{\circ}(T)$}.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de $\bar{c}_p(T)$ Polinomial: $P_r(T)$ e $v_r(T)$}%
+        \vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \left(\frac{P_2}{P_1}\right)_s  &=  \frac{P_{r2}}{P_{r1}}       &
+                \left(\frac{v_2}{v_1}\right)_s  &=  \frac{v_{r2}}{v_{r1}}
+                \qquad\rightharpoondown
+            }
+            \uncover<2->{
+                \\[\bigskipamount]
+                P_r(T)      &\equiv     e^{\bar{s}^{\circ}(T) / \bar{R}}        &
+                P_r(T)      &=          e^{s^{\circ}(T) / R}
+            }
+            \uncover<3->{
+                \\[\bigskipamount]
+                v_r(T)      &\equiv     \frac{T}{P_r(T)}. & &
+            }
+        \end{align*}
+        \begin{itemize}
+            \item<4-> Sem requisitos adicionais de armazenamento!
         \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------

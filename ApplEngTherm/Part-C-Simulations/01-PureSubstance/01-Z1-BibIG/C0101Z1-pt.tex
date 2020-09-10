@@ -22,12 +22,16 @@
 %-----------------------------------------------------------------------------------------------
 \logo{%
     \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
-        \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
-        \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
-%   \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
-%       \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
-%       \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
-}} % Alpha logos
+        \mode<beamer>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        }
+        \mode<handout>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-W.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-W.pdf}%
+        }
+    }
+} % The (delineated, alpha), or washed-out logos
 %-----------------------------------------------------------------------------------------------
 \frame{\titlepage}
 %-----------------------------------------------------------------------------------------------

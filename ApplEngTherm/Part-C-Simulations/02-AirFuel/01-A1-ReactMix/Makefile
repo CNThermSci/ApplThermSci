@@ -1,4 +1,4 @@
-PREF=C0101Z1-pt
+PREF=C0201A1-pt
 PRES=${PREF}-PRES
 HOUT=${PREF}-HOUT
 
@@ -25,13 +25,11 @@ fig/%.pdf: fig/%.svg
 		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
-		fig/Kazam_screenshot_00000.png \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	#pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
-		fig/Kazam_screenshot_00000_inv.png \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex

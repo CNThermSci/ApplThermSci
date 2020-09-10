@@ -1,0 +1,96 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\title{C.02.01.A1 -- Modelo de Mistura Reativa Ideal}
+\subtitle{Aplicação em FTAF -- Finite Time Air-Fuel Otto Engine Model}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+        \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+%   \parbox{126mm}{% There's a 1mm gap on each side of the 128mm x 96mm slide logo line
+%       \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-A.pdf}\hfill%
+%       \includegraphics[height=6.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+}} % Alpha logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Modelo de Mistura Reativa Ideal}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Padrões nos Cálculos:}\vspace*{-3em}
+        \begin{align*}
+            \uncover<1->{
+                \bar{c}_p(T)    &= a_1 + a_2T + a_3T^2 + a_4T^3,
+                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
+                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<2->{
+                \\
+                \bar{c}_v(T)    &= b_1 + b_2T + b_3T^2 + b_4T^3,
+                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
+                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<3->{
+                \\
+                \bar{u}(T)      &= \left(
+                    b_1T + \frac{b_2T^2}{2} + \frac{b_3T^3}{3} + \frac{b_4T^4}{4}
+                                   \right)_{T_{ref}}^{T},
+                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
+                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<4->{
+                \\
+                \bar{h}(T)      &= \left(
+                    a_1T + \frac{a_2T^2}{2} + \frac{a_3T^3}{3} + \frac{a_4T^4}{4}
+                                   \right)_{T_{ref}}^{T} + \bar{R}T_{ref},
+                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
+                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
+                                & \qquad\rightharpoondown
+            }
+            \uncover<5->{
+                \\
+                \bar{s}^{\circ}(T)  &= \left(
+                    a_1\ln(T) + a_2T + \frac{a_3T^2}{2} + \frac{a_4T^3}{3}
+                                       \right)_{T_{ref}}^{T} + \bar{s}^{\circ}_{ref},
+                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
+                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
+                                    & \qquad\therefore
+            }
+        \end{align*}
+        \uncover<6->{\hfill$\bullet$~Verificação de \alert{limites};\hfill}
+        \uncover<7->{$\bullet$~Coef./func. \alert{próprios}; e\hfill}
+        \uncover<8->{$\bullet$~Produtos \alert{matriciais}.\hfill}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{pexels-eberhard-grossgasteiger-542608}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

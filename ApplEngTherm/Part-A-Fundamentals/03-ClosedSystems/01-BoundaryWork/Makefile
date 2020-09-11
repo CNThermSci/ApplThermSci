@@ -25,7 +25,6 @@ fig/%.pdf: fig/%.svg
 		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
-		root/00-res/logo/CNThermSci-logo-A.pdf \
 		fig/A0301-pt-VPistCyl.pdf \
 		fig/A0301-pt-HPistCyl.pdf \
 		fig/A0301-pt-HPistCylForc.pdf \
@@ -38,12 +37,12 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/A0301-pt-HPistCylPlotCycle-02.pdf \
 		fig/A0301-pt-HPistCylPlotCycle-03.pdf \
 		fig/A0301-pt-HPistCylPlotCycle-04.pdf \
-		fig/A0301-pt-HPistCylPlotCycle-05.pdf
+		fig/A0301-pt-HPistCylPlotCycle-05.pdf \
+		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
-		root/00-res/logo/CNThermSci-logo-A.pdf \
 		fig/A0301-pt-VPistCyl.pdf \
 		fig/A0301-pt-HPistCyl.pdf \
 		fig/A0301-pt-HPistCylForc.pdf \
@@ -56,7 +55,8 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/A0301-pt-HPistCylPlotCycle-02.pdf \
 		fig/A0301-pt-HPistCylPlotCycle-03.pdf \
 		fig/A0301-pt-HPistCylPlotCycle-04.pdf \
-		fig/A0301-pt-HPistCylPlotCycle-05.pdf
+		fig/A0301-pt-HPistCylPlotCycle-05.pdf \
+		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex
 

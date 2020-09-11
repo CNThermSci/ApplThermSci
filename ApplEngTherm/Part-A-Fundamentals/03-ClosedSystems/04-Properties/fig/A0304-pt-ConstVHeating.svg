@@ -501,6 +501,15 @@
      inkscape:groupmode="layer"
      inkscape:label="Layer 1">
     <rect
+       rx="39.999981"
+       style="fill:#ffffff;fill-opacity:0.03921569;stroke-width:0.3"
+       id="rect4340"
+       width="280"
+       height="200"
+       x="0"
+       y="538.25"
+       ry="39.999981" />
+    <rect
        y="578.25"
        x="59.999996"
        height="120"

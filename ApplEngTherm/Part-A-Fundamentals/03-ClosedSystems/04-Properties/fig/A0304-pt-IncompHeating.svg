@@ -677,6 +677,14 @@
      id="layer1"
      transform="translate(0,-538.24998)">
     <rect
+       ry="39.999981"
+       y="538.25"
+       x="0"
+       height="200"
+       width="280"
+       id="rect4357"
+       style="fill:#ffffff;fill-opacity:0.03921569;stroke-width:0.3" />
+    <rect
        style="display:inline;fill:#e0e0e0;fill-opacity:0.5;stroke:#000000;stroke-width:0.0999994;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect13769-2-8-9-5"
        width="100"

@@ -24,16 +24,20 @@
 \definecolor{Mvio}{rgb}{0.392,0.239,0.545} % violet mixture       --- 270°
 \definecolor{Mmau}{rgb}{0.545,0.239,0.392} % Mauve  mixture       --- 330°
 
-% Terminal Backgrounds
+% OTHER dark colors
 \definecolor{Tcya}{rgb}{0.000,0.141,0.196} % Terminal cya
+
+% OTHER light colors
+\definecolor{ALRT}{rgb}{1.000,0.800,0.000} % Alert color
+\definecolor{CYAN}{rgb}{0.000,0.800,1.000} % CYAN  color
 
 %-----------------------------------------------------------------------------------------------
 \mode<presentation>
 
 % Normal text FG and BG
 \setbeamercolor{normal text}{fg=Lwhi!65!black,bg=black}             % Slide background
-\setbeamercolor{structure}{fg=Lgre!50!green}                       % Title + Controls
-\setbeamercolor{alerted text}{fg=Lyel!50!yellow}                   % \alert{} contents
+\setbeamercolor{structure}{fg=CYAN}                                 % Title + Controls
+\setbeamercolor{alerted text}{fg=ALRT}                              % \alert{} contents
 \setbeamercolor{item projected}{use=item,fg=Lwhi,bg=item.fg!50}    % ???
 % Meanings of primary...quaternary are theme-dependent:
 % - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
@@ -48,8 +52,8 @@
 \setbeamercolor*{palette sidebar secondary}{fg=Lwhi}               % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar tertiary}{fg=black}               % Not tested (no sidebar)
 \setbeamercolor*{palette sidebar quaternary}{fg=Lwhi}              % Not tested (no sidebar)
-\setbeamercolor{framesubtitle}{fg=Lgre!50!green}
-\setbeamercolor*{subtitle}{fg=Lgre!50!green}                       % Subtitle
+\setbeamercolor{framesubtitle}{fg=CYAN}
+\setbeamercolor*{subtitle}{fg=CYAN}                                 % Subtitle
 \setbeamercolor*{block title}{parent=structure}
 \setbeamercolor*{block title alerted}{parent=alerted text}
 \setbeamercolor*{block title example}{parent=example text}

@@ -2,6 +2,7 @@
 root
 
 # Bibliography Databases
+stdRef
 JULIA
 THEO
 THER
@@ -16,7 +17,3 @@ beamer*theme*
 
 # Converted figures
 fig/*pdf
-
-# External references
-paper-*
-

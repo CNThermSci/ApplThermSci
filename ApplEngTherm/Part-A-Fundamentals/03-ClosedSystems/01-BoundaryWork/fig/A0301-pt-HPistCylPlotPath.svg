@@ -632,6 +632,15 @@
      id="layer1"
      transform="translate(0,-418.24998)">
     <rect
+       ry="40.000011"
+       style="fill:#ffffff;fill-opacity:0.0392157;stroke:none;stroke-width:0.432049;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11526-2"
+       width="280"
+       height="319.99997"
+       x="0"
+       y="418.24997"
+       rx="40.000011" />
+    <rect
        style="display:inline;fill:#e0e0e0;fill-opacity:0.50413138;stroke:#000000;stroke-width:0.09999999;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect13769-2-8-5"
        width="100.00014"

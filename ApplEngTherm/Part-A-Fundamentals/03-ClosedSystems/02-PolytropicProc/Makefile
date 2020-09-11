@@ -14,13 +14,15 @@ wipe: clean
 
 root/00-res/logo/%.pdf: root/00-res/logo/%.svg
 	inkscape \
-		--file=$< \
-		--export-pdf=$@
+		--export-type=pdf \
+		--export-filename=$@ \
+		$<
 
 fig/%.pdf: fig/%.svg
 	inkscape \
-		--file=$< \
-		--export-pdf=$@
+		--export-type=pdf \
+		--export-filename=$@ \
+		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/A0302-pt-PolyProcPlotPv.pdf \

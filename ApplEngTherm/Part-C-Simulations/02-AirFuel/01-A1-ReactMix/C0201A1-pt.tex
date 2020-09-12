@@ -43,46 +43,25 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Padrões nos Cálculos:}\vspace*{-3em}
+        \begin{itemize}
+            \item<1-> Mistura composta de \alert{$p$ componentes};
+            \item<2-> ...
+        \end{itemize}
         \begin{align*}
             \uncover<1->{
-                \bar{c}_p(T)    &= a_1 + a_2T + a_3T^2 + a_4T^3,
-                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
-                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
-                                & \qquad\rightharpoondown
+                \mathrm{mf}_k   &= \frac{m_k}{m_m},
             }
             \uncover<2->{
                 \\
-                \bar{c}_v(T)    &= b_1 + b_2T + b_3T^2 + b_4T^3,
-                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
-                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
-                                & \qquad\rightharpoondown
+                \mathrm{y}_k    &= \frac{n_k}{n_m},
             }
             \uncover<3->{
                 \\
-                \bar{u}(T)      &= \left(
-                    b_1T + \frac{b_2T^2}{2} + \frac{b_3T^3}{3} + \frac{b_4T^4}{4}
-                                   \right)_{T_{ref}}^{T},
-                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
-                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
-                                & \qquad\rightharpoondown
+                m_m             &= \sum_{k=1}^p m_k, \quad\mbox{and}
             }
             \uncover<4->{
                 \\
-                \bar{h}(T)      &= \left(
-                    a_1T + \frac{a_2T^2}{2} + \frac{a_3T^3}{3} + \frac{a_4T^4}{4}
-                                   \right)_{T_{ref}}^{T} + \bar{R}T_{ref},
-                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
-                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
-                                & \qquad\rightharpoondown
-            }
-            \uncover<5->{
-                \\
-                \bar{s}^{\circ}(T)  &= \left(
-                    a_1\ln(T) + a_2T + \frac{a_3T^2}{2} + \frac{a_4T^3}{3}
-                                       \right)_{T_{ref}}^{T} + \bar{s}^{\circ}_{ref},
-                                & \alt<1-5,7->{T_{min} \leqslant T \leqslant T_{max}}%
-                                  {\alert{T_{min} \leqslant T \leqslant T_{max}}}
-                                    & \qquad\therefore
+                n_m             &= \sum_{k=1}^p n_k.
             }
         \end{align*}
         \uncover<6->{\hfill$\bullet$~Verificação de \alert{limites};\hfill}

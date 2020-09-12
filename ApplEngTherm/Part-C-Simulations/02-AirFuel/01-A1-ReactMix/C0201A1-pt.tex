@@ -46,14 +46,13 @@
         \begin{itemize}
             \item<1-> \alert{Mistura $m$} composta de \alert{$p$ componentes};
             \item<2-> Componentes identificados por \alert{índices $k$};
-            \item<3-> Mistura de comportamento \alert{$P-T-v\;$ ideal}:
         \end{itemize}
         \begin{align*}
-            \uncover<4->{
+            \uncover<3->{
                 \mathrm{mf}_k   &= \frac{m_k}{m_m},                     &
                 \mathrm{y}_k    &= \frac{n_k}{n_m},
             }
-            \uncover<5->{
+            \uncover<4->{
                 \\[\medskipamount]
                 m_m             &= \sum_{k=1}^p m_k, \qquad\mbox{e}     &
                 n_m             &= \sum_{k=1}^p n_k.
@@ -65,17 +64,30 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Massa Molecular e Constante de Gás Aparentes:}\vspace*{-3em}
+        \begin{itemize}
+            \item<1-> Massa molecular aparente, \alert{$M_m$}: média ponderada pelas
+                \alert{frações molares};
+        \end{itemize}
         \begin{align*}
-            \uncover<1->{
-                M_m         &= \frac{m_m}{n_m} = \sum_{k=1}^p \mathrm{y}_k M_k,
-            }
             \uncover<2->{
-                \\[\medskipamount]
+                M_m         &= \frac{m_m}{n_m} = \alert{\sum_{k=1}^p \mathrm{y}_k M_k},
+            }
+        \end{align*}
+        \begin{itemize}
+            \item<3-> Define a constante de gás aparente, junto com $\bar{R}$.
+        \end{itemize}
+        \begin{align*}
+            \uncover<4->{
                 R_m         &= \frac{\bar{R}}{M_m}, \qquad\mbox{e}
             }
-            \uncover<3->{
-                \\[\medskipamount]
-                P_mV_m      &= n_m\bar{R}T_m = m_mR_mT_m.
+        \end{align*}
+        \begin{itemize}
+            \item<5-> Mistura de comportamento \alert{$P-T-v\;$ ideal}:
+        \end{itemize}
+        \begin{align*}
+            \uncover<6->{
+                \alert{P_mV_m} &=
+                    \alert{n_m\bar{R}T_m = m_mR_mT_m}.
             }
         \end{align*}
     \end{frame}

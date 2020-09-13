@@ -117,6 +117,39 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Mistura Ar-Combustível:}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> Quantidades químicas \alert{reais} de ar e combustível são \alert{\NA} e
+                \alert{\NF} ...
+                \\[\medskipamount]
+            \item<2-> ... na câmara de combustão fechada ao final da admissão, assumindo
+                \alert{$(P_0, V_0, T_0)$}
+                \\[\medskipamount]
+            \item<3-> com \alert{$P_0 \leqslant P_{\mathrm{atm}}$}, \alert{$T_0 \approx
+                T_{\mathrm{atm}}$}, para motores aspirados e \alert{$V_0 \approx V_\pmi$}.
+                Assim:
+        \end{itemize}
+        \begin{align*}
+            \uncover<4->{
+                \alert{\NF}
+                    &\alert{=
+                        \frac{P_0V_0}{\bar{R}T_0}\cdot
+                        \frac{\phi\epsilon}{1 + \psi + \phi\epsilon}},
+            }
+            \uncover<5->{
+                \\[\bigskipamount]
+                \alert{\NA}
+                    &\alert{=
+                        \frac{P_0V_0}{\bar{R}T_0}\cdot
+                        \frac{1 + \psi}{1 + \psi + \phi\epsilon}}.
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
     % Finishes with stunning image, with credit
     \ArtEndWSE{pexels-eberhard-grossgasteiger-542608}{jpg}{txt}
 

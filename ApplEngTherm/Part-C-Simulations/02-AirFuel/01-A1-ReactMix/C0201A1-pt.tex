@@ -94,7 +94,7 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Equação de Estado e Calores Específicos:}\vspace*{-2em}
+    \begin{frame}{Equação de Estado e Calores Específicos Componentes:}\vspace*{-2em}
         \begin{itemize}
             \item<1-> Mistura de comportamento \alert{$P-T-v\;$ ideal}:
         \end{itemize}
@@ -117,6 +117,61 @@
                     \uncover<5->{\alert{,}\qquad\alert{T_{min} \leqslant T \leqslant T_{max}}.}
             }
         \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Calores Específicos da Mistura:}\vspace*{-2em}
+        \begin{itemize}
+            \item<1-> À volume constante, \alert{$\bar{c}_{v,m}(T)$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<2->{
+                \alert{\bar{c}_{v,m}(T) =
+                    \sum_{k=1}^p \bar{c}_{v,k}(T)}.
+            }
+        \end{equation*}
+        \begin{itemize}
+            \item<3-> À pressão constante, \alert{$\bar{c}_{p,m}(T)$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<4->{
+                \alert{\bar{c}_{p,m}(T) =
+                    \sum_{k=1}^p \bar{c}_{p,k}(T)}.
+            }
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Entalpia de Componentes Reativos:}\vspace*{-2em}
+        \vspace*{0.8em}\begin{align*}
+            \uncover<1->{
+                \alert{H_k(T)}
+                            &= n_k\bar{h}_k(T)
+                            =  m_kh_k(T), \rightharpoondown
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                            &= n_k[\bar{h}^0_{f,k} + \bar{h}^0_k(T)], \rightharpoondown
+            }
+            \uncover<3->{
+                \\[\medskipamount]
+                            &\alert{= n_k\left[
+                                \bar{h}^0_{f,k} + \int_{T_0}^T \bar{c}_{p,k}(T)\,dT
+                            \right]}\mbox{, onde}
+            }
+        \end{align*}
+        \begin{itemize}
+            \item<4-> \alert{$\bar{h}^0_{f,k}$} é a entalpia específica molar \alert{de
+                formação} do componente $k$...
+            \item<5-> ... no \alert{estado de referência} $(P_0, T_0) \equiv
+                (\unit{1}{\mathrm{atm}}, \unit{298.15}{\kelvin})$; e
+            \item<6-> \alert{$\bar{h}^0_k$} é a entalpia específica molar do comp.~$k$,
+                \alert{em relação} ao estado de referência $(P_0, T_0)$.
+        \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

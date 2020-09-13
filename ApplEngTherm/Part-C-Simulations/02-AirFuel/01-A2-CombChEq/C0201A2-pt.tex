@@ -46,16 +46,17 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}\vspace*{-2em}
+    \begin{frame}{Modelo de Ar}\vspace*{-2em}
         %-----
         \begin{itemize}
-            \item<1-> Ar é modelado como uma mistura de Oxigênio, \alert{\ce{O2}}, e Nitrogênio,
-                \alert{\ce{N2}}, apenas;
+            \item<1-> Ar é modelado \alert{apenas} como uma mistura de Oxigênio,
+                \alert{\ce{O2}}, e Nitrogênio, \alert{\ce{N2}}; \\[\bigskipamount]
             \item<2-> A proporção é de \alert{$\unit{\psi}{\kilo\mole}$ de \ce{N2}} para cada
-                \alert{$\unit{1}{\kilo\mole}$ de \ce{O2}};
-            \item<3-> Nitrogênio será considerado \alert{gás inerte};
-            \item<4-> Todos os demais gases inertes são modelados como sendo \ce{N2};
-            \item<5-> Valor típico para $\psi$ é de \alert{$79/21 \approx 3,76$}.
+                \alert{$\unit{1}{\kilo\mole}$ de \ce{O2}}; \\[\bigskipamount]
+            \item<3-> Nitrogênio será considerado \alert{gás inerte}; \\[\bigskipamount]
+            \item<4-> Todos os demais gases inertes são modelados como sendo \alert{\ce{N2}};
+                \\[\bigskipamount]
+            \item<5-> Valor típico para \alert{$\psi$} é de \alert{$79/21 \approx 3,76$}.
         \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------
@@ -63,6 +64,31 @@
 %-----------------------------------------------------------------------------------------------
 \subsection{Modelo de Vapor de Combustível}
 %-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de Combustível}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> Molécula de combustível \alert{modelada} como \alert{\ce{C\NC H\NH O\NO
+                N\NN}}; \\[\bigskipamount]
+            \item<2-> Valores \alert{\NC}, \alert{\NH}, \alert{\NO}, e \alert{\NN} são
+                \alert{parâmetros} ajustáveis; \\[\bigskipamount]
+            \item<3-> Seja \alert{$\epsilon$} a quantidade de \alert{combustível por kmol de
+                \ce{O2}} estequiometricamente oxidada; \\[\bigskipamount]
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<4->{
+                \alert{\epsilon^{-1} \equiv \NC + \frac{\NH}{4} - \frac{\NO}{2}}.
+            }
+        \end{equation*}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
+            \item<5-> \alert{$\epsilon/(1+\psi)$} é a razão \alert{combustível-ar}
+                estequiométrica.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------

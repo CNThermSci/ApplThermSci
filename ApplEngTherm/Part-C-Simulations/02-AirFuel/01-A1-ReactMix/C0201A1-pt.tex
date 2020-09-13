@@ -57,7 +57,7 @@
             }
         \end{equation*}
         %-----
-        \begin{itemize}
+        \vspace*{-0.8em}\begin{itemize}
             \item<4-> Massa da mistura, \alert{$m_m$}, e sua quantidade química, \alert{$n_m$}:
         \end{itemize}
         \vspace*{0.8em}\begin{equation*}
@@ -72,6 +72,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Massa Molecular e Constante de Gás Aparentes:}\vspace*{-2em}
+        %-----
         \begin{itemize}
             \item<1-> Massa molecular aparente, \alert{$M_m$}: média ponderada pelas
                 \alert{frações molares}:
@@ -81,7 +82,8 @@
                 \alert{M_m} = \frac{m_m}{n_m} = \alert{\sum_{k=1}^p \mathrm{y}_k M_k},
             }
         \end{equation*}
-        \begin{itemize}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
             \item<3-> Define a constante de gás aparente, \alert{$R_m$}, junto com $\bar{R}$:
         \end{itemize}
         \vspace*{0.8em}\begin{equation*}
@@ -95,6 +97,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Equação de Estado e Calores Específicos Componentes:}\vspace*{-2em}
+        %-----
         \begin{itemize}
             \item<1-> Mistura de comportamento \alert{$P-T-v\;$ ideal}:
         \end{itemize}
@@ -105,7 +108,8 @@
                     \alert{m_mR_mT_m}.
             }
         \end{equation*}
-        \begin{itemize}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
             \item<3-> Modelo de calor específico \alert{$\bar{c}_{p,k}(T) = \bar{c}_{v,k}(T) +
                 \bar{R}$} para cada componente \alert{$k$}:
         \end{itemize}
@@ -123,6 +127,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Calores Específicos da Mistura:}\vspace*{-2em}
+        %-----
         \begin{itemize}
             \item<1-> À volume constante, \alert{$\bar{c}_{v,m}(T)$}:
         \end{itemize}
@@ -132,7 +137,8 @@
                     \sum_{k=1}^p \bar{c}_{v,k}(T)}.
             }
         \end{equation*}
-        \begin{itemize}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
             \item<3-> À pressão constante, \alert{$\bar{c}_{p,m}(T)$}:
         \end{itemize}
         \vspace*{0.8em}\begin{equation*}
@@ -147,7 +153,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Entalpia de Componentes Reativos:}\vspace*{-2em}
-        \vspace*{0.8em}\begin{align*}
+        \begin{align*}
             \uncover<1->{
                 \alert{H_k(T)}
                             &= n_k\bar{h}_k(T)
@@ -164,7 +170,7 @@
                             \right]}\mbox{, onde}
             }
         \end{align*}
-        \begin{itemize}
+        \vspace*{-0.8em}\begin{itemize}
             \item<4-> \alert{$\bar{h}^0_{f,k}$} é a entalpia específica molar \alert{de
                 formação} do componente $k$...
             \item<5-> ...no estado de referência \alert{$(P_0, T_0) \equiv
@@ -178,7 +184,7 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Energia Interna de Componentes Reativos:}\vspace*{-2em}
-        \vspace*{0.8em}\begin{align*}
+        \begin{align*}
             \uncover<1->{
                 \alert{U_k(T)}
                             &= n_k\bar{u}_k(T)
@@ -194,14 +200,16 @@
                                 \bar{u}^0_{f,k} + \int_{T_0}^T \bar{c}_{v,k}(T)\,dT
                             \right]}\mbox{, onde}
             }
+            \uncover<4->{
+                \\[\medskipamount]
+                \alert{\bar{u}^0_{f,k}}
+                            &\alert{\equiv \bar{h}_{f,k}^0 - P_0\bar{v}_0 =
+                            \bar{h}_{f,k}^0 - \bar{R}T_0}\mbox{, e}
+            }
         \end{align*}
-        \begin{itemize}
-            \item<5-> \alert{$\bar{u}^0_{f,k}$} é a energia interna específica molar
-                \alert{de formação} do componente $k$...
-            \item<6-> \alert{$\bar{u}^0_{f,k}$} é a energia interna específica molar
-                \alert{de formação} do componente $k$...
-            \item<7-> \alert{$\bar{u}^0_k$} é a energia interna específica molar do comp.~$k$,
-                \alert{em relação ao estado de ref.~$(P_0, T_0)$}.
+        \vspace*{-0.8em}\begin{itemize}
+            \item<5-> \alert{$\bar{u}^0_k$} é a energia interna específica molar do comp.~$k$,
+                \alert{em relação a $(P_0, T_0)$}.
         \end{itemize}
     \end{frame}
     %-------------------------------------------------------------------------------------------

@@ -1,0 +1,249 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\title{C.02.01.A1 -- Modelo de Mistura Reativa Ideal}
+\subtitle{Aplicação em FTAF -- Finite Time Air-Fuel Otto Engine Model}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \mode<beamer>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        }
+        \mode<handout>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-W.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-W.pdf}%
+        }
+    }
+} % The (delineated, alpha), or washed-out logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Modelo de Mistura Reativa Ideal}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Apresentação: Frações de Massa e Molares:}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> Mistura \alert{$m$} com \alert{$p$} componentes indexados por \alert{$k$};
+                \vspace*{0.8em}
+            \item<2-> Caracterizada pelas frações mássicas, \alert{$\mathrm{mf}_k$}, e frações
+                molares, \alert{$\mathrm{y}_k$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<3->{
+                \alert{\mathrm{mf}_k = \frac{m_k}{m_m}},\qquad\mbox{e}\qquad
+                \alert{\mathrm{y}_k  = \frac{n_k}{n_m}},
+            }
+        \end{equation*}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
+            \item<4-> Massa da mistura, \alert{$m_m$}, e sua quantidade química, \alert{$n_m$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<5->{
+                \alert{m_m = \sum_{k=1}^p m_k},\qquad\mbox{e}\qquad
+                \alert{n_m = \sum_{k=1}^p n_k}.
+            }
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Massa Molecular e Constante de Gás Aparentes:}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> Massa molecular aparente, \alert{$M_m$}: média ponderada pelas
+                \alert{frações molares}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<2->{
+                \alert{M_m} = \frac{m_m}{n_m} = \alert{\sum_{k=1}^p \mathrm{y}_k M_k},
+            }
+        \end{equation*}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
+            \item<3-> Define a constante de gás aparente, \alert{$R_m$}, junto com $\bar{R}$:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<4->{
+                \alert{R_m = \frac{\bar{R}}{M_m}}.
+            }
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Equação de Estado e Calores Específicos Componentes:}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> Mistura de comportamento \alert{$P-T-v\;$ ideal}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<2->{
+                \alert{P_mV_m} =
+                    \alert{n_m\bar{R}T_m} =
+                    \alert{m_mR_mT_m}.
+            }
+        \end{equation*}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
+            \item<3-> Modelo de calor específico \alert{$\bar{c}_{p,k}(T) = \bar{c}_{v,k}(T) +
+                \bar{R}$} para cada componente \alert{$k$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<4->{
+                \alert{\bar{c}_{p,k}(T)}
+                    \alert{\eqmod \sum_{i=-4}^4 a_{i,k}T^i}
+                    \uncover<6>{\pm w_{cp}}
+                    \uncover<5->{\alert{,}\qquad\alert{T_{min} \leqslant T \leqslant T_{max}}.}
+            }
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Calores Específicos da Mistura:}\vspace*{-2em}
+        %-----
+        \begin{itemize}
+            \item<1-> À volume constante, \alert{$\bar{c}_{v,m}(T)$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<2->{
+                \alert{\bar{c}_{v,m}(T) =
+                    \sum_{k=1}^p \bar{c}_{v,k}(T)}.
+            }
+        \end{equation*}
+        %-----
+        \vspace*{-0.8em}\begin{itemize}
+            \item<3-> À pressão constante, \alert{$\bar{c}_{p,m}(T)$}:
+        \end{itemize}
+        \vspace*{0.8em}\begin{equation*}
+            \uncover<4->{
+                \alert{\bar{c}_{p,m}(T) =
+                    \sum_{k=1}^p \bar{c}_{p,k}(T)}.
+            }
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Entalpia de Componentes Reativos:}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \alert{H_k(T)}
+                            &= n_k\bar{h}_k(T)
+                            =  m_kh_k(T), \quad\rightharpoondown
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                            &= n_k[\bar{h}^0_{f,k} + \bar{h}^0_k(T)], \quad\rightharpoondown
+            }
+            \uncover<3->{
+                \\[\medskipamount]
+                            &\alert{= n_k\left[
+                                \bar{h}^0_{f,k} + \int_{T_0}^T \bar{c}_{p,k}(T)\,dT
+                            \right]}\mbox{, onde}
+            }
+        \end{align*}
+        \vspace*{-0.8em}\begin{itemize}
+            \item<4-> \alert{$\bar{h}^0_{f,k}$} é a entalpia específica molar \alert{de
+                formação} do componente $k$...
+            \item<5-> ...no estado de referência \alert{$(P_0, T_0) \equiv
+                (\unit{1}{\mathrm{atm}}, \unit{298.15}{\kelvin})$}; e
+            \item<6-> \alert{$\bar{h}^0_k$} é a entalpia específica molar do comp.~$k$,
+                \alert{em relação ao estado de ref.~$(P_0, T_0)$}.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Energia Interna de Componentes Reativos:}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \alert{U_k(T)}
+                            &= n_k\bar{u}_k(T)
+                            =  m_ku_k(T), \quad\rightharpoondown
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                            &= n_k[\bar{u}^0_{f,k} + \bar{u}^0_k(T)], \quad\rightharpoondown
+            }
+            \uncover<3->{
+                \\[\medskipamount]
+                            &\alert{= n_k\left[
+                                \bar{u}^0_{f,k} + \int_{T_0}^T \bar{c}_{v,k}(T)\,dT
+                            \right]}\mbox{, onde}
+            }
+            \uncover<4->{
+                \\[\medskipamount]
+                \alert{\bar{u}^0_{f,k}}
+                            &\alert{\equiv \bar{h}_{f,k}^0 - P_0\bar{v}_0 =
+                            \bar{h}_{f,k}^0 - \bar{R}T_0}\mbox{, e}
+            }
+        \end{align*}
+        \vspace*{-0.8em}\begin{itemize}
+            \item<5-> \alert{$\bar{u}^0_k$} é a energia interna específica molar do comp.~$k$,
+                \alert{em relação a $(P_0, T_0)$}.
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Energia Interna da Mistura Reativa:}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \alert{U_m(T)}
+                    &\alert{= \sum_{k=1}^p U_k(T)
+                    \equiv U^0_{f,m} + U^0_m(T)}\mbox{, com}
+            }
+            \uncover<2->{
+                \\[\bigskipamount]
+                \alert{U^0_{f,m}}
+                    &= \sum_{k=1}^p n_k\bar{u}^0_{f,k}
+                    = \sum_{k=1}^p n_k\bar{h}_f^0 - n_m\bar{R}T_0
+                    \alert{= H^0_{f,m} - n_m\bar{R}T_0}\mbox{, e}
+            }
+            \uncover<3->{
+                \\[\bigskipamount]
+                \alert{U^0_m(T)}
+                    &= \sum_{k=1}^p n_k\bar{u}^0_k(T)
+                    \alert{= \sum_{k=1}^p n_k \int_{T_0}^T \bar{c}_{v,k}(T)\,dT}.
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndWSE{pexels-eberhard-grossgasteiger-542608}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

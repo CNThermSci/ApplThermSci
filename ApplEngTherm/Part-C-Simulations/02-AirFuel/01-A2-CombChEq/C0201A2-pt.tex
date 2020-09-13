@@ -297,7 +297,7 @@
                 no sistema, \alert{$V_{\pms} > 0$};
                 \\[\bigskipamount]
             \item<2-> Silva, R.~K.~de O.~modelou dados de Heywood, J.~B., como
-                \alert{$\zeta\!\!:\!\!\zeta(P, r)$}:
+                \alert{$\zeta\!:\!\zeta(P, r)$}:
         \end{itemize}
         \vspace*{0.8em}\begin{align*}
             \uncover<3->{
@@ -311,6 +311,51 @@
                 \\[\bigskipamount]
                 \alert{\mathtt{g}(v)}
                     &\alert{= (5.25 - 0.5r) e^{(8.5 - r)}}.
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Misturas de Entrada:}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                \alert{\MXAIR}
+                    &\alert{= \NA\left(
+                            \frac{1}{1+\psi}\mbox{\ce{O2}} +
+                            \frac{\psi}{1+\psi}\mbox{\ce{N2}}
+                        \right)},
+                    & \mbox{(ar)}
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                \alert{\MXFUE}
+                    &\alert{= \NF\,\mbox{\ce{C\NC H\NH O\NO N\NN}}},
+                    & \mbox{(comb.)}
+            }
+            \uncover<3->{
+                \\[\medskipamount]
+                \alert{\MXAFU}
+                    &\alert{= \NA\left(
+                            \frac{1}{1+\psi}\mbox{\ce{O2}} +
+                            \frac{\psi}{1+\psi}\mbox{\ce{N2}}
+                        \right) + \NF\,\mbox{\ce{C\NC H\NH O\NO N\NN}}},
+                    & \mbox{(ar-comb.)}
+            }
+            \uncover<4->{
+                \\[\medskipamount]
+                \alert{\MXPRO}
+                    &\alert{= \NCOO\mbox{\ce{CO2}} + \NHHO\mbox{\ce{H2O}} + \NCO\mbox{\ce{CO}}}
+                    & \\
+                    &\alert{\,+\NHH\mbox{\ce{H2}} + \NOO\mbox{\ce{O2}} + \NNN\mbox{\ce{N2}}},
+                    & \mbox{(produtos)}
+            }
+            \uncover<5->{
+                \\[\medskipamount]
+                \alert{\MXREA}
+                    &\alert{= (1 - \zeta)\,\MXAFU + (\zeta)\,\MXPRO},
+                    & \mbox{(reagentes)}
             }
         \end{align*}
     \end{frame}

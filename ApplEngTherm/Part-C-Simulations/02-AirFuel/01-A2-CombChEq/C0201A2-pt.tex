@@ -290,28 +290,27 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Razão de Equivalência:}\vspace*{-2em}
+    \begin{frame}{Fração Residual:}\vspace*{-2em}
         %-----
         \begin{itemize}
-            \item<1-> Seja \alert{$\phi$} a razão de equivalência, ou a razão combustível-ar
-                \alert{real pela estequiométrica}:
+            \item<1-> Uma \Alert{fração residual, $\zeta$}, de gases do ciclo anterior permanece
+                no sistema (volume morto $>0$);
+                \\[\bigskipamount]
+            \item<2-> Silva, R.~K.~de O.~modelou dados de Heywood, J.~B., resultando em:
         \end{itemize}
-        \vspace*{0.8em}\begin{equation*}
-            \uncover<2->{
-                \alert{\phi \equiv \frac{\NF/\NA}{\epsilon / (1 + \psi)}},\qquad\mbox{assim,}
+        \vspace*{0.8em}\begin{align*}
+            \uncover<3->{
+                \alert{\zeta(P, r)}
+                    &\alert{= 17.807 + 6.423\mathtt{g}(r) - [0.029 + 0.013\mathtt{g}(r)] P} \\
+                    &\alert{\,+ [1.828 + 0.798\mathtt{g}(v)] \times 10^{-5} \times P^2},
+                    \qquad\mbox{com}
             }
-        \end{equation*}
-        %-----
-        \vspace*{-0.8em}\begin{itemize}
-            \item<3-> \alert{$\phi < 1$} modela misturas combustível-ar com
-                \alert{excesso de ar} (pobre em combustível);
+            \uncover<4->{
                 \\[\bigskipamount]
-            \item<4-> \alert{$\phi > 1$} modela misturas combustível-ar com
-                \alert{excesso de combustível} (pobre em ar); e
-                \\[\bigskipamount]
-            \item<5-> \alert{$\phi = 1$} modela misturas combustível-ar
-                \alert{estequiométricas}.
-        \end{itemize}
+                \alert{\mathtt{g}(v)}
+                    &\alert{= (5.25 - 0.5r) e^{(8.5 - r)}}.
+            }
+        \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

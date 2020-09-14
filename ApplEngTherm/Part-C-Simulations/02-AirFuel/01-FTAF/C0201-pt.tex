@@ -226,19 +226,41 @@
             \uncover<2->{
                 \MXSYS
                     &= (1 - y_i)\,\MXREA + y_i\,\MXPRO,
+                    \qquad\rightharpoondown
             }
+%           \uncover<3->{
+%               \\[\medskipamount]
+%               \MXSYS
+%                   &= (1 - y_i)\left[(1 - \zeta)\,\MXAFU
+%                   + (\zeta)\,\MXPRO\right] + y_i\,\MXPRO
+%                   \qquad\rightharpoondown
+%           }
             \uncover<3->{
-                \qquad\rightharpoondown\\[\medskipamount]
-                \MXSYS
-                    &= (1 - y_i)\left[(1 - \zeta)\,\MXAFU
-                    + (\zeta)\,\MXPRO\right] + y_i\,\MXPRO
-            }
-            \uncover<4->{
-                \qquad\rightharpoondown\\[\medskipamount]
+                \\[\medskipamount]
                 \alert{\MXSYS}
                     &\alert{= (1 - y_i)(1 - \zeta)\,\MXAFU}
-                    \alert{+ [\zeta + y_i(1 - \zeta)]\,\MXPRO}
+                    \alert{+ [(1 - y_i)\zeta + y_i]\,\MXPRO}
                 \qquad\mbox{, com}
+            }
+            \uncover<5->{
+                \\[\bigskipamount]
+                \MXAFU
+                    &= \NF\,\mbox{\ce{C\NC H\NH O\NO N\NN}}
+                    \,+\NA\left(
+                            \frac{1}{1+\psi}\mbox{\ce{O2}} +
+                            \frac{\psi}{1+\psi}\mbox{\ce{N2}}
+                        \right)
+                \qquad\mbox{e}
+            }
+            \uncover<6->{
+                \\[\medskipamount]
+                \MXPRO
+                    &=  \NCOO\mbox{\ce{CO2}}
+                    +   \NHHO\mbox{\ce{H2O}}
+                    +   \NCO\mbox{\ce{CO}}
+                    +   \NHH\mbox{\ce{H2}}
+                    +   \NOO\mbox{\ce{O2}}
+                    +   \NNN\mbox{\ce{N2}}.
             }
         \end{align*}
     \end{frame}

@@ -40,6 +40,10 @@
 \section{Apresentação do FTAF}
 %-----------------------------------------------------------------------------------------------
 
+%------------------------------------------------------------------------------------------------
+\subsection{Como Extensão do FTAH}
+%-----------------------------------------------------------------------------------------------
+
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Ciclo Otto ar-combustível de tempo finito---FTAF}\vspace*{-2em}
@@ -67,59 +71,6 @@
                     tópicos de leitura);
                 \item<11-> \alert{Não} modela a cinética química: tempos de combustão permanecem
                     dados de \alert{entrada}.
-            \end{itemize}
-        \end{itemize}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
-%------------------------------------------------------------------------------------------------
-\subsection{Como Extensão do FTAH}
-%-----------------------------------------------------------------------------------------------
-
-    % !j 96 -i8
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}{Ciclo Otto padrão a ar de tempo finito de adição de calor---FTHA}\vspace*{-2em}
-        \begin{itemize}
-            \item<1->  Modela combustão (adição de calor) de forma \alert{não instantânea}:
-            \begin{itemize}
-                \item<2->  Interações \alert{simultâneas} de \alert{calor} e \alert{trabalho};
-                \item<3->  Tempos de motor \alert{discretizados} em \alert{sub-processos};
-                \item<4->  Elemento computacional: sub-processo \alert{localmente politrópico};
-                \item<5->  \alert{Remoção} de calor permanece \alert{isocórica} (instantânea).
-            \end{itemize}
-            \item<6->  Mantém-se como modelo \alert{padrão a ar}:
-            \begin{itemize}
-                \item<7->  Transferência de calor para bloco inclui \alert{irreversibilidades};
-                \item<8->  Perdas de bombeamento envolvem \alert{sistema e ciclo abertos}.
-            \end{itemize}
-            \item<9->  Mantém-se como modelo de \alert{substância pura}:
-            \begin{itemize}
-                \item<10-> Evita \alert{combustão e equilíbrio químico};
-                \item<11-> Evita modelagem termodinâmica de \alert{misturas reativas}.
-            \end{itemize}
-        \end{itemize}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
-    % !j 96 -i8
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}{Ciclo Otto padrão a ar de tempo finito de adição de calor---FTHA}\vspace*{-2em}
-        \begin{itemize}
-            \item<1->  Inclui todos os parâmetros do \alert{ciclo Otto ideal}:
-            \begin{itemize}
-                \item<2->  \alert{Razão de compressão} do motor;
-                \item<3->  \alert{Calores específicos} do fluido de trabalho.
-            \end{itemize}
-            \item<4->  Inclui parâmetros \alert{construtivos} do \alert{motor}:
-            \begin{itemize}
-                \item<5->  Conjunto \alert{pistão-cilindro};
-                \item<6->  Mecanismo \alert{biela-manivela}.
-            \end{itemize}
-            \item<7->  Inclui parâmetros \alert{operacionais} do \alert{motor}:
-            \begin{itemize}
-                \item<8->  \alert{Velocidade angular} (rotação);
-                \item<9->  Ângulo de \alert{ignição} e
-                \item<10-> \alert{Duração da combustão}.
             \end{itemize}
         \end{itemize}
     \end{frame}

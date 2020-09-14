@@ -175,7 +175,7 @@
     %-------------------------------------------------------------------------------------------
 
 %------------------------------------------------------------------------------------------------
-\subsection{Balanço de Energia}
+\subsection{Balanço de Energia e Estratégia de Solução}
 %-----------------------------------------------------------------------------------------------
 
     % !j 96 -i8
@@ -211,6 +211,41 @@
         \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
+        \begin{align*}
+            \uncover<1->{
+                Q_i
+                    &= \unit{0}{\kilo\joule}
+                    \qquad\mbox{ignorando transf. de calor;}
+            }
+            \uncover<2->{
+                \\[\medskipamount]
+                \alert{W_i}
+                    &\alert{= \begin{cases}
+                        \dfrac{P_iV_i}{1-n_i}\left[
+                            1-\left(
+                                \dfrac{V_i}{V_{i+1}}
+                            \right)^{n_i-1}
+                        \right],
+                        \quad & \mbox{para }n_i \neq 1,
+                        \\[\bigskipamount]
+                        P_iV_i\ln\dfrac{V_i}{V_{i+1}},
+                        & \mbox{para }n_i = 1,
+                        \\[\medskipamount]
+                        0,
+                        & \mbox{para }V_i \approx V_{i+1}
+                        \quad\rightharpoondown\quad
+                        |V_i - V_{i+1}| \leqslant \epsilon_V.
+                \end{cases}}
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+
 
 %------------------------------------------------------------------------------------------------
 \subsection{Composição Instantânea do Sistema}

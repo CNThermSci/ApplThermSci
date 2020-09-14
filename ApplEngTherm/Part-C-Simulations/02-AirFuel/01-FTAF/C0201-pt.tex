@@ -174,6 +174,10 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+%------------------------------------------------------------------------------------------------
+\subsection{Balanço de Energia}
+%-----------------------------------------------------------------------------------------------
+
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
@@ -189,12 +193,12 @@
             \uncover<3->{
                 \quad\rightharpoondown\\[\medskipamount]
                 Q_i + (U^0_{f,m,i} - U^0_{f,m,i+1}) - W_i
-                    &= U_{0,m,i+1} - U_{0,m,i},
+                    &= U^0_{m,i+1} - U^0_{m,i},
             }
             \uncover<4->{
                 \quad\rightharpoondown\\[\medskipamount]
-                \alert{U_{0,m,i+1}}
-                    &\alert{= U_{0,m,i} + Q_i + \Delta{U_{reac,i}} - W_i},\qquad\mbox{com}
+                \alert{U^0_{m,i+1}}
+                    &\alert{= U^0_{m,i} + Q_i + \Delta{U_{reac,i}} - W_i},\qquad\mbox{com}
             }
             \uncover<5->{
                 \\[\medskipamount]
@@ -209,8 +213,36 @@
     %-------------------------------------------------------------------------------------------
 
 %------------------------------------------------------------------------------------------------
-\subsection{Balanço de Energia}
+\subsection{Composição Instantânea do Sistema}
 %-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Mistura Ativa: Composição Instantânea}\vspace*{-2em}
+        \uncover<1->{
+            A composição \alert{instantânea} do sistema, que contém o \alert{fluido ativo}, é:
+        }
+        \begin{align*}
+            \uncover<2->{
+                \MXSYS
+                    &= (1 - y_i)\,\MXREA + y_i\,\MXPRO,
+            }
+            \uncover<3->{
+                \qquad\rightharpoondown\\[\medskipamount]
+                \MXSYS
+                    &= (1 - y_i)\left[(1 - \zeta)\,\MXAFU
+                    + (\zeta)\,\MXPRO\right] + y_i\,\MXPRO
+            }
+            \uncover<4->{
+                \qquad\rightharpoondown\\[\medskipamount]
+                \alert{\MXSYS}
+                    &\alert{= (1 - y_i)(1 - \zeta)\,\MXAFU}
+                    \alert{+ [\zeta + y_i(1 - \zeta)]\,\MXPRO}
+                \qquad\mbox{, com}
+            }
+        \end{align*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
 \section{Tópicos de Leitura}

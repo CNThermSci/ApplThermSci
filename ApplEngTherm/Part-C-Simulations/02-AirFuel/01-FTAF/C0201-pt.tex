@@ -100,6 +100,82 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Ciclo Otto ar-combustível de tempo finito---FTAF}\vspace*{-2em}
+        \begin{itemize}
+            \item<1->  Inclui todos os parâmetros do \alert{FTHA}:
+            \begin{itemize}
+                \item<2->  Todos os do \alert{ciclo Otto ideal}, mais
+                \item<3->  Todos os parâmetros \alert{construtivos} do \alert{motor}, mais
+                \item<4->  Todos os parâmetros \alert{operacionais} do \alert{motor};
+            \end{itemize}
+            \item<5->  Inclui parâmetros da \alert{mistura ar-combustível}:
+            \begin{itemize}
+                \item<6->  \alert{Proporções} dos gases do \alert{ar};
+                \item<7->  \alert{Composições e proporções} do \alert{combustíveis};
+                \item<8->  \alert{Proporções} da mistura \alert{ar-combustível} em relação à
+                    \alert{estequiometria}.
+            \end{itemize}
+            \item<9->  \alert{Balanço de Energia} melhorado:
+            \begin{itemize}
+                \item<10-> \alert{Liberação de energia interna} pelas reações \alert{explícita};
+                \item<11-> Com separação conceitual das \alert{transferências de calor}.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Extensões FTAF}
+%-----------------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------------------------
+\subsection{Fração Cumulativa $y(\alpha)$}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de Evolução de Reação:}\vspace*{-2em}
+        \begin{columns}
+        \column{0.50\textwidth}
+        \begin{itemize}
+            \item<1->  \alert{Reações} evoluem com \alert{$y(\alpha)$}:
+        \end{itemize}
+        \vspace*{-1.0ex}\begin{align}
+            \uncover<2->{
+            \alert{y(\alpha)}   &\alert{=
+            \begin{cases}
+                0           & \mbox{para }\alpha < \theta,\\
+                g(\alpha)   & \mbox{para }\theta \leqslant \alpha \leqslant \theta+\delta,\\
+                1           & \mbox{para }\alpha > \theta+\delta.
+            \end{cases}}\nonumber
+            }
+        \end{align}
+        \vspace*{-3.0ex}\begin{itemize}
+            \item<3-> \alert{$g(\alpha)$} modela o \alert{histórico} da reação química:
+                \\[\smallskipamount]
+            \begin{itemize}
+                \item<4-> \alert{$g(\theta) = 0$} e \alert{$g(\theta+\delta) = 1$};
+                    \\[\smallskipamount]
+                \item<5-> \alert{Função} $g(\alpha)$ deve ser \alert{monotônica};
+                    \\[\smallskipamount]
+                \item<6-> $g(\alpha)$ pode basear-se em \alert{experimentos};
+                    \\[\smallskipamount]
+                \item<7-> Lit.:~\alert{$g(\alpha) = \frac{1}{2}-\frac{1}{2} \cos \bigl(
+                    \frac{\pi}{\delta} (\alpha - \theta) \bigr)$}.
+            \end{itemize}
+        \end{itemize}
+        \column{0.50\textwidth}
+        \begin{center}
+            \uncover<2->{\vspace*{-5mm}\includegraphics[height=70.0mm]{fig/FTAFTiming01.pdf}}
+        \end{center}
+        \end{columns}
+
+%------------------------------------------------------------------------------------------------
+\subsection{Balanço de Energia}
+%-----------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{Tópicos de Leitura}
 %-----------------------------------------------------------------------------------------------

@@ -1,0 +1,79 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\title{C.02.01 -- Ciclo Otto Ar-Combustível de Tempo Finito de Combustão}
+\subtitle{FTAF -- Finite Time Air-Fuel Otto Engine Model}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \mode<beamer>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        }
+        \mode<handout>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-W.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-W.pdf}%
+        }
+    }
+} % The (delineated, alpha), or washed-out logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------------------------
+\section{Apresentação do FTAF}
+%-----------------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------------------------
+\subsection{Como Extensão do FTAH}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos de Leitura}
+%-----------------------------------------------------------------------------------------------
+
+    %------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+        \begin{thebibliography}{Brunetti, F., 2012}
+            \bibitem[Brunetti, F., 2012]{2012-BrunettiF-Blucher}
+                Brunetti, F.
+                \newblock{%
+                    {\em Motores de combustão interna\/}.
+                    \alert{Capítulos 1 e 2.}
+                }
+                \newblock{\footnotesize Blücher. São Paulo. ISBN 978-85-2120-708-5.}
+            \bibitem[Silva, R.~K.~de O., 2018]{2018-SilvaRKO-UTFPR}
+                Silva, R.~K.~de O.
+                \newblock{%
+                    {\em Modelo ar-combustível de tempo finito de adição de calor de motores
+                    {O}tto\/}.
+                }
+                \newblock{\alert{Repositório Roca UTFPR.}}
+                \newblock{\footnotesize repositorio.roca.utfpr.edu.br/jspui/handle/1/8786.}
+        \end{thebibliography}
+    \end{frame}
+    %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{pexels-eberhard-grossgasteiger-730981}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

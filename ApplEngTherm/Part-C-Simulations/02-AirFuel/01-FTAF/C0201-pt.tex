@@ -205,8 +205,8 @@
                 \alert{\Delta{U_{reac,i}}}
                     &\equiv U^0_{f,m,i} - U^0_{f,m,i+1}
                     \qquad\rightharpoondown \\[\medskipamount]
-                    &\alert{= H^0_{f,m,i} - \mathrm{n}_{m,i}\bar{R}T_0
-                    - H^0_{f,m,i+1} + \mathrm{n}_{m,i+1}\bar{R}T_0}.
+                    &\alert{= H^0_{f,m,i} - n_{m,i}\bar{R}T_0
+                    - H^0_{f,m,i+1} + n_{m,i+1}\bar{R}T_0}.
             }
         \end{align*}
     \end{frame}
@@ -217,23 +217,23 @@
     \begin{frame}{Equações Termodinâmicas}\vspace*{-2em}
         \begin{align*}
             \uncover<1->{
-                Q_i
-                    &= \unit{0}{\kilo\joule}
-                    \qquad\mbox{ignorando transf. de calor;}
+                \alert{Q_i}
+                    &\alert{= \unit{0}{\kilo\joule}},
+                    \qquad\mbox{ignorando transferência de calor com cabeoçte, bloco...}
             }
             \uncover<2->{
                 \\[\medskipamount]
                 \alert{W_i}
                     &\alert{= \begin{cases}
-                        \dfrac{P_iV_i}{1-n_i}\left[
+                        \dfrac{P_iV_i}{1-\mathsf{n}_i}\left[
                             1-\left(
                                 \dfrac{V_i}{V_{i+1}}
-                            \right)^{n_i-1}
+                            \right)^{\mathsf{n}_i-1}
                         \right],
-                        \quad & \mbox{para }n_i \neq 1,
+                        \quad & \mbox{para }\mathsf{n}_i \neq 1,
                         \\[\bigskipamount]
                         P_iV_i\ln\dfrac{V_i}{V_{i+1}},
-                        & \mbox{para }n_i = 1,
+                        & \mbox{para }\mathsf{n}_i = 1,
                         \\[\medskipamount]
                         0,
                         & \mbox{para }V_i \approx V_{i+1}
@@ -263,13 +263,6 @@
                     &= (1 - y_i)\,\MXREA + y_i\,\MXPRO,
                     \qquad\rightharpoondown
             }
-%           \uncover<3->{
-%               \\[\medskipamount]
-%               \MXSYS
-%                   &= (1 - y_i)\left[(1 - \zeta)\,\MXAFU
-%                   + (\zeta)\,\MXPRO\right] + y_i\,\MXPRO
-%                   \qquad\rightharpoondown
-%           }
             \uncover<3->{
                 \\[\medskipamount]
                 \alert{\MXSYSi}

@@ -405,7 +405,9 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Algoritmo de Inicialização}\vspace*{-2em}
         \small
-        \begin{tcolorbox}[colback=yellow!15!white]\begin{algorithmic}[1]
+        \mode<beamer>{\begin{tcolorbox}[colback=Tcya!80!white]}
+        \mode<handout>{\begin{tcolorbox}[colback=Tcya!20!white]}
+        \begin{algorithmic}[1]
             \REQUIRE{Parâmetros do motor: $\{\omega, D, L, R, \VPMS,$ e $V_{du}\}$;}
             \REQUIRE{Ângulos $\theta$ e $\delta$ (via $\Delta t_c$);}
             \REQUIRE{Refinamento da discretização, $I$;}
@@ -419,7 +421,8 @@
             \STATE{$m \leftarrow V_0/v_0$;}
             \STATE{Calcula todos $v_i = V(\alpha_i)/m$;}
             \STATE{$i \leftarrow 0$;}
-        \end{algorithmic}\end{tcolorbox}
+        \end{algorithmic}
+        \end{tcolorbox}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
@@ -427,7 +430,9 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Algoritmo de Laço do Ciclo}\vspace*{-2em}
         \small
-        \begin{tcolorbox}[colback=yellow!15!white]\begin{algorithmic}[1]
+        \mode<beamer>{\begin{tcolorbox}[colback=Tcya!80!white]}
+        \mode<handout>{\begin{tcolorbox}[colback=Tcya!20!white]}
+        \begin{algorithmic}[1]
             \FOR{$i=0$ até $2I$}
                 \STATE{Calcula $q_i = q_{ent} \cdot [y(\alpha_{i+1}) - y(\alpha_i)]$;}
                 \STATE{Resolve para $w_i$, $n_i$, $u_{i+1}$, $P_{i+1}$ e $T_{i+1}$
@@ -446,7 +451,9 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Algoritmo de Finalização}\vspace*{-2em}
         \small
-        \begin{tcolorbox}[colback=yellow!15!white]\begin{algorithmic}[1]
+        \mode<beamer>{\begin{tcolorbox}[colback=Tcya!80!white]}
+        \mode<handout>{\begin{tcolorbox}[colback=Tcya!20!white]}
+        \begin{algorithmic}[1]
             \STATE{$w_{ent} \leftarrow \sum w_i \geqslant 0$;}
                 \COMMENT{Trabalho que entra no sistema em um ciclo}
             \STATE{$w_{out} \leftarrow - \sum w_i < 0$;}
@@ -472,7 +479,9 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Algoritmo de Solução de Sub-Processo}\vspace*{-2em}
         \small
-        \begin{tcolorbox}[colback=yellow!15!white]\begin{algorithmic}[1]
+        \mode<beamer>{\begin{tcolorbox}[colback=Tcya!80!white]}
+        \mode<handout>{\begin{tcolorbox}[colback=Tcya!20!white]}
+        \begin{algorithmic}[1]
             \IF{$|v_i - v_{i+1}| \leqslant \epsilon_v$}
                 \STATE{}\COMMENT{Processo isocórico}
                 \STATE{$u_{i+1} \leftarrow u_i + q_i$;}
@@ -491,7 +500,9 @@
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Algoritmo de Solução de Sub-Processo Politrópico}\vspace*{-2em}
         \scriptsize
-        \begin{tcolorbox}[colback=yellow!15!white]\begin{algorithmic}[1]
+        \mode<beamer>{\begin{tcolorbox}[colback=Tcya!80!white]}
+        \mode<handout>{\begin{tcolorbox}[colback=Tcya!20!white]}
+        \begin{algorithmic}[1]
             %\STATE{}\COMMENT{Processo politrópico}
             \STATE{$j \leftarrow 0$;}
             \STATE{Inicializa vetores $n_i$, $w_i$, $u_{i+1}$, $T_{i+1}$ e $P_{i+1}$;}

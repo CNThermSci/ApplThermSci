@@ -4,6 +4,18 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
+# ╔═╡ b88b4f04-f851-11ea-32f0-45dc4ce93e42
+using PlutoUI
+
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
 
@@ -18,7 +30,7 @@ Biblioteca básica de gás ideal sob hipóteses:
 - Substâncias puras;
 - Função cp(T) polinomial cúbica;
 - Função cp(T) válida para Tmin ⩽ T ⩽ Tmax;
-- sref = s(Tref) conhecida.
+- sref = s°(Tref) conhecida.
 "
 
 # ╔═╡ 3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
@@ -65,25 +77,29 @@ end;
 # ╔═╡ 21eb877c-f7d1-11ea-241a-5b5b9166d851
 gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
 
+# ╔═╡ cf58a7a8-f852-11ea-26be-7353cce3b2a2
+@bind gas_choice Select([row.Formula => row.Name for row in gasRaw])
+
 # ╔═╡ dfd9fc12-f7d5-11ea-3215-8389fe38230f
-# Standard test gas - Nitrogen
-stdGas = gasLib[:N2]
+# Standard test gas
+stdGas = gasLib[Symbol(gas_choice)]
 
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
 md"## Funcionalidade da Biblioteca
 
 Funções que calculam propriedades termodinâmicas dos gases."
 
-# ╔═╡ 3d9a6d88-f7d5-11ea-2692-754416f2bd6b
-md"### Valores-padrão da biblioteca
-
-Elege a molar como sendo a base padrão."
-
 # ╔═╡ 1caf907e-f7d7-11ea-0973-294ca1296b61
 md"### Verificações básicas"
 
 # ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
 md"▷ Testes:"
+
+# ╔═╡ 5f456858-f851-11ea-2432-f5455ae9eb87
+@bind bounds_test_T Slider(100:50:2000)
+
+# ╔═╡ def71222-f851-11ea-23cd-3155795ae67e
+md"The test temperature for bounds is $(bounds_test_T) K"
 
 # ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
 md"### Constantes básicas do gás"
@@ -104,21 +120,13 @@ Tmax(gas::IG) = gas.Tmax
 
 # ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
 function inbounds(gas::IG, T)
-	if gas.Tmin <= T <= gas.Tmax
-		true
-	else
+	if !(gas.Tmin <= T <= gas.Tmax)
 		throw(DomainError(T, "out of bounds $(Tmin(gas)) ⩽ T ⩽ $(Tmax(gas))."))
 	end
-end
+end;
 
 # ╔═╡ 43700ca2-f7d7-11ea-1f4a-178175229956
-inbounds(stdGas,  200)
-
-# ╔═╡ e38b21e0-f7e1-11ea-25f5-556ca9713904
-inbounds(stdGas,  400)
-
-# ╔═╡ f1db4a84-f7e1-11ea-1f29-d722e7a433bd
-inbounds(stdGas, 5000)
+inbounds(stdGas,  bounds_test_T)
 
 # ╔═╡ 412680da-f7d6-11ea-288f-c193dc4a28fd
 sref(gas::IG) = gas.sref
@@ -318,6 +326,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
+# ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
 # ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
@@ -328,15 +337,15 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═034e8264-f7cf-11ea-2a5b-b13e84ce9026
 # ╠═ad44f412-f7d2-11ea-0524-6f802013e302
 # ╠═21eb877c-f7d1-11ea-241a-5b5b9166d851
+# ╠═cf58a7a8-f852-11ea-26be-7353cce3b2a2
 # ╠═dfd9fc12-f7d5-11ea-3215-8389fe38230f
 # ╟─04402ca4-f7cf-11ea-02e7-2d95f990f682
-# ╟─3d9a6d88-f7d5-11ea-2692-754416f2bd6b
 # ╟─1caf907e-f7d7-11ea-0973-294ca1296b61
 # ╠═1c5b8254-f7d7-11ea-3446-39744648cf35
 # ╟─438d85f2-f7d7-11ea-325c-273ebfc69412
+# ╟─5f456858-f851-11ea-2432-f5455ae9eb87
+# ╟─def71222-f851-11ea-23cd-3155795ae67e
 # ╠═43700ca2-f7d7-11ea-1f4a-178175229956
-# ╠═e38b21e0-f7e1-11ea-25f5-556ca9713904
-# ╠═f1db4a84-f7e1-11ea-1f29-d722e7a433bd
 # ╟─01857e50-f7d5-11ea-0bb9-2b276266ad09
 # ╠═180ea502-f7d5-11ea-1e16-8ba66b4f6201
 # ╠═1d3d41fc-f7d6-11ea-205d-617f44dc1b64

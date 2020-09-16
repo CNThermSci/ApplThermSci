@@ -119,6 +119,9 @@ md"▷ Testes:"
 # ╔═╡ 8687cd74-f7d5-11ea-0d50-47318635afde
 𝐑(stdGas), 𝐑(stdGas, false), 𝐌(stdGas), Tmin(stdGas), Tmax(stdGas), sref(stdGas)
 
+# ╔═╡ 673f8582-f7db-11ea-3ee3-11f11ca73fdb
+stdGas
+
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
 md"### Comportamento P-T-v do gás
 
@@ -184,6 +187,7 @@ md"▷ Testes:"
 # ╠═412680da-f7d6-11ea-288f-c193dc4a28fd
 # ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
 # ╠═8687cd74-f7d5-11ea-0d50-47318635afde
+# ╠═673f8582-f7db-11ea-3ee3-11f11ca73fdb
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371

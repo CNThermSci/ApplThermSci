@@ -16,6 +16,9 @@ end
 # ╔═╡ b88b4f04-f851-11ea-32f0-45dc4ce93e42
 using PlutoUI
 
+# ╔═╡ 70cd7f1a-f870-11ea-1b68-3b778df6ac61
+using Formatting
+
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
 
@@ -136,11 +139,18 @@ sref(gas::IG) = gas.sref
 # ╔═╡ 62876930-f7d6-11ea-1281-eb68bffdc58a
 md"▷ Testes:"
 
-# ╔═╡ 8687cd74-f7d5-11ea-0d50-47318635afde
-𝐑(stdGas), 𝐑(stdGas, false), 𝐌(stdGas), Tmin(stdGas), Tmax(stdGas), sref(stdGas)
-
-# ╔═╡ 673f8582-f7db-11ea-3ee3-11f11ca73fdb
-stdGas
+# ╔═╡ e49f7636-f86c-11ea-2a2e-7751213c86e3
+begin
+	ed, sd = 5, 4 # (extra, significant)-digits
+	ff = generate_formatter("%$(sd+ed).$(sd)g")
+	local str  = "| Gás | R, kJ/kg·K | M, kg/kmol |\n"
+	str *= "| :---: | :---: | :---: |\n"
+	for row in gasRaw
+		tmp = rowToIG(row)
+		str *= "| $(row.Formula) | $(ff(𝐑(tmp, false))) | $(ff(𝐌(tmp))) |\n"
+	end
+	Markdown.parse(str)
+end
 
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
 md"### Comportamento P-T-v do gás
@@ -162,22 +172,32 @@ Sem verificações de limites (bounds) de temperatura."
 # ╔═╡ c2c23006-f7d8-11ea-3bec-e30e32d01007
 md"▷ Testes:"
 
-# ╔═╡ cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
-# Interprets T: K and v: m³/kmol
-𝐏(stdGas, true, T = 300, v = 1)
+# ╔═╡ 6104afb4-f874-11ea-128e-27ffa012d75e
+md"""
+`P = ` $(@bind exP Slider(80:20:1000, default=300, show_value=true)) kPa
 
-# ╔═╡ 868c49ea-f7d9-11ea-0b80-79139d382790
-# Interprets T: K and v: m³/kg
-𝐏(stdGas, false, T = 300, v = 1)
+`T = ` $(@bind exT Slider(300:20:800, default=300, show_value=true)) K
 
-# ╔═╡ cbab9ca0-f7d8-11ea-355e-b7b61d26d393
-# Interprets v: m³/kg
-𝐓(stdGas, false, P = 100, v = 1)
+Molar base? $(@bind exm CheckBox())
+"""
 
-# ╔═╡ 371daede-f7da-11ea-28fb-a113abe130df
-# Returns v: m³/kg, then v in the default (molar/mass) base
-𝐯(stdGas, false, P = 100, T = 298.15),
-𝐯(stdGas,        P = 100, T = 298.15)
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
+end
 
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"### Comportamento calórico do gás
@@ -329,6 +349,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
+# ╠═70cd7f1a-f870-11ea-1b68-3b778df6ac61
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
 # ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
@@ -354,17 +375,14 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═41475ace-f7d6-11ea-0bcf-6151365fc893
 # ╠═412680da-f7d6-11ea-288f-c193dc4a28fd
 # ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
-# ╠═8687cd74-f7d5-11ea-0d50-47318635afde
-# ╠═673f8582-f7db-11ea-3ee3-11f11ca73fdb
+# ╟─e49f7636-f86c-11ea-2a2e-7751213c86e3
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
 # ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
-# ╠═cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
-# ╠═868c49ea-f7d9-11ea-0b80-79139d382790
-# ╠═cbab9ca0-f7d8-11ea-355e-b7b61d26d393
-# ╠═371daede-f7da-11ea-28fb-a113abe130df
+# ╟─6104afb4-f874-11ea-128e-27ffa012d75e
+# ╟─b2606fd8-f872-11ea-0dff-232b927a6ea9
 # ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
 # ╟─7e859194-f7dd-11ea-13ef-751ab2e55ab6
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8

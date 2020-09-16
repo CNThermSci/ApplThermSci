@@ -60,18 +60,89 @@ gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
 # ╔═╡ 21ba8f8c-f7d1-11ea-0419-4f1f17f1f76d
 gasLib[:CH4]
 
+# ╔═╡ dfd9fc12-f7d5-11ea-3215-8389fe38230f
+# Standard test gas - Nitrogen
+stdGas = gasLib[:N2]
+
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
 md"## Funcionalidade da Biblioteca
 
 Funções que calculam propriedades termodinâmicas dos gases."
 
+# ╔═╡ 3d9a6d88-f7d5-11ea-2692-754416f2bd6b
+md"### Padrões da biblioteca"
+
+# ╔═╡ 3d7d05cc-f7d5-11ea-0419-77d8ee09161c
+# Whether the molar base is the default one
+const MOLR = true
+
+# ╔═╡ 1caf907e-f7d7-11ea-0973-294ca1296b61
+md"### Verificações básicas"
+
+# ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
+inbounds(gas::IG, T) = gas.Tmin <= T <= gas.Tmax
+
+# ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
+md"▷ Testes:"
+
+# ╔═╡ 43700ca2-f7d7-11ea-1f4a-178175229956
+inbounds(stdGas,  200), 
+inbounds(stdGas,  400), 
+inbounds(stdGas, 5000)
+
+# ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
+md"### Constantes básicas do gás"
+
+# ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
+# "𝖱" can be typed by \sansR<tab>
+𝖱(gas::IG, molr=MOLR) = molr ? R̄() : R̄() / gas.MW
+
+# ╔═╡ 1d3d41fc-f7d6-11ea-205d-617f44dc1b64
+# "𝖬" can be typed by \sansM<tab>
+𝖬(gas::IG) = gas.MW
+
+# ╔═╡ 41699000-f7d6-11ea-122a-0351461ef63c
+Tmin(gas::IG) = gas.Tmin
+
+# ╔═╡ 41475ace-f7d6-11ea-0bcf-6151365fc893
+Tmax(gas::IG) = gas.Tmax
+
+# ╔═╡ 412680da-f7d6-11ea-288f-c193dc4a28fd
+sref(gas::IG) = gas.sref
+
+# ╔═╡ 62876930-f7d6-11ea-1281-eb68bffdc58a
+md"▷ Testes:"
+
+# ╔═╡ 8687cd74-f7d5-11ea-0d50-47318635afde
+𝖱(stdGas), 𝖱(stdGas, false), Tmin(stdGas), Tmax(stdGas), sref(stdGas)
+
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
-md"### Comportamento P-T-v"
+md"### Comportamento P-T-v do gás
+
+Sem verificações de limites (bounds) de temperatura."
 
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
-
+# "𝖯" can be typed by \sansP<tab>
+𝖯(gas::IG, molr=true; T, v) = 𝖱(gas, molr) * T / v
 
 # ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
+# "𝖳" can be typed by \sansT<tab>
+𝖳(gas::IG, molr=true; P, v) = P * v / 𝖱(gas, molr)
+
+# ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
+# "𝗏" can be typed by \sansv<tab>
+𝗏(gas::IG, molr=true; P, T) = 𝖱(gas, molr) * T / P
+
+# ╔═╡ c2c23006-f7d8-11ea-3bec-e30e32d01007
+md"▷ Testes:"
+
+# ╔═╡ cc7b2190-f7d8-11ea-2fbc-c5eacbf89c7f
+
+
+# ╔═╡ cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
+
+
+# ╔═╡ cbab9ca0-f7d8-11ea-355e-b7b61d26d393
 
 
 # ╔═╡ Cell order:
@@ -86,7 +157,27 @@ md"### Comportamento P-T-v"
 # ╠═ad44f412-f7d2-11ea-0524-6f802013e302
 # ╠═21eb877c-f7d1-11ea-241a-5b5b9166d851
 # ╠═21ba8f8c-f7d1-11ea-0419-4f1f17f1f76d
+# ╠═dfd9fc12-f7d5-11ea-3215-8389fe38230f
 # ╟─04402ca4-f7cf-11ea-02e7-2d95f990f682
+# ╟─3d9a6d88-f7d5-11ea-2692-754416f2bd6b
+# ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
+# ╟─1caf907e-f7d7-11ea-0973-294ca1296b61
+# ╠═1c5b8254-f7d7-11ea-3446-39744648cf35
+# ╟─438d85f2-f7d7-11ea-325c-273ebfc69412
+# ╠═43700ca2-f7d7-11ea-1f4a-178175229956
+# ╟─01857e50-f7d5-11ea-0bb9-2b276266ad09
+# ╠═180ea502-f7d5-11ea-1e16-8ba66b4f6201
+# ╠═1d3d41fc-f7d6-11ea-205d-617f44dc1b64
+# ╠═41699000-f7d6-11ea-122a-0351461ef63c
+# ╠═41475ace-f7d6-11ea-0bcf-6151365fc893
+# ╠═412680da-f7d6-11ea-288f-c193dc4a28fd
+# ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
+# ╠═8687cd74-f7d5-11ea-0d50-47318635afde
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371
+# ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
+# ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
+# ╠═cc7b2190-f7d8-11ea-2fbc-c5eacbf89c7f
+# ╠═cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
+# ╠═cbab9ca0-f7d8-11ea-355e-b7b61d26d393

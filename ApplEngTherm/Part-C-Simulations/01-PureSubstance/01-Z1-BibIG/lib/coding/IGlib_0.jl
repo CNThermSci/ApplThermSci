@@ -94,12 +94,12 @@ inbounds(stdGas, 5000)
 md"### Constantes básicas do gás"
 
 # ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
-# "𝖱" can be typed by \sansR<tab>
-𝖱(gas::IG, molr=MOLR) = molr ? R̄() : R̄() / gas.MW
+# "𝐑" can be typed by \bfR<tab>
+𝐑(gas::IG, molr=MOLR) = molr ? R̄() : R̄() / gas.MW
 
 # ╔═╡ 1d3d41fc-f7d6-11ea-205d-617f44dc1b64
-# "𝖬" can be typed by \sansM<tab>
-𝖬(gas::IG) = gas.MW
+# "𝐌" can be typed by \bfM<tab>
+𝐌(gas::IG) = gas.MW
 
 # ╔═╡ 41699000-f7d6-11ea-122a-0351461ef63c
 Tmin(gas::IG) = gas.Tmin
@@ -114,7 +114,7 @@ sref(gas::IG) = gas.sref
 md"▷ Testes:"
 
 # ╔═╡ 8687cd74-f7d5-11ea-0d50-47318635afde
-𝖱(stdGas), 𝖱(stdGas, false), Tmin(stdGas), Tmax(stdGas), sref(stdGas)
+𝐑(stdGas), 𝐑(stdGas, false), 𝐌(stdGas), Tmin(stdGas), Tmax(stdGas), sref(stdGas)
 
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
 md"### Comportamento P-T-v do gás
@@ -122,28 +122,35 @@ md"### Comportamento P-T-v do gás
 Sem verificações de limites (bounds) de temperatura."
 
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
-# "𝖯" can be typed by \sansP<tab>
-𝖯(gas::IG, molr=true; T, v) = 𝖱(gas, molr) * T / v
+# "𝐏" can be typed by \bfP<tab>
+𝐏(gas::IG, molr=true; T, v) = 𝐑(gas, molr) * T / v
 
 # ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
-# "𝖳" can be typed by \sansT<tab>
-𝖳(gas::IG, molr=true; P, v) = P * v / 𝖱(gas, molr)
+# "𝐓" can be typed by \bfT<tab>
+𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
 
 # ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
-# "𝗏" can be typed by \sansv<tab>
-𝗏(gas::IG, molr=true; P, T) = 𝖱(gas, molr) * T / P
+# "𝐯" can be typed by \bfv<tab>
+𝐯(gas::IG, molr=true; P, T) = 𝐑(gas, molr) * T / P
 
 # ╔═╡ c2c23006-f7d8-11ea-3bec-e30e32d01007
 md"▷ Testes:"
 
-# ╔═╡ cc7b2190-f7d8-11ea-2fbc-c5eacbf89c7f
-
-
 # ╔═╡ cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
+# Interprets T: K and v: m³/kmol
+𝐏(stdGas, true, T = 300, v = 1)
 
+# ╔═╡ 868c49ea-f7d9-11ea-0b80-79139d382790
+# Interprets T: K and v: m³/kg
+𝐏(stdGas, false, T = 300, v = 1)
 
 # ╔═╡ cbab9ca0-f7d8-11ea-355e-b7b61d26d393
+𝐓(stdGas, false, P = 100, v = 1)
 
+# ╔═╡ 371daede-f7da-11ea-28fb-a113abe130df
+# Returns v: m³/kg, then v in the default (molar/mass) base
+𝐯(stdGas, false, P = 100, T = 298.15),
+𝐯(stdGas,        P = 100, T = 298.15)
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -178,6 +185,7 @@ md"▷ Testes:"
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
 # ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
-# ╠═cc7b2190-f7d8-11ea-2fbc-c5eacbf89c7f
 # ╠═cbc82ffc-f7d8-11ea-1e4b-8d3cd84c9a5f
+# ╠═868c49ea-f7d9-11ea-0b80-79139d382790
 # ╠═cbab9ca0-f7d8-11ea-355e-b7b61d26d393
+# ╠═371daede-f7da-11ea-28fb-a113abe130df

@@ -241,14 +241,17 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 γ(gas::IG; T) = cp(gas, true, T=T) / cv(gas, true, T=T)
 
 # ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
+# "𝐮" can be typed by \bfu<tab>
 𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
 
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
+# "𝐡" can be typed by \bfh<tab>
 𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + 𝐑(gas, molr) * Tref() : 0.0
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
+# "°" can be typed by \degree<tab>
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + gas.sref : 0.0
 

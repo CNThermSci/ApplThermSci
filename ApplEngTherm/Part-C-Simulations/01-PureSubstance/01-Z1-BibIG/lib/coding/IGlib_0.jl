@@ -27,7 +27,14 @@ R̄() = 8.314472 # ± 0.000015 # kJ/kmol⋅K
 Tref() = 298.15 # K
 
 # ╔═╡ 8125f198-f7c2-11ea-14e4-7f873ab2c3f4
-
+# IG (Ideal Gas) structure: values for each gas instance
+struct IG
+    MW                  # Molecular "Weight", kg/kmol
+    CP::NTuple{4}       # Exactly 4 c̄p(T) coefficients
+    Tmin                # T_min, K
+    Tmax                # T_max, K
+    sref                # s̄°ref, kJ/kmol·K
+end
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

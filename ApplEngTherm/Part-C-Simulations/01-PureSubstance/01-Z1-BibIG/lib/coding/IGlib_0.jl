@@ -24,13 +24,17 @@ Biblioteca básica de gás ideal sob hipóteses:
 # ╔═╡ 3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
 md"## Setup Mínimo"
 
+# ╔═╡ 3d7d05cc-f7d5-11ea-0419-77d8ee09161c
+# Whether the molar base is the default one
+const MOLR = true;
+
 # ╔═╡ 53ea6024-f7c2-11ea-2226-f9d22949c8b7
 # Universal gas constant
-R̄() = 8.314472 # ± 0.000015 # kJ/kmol⋅K
+R̄() = 8.314472; # ± 0.000015 # kJ/kmol⋅K
 
 # ╔═╡ 815a5db4-f7c2-11ea-1747-e3f2eccdf1b2
 # Standard Tref
-Tref() = 298.15 # K
+Tref() = 298.15; # K
 
 # ╔═╡ 8125f198-f7c2-11ea-14e4-7f873ab2c3f4
 # IG (Ideal Gas) structure: values for each gas instance
@@ -40,7 +44,7 @@ struct IG
     Tmin                # T_min, K
     Tmax                # T_max, K
     sref                # s̄°ref, kJ/kmol·K
-end
+end;
 
 # ╔═╡ e66a728a-f7cd-11ea-1fe6-07c915fa1c9d
 md"## Biblioteca Externa
@@ -56,13 +60,10 @@ gasRaw = CSV.File("IGTable.csv", normalizenames=true)
 function rowToIG(row)
 	IG( row.MW, (row.cp_a, row.cp_b, row.cp_c, row.cp_d),
 		row.Tmin, row.Tmax, row.sref)
-end
+end;
 
 # ╔═╡ 21eb877c-f7d1-11ea-241a-5b5b9166d851
 gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
-
-# ╔═╡ 21ba8f8c-f7d1-11ea-0419-4f1f17f1f76d
-gasLib[:CH4]
 
 # ╔═╡ dfd9fc12-f7d5-11ea-3215-8389fe38230f
 # Standard test gas - Nitrogen
@@ -77,10 +78,6 @@ Funções que calculam propriedades termodinâmicas dos gases."
 md"### Valores-padrão da biblioteca
 
 Elege a molar como sendo a base padrão."
-
-# ╔═╡ 3d7d05cc-f7d5-11ea-0419-77d8ee09161c
-# Whether the molar base is the default one
-const MOLR = true
 
 # ╔═╡ 1caf907e-f7d7-11ea-0973-294ca1296b61
 md"### Verificações básicas"
@@ -322,6 +319,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
+# ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
 # ╠═815a5db4-f7c2-11ea-1747-e3f2eccdf1b2
 # ╠═8125f198-f7c2-11ea-14e4-7f873ab2c3f4
@@ -330,11 +328,9 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═034e8264-f7cf-11ea-2a5b-b13e84ce9026
 # ╠═ad44f412-f7d2-11ea-0524-6f802013e302
 # ╠═21eb877c-f7d1-11ea-241a-5b5b9166d851
-# ╠═21ba8f8c-f7d1-11ea-0419-4f1f17f1f76d
 # ╠═dfd9fc12-f7d5-11ea-3215-8389fe38230f
 # ╟─04402ca4-f7cf-11ea-02e7-2d95f990f682
 # ╟─3d9a6d88-f7d5-11ea-2692-754416f2bd6b
-# ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╟─1caf907e-f7d7-11ea-0973-294ca1296b61
 # ╠═1c5b8254-f7d7-11ea-3446-39744648cf35
 # ╟─438d85f2-f7d7-11ea-325c-273ebfc69412

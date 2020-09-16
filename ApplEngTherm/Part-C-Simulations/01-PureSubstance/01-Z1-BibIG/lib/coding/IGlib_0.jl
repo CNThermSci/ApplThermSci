@@ -164,8 +164,33 @@ md"### Comportamento calórico do gás
 
 Com verificações de limites (bounds) de temperatura."
 
+# ╔═╡ 7e859194-f7dd-11ea-13ef-751ab2e55ab6
+md"#### Funções de transformação de coeficientes:"
+
 # ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
-# Implement-me!
+# If functions accound for integration factor, then only :cp, :cv are needed here
+function coef(gas::IG, kind::Symbol = :cp)
+	if kind == :cp 		# No coef. transformation
+		hcat(gas.CP...)
+	elseif kind == :cv 	# Translates first coeff.
+		hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
+	end
+end
+
+# ╔═╡ 5fa1aa8c-f7de-11ea-0273-91f322669afd
+md"▷ Tests:"
+
+# ╔═╡ 6eca2fde-f7de-11ea-2acb-2d38e852db17
+coef(stdGas), coef(stdGas, :cv)
+
+# ╔═╡ 6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
+
+
+# ╔═╡ 6e63a0d4-f7de-11ea-309a-416b370ef546
+
+
+# ╔═╡ 6e4a1574-f7de-11ea-03f8-61b31c9f69d9
+
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -206,4 +231,10 @@ Com verificações de limites (bounds) de temperatura."
 # ╠═cbab9ca0-f7d8-11ea-355e-b7b61d26d393
 # ╠═371daede-f7da-11ea-28fb-a113abe130df
 # ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
+# ╟─7e859194-f7dd-11ea-13ef-751ab2e55ab6
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
+# ╟─5fa1aa8c-f7de-11ea-0273-91f322669afd
+# ╠═6eca2fde-f7de-11ea-2acb-2d38e852db17
+# ╠═6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
+# ╠═6e63a0d4-f7de-11ea-309a-416b370ef546
+# ╠═6e4a1574-f7de-11ea-03f8-61b31c9f69d9

@@ -93,7 +93,7 @@ Escolha do gás padrão para testes, abaixo:"
 stdGas = gasLib[Symbol(gas_choice)]
 
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
-md"## Funcionalidade da Biblioteca – Verificações"
+md"## Funcionalidade – Verificações"
 
 # ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
 md"▷ Testes:"
@@ -102,7 +102,7 @@ md"▷ Testes:"
 @bind bounds_test_T Slider(0:50:2000, default=0, show_value=true)
 
 # ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
-md"## Funcionalidade da Biblioteca – Constantes"
+md"## Funcionalidade – Constantes"
 
 # ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
 # "𝐑" can be typed by \bfR<tab>
@@ -153,9 +153,7 @@ begin
 end
 
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
-md"### Comportamento P-T-v do gás
-
-Sem verificações de limites (bounds) de temperatura."
+md"## Funcionalidade – Comportamento P-T-v"
 
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # "𝐏" can be typed by \bfP<tab>
@@ -200,12 +198,10 @@ begin
 end
 
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
-md"### Comportamento calórico do gás
-
-Com verificações de limites (bounds) de temperatura."
+md"## Funcionalidade – Comportamento Calórico"
 
 # ╔═╡ 7e859194-f7dd-11ea-13ef-751ab2e55ab6
-md"#### Funções de transformação de coeficientes:"
+md"### Transformação de coeficientes:"
 
 # ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # If functions accound for integration factor, then only :cp, :cv are needed here
@@ -216,7 +212,7 @@ function coef(gas::IG, kind::Symbol = :cp, molr=MOLR)
 		ret = hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
 	end
 	molr ? ret : ret ./ gas.MW
-end
+end;
 
 # ╔═╡ 5fa1aa8c-f7de-11ea-0273-91f322669afd
 md"▷ Tests:"

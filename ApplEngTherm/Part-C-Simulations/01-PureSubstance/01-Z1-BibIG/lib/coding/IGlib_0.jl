@@ -159,6 +159,14 @@ md"▷ Testes:"
 𝐯(stdGas, false, P = 100, T = 298.15),
 𝐯(stdGas,        P = 100, T = 298.15)
 
+# ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
+md"### Comportamento calórico do gás
+
+Com verificações de limites (bounds) de temperatura."
+
+# ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
+# Implement-me!
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
@@ -197,3 +205,5 @@ md"▷ Testes:"
 # ╠═868c49ea-f7d9-11ea-0b80-79139d382790
 # ╠═cbab9ca0-f7d8-11ea-355e-b7b61d26d393
 # ╠═371daede-f7da-11ea-28fb-a113abe130df
+# ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
+# ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8

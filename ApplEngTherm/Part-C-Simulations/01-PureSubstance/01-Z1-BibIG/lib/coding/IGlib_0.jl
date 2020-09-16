@@ -77,6 +77,11 @@ end;
 # ╔═╡ 21eb877c-f7d1-11ea-241a-5b5b9166d851
 gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
 
+# ╔═╡ 75bea142-f853-11ea-3a14-0b6e1ba4e188
+md"## Gás Padrão
+
+Escolha do gás padrão para testes, abaixo:"
+
 # ╔═╡ cf58a7a8-f852-11ea-26be-7353cce3b2a2
 @bind gas_choice Select([row.Formula => row.Name for row in gasRaw])
 
@@ -85,24 +90,16 @@ gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
 stdGas = gasLib[Symbol(gas_choice)]
 
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
-md"## Funcionalidade da Biblioteca
-
-Funções que calculam propriedades termodinâmicas dos gases."
-
-# ╔═╡ 1caf907e-f7d7-11ea-0973-294ca1296b61
-md"### Verificações básicas"
+md"## Funcionalidade da Biblioteca – Verificações"
 
 # ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
 md"▷ Testes:"
 
 # ╔═╡ 5f456858-f851-11ea-2432-f5455ae9eb87
-@bind bounds_test_T Slider(100:50:2000)
-
-# ╔═╡ def71222-f851-11ea-23cd-3155795ae67e
-md"The test temperature for bounds is $(bounds_test_T) K"
+@bind bounds_test_T Slider(0:50:2000, default=0, show_value=true)
 
 # ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
-md"### Constantes básicas do gás"
+md"## Funcionalidade da Biblioteca – Constantes"
 
 # ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
 # "𝐑" can be typed by \bfR<tab>
@@ -125,8 +122,13 @@ function inbounds(gas::IG, T)
 	end
 end;
 
-# ╔═╡ 43700ca2-f7d7-11ea-1f4a-178175229956
-inbounds(stdGas,  bounds_test_T)
+# ╔═╡ def71222-f851-11ea-23cd-3155795ae67e
+begin
+	flag = try inbounds(stdGas,  bounds_test_T); true; catch; false; end
+	flag ?
+		md"✔ A temperatura de $(bounds_test_T) K está  DENTRO  dos limites para o $(gas_choice)!" :
+		md"✘ A temperatura de $(bounds_test_T) K está **FORA** dos limites para o $(gas_choice)!"
+end
 
 # ╔═╡ 412680da-f7d6-11ea-288f-c193dc4a28fd
 sref(gas::IG) = gas.sref
@@ -337,15 +339,14 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═034e8264-f7cf-11ea-2a5b-b13e84ce9026
 # ╠═ad44f412-f7d2-11ea-0524-6f802013e302
 # ╠═21eb877c-f7d1-11ea-241a-5b5b9166d851
+# ╟─75bea142-f853-11ea-3a14-0b6e1ba4e188
 # ╠═cf58a7a8-f852-11ea-26be-7353cce3b2a2
 # ╠═dfd9fc12-f7d5-11ea-3215-8389fe38230f
 # ╟─04402ca4-f7cf-11ea-02e7-2d95f990f682
-# ╟─1caf907e-f7d7-11ea-0973-294ca1296b61
 # ╠═1c5b8254-f7d7-11ea-3446-39744648cf35
 # ╟─438d85f2-f7d7-11ea-325c-273ebfc69412
 # ╟─5f456858-f851-11ea-2432-f5455ae9eb87
 # ╟─def71222-f851-11ea-23cd-3155795ae67e
-# ╠═43700ca2-f7d7-11ea-1f4a-178175229956
 # ╟─01857e50-f7d5-11ea-0bb9-2b276266ad09
 # ╠═180ea502-f7d5-11ea-1e16-8ba66b4f6201
 # ╠═1d3d41fc-f7d6-11ea-205d-617f44dc1b64

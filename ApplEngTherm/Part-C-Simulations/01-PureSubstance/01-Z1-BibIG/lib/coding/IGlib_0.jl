@@ -236,17 +236,42 @@ cp(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cv, molr) * apply(:c, T))[1] : 0.0
 
+# ╔═╡ b03d1962-f7e4-11ea-2ae9-d153c7d10f2f
+# "γ" can be typed by \gamma<tab>
+γ(gas::IG; T) = cp(gas, true, T=T) / cv(gas, true, T=T)
+
 # ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
 
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
 𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + R̄() * Tref() : 0.0
+	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + 𝐑(gas, molr) * Tref() : 0.0
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + gas.sref : 0.0
+
+# ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
+md"▷ Tests:"
+
+# ╔═╡ a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
+cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
+
+# ╔═╡ a392eb56-f7e4-11ea-2fae-b32ecedb9b43
+𝐮(stdGas, false, T=300), 𝐮(stdGas, false, T=Tref())
+
+# ╔═╡ a365fd94-f7e4-11ea-1353-870d15118696
+𝐡(stdGas, false, T=400), 𝐮(stdGas, false, T=400) + 𝐏(stdGas, false, T=400, v=1)
+
+# ╔═╡ a348b826-f7e4-11ea-3c06-7fef37879c59
+𝐡(stdGas, true, T=400), 𝐮(stdGas, true, T=400) + 𝐏(stdGas, true, T=400, v=1)
+
+# ╔═╡ a32b29a6-f7e4-11ea-26e9-2fb215d25726
+
+
+# ╔═╡ 1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
+
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -303,6 +328,14 @@ s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 # ╟─2200fc52-f7e1-11ea-2ee1-458510ad0ae1
 # ╠═2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
 # ╠═2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
+# ╠═b03d1962-f7e4-11ea-2ae9-d153c7d10f2f
 # ╠═2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 # ╠═1530d092-f7e3-11ea-180e-09ee5c270414
 # ╠═20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
+# ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
+# ╠═a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
+# ╠═a392eb56-f7e4-11ea-2fae-b32ecedb9b43
+# ╠═a365fd94-f7e4-11ea-1353-870d15118696
+# ╠═a348b826-f7e4-11ea-3c06-7fef37879c59
+# ╠═a32b29a6-f7e4-11ea-26e9-2fb215d25726
+# ╠═1f678c40-f7e6-11ea-18ab-e51e52d3f3e1

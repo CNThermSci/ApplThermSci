@@ -306,6 +306,14 @@ begin
 	)
 end
 
+# ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
+md"### Funções inversas
+
+Métodos numéricos para T(u), T(h), etc."
+
+# ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
+# To be implemented!
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
@@ -378,3 +386,5 @@ end
 # ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
 # ╠═c2f7b900-f7e8-11ea-0456-ab265d2f6616
 # ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
+# ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
+# ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf

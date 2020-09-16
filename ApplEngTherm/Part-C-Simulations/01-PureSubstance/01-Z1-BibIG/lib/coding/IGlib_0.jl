@@ -297,10 +297,10 @@ s°(stdGas, T=300), s°(stdGas, T=1800)
 begin
 	T = collect(300:100:1800)
 	DataFrame(
-		:T => T,
-		:h => [𝐡(stdGas, false, T=i) for i in T],
+		:T  => T,
+		:h  => [𝐡(stdGas, false, T=i) for i in T],
 		:Pr => [Pr(stdGas, T=i) * 1.0e-10 for i in T],
-		:u => [𝐮(stdGas, false, T=i) for i in T],
+		:u  => [𝐮(stdGas, false, T=i) for i in T],
 		:vr => [vr(stdGas, T=i) / 1.0e-10 for i in T],
 		:s° => [s°(stdGas, false, T=i) for i in T]
 	)

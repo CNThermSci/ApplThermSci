@@ -268,10 +268,10 @@ cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
 𝐡(stdGas, true, T=400), 𝐮(stdGas, true, T=400) + 𝐏(stdGas, true, T=400, v=1)
 
 # ╔═╡ a32b29a6-f7e4-11ea-26e9-2fb215d25726
-
+𝐡(stdGas, T=Tref()), 𝐑(stdGas) * Tref()
 
 # ╔═╡ 1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
-
+𝐡(stdGas, false, T=Tref()), 𝐑(stdGas, false) * Tref()
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

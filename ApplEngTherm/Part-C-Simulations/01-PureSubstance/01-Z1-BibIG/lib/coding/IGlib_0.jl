@@ -50,21 +50,15 @@ gasRaw = CSV.File("IGTable.csv", normalizenames=true)
 
 # ╔═╡ ad44f412-f7d2-11ea-0524-6f802013e302
 function rowToIG(row)
-	IG( row.MW_kg_kmol, (
-			row.cp_a_kJ_kmol_K,
-			row.cp_b_kJ_kmol_K²,
-			row.cp_c_kJ_kmol_K³,
-			row.cp_d_kJ_kmol_K⁴),
-		row.Tmin_K,
-		row.Tmax_K,
-		row.sref_kJ_kmol_K)
+	IG( row.MW, (row.cp_a, row.cp_b, row.cp_c, row.cp_d),
+		row.Tmin, row.Tmax, row.sref)
 end
 
 # ╔═╡ 21eb877c-f7d1-11ea-241a-5b5b9166d851
 gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
 
 # ╔═╡ 21ba8f8c-f7d1-11ea-0419-4f1f17f1f76d
-gasLib[:O2]
+gasLib[:CH4]
 
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
 md"## Funcionalidade da Biblioteca

@@ -145,6 +145,7 @@ md"▷ Testes:"
 𝐏(stdGas, false, T = 300, v = 1)
 
 # ╔═╡ cbab9ca0-f7d8-11ea-355e-b7b61d26d393
+# Interprets v: m³/kg
 𝐓(stdGas, false, P = 100, v = 1)
 
 # ╔═╡ 371daede-f7da-11ea-28fb-a113abe130df

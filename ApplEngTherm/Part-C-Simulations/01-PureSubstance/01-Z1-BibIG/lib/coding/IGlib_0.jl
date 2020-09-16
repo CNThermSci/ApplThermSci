@@ -250,7 +250,7 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + gas.sref : 0.0
+	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + gas.sref : 0.0
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Tests:"
@@ -272,6 +272,18 @@ cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
 
 # ╔═╡ 1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
 𝐡(stdGas, false, T=Tref()), 𝐑(stdGas, false) * Tref()
+
+# ╔═╡ 568caf66-f7e6-11ea-000e-e925ee086a07
+s°(stdGas, T=Tref()), sref(stdGas)
+
+# ╔═╡ 69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
+s°(stdGas, T=300), s°(stdGas, T=1800)
+
+# ╔═╡ 699e5762-f7e6-11ea-1724-edc2ffb575ba
+
+
+# ╔═╡ 697d531e-f7e6-11ea-3b9a-abcd7fbf45b0
+
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -339,3 +351,7 @@ cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
 # ╠═a348b826-f7e4-11ea-3c06-7fef37879c59
 # ╠═a32b29a6-f7e4-11ea-26e9-2fb215d25726
 # ╠═1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
+# ╠═568caf66-f7e6-11ea-000e-e925ee086a07
+# ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
+# ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
+# ╠═697d531e-f7e6-11ea-3b9a-abcd7fbf45b0

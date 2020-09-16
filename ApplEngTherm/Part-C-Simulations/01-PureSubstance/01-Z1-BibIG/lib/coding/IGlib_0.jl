@@ -184,12 +184,31 @@ md"▷ Tests:"
 coef(stdGas), coef(stdGas, :cv)
 
 # ╔═╡ 6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
-
+md"#### Funções dos coeficientes por propriedade:"
 
 # ╔═╡ 6e63a0d4-f7de-11ea-309a-416b370ef546
-
+const propF = Dict(
+	:c => (x->1     , x->x    , x->x^2  , x->x^3  ),	# Tuple makes it faster
+	:h => (x->x     , x->x^2/2, x->x^3/3, x->x^4/4),	# Tuple makes it faster
+	:s => (x->log(x), x->x    , x->x^2/2, x->x^3/3),	# Tuple makes it faster
+)
 
 # ╔═╡ 6e4a1574-f7de-11ea-03f8-61b31c9f69d9
+md"#### Funções propriedades:"
+
+# ╔═╡ 2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
+
+
+# ╔═╡ 2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
+
+
+# ╔═╡ 2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
+
+
+# ╔═╡ 2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
+
+
+# ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 
 
 # ╔═╡ Cell order:
@@ -235,6 +254,11 @@ coef(stdGas), coef(stdGas, :cv)
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # ╟─5fa1aa8c-f7de-11ea-0273-91f322669afd
 # ╠═6eca2fde-f7de-11ea-2acb-2d38e852db17
-# ╠═6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
+# ╟─6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
 # ╠═6e63a0d4-f7de-11ea-309a-416b370ef546
-# ╠═6e4a1574-f7de-11ea-03f8-61b31c9f69d9
+# ╟─6e4a1574-f7de-11ea-03f8-61b31c9f69d9
+# ╠═2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
+# ╠═2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
+# ╠═2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
+# ╠═2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
+# ╠═2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8

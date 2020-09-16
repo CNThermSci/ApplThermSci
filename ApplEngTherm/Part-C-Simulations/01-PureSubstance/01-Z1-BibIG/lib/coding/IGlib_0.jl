@@ -255,6 +255,7 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 # "°" can be typed by \degree<tab>
+# "Partial" ideal gas entropy
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + 
 	(molr ? gas.sref : gas.sref / gas.MW) : 0.0
@@ -264,6 +265,10 @@ Pr(gas::IG; T) = exp(s°(gas, true, T=T) / 𝐑(gas, true))
 
 # ╔═╡ 91e31608-f7e7-11ea-1295-817f8f1eff16
 vr(gas::IG; T) = T / Pr(gas, T=T)
+
+# ╔═╡ 2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
+# Missing entropy!
+# 𝐬:𝐬(gas, T, P)
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Tests:"
@@ -309,7 +314,7 @@ end
 # ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 md"### Funções inversas
 
-Métodos numéricos para T(u), T(h), etc."
+Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
 # To be implemented!
@@ -375,6 +380,7 @@ Métodos numéricos para T(u), T(h), etc."
 # ╠═20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 # ╠═91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
 # ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
+# ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╠═a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
 # ╠═a392eb56-f7e4-11ea-2fae-b32ecedb9b43

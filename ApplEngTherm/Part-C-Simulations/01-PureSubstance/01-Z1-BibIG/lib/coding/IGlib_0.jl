@@ -7,6 +7,9 @@ using InteractiveUtils
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
 
+# ╔═╡ c2f7b900-f7e8-11ea-0456-ab265d2f6616
+using DataFrames
+
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Biblioteca Simplificada de Gás Ideal
 
@@ -253,7 +256,14 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 # "°" can be typed by \degree<tab>
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + gas.sref : 0.0
+	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + 
+	(molr ? gas.sref : gas.sref / gas.MW) : 0.0
+
+# ╔═╡ 91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
+Pr(gas::IG; T) = exp(s°(gas, true, T=T) / 𝐑(gas, true))
+
+# ╔═╡ 91e31608-f7e7-11ea-1295-817f8f1eff16
+vr(gas::IG; T) = T / Pr(gas, T=T)
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Tests:"
@@ -283,10 +293,18 @@ s°(stdGas, T=Tref()), sref(stdGas)
 s°(stdGas, T=300), s°(stdGas, T=1800)
 
 # ╔═╡ 699e5762-f7e6-11ea-1724-edc2ffb575ba
-
-
-# ╔═╡ 697d531e-f7e6-11ea-3b9a-abcd7fbf45b0
-
+# Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°} - Table for the `stdGas`:
+begin
+	T = collect(300:100:1800)
+	DataFrame(
+		:T => T,
+		:h => [𝐡(stdGas, false, T=i) for i in T],
+		:Pr => [Pr(stdGas, T=i) * 1.0e-10 for i in T],
+		:u => [𝐮(stdGas, false, T=i) for i in T],
+		:vr => [vr(stdGas, T=i) / 1.0e-10 for i in T],
+		:s° => [s°(stdGas, false, T=i) for i in T]
+	)
+end
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -347,6 +365,8 @@ s°(stdGas, T=300), s°(stdGas, T=1800)
 # ╠═2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 # ╠═1530d092-f7e3-11ea-180e-09ee5c270414
 # ╠═20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
+# ╠═91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
+# ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╠═a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
 # ╠═a392eb56-f7e4-11ea-2fae-b32ecedb9b43
@@ -356,5 +376,5 @@ s°(stdGas, T=300), s°(stdGas, T=1800)
 # ╠═1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
 # ╠═568caf66-f7e6-11ea-000e-e925ee086a07
 # ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
+# ╠═c2f7b900-f7e8-11ea-0456-ab265d2f6616
 # ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
-# ╠═697d531e-f7e6-11ea-3b9a-abcd7fbf45b0

@@ -46,13 +46,15 @@ Valores tabelados em Çengel, Y. A., Termodinâmica 7a Ed. ISBN 978-85-8055-200-
 "
 
 # ╔═╡ 034e8264-f7cf-11ea-2a5b-b13e84ce9026
-gasLib = CSV.File("IGTable.csv")
+gasDat = CSV.File("IGTable.csv")
 
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
+md"## Funcionalidade da Biblioteca
 
+Funções que calculam propriedades termodinâmicas dos gases."
 
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
-
+md"### Comportamento P-T-v"
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -63,5 +65,5 @@ gasLib = CSV.File("IGTable.csv")
 # ╟─e66a728a-f7cd-11ea-1fe6-07c915fa1c9d
 # ╠═934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 # ╠═034e8264-f7cf-11ea-2a5b-b13e84ce9026
-# ╠═04402ca4-f7cf-11ea-02e7-2d95f990f682
-# ╠═0411c8a0-f7cf-11ea-15ec-636d951c8e49
+# ╟─04402ca4-f7cf-11ea-02e7-2d95f990f682
+# ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49

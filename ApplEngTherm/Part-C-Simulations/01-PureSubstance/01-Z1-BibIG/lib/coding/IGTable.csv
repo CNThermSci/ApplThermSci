@@ -1,4 +1,4 @@
-"Name","Formula","MW, kg/kmol","cp_a, kJ/kmol·K","cp_b, kJ/kmol·K²","cp_c, kJ/kmol·K³","cp_d, kJ/kmol·K⁴","Tmin, K","Tmax, K","sref, kJ/kmol·K"
+"Name","Formula","MW","cp_a","cp_b","cp_c","cp_d","Tmin","Tmax","sref"
 "Nitrogen","N2",28.013,+28.900,-1.571E-03,+8.081E-06,-2.873E-09,273.0,1800.0,191.61
 "Oxygen","O2",31.999,+25.480,+1.520E-02,-7.155E-06,+1.312E-09,273.0,1800.0,205.04
 "Hydrogen","H2",2.016,+29.110,-1.916E-03,+4.003E-06,-8.704E-10,273.0,1800.0,130.68

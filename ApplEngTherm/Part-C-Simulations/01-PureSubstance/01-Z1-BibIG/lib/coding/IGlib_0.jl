@@ -82,16 +82,8 @@ const MOLR = true
 # ╔═╡ 1caf907e-f7d7-11ea-0973-294ca1296b61
 md"### Verificações básicas"
 
-# ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
-inbounds(gas::IG, T) = gas.Tmin <= T <= gas.Tmax
-
 # ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
 md"▷ Testes:"
-
-# ╔═╡ 43700ca2-f7d7-11ea-1f4a-178175229956
-inbounds(stdGas,  200), 
-inbounds(stdGas,  400), 
-inbounds(stdGas, 5000)
 
 # ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
 md"### Constantes básicas do gás"
@@ -109,6 +101,24 @@ Tmin(gas::IG) = gas.Tmin
 
 # ╔═╡ 41475ace-f7d6-11ea-0bcf-6151365fc893
 Tmax(gas::IG) = gas.Tmax
+
+# ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
+function inbounds(gas::IG, T)
+	if gas.Tmin <= T <= gas.Tmax
+		true
+	else
+		throw(DomainError(T, "out of bounds $(Tmin(gas)) ⩽ T ⩽ $(Tmax(gas))."))
+	end
+end
+
+# ╔═╡ 43700ca2-f7d7-11ea-1f4a-178175229956
+inbounds(stdGas,  200)
+
+# ╔═╡ e38b21e0-f7e1-11ea-25f5-556ca9713904
+inbounds(stdGas,  400)
+
+# ╔═╡ f1db4a84-f7e1-11ea-1f29-d722e7a433bd
+inbounds(stdGas, 5000)
 
 # ╔═╡ 412680da-f7d6-11ea-288f-c193dc4a28fd
 sref(gas::IG) = gas.sref
@@ -169,12 +179,13 @@ md"#### Funções de transformação de coeficientes:"
 
 # ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # If functions accound for integration factor, then only :cp, :cv are needed here
-function coef(gas::IG, kind::Symbol = :cp)
+function coef(gas::IG, kind::Symbol = :cp, molr=MOLR)
 	if kind == :cp 		# No coef. transformation
-		hcat(gas.CP...)
+		ret = hcat(gas.CP...)
 	elseif kind == :cv 	# Translates first coeff.
-		hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
+		ret = hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
 	end
+	molr ? ret : ret ./ gas.MW
 end
 
 # ╔═╡ 5fa1aa8c-f7de-11ea-0273-91f322669afd
@@ -182,6 +193,10 @@ md"▷ Tests:"
 
 # ╔═╡ 6eca2fde-f7de-11ea-2acb-2d38e852db17
 coef(stdGas), coef(stdGas, :cv)
+
+# ╔═╡ 78f6e73c-f7e2-11ea-1ed0-9d3c4cbc679b
+coef(stdGas, :cp, false),
+coef(stdGas, :cv, false)
 
 # ╔═╡ 6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
 md"#### Funções dos coeficientes por propriedade:"
@@ -193,23 +208,45 @@ const propF = Dict(
 	:s => (x->log(x), x->x    , x->x^2/2, x->x^3/3),	# Tuple makes it faster
 )
 
-# ╔═╡ 6e4a1574-f7de-11ea-03f8-61b31c9f69d9
-md"#### Funções propriedades:"
-
 # ╔═╡ 2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
+# Generic f(T) function by Symbol key
+function apply(p::Symbol, T, rel=false)
+	rel ?
+		vcat((f(T) for f in propF[p])...) - vcat((f(Tref()) for f in propF[p])...) :
+		vcat((f(T) for f in propF[p])...)
+end
 
+# ╔═╡ e78b2e58-f7e0-11ea-2ec0-0d918bc66c70
+md"▷ Tests:"
 
 # ╔═╡ 2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
+apply(:c, 300.0), apply(:h, 300.0), apply(:s, 300.0)
 
+# ╔═╡ 408cb182-f7e3-11ea-0066-7d0376cf8149
+apply(:h, Tref() + 0.001, true)
+
+# ╔═╡ 2200fc52-f7e1-11ea-2ee1-458510ad0ae1
+md"#### Funções de usuário:"
 
 # ╔═╡ 2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
-
+cp(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
+	(coef(gas, :cp, molr) * apply(:c, T))[1] : 0.0
 
 # ╔═╡ 2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
-
+cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
+	(coef(gas, :cv, molr) * apply(:c, T))[1] : 0.0
 
 # ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
+𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
+	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
 
+# ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
+𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
+	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + R̄() * Tref() : 0.0
+
+# ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
+s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
+	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + gas.sref : 0.0
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -231,6 +268,8 @@ md"#### Funções propriedades:"
 # ╠═1c5b8254-f7d7-11ea-3446-39744648cf35
 # ╟─438d85f2-f7d7-11ea-325c-273ebfc69412
 # ╠═43700ca2-f7d7-11ea-1f4a-178175229956
+# ╠═e38b21e0-f7e1-11ea-25f5-556ca9713904
+# ╠═f1db4a84-f7e1-11ea-1f29-d722e7a433bd
 # ╟─01857e50-f7d5-11ea-0bb9-2b276266ad09
 # ╠═180ea502-f7d5-11ea-1e16-8ba66b4f6201
 # ╠═1d3d41fc-f7d6-11ea-205d-617f44dc1b64
@@ -254,11 +293,16 @@ md"#### Funções propriedades:"
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # ╟─5fa1aa8c-f7de-11ea-0273-91f322669afd
 # ╠═6eca2fde-f7de-11ea-2acb-2d38e852db17
+# ╠═78f6e73c-f7e2-11ea-1ed0-9d3c4cbc679b
 # ╟─6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
 # ╠═6e63a0d4-f7de-11ea-309a-416b370ef546
-# ╟─6e4a1574-f7de-11ea-03f8-61b31c9f69d9
 # ╠═2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
+# ╟─e78b2e58-f7e0-11ea-2ec0-0d918bc66c70
 # ╠═2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
+# ╠═408cb182-f7e3-11ea-0066-7d0376cf8149
+# ╟─2200fc52-f7e1-11ea-2ee1-458510ad0ae1
 # ╠═2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
 # ╠═2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
 # ╠═2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
+# ╠═1530d092-f7e3-11ea-180e-09ee5c270414
+# ╠═20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35

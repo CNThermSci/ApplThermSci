@@ -49,6 +49,7 @@ Valores tabelados em Çengel, Y. A., Termodinâmica 7a Ed. ISBN 978-85-8055-200-
 gasRaw = CSV.File("IGTable.csv", normalizenames=true)
 
 # ╔═╡ ad44f412-f7d2-11ea-0524-6f802013e302
+# Transforms a row (from the CSV file) into an IG instance
 function rowToIG(row)
 	IG( row.MW, (row.cp_a, row.cp_b, row.cp_c, row.cp_d),
 		row.Tmin, row.Tmax, row.sref)
@@ -70,7 +71,9 @@ md"## Funcionalidade da Biblioteca
 Funções que calculam propriedades termodinâmicas dos gases."
 
 # ╔═╡ 3d9a6d88-f7d5-11ea-2692-754416f2bd6b
-md"### Padrões da biblioteca"
+md"### Valores-padrão da biblioteca
+
+Elege a molar como sendo a base padrão."
 
 # ╔═╡ 3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # Whether the molar base is the default one

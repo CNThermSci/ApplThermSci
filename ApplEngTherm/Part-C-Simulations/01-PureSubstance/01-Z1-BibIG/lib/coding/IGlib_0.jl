@@ -51,6 +51,10 @@ R̄() = 8.314472; # ± 0.000015 # kJ/kmol⋅K
 # Standard Tref
 Tref() = 298.15; # K
 
+# ╔═╡ f26879e2-f884-11ea-0223-158b8af130b9
+# Standard Pref - for the entropy
+Pref() = 100.00; # kPa
+
 # ╔═╡ 8125f198-f7c2-11ea-14e4-7f873ab2c3f4
 # IG (Ideal Gas) structure: values for each gas instance
 struct IG
@@ -283,11 +287,15 @@ Pr(gas::IG; T) = exp(s°(gas, true, T=T) / R̄()) / # arbitrary const
 vr(gas::IG; T) = T / Pr(gas, T=T)
 
 # ╔═╡ 2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
-# Missing entropy!
-# 𝐬:𝐬(gas, T, P)
+# "𝐬" can be typed by \bfs<tab>
+𝐬(gas::IG, molr=MOLR; T, P) = inbounds(gas, T) ?
+	s°(gas, molr, T=T) - 𝐑(gas, molr) * log(P/Pref()) : 0.0
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Tests:"
+
+# ╔═╡ b56cba08-f886-11ea-1dd9-03be8e0ec51d
+𝐬(stdGas, false, T=Tmin(stdGas), P=100)
 
 # ╔═╡ a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
 cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
@@ -344,6 +352,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
 # ╠═815a5db4-f7c2-11ea-1747-e3f2eccdf1b2
+# ╠═f26879e2-f884-11ea-0223-158b8af130b9
 # ╠═8125f198-f7c2-11ea-14e4-7f873ab2c3f4
 # ╟─e66a728a-f7cd-11ea-1fe6-07c915fa1c9d
 # ╠═934ae304-f7ce-11ea-2b06-9b0f48cd9c22
@@ -390,6 +399,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
+# ╠═b56cba08-f886-11ea-1dd9-03be8e0ec51d
 # ╠═a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
 # ╠═a392eb56-f7e4-11ea-2fae-b32ecedb9b43
 # ╠═a365fd94-f7e4-11ea-1353-870d15118696

@@ -19,11 +19,11 @@ using PlutoUI
 # ╔═╡ 70cd7f1a-f870-11ea-1b68-3b778df6ac61
 using Formatting
 
+# ╔═╡ 3b936e7e-f87b-11ea-2561-77123eaac9d8
+using DataFrames
+
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
-
-# ╔═╡ c2f7b900-f7e8-11ea-0456-ab265d2f6616
-using DataFrames
 
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Biblioteca Simplificada de Gás Ideal
@@ -238,7 +238,7 @@ function apply(p::Symbol, T, rel=false)
 end;
 
 # ╔═╡ 2200fc52-f7e1-11ea-2ee1-458510ad0ae1
-md"### Funções de usuário – $c_p(T)$, $c_v(T)$, $h(T)$ e $u(T)$:
+md"### Propriedades Calóricas Diretas – $c_{p,v}(T)$, $u(T)$, etc:
 
 Estas funções selecionam as matrizes linha e coluna pertinentes, multiplicando-as, extraindo e retornando o único valor da matrix 1x1 resultante, com verificação de limites e somas de eventuais termos constantes.
 
@@ -271,11 +271,13 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 # "°" can be typed by \degree<tab>
 # "Partial" ideal gas entropy
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + 
-	(molr ? gas.sref : gas.sref / gas.MW) : 0.0
+	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + (
+		molr ? gas.sref : gas.sref / gas.MW
+	) : 0.0
 
 # ╔═╡ 91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
-Pr(gas::IG; T) = exp(s°(gas, true, T=T) / 𝐑(gas, true))
+Pr(gas::IG; T) = exp(s°(gas, true, T=T) / R̄()) / # arbitrary const
+	exp(gas.sref / R̄())
 
 # ╔═╡ 91e31608-f7e7-11ea-1295-817f8f1eff16
 vr(gas::IG; T) = T / Pr(gas, T=T)
@@ -318,9 +320,9 @@ begin
 	DataFrame(
 		:T  => T,
 		:h  => [𝐡(stdGas, false, T=i) for i in T],
-		:Pr => [Pr(stdGas, T=i) * 1.0e-10 for i in T],
+		:Pr => [Pr(stdGas, T=i) for i in T],
 		:u  => [𝐮(stdGas, false, T=i) for i in T],
-		:vr => [vr(stdGas, T=i) / 1.0e-10 for i in T],
+		:vr => [vr(stdGas, T=i) for i in T],
 		:s° => [s°(stdGas, false, T=i) for i in T]
 	)
 end
@@ -337,6 +339,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
 # ╠═70cd7f1a-f870-11ea-1b68-3b778df6ac61
+# ╠═3b936e7e-f87b-11ea-2561-77123eaac9d8
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
 # ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
@@ -395,7 +398,6 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
 # ╠═568caf66-f7e6-11ea-000e-e925ee086a07
 # ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
-# ╠═c2f7b900-f7e8-11ea-0456-ab265d2f6616
 # ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
 # ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf

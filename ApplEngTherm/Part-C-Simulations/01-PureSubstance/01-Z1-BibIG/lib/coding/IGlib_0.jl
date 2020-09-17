@@ -148,17 +148,28 @@ sref(gas::IG) = gas.sref
 md"▷ Testes:"
 
 # ╔═╡ e49f7636-f86c-11ea-2a2e-7751213c86e3
+#begin
+#	ed, sd = 5, 4 # (extra, significant)-digits
+#	ff = generate_formatter("%$(sd+ed).$(sd)g")
+#	local str  = "| Gás | R, kJ/kg·K | M, kg/kmol | s°ref, kJ/kmol·K |\n"
+#	str *= "| :---: | :---: | :---: | :---: |\n" # This aligning stopped working...
+#	for row in gasRaw
+#		tmp = rowToIG(row)
+#		str *= "| $(row.Formula) | $(ff(𝐑(tmp, false))) "
+#		str *= "| $(ff(𝐌(tmp))) | $(ff(sref(tmp))) |\n"
+#	end
+#	Markdown.parse(str)
+#end
+
 begin
 	ed, sd = 5, 4 # (extra, significant)-digits
-	ff = generate_formatter("%$(sd+ed).$(sd)g")
-	local str  = "| Gás | R, kJ/kg·K | M, kg/kmol | s°ref, kJ/kmol·K |\n"
-	str *= "| :----: | :---: | :---: | :---: |\n"
-	for row in gasRaw
-		tmp = rowToIG(row)
-		str *= "| $(row.Formula) | $(ff(𝐑(tmp, false))) "
-		str *= "| $(ff(𝐌(tmp))) | $(ff(sref(tmp))) |\n"
-	end
-	Markdown.parse(str)
+	ff = generate_formatter("%$(sd+ed).$(sd)f")
+	HTMLTable(DataFrame(
+		:gas => [ rw.Formula for rw in gasRaw ],
+		:R  =>  [ (𝑡=rowToIG(rw); sprintf1("%07.5f", 𝐑(𝑡, false))) for rw in gasRaw ],
+		:M  =>  [ (𝑡=rowToIG(rw); sprintf1("%06.3f", 𝐌(𝑡))) for rw in gasRaw ],
+		:s° =>  [ (𝑡=rowToIG(rw); sprintf1("%06.2f", sref(𝑡))) for rw in gasRaw ]
+	))
 end
 
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
@@ -356,7 +367,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 # ╠═41475ace-f7d6-11ea-0bcf-6151365fc893
 # ╠═412680da-f7d6-11ea-288f-c193dc4a28fd
 # ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
-# ╠═e49f7636-f86c-11ea-2a2e-7751213c86e3
+# ╟─e49f7636-f86c-11ea-2a2e-7751213c86e3
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371

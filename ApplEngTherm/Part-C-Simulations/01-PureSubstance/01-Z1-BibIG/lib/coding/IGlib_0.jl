@@ -25,6 +25,9 @@ using DataFrames
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
 
+# ╔═╡ ee77c2c0-f889-11ea-2217-c7f489b706f2
+using BrowseTables
+
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Biblioteca Simplificada de Gás Ideal
 
@@ -322,18 +325,25 @@ s°(stdGas, T=Tref()), sref(stdGas)
 s°(stdGas, T=300), s°(stdGas, T=1800)
 
 # ╔═╡ 699e5762-f7e6-11ea-1724-edc2ffb575ba
-# Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°} - Table for the `stdGas`:
+# Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°, cp, cv, γ} - Table for the `stdGas`:
 begin
+	digs = 4
 	T = collect(300:100:1800)
-	DataFrame(
+	HTMLTable(DataFrame(
 		:T  => T,
-		:h  => [𝐡(stdGas, false, T=i) for i in T],
-		:Pr => [Pr(stdGas, T=i) for i in T],
-		:u  => [𝐮(stdGas, false, T=i) for i in T],
-		:vr => [vr(stdGas, T=i) for i in T],
-		:s° => [s°(stdGas, false, T=i) for i in T]
-	)
+		:h  => [round(𝐡(stdGas, false, T=i), digits=digs) for i in T],
+		:Pr => [round(Pr(stdGas, T=i), digits=digs) for i in T],
+		:u  => [round(𝐮(stdGas, false, T=i), digits=digs) for i in T],
+		:vr => [round(vr(stdGas, T=i), digits=digs) for i in T],
+		:s° => [round(s°(stdGas, false, T=i), digits=digs) for i in T],
+		:cp => [round(cp(stdGas, false, T=i), digits=digs) for i in T],
+		:cv => [round(cv(stdGas, false, T=i), digits=digs) for i in T],
+		:γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
+	))
 end
+
+# ╔═╡ 6d6f5112-f88a-11ea-1f7d-3305a58e1953
+round(float(pi), 5)
 
 # ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 md"### Funções inversas
@@ -409,5 +419,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═568caf66-f7e6-11ea-000e-e925ee086a07
 # ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
 # ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
+# ╠═6d6f5112-f88a-11ea-1f7d-3305a58e1953
+# ╠═ee77c2c0-f889-11ea-2217-c7f489b706f2
 # ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf

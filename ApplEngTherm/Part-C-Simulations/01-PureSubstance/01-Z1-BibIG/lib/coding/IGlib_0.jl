@@ -295,7 +295,7 @@ vr(gas::IG; T) = T / Pr(gas, T=T)
 md"▷ Tests:"
 
 # ╔═╡ b56cba08-f886-11ea-1dd9-03be8e0ec51d
-𝐬(stdGas, false, T=Tmin(stdGas), P=100)
+𝐬(stdGas, false, T=Tmin(stdGas), P=749_521_097_486)
 
 # ╔═╡ a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
 cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)

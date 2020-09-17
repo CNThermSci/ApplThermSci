@@ -51,7 +51,7 @@ const MOLR = true;
 R̄() = 8.314472; # ± 0.000015 # kJ/kmol⋅K
 
 # ╔═╡ 815a5db4-f7c2-11ea-1747-e3f2eccdf1b2
-# Standard Tref
+# Standard Tref - for the internal energy
 Tref() = 298.15; # K
 
 # ╔═╡ f26879e2-f884-11ea-0223-158b8af130b9
@@ -355,7 +355,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 # ╠═41475ace-f7d6-11ea-0bcf-6151365fc893
 # ╠═412680da-f7d6-11ea-288f-c193dc4a28fd
 # ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
-# ╟─e49f7636-f86c-11ea-2a2e-7751213c86e3
+# ╠═e49f7636-f86c-11ea-2a2e-7751213c86e3
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371

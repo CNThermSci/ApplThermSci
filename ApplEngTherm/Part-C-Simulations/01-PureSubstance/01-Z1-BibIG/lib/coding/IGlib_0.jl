@@ -318,7 +318,7 @@ end
 # ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 md"### Funções inversas
 
-Métodos numéricos para 𝐓(u), 𝐓(h), etc."
+Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
 # To be implemented!

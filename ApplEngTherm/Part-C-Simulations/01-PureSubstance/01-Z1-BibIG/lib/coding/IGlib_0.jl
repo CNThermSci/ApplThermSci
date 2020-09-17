@@ -22,11 +22,11 @@ using Formatting
 # ╔═╡ 3b936e7e-f87b-11ea-2561-77123eaac9d8
 using DataFrames
 
-# ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
-using CSV
-
 # ╔═╡ ee77c2c0-f889-11ea-2217-c7f489b706f2
 using BrowseTables
+
+# ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
+using CSV
 
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Biblioteca Simplificada de Gás Ideal
@@ -295,34 +295,7 @@ vr(gas::IG; T) = T / Pr(gas, T=T)
 	s°(gas, molr, T=T) - 𝐑(gas, molr) * log(P/Pref()) : 0.0
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
-md"▷ Tests:"
-
-# ╔═╡ b56cba08-f886-11ea-1dd9-03be8e0ec51d
-𝐬(stdGas, false, T=Tmin(stdGas), P=749_521_097_486)
-
-# ╔═╡ a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
-cp(stdGas, false, T=300), cv(stdGas, false, T=300), γ(stdGas, T=300)
-
-# ╔═╡ a392eb56-f7e4-11ea-2fae-b32ecedb9b43
-𝐮(stdGas, false, T=300), 𝐮(stdGas, false, T=Tref())
-
-# ╔═╡ a365fd94-f7e4-11ea-1353-870d15118696
-𝐡(stdGas, false, T=400), 𝐮(stdGas, false, T=400) + 𝐏(stdGas, false, T=400, v=1)
-
-# ╔═╡ a348b826-f7e4-11ea-3c06-7fef37879c59
-𝐡(stdGas, true, T=400), 𝐮(stdGas, true, T=400) + 𝐏(stdGas, true, T=400, v=1)
-
-# ╔═╡ a32b29a6-f7e4-11ea-26e9-2fb215d25726
-𝐡(stdGas, T=Tref()), 𝐑(stdGas) * Tref()
-
-# ╔═╡ 1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
-𝐡(stdGas, false, T=Tref()), 𝐑(stdGas, false) * Tref()
-
-# ╔═╡ 568caf66-f7e6-11ea-000e-e925ee086a07
-s°(stdGas, T=Tref()), sref(stdGas)
-
-# ╔═╡ 69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
-s°(stdGas, T=300), s°(stdGas, T=1800)
+md"▷ Testes:"
 
 # ╔═╡ 699e5762-f7e6-11ea-1724-edc2ffb575ba
 # Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°, cp, cv, γ} - Table for the `stdGas`:
@@ -342,9 +315,6 @@ begin
 	))
 end
 
-# ╔═╡ 6d6f5112-f88a-11ea-1f7d-3305a58e1953
-round(float(pi), 5)
-
 # ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 md"### Funções inversas
 
@@ -358,6 +328,7 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
 # ╠═70cd7f1a-f870-11ea-1b68-3b778df6ac61
 # ╠═3b936e7e-f87b-11ea-2561-77123eaac9d8
+# ╠═ee77c2c0-f889-11ea-2217-c7f489b706f2
 # ╟─3cf7ab10-f7c2-11ea-0386-97c6d1f5ffc5
 # ╠═3d7d05cc-f7d5-11ea-0419-77d8ee09161c
 # ╠═53ea6024-f7c2-11ea-2226-f9d22949c8b7
@@ -409,17 +380,6 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
-# ╠═b56cba08-f886-11ea-1dd9-03be8e0ec51d
-# ╠═a3c3ab56-f7e4-11ea-36e1-0f3a533d634d
-# ╠═a392eb56-f7e4-11ea-2fae-b32ecedb9b43
-# ╠═a365fd94-f7e4-11ea-1353-870d15118696
-# ╠═a348b826-f7e4-11ea-3c06-7fef37879c59
-# ╠═a32b29a6-f7e4-11ea-26e9-2fb215d25726
-# ╠═1f678c40-f7e6-11ea-18ab-e51e52d3f3e1
-# ╠═568caf66-f7e6-11ea-000e-e925ee086a07
-# ╠═69d8e7ee-f7e6-11ea-2c9f-eb385aafc015
-# ╠═699e5762-f7e6-11ea-1724-edc2ffb575ba
-# ╠═6d6f5112-f88a-11ea-1f7d-3305a58e1953
-# ╠═ee77c2c0-f889-11ea-2217-c7f489b706f2
+# ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
 # ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf

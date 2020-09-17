@@ -328,28 +328,73 @@ begin
 end
 
 # ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
-md"### Funções inversas
+md"## Funcionalidade – Funções inversas
 
 Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 
+# ╔═╡ 9907e294-f916-11ea-011a-53c94fda1159
+md"### Definição de Tipos
+
+Como todas as funções inversas acima – 𝐓(u), 𝐓(h), etc. – possuem o mesmo *nome*, a diferenciação entre elas se dará via **`Multiple Dispatch`**, e assim, cada função `𝐓` será especializada com base nos **tipos** de seus **argumentos**.
+
+O objetivo de saber se o argumento é uma energia interna ou entalpia, etc., é para que se saiba (i) sua forma funcional **e** (ii) a forma funcional de sua derivada, a fim de ajustar o método numérico.
+
+Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus valores como \"energia interna\", \"entalpia\", etc.:
+"
+
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
-# A Thermodynamic abstract type
+# A Thermodynamic abstract type to hook all special property values under it
 abstract type THERM end
 
 # ╔═╡ 6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
-# An Internal Energy abstract type
-# "𝗨" can be typed by \bsansU<tab>
-abstract type 𝗨 <: THERM end
+begin
+	# A type to LABEL values as internal energy ones:
+	struct uType <: THERM
+		val
+	end
+	# Functor to extract the stored value `val`...
+	# ... thus avoiding further implementing the type:
+	(u::uType)() = u.val
+end
 
 # ╔═╡ 6d36d556-f90e-11ea-23ae-4bbcf752c3c9
-# An Enthalpy abstract type
-# "𝗛" can be typed by \bsansH<tab>
-abstract type 𝗛 <: THERM end
+begin
+	# A type to LABEL values as enthalpy ones:
+	struct hType <: THERM
+		val
+	end
+	# Functor to extract the stored value `val`...
+	# ... thus avoiding further implementing the type:
+	(h::hType)() = h.val
+end
 
-# ╔═╡ c98e7f52-f90e-11ea-1edf-1173fb31ac97
-# A Relative Pressure abstract type
-# "𝗣" can be typed by \bsansP<tab>
-abstract type 𝗣 <: THERM end
+# ╔═╡ 2a602e28-f916-11ea-0425-f31cd6eb93c1
+md"▷ Ilustração do conceito:"
+
+# ╔═╡ 0251323a-f914-11ea-2685-c502e35e6fc3
+begin
+	# First METHOD definition for the function "example":
+	function example(x::uType, molr=MOLR)
+		molr ?
+			"ū = $(x()) kJ/kmol" :
+			"u = $(x()) kJ/kg"
+	end
+	# Second METHOD definition for the function "example":
+	function example(x::hType, molr=MOLR)
+		molr ?
+			"h̄ = $(x()) kJ/kmol" :
+			"h = $(x()) kJ/kg"
+	end
+	# Same function name "example" called: specialize based on argument(s) TYPE(s):
+	vcat(
+		example(uType(314.15)),			# uType argument
+		example(hType(314.15), false),	# htype argument
+		uType(3.14)() == hType(3.14)()	# Their _values_ are the same!
+	)
+end
+
+# ╔═╡ 099c8786-f918-11ea-1fbb-e553d989d1ea
+md"### Implementação"
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -410,7 +455,10 @@ abstract type 𝗣 <: THERM end
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
 # ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
+# ╟─9907e294-f916-11ea-011a-53c94fda1159
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
 # ╠═6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
 # ╠═6d36d556-f90e-11ea-23ae-4bbcf752c3c9
-# ╠═c98e7f52-f90e-11ea-1edf-1173fb31ac97
+# ╟─2a602e28-f916-11ea-0425-f31cd6eb93c1
+# ╠═0251323a-f914-11ea-2685-c502e35e6fc3
+# ╟─099c8786-f918-11ea-1fbb-e553d989d1ea

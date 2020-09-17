@@ -201,46 +201,40 @@ end
 md"## Funcionalidade – Comportamento Calórico"
 
 # ╔═╡ 7e859194-f7dd-11ea-13ef-751ab2e55ab6
-md"### Transformação de coeficientes:"
+md"### Transformação de coeficientes:
+
+Coeficientes, de $c_p(T)$ ou $c_v(T)$, são retornados como uma *matriz-linha*."
 
 # ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # If functions accound for integration factor, then only :cp, :cv are needed here
 function coef(gas::IG, kind::Symbol = :cp, molr=MOLR)
 	if kind == :cp 		# No coef. transformation
 		ret = hcat(gas.CP...)
-	elseif kind == :cv 	# Translates first coeff.
+	elseif kind == :cv 	# Translates first coef.
 		ret = hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
 	end
 	molr ? ret : ret ./ gas.MW
 end;
 
-# ╔═╡ 5fa1aa8c-f7de-11ea-0273-91f322669afd
-md"▷ Tests:"
-
-# ╔═╡ 6eca2fde-f7de-11ea-2acb-2d38e852db17
-coef(stdGas), coef(stdGas, :cv)
-
-# ╔═╡ 78f6e73c-f7e2-11ea-1ed0-9d3c4cbc679b
-coef(stdGas, :cp, false),
-coef(stdGas, :cv, false)
-
 # ╔═╡ 6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
-md"#### Funções dos coeficientes por propriedade:"
+md"### Funções dos coeficientes por propriedade:
+
+Estas são as funções para serem aplicadas à temperatura, em três casos distintos. A função `apply` abaixo, faz a aplicação das funções à temperatura, retornando uma *matriz-coluna*."
 
 # ╔═╡ 6e63a0d4-f7de-11ea-309a-416b370ef546
 const propF = Dict(
 	:c => (x->1     , x->x    , x->x^2  , x->x^3  ),	# Tuple makes it faster
 	:h => (x->x     , x->x^2/2, x->x^3/3, x->x^4/4),	# Tuple makes it faster
 	:s => (x->log(x), x->x    , x->x^2/2, x->x^3/3),	# Tuple makes it faster
-)
+);
 
 # ╔═╡ 2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
 # Generic f(T) function by Symbol key
 function apply(p::Symbol, T, rel=false)
 	rel ?
-		vcat((f(T) for f in propF[p])...) - vcat((f(Tref()) for f in propF[p])...) :
+		apply(p, T, false) - apply(p, Tref(), false) :
 		vcat((f(T) for f in propF[p])...)
-end
+end;
 
 # ╔═╡ e78b2e58-f7e0-11ea-2ec0-0d918bc66c70
 md"▷ Tests:"
@@ -382,9 +376,6 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
 # ╟─7e859194-f7dd-11ea-13ef-751ab2e55ab6
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
-# ╟─5fa1aa8c-f7de-11ea-0273-91f322669afd
-# ╠═6eca2fde-f7de-11ea-2acb-2d38e852db17
-# ╠═78f6e73c-f7e2-11ea-1ed0-9d3c4cbc679b
 # ╟─6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
 # ╠═6e63a0d4-f7de-11ea-309a-416b370ef546
 # ╠═2ebc2ecc-f7e0-11ea-132f-492c5e6ee323

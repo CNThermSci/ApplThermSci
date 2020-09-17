@@ -99,7 +99,7 @@ md"## Funcionalidade – Verificações"
 md"▷ Testes:"
 
 # ╔═╡ 5f456858-f851-11ea-2432-f5455ae9eb87
-@bind bounds_test_T Slider(0:50:2000, default=0, show_value=true)
+@bind bounds_test_T Slider(0:50:2400, default=0, show_value=true)
 
 # ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
 md"## Funcionalidade – Constantes"
@@ -123,6 +123,7 @@ function inbounds(gas::IG, T)
 	if !(gas.Tmin <= T <= gas.Tmax)
 		throw(DomainError(T, "out of bounds $(Tmin(gas)) ⩽ T ⩽ $(Tmax(gas))."))
 	end
+	true
 end;
 
 # ╔═╡ def71222-f851-11ea-23cd-3155795ae67e
@@ -236,17 +237,13 @@ function apply(p::Symbol, T, rel=false)
 		vcat((f(T) for f in propF[p])...)
 end;
 
-# ╔═╡ e78b2e58-f7e0-11ea-2ec0-0d918bc66c70
-md"▷ Tests:"
-
-# ╔═╡ 2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
-apply(:c, 300.0), apply(:h, 300.0), apply(:s, 300.0)
-
-# ╔═╡ 408cb182-f7e3-11ea-0066-7d0376cf8149
-apply(:h, Tref() + 0.001, true)
-
 # ╔═╡ 2200fc52-f7e1-11ea-2ee1-458510ad0ae1
-md"#### Funções de usuário:"
+md"### Funções de usuário – $c_p(T)$, $c_v(T)$, $h(T)$ e $u(T)$:
+
+Estas funções selecionam as matrizes linha e coluna pertinentes, multiplicando-as, extraindo e retornando o único valor da matrix 1x1 resultante, com verificação de limites e somas de eventuais termos constantes.
+
+As funções de uma única letra ASCII tem os nomes em letras negritas (bold-face) para não conflitarem com variáveis de nomes `u` e `h`, por exemplo. Por isso nomes como: `𝐮` e `𝐡`, por exemplo, porém não `γ`, por não ser ASCII.
+"
 
 # ╔═╡ 2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
 cp(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
@@ -379,9 +376,6 @@ Métodos numéricos para 𝐓(u), 𝐓(h), etc."
 # ╟─6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
 # ╠═6e63a0d4-f7de-11ea-309a-416b370ef546
 # ╠═2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
-# ╟─e78b2e58-f7e0-11ea-2ec0-0d918bc66c70
-# ╠═2ea88b1a-f7e0-11ea-1cc6-8bd2286cebc3
-# ╠═408cb182-f7e3-11ea-0066-7d0376cf8149
 # ╟─2200fc52-f7e1-11ea-2ee1-458510ad0ae1
 # ╠═2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
 # ╠═2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b

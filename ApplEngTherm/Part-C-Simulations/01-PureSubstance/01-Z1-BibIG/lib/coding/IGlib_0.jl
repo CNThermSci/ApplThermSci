@@ -151,11 +151,12 @@ md"▷ Testes:"
 begin
 	ed, sd = 5, 4 # (extra, significant)-digits
 	ff = generate_formatter("%$(sd+ed).$(sd)g")
-	local str  = "| Gás | R, kJ/kg·K | M, kg/kmol |\n"
-	str *= "| :---: | :---: | :---: |\n"
+	local str  = "| Gás | R, kJ/kg·K | M, kg/kmol | s°ref, kJ/kmol·K |\n"
+	str *= "| :----: | :---: | :---: | :---: |\n"
 	for row in gasRaw
 		tmp = rowToIG(row)
-		str *= "| $(row.Formula) | $(ff(𝐑(tmp, false))) | $(ff(𝐌(tmp))) |\n"
+		str *= "| $(row.Formula) | $(ff(𝐑(tmp, false))) "
+		str *= "| $(ff(𝐌(tmp))) | $(ff(sref(tmp))) |\n"
 	end
 	Markdown.parse(str)
 end

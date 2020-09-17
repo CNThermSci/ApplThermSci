@@ -333,7 +333,23 @@ md"### Funções inversas
 Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
-# To be implemented!
+# A Thermodynamic abstract type
+abstract type THERM end
+
+# ╔═╡ 6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
+# An Internal Energy abstract type
+# "𝗨" can be typed by \bsansU<tab>
+abstract type 𝗨 <: THERM end
+
+# ╔═╡ 6d36d556-f90e-11ea-23ae-4bbcf752c3c9
+# An Enthalpy abstract type
+# "𝗛" can be typed by \bsansH<tab>
+abstract type 𝗛 <: THERM end
+
+# ╔═╡ c98e7f52-f90e-11ea-1edf-1173fb31ac97
+# A Relative Pressure abstract type
+# "𝗣" can be typed by \bsansP<tab>
+abstract type 𝗣 <: THERM end
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -395,3 +411,6 @@ Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
 # ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
 # ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
+# ╠═6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
+# ╠═6d36d556-f90e-11ea-23ae-4bbcf752c3c9
+# ╠═c98e7f52-f90e-11ea-1edf-1173fb31ac97

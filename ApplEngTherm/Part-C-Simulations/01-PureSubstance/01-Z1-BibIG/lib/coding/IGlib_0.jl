@@ -396,6 +396,9 @@ end
 # ╔═╡ 099c8786-f918-11ea-1fbb-e553d989d1ea
 md"### Implementação"
 
+# ╔═╡ 95e89cb0-fa20-11ea-26c7-3d1a65f19248
+
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
@@ -462,3 +465,4 @@ md"### Implementação"
 # ╟─2a602e28-f916-11ea-0425-f31cd6eb93c1
 # ╠═0251323a-f914-11ea-2685-c502e35e6fc3
 # ╟─099c8786-f918-11ea-1fbb-e553d989d1ea
+# ╠═95e89cb0-fa20-11ea-26c7-3d1a65f19248

@@ -74,6 +74,9 @@ md"## Biblioteca Externa
 Valores tabelados em Çengel, Y. A., Termodinâmica 7a Ed. ISBN 978-85-8055-200-3 (Tabelas A-1, A-2 e A-26), foram transportados para uma planilha (OpenOffice Spreadsheet) e exportados no formato CSV [Comma Separated Values], os quais podem ser lidos em Julia:
 "
 
+# ╔═╡ c4d73944-fd42-11ea-3245-6d150a01e7d9
+LocalResource("./IGTable.svg")
+
 # ╔═╡ 034e8264-f7cf-11ea-2a5b-b13e84ce9026
 gasRaw = CSV.File("IGTable.csv", normalizenames=true)
 
@@ -412,6 +415,7 @@ md"### Implementação"
 # ╠═f26879e2-f884-11ea-0223-158b8af130b9
 # ╠═8125f198-f7c2-11ea-14e4-7f873ab2c3f4
 # ╟─e66a728a-f7cd-11ea-1fe6-07c915fa1c9d
+# ╠═c4d73944-fd42-11ea-3245-6d150a01e7d9
 # ╠═934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 # ╠═034e8264-f7cf-11ea-2a5b-b13e84ce9026
 # ╠═ad44f412-f7d2-11ea-0524-6f802013e302

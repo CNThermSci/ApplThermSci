@@ -382,7 +382,7 @@ end
 
 # ╔═╡ 7b947948-fdbc-11ea-0ff4-057f889d3c3e
 begin
-	T00 = Tmin(stdGas) + rand() * (Tmax(stdGas) - Tmin(stdGas))
+	T00 = Tmin(stdGas) + rand(BigFloat) * (Tmax(stdGas) - Tmin(stdGas))
 	u00 = 𝐮(stdGas, false, T=T00)
 	SOL = 𝐓(stdGas, uType(u00), false)
 	tuple(

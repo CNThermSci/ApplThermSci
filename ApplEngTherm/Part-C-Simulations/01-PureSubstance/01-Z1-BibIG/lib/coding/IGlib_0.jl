@@ -185,10 +185,6 @@ md"## Funcionalidade – Comportamento P-T-v"
 # "𝐏" can be typed by \bfP<tab>
 𝐏(gas::IG, molr=true; T, v) = 𝐑(gas, molr) * T / v
 
-# ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
-# "𝐓" can be typed by \bfT<tab>
-𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
-
 # ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
 # "𝐯" can be typed by \bfv<tab>
 𝐯(gas::IG, molr=true; P, T) = 𝐑(gas, molr) * T / P
@@ -204,24 +200,6 @@ md"""
 
 Molar base? $(@bind exm CheckBox())
 """
-
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
-end
 
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"## Funcionalidade – Comportamento Calórico"
@@ -349,7 +327,7 @@ Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus 
 "
 
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
-# A Thermodynamic abstract type to hook all special property values under it
+# A Thermodynamic abstract type to hook all concrete property value types under it
 abstract type THERM end
 
 # ╔═╡ 6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
@@ -361,6 +339,35 @@ begin
 	# Functor to extract the stored value `val`...
 	# ... thus avoiding further implementing the type:
 	(u::uType)() = u.val
+end
+
+# ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
+begin
+	# "𝐓" can be typed by \bfT<tab>
+	𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
+	# "𝐓" can be typed by \bfT<tab>
+	function 𝐓(gas::IG, u::uType, molr=true)
+		u = u() # Unwraps u
+		uMin, uMax = (𝐮(gas, Ti) for Ti in (Tmin(gas), Tmax(gas)))
+	end
+end
+
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
 end
 
 # ╔═╡ 6d36d556-f90e-11ea-23ae-4bbcf752c3c9
@@ -402,9 +409,6 @@ end
 # ╔═╡ 099c8786-f918-11ea-1fbb-e553d989d1ea
 md"### Implementação"
 
-# ╔═╡ 95e89cb0-fa20-11ea-26c7-3d1a65f19248
-
-
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
@@ -445,7 +449,7 @@ md"### Implementação"
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
 # ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
 # ╟─6104afb4-f874-11ea-128e-27ffa012d75e
-# ╟─b2606fd8-f872-11ea-0dff-232b927a6ea9
+# ╠═b2606fd8-f872-11ea-0dff-232b927a6ea9
 # ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
 # ╟─7e859194-f7dd-11ea-13ef-751ab2e55ab6
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
@@ -472,4 +476,3 @@ md"### Implementação"
 # ╟─2a602e28-f916-11ea-0425-f31cd6eb93c1
 # ╠═0251323a-f914-11ea-2685-c502e35e6fc3
 # ╟─099c8786-f918-11ea-1fbb-e553d989d1ea
-# ╠═95e89cb0-fa20-11ea-26c7-3d1a65f19248

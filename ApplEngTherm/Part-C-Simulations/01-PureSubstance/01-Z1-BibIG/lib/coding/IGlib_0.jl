@@ -185,6 +185,10 @@ md"## Funcionalidade – Comportamento P-T-v"
 # "𝐏" can be typed by \bfP<tab>
 𝐏(gas::IG, molr=true; T, v) = 𝐑(gas, molr) * T / v
 
+# ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
+# "𝐓" can be typed by \bfT<tab>
+𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
+
 # ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
 # "𝐯" can be typed by \bfv<tab>
 𝐯(gas::IG, molr=true; P, T) = 𝐑(gas, molr) * T / P
@@ -341,57 +345,6 @@ begin
 	(u::uType)() = u.val
 end
 
-# ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
-begin
-	# "𝐓" can be typed by \bfT<tab>
-	𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
-	# "𝐓" can be typed by \bfT<tab>
-	function 𝐓(gas::IG, uVal::uType, molr=true; maxIt::Integer=0, epsU::Integer=4)
-		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
-		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓, 𝑔 = 𝐮, cv
-		# Get u bounds as y and check
-		TMin, TMax = Tmin(gas), Tmax(gas)
-		uMin, uMax = 𝑓(gas, molr, T=TMin), 𝑓(gas, molr, T=TMax)
-		if !(uMin <= uVal() <= uMax)
-			throw(DomainError(uVal(), "out of bounds $(uMin) ⩽ u ⩽ $(uMax)."))
-		end
-		# Linear initial estimate and initializations
-		r = (uVal() - uMin) / (uMax - uMin)
-		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		u = [ 𝑓(gas, molr, T=T[end]) ]
-		why = :because
-		# Main loop
-		while true
-			append!(T, T[end] + (uVal() - u[end]) / 𝑔(gas, molr, T=T[end]))
-			append!(u, 𝑓(gas, molr, T=T[end]))
-			if breakIt(length(T)-1)
-				why = :it; break
-			elseif abs(u[end] - uVal()) <= eps(uVal()) * epsU
-				why = :Δu; break
-			end
-		end
-		return (
-			T[end], :why => why, :it => length(T)-1,
-			:Δu => abs(u[end] - uVal()),
-			:Ts => T, :us => u
-		)
-	end
-end
-
-# ╔═╡ 7b947948-fdbc-11ea-0ff4-057f889d3c3e
-begin
-	T00 = Tmin(stdGas) + rand(BigFloat) * (Tmax(stdGas) - Tmin(stdGas))
-	u00 = 𝐮(stdGas, false, T=T00)
-	SOL = 𝐓(stdGas, uType(u00), false)
-	tuple(
-		sprintf1("%.20f", T00),
-		sprintf1("%.20f", SOL[1]),
-		SOL...
-	)
-end
-
 # ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
 begin
 	exv = 𝐯(stdGas, exm, P=exP, T=exT)
@@ -486,7 +439,6 @@ md"### Implementação"
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371
-# ╠═7b947948-fdbc-11ea-0ff4-057f889d3c3e
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
 # ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
 # ╟─6104afb4-f874-11ea-128e-27ffa012d75e

@@ -269,6 +269,24 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
 
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
+end
+
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
 # "𝐡" can be typed by \bfh<tab>
 𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
@@ -314,78 +332,6 @@ begin
 		:γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
 	))
 end
-
-# ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
-# A Thermodynamic abstract type to hook all concrete property value types under it
-abstract type THERM end
-
-# ╔═╡ 6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
-begin
-	# A type to LABEL values as internal energy ones:
-	struct uType <: THERM
-		val
-	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
-	(u::uType)() = u.val
-end
-
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
-end
-
-# ╔═╡ 6d36d556-f90e-11ea-23ae-4bbcf752c3c9
-begin
-	# A type to LABEL values as enthalpy ones:
-	struct hType <: THERM
-		val
-	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
-	(h::hType)() = h.val
-end
-
-# ╔═╡ 2a602e28-f916-11ea-0425-f31cd6eb93c1
-md"▷ Ilustração do conceito:"
-
-# ╔═╡ 0251323a-f914-11ea-2685-c502e35e6fc3
-begin
-	# First METHOD definition for the function "example":
-	function example(x::uType, molr=MOLR)
-		molr ?
-			"ū = $(x()) kJ/kmol" :
-			"u = $(x()) kJ/kg"
-	end
-	# Second METHOD definition for the function "example":
-	function example(x::hType, molr=MOLR)
-		molr ?
-			"h̄ = $(x()) kJ/kmol" :
-			"h = $(x()) kJ/kg"
-	end
-	# Same function name "example" called: specialize based on argument(s) TYPE(s):
-	vcat(
-		example(uType(314.15)),			# uType argument
-		example(hType(314.15), false),	# htype argument
-		uType(3.14)() == hType(3.14)()	# Their _values_ are the same!
-	)
-end
-
-# ╔═╡ 099c8786-f918-11ea-1fbb-e553d989d1ea
-md"### Implementação"
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -446,9 +392,3 @@ md"### Implementação"
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
-# ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
-# ╠═6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
-# ╠═6d36d556-f90e-11ea-23ae-4bbcf752c3c9
-# ╟─2a602e28-f916-11ea-0425-f31cd6eb93c1
-# ╠═0251323a-f914-11ea-2685-c502e35e6fc3
-# ╟─099c8786-f918-11ea-1fbb-e553d989d1ea

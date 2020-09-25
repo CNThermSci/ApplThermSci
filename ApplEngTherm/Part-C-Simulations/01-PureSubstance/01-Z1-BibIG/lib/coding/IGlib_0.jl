@@ -315,21 +315,6 @@ begin
 	))
 end
 
-# ╔═╡ cffbf3de-f7eb-11ea-02ad-99e2c3da9928
-md"## Funcionalidade – Funções inversas
-
-Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
-
-# ╔═╡ 9907e294-f916-11ea-011a-53c94fda1159
-md"### Definição de Tipos
-
-Como todas as funções inversas acima – 𝐓(u), 𝐓(h), etc. – possuem o mesmo *nome*, a diferenciação entre elas se dará via **`Multiple Dispatch`**, e assim, cada função `𝐓` será especializada com base nos **tipos** de seus **argumentos**.
-
-O objetivo de saber se o argumento é uma energia interna ou entalpia, etc., é para que se saiba (i) sua forma funcional **e** (ii) a forma funcional de sua derivada, a fim de ajustar o método numérico.
-
-Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus valores como \"energia interna\", \"entalpia\", etc.:
-"
-
 # ╔═╡ f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
 # A Thermodynamic abstract type to hook all concrete property value types under it
 abstract type THERM end
@@ -461,8 +446,6 @@ md"### Implementação"
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
-# ╟─cffbf3de-f7eb-11ea-02ad-99e2c3da9928
-# ╟─9907e294-f916-11ea-011a-53c94fda1159
 # ╠═f0602c94-f7eb-11ea-1d41-6f2bc4f40aaf
 # ╠═6d0c5c68-f90e-11ea-30f5-0fb6284dabbf
 # ╠═6d36d556-f90e-11ea-23ae-4bbcf752c3c9

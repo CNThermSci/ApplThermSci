@@ -17,8 +17,20 @@ module IGas
 	# export THERM, uType, hType
 end
 
-# ╔═╡ e4346b78-fec7-11ea-3041-ef62b1848d6b
-IGas.𝐓
+# ╔═╡ 163b8bc4-fecd-11ea-2ce6-89661221500b
+md"## Funcionalidade – Funções inversas
+
+Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
+
+# ╔═╡ 33fb541e-fecd-11ea-3160-83f06e069191
+md"### Definição de Tipos
+
+Como todas as funções inversas acima – 𝐓(u), 𝐓(h), etc. – possuem o mesmo *nome*, a diferenciação entre elas se dará via **`Multiple Dispatch`**, e assim, cada função `𝐓` será especializada com base nos **tipos** de seus **argumentos**.
+
+O objetivo de saber se o argumento é uma energia interna ou entalpia, etc., é para que se saiba (i) sua forma funcional **e** (ii) a forma funcional de sua derivada, a fim de ajustar o método numérico.
+
+Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus valores como \"energia interna\", \"entalpia\", etc.:
+"
 
 # ╔═╡ 7df3c0e0-fec7-11ea-135d-1d76890ccf84
 # "𝐓" can be typed by \bfT<tab>
@@ -61,6 +73,7 @@ IGas.𝐓
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═e18c6af8-fec5-11ea-0e6b-b981e5eb3c85
-# ╠═e4346b78-fec7-11ea-3041-ef62b1848d6b
+# ╟─163b8bc4-fecd-11ea-2ce6-89661221500b
+# ╟─33fb541e-fecd-11ea-3160-83f06e069191
 # ╠═7df3c0e0-fec7-11ea-135d-1d76890ccf84
 # ╠═675de6bc-fec8-11ea-1b59-e585e8cba51a

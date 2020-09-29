@@ -7,6 +7,9 @@ using InteractiveUtils
 # ╔═╡ 410c4a3a-fed1-11ea-1686-658ce41086e8
 using PlutoUI, Formatting, DataFrames, BrowseTables
 
+# ╔═╡ af562ff8-01f2-11eb-2a47-21cd32b12b14
+using Roots, ForwardDiff
+
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Extensão da Biblioteca de Gás Ideal"
 
@@ -193,6 +196,7 @@ collect(sprintf1("%.78f", i) for i in Th[5].second)
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═410c4a3a-fed1-11ea-1686-658ce41086e8
+# ╠═af562ff8-01f2-11eb-2a47-21cd32b12b14
 # ╠═e18c6af8-fec5-11ea-0e6b-b981e5eb3c85
 # ╟─163b8bc4-fecd-11ea-2ce6-89661221500b
 # ╟─33fb541e-fecd-11ea-3160-83f06e069191

@@ -205,6 +205,24 @@ md"""
 Molar base? $(@bind exm CheckBox())
 """
 
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
+end
+
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"## Funcionalidade – Comportamento Calórico"
 
@@ -268,24 +286,6 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 # "𝐮" can be typed by \bfu<tab>
 𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
-
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
-end
 
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
 # "𝐡" can be typed by \bfh<tab>

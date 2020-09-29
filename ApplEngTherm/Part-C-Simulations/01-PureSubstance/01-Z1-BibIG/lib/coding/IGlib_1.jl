@@ -94,22 +94,23 @@ begin
 		# Auxiliary function of whether to break due to iterations
 		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓, 𝑔 = IGas.𝐮, IGas.cv
+		𝑓 = x -> IGas.𝐮(gas, molr, T=x)
+		𝑔 = x -> IGas.cv(gas, molr, T=x)
 		# Get u bounds as y and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		uMin, uMax = 𝑓(gas, molr, T=TMin), 𝑓(gas, molr, T=TMax)
+		uMin, uMax = 𝑓(TMin), 𝑓(TMax)
 		if !(uMin <= (uVal)() <= uMax)
 			throw(DomainError(uVal(), "out of bounds $(uMin) ⩽ u ⩽ $(uMax)."))
 		end
 		# Linear initial estimate and initializations
 		r = (uVal() - uMin) / (uMax - uMin)
 		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		u = [ 𝑓(gas, molr, T=T[end]) ]
+		u = [ 𝑓(T[end]) ]
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (uVal() - u[end]) / 𝑔(gas, molr, T=T[end]))
-			append!(u, 𝑓(gas, molr, T=T[end]))
+			append!(T, T[end] + (uVal() - u[end]) / 𝑔(T[end]))
+			append!(u, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
 			elseif abs(u[end] - uVal()) <= eps(uVal()) * epsU
@@ -128,22 +129,23 @@ begin
 		# Auxiliary function of whether to break due to iterations
 		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓, 𝑔 = IGas.𝐡, IGas.cp
+		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
+		𝑔 = x -> IGas.cp(gas, molr, T=x)
 		# Get u bounds as y and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		hMin, hMax = 𝑓(gas, molr, T=TMin), 𝑓(gas, molr, T=TMax)
+		hMin, hMax = 𝑓(TMin), 𝑓(TMax)
 		if !(hMin <= (hVal)() <= hMax)
 			throw(DomainError(hVal(), "out of bounds $(hMin) ⩽ u ⩽ $(hMax)."))
 		end
 		# Linear initial estimate and initializations
 		r = (hVal() - hMin) / (hMax - hMin)
 		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		h = [ 𝑓(gas, molr, T=T[end]) ]
+		h = [ 𝑓(T[end]) ]
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (hVal() - h[end]) / 𝑔(gas, molr, T=T[end]))
-			append!(h, 𝑓(gas, molr, T=T[end]))
+			append!(T, T[end] + (hVal() - h[end]) / 𝑔(T[end]))
+			append!(h, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
 			elseif abs(h[end] - hVal()) <= eps(hVal()) * epsH

@@ -59,6 +59,17 @@ begin
 	(h::hType)() = h.val
 end
 
+# ╔═╡ e64d8a8c-0405-11eb-2921-ebe084e91de3
+begin
+	# A type to LABEL values as enthalpy ones:
+	struct prType <: THERM
+		val
+	end
+	# Functor to extract the stored value `val`...
+	# ... thus avoiding further implementing the type:
+	(pr::prType)() = pr.val
+end
+
 # ╔═╡ 42a999c6-fecd-11ea-2349-c32da71d098f
 md"▷ Ilustração do conceito:"
 
@@ -205,6 +216,7 @@ collect(sprintf1("%.78f", i) for i in Th[5].second)
 # ╠═4305c62e-fecd-11ea-0860-9b5c08589ef1
 # ╠═42ed0c4c-fecd-11ea-0ba8-1f5896ef05b1
 # ╠═42c107f0-fecd-11ea-13ea-13f9c55afd8e
+# ╠═e64d8a8c-0405-11eb-2921-ebe084e91de3
 # ╟─42a999c6-fecd-11ea-2349-c32da71d098f
 # ╠═5fcee0b0-fecd-11ea-1bf0-6b338cffd03b
 # ╟─428dda38-fecd-11ea-27cd-8df85d64aa87

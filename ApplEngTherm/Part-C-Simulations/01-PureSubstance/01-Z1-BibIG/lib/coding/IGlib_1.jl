@@ -232,7 +232,7 @@ begin
 		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
 		# Get u bounds as y and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		vMin, vMax = 𝑓(TMin), 𝑓(TMax)
+		vMin, vMax = 𝑓(TMax), 𝑓(TMin)
 		if !(vMin <= (vVal)() <= vMax)
 			throw(DomainError(vVal(), "out of bounds $(vMin) ⩽ vr ⩽ $(vMax)."))
 		end
@@ -243,7 +243,7 @@ begin
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (vVal() - v[end]) / 𝑔(T[end]))
+			append!(T, T[end] + 0.01 * (vVal() - v[end]) / 𝑔(T[end]))
 			append!(v, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
@@ -310,6 +310,21 @@ Tp = IGas.𝐓(
 # ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
 collect(sprintf1("%.78f", i) for i in Tp[5].second)
 
+# ╔═╡ d694046a-0408-11eb-04a4-872f068bbefa
+Tv = IGas.𝐓(
+	IGas.stdGas,
+	vrType(
+		IGas.vr(
+			IGas.stdGas,
+			T=300.0
+		)
+	),
+	false
+)
+
+# ╔═╡ d7219622-0408-11eb-1c2c-ff9c2c6ee43d
+
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═410c4a3a-fed1-11ea-1686-658ce41086e8
@@ -333,3 +348,5 @@ collect(sprintf1("%.78f", i) for i in Tp[5].second)
 # ╠═7065617c-fed2-11ea-3b30-4d4b5af934e7
 # ╠═81979e9c-0408-11eb-3fb5-2ddf52656a27
 # ╠═c4caedde-0408-11eb-042c-cf16b7a36d80
+# ╠═d694046a-0408-11eb-04a4-872f068bbefa
+# ╠═d7219622-0408-11eb-1c2c-ff9c2c6ee43d

@@ -190,7 +190,7 @@ begin
 		# Auxiliary function of whether to break due to iterations
 		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓 = x -> IGas.pr(gas, T=x)
+		𝑓 = x -> IGas.Pr(gas, T=x)
 		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
 		# Get u bounds as y and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
@@ -296,7 +296,19 @@ Th = IGas.𝐓(
 collect(sprintf1("%.78f", i) for i in Th[5].second)
 
 # ╔═╡ 81979e9c-0408-11eb-3fb5-2ddf52656a27
+Tp = IGas.𝐓(
+	IGas.stdGas,
+	prType(
+		IGas.Pr(
+			IGas.stdGas,
+			T=300.0
+		)
+	),
+	false
+)
 
+# ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
+collect(sprintf1("%.78f", i) for i in Tp[5].second)
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -320,3 +332,4 @@ collect(sprintf1("%.78f", i) for i in Th[5].second)
 # ╠═b49b8540-fed1-11ea-17d7-49ff1deb2898
 # ╠═7065617c-fed2-11ea-3b30-4d4b5af934e7
 # ╠═81979e9c-0408-11eb-3fb5-2ddf52656a27
+# ╠═c4caedde-0408-11eb-042c-cf16b7a36d80

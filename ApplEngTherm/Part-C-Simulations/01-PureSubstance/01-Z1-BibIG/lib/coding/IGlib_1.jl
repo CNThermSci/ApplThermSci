@@ -61,12 +61,9 @@ end
 
 # ╔═╡ e64d8a8c-0405-11eb-2921-ebe084e91de3
 begin
-	# A type to LABEL values as enthalpy ones:
 	struct prType <: THERM
 		val
 	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
 	(pr::prType)() = pr.val
 end
 

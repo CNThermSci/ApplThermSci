@@ -183,7 +183,7 @@ md"## Funcionalidade – Comportamento P-T-v"
 
 # ╔═╡ 7e069bfa-04a3-11eb-1f37-ad18e0683cf6
 # Auxiliary function of promoted types (float types relate to precision bits)!
-prTy(A...) = promote_type(map(typeof, A)...)
+prTy(A...) = promote_type(map(typeof, AbstractFloat.(A))...)
 
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # "𝐏" can be typed by \bfP<tab>

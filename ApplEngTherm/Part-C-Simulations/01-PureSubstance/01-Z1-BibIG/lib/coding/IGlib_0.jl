@@ -286,12 +286,20 @@ As funções de uma única letra ASCII tem os nomes em letras negritas (bold-fac
 "
 
 # ╔═╡ 2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
-cp(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	((prTy(T)).(coef(gas, :cp, molr)) * apply(:c, T))[1] : zero(prTy(T))
+cp(gas::IG, molr=MOLR; T) =	begin
+	𝕡 = typeof(T)
+	inbounds(gas, T) ?
+		(coef(gas, :cp, molr, 𝕡) * apply(:c, T))[1] :
+		zero(𝕡)
+end
 
 # ╔═╡ 2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
-cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	((prTy(T)).(coef(gas, :cv, molr)) * apply(:c, T))[1] : zero(prTy(T))
+cv(gas::IG, molr=MOLR; T) =	begin
+	𝕡 = typeof(T)
+	inbounds(gas, T) ?
+		(coef(gas, :cv, molr, 𝕡) * apply(:c, T))[1] :
+		zero(𝕡)
+end
 
 # ╔═╡ b03d1962-f7e4-11ea-2ae9-d153c7d10f2f
 # "γ" can be typed by \gamma<tab>
@@ -299,26 +307,40 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 
 # ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 # "𝐮" can be typed by \bfu<tab>
-𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	((prTy(T)).(coef(gas, :cv, molr)) * apply(:h, T, true))[1] : zero(prTy(T))
+𝐮(gas::IG, molr=MOLR; T) =	begin
+	𝕡 = typeof(T)
+	inbounds(gas, T) ?
+		(coef(gas, :cv, molr, 𝕡) * apply(:h, T, true))[1] :
+		zero(𝕡)
+end
 
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
 # "𝐡" can be typed by \bfh<tab>
-𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	((prTy(T)).(coef(gas, :cp, molr)) * apply(:h, T, true))[1] +
-	(prTy(T))(𝐑(gas, molr) * Tref()) : zero(prTy(T))
+𝐡(gas::IG, molr=MOLR; T) = begin
+	𝕡 = typeof(T)
+	inbounds(gas, T) ?
+		(coef(gas, :cp, molr, 𝕡) * apply(:h, T, true))[1] +
+			𝐑(gas, molr, 𝕡) * Tref(𝕡) :
+		zero(𝕡)
+end
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 # "°" can be typed by \degree<tab>
 # "Partial" ideal gas entropy
-s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	((prTy(T)).(coef(gas, :cp, molr)) * apply(:s, T, true))[1] + (
-		molr ? (prTy(T))(gas.sref) : (prTy(T))(gas.sref / gas.MW)
-	) : zero(prTy(T))
+s°(gas::IG, molr=MOLR; T) =	begin
+	𝕡 = typeof(T)
+	inbounds(gas, T) ?
+		(coef(gas, :cp, molr, 𝕡) * apply(:s, T, true))[1] + (
+			molr ? sref(gas, 𝕡) : sref(gas, 𝕡) / 𝐌(gas, 𝕡)
+		) :
+		zero(𝕡)
+end
 
 # ╔═╡ 91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
-Pr(gas::IG; T) = exp(s°(gas, true, T=T) / (prTy(T))(R̄())) / # arbitrary const
-	exp((prTy(T))(gas.sref / R̄()))
+Pr(gas::IG; T) = begin
+	𝕡 = typeof(T)
+	exp(s°(gas, true, T=T) / R̄(𝕡)) / exp(sref(gas, 𝕡) / R̄(𝕡))
+end
 
 # ╔═╡ 91e31608-f7e7-11ea-1295-817f8f1eff16
 vr(gas::IG; T) = T / Pr(gas, T=T)

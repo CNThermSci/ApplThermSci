@@ -110,31 +110,33 @@ begin
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.𝐮(gas, molr, T=x)
 		𝑔 = x -> IGas.cv(gas, molr, T=x)
-		# Get u bounds as y and check
+		thef, symb = (uVal)(), "u"
+		ε = eps(thef)
+		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		uMin, uMax = 𝑓(TMin), 𝑓(TMax)
-		if !(uMin <= (uVal)() <= uMax)
-			throw(DomainError(uVal(), "out of bounds $(uMin) ⩽ u ⩽ $(uMax)."))
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
 		end
 		# Linear initial estimate and initializations
-		r = (uVal() - uMin) / (uMax - uMin)
+		r = (thef - fMin) / (fMax - fMin)
 		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		u = [ 𝑓(T[end]) ]
+		f = [ 𝑓(T[end]) ]
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (uVal() - u[end]) / 𝑔(T[end]))
-			append!(u, 𝑓(T[end]))
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(u[end] - uVal()) <= eps(uVal()) * epsTol
+			elseif abs(f[end] - thef) <= epsTol * ε
 				why = :Δu; break
 			end
 		end
 		return (
 			T[end], :why => why, :it => length(T)-1,
-			:Δu => abs(u[end] - uVal()),
-			:Ts => T, :us => u
+			:Δf => abs(f[end] - uVal()),
+			:Ts => T, :fs => f
 		)
 	end
 

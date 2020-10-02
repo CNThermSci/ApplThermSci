@@ -272,8 +272,9 @@ const propF = Dict(
 # ╔═╡ 2ebc2ecc-f7e0-11ea-132f-492c5e6ee323
 # Generic f(T) function by Symbol key
 function apply(p::Symbol, T, rel=false)
+	𝕡 = typeof(T)
 	rel ?
-		apply(p, T, false) - apply(p, Tref(), false) :
+		apply(p, T, false) - apply(p, Tref(𝕡), false) :
 		vcat((f(T) for f in propF[p])...)
 end;
 

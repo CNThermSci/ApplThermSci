@@ -47,16 +47,16 @@ md"## Setup Mínimo"
 const MOLR = true;
 
 # ╔═╡ 53ea6024-f7c2-11ea-2226-f9d22949c8b7
-# Universal gas constant
-R̄() = 8.314472; # ± 0.000015 # kJ/kmol⋅K
+# Universal gas constant, with an optional precision argument
+R̄(𝕡=Float64) = 𝕡(8.314472); # ± 0.000015 # kJ/kmol⋅K
 
 # ╔═╡ 815a5db4-f7c2-11ea-1747-e3f2eccdf1b2
 # Standard Tref - for the internal energy
-Tref() = 298.15; # K
+Tref(𝕡=Float64) = 𝕡(298.15); # K
 
 # ╔═╡ f26879e2-f884-11ea-0223-158b8af130b9
 # Standard Pref - for the entropy
-Pref() = 100.00; # kPa
+Pref(𝕡=Float64) = 𝕡(100.00); # kPa
 
 # ╔═╡ 8125f198-f7c2-11ea-14e4-7f873ab2c3f4
 # IG (Ideal Gas) structure: values for each gas instance
@@ -108,36 +108,21 @@ stdGas = gasLib[Symbol(gas_choice)]
 # ╔═╡ 04402ca4-f7cf-11ea-02e7-2d95f990f682
 md"## Funcionalidade – Verificações"
 
+# ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
+function inbounds(gas::IG, T)
+	𝕡 = typeof(AbstractFloat(T))
+	minT, maxT = map(𝕡, (gas.Tmin, gas.Tmax))
+	if !(minT <= T <= maxT)
+		throw(DomainError(T, "out of bounds $(minT) ⩽ T ⩽ $(maxT)."))
+	end
+	true
+end;
+
 # ╔═╡ 438d85f2-f7d7-11ea-325c-273ebfc69412
 md"▷ Testes:"
 
 # ╔═╡ 5f456858-f851-11ea-2432-f5455ae9eb87
 @bind bounds_test_T Slider(0:50:2400, default=0, show_value=true)
-
-# ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
-md"## Funcionalidade – Constantes"
-
-# ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
-# "𝐑" can be typed by \bfR<tab>
-𝐑(gas::IG, molr=MOLR) = molr ? R̄() : R̄() / gas.MW
-
-# ╔═╡ 1d3d41fc-f7d6-11ea-205d-617f44dc1b64
-# "𝐌" can be typed by \bfM<tab>
-𝐌(gas::IG) = gas.MW
-
-# ╔═╡ 41699000-f7d6-11ea-122a-0351461ef63c
-Tmin(gas::IG) = gas.Tmin
-
-# ╔═╡ 41475ace-f7d6-11ea-0bcf-6151365fc893
-Tmax(gas::IG) = gas.Tmax
-
-# ╔═╡ 1c5b8254-f7d7-11ea-3446-39744648cf35
-function inbounds(gas::IG, T)
-	if !(gas.Tmin <= T <= gas.Tmax)
-		throw(DomainError(T, "out of bounds $(Tmin(gas)) ⩽ T ⩽ $(Tmax(gas))."))
-	end
-	true
-end;
 
 # ╔═╡ def71222-f851-11ea-23cd-3155795ae67e
 begin
@@ -147,8 +132,25 @@ begin
 		md"✘ A temperatura de $(bounds_test_T) K está **FORA** dos limites para o $(gas_choice)!"
 end
 
+# ╔═╡ 01857e50-f7d5-11ea-0bb9-2b276266ad09
+md"## Funcionalidade – Constantes"
+
+# ╔═╡ 180ea502-f7d5-11ea-1e16-8ba66b4f6201
+# "𝐑" can be typed by \bfR<tab>
+𝐑(gas::IG, molr=MOLR, 𝕡=Float64) = molr ? R̄(𝕡) : R̄(𝕡) / 𝕡(gas.MW)
+
+# ╔═╡ 1d3d41fc-f7d6-11ea-205d-617f44dc1b64
+# "𝐌" can be typed by \bfM<tab>
+𝐌(gas::IG, 𝕡=Float64) = 𝕡(gas.MW)
+
+# ╔═╡ 41699000-f7d6-11ea-122a-0351461ef63c
+Tmin(gas::IG, 𝕡=Float64) = 𝕡(gas.Tmin)
+
+# ╔═╡ 41475ace-f7d6-11ea-0bcf-6151365fc893
+Tmax(gas::IG, 𝕡=Float64) = 𝕡(gas.Tmax)
+
 # ╔═╡ 412680da-f7d6-11ea-288f-c193dc4a28fd
-sref(gas::IG) = gas.sref
+sref(gas::IG, 𝕡=Float64) = 𝕡(gas.sref)
 
 # ╔═╡ 62876930-f7d6-11ea-1281-eb68bffdc58a
 md"▷ Testes:"
@@ -187,7 +189,10 @@ prTy(A...) = promote_type(map(typeof, AbstractFloat.(A))...)
 
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # "𝐏" can be typed by \bfP<tab>
-𝐏(gas::IG, molr=true; T, v) = prTy(T, v)(𝐑(gas, molr)) * T / v
+𝐏(gas::IG, molr=true; T, v) = begin
+	𝕡 = prTy(T, v)
+	𝐑(gas, molr, 𝕡) * T / v
+end
 
 # ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # "𝐓" can be typed by \bfT<tab>

@@ -101,9 +101,12 @@ begin
 	#                             T(u) inverse                             #
 	#----------------------------------------------------------------------#
 	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(gas::IGas.IG, uVal::uType, molr=true; maxIt::Integer=0, epsU::Integer=4)
+	function IGas.𝐓(
+			gas::IGas.IG, uVal::uType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
 		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.𝐮(gas, molr, T=x)
 		𝑔 = x -> IGas.cv(gas, molr, T=x)
@@ -124,7 +127,7 @@ begin
 			append!(u, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(u[end] - uVal()) <= eps(uVal()) * epsU
+			elseif abs(u[end] - uVal()) <= eps(uVal()) * epsTol
 				why = :Δu; break
 			end
 		end
@@ -139,9 +142,12 @@ begin
 	#                             T(h) inverse                             #
 	#----------------------------------------------------------------------#
 	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(gas::IGas.IG, hVal::hType, molr=true; maxIt::Integer=0, epsH::Integer=4)
+	function IGas.𝐓(
+			gas::IGas.IG, hVal::hType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
 		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
 		𝑔 = x -> IGas.cp(gas, molr, T=x)
@@ -162,7 +168,7 @@ begin
 			append!(h, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(h[end] - hVal()) <= eps(hVal()) * epsH
+			elseif abs(h[end] - hVal()) <= eps(hVal()) * epsTol
 				why = :Δh; break
 			end
 		end
@@ -177,9 +183,12 @@ begin
 	#                            T(pr) inverse                             #
 	#----------------------------------------------------------------------#
 	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(gas::IGas.IG, pVal::prType, molr=true; maxIt::Integer=0, epsP::Integer=4)
+	function IGas.𝐓(
+			gas::IGas.IG, pVal::prType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
 		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 1024 : false
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.Pr(gas, T=x)
 		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
@@ -200,7 +209,7 @@ begin
 			append!(p, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(p[end] - pVal()) <= eps(pVal()) * epsP
+			elseif abs(p[end] - pVal()) <= eps(pVal()) * epsTol
 				why = :Δpr; break
 			end
 		end

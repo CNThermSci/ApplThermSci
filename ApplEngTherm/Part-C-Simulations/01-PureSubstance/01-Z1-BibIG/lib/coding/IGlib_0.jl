@@ -196,11 +196,17 @@ end
 
 # ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # "𝐓" can be typed by \bfT<tab>
-𝐓(gas::IG, molr=true; P, v) = P * v / prTy(P, v)(𝐑(gas, molr))
+𝐓(gas::IG, molr=true; P, v) = begin
+	𝕡 = prTy(P, v)
+	P * v / 𝐑(gas, molr, 𝕡)
+end
 
 # ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
 # "𝐯" can be typed by \bfv<tab>
-𝐯(gas::IG, molr=true; P, T) = prTy(P, T)(𝐑(gas, molr)) * T / P
+𝐯(gas::IG, molr=true; P, T) = begin
+	𝕡 = prTy(P, T)
+	𝐑(gas, molr, 𝕡) * T / P
+end
 
 # ╔═╡ c2c23006-f7d8-11ea-3bec-e30e32d01007
 md"▷ Testes:"
@@ -213,24 +219,6 @@ md"""
 
 Molar base? $(@bind exm CheckBox())
 """
-
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
-end
 
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"## Funcionalidade – Comportamento Calórico"
@@ -344,6 +332,24 @@ begin
        ))
 end
 
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
+end
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
@@ -385,7 +391,7 @@ end
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347
 # ╟─c2c23006-f7d8-11ea-3bec-e30e32d01007
 # ╟─6104afb4-f874-11ea-128e-27ffa012d75e
-# ╠═b2606fd8-f872-11ea-0dff-232b927a6ea9
+# ╟─b2606fd8-f872-11ea-0dff-232b927a6ea9
 # ╟─97faf1be-f7db-11ea-3e79-7f73efeaa19e
 # ╟─7e859194-f7dd-11ea-13ef-751ab2e55ab6
 # ╠═a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8

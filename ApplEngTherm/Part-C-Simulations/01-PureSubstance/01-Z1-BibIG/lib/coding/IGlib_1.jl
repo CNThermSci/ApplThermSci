@@ -246,14 +246,19 @@ begin
 		# Auxiliary function of whether to break due to iterations
 		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 		# Set 𝑓(x) function
-		𝑓 = x -> IGas.Pr(gas, T=x)
 		thef, symb = (vVal)(), "vr"
+		𝑓 = x -> IGas.vr(gas, T=x) - thef
 		ε, 𝕡 = eps(thef), typeof(thef)
 		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
 		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
-		if !(fMin <= thef <= fMax)
-			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
+		if !(fMin <= zero(𝕡) <= fMax)
+			throw(
+				DomainError(
+					thef,
+					"out of bounds $(fMin+thef) ⩽ $(symb) ⩽ $(fMax+thef)."
+				)
+			)
 		end
 		# Bisection method initializations
 		TB = [ Tmin, Tmax ] # T bounds
@@ -264,17 +269,14 @@ begin
 		why = :unbracketed
 		while !reduce(==, 𝑠)
 			# Main loop
-			TMid = reduce(+, TB) / 2
-			fMid = 𝑓(TMid)
-			sMid = signbit(fMid)
-			if sMid == 𝑠[1]
-				TB[1], FB[1] = TMid, fMid
-			else
-				TB[2], FB[2] = TMid, fMid
-			end
-
-			append!(T, T[end] + ...)
+			append!(T, reduce(+, TB) / 2)
 			append!(f, 𝑓(T[end]))
+			sMid = signbit(f[end])
+			if sMid == 𝑠[1]
+				TB[1], FB[1] = T[end], f[end]
+			else
+				TB[2], FB[2] = T[end], f[end]
+			end
 			if breakIt(length(T)-1)
 				why = :it; break
 			elseif abs(f[end] - thef) <= epsTol * ε

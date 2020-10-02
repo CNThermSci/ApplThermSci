@@ -194,7 +194,7 @@ begin
 	#----------------------------------------------------------------------#
 	# "𝐓" can be typed by \bfT<tab>
 	function IGas.𝐓(
-			gas::IGas.IG, pVal::prType, molr=true;
+			gas::IGas.IG, pVal::prType;
 			maxIt::Integer=0, epsTol::Integer=4
 		)
 		# Auxiliary function of whether to break due to iterations
@@ -240,7 +240,7 @@ begin
 	#----------------------------------------------------------------------#
 	# "𝐓" can be typed by \bfT<tab>
 	function IGas.𝐓(
-			gas::IGas.IG, vVal::vrType, molr=true;
+			gas::IGas.IG, vVal::vrType;
 			maxIt::Integer=0, epsTol::Integer=4
 		)
 		# Auxiliary function of whether to break due to iterations
@@ -251,7 +251,7 @@ begin
 		ε, 𝕡 = eps(thef), typeof(thef)
 		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
-		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		fMin, fMax = 𝑓(TMax), 𝑓(TMin)
 		if !(fMin <= zero(𝕡) <= fMax)
 			throw(
 				DomainError(
@@ -261,10 +261,10 @@ begin
 			)
 		end
 		# Bisection method initializations
-		TB = [ Tmin, Tmax ] # T bounds
+		TB = [ TMin, TMax ] # T bounds
 		FB = map(𝑓, TB)	 # 𝑓 bounds
-		T = [ sum(TB) / 2 ] # Iterations are length(T)-1
-		f = [ 𝑓(T[end]) ]
+		T = 𝕡[ ] # Iterations are length(T)
+		f = 𝕡[ ]
 		𝑠 = map(signbit, FB)
 		why = :unbracketed
 		while !reduce(==, 𝑠)
@@ -277,7 +277,7 @@ begin
 			else
 				TB[2], FB[2] = T[end], f[end]
 			end
-			if breakIt(length(T)-1)
+			if breakIt(length(T))
 				why = :it; break
 			elseif abs(f[end]) <= epsTol * ε
 				why = :Δf; break
@@ -286,7 +286,7 @@ begin
 		return Dict(
 			:sol => T[end],
 			:why => why,
-			:it  => length(T)-1,
+			:it  => length(T),
 			:Δf  => f,
 			:Ts  => T,
 			:fs  => f .+ thef,
@@ -360,7 +360,6 @@ Tp = IGas.𝐓(
 			T=300.0
 		)
 	),
-	false,
 	epsTol=1
 )
 
@@ -369,6 +368,18 @@ collect(sprintf1("%+.$(16-3)f", i) for i in Tp[:Ts])
 
 # ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
 collect(sprintf1("%+.$(16-1)e", i) for i in Tp[:Δf])
+
+# ╔═╡ b3606444-0506-11eb-1123-270d773bd7c8
+Tv = IGas.𝐓(
+	IGas.stdGas,
+	vrType(
+		IGas.vr(
+			IGas.stdGas,
+			T=300.0
+		)
+	),
+	epsTol=1
+)
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
@@ -396,3 +407,4 @@ collect(sprintf1("%+.$(16-1)e", i) for i in Tp[:Δf])
 # ╠═81979e9c-0408-11eb-3fb5-2ddf52656a27
 # ╠═c4caedde-0408-11eb-042c-cf16b7a36d80
 # ╠═9bbd1672-04a0-11eb-372e-6790d9865826
+# ╠═b3606444-0506-11eb-1123-270d773bd7c8

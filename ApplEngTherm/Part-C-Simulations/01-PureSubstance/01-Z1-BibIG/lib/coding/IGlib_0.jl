@@ -347,9 +347,12 @@ vr(gas::IG; T) = T / Pr(gas, T=T)
 
 # ╔═╡ 2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # "𝐬" can be typed by \bfs<tab>
-𝐬(gas::IG, molr=MOLR; T, P) = inbounds(gas, T) ?
-	s°(gas, molr, T=T) -
-	(prTy(P, T))(𝐑(gas, molr)) * log(P / (prTy(P, T))(Pref())) : zero(prTy(P, T))
+𝐬(gas::IG, molr=MOLR; T, P) = begin
+	𝕡 = prTy(P, T)
+	inbounds(gas, T) ?
+		s°(gas, molr, T=T) - 𝐑(gas, molr, 𝕡) * log(P / Pref(𝕡)) :
+		zero(𝕡)
+end
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Testes:"
@@ -358,7 +361,7 @@ md"▷ Testes:"
 # Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°, cp, cv, γ} - Table for the `stdGas`:
 begin
        digs = 2
-       T = collect(300f0:100f0:1800f0)
+       T = Float32.(collect(300:100:1800))
        HTMLTable(DataFrame(
                :T  => T,
                :h  => [round(𝐡(stdGas, false, T=i), digits=digs) for i in T],
@@ -430,5 +433,5 @@ end
 # ╠═91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
 # ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
-# ╠═9c488798-f7e4-11ea-3878-f32ab3a0abf8
+# ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╟─970b5428-04a6-11eb-183a-23a2b8ed52c0

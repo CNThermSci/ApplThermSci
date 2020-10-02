@@ -276,11 +276,11 @@ As funções de uma única letra ASCII tem os nomes em letras negritas (bold-fac
 
 # ╔═╡ 2e7498f0-f7e0-11ea-00f3-df5a8acaeb10
 cp(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:c, T))[1] : 0.0
+	((prTy(T)).(coef(gas, :cp, molr)) * apply(:c, T))[1] : zero(prTy(T))
 
 # ╔═╡ 2e5c0164-f7e0-11ea-37bc-2f245b5dfd7b
 cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cv, molr) * apply(:c, T))[1] : 0.0
+	((prTy(T)).(coef(gas, :cv, molr)) * apply(:c, T))[1] : zero(prTy(T))
 
 # ╔═╡ b03d1962-f7e4-11ea-2ae9-d153c7d10f2f
 # "γ" can be typed by \gamma<tab>
@@ -289,24 +289,25 @@ cv(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
 # ╔═╡ 2e3d89aa-f7e0-11ea-3704-cbc09b19a0c8
 # "𝐮" can be typed by \bfu<tab>
 𝐮(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cv, molr) * apply(:h, T, true))[1] : 0.0
+	((prTy(T)).(coef(gas, :cv, molr)) * apply(:h, T, true))[1] : zero(prTy(T))
 
 # ╔═╡ 1530d092-f7e3-11ea-180e-09ee5c270414
 # "𝐡" can be typed by \bfh<tab>
 𝐡(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:h, T, true))[1] + 𝐑(gas, molr) * Tref() : 0.0
+	((prTy(T)).(coef(gas, :cp, molr)) * apply(:h, T, true))[1] +
+	(prTy(T))(𝐑(gas, molr) * Tref()) : zero(prTy(T))
 
 # ╔═╡ 20cd32e0-f7e3-11ea-3d79-3b12b8bd6f35
 # "°" can be typed by \degree<tab>
 # "Partial" ideal gas entropy
 s°(gas::IG, molr=MOLR; T) =	inbounds(gas, T) ?
-	(coef(gas, :cp, molr) * apply(:s, T, true))[1] + (
-		molr ? gas.sref : gas.sref / gas.MW
-	) : 0.0
+	((prTy(T)).(coef(gas, :cp, molr)) * apply(:s, T, true))[1] + (
+		molr ? (prTy(T))(gas.sref) : (prTy(T))(gas.sref / gas.MW)
+	) : zero(prTy(T))
 
 # ╔═╡ 91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
-Pr(gas::IG; T) = exp(s°(gas, true, T=T) / R̄()) / # arbitrary const
-	exp(gas.sref / R̄())
+Pr(gas::IG; T) = exp(s°(gas, true, T=T) / (prTy(T))(R̄())) / # arbitrary const
+	exp((prTy(T))(gas.sref / R̄()))
 
 # ╔═╡ 91e31608-f7e7-11ea-1295-817f8f1eff16
 vr(gas::IG; T) = T / Pr(gas, T=T)
@@ -314,27 +315,28 @@ vr(gas::IG; T) = T / Pr(gas, T=T)
 # ╔═╡ 2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # "𝐬" can be typed by \bfs<tab>
 𝐬(gas::IG, molr=MOLR; T, P) = inbounds(gas, T) ?
-	s°(gas, molr, T=T) - 𝐑(gas, molr) * log(P/Pref()) : 0.0
+	s°(gas, molr, T=T) -
+	(prTy(P, T))(𝐑(gas, molr)) * log(P / (prTy(P, T))(Pref())) : zero(prTy(P, T))
 
 # ╔═╡ 9c488798-f7e4-11ea-3878-f32ab3a0abf8
 md"▷ Testes:"
 
-# ╔═╡ 699e5762-f7e6-11ea-1724-edc2ffb575ba
+# ╔═╡ 970b5428-04a6-11eb-183a-23a2b8ed52c0
 # Mass-based {T, 𝐡, Pr(T), 𝐮, vr(T), s°, cp, cv, γ} - Table for the `stdGas`:
 begin
-	digs = 4
-	T = collect(300:100:1800)
-	HTMLTable(DataFrame(
-		:T  => T,
-		:h  => [round(𝐡(stdGas, false, T=i), digits=digs) for i in T],
-		:Pr => [round(Pr(stdGas, T=i), digits=digs) for i in T],
-		:u  => [round(𝐮(stdGas, false, T=i), digits=digs) for i in T],
-		:vr => [round(vr(stdGas, T=i), digits=digs) for i in T],
-		:s° => [round(s°(stdGas, false, T=i), digits=digs) for i in T],
-		:cp => [round(cp(stdGas, false, T=i), digits=digs) for i in T],
-		:cv => [round(cv(stdGas, false, T=i), digits=digs) for i in T],
-		:γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
-	))
+       digs = 2
+       T = collect(300f0:100f0:1800f0)
+       HTMLTable(DataFrame(
+               :T  => T,
+               :h  => [round(𝐡(stdGas, false, T=i), digits=digs) for i in T],
+               :Pr => [round(Pr(stdGas, T=i), digits=digs) for i in T],
+               :u  => [round(𝐮(stdGas, false, T=i), digits=digs) for i in T],
+               :vr => [round(vr(stdGas, T=i), digits=digs) for i in T],
+               :s° => [round(s°(stdGas, false, T=i), digits=digs) for i in T],
+               :cp => [round(cp(stdGas, false, T=i), digits=digs) for i in T],
+               :cv => [round(cv(stdGas, false, T=i), digits=digs) for i in T],
+               :γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
+       ))
 end
 
 # ╔═╡ Cell order:
@@ -395,5 +397,5 @@ end
 # ╠═91fdd86c-f7e7-11ea-0505-bb2a2d99df2a
 # ╠═91e31608-f7e7-11ea-1295-817f8f1eff16
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
-# ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
-# ╟─699e5762-f7e6-11ea-1724-edc2ffb575ba
+# ╠═9c488798-f7e4-11ea-3878-f32ab3a0abf8
+# ╟─970b5428-04a6-11eb-183a-23a2b8ed52c0

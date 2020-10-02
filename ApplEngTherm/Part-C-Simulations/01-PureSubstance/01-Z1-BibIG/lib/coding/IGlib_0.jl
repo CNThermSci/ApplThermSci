@@ -181,17 +181,21 @@ end
 # ╔═╡ 0411c8a0-f7cf-11ea-15ec-636d951c8e49
 md"## Funcionalidade – Comportamento P-T-v"
 
+# ╔═╡ 7e069bfa-04a3-11eb-1f37-ad18e0683cf6
+# Auxiliary function of promoted types (float types relate to precision bits)!
+prTy(A...) = promote_type(map(typeof, A)...)
+
 # ╔═╡ 00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # "𝐏" can be typed by \bfP<tab>
-𝐏(gas::IG, molr=true; T, v) = 𝐑(gas, molr) * T / v
+𝐏(gas::IG, molr=true; T, v) = prTy(T, v)(𝐑(gas, molr)) * T / v
 
 # ╔═╡ 0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # "𝐓" can be typed by \bfT<tab>
-𝐓(gas::IG, molr=true; P, v) = P * v / 𝐑(gas, molr)
+𝐓(gas::IG, molr=true; P, v) = P * v / prTy(P, v)(𝐑(gas, molr))
 
 # ╔═╡ 83badade-f7d8-11ea-08f4-11c8d11ea347
 # "𝐯" can be typed by \bfv<tab>
-𝐯(gas::IG, molr=true; P, T) = 𝐑(gas, molr) * T / P
+𝐯(gas::IG, molr=true; P, T) = prTy(P, T)(𝐑(gas, molr)) * T / P
 
 # ╔═╡ c2c23006-f7d8-11ea-3bec-e30e32d01007
 md"▷ Testes:"
@@ -368,6 +372,7 @@ end
 # ╟─62876930-f7d6-11ea-1281-eb68bffdc58a
 # ╟─e49f7636-f86c-11ea-2a2e-7751213c86e3
 # ╟─0411c8a0-f7cf-11ea-15ec-636d951c8e49
+# ╠═7e069bfa-04a3-11eb-1f37-ad18e0683cf6
 # ╠═00e60032-f7d0-11ea-3784-cd9ef42ea3a6
 # ╠═0190c5f8-f7d0-11ea-2f9c-f73bf010a371
 # ╠═83badade-f7d8-11ea-08f4-11c8d11ea347

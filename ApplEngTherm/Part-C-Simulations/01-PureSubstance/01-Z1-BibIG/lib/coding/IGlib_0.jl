@@ -220,6 +220,24 @@ md"""
 Molar base? $(@bind exm CheckBox())
 """
 
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
+end
+
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"## Funcionalidade – Comportamento Calórico"
 
@@ -230,13 +248,13 @@ Coeficientes, de $c_p(T)$ ou $c_v(T)$, são retornados como uma *matriz-linha*."
 
 # ╔═╡ a4cc2982-f7db-11ea-1fd7-67c2e0c0b6d8
 # If functions accound for integration factor, then only :cp, :cv are needed here
-function coef(gas::IG, kind::Symbol = :cp, molr=MOLR)
+function coef(gas::IG, kind::Symbol = :cp, molr=MOLR, 𝕡=Float64)
 	if kind == :cp 		# No coef. transformation
-		ret = hcat(gas.CP...)
+		ret = hcat(𝕡.(gas.CP)...)
 	elseif kind == :cv 	# Translates first coef.
-		ret = hcat(gas.CP[1] - R̄(), gas.CP[2:end]...)
+		ret = hcat(𝕡(gas.CP[1]) - R̄(𝕡), 𝕡.(gas.CP[2:end])...)
 	end
-	molr ? ret : ret ./ gas.MW
+	molr ? ret : ret ./ 𝐌(gas, 𝕡)
 end;
 
 # ╔═╡ 6e7edfd4-f7de-11ea-228d-8b71b2fc2ade
@@ -330,24 +348,6 @@ begin
                :cv => [round(cv(stdGas, false, T=i), digits=digs) for i in T],
                :γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
        ))
-end
-
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
 end
 
 # ╔═╡ Cell order:

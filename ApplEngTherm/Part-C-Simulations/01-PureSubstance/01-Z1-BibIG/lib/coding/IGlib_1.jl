@@ -130,13 +130,16 @@ begin
 			if breakIt(length(T)-1)
 				why = :it; break
 			elseif abs(f[end] - thef) <= epsTol * ε
-				why = :Δu; break
+				why = :Δf; break
 			end
 		end
-		return (
-			T[end], :why => why, :it => length(T)-1,
-			:Δf => abs(f[end] - uVal()),
-			:Ts => T, :fs => f
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
 		)
 	end
 
@@ -153,31 +156,33 @@ begin
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
 		𝑔 = x -> IGas.cp(gas, molr, T=x)
-		# Get u bounds as y and check
+		thef, symb = (uVal)(), "u"
+		ε = eps(thef)
+		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		hMin, hMax = 𝑓(TMin), 𝑓(TMax)
-		if !(hMin <= (hVal)() <= hMax)
-			throw(DomainError(hVal(), "out of bounds $(hMin) ⩽ h ⩽ $(hMax)."))
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
 		end
 		# Linear initial estimate and initializations
-		r = (hVal() - hMin) / (hMax - hMin)
+		r = (thef - fMin) / (fMax - fMin)
 		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		h = [ 𝑓(T[end]) ]
+		f = [ 𝑓(T[end]) ]
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (hVal() - h[end]) / 𝑔(T[end]))
-			append!(h, 𝑓(T[end]))
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(h[end] - hVal()) <= eps(hVal()) * epsTol
-				why = :Δh; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δu; break
 			end
 		end
 		return (
 			T[end], :why => why, :it => length(T)-1,
-			:Δh => abs(h[end] - hVal()),
-			:Ts => T, :hs => h
+			:Δf => abs(f[end] - uVal()),
+			:Ts => T, :fs => f
 		)
 	end
 
@@ -241,7 +246,7 @@ Tu = IGas.𝐓(
 )
 
 # ╔═╡ 9deb79b4-fed0-11ea-0457-edc21cedbb88
-collect(sprintf1("%.20f", i) for i in Tu[5].second)
+collect(sprintf1("%.20f", i) for i in Tu[:Ts])
 
 # ╔═╡ b49b8540-fed1-11ea-17d7-49ff1deb2898
 Th = IGas.𝐓(
@@ -257,7 +262,7 @@ Th = IGas.𝐓(
 )
 
 # ╔═╡ 7065617c-fed2-11ea-3b30-4d4b5af934e7
-collect(sprintf1("%.78f", i) for i in Th[5].second)
+collect(sprintf1("%.78f", i) for i in Th[:Ts])
 
 # ╔═╡ 81979e9c-0408-11eb-3fb5-2ddf52656a27
 Tp = IGas.𝐓(
@@ -272,7 +277,7 @@ Tp = IGas.𝐓(
 )
 
 # ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
-collect(sprintf1("%.78f", i) for i in Tp[5].second)
+collect(sprintf1("%.78f", i) for i in Tp[:Ts])
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

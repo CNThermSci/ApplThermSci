@@ -45,34 +45,25 @@ begin
 	end
 	# Functor to extract the stored value `val`...
 	# ... thus avoiding further implementing the type:
-	(u::uType)() = u.val
+	(_u::uType)() = _u.val
 end
 
 # ╔═╡ 42c107f0-fecd-11ea-13ea-13f9c55afd8e
 begin
-	# A type to LABEL values as enthalpy ones:
-	struct hType <: THERM
-		val
-	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
-	(h::hType)() = h.val
+	struct hType <: THERM; val; end
+	(_h::hType)() = _h.val
 end
 
 # ╔═╡ e64d8a8c-0405-11eb-2921-ebe084e91de3
 begin
-	struct prType <: THERM
-		val
-	end
-	(pr::prType)() = pr.val
+	struct prType <: THERM; val; end
+	(_p::prType)() = _p.val
 end
 
 # ╔═╡ 1991bdbe-0406-11eb-04e5-9b85aabdcc0f
 begin
-	struct vrType <: THERM
-		val
-	end
-	(vr::vrType)() = vr.val
+	struct vrType <: THERM; val; end
+	(_v::vrType)() = _v.val
 end
 
 # ╔═╡ 42a999c6-fecd-11ea-2349-c32da71d098f

@@ -156,7 +156,7 @@ begin
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
 		𝑔 = x -> IGas.cp(gas, molr, T=x)
-		thef, symb = (uVal)(), "u"
+		thef, symb = (hVal)(), "h"
 		ε = eps(thef)
 		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
@@ -176,13 +176,16 @@ begin
 			if breakIt(length(T)-1)
 				why = :it; break
 			elseif abs(f[end] - thef) <= epsTol * ε
-				why = :Δu; break
+				why = :Δf; break
 			end
 		end
-		return (
-			T[end], :why => why, :it => length(T)-1,
-			:Δf => abs(f[end] - uVal()),
-			:Ts => T, :fs => f
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
 		)
 	end
 
@@ -199,31 +202,36 @@ begin
 		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 		𝑓 = x -> IGas.Pr(gas, T=x)
 		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
-		# Get u bounds as y and check
+		thef, symb = (pVal)(), "Pr"
+		ε = eps(thef)
+		# Get f bounds and check
 		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
-		pMin, pMax = 𝑓(TMin), 𝑓(TMax)
-		if !(pMin <= (pVal)() <= pMax)
-			throw(DomainError(pVal(), "out of bounds $(pMin) ⩽ pr ⩽ $(pMax)."))
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
 		end
 		# Linear initial estimate and initializations
-		r = (pVal() - pMin) / (pMax - pMin)
+		r = (thef - fMin) / (fMax - fMin)
 		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		p = [ 𝑓(T[end]) ]
+		f = [ 𝑓(T[end]) ]
 		why = :because
 		# Main loop
 		while true
-			append!(T, T[end] + (pVal() - p[end]) / 𝑔(T[end]))
-			append!(p, 𝑓(T[end]))
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(p[end] - pVal()) <= eps(pVal()) * epsTol
-				why = :Δpr; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δf; break
 			end
 		end
-		return (
-			T[end], :why => why, :it => length(T)-1,
-			:Δpr => abs(p[end] - pVal()),
-			:Ts => T, :prs => p
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
 		)
 	end
 
@@ -273,11 +281,12 @@ Tp = IGas.𝐓(
 			T=300.0
 		)
 	),
-	false
+	false,
+	epsTol=1
 )
 
 # ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
-collect(sprintf1("%.78f", i) for i in Tp[:Ts])
+collect(sprintf1("%+.20f", i) for i in Tp[:Δf])
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

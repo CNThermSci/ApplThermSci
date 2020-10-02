@@ -279,7 +279,7 @@ begin
 			end
 			if breakIt(length(T)-1)
 				why = :it; break
-			elseif abs(f[end] - thef) <= epsTol * ε
+			elseif abs(f[end]) <= epsTol * ε
 				why = :Δf; break
 			end
 		end
@@ -287,9 +287,11 @@ begin
 			:sol => T[end],
 			:why => why,
 			:it  => length(T)-1,
-			:Δf  => f .- thef,
+			:Δf  => f,
 			:Ts  => T,
-			:fs  => f
+			:fs  => f .+ thef,
+			:TB  => TB,
+			:FB  => FB
 		)
 	end
 

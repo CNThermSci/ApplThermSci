@@ -250,11 +250,30 @@ Tu = IGas.𝐓(
 			T=300.0
 		)
 	),
-	false
+	false,
+	epsTol=2^26 # 2²⁶ = 67108864: don't care about the last 26 bits
+	#epsTol=2^16 # 2¹⁶ = 65536: don't care about the last 16 bits
 )
 
 # ╔═╡ 9deb79b4-fed0-11ea-0457-edc21cedbb88
 collect(sprintf1("%.20f", i) for i in Tu[:Ts])
+
+# ╔═╡ 070c9262-04a2-11eb-2a2a-5b7bc3eee25c
+Tu₃₂ = IGas.𝐓(
+	IGas.stdGas,
+	uType(
+		IGas.𝐮(
+			IGas.stdGas,
+			false,
+			T=300.0f0 # literal floats with "f0" are 32-bit, single-precision
+		)
+	),
+	false,
+	epsTol=1  # 2⁰ = 1: care about all bits
+)
+
+# ╔═╡ 601e1a7e-04a2-11eb-0685-53471b4bc6ce
+collect(sprintf1("%.20f", i) for i in Tu₃₂[:Ts])
 
 # ╔═╡ b49b8540-fed1-11ea-17d7-49ff1deb2898
 Th = IGas.𝐓(
@@ -286,6 +305,9 @@ Tp = IGas.𝐓(
 )
 
 # ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
+collect(sprintf1("%+.20f", i) for i in Tp[:Ts])
+
+# ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
 collect(sprintf1("%+.20f", i) for i in Tp[:Δf])
 
 # ╔═╡ Cell order:
@@ -307,7 +329,10 @@ collect(sprintf1("%+.20f", i) for i in Tp[:Δf])
 # ╠═1c4805f6-fed2-11ea-07cf-477715998303
 # ╠═675de6bc-fec8-11ea-1b59-e585e8cba51a
 # ╠═9deb79b4-fed0-11ea-0457-edc21cedbb88
+# ╠═070c9262-04a2-11eb-2a2a-5b7bc3eee25c
+# ╠═601e1a7e-04a2-11eb-0685-53471b4bc6ce
 # ╠═b49b8540-fed1-11ea-17d7-49ff1deb2898
 # ╠═7065617c-fed2-11ea-3b30-4d4b5af934e7
 # ╠═81979e9c-0408-11eb-3fb5-2ddf52656a27
 # ╠═c4caedde-0408-11eb-042c-cf16b7a36d80
+# ╠═9bbd1672-04a0-11eb-372e-6790d9865826

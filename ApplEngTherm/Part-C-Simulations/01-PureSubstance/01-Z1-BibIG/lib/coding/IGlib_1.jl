@@ -111,9 +111,9 @@ begin
 		𝑓 = x -> IGas.𝐮(gas, molr, T=x)
 		𝑔 = x -> IGas.cv(gas, molr, T=x)
 		thef, symb = (uVal)(), "u"
-		ε = eps(thef)
+		ε, 𝕡 = eps(thef), typeof(thef)
 		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
+		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
 		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
 		if !(fMin <= thef <= fMax)
 			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
@@ -157,9 +157,9 @@ begin
 		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
 		𝑔 = x -> IGas.cp(gas, molr, T=x)
 		thef, symb = (hVal)(), "h"
-		ε = eps(thef)
+		ε, 𝕡 = eps(thef), typeof(thef)
 		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
+		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
 		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
 		if !(fMin <= thef <= fMax)
 			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
@@ -203,9 +203,9 @@ begin
 		𝑓 = x -> IGas.Pr(gas, T=x)
 		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
 		thef, symb = (pVal)(), "Pr"
-		ε = eps(thef)
+		ε, 𝕡 = eps(thef), typeof(thef)
 		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas), IGas.Tmax(gas)
+		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
 		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
 		if !(fMin <= thef <= fMax)
 			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
@@ -256,7 +256,7 @@ Tu = IGas.𝐓(
 )
 
 # ╔═╡ 9deb79b4-fed0-11ea-0457-edc21cedbb88
-collect(sprintf1("%.20f", i) for i in Tu[:Ts])
+collect(sprintf1("%.$(16-3)f", i) for i in Tu[:Ts])
 
 # ╔═╡ 070c9262-04a2-11eb-2a2a-5b7bc3eee25c
 Tu₃₂ = IGas.𝐓(
@@ -273,7 +273,7 @@ Tu₃₂ = IGas.𝐓(
 )
 
 # ╔═╡ 601e1a7e-04a2-11eb-0685-53471b4bc6ce
-collect(sprintf1("%.20f", i) for i in Tu₃₂[:Ts])
+collect(sprintf1("%.$(7-3)f", i) for i in Tu₃₂[:Ts])
 
 # ╔═╡ b49b8540-fed1-11ea-17d7-49ff1deb2898
 Th = IGas.𝐓(
@@ -289,7 +289,7 @@ Th = IGas.𝐓(
 )
 
 # ╔═╡ 7065617c-fed2-11ea-3b30-4d4b5af934e7
-collect(sprintf1("%.78f", i) for i in Th[:Ts])
+collect(sprintf1("%.$(78-3)f", i) for i in Th[:Ts])
 
 # ╔═╡ 81979e9c-0408-11eb-3fb5-2ddf52656a27
 Tp = IGas.𝐓(
@@ -305,10 +305,10 @@ Tp = IGas.𝐓(
 )
 
 # ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
-collect(sprintf1("%+.20f", i) for i in Tp[:Ts])
+collect(sprintf1("%+.$(16-3)f", i) for i in Tp[:Ts])
 
 # ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
-collect(sprintf1("%+.20f", i) for i in Tp[:Δf])
+collect(sprintf1("%+.$(16-0)f", i) for i in Tp[:Δf])
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

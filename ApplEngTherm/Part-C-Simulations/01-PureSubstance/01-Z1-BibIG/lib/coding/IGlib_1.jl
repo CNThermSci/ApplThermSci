@@ -235,6 +235,62 @@ begin
 		)
 	end
 
+	#----------------------------------------------------------------------#
+	#                            T(vr) inverse                             #
+	#----------------------------------------------------------------------#
+	# "𝐓" can be typed by \bfT<tab>
+	function IGas.𝐓(
+			gas::IGas.IG, vVal::vrType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
+		# Auxiliary function of whether to break due to iterations
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
+		# Set 𝑓(x) function
+		𝑓 = x -> IGas.Pr(gas, T=x)
+		thef, symb = (vVal)(), "vr"
+		ε, 𝕡 = eps(thef), typeof(thef)
+		# Get f bounds and check
+		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
+		end
+		# Bisection method initializations
+		TB = [ Tmin, Tmax ] # T bounds
+		FB = map(𝑓, TB)	 # 𝑓 bounds
+		T = [ sum(TB) / 2 ] # Iterations are length(T)-1
+		f = [ 𝑓(T[end]) ]
+		𝑠 = map(signbit, FB)
+		why = :unbracketed
+		while !reduce(==, 𝑠)
+			# Main loop
+			TMid = reduce(+, TB) / 2
+			fMid = 𝑓(TMid)
+			sMid = signbit(fMid)
+			if sMid == 𝑠[1]
+				TB[1], FB[1] = TMid, fMid
+			else
+				TB[2], FB[2] = TMid, fMid
+			end
+
+			append!(T, T[end] + ...)
+			append!(f, 𝑓(T[end]))
+			if breakIt(length(T)-1)
+				why = :it; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δf; break
+			end
+		end
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
+		)
+	end
+
 end
 
 # ╔═╡ 1c4805f6-fed2-11ea-07cf-477715998303
@@ -308,7 +364,7 @@ Tp = IGas.𝐓(
 collect(sprintf1("%+.$(16-3)f", i) for i in Tp[:Ts])
 
 # ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
-collect(sprintf1("%+.$(16-0)f", i) for i in Tp[:Δf])
+collect(sprintf1("%+.$(16-1)e", i) for i in Tp[:Δf])
 
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b

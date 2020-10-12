@@ -1,0 +1,20 @@
+# SYMLINKS
+root
+
+# Bibliography Databases
+stdRef
+bibfile.bkp
+
+# Compiling metadata
+*.info
+
+# Beamer themes
+beamer
+beamer*theme*
+
+# Converted figures
+fig/*pdf
+
+# Downloaded figures
+fig/P-V_diagram_deviations_to_Otto_cycle.svg
+

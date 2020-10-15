@@ -1,0 +1,49 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\VPMS}{{\ensuremath V_{\mathrm{PMS}}}}
+\newcommand{\VPMI}{{\ensuremath V_{\mathrm{PMI}}}}
+%-----------------------------------------------------------------------------------------------
+\title{X.20.01 -- An Inertial Air-Standard Finite-Time Heat Addition Otto Engine Model}
+\subtitle{Presentation of the paper ENC-2020-0067 for the ENCIT2020}
+\author{Filipe M. Moreira and Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{root/00-res/cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \mode<beamer>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        }
+        \mode<handout>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-W.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-W.pdf}%
+        }
+    }
+} % The (delineated, alpha), or washed-out logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+\frame{\tableofcontents}
+%-----------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndW{pexels-paul-basel-1816842}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

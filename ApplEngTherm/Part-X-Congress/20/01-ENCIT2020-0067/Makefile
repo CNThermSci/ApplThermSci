@@ -24,6 +24,12 @@ fig/%.pdf: fig/%.svg
 		--export-filename=$@ \
 		$<
 
+Slide1.png: getMask1.sh
+	getMask1.sh
+
+Slide2.png: getMask2.sh
+	getMask2.sh
+
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
@@ -33,5 +39,4 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex
-
 

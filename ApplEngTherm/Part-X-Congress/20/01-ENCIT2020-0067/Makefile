@@ -44,4 +44,5 @@ ${PRES}.png: ${PRES}.pdf
 	mkdir -p ${PRES}.png
 	cd ${PRES}.png; \
 	pdftoppm -png -forcenum -r 118.4 "../${PRES}.pdf" "${PRES}"
+	slides-merge.sh Slide1-Filled.png
 

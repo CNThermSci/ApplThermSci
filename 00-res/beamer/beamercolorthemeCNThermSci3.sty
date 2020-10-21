@@ -46,25 +46,25 @@
 % - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
 % - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
 % - The Copenhagen theme uses PRIMARY and QUATERNARY only, right to left on top & bottom
-\setbeamercolor*{palette primary}{bg=Lmag,fg=Lwhi!50!Lyel}        % top+bot right strips
-\setbeamercolor*{palette secondary}{bg=Lblu,fg=Lwhi!50!Lyel}      % ???
-\setbeamercolor*{palette tertiary}{bg=Lgre,fg=Lwhi!50!Lyel}       % top+bot leftmost strip (out of 3)
-\setbeamercolor*{palette quaternary}{bg=Lblu,fg=Lwhi!50!Lyel}     % top+bot left strips
-\setbeamercolor*{sidebar}{parent=palette primary}                  % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar primary}{fg=black}                % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar secondary}{fg=Lwhi}               % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar tertiary}{fg=black}               % Not tested (no sidebar)
-\setbeamercolor*{palette sidebar quaternary}{fg=Lwhi}              % Not tested (no sidebar)
-\setbeamercolor{framesubtitle}{fg=CYAN}
-\setbeamercolor*{subtitle}{fg=CYAN}                                 % Subtitle
+\setbeamercolor*{palette primary}{bg=Lmag,fg=Lwhi!50!Lyel}          % top+bot right strips
+\setbeamercolor*{palette secondary}{bg=Lblu,fg=Lwhi!50!Lyel}        % ???
+\setbeamercolor*{palette tertiary}{bg=Lgre,fg=Lwhi!50!Lyel}         % top+bot leftmost strip (out of 3)
+\setbeamercolor*{palette quaternary}{bg=Lblu,fg=Lwhi!50!Lyel}       % top+bot left strips
+\setbeamercolor*{sidebar}{parent=palette primary}                   % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar primary}{fg=black}                 % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar secondary}{fg=Lwhi}                % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar tertiary}{fg=black}                % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar quaternary}{fg=Lwhi}               % Not tested (no sidebar)
+\setbeamercolor*{title}{bg=Lblu!50!black,fg=CYAN}                    % Presentation Title
+\setbeamercolor*{subtitle}{fg=CYAN}                                 % Presentation Subtitle
+\setbeamercolor*{framesubtitle}{fg=CYAN}                            % FrameSubtitle (fg only)
 \setbeamercolor*{block title}{parent=structure}
 \setbeamercolor*{block title alerted}{parent=alerted text}
 \setbeamercolor*{block title example}{parent=example text}
 \setbeamercolor*{block body}{}
 \setbeamercolor*{block body alerted}{}
 \setbeamercolor*{block body example}{}
-\setbeamercolor*{titlelike}{parent=structure}
-
+\setbeamercolor*{titlelike}{bg=Tcya,fg=CYAN}                % Frame Title (fg) +SubTitle (bg)
 %-----------------------------------------------------------------------------------------------
 \mode<handout>{% Go easier on printers
     \setbeamercolor*{normal text}{fg=black!40!white,bg=white}       % Slide background

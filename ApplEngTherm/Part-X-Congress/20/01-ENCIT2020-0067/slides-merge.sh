@@ -5,6 +5,7 @@ atop=${1:-Slide2.png}
 
 # Constants
 PRE='X2001-en-PRES'
+siz='746x420'
 geo='+486+174'
 
 # Functions
@@ -18,7 +19,7 @@ for _F in $(getFrames); do
     _f=$(printf "%03d" $_F)
     echo "Composing (${atop}, ${PRE}-${_F}.png) --> slide-${_f}.png"
     composite \
-        -geometry "${geo}" \
+        -geometry "${siz}${geo}" \
         ./${PRE}-${_F}.png \
         ../${atop} \
         ./slide-${_f}.png

@@ -42,7 +42,6 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 
 ${PRES}.png: ${PRES}.pdf
 	mkdir -p ${PRES}.png
-	cd ${PRES}.png
+	cd ${PRES}.png; \
 	pdftoppm -png -forcenum -r 100 "../${PRES}.pdf" "${PRES}"
-	cd ..
 

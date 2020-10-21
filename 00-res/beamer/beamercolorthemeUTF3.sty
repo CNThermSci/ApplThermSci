@@ -1,0 +1,67 @@
+% Based on the UTF1 color theme 
+\ProvidesPackageRCS $Header: beamercolorthemeUTF2.sty,v 001 2020/03/25 16:12:00 eirhnh$
+
+%-----------------------------------------------------------------------------------------------
+% UTFPR Palette - from logo (plain black and white are already defined)
+\definecolor{uyel}{rgb}{0.996,0.800,0.000} % UTFPR yellow #fecc00
+
+% UTFPR Pallete PERMUTATIONS (not official UTFPR colors!)
+\definecolor{gyel}{rgb}{0.800,0.996,0.000} % #ccfe00 - gre yell
+\definecolor{bcya}{rgb}{0.000,0.800,0.996} % #00ccfe - blu cyan
+\definecolor{gcya}{rgb}{0.000,0.996,0.800} % #00fecc - gre cyan
+\definecolor{bpnk}{rgb}{0.800,0.000,0.996} % #cc00fe - blu pink
+\definecolor{rpnk}{rgb}{0.996,0.000,0.800} % #00fecc - red pink
+\definecolor{hred}{rgb}{0.996,0.000,0.000} % #fe0000 - hig red
+\definecolor{lred}{rgb}{0.800,0.000,0.000} % #cc0000 - low red
+\definecolor{hgre}{rgb}{0.000,0.996,0.000} % #00fe00 - hig gre
+\definecolor{lgre}{rgb}{0.000,0.800,0.000} % #00cc00 - low gre
+\definecolor{hblu}{rgb}{0.000,0.000,0.996} % #0000fe - hig blu
+\definecolor{lblu}{rgb}{0.000,0.000,0.800} % #0000cc - low blu
+
+% Auxiliary colors
+\definecolor{aemp}{rgb}{0.870,0.190,0.080} % Aux. emphasis
+\definecolor{aogr}{rgb}{0.710,0.690,0.670} % Aux. Orangeish gray
+\definecolor{ared}{rgb}{0.870,0.190,0.080} % Aux. Red
+\definecolor{adgr}{rgb}{0.170,0.170,0.170} % Aux. Dark gray
+\definecolor{enfa}{rgb}{0.170,0.170,0.170} % Emphasis
+
+%-----------------------------------------------------------------------------------------------
+\mode<presentation>
+
+% Normal text FG and BG
+\setbeamercolor{normal text}{fg=black,bg=white}                     % Slide background
+\setbeamercolor{structure}{fg=bcya!50!black}                        % Title + Controls
+\setbeamercolor{alerted text}{fg=uyel!75!black}                     % \alert{} contents
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!50}    % ???
+% Meanings of primary...quaternary are theme-dependent:
+% - The JuanLesPins theme uses primary to quaternary (bottom to top) top strips
+% - Boadilla, AnnArbor use primary-ternary right to left on a single bottom strip
+% - The Copenhagen theme uses primary and secondary only, right to left on top & bottom
+\setbeamercolor*{palette primary}{bg=uyel,fg=black}                 % top+bot right strips
+\setbeamercolor*{palette secondary}{bg=black,fg=uyel}               % top+bot left strips
+\setbeamercolor*{palette tertiary}{bg=ared,fg=black}                % top+bot leftmost strip (out of 3)
+\setbeamercolor*{palette quaternary}{bg=black,fg=uyel!75!black}     % ???
+\setbeamercolor*{sidebar}{parent=palette primary}                   % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar primary}{fg=black}                 % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar secondary}{fg=white}               % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar tertiary}{fg=black}                % Not tested (no sidebar)
+\setbeamercolor*{palette sidebar quaternary}{fg=white}              % Not tested (no sidebar)
+\setbeamercolor{framesubtitle}{fg=bcya!33!black}
+\setbeamercolor*{subtitle}{fg=black}
+\setbeamercolor*{block title}{parent=structure}
+\setbeamercolor*{block title alerted}{parent=alerted text}
+\setbeamercolor*{block title example}{parent=example text}
+\setbeamercolor*{block body}{}
+\setbeamercolor*{block body alerted}{}
+\setbeamercolor*{block body example}{}
+\setbeamercolor*{titlelike}{parent=structure}
+
+%-----------------------------------------------------------------------------------------------
+\mode<handout>{% Go easier on printers
+    \setbeamercolor*{palette primary}{bg=uyel!25!white,fg=black}
+    \setbeamercolor*{palette secondary}{bg=black!25!white,fg=uyel!25!black}
+    \setbeamercolor*{palette tertiary}{bg=ared!25!white,fg=black}
+    \setbeamercolor*{palette quaternary}{bg=black!25!white,fg=uyel!25!black}
+}
+
+

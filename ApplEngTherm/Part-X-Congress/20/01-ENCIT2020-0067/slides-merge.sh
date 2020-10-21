@@ -15,6 +15,7 @@ function getFrames(){
 # Execution
 cd "${PRE}.png"
 for _F in $(getFrames); do
+    echo "Composing (${atop}, ${PRE}-${_F}.png) --> slide-${_f}.png"
     _f=$(printf "%03d" $_F)
     composite \
         -geometry "${geo}" \
@@ -22,5 +23,5 @@ for _F in $(getFrames); do
         ../${atop} \
         ./slide-${_f}.png
 done
-cd -
+cd - >/dev/null
 

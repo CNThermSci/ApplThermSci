@@ -205,6 +205,44 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Thermodynamic Modeling}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{
+                \begin{align*}
+                    \alert{q_i + w_i} &
+                    \alert{= \Delta u_i = u_{i+1} - u_i},
+                    \\[\medskipamount]
+                    \alert{y(t^{\star})} &
+                    \alert{= \begin{cases}
+                        0,              & \mbox{for $t^{\star} < t^{\star}_{\theta}$,} \\
+                        g(t^{\star}),   & \mbox{for
+                            $t^{\star}_{\theta} \leqslant t^{\star} < t^{\star}_{\theta} + \Delta{t_c}$,
+                        } \\
+                        1,              & \mbox{for $t^{\star}_{\theta} + \Delta{t_c} \leqslant t^{\star}$.}
+                    \end{cases}}
+                    \\[\medskipamount]
+                    \alert{q_i} &
+                    \alert{= q_{ent}\Delta{y_i}},\qquad\mbox{with}\qquad
+                    \alert{\Delta{y_i}=y(t^{\star}_{i+1})-y(t^{\star})},\qquad\mbox{with}
+                    \\[\medskipamount]
+                    \alert{\alpha(t^{\star}_{\theta})} &
+                    \alert{= \theta},\qquad\mbox{and}\qquad
+                    \alert{t^{\star} \leftarrow 0}\qquad\mbox{whenever}\qquad
+                    \alert{(\alpha \mod 2\pi) = 0}.
+                \end{align*}
+            }
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{src/FIG_mechanism_rev05.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \subsection{Dynamic Modeling}
 %-----------------------------------------------------------------------------------------------

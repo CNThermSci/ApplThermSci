@@ -254,6 +254,31 @@
         \column{0.75\textwidth}
             \uncover<1->{
                 \begin{align*}
+        u_{i+1}^j & = u_i + q_i + w_i^j,\quad\mbox{with}
+        \\[\smallskipamount]
+        w_i^j & =
+            \begin{cases}
+                \frac{P_iv_i}{1-n_i^j}\cdot\biggl[
+                    1 - \Bigl(
+                        \frac{v_i}{v_{i+1}}
+                    \Bigr)^{\scriptstyle{n_i^j-1}}
+                \biggr],\quad &
+                \mathrm{for}\quad n_i^j \neq 1 \\[\medskipamount]
+                P_i\cdot v_i\cdot\ln\Bigl(
+                    \frac{v_i}{v_{i+1}}
+                \Bigr),\quad &
+                \mathrm{for}\quad n_i^j = 1
+            \end{cases}
+        \\[\smallskipamount]
+        T_{i+1}^j & = f(u_{i+1}^j, c_v(T), v_{i+1}),
+        \\[\smallskipamount]
+        P_{i+1}^j & = f(T_{i+1}^j, v_{i+1}),\quad\mbox{finally correcting for $n_i^j$ with}
+        \\[\smallskipamount]
+        n_i^{j+1} & = \Bigl(
+            \log\textstyle\frac{P_{i+1}^j}{P_i}
+        \Bigr)\Bigl/\Bigr.\Bigl(
+            \log\textstyle\frac{v_i}{v_{i+1}}
+        \Bigr).
                 \end{align*}
             }
         \column{0.25\textwidth}

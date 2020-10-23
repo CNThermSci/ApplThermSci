@@ -164,18 +164,28 @@
                         \alert{$V_{du}=V_d/z$};
                 \end{itemize}
             }
-            \only<4>{
-                \begin{itemize}
-                    \item Piston diameter \alert{$D$} and stroke \alert{$S=2R$};
-                    \item Top Dead Center (TDC) volume, \alert{$V_{min}$};
-                    \item Bottom Dead Center (BDC) volume, \alert{$V_{max}$};
-                    \item Engine compression ratio, \alert{$r=\nicefrac{V_{max}}{V_{min}}$};
-                    \item Engine displaced volume, \alert{$V_{d}$};
-                    \item Cylinder count \alert{$z$}, and unit displaced volume,
-                        \alert{$V_{du}=V_d/z$};
-                    \item Piston position, \alert{$x = L[1-\sqrt{1-(R\sin\alpha/L)^2}]  +
-                        R(1-\cos\alpha)$};
-                \end{itemize}
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{src/FIG_mechanism_rev05.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Thermodynamic Modeling}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{
+                \begin{align*}
+                    \alert{x(\alpha)) &
+                    \alert{= L[1-\sqrt{1-(R\sin\alpha/L)^2}]  +  R(1-\cos\alpha)}
+                    \\[\medskipamount]
+                    \alert{V(\alpha)} &
+                    \alert{= V_{min} + (\pi D^4/4)x(\alpha)}
+                \end{align*}
             }
         \column{0.25\textwidth}
 

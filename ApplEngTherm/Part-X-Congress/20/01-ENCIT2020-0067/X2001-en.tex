@@ -257,7 +257,8 @@
                     \alert{u_{i+1}^j} &
                     \alert{= u_i + q_i + w_i^j},\quad\mbox{with}
                     \\[\smallskipamount]
-                    w_i^j & =
+                    \alert{w_i^j} &
+                    \alert{=
                         \begin{cases}
                             \frac{P_iv_i}{1-n_i^j}\cdot\biggl[
                                 1 - \Bigl(
@@ -270,8 +271,10 @@
                             \Bigr),\quad &
                             \mathrm{for}\quad n_i^j = 1
                         \end{cases}
+                    }
                     \\[\smallskipamount]
-                    T_{i+1}^j & = f(u_{i+1}^j, c_v(T), v_{i+1}),
+                    \alert{T_{i+1}^j} &
+                    \alert{= f(u_{i+1}^j, c_v(T), v_{i+1})},
                     \\[\smallskipamount]
                     P_{i+1}^j & = f(T_{i+1}^j, v_{i+1}),\quad\mbox{finally correcting for $n_i^j$ with}
                     \\[\smallskipamount]

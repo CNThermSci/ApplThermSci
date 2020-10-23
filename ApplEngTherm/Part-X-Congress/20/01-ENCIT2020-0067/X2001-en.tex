@@ -50,14 +50,14 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Inertial Finite-Time heat-Addition Otte Engine Model}{iFTHA}\vspace*{-2em}
+    \begin{frame}{iFTHA}\vspace*{-2em}
         \uncover<1->{The work proposes a}\vspace*\medskipamount
         \begin{itemize}
-            \item<1->  \alert{Coupled} dynamic-thermodynamic model, i.e.,
-            \item<1->  an \alert{inertial air-standard} Otto model,
-            \item<2->  with \alert{finite-time} heat release,
-            \item<2->  basic \alert{engine parameters}, and
-            \item<2->  \alert{piston}, \alert{rod}, \alert{crank}, and \alert{flywheel}
+            \item<1->  fairly simple \alert{coupled dynamic-thermodynamic} engine model, i.e.,
+            \item<1->  an \alert{inertial}, \alert{air-standard}, Otto model with:
+            \item<1->  \alert{finite-time} heat release,
+            \item<1->  basic \alert{engine parameters}, and
+            \item<1->  \alert{piston}, \alert{rod}, \alert{crank}, and \alert{flywheel}
                 inertias.
         \end{itemize}
     \end{frame}
@@ -65,26 +65,27 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Inertial Finite-Time heat-Addition Otte Engine Model}{Motivation}\vspace*{-2em}
-        \begin{columns}
-        \column{0.60\textwidth}
+    \begin{frame}{Motivation}\vspace*{-2em}
         \uncover<1->{Somewhat recently published$^\dagger$ FTHA model:}\vspace*\medskipamount
         \begin{itemize}
             \item<1->  \alert{Air-standard reversible},
             \item<1->  \alert{finite-time} heat release,
             \item<1->  Otto engine (spark-ignited) model:
-            \item<2->  \alert{minimal-complexity}, \alert{pure-substance} model
-            \item<2->  accounting for \alert{simultaneous heat+work} interactions.
+            \item<1->  \alert{minimal-complexity}, \alert{pure-substance} model
+            \item<1->  accounting for \alert{simultaneous heat+work} interactions.
         \end{itemize}\vspace*\medskipamount
         {\scriptsize
         $^\dagger$~Naaktgeboren, C. Int.~J.~Mech.~Eng.~Educ., 45(2), 2017.}
-        \column{0.40\textwidth}
-        \vspace*{-9mm}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}\vspace*{-2em}
         \begin{center}
-            \noindent\hspace*{-15mm}%
-            \includegraphics[width=1.40\textwidth]{01-FTHA/fig/test_r=12,0_speed-P.pdf}
+            \noindent\hspace*{-4.5mm}%
+            \includegraphics[height=70.0mm]{01-FTHA/fig/test_r=12,0_speed-P.pdf}
         \end{center}
-        \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

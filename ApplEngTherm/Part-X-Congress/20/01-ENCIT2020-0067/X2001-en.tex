@@ -308,23 +308,53 @@
         \begin{columns}
         \column{0.75\textwidth}
             \uncover<1->{Fundamental hypotheses for the dynamic model include:}
-            \uncover<1->{
+            \only<1>{
                 \begin{itemize}
                     \item \alert{frictionless} (reversible) motion of modeled parts;
                     \item parts modeled as \alert{rigid} bodies;
                     \item \alert{linear}, \alert{$\bsans{y}$-axis}, piston translation;
                     \item \alert{planar}, \alert{$\bsans{xy}$}, rod motion;
                     \item \alert{$\bsans{z}$-axis rotation} crank/flywheel motion;
-                    \item \alert{symmetric} piston and rod (centers of mass);
-                    \item \alert{balanced} crank and flywheel.
-                    \item Parameters: \alert{$m_p$}, \alert{$m_r$}, \alert{$I_r$},
-                        \alert{$I_c$}, and \alert{$I_f$}.
+                    \item \alert{$\bsans{y}$-axis} piston \alert{center of mass};
+                \end{itemize}
+            }
+            \only<2>{
+                \begin{itemize}
+                    \item parts modeled as \alert{rigid} bodies;
+                    \item \alert{linear}, \alert{$\bsans{y}$-axis}, piston translation;
+                    \item \alert{planar}, \alert{$\bsans{xy}$}, rod motion;
+                    \item \alert{$\bsans{z}$-axis rotation} crank/flywheel motion;
+                    \item \alert{$\bsans{y}$-axis} piston \alert{center of mass};
+                    \item \alert{on axis} rod \alert{center of mass};
+                \end{itemize}
+            }
+            \only<3>{
+                \begin{itemize}
+                    \item \alert{linear}, \alert{$\bsans{y}$-axis}, piston translation;
+                    \item \alert{planar}, \alert{$\bsans{xy}$}, rod motion;
+                    \item \alert{$\bsans{z}$-axis rotation} crank/flywheel motion;
+                    \item \alert{$\bsans{y}$-axis} piston \alert{center of mass};
+                    \item \alert{on axis} rod \alert{center of mass};
+                    \item \alert{$\bsans{z}$-axis} ($\bsans{xy}$ origin) crank \alert{center of
+                        mass};
+                \end{itemize}
+            }
+            \only<4>{
+                \begin{itemize}
+                    \item \alert{planar}, \alert{$\bsans{xy}$}, rod motion;
+                    \item \alert{$\bsans{z}$-axis rotation} crank/flywheel motion;
+                    \item \alert{$\bsans{y}$-axis} piston \alert{center of mass};
+                    \item \alert{on axis} rod \alert{center of mass};
+                    \item \alert{$\bsans{z}$-axis} ($\bsans{xy}$ origin) crank \alert{center of
+                        mass};
+                    \item \alert{$\bsans{z}$-axis} ($\bsans{xy}$ origin) flywheel \alert{center
+                        of mass};
                 \end{itemize}
             }
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/p_FBD.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev05.pdf}
 
         \end{columns}
     \end{frame}

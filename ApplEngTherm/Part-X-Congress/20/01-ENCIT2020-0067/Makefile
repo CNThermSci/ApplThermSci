@@ -32,6 +32,7 @@ Slide2.png: getMask2.sh
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/FIG_mechanism_rev05.pdf \
+		fig/FIG_mechanism_rev06.pdf \
 		fig/p_FBD.pdf \
 		fig/r_FBD.pdf \
 		fig/c_FBD.pdf \
@@ -41,6 +42,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/FIG_mechanism_rev05.pdf \
+		fig/FIG_mechanism_rev06.pdf \
 		fig/p_FBD.pdf \
 		fig/r_FBD.pdf \
 		fig/c_FBD.pdf \

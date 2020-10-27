@@ -529,13 +529,41 @@
                     \alert{\bsans{r}_{g1}} &
                     \alert{\equiv \begin{bmatrix} r_g & 0 \\ 0 & 1 \end{bmatrix}};
                     \quad\mbox{and}
+                \end{align*}
+            }
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/r_FBD.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Dynamic Modeling --- Kinematics}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{\alert{Rod} dynamic force \& momentum equilibria (cont'd):}
+            \vspace*{\smallskipamount}
+            \uncover<1->{
+                \begin{align*}
                     %----- y:
-                    %\alert{} &
-                    %\alert{},\quad\mbox{with}
-                    %\\[\bigskipamount]
-                    %\alert{} &
-                    %\alert{}
-                    %\\[\bigskipamount]
+                    \alert{F_{cry}} &
+                    \alert{= F_g + \frac{\bsans{I}_{cry}\pmb{\Omega}}{\ell}}
+                    ,\quad\mbox{with line vector}
+                    \\[\bigskipamount]
+                    \alert{\bsans{I}_{cry}} &
+                    \alert{\equiv \ell\bsans{m}_{rp}\bsans{y}_{rp}}
+                    \\ &
+                    \alert{= \ell
+                        \begin{bmatrix} m_r & m_p \end{bmatrix}
+                        \begin{bmatrix}
+                            \mathsf{y}_{r\omega} & \mathsf{y}_{r\dot\omega} \\
+                            \mathsf{y}_{p\omega} & \mathsf{y}_{p\dot\omega}
+                        \end{bmatrix}
+                    }.
                 \end{align*}
             }
         \column{0.25\textwidth}

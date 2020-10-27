@@ -515,22 +515,33 @@
             \vspace*{\smallskipamount}
             \uncover<1->{
                 \begin{align*}
-                    \alert{F_{cry}} &
-                    \alert{= F_g +
-                        \begin{bmatrix} m_r & m_p \end{bmatrix}
-                        \begin{bmatrix}
-                            \mathsf{y}_{r\omega} & \mathsf{y}_{r\dot\omega} \\
-                            \mathsf{y}_{p\omega} & \mathsf{y}_{p\dot\omega}
-                        \end{bmatrix}
-                        \begin{bmatrix} \omega^2 \\ \dot\omega \end{bmatrix}}
-                    \alert{\equiv F_g + \bsans{m}_{rp}\bsans{y}_{rp}\pmb{\Omega}},
+                    %---- x:
+                    \alert{F_{crx}} &
+                    \alert{= \frac{\bsans{I}_{crx}\pmb{\Omega}-hF_g}{\ell}},
+                    \quad\mbox{with line vector}
                     \\[\bigskipamount]
+                    \alert{\bsans{I}_{crx}} &
+                    \alert{
+                        \equiv I_r\bsans{a} - h\bsans{m}_{rp}\bsans{r}_{g1}\bsans{y}_{rp} +
+                        \ell(1-r_g)m_r\bsans{x}_r
+                    },\quad\mbox{with}
+                    \\[\bigskipamount]
+                    \alert{\bsans{r}_{g1}} &
+                    \alert{\equiv \begin{bmatrix} r_g & 0 \\ 0 & 1 \end{bmatrix}};
+                    \quad\mbox{and}
+                    %----- y:
+                    %\alert{} &
+                    %\alert{},\quad\mbox{with}
+                    %\\[\bigskipamount]
+                    %\alert{} &
+                    %\alert{}
+                    %\\[\bigskipamount]
                 \end{align*}
             }
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/p_FBD.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/r_FBD.pdf}
 
         \end{columns}
     \end{frame}

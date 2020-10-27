@@ -303,10 +303,22 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Title}{Subtitle}\vspace*{-2em}
+    \begin{frame}{Dynamic Modeling}\vspace*{-2em}
         \begin{columns}
         \column{0.75\textwidth}
+            \uncover<1->{Fundamental hypotheses for the dynamic model include:}
             \uncover<1->{
+                \begin{itemize}
+                    \item \alert{frictionless} (reversible) motion of modeled parts;
+                    \item parts modeled as \alert{rigid} bodies;
+                    \item \alert{linear}, \alert{$\bsans{y}$-axis}, piston translation;
+                    \item \alert{planar}, \alert{$\bsans{xy}$}, rod motion;
+                    \item \alert{$\bsans{z}$-axis rotation} crank/flywheel motion;
+                    \item \alert{symmetric} piston and rod (centers of mass);
+                    \item \alert{balanecd} crank and flywheel.
+                    \item Parameters: \alert{$m_p$}, \alert{$m_r$}, \alert{$I_r$},
+                        \alert{$I_c$}, and \alert{$I_f$}.
+                \end{itemize}
             }
         \column{0.25\textwidth}
 

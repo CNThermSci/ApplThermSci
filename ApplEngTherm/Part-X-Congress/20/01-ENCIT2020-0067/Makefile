@@ -36,6 +36,10 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 	#pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
+		fig/FIG_mechanism_rev05.pdf \
+		fig/p_FBD.pdf \
+		fig/r_FBD.pdf \
+		fig/c_FBD.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex

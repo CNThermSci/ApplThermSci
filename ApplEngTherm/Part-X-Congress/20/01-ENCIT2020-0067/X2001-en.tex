@@ -354,7 +354,7 @@
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev05.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev06.pdf}
 
         \end{columns}
     \end{frame}
@@ -378,7 +378,7 @@
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/p_FBD.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev06.pdf}
 
         \end{columns}
     \end{frame}
@@ -386,15 +386,48 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Title}{Subtitle}\vspace*{-2em}
+    \begin{frame}{Dynamic Modeling --- Kinetics}\vspace*{-2em}
         \begin{columns}
         \column{0.75\textwidth}
+            \uncover<1->{$R$- and $L$- hypotenuse right triangles:\\}
             \uncover<1->{
+                Let \alert{$B \equiv R/L$}, \alert{$\beta_x \equiv h/\ell = \tan\phi$}, and
+                \alert{$\beta_y \equiv r/\ell = \tan\phi/\tan\alpha$}, then:
+                \begin{align*}
+                    \alert{\sin\phi} &
+                    \alert{= B\sin\alpha}
+                    \\[\medskipamount]
+                    \alert{\dot\phi} &
+                    \alert{= \beta_y\dot\alpha = \beta_y\omega}
+                    \\[\medskipamount]
+                    \alert{\ddot\phi} &
+                    \alert{=
+                        \begin{bmatrix}
+                            \mathsf{a}_{\omega} & \mathsf{a}_{\dot\omega}
+                        \end{bmatrix}
+                        \begin{bmatrix}
+                            \omega^2 \\
+                            \dot\omega
+                        \end{bmatrix}
+                        \equiv \bsans{a}\pmb{\Omega}
+                    }, \qquad\mbox{with}\qquad
+                    \\[\medskipamount]
+                    \alert{\bsans{a}} &
+                    \alert{=
+                        \begin{bmatrix}
+                            \beta_x(\beta_y^2 - 1) & \beta_y
+                        \end{bmatrix}
+                    }
+                    =
+                    \begin{bmatrix}
+                        \mathsf{a}_{\omega} & \mathsf{a}_{\dot\omega}
+                    \end{bmatrix}.
+                \end{align*}
             }
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/r_FBD.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev06.pdf}
 
         \end{columns}
     \end{frame}
@@ -402,15 +435,44 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Title}{Subtitle}\vspace*{-2em}
+    \begin{frame}{Dynamic Modeling --- Kinetics}\vspace*{-2em}
         \begin{columns}
         \column{0.75\textwidth}
+            \uncover<1->{$R$- and $L$- hypotenuse right triangles:\\}
             \uncover<1->{
+                Let \alert{$B \equiv R/L$}, \alert{$\beta_x \equiv h/\ell = \tan\phi$}, and
+                \alert{$\beta_y \equiv r/\ell = \tan\phi/\tan\alpha$}, then:
+                \begin{align*}
+                    \ddot{\mathsf{y}}_p &= \bsans{y}_{p}\mathbf{\Omega},\qquad\mbox{with}\qquad
+                        \bsans{y}_{p}   \equiv \begin{bmatrix}
+                            \mathsf{y}_{p\omega} &
+                            \mathsf{y}_{p\dot\omega}
+                        \end{bmatrix}   =  -\begin{bmatrix}
+                            r(1+\beta_y) + h\mathsf{a}_{\omega} &
+                            h(1+\beta_y)
+                        \end{bmatrix}, \\
+                    \ddot{\mathsf{x}}_r &= \bsans{x}_{r}\mathbf{\Omega},\qquad\mbox{with}\qquad
+                        \bsans{x}_{r}   \equiv \begin{bmatrix}
+                            \mathsf{x}_{r\omega} &
+                            \mathsf{x}_{r\dot\omega}
+                        \end{bmatrix}   =  +\begin{bmatrix}
+                            -h(1-r_g) &
+                            r(1-r_g)
+                        \end{bmatrix},\qquad\qquad\qquad r_g \equiv L_g/L, \\
+                    \ddot{\mathsf{y}}_r &= \bsans{y}_{r}\mathbf{\Omega},\qquad\mbox{with}\qquad
+                        \bsans{y}_{r}   \equiv \begin{bmatrix}
+                            \mathsf{y}_{r\omega} &
+                            \mathsf{y}_{r\dot\omega}
+                        \end{bmatrix}   =  -\begin{bmatrix}
+                            r(1+r_g\beta_y) + hr_g\mathsf{a}_{\omega} &
+                            h(1+r_g\beta_y)
+                        \end{bmatrix}.
+                \end{align*}
             }
         \column{0.25\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/c_FBD.pdf}
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev06.pdf}
 
         \end{columns}
     \end{frame}

@@ -480,13 +480,41 @@
     \begin{frame}{Dynamic Modeling --- Kinematics}\vspace*{-2em}
         \begin{columns}
         \column{0.75\textwidth}
-            \uncover<1->{\alert{Piston} dynamic force equilibrium:}
+            \uncover<1->{\alert{Piston} dynamic force equilibrium:}\vspace*{\smallskipamount}
             \uncover<1->{
                 \begin{align*}
                     \alert{F_{rpy}} &
                     \alert{= F_g + m_p\ddot{\mathsf{y}}_p}
                     \alert{= F_g + m_p\bsans{y}_p\pmb{\Omega}},
                     \\[\bigskipamount]
+                    \alert{F_g} &
+                    \alert{= \mathsf{A}P_g = \frac{\pi D^2}{4}P_g},\quad\mbox{with}
+                    \\[\bigskipamount]
+                    \alert{P_g} &
+                    \alert{= (P_{i+1} + P_i)/2 - P_{cc}},
+                \end{align*}
+            }
+            \uncover<1->{
+                \noindent where \alert{$P_{cc}$} is the crank case pressure.
+            }
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/p_FBD.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Dynamic Modeling --- Kinematics}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{\alert{Rod} dynamic force \& momentum equilibria:}
+            \vspace*{\smallskipamount}
+            \uncover<1->{
+                \begin{align*}
                     \alert{F_{cry}} &
                     \alert{= F_g +
                         \begin{bmatrix} m_r & m_p \end{bmatrix}

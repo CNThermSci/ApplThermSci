@@ -443,7 +443,7 @@
                 \begin{align*}
                     \alert{\ddot{\mathsf{y}}_p} &
                     \alert{= \bsans{y}_{p}\pmb{\Omega}},\quad\mbox{with}\quad
-                    \alert{\bsans{y}_{p} \equiv
+                    \alert{\bsans{y}_{p} =
                         -\begin{bmatrix}
                             r(1+\beta_y) + h\mathsf{a}_{\omega} &
                             h(1+\beta_y)
@@ -451,7 +451,7 @@
                     \\[\bigskipamount]
                     \alert{\ddot{\mathsf{x}}_r} &
                     \alert{= \bsans{x}_{r}\pmb{\Omega}},\quad\mbox{with}\quad
-                    \alert{\bsans{x}_{r} \equiv
+                    \alert{\bsans{x}_{r} =
                         +\begin{bmatrix}
                             -h(1-r_g) &
                             r(1-r_g)
@@ -459,7 +459,7 @@
                     \\[\bigskipamount]
                     \alert{\ddot{\mathsf{y}}_r} &
                     \alert{= \bsans{y}_{r}\pmb{\Omega}},\quad\mbox{with}\quad
-                    \alert{\bsans{y}_{r} \equiv
+                    \alert{\bsans{y}_{r} =
                         -\begin{bmatrix}
                             r(1+r_g\beta_y) + hr_g\mathsf{a}_{\omega} &
                             h(1+r_g\beta_y)
@@ -470,6 +470,39 @@
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
         \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/FIG_mechanism_rev06.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Dynamic Modeling --- Kinematics}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{\alert{Piston} dynamic force equilibrium:}
+            \uncover<1->{
+                \begin{align*}
+                    \alert{F_{rpy}} &
+                    \alert{= F_g + m_p\ddot{\mathsf{y}}_p}
+                    \alert{= F_g + m_p\bsans{y}_p\pmb{\Omega}},
+                    \\[\bigskipamount]
+                    \alert{F_{cry}} &
+                    \alert{= F_g +
+                        \begin{bmatrix} m_r & m_p \end{bmatrix}
+                        \begin{bmatrix}
+                            \mathsf{y}_{r\omega} & \mathsf{y}_{r\dot\omega} \\
+                            \mathsf{y}_{p\omega} & \mathsf{y}_{p\dot\omega}
+                        \end{bmatrix}
+                        \begin{bmatrix} \omega^2 \\ \dot\omega \end{bmatrix}}
+                    \alert{\equiv F_g + \bsans{m}_{rp}\bsans{y}_{rp}\pmb{\Omega}},
+                    \\[\bigskipamount]
+                \end{align*}
+            }
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/p_FBD.pdf}
 
         \end{columns}
     \end{frame}

@@ -438,32 +438,23 @@
     \begin{frame}{Dynamic Modeling --- Kinetics}\vspace*{-2em}
         \begin{columns}
         \column{0.75\textwidth}
-            \uncover<1->{$R$- and $L$- hypotenuse right triangles:\\}
             \uncover<1->{
-                Let \alert{$B \equiv R/L$}, \alert{$\beta_x \equiv h/\ell = \tan\phi$}, and
-                \alert{$\beta_y \equiv r/\ell = \tan\phi/\tan\alpha$}, then:
+                Let further \alert{$r_g \equiv L_g/L$}, then:\vspace*{\smallskipamount}
                 \begin{align*}
-                    \ddot{\mathsf{y}}_p &= \bsans{y}_{p}\mathbf{\Omega},\qquad\mbox{with}\qquad
-                        \bsans{y}_{p}   \equiv \begin{bmatrix}
-                            \mathsf{y}_{p\omega} &
-                            \mathsf{y}_{p\dot\omega}
-                        \end{bmatrix}   =  -\begin{bmatrix}
+                    \ddot{\mathsf{y}}_p &= \bsans{y}_{p}\pmb{\Omega},\quad\mbox{with}\quad
+                        \bsans{y}_{p}   \equiv-\begin{bmatrix}
                             r(1+\beta_y) + h\mathsf{a}_{\omega} &
                             h(1+\beta_y)
-                        \end{bmatrix}, \\
-                    \ddot{\mathsf{x}}_r &= \bsans{x}_{r}\mathbf{\Omega},\qquad\mbox{with}\qquad
-                        \bsans{x}_{r}   \equiv \begin{bmatrix}
-                            \mathsf{x}_{r\omega} &
-                            \mathsf{x}_{r\dot\omega}
-                        \end{bmatrix}   =  +\begin{bmatrix}
+                        \end{bmatrix},
+                    \\[\bigskipamount]
+                    \ddot{\mathsf{x}}_r &= \bsans{x}_{r}\pmb{\Omega},\quad\mbox{with}\quad
+                        \bsans{x}_{r}   \equiv+\begin{bmatrix}
                             -h(1-r_g) &
                             r(1-r_g)
-                        \end{bmatrix},\qquad\qquad\qquad r_g \equiv L_g/L, \\
-                    \ddot{\mathsf{y}}_r &= \bsans{y}_{r}\mathbf{\Omega},\qquad\mbox{with}\qquad
-                        \bsans{y}_{r}   \equiv \begin{bmatrix}
-                            \mathsf{y}_{r\omega} &
-                            \mathsf{y}_{r\dot\omega}
-                        \end{bmatrix}   =  -\begin{bmatrix}
+                        \end{bmatrix},\quad\mbox{and}
+                    \\[\bigskipamount]
+                    \ddot{\mathsf{y}}_r &= \bsans{y}_{r}\pmb{\Omega},\quad\mbox{with}\quad
+                        \bsans{y}_{r}   \equiv-\begin{bmatrix}
                             r(1+r_g\beta_y) + hr_g\mathsf{a}_{\omega} &
                             h(1+r_g\beta_y)
                         \end{bmatrix}.

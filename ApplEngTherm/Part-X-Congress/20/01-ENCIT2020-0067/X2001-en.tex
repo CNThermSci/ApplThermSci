@@ -575,6 +575,53 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    \begin{equation}
+        \dot\omega = \frac{\mathsf{T}}{I_{\mathrm{tot}}}
+            = \frac{\mathsf{T}_s + \mathsf{T}_d}{\mathsf{I}_{pr\dot\omega} + I_c + I_f}
+            = \frac{%
+                h(1+\beta_y)F_g - \mathsf{I}_{pr\omega}\omega^2
+                }{\mathsf{I}_{pr\dot\omega} + I_c + I_f},
+        \label{eq:dyn.omdot}
+    \end{equation}
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Dynamic Modeling --- Kinematics}\vspace*{-2em}
+        \begin{columns}
+        \column{0.75\textwidth}
+            \uncover<1->{\alert{Crank} force momentum equilibrium:}
+            \vspace*{\smallskipamount}
+            \uncover<1->{
+                \begin{align*}
+                    \alert{\dot\omega} &
+                    \alert{
+                        = \frac{\mathsf{T}}{I_{\mathrm{tot}}}
+                        = \frac{
+                            \mathsf{T}_s + \mathsf{T}_d
+                        }{
+                            \mathsf{I}_{pr\dot\omega} + I_c + I_f
+                        }
+                    }
+                    \\[\bigskipamount]
+                    &
+                    \alert{
+                        = \frac{
+                            h(1+\beta_y)F_g - \mathsf{I}_{pr\omega}\omega^2
+                        }{
+                            \mathsf{I}_{pr\dot\omega} + I_c + I_f
+                        }
+                    },\quad\mbox{with line vector}
+                \end{align*}
+            }
+        \column{0.25\textwidth}
+
+        \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
+        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/r_FBD.pdf}
+
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{iFTHA Results}
 %-----------------------------------------------------------------------------------------------

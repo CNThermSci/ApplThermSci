@@ -632,11 +632,28 @@
     \begin{frame}{Energy Conservation --- Speed, No Heating, No Load}\vspace*{-2em}
         \begin{columns}
         \column{0.67\textwidth}
-            \uncover<1->{\alert{Crank} force momentum equilibrium:}
+            \uncover<1->{
+    Model engine parameters for the validation tests are: $R = \unit{37.00}{\milli\meter}$, $L =
+    \unit{120.78}{\milli\meter}$,    $D    =     \unit{89.00}{\milli\meter}$,     $V_{min}     =
+    \unit{550.00}{\centi\meter\cubed}$,    $m_p    =    \unit{0.417}{\kilogram}$,     $m_r     =
+    \unit{0.287}{\kilogram}$, $I_r  =  \unit{6.63\times  10^{-4}}{\kilogram\usk\squaren\meter}$,
+    $I_f + I_c = \unit{5.5}{\kilogram\usk\squaren\meter}$, and  $P_{cc}  =  \unit{0}{kPa}$.  The
+    working fluid is air and initial values are: $\alpha_0 = \unit{-\pi}{\radian}$, $\omega_0  =
+    \unit{80\pi}{\radian\per\second}$,   $P_0   =    \unit{101.375}{\kilo\pascal}$,    $T_0    =
+    \unit{300}{\kelvin}$. Simulation  time  step  was  $\Delta  t  =  \unit{0.00002}{\second}  =
+    \unit{20}{\micro\second}$.
+                \begin{itemize}
+                    \item $R = \unit{37.00}{\milli\meter}$, $L = \unit{120.78}{\milli\meter}$
+                \end{itemize}
+            }
         \column{0.33\textwidth}
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
-        \hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05.pdf}
+        \only<1>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05.pdf}}
+        \only<2>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05a.pdf}}
+        \only<3>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05b.pdf}}
+        \only<4>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05c.pdf}}
+        \only<5>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05d.pdf}}
 
         \end{columns}
     \end{frame}

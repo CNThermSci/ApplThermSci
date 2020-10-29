@@ -78,7 +78,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -87,13 +87,13 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="opacity:0.4;fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:0.527752;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
+       style="opacity:0.4;fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:0.653835;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10"
        id="rect4250"
        width="260"
        height="240"
        x="0"
        y="0"
-       transform="scale(0.23405449,0.36380208)" />
+       transform="matrix(0.23405449,0,0,0.23702257,0,15.213542)" />
     <g
        id="g132"
        transform="matrix(0.16709306,0,0,-0.16709306,0.35033073,59.53342)"

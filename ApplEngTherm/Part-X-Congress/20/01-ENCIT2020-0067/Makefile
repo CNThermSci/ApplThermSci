@@ -42,6 +42,10 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/fig-05c.pdf \
 		fig/fig-05d.pdf \
 		fig/fig-05e.pdf \
+		fig/fig-07.pdf \
+		fig/fig-07A.pdf \
+		fig/fig-07B.pdf \
+		fig/fig-07C.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	#pdflatex --enable-write18 ${PRES}.tex
@@ -58,6 +62,10 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/fig-05c.pdf \
 		fig/fig-05d.pdf \
 		fig/fig-05e.pdf \
+		fig/fig-07.pdf \
+		fig/fig-07A.pdf \
+		fig/fig-07B.pdf \
+		fig/fig-07C.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex

@@ -15,6 +15,7 @@
 %-----------------------------------------------------------------------------------------------
 \newcommand{\RED}[1]{{\textcolor{red}{#1}}}
 \newcommand{\ORA}[1]{{\textcolor{orange}{#1}}}
+\newcommand{\FIR}[1]{{\textcolor{red!50!orange}{#1}}}
 %-----------------------------------------------------------------------------------------------
 \title{An Inertial Air-standard Finite-time Heat\\ Addition Otto Engine Model}
 \subtitle{ENC-2020-0067}
@@ -636,16 +637,20 @@
         \begin{columns}
         \column{0.67\textwidth}
             \uncover<1->{
-                Input parameters:\\[\medskipamount]
+                Input parameters---\FIR{fire} are corrections (\FIR{\textbf{bold}} parts):\\[\medskipamount]
                 \begin{itemize}
                     \item   \alert{$R=\unit{37.00}{\milli\meter}$},
                             \alert{$L=\unit{120.78}{\milli\meter}$},
                             \alert{$D=\unit{89.00}{\milli\meter}$};
                     \item   \alert{$V_{min}=\unit{550.00}{\centi\meter\cubed}$},
                             \alert{$m_p=\unit{0.417}{\kilogram}$},
-                            \ORA{$m_r=\unit{0.28\mathbf{3}}{\kilogram}$};
+                            \FIR{$m_r=\unit{0.28\mathbf{3}}{\kilogram}$};
                     \item   \alert{$I_r=\unit{6.63\times 10^{-4}}{\kilogram\usk\squaren\meter}$},
-                            \alert{$I_c+I_f=\unit{5.5}{\kilogram\usk\squaren\meter}$}.
+                            \FIR{$I_c+I_f=\unit{5.5\mathbf{\times 10^{-3}}}{\kilogram\usk\squaren\meter}$};
+                    \item   \FIR{$\mathbf{L_g=}\unit{\mathbf{28.6}}{\pmb{\milli\meter}}$},
+                            ($r_g\approx 0.2368$),
+                            \FIR{$\mathbf{\theta=}\unit{\mathbf{0}}{\pmb\degree}$},
+                            \FIR{$\pmb\Delta\mathbf{t_c=}\unit{\mathbf{1}}{\pmb{\milli\second}}$};
                     \item   Air with \alert{$P_0=\unit{101.375}{\kilo\pascal}$},
                             \alert{$T_0=\unit{300}{\kelvin}$};
                     \item   \alert{$q_{ent}=\unit{0}{\kilo\joule\per\kilogram}$},
@@ -684,13 +689,17 @@
                 \\[\medskipamount]
                 \begin{itemize}
                     \item   \alert{$R=\unit{44.95}{\milli\meter}$},
-                            \alert{$L=\unit{157.32}{\milli\meter}$},
+                            \FIR{$L=\unit{157.32\mathbf{5}}{\milli\meter}$},
                             \alert{$D=\unit{76.20}{\milli\meter}$};
                     \item   \alert{$V_{min}=\unit{443.00}{\centi\meter\cubed}$},
                             \alert{$m_p=\unit{1.300}{\kilogram}$},
                             \alert{$m_r=\unit{1.126}{\kilogram}$};
                     \item   \alert{$I_r=\unit{6.63\times 10^{-4}}{\kilogram\usk\squaren\meter}$},
-                            \alert{$I_c+I_f=\unit{100}{\kilogram\usk\squaren\meter}$}.
+                            \alert{$I_c+I_f=\unit{100}{\kilogram\usk\squaren\meter}$};
+                    \item   \FIR{$\mathbf{L_g=}\unit{\mathbf{28.6}}{\pmb{\milli\meter}}$},
+                            ($r_g\approx 0.1818$),
+                            \FIR{$\mathbf{\theta=}\unit{\mathbf{-15}}{\pmb\degree}$},
+                            \FIR{$\pmb\Delta\mathbf{t_c=}\unit{\mathbf{4}}{\pmb{\milli\second}}$};
                     \item   Air with \alert{$P_0=\unit{101.375}{\kilo\pascal}$},
                             \alert{$T_0=\unit{300}{\kelvin}$};
                     \item   \alert{$q_{ent}=\unit{400.0}{\kilo\joule\per\kilogram}$},
@@ -708,11 +717,6 @@
 
         \vspace*{-4mm}% Prev+After lines needs to be a blank one as to ensure vertical mode
         \only<1>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05.pdf}}
-        \only<2>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05a.pdf}}
-        \only<3>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05b.pdf}}
-        \only<4>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05c.pdf}}
-        \only<5>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05d.pdf}}
-        \only<6>{\hspace*{-6mm}\includegraphics[width=\textwidth]{fig/fig-05e.pdf}}
 
         \end{columns}
     \end{frame}

@@ -13,7 +13,7 @@
 \newcommand{\VPMI}{{\ensuremath V_{\mathrm{PMI}}}}
 \newcommand{\bsans}[1]{{\ensuremath\pmb{\mathsf{#1}}}}
 %-----------------------------------------------------------------------------------------------
-\newcommand{\RED}[1]{{\textcolor{red}{#1}}}
+\newcommand{\RED}[1]{{\textcolor{red!60!black}{\pmb{#1}}}}
 \newcommand{\ORA}[1]{{\textcolor{orange}{#1}}}
 \newcommand{\FIR}[1]{{\textcolor{red!50!orange}{#1}}}
 %-----------------------------------------------------------------------------------------------
@@ -637,20 +637,20 @@
         \begin{columns}
         \column{0.67\textwidth}
             \uncover<1->{
-                Input parameters---\FIR{fire} are corrections (\FIR{\textbf{bold}} parts):\\[\medskipamount]
+                Input parameters---\FIR{fire} are corrections (\RED{red} parts):\\[\medskipamount]
                 \begin{itemize}
                     \item   \alert{$R=\unit{37.00}{\milli\meter}$},
                             \alert{$L=\unit{120.78}{\milli\meter}$},
                             \alert{$D=\unit{89.00}{\milli\meter}$};
                     \item   \alert{$V_{min}=\unit{550.00}{\centi\meter\cubed}$},
                             \alert{$m_p=\unit{0.417}{\kilogram}$},
-                            \FIR{$m_r=\unit{0.28\mathbf{3}}{\kilogram}$};
+                            \FIR{$m_r=\unit{0.28\RED{3}}{\kilogram}$};
                     \item   \alert{$I_r=\unit{6.63\times 10^{-4}}{\kilogram\usk\squaren\meter}$},
-                            \FIR{$I_c+I_f=\unit{5.5\mathbf{\pmb{\times 10^{-3}}}}{\kilogram\usk\squaren\meter}$};
-                    \item   \FIR{$\mathbf{L_g=}\unit{\mathbf{28.6}}{\pmb{\milli\meter}}$},
+                            \FIR{$I_c+I_f=\unit{5.5\RED{\times 10^{-3}}}{\kilogram\usk\squaren\meter}$};
+                    \item   \RED{$L_g=\unit{28.6}{\milli\meter}$},
                             ($r_g\approx 0.2368$),
-                            \FIR{$\mathbf{\theta=}\unit{\mathbf{0}}{\pmb\degree}$},
-                            \FIR{$\pmb\Delta\mathbf{t_c=}\unit{\mathbf{1}}{\pmb{\milli\second}}$};
+                            \RED{$\theta=\unit{0}{\degree}$},
+                            \RED{$\Delta{t_c}=\unit{1}{\milli\second}$};
                     \item   Air with \alert{$P_0=\unit{101.375}{\kilo\pascal}$},
                             \alert{$T_0=\unit{300}{\kelvin}$};
                     \item   \alert{$q_{ent}=\unit{0}{\kilo\joule\per\kilogram}$},
@@ -689,14 +689,14 @@
                 \\[\medskipamount]
                 \begin{itemize}
                     \item   \alert{$R=\unit{44.95}{\milli\meter}$},
-                            \FIR{$L=\unit{157.32\mathbf{5}}{\milli\meter}$},
+                            \alert{$L=\unit{157.32}{\milli\meter}$},
                             \alert{$D=\unit{76.20}{\milli\meter}$};
                     \item   \alert{$V_{min}=\unit{443.00}{\centi\meter\cubed}$},
                             \alert{$m_p=\unit{1.300}{\kilogram}$},
                             \alert{$m_r=\unit{1.126}{\kilogram}$};
                     \item   \alert{$I_r=\unit{6.63\times 10^{-4}}{\kilogram\usk\squaren\meter}$},
                             \alert{$I_c+I_f=\unit{100}{\kilogram\usk\squaren\meter}$};
-                    \item   \FIR{$\mathbf{L_g=}\unit{\mathbf{28.6}}{\pmb{\milli\meter}}$},
+                    \item   \RED{$L_g=\unit{28.6}{\milli\meter}$},
                             ($r_g\approx 0.1818$),
                             \alert{$\theta=\unit{-15}{\degree}$},
                             \alert{$\Delta{t_c}=\unit{4}{\milli\second}$};

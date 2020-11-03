@@ -47,7 +47,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/fig-07B.pdf \
 		fig/fig-07C.pdf \
 		fig/fig-08.pdf \
-		fig/fig-09.pdf \
+		fig/fig-09.svg.png \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	#pdflatex --enable-write18 ${PRES}.tex
@@ -69,7 +69,7 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/fig-07B.pdf \
 		fig/fig-07C.pdf \
 		fig/fig-08.pdf \
-		fig/fig-09.pdf \
+		fig/fig-09.svg.png \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	#pdflatex --enable-write18 ${HOUT}.tex

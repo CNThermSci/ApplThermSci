@@ -1,0 +1,11 @@
+For model Kinematics, force and momentum
+equilibrium equations are employed.
+
+Solid body exchanged forces have three subscripts,
+respectively representing the (i) action component,
+
+In this work, solid-body exchanged force indices refer to the \emph{action} of  the  element
+indicated by the first index onto the one indicated by  the  second  index;  while  a  third
+index, if present, refers to a Cartesian direction component; for instance, $F_{rpy}$, shown
+
+

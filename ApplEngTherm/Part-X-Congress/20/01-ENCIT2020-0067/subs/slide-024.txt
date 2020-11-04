@@ -1,0 +1,23 @@
+From crankshaft force momentum equilibrium one can write
+the engine crankshaft angular acceleration, ω̇, in terms of
+a total torque 𝖳, over a "total" inertia I_tot, as shown.
+
+The total torque 𝖳 can be split into static and dynamic
+torque components---𝖳_s and 𝖳_d, respectively, in which the
+static component is due to the gauge working fluid force
+on the piston head, F_g, shown on the second line, whilst
+the dynamic one is due to moving part inertias at constant
+angular velocity and proportional to ω².
+
+The "total" inertia is the sum of the piston-rod inertias
+due to engine crankshaft angular acceleration, ω̇, and
+the crank and flywheel inertias, I_c + I_f.
+
+A (bold) I_pr vector can be contructed as shown in the
+last line, whose definition involves both the I_crx and
+I_cry inertia row-vectors, which, as was pointed before,
+are complicated functions of the basic quantities.
+
+At any given combined thermal and dynamic engine state,
+all quantities on the right-hand-sides are known, so that
+

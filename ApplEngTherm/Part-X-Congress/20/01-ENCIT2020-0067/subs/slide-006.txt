@@ -1,0 +1,21 @@
+In the shown tests, crankshaft angular span
+during the heat release time interval
+parameter δ (delta) increases from 10°,
+in warmer colors, to 110°, in colder colors,
+representing situations of progressively higher
+engine speeds with respect to heat release
+times with all other parameters fixed.
+
+Results show that as engine speed increases,
+the resulting P-v cycle diagram transitions from
+a pointy, ideal Otto-cycle looking, to
+smoother, experiment looking ones, with
+decreasing maximum attained working fluid pressure,
+increasing exhaust temperatures (not shown),
+and decreasing thermal efficiencies.
+
+These illustrate quite a prediction capacity for
+a simple, pure-substance, reversible model, and
+one may wonder what predictions can also be made
+by incorporating basic engine dynamics to it.
+

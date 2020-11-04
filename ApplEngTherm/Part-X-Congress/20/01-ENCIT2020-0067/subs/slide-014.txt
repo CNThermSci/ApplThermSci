@@ -1,0 +1,9 @@
+On the dynamic modeling, fundamental hypotheses include:
+
+- frictionless (reversible) motion of modeled parts;
+- parts modeled as rigid bodies;
+- linear, y-axis, piston translation;
+- planar, xy, rod motion;
+- z-axis rotation crank/flywheel motion;
+- y-axis piston center of mass;
+

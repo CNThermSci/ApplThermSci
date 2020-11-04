@@ -1,0 +1,9 @@
+Rod dynamic force and momentum equilibria
+yields the shown expressions for the
+
+F_crx component of the crank upon the rod,
+in which the bold I_crx is a row-vector
+whose components have units of inertia,
+
+with m_rp and y_rp given on the next slide.
+

@@ -1,0 +1,17 @@
+For model Kinetics, the shown R- and L-
+hypotenuse right triangles are key.
+
+The dot notation for time derivatives
+are used throughout.
+
+Letting B≡R/L, βx≡h/ℓ=tan(φ), and
+βy≡r/ℓ=tan(φ)/tan(α), then the relations below
+for the angular acceleration of φ can be
+derived and compactly expressed, as shown,
+in Linear Algebra vector-vector multilpications
+of a coefficients row-vector,
+indicated by bold 'a',
+with an angular velocity-derived column-vector,
+indicated by bold-'Ω',
+with ω² and ω̇ components.
+

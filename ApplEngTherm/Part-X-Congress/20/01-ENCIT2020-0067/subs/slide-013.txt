@@ -1,0 +1,11 @@
+The j-iterative solution procedure for the i-th
+thermodynamic model process is laid out.
+
+By taking (modeling) all process as being locally
+polytropic ones with exponent n_i, initial polytropic
+exponent guesses can be iteratively corrected after
+the process work, and final internal energy,
+temperature, and pressure are found, by the
+correcting equation shown at the bottom, thus
+closing the thermodynamic model.
+

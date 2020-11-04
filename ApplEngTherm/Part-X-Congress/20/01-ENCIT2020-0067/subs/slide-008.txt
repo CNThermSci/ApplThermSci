@@ -1,0 +1,16 @@
+On the Thermodynamic Modeling, engine model
+input parameters and variables include:
+
+- the crank radius R;
+- the crank position α and velocity ω;
+
+(which are CCW-increasing quantities)
+
+(CCW)
+ Rod length L;
+ Piston diameter D and stroke S = 2R;
+ Top Dead Center (TDC) volume, Vmin ;
+ Bottom Dead Center (BDC) volume, Vmax ;
+ Engine compression ratio, r = Vmax / Vmin ;
+
+

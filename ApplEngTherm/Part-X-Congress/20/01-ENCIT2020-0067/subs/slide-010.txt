@@ -1,0 +1,3 @@
+- the cylinder count z, and
+- the unit displaced volume, Vdu=Vd/z.
+

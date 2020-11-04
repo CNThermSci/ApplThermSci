@@ -6,11 +6,10 @@ input parameters and variables include:
 
 (which are CCW-increasing quantities)
 
-(CCW)
- Rod length L;
- Piston diameter D and stroke S = 2R;
- Top Dead Center (TDC) volume, Vmin ;
- Bottom Dead Center (BDC) volume, Vmax ;
- Engine compression ratio, r = Vmax / Vmin ;
-
+- the rod length L;
+- the piston diameter D and stroke S = 2R;
+- the Top Dead Center (TDC) volume, Vmin;
+- the Bottom Dead Center (BDC) volume, Vmax;
+- the engine compression ratio, r = Vmax/Vmin;
+...
 

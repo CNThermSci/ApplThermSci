@@ -1,0 +1,10 @@
+By way of introduction to the iFTHA,
+the work proposes a
+
+fairly simple coupled dynamic-thermodynamic
+engine model that is an
+inertial, air-standard, Otto model with
+finite-time heat release,
+basic engine parameters and
+piston, rod, crank, and flywheel inertias.
+

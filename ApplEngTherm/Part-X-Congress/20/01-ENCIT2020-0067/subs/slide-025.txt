@@ -1,0 +1,14 @@
+One of the several validation cases is the
+“Speed, No Heating, No Load”, in which
+no heating is added to an unloaded, already
+spinning engine. In such conditions, validation
+is achieved by conservation of energy.
+
+Input parameters are shown on the slide, in
+which parameters on fire color are contain
+corrections to the written article, the
+differences being shown in red.
+
+If the entire parameter is herein shown in red, it
+means that it was omitted in the written article.
+

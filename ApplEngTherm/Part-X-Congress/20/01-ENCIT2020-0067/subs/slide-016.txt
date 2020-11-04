@@ -1,0 +1,3 @@
+- z-axis (xy origin) crank center of mass;
+...
+

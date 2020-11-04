@@ -8,5 +8,5 @@ engines, that is a
 
 minimal-complexity, pure-substance model
 including simultaneous heat and
-work interactions, that (differs...)
+work interactions, that... (differs...)
 

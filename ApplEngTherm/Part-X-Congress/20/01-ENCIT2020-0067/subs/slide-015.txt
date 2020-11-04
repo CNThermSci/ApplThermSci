@@ -1,0 +1,3 @@
+- on axis rod center of mass;
+...
+

@@ -1,3 +1,4 @@
-- z-axis (xy origin) flywheel center of mass;
-...
+and
+
+- z-axis (xy origin) flywheel center of mass.
 

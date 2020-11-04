@@ -1,0 +1,12 @@
+The motivation for the work is to create a
+dynamic extension of a somewhat recently
+published FTHA model, which is an
+
+air-standard reversible, finite-time
+heat release model for spark-ignited
+engines, that is a
+
+minimal-complexity, pure-substance model
+including simultaneous heat and
+work interactions.
+

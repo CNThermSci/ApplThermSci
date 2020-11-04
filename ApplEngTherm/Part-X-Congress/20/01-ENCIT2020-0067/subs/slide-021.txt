@@ -2,10 +2,19 @@ For model Kinematics, force and momentum
 equilibrium equations are employed.
 
 Solid body exchanged forces have three subscripts,
-respectively representing the (i) action component,
+respectively representing the:
 
-In this work, solid-body exchanged force indices refer to the \emph{action} of  the  element
-indicated by the first index onto the one indicated by  the  second  index;  while  a  third
-index, if present, refers to a Cartesian direction component; for instance, $F_{rpy}$, shown
+(i) action and (ii) acted upon parts,
+and the (iii) cartesian direction.
 
+The F_rpy force applied by the (r)od onto the
+(p)iston in the (y)-direction is derived and
+expressed as shown, also with a vector-vector
+multiplication term.
+
+The F_g is the force due to the
+GAUGE pressure of the working fluid
+with respect to the crank case,
+P_g = average system P - P_cc, in which
+P_cc is the crank case pressure.
 

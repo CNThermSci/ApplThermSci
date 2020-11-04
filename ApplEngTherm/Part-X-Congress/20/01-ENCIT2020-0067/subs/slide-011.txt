@@ -1,0 +1,13 @@
+The instantaneous piston position, x,
+is shown as a nonlinear function of the
+crankshaft angle α (alpha),
+
+which is shown to affect the working fluid
+thermodynamic system volume, V, as well as
+the intensive thermodynamic property of
+specific volume, v (lowercase).
+
+Moreover, the time discretization is laid
+out, and the consequent crankshaft angle
+one for short-Δt (Delta-t).
+

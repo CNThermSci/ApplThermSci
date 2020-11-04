@@ -12,3 +12,7 @@ differences being shown in red.
 If the entire parameter is herein shown in red, it
 means that it was omitted in the written article.
 
+The plot shows the variation of instantaneous
+engine angular velocity, ω(t) versus t, for
+the first and one-thoushandth cycles.
+

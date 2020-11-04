@@ -1,0 +1,12 @@
+Letting further rg≡Lg/L, then the
+accelerations of the shown components
+centers of mass can be derived
+and compactly written as in the previous
+slide, in which the new row-vector
+coefficients are shown.
+
+It is worth noting that, due to nesting of
+definitions, derived row-vector coefficients
+are increasingly complicated functions of
+the primitive parameters and variables.
+

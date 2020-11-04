@@ -6,4 +6,5 @@ On the dynamic modeling, fundamental hypotheses include:
 - planar, xy, rod motion;
 - z-axis rotation crank/flywheel motion;
 - y-axis piston center of mass;
+...
 

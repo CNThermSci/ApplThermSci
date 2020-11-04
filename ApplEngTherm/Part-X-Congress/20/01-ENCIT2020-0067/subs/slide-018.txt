@@ -1,0 +1,8 @@
+Dynamic model parameters include:
+
+- the piston mass, mp;
+- the rod mass, mr;
+- the rod center of mass inertia, Ir;
+- the crank center of mass inertia, Ic, and
+- the flywheel center of mass inertia, If.
+

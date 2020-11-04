@@ -1,0 +1,17 @@
+So the strategy is to make a model merge between
+the FTHA one and a suitable dynamic model.
+
+Available constant-velocity dynamic models, which
+essentially constitutes one-way couplings with
+the thermodynamic model either tend to be
+
+(i) very simple, having lumped,
+translation-only components; or
+
+(ii) be substantially more complex, having
+external dependencies, or including elasticity;
+
+A model that was found to be quite fitting as
+to be coupled to the FTHA model was the 
+(iii) variable-velocity---hence two-way coupling---
+rigid body inertial model due to Montazersadgh.

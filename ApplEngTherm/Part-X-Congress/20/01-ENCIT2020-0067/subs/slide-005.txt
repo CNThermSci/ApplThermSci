@@ -1,0 +1,6 @@
+...differs from other literature works
+by the early removal of the isochoric
+heating of the ideal Otto model
+thus being able to reproduce cycles
+with Andrews, or, P-v diagrams as following:
+

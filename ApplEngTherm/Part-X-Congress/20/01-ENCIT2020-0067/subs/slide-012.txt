@@ -1,0 +1,10 @@
+The discrete energy balance is shown, along with
+the heat-release modeling through a normalized,
+cumulative heat input function y(α), and the
+cumulative heat input signature function g(α).
+
+Profiles for g(α) can be taken from available
+literature or from experimental measurements.
+
+The auxiliary t* is just a shifted, proper cycle, time.
+

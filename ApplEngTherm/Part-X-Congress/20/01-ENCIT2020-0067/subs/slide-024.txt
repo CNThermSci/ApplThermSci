@@ -20,4 +20,15 @@ are complicated functions of the basic quantities.
 
 At any given combined thermal and dynamic engine state,
 all quantities on the right-hand-sides are known, so that
+determining the thermodynamic state implies knowing the
+engine instantaneous angular acceleration, i.e., the
+dynamic model differential equation, whose integration
+influences the crankshaft angle variation during the
+next thermodynamic process.
+
+The model is thus a fully coupled one between dynamic and
+thermodynamic formulations. Moreover, the lack of friction
+(and other) irreversibilities, the model is a reversible
+one that is connected to thermal reservoirs of variable
+temperatures.
 

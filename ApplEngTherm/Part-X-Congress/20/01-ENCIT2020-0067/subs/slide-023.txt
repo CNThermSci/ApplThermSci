@@ -1,0 +1,13 @@
+Rod dynamic force and momentum equilibria
+also gives, for the
+
+F_cry component of the crank upon the rod,
+in which the bold I_cry is a row-vector
+whose components have units of inertia,
+with m_rp and y_rp shown.
+
+It is worth noting that the I_crx and I_cry
+row-vector components are very complicated
+functions of the base quantities, due to
+the nesting definitions.
+

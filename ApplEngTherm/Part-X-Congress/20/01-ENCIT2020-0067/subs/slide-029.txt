@@ -1,0 +1,32 @@
+Now, instantaneous torque histories, 𝖳(t), are
+shown for the same cases.
+
+In the subfigure (i) on top, the thermodynamic
+cycle is responsible for the widest instantaneous
+torque variations, and for same-sign torques
+along the compression and expansion stokes, as
+usually expected---meaning negative torques during
+compression strokes and positive ones during
+expansion strokes, with some lower-amplitude dynamic
+oscillations during exhaust and admission strokes.
+
+This yields a sort of thermodynamically-driven
+torque regime.
+
+In the subfigure (ii) on the bottom, however, at
+this RPM we seem to be just passed a transition in
+which the dynamic torque oscillations amplitudes are
+greater than the thermodynamically-driven ones.
+
+We surprisingly see positive instantaneous torques
+at the end of the compression stroke---meaning rod
+and more likely piston decelerations alone provide
+more than enough for working fluid compression.
+
+Moreover, the exact reverse happens on the first half
+of the expansion stroke, meaning rod and chiefly piston
+accelerations demand more than the working fluid is
+able to instantaneously provide, thus making negative
+instantaneous torques to appear.
+
+

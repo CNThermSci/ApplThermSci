@@ -1,0 +1,18 @@
+Conclusions are:
+
+1. Results show that the model is able to predict:
+    - instantaneous torque and angular speed;
+    - the coupled cycle P-v behavior;
+    - the thermal efficiency and
+    - cycle-averaged torque;
+
+2. Many energy transfer modes are accounted for;
+
+3. The model has a reasonable amount of design and application input parameters;
+
+4. The model can thus serve as a teaching resource in advanced engineering classes;
+
+5. Or as a departure point for more complex equilibrium models in research:
+
+...
+

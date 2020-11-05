@@ -1,5 +1,14 @@
-Whenever the piston is at the TDC and at the BDC
-its velocity is zero and kinetic energy is minimum.
+Whenever the piston is at the TDC and at the BDC for
+a fixed, given engine angular speed, the piston-rod-
+crank mechanism is at kinetic energy minimum states.
+
+Moreover, when the thermodynamic system is at
+working fluid inlet conditions of ambient
+temperature and pressure, it is at internal
+energy minimum states.
+
+All points circled in red present these commom
+conditions. The fact that the engine 
 
 Energy conservation means the available initial
 system energy

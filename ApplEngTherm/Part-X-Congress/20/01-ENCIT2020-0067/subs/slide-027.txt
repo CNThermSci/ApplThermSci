@@ -1,4 +1,8 @@
+Further more, the fact that the one-thousandth cycle
+is the same as the first one, attest long-term energy
+conservation in the iFTHA model.
 
-There is only one curve visible, because the
-first and one-thousandth cycles match
+There seems to be only one plotted curve, because the
+first and one-thousandth cycles exactly match to within
+the high plot resolution shown and included in the article.
 

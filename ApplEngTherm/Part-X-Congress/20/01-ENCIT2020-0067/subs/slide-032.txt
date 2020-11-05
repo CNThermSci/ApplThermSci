@@ -1,0 +1,21 @@
+Another, “Multiple-Cycle No-load Acceleration” case study
+with the model, with similar input parameters as the
+validation test, except for 600 kJ/kg of heat energy input
+per cycle and a combined crank-flywheel inertia of 100 kg·m²
+accelerating from 1000 to 4000 RPM, produces the shown
+results in terms of engine angular velocity, ω(t), and cycle
+thermal efficiency versus initial cycle RPM, η_t(ω_0):
+
+With increasing engine angular velocity, cycles become more
+frequent, and heat energy is added at increasing rates,
+i.e., at higher average heat-powers, and so does the
+(equivalent) fuel consumption---which, by the way, is NOT
+simulated in an air-standard model---and the rate of
+additional kinetic energy storage within the engine.
+
+During such a regime, cumulative energy storage is
+predominantly quadratic with time, which explains the
+predominantly linear increase of engine angular velocity
+with time on the left side of the figure.
+
+

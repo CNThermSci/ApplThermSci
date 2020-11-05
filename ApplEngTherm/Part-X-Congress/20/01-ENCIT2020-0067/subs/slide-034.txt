@@ -1,0 +1,10 @@
+Moreover,
+
+6. Model improvements can include:
+    - combustion and chemical equilibrium,
+    - valves, flow, heat-transfer, pressure-drop, and friction losses;
+    - as well as more complex mechanisms,
+    - unbalanced elements,
+    - presence of clutches, various gear ratios,
+    - multiple cylinders, and more.
+

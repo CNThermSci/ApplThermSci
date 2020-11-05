@@ -1,0 +1,15 @@
+Now, instantaneous engine speeds, ω(t) in RPM, are
+shown for the same cases.
+
+The thermodymanically- and dynamically-driven regimes can
+also be observed by comparing subfigures (i) and (ii),
+since ω(t) is obtained by a time integration of 𝖳(t),
+according to the previously shown equation for ω̇.
+
+In the subfigure (i) on top, the net thermodynamic heat
+energy input is responsible for the increased engine RPM
+at the end of the cycle compared its initial value; hence,
+the unloaded engine acceleration.
+
+The same can be said on subfigure (ii)
+

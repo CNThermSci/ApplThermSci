@@ -16,7 +16,8 @@ torque regime.
 In the subfigure (ii) on the bottom, however, at
 this RPM we seem to be just passed a transition in
 which the dynamic torque oscillations amplitudes are
-greater than the thermodynamically-driven ones.
+greater than the thermodynamically-driven ones, thus
+a dynamically-driven instantaneous torque regime.
 
 We surprisingly see positive instantaneous torques
 at the end of the compression stroke---meaning rod

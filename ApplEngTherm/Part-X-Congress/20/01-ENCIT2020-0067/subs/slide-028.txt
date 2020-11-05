@@ -1,0 +1,26 @@
+Reported model results include the following,
+“Single-Cycle No-load Acceleration” case, in which
+a full cycle is performed with 400 kJ/kg of
+specific heat energy input at 64 linearly distributed
+initial engine RPM, in the interval of 112.5 RPM
+up to 7200 RPM, as shown.
+
+The figure on the right shows the resulting simulated
+Andrews---or, P-v---diagrams for two selected initial
+engine speeds of 1125 and of 4162.5 RPM, respectively.
+
+Since the heat-input interval and ignition angle were
+kept constant at ∆tc = 4 ms, and θ = −15°, as shown,
+in the low-RPM case, the heat input is relatively
+quick enough as to cause the pressure to rise well
+above the ignition pressure---recalling the scale is
+logarithmic.
+
+In the higher-RPM case, the heat input is relatively
+slow enough as to cause very little departure from
+compression process pressures right after ignition,
+and only later on displaying a departure, thus causing
+the maximum working fluid pressure to decrease with
+increasing engine RPM (again, for all other parameters
+fixed).
+

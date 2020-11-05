@@ -1,0 +1,6 @@
+Whenever the piston is at the TDC and at the BDC
+its velocity is zero and kinetic energy is minimum.
+
+Energy conservation means the available initial
+system energy
+

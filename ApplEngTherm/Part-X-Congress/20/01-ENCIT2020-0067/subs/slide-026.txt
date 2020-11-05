@@ -14,7 +14,3 @@ attest energy conservation.
 Moreover, the afct that the cycle begins and end at the
 same state also attest energy conservation.
 
-Further more, the fact that the one-thousandth cycle
-is the same as the first one, attest long-term energy
-conservation in the iFTHA model.
-

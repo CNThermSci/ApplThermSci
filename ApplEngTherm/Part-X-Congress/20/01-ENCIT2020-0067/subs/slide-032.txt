@@ -18,4 +18,7 @@ predominantly quadratic with time, which explains the
 predominantly linear increase of engine angular velocity
 with time on the left side of the figure.
 
+Moreover, the thermal efficiency is shown to decrease with
+engine RPM, which is an already expected outcome of the
+previsouly published thermodynamic-only FTHA model.
 

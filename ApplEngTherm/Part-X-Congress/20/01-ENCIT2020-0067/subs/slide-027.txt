@@ -6,3 +6,6 @@ There seems to be only one plotted curve, because the
 first and one-thousandth cycles exactly match to within
 the high plot resolution shown and included in the article.
 
+Other validation cases are either included or
+source-cited in the article.
+

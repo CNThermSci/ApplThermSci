@@ -1,0 +1,19 @@
+Finally, the corresponding engine torque curve,
+understood as cycle-averaged torques in terms of
+cycle engine initial RPM, is shown.
+
+There is SOME curve shape resemblance to experimentally
+obtained torque curves, in the sense of having a generally
+negative second derivative---seen by the overall downward
+curve concavity---and a resulting global maximum torque
+value; however, one does not attempt in making further
+comparisons, as the test set kept all other parameters
+---chiefly the (i) input heat energy per cycle and the
+(ii) heat input time interval---constant, which significantly
+differs from actual engine test and usage conditions.
+
+The point is showing that a very simple, equilibrium, pure
+substance, reversible, plane motion, inertial model is able
+to produce an engine torque curve, and consequently, also
+an engine power curve (not shown).
+

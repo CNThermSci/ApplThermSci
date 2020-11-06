@@ -1,0 +1,598 @@
+#------------------------------------------------------------------#
+#                            slide-001.txt                         #
+#------------------------------------------------------------------#
+[INTRO]
+
+Dear thermal sciences and engineering community,
+welcome to the CN-Therm-Sci channel,
+a channel with thermal sciences contents.
+
+This is the presentation for the
+“An Inertial Air-Standard Finite-Time Heat
+Addition Otto Engine Model”
+paper number ENC-2020-0067 by
+F. M. Moreira and Prof. C. Naaktgeboren of the
+Universidade Tecnológica Federal do Paraná
+UTFPR, Guarapuava Campus, for the 
+
+18th Brazilian Congress of Thermal
+Sciences and Engineering, promoted by
+
+Brazilian Association of Engineering and
+Mechanical Sciences, ABCM, and organized by
+
+PROMEC, DEMEC, and the UFRGS---ENCIT2020
+held ONLINE from the 16th to the 20th of
+November of the 2020th year of our Lord
+Jesus Christ.
+
+#------------------------------------------------------------------#
+#                            slide-002.txt                         #
+#------------------------------------------------------------------#
+Topic of this presentation include
+
+iFTHA---or, Inertial Finite-Time Heat Addition---
+
+Modeling; Results; and Conclusions.
+
+#------------------------------------------------------------------#
+#                            slide-003.txt                         #
+#------------------------------------------------------------------#
+By way of introduction to the iFTHA,
+the work proposes a
+
+- fairly simple coupled dynamic-thermodynamic
+engine model, that is
+- an inertial, air-standard, Otto model with
+- finite-time heat release,
+- basic engine parameters and
+- piston, rod, crank, and flywheel inertias.
+
+#------------------------------------------------------------------#
+#                            slide-004.txt                         #
+#------------------------------------------------------------------#
+The motivation for the work is to create a
+dynamic extension of a somewhat recently
+published FTHA model, which is an
+
+air-standard reversible, finite-time
+heat release model for spark-ignited
+engines, that is a
+
+minimal-complexity, pure-substance model
+including simultaneous heat and
+work interactions, that... (differs...)
+
+#------------------------------------------------------------------#
+#                            slide-005.txt                         #
+#------------------------------------------------------------------#
+...differs from other literature works
+by the early removal of the isochoric
+heating of the ideal Otto model
+thus being able to reproduce cycles
+with Andrews, or, P-v diagrams as following:
+
+#------------------------------------------------------------------#
+#                            slide-006.txt                         #
+#------------------------------------------------------------------#
+In the shown tests, crankshaft angular span
+during the heat release time interval
+parameter δ (delta) increases from 10°,
+in warmer colors, to 110°, in colder colors,
+representing situations of progressively higher
+engine speeds with respect to heat release
+times with all other parameters fixed.
+
+Results show that as engine speed increases,
+the resulting P-v cycle diagram transitions from
+a pointy, ideal Otto-cycle looking, to
+smoother, experiment looking ones, with
+decreasing maximum attained working fluid pressure,
+increasing exhaust temperatures (not shown),
+and decreasing thermal efficiencies.
+
+These illustrate quite a prediction capacity for
+a simple, pure-substance, reversible model, and
+one may wonder what predictions can also be made
+by incorporating basic engine dynamics to it.
+
+#------------------------------------------------------------------#
+#                            slide-007.txt                         #
+#------------------------------------------------------------------#
+So the strategy is to make a model merge between
+the FTHA one and a suitable dynamic model.
+
+Available constant-velocity dynamic models, which
+essentially constitutes one-way couplings with
+the thermodynamic model either tend to be
+
+(i) very simple, having lumped,
+translation-only components; or
+
+(ii) be substantially more complex, having
+external dependencies, or including elasticity;
+
+A model that was found to be quite fitting as
+to be coupled to the FTHA model was the 
+(iii) variable-velocity---hence two-way coupling---
+rigid body inertial model due to Montazersadgh.
+
+#------------------------------------------------------------------#
+#                            slide-008.txt                         #
+#------------------------------------------------------------------#
+On the Thermodynamic Modeling, engine model
+input parameters and variables include:
+
+- the crank radius R;
+- the crank position α and velocity ω;
+
+(which are CCW-increasing quantities)
+
+- the rod length L;
+- the piston diameter D and stroke S = 2R;
+- the Top Dead Center (TDC) volume, Vmin;
+- the Bottom Dead Center (BDC) volume, Vmax;
+- the engine compression ratio, r = Vmax/Vmin;
+...
+
+#------------------------------------------------------------------#
+#                            slide-009.txt                         #
+#------------------------------------------------------------------#
+- the engine displaced volume, Vd;
+...
+#------------------------------------------------------------------#
+#                            slide-010.txt                         #
+#------------------------------------------------------------------#
+- the cylinder count z, and
+- the unit displaced volume, Vdu=Vd/z.
+
+#------------------------------------------------------------------#
+#                            slide-011.txt                         #
+#------------------------------------------------------------------#
+The instantaneous piston position, x,
+is shown as a nonlinear function of the
+crankshaft angle α (alpha),
+
+which is shown to affect the working fluid
+thermodynamic system volume, V, as well as
+the intensive thermodynamic property of
+specific volume, v (lowercase).
+
+Moreover, the time discretization is laid
+out, and the consequent crankshaft angle
+one for short-Δt (Delta-t).
+
+#------------------------------------------------------------------#
+#                            slide-012.txt                         #
+#------------------------------------------------------------------#
+The discrete energy balance is shown, along with
+the heat-release modeling through a normalized,
+cumulative heat input function y(α), and the
+cumulative heat input signature function g(α).
+
+Profiles for g(α) can be taken from available
+literature or from experimental measurements.
+
+The auxiliary t* is just a shifted, proper cycle, time.
+
+#------------------------------------------------------------------#
+#                            slide-013.txt                         #
+#------------------------------------------------------------------#
+The j-iterative solution procedure for the i-th
+thermodynamic model process is laid out.
+
+By taking (modeling) all process as being locally
+polytropic ones with exponent n_i, initial polytropic
+exponent guesses can be iteratively corrected after
+the process work, and final internal energy,
+temperature, and pressure are found, by the
+correcting equation shown at the bottom, thus
+closing the thermodynamic model.
+
+#------------------------------------------------------------------#
+#                            slide-014.txt                         #
+#------------------------------------------------------------------#
+On the dynamic modeling, fundamental hypotheses include:
+
+- frictionless (reversible) motion of modeled parts;
+- parts modeled as rigid bodies;
+- linear, y-axis, piston translation;
+- planar, xy, rod motion;
+- z-axis rotation crank/flywheel motion;
+- y-axis piston center of mass;
+...
+
+#------------------------------------------------------------------#
+#                            slide-015.txt                         #
+#------------------------------------------------------------------#
+- on axis rod center of mass;
+...
+
+#------------------------------------------------------------------#
+#                            slide-016.txt                         #
+#------------------------------------------------------------------#
+- z-axis (xy origin) crank center of mass;
+...
+
+#------------------------------------------------------------------#
+#                            slide-017.txt                         #
+#------------------------------------------------------------------#
+and
+
+- z-axis (xy origin) flywheel center of mass.
+
+#------------------------------------------------------------------#
+#                            slide-018.txt                         #
+#------------------------------------------------------------------#
+Dynamic model parameters include:
+
+- the piston mass, mp;
+- the rod mass, mr;
+- the rod center of mass inertia, Ir;
+- the crank center of mass inertia, Ic, and
+- the flywheel center of mass inertia, If.
+
+#------------------------------------------------------------------#
+#                            slide-019.txt                         #
+#------------------------------------------------------------------#
+For model Kinetics, the shown R- and L-
+hypotenuse right triangles are key.
+
+The dot notation for time derivatives
+are used throughout.
+
+Letting B≡R/L, βx≡h/ℓ=tan(φ), and
+βy≡r/ℓ=tan(φ)/tan(α), then the relations below
+for the angular acceleration of φ can be
+derived and compactly expressed, as shown,
+in Linear Algebra vector-vector multilpications
+of a coefficients row-vector,
+indicated by bold 'a',
+with an angular velocity-derived column-vector,
+indicated by bold-'Ω',
+with ω² and ω̇ components.
+
+#------------------------------------------------------------------#
+#                            slide-020.txt                         #
+#------------------------------------------------------------------#
+Letting further rg≡Lg/L, then the
+accelerations of the shown components
+centers of mass can be derived
+and compactly written as in the previous
+slide, in which the new row-vector
+coefficients are shown.
+
+It is worth noting that, due to nesting of
+definitions, derived row-vector coefficients
+are increasingly complicated functions of
+the primitive parameters and variables.
+
+#------------------------------------------------------------------#
+#                            slide-021.txt                         #
+#------------------------------------------------------------------#
+For model Kinematics, force and momentum
+equilibrium equations are employed.
+
+Solid body exchanged forces have three subscripts,
+respectively representing the:
+
+(i) action and (ii) acted upon parts,
+and the (iii) cartesian direction.
+
+The F_rpy force applied by the (r)od onto the
+(p)iston in the (y)-direction is derived and
+expressed as shown, also with a vector-vector
+multiplication term.
+
+The F_g is the force due to the
+GAUGE pressure of the working fluid
+with respect to the crank case,
+P_g = average system P - P_cc, in which
+P_cc is the crank case pressure.
+
+#------------------------------------------------------------------#
+#                            slide-022.txt                         #
+#------------------------------------------------------------------#
+Rod dynamic force and momentum equilibria
+yields the shown expressions for the
+
+F_crx component of the crank upon the rod,
+in which the bold I_crx is a row-vector
+whose components have units of inertia,
+
+with m_rp and y_rp given on the next slide.
+
+#------------------------------------------------------------------#
+#                            slide-023.txt                         #
+#------------------------------------------------------------------#
+Rod dynamic force and momentum equilibria
+also gives, for the
+
+F_cry component of the crank upon the rod,
+in which the bold I_cry is a row-vector
+whose components have units of inertia,
+with m_rp and y_rp shown.
+
+It is worth noting that the I_crx and I_cry
+row-vector components are very complicated
+functions of the base quantities, due to
+the nesting definitions.
+
+#------------------------------------------------------------------#
+#                            slide-024.txt                         #
+#------------------------------------------------------------------#
+From crankshaft force momentum equilibrium one can write
+the engine crankshaft angular acceleration, ω̇, in terms of
+a total torque 𝖳, over a "total" inertia I_tot, as shown.
+
+The total torque 𝖳 can be split into static and dynamic
+torque components---𝖳_s and 𝖳_d, respectively, in which the
+static component is due to the gauge working fluid force
+on the piston head, F_g, shown on the second line, whilst
+the dynamic one is due to moving part inertias at constant
+angular velocity and proportional to ω².
+
+The "total" inertia is the sum of the piston-rod inertias
+due to engine crankshaft angular acceleration, ω̇, and
+the crank and flywheel inertias, I_c + I_f.
+
+A (bold) I_pr vector can be contructed as shown in the
+last line, whose definition involves both the I_crx and
+I_cry inertia row-vectors, which, as was pointed before,
+are complicated functions of the basic quantities.
+
+At any given combined thermal and dynamic engine state,
+all quantities on the right-hand-sides are known, so that
+determining the thermodynamic state implies knowing the
+engine instantaneous angular acceleration, i.e., the
+dynamic model differential equation, whose integration
+influences the crankshaft angle variation during the
+next thermodynamic process.
+
+The model is thus a fully coupled one between dynamic and
+thermodynamic formulations. Moreover, the lack of friction
+(and other) irreversibilities, the model is a reversible
+one that is connected to thermal reservoirs of variable
+temperatures.
+
+#------------------------------------------------------------------#
+#                            slide-025.txt                         #
+#------------------------------------------------------------------#
+One of the several validation cases is the
+“Speed, No Heating, No Load”, in which
+no heating is added to an unloaded, already
+spinning engine. In such conditions, validation
+is achieved by conservation of energy.
+
+Input parameters are shown on the slide, in
+which parameters on fire color are contain
+corrections to the written article, the
+differences being shown in red.
+
+If the entire parameter is herein shown in red, it
+means that it was omitted in the written article.
+
+The plot shows the variation of instantaneous
+engine angular velocity, ω(t) versus t, for
+the first and one-thousandth cycles.
+
+#------------------------------------------------------------------#
+#                            slide-026.txt                         #
+#------------------------------------------------------------------#
+Whenever the piston is at the TDC and at the BDC for
+a fixed, given engine angular speed, the piston-rod-
+crank mechanism is at kinetic energy minimum states.
+
+Moreover, when the thermodynamic system is at working
+fluid inlet conditions of ambient temperature and
+pressure, it is at internal energy minimum states.
+
+All points circled in red present these commom conditions.
+The fact that the engine angular velocity, and therefore
+its kinetic energy, being local, consistent maxima
+attest energy conservation.
+
+Moreover, the afct that the cycle begins and end at the
+same state also attest energy conservation.
+
+#------------------------------------------------------------------#
+#                            slide-027.txt                         #
+#------------------------------------------------------------------#
+Further more, the fact that the one-thousandth cycle
+is the same as the first one, attest long-term energy
+conservation in the iFTHA model.
+
+There seems to be only one plotted curve, because the
+first and one-thousandth cycles exactly match to within
+the high plot resolution shown and included in the article.
+
+Other validation cases are either included or
+source-cited in the article.
+
+#------------------------------------------------------------------#
+#                            slide-028.txt                         #
+#------------------------------------------------------------------#
+Reported model results include the following,
+“Single-Cycle No-load Acceleration” case, in which
+a full cycle is performed with 400 kJ/kg of
+specific heat energy input at 64 linearly distributed
+initial engine RPM, in the interval of 112.5 RPM
+up to 7200 RPM, as shown.
+
+The figure on the right shows the resulting simulated
+Andrews---or, P-v---diagrams for two selected initial
+engine speeds of 1125 and of 4162.5 RPM, respectively.
+
+Since the heat-input interval and ignition angle were
+kept constant at ∆tc = 4 ms, and θ = −15°, as shown,
+in the low-RPM case, the heat input is relatively
+quick enough as to cause the pressure to rise well
+above the ignition pressure---recalling the scale is
+logarithmic.
+
+In the higher-RPM case, the heat input is relatively
+slow enough as to cause very little departure from
+compression process pressures right after ignition,
+and only later on displaying a departure, thus causing
+the maximum working fluid pressure to decrease with
+increasing engine RPM (again, for all other parameters
+fixed).
+
+#------------------------------------------------------------------#
+#                            slide-029.txt                         #
+#------------------------------------------------------------------#
+Now, instantaneous torque histories, 𝖳(t), are
+shown for the same cases.
+
+In the subfigure (i) on top, the thermodynamic
+cycle is responsible for the widest instantaneous
+torque variations, and for same-sign torques
+along the compression and expansion stokes, as
+usually expected---meaning negative torques during
+compression strokes and positive ones during
+expansion strokes, with some lower-amplitude dynamic
+oscillations during exhaust and admission strokes.
+
+This yields a sort of thermodynamically-driven
+torque regime.
+
+In the subfigure (ii) on the bottom, however, at
+this RPM we seem to be just passed a transition in
+which the dynamic torque oscillations amplitudes are
+greater than the thermodynamically-driven ones, thus
+a dynamically-driven instantaneous torque regime.
+
+We surprisingly see positive instantaneous torques
+at the end of the compression stroke---meaning rod
+and more likely piston decelerations alone provide
+more than enough for working fluid compression.
+
+Moreover, the exact reverse happens on the first half
+of the expansion stroke, meaning rod and chiefly piston
+accelerations demand more than the working fluid is
+able to instantaneously provide, thus making negative
+instantaneous torques to appear.
+
+
+#------------------------------------------------------------------#
+#                            slide-030.txt                         #
+#------------------------------------------------------------------#
+Now, instantaneous engine speeds, ω(t) in RPM, are
+shown for the same cases.
+
+The thermodymanically- and dynamically-driven regimes can
+also be observed by comparing subfigures (i) and (ii),
+since ω(t) is obtained by a time integration of 𝖳(t),
+according to the previously shown equation for ω̇.
+
+In the subfigure (i) on top, the net thermodynamic work
+energy input---which is the heat energy input multiplied by
+the thermal efficiency---is responsible for the increased
+engine RPM at the end of the cycle compared its initial
+value; hence, the unloaded engine acceleration.
+
+The same can be said on subfigure (ii). It is worth noting,
+however, that the cycle increase in engine RPM is smaller for
+the high-RPM case, since kinetic energy is proportional to a
+corresponding velocity squared, for translation and rotation.
+
+#------------------------------------------------------------------#
+#                            slide-031.txt                         #
+#------------------------------------------------------------------#
+Finally, the corresponding engine torque curve,
+understood as cycle-averaged torques in terms of
+cycle engine initial RPM, is shown.
+
+There is SOME curve shape resemblance to experimentally
+obtained torque curves, in the sense of having a generally
+negative second derivative---seen by the overall downward
+curve concavity---and a resulting global maximum torque
+value; however, one does not attempt in making further
+comparisons, as the test set kept all other parameters
+---chiefly the (i) input heat energy per cycle and the
+(ii) heat input time interval---constant, which significantly
+differs from actual engine test and usage conditions.
+
+The point is showing that a very simple, equilibrium, pure
+substance, reversible, plane motion, inertial model is able
+to produce an engine torque curve, and consequently, also
+an engine power curve (not shown).
+
+#------------------------------------------------------------------#
+#                            slide-032.txt                         #
+#------------------------------------------------------------------#
+Another, “Multiple-Cycle No-load Acceleration” case study
+with the model, with similar input parameters as the
+validation test, except for 600 kJ/kg of heat energy input
+per cycle and a combined crank-flywheel inertia of 100 kg·m²
+accelerating from 1000 to 4000 RPM, produces the shown
+results in terms of engine angular velocity, ω(t), and cycle
+thermal efficiency versus initial cycle RPM, η_t(ω_0):
+
+With increasing engine angular velocity, cycles become more
+frequent, and heat energy is added at increasing rates,
+i.e., at higher average heat-powers, and so does the
+(equivalent) fuel consumption---which, by the way, is NOT
+simulated in an air-standard model---and the rate of
+additional kinetic energy storage within the engine.
+
+During such a regime, cumulative energy storage is
+predominantly quadratic with time, which explains the
+predominantly linear increase of engine angular velocity
+with time on the left side of the figure.
+
+Moreover, the thermal efficiency is shown to decrease with
+engine RPM, which is an already expected outcome of the
+previsouly published thermodynamic-only FTHA model.
+
+#------------------------------------------------------------------#
+#                            slide-033.txt                         #
+#------------------------------------------------------------------#
+Conclusions are:
+
+1. Results show that the model is able to predict:
+    - instantaneous torque and angular speed;
+    - the coupled cycle P-v behavior;
+    - the thermal efficiency and
+    - cycle-averaged torque;
+
+2. Many energy transfer modes are accounted for;
+
+3. The model has a reasonable amount of design and application input parameters;
+
+4. The model can thus serve as a teaching resource in advanced engineering classes;
+
+5. Or as a departure point for more complex equilibrium models in research:
+
+...
+
+#------------------------------------------------------------------#
+#                            slide-034.txt                         #
+#------------------------------------------------------------------#
+Moreover,
+
+6. Model improvements can include:
+    - combustion and chemical equilibrium,
+    - valves, flow, heat-transfer, pressure-drop, and friction losses;
+    - as well as more complex mechanisms,
+    - unbalanced elements,
+    - presence of clutches, various gear ratios,
+    - multiple cylinders, and more.
+
+
+Thank you for your attention!
+
+The authors are thankful to the Universidade Tecnológica
+Federal do Paraná - UTFPR, Guarapuava Campus, for providing
+teaching, mentoring and research opportunities, as well as
+institutional access to bibliographic databases. 
+
+#------------------------------------------------------------------#
+#                            slide-035.txt                         #
+#------------------------------------------------------------------#
+The authors glorify their Lord and God Jesus Christ,
+
+    - through whom all things came into being,
+    - in whom are hidden all the treasures of wisdom and knowledge, and
+    - in whom we have redemption, the forgiveness of sins. 
+

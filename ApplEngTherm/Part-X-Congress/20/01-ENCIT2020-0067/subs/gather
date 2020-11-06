@@ -5,5 +5,5 @@ OF=./all.txt
 for _f in slide*txt; do
     echo $_f | center | frame 64
     cat $_f
-done
+done > ${OF}
 

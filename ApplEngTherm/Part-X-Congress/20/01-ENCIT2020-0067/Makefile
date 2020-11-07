@@ -77,6 +77,6 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 ${PRES}.png: ${PRES}.pdf
 	mkdir -p ${PRES}.png
 	cd ${PRES}.png; \
-	pdftoppm -png -forcenum -r 200 "../${PRES}.pdf" "${PRES}"
+	pdftoppm -png -forcenum -r 304.8 "../${PRES}.pdf" "${PRES}"
 	slides-merge.sh Slide1-Filled.png
 

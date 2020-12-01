@@ -35,8 +35,8 @@ CUR="$(basename $(pwd))"
 CURNUM="${CUR:0:2}"
 CURNAM="${CUR:3}"
 
-PAR="$(basename $(pwd | sed 's|/$CUR$||g'))"
-PARLET="${PAR:6:1}"
+PAR="$(basename $(pwd | sed 's|/'$CUR'||g'))"
+PARLET="${PAR:5:1}"
 
 NEWNUM="${NEW:0:2}"
 NEWNAM="${NEW:3}"
@@ -52,5 +52,12 @@ echo "INFO: Creating new '$NEW' with the '$PREFIX' prefix."
 mkdir "${NEW}"
 cd "${NEW}"
 
-#tar jxvf ../../../Part-A-Fundamentals/00-Template/00-Template/template.tar.bz2
+tar jxvf ../../../Part-A-Fundamentals/00-Template/00-Template/template.tar.bz2
+
+for S in A0000*; do
+    D="${PREFIX}${S:5}"
+    mv -v "$S" "$D"
+done
+
+sed -i s/A0000/${PREFIX}/g *tex Makefile
 

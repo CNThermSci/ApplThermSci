@@ -59,5 +59,5 @@ for S in A0000*; do
     mv -v "$S" "$D"
 done
 
-sed -i s/A0000/${PREFIX}/g *tex Makefile
+sed -i s/A0000/${PREFIX}/g *tex Makefile gitter
 

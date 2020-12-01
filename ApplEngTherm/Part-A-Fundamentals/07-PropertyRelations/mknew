@@ -35,8 +35,15 @@ CUR="$(basename $(pwd))"
 CURNUM="${CUR:0:2}"
 CURNAM="${CUR:3}"
 
+PAR="$(basename $(pwd | sed 's|/$CUR$||g'))"
+PARLET="${PAR:6:1}"
+
 NEWNUM="${NEW:0:2}"
 NEWNAM="${NEW:3}"
+
+PREFIX="${PARLET}${CURNUM}${NEWNUM}"
+
+echo "INFO: Creating new '$NEW' with the '$PREFIX' prefix."
 
 #----------------------------------------------------------------------#
 #                               Make New                               #
@@ -45,5 +52,5 @@ NEWNAM="${NEW:3}"
 mkdir "${NEW}"
 cd "${NEW}"
 
-tar jxvf ../../../Part-A-Fundamentals/00-Template/00-Template/template.tar.bz2
+#tar jxvf ../../../Part-A-Fundamentals/00-Template/00-Template/template.tar.bz2
 

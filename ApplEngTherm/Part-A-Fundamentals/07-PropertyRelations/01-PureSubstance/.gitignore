@@ -1,0 +1,22 @@
+# SYMLINKS
+root
+
+# Bibliography Databases
+stdRef
+bibfile.bkp
+JULIA
+THEO
+THER
+
+# Compiling metadata
+*.info
+
+# Beamer themes
+beamer
+beamer*theme*
+
+# Converted figures
+fig/*pdf
+
+# Downloaded figures
+

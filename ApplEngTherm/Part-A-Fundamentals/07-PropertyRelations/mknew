@@ -1,18 +1,33 @@
 #!/bin/bash
 
-NEW="${1}"
+RAW="${1}"
 
 function error(){
     echo "ERROR: $@" >&2
 }
 
-if test -z "${NEW}"; then
+if test -z "${RAW}"; then
     error "Please provide a new directory name argument."
     exit 1
 fi
 
-if test -f "${NEW}"; then
-    error "${NEW} already exists. Aborting."
+NEW="$(echo $RAW | sed 's/\([0-9]\{2\}-[a-zA-Z]*\).*/\1/g')"
+
+if test "${#NEW}" -lt 4; then
+    error 'New dir name MUST be in the format "##-Name", i.e., "[0-9]{2}-[a-zA-Z]*".'
     exit 2
 fi
+
+if test -e "${NEW}"; then
+    error "${NEW} already exists. Aborting."
+    exit 3
+fi
+
+CUR="$(basename $(pwd))"
+CURNUM="${CUR:0:2}"
+CURNAM="${CUR:3}"
+
+NEWNUM="${NEW:0:2}"
+NEWNAM="${NEW:3}"
+
 

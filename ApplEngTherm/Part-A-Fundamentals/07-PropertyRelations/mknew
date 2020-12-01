@@ -1,0 +1,18 @@
+#!/bin/bash
+
+NEW="${1}"
+
+function error(){
+    echo "ERROR: $@" >&2
+}
+
+if test -z "${NEW}"; then
+    error "Please provide a new directory name argument."
+    exit 1
+fi
+
+if test -f "${NEW}"; then
+    error "${NEW} already exists. Aborting."
+    exit 2
+fi
+

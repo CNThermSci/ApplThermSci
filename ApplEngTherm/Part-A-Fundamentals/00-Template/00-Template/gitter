@@ -7,7 +7,8 @@ for F in \
         bibfile.bib \
         A0000-pt.tex \
         A0000-pt-PRES.tex \
-        A0000-pt-HOUT.tex; do
+        A0000-pt-HOUT.tex \
+        gitter; do
     git add $F && git commit -m "ADD the $F"
 done
 

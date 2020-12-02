@@ -209,7 +209,7 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Equações de Gibbs}\vspace*{-1em}
+    \begin{frame}{Equações de Gibbs}\vspace*{-0em}
         O conjunto completo de equações de Gibbs é:
         \begin{align*}
             \alert{du} &\alert{= +Tds - Pdv},
@@ -225,14 +225,35 @@
 
         Com \alert{todas} as equações no formato:
         \begin{align*}
-            \alert{dz} &\alert{= +Mdx + Ndy}.
+            \alert{dz} &\alert{= Mdx + Ndy}
+            \qquad\rightharpoondown\qquad
+            \alert{M =
+                \left(
+                    \frac{\partial z}{\partial x}
+                \right)_y}
+            \qquad\mbox{e}\qquad
+            \alert{N =
+                \left(
+                    \frac{\partial z}{\partial y}
+                \right)_x}.
         \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Novas Propriedades}\vspace*{-1em}
+    \begin{frame}{Relações Básicas}\vspace*{-0em}
+        Assim:
+        \begin{alignat*}{2}
+            T                 &=  +\left(\frac{\partial u}{\partial s}\right)_v\qquad     &
+            \mbox{e}\qquad P  &=  -\left(\frac{\partial u}{\partial v}\right)_s\qquad\mbox{(de $u$)}   \\
+            T                 &=  +\left(\frac{\partial h}{\partial s}\right)_P\qquad     &
+            \mbox{e}\qquad v  &=  +\left(\frac{\partial h}{\partial P}\right)_s\qquad\mbox{(de $h$)}   \\
+            s                 &=  -\left(\frac{\partial a}{\partial T}\right)_v\qquad     &
+            \mbox{e}\qquad P  &=  -\left(\frac{\partial a}{\partial v}\right)_T\qquad\mbox{(de $a$)}   \\
+            s                 &=  -\left(\frac{\partial g}{\partial T}\right)_P\qquad     &
+            \mbox{e}\qquad v  &=  +\left(\frac{\partial g}{\partial P}\right)_T\qquad\mbox{(de $g$)}
+        \end{alignat*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

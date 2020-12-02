@@ -267,7 +267,22 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Novas Propriedades}\vspace*{-1em}
+    \begin{frame}{Relações de Maxwell}\vspace*{-1em}
+        As relações de Maxwell advém das derivadas segundas cruzadas:
+        \begin{alignat*}{2}
+            \left(\frac{\partial T}{\partial v}\right)_s    &=  -\left(\frac{\partial P}{\partial s}\right)_v   &   \quad
+                                                            &=  \quad\frac{\partial^2 u}{\partial s\,\partial v},
+            \qquad\mbox{($u$-based)}    \label{eq:Maxwell.u}    \\
+            \left(\frac{\partial T}{\partial P}\right)_s    &=  +\left(\frac{\partial v}{\partial s}\right)_P   &
+                                                            &= \quad\frac{\partial^2 h}{\partial s\,\partial P},
+            \qquad\mbox{($h$-based)}    \label{eq:Maxwell.h}    \\
+            \left(\frac{\partial s}{\partial v}\right)_T    &=  +\left(\frac{\partial P}{\partial T}\right)_v   &
+                                                            &=  \quad\frac{\partial^2 a}{\partial T\,\partial v},
+            \qquad\mbox{($a$-based)}    \label{eq:Maxwell.a}    \\
+            \left(\frac{\partial s}{\partial P}\right)_T    &=  -\left(\frac{\partial v}{\partial T}\right)_P   &
+                                                            &=  \quad\frac{\partial^2 g}{\partial T\,\partial P},
+            \qquad\mbox{($g$-based)}.   \label{eq:Maxwell.g}
+        \end{alignat*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

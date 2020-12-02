@@ -83,21 +83,37 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de Slide}\vspace*{-2em}
-        \begin{columns}
-        \column{0.55\textwidth}
-            Coluna com 55\% de largura:\\[\smallskipamount]
-            \begin{itemize}
-                \item<1-> Item 1;
-                \item<2-> Item 2;
-                \item<3-> Item 3.
-            \end{itemize}
-        \column{0.45\textwidth}
-            Coluna com 45\% de largura.
-            \begin{figure}
-                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
-            \end{figure}
-        \end{columns}
+    \begin{frame}{Relação de Derivadas Parciais Cruzadas}\vspace*{-2em}
+        Escrevendo-se \alert{$dz = Mdx + Ndy$}, com
+        \begin{equation*}
+            M =
+                \left(
+                    \frac{\partial z}{\partial x}
+                \right)_y
+            \qquad\mbox{e}\qquad
+            N =
+                \left(
+                    \frac{\partial z}{\partial y}
+                \right)_x.
+        \end{equation*}
+
+        Então, fazendo:
+        \begin{align*}
+            \left(
+                \frac{\partial^2 z}{\partial x\partial y}
+            \right) &=
+            \left(
+                \frac{\partial^2 z}{\partial y\partial x}
+            \right),
+            \qquad\mbox{resulta em:}
+            \\[\bigskipamount]
+            \alert{\left(
+                \frac{\partial M}{\partial y}
+            \right)_x} &\alert{=
+            \left(
+                \frac{\partial N}{\partial x}
+            \right)_y}.
+        \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

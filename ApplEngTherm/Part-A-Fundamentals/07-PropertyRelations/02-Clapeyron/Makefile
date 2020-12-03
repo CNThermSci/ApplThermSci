@@ -24,11 +24,17 @@ cc/%.pdf: cc/%.svg
 		--export-filename=$@ \
 		$<
 
-fig/%.svg: fig/%.url
+www/%.svg: www/%.url
 	wget \
 		--input-file=$< \
 		--output-document=$@
 	touch $@
+
+www/%.pdf: www/%.svg
+	inkscape \
+		--export-pdf-version=1.4 \
+		--export-filename=$@ \
+		$<
 
 fig/%.pdf: fig/%.svg
 	inkscape \
@@ -37,7 +43,7 @@ fig/%.pdf: fig/%.svg
 		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
-		fig/Phase_diagram_of_water.pdf \
+		www/Phase_diagram_of_water.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex

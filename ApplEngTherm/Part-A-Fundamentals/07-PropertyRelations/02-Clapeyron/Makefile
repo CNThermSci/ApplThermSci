@@ -26,8 +26,9 @@ cc/%.pdf: cc/%.svg
 
 fig/%.svg: fig/%.url
 	wget \
-		--input-file=$<
-	mv -v ${<:.url=.svg} $@
+		--input-file=$< \
+		--output-document=$@
+	touch $@
 
 fig/%.pdf: fig/%.svg
 	inkscape \

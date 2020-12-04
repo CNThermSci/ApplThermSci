@@ -1,4 +1,4 @@
-PREF=A0703-pt
+PREF=A0000-pt
 PRES=${PREF}-PRES
 HOUT=${PREF}-HOUT
 
@@ -19,6 +19,18 @@ root/00-res/logo/%.pdf: root/00-res/logo/%.svg
 		$<
 
 cc/%.pdf: cc/%.svg
+	inkscape \
+		--export-pdf-version=1.4 \
+		--export-filename=$@ \
+		$<
+
+www/%.svg: www/%.url
+	wget \
+		--input-file=$< \
+		--output-document=$@
+	touch $@
+
+www/%.pdf: www/%.svg
 	inkscape \
 		--export-pdf-version=1.4 \
 		--export-filename=$@ \

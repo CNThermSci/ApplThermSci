@@ -126,7 +126,78 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Relações para a Energia Interna (cont.)}\vspace*{-2em}
+    \begin{frame}[allowframebreaks]{Relações para a Entalpia --}\vspace*{-0em}
+        Tomando-se \alert{$h\!:\!h(T, P)$}, tem-se termos em \alert{$dT$} e em \alert{$dP$}:
+
+        \begin{align*}
+            dh  &= 
+                \alert{\left(\frac{\partial h}{\partial T}\right)_P\,dT} +
+                \left(\frac{\partial h}{\partial P}\right)_T\,dP
+            \qquad\rightharpoondown
+            \\[\medskipamount]
+            dh  &=
+                \alert{c_P\,dT} +
+                \left(\frac{\partial h}{\partial P}\right)_T\,dP
+        \end{align*}
+
+        Tomando-se \alert{$s\!:\!s(T, P)$}, tem-se termos em \alert{$dT$} e em \alert{$dP$}:
+
+        \begin{align*}
+            ds  &= 
+                \left(\frac{\partial s}{\partial T}\right)_P\,dT +
+                \left(\frac{\partial s}{\partial P}\right)_T\,dP.
+        \end{align*}
+
+        Tomando \alert{$dh = Tds + vdP$} e agrupando termos em \alert{$dT$} e em \alert{$dP$}:
+
+        \begin{align*}
+            dh  &=
+                T\left(\frac{\partial s}{\partial T}\right)_P\,\alert{dT} +
+                \left[
+                    T\left(\frac{\partial s}{\partial P}\right)_T + v
+                \right]\,\alert{dP},
+            \qquad\mbox{que é}
+            \\[\medskipamount]
+            dh  &=
+                c_P\,\alert{dT} +
+                \left(\frac{\partial h}{\partial P}\right)_T\,\alert{dP}.
+        \end{align*}
+
+        \pagebreak
+        Igualando os coeficientes de \alert{$dT$} e \alert{$dP$}:
+
+        \begin{align*}
+            \alert{\left(\frac{\partial s}{\partial T}\right)_P}
+            &\alert{= \frac{c_P}{T}},
+            \\[\medskipamount]
+            \left(\frac{\partial h}{\partial P}\right)_T
+            &= T\left(\frac{\partial s}{\partial P}\right)_T + v.
+        \end{align*}
+
+        \pagebreak
+        Finalmente, pela Equação de Maxwell baseada na energia de Gibbs, tem-se:
+
+        \begin{align*}
+            \left(\frac{\partial h}{\partial P}\right)_T
+            &= T\alert{\left(\frac{\partial s}{\partial P}\right)_T} + v,
+            \\[\medskipamount]
+            &= v - T\alert{\left(\frac{\partial v}{\partial P}\right)_T}.
+        \end{align*}
+
+        O que conduz a
+
+        \begin{equation*}
+            \alert{
+                dh = c_P\,dT +
+                \left[
+                    v -
+                    T\left(
+                        \frac{\partial v}{\partial T}
+                    \right)_P
+                \right]\,dP
+            }.
+        \end{equation*}
+
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

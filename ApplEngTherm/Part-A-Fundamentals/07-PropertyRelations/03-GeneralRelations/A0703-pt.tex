@@ -10,7 +10,7 @@
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
 \title{A.07.01 -- Relações de Propriedades Termodinâmicas}
-\subtitle{Relações Gerais da Termodinâmica da Engenharia Mecânica}
+\subtitle{Relações Gerais}
 \author{Prof.~C.~Naaktgeboren, PhD}
 \date{{\scriptsize\tt%
     \includegraphics[height=6.0mm]{cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
@@ -41,39 +41,105 @@
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Modelo de Seção}
+\section{Relações das Propriedades $u$, $h$, $s$, $c_P$ e $c_v$}
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\subsection{Modelo de Subseção}
+\subsection{Relações para $du$, $dh$ e $ds$}
 %-----------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de Slide}\vspace*{-2em}
-        \begin{columns}
-        \column{0.55\textwidth}
-            Coluna com 55\% de largura:\\[\smallskipamount]
-            \begin{itemize}
-                \item<1-> Item 1;
-                \item<2-> Item 2;
-                \item<3-> Item 3.
-            \end{itemize}
-        \column{0.45\textwidth}
-            Coluna com 45\% de largura.
-            \begin{figure}
-                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
-            \end{figure}
-        \end{columns}
+    \begin{frame}[allowframebreaks]{Relações para a Energia Interna --}\vspace*{-0em}
+        Tomando-se \alert{$u\!:\!u(T, v)$}, tem-se termos em \alert{$dT$} e em \alert{$dv$}:
+
+        \begin{align*}
+            du  &= 
+                \alert{\left(\frac{\partial u}{\partial T}\right)_v\,dT} +
+                \left(\frac{\partial u}{\partial v}\right)_T\,dv
+            \qquad\rightharpoondown
+            \\[\medskipamount]
+            du  &=
+                \alert{c_v\,dT} +
+                \left(\frac{\partial u}{\partial v}\right)_T\,dv.
+        \end{align*}
+
+        Tomando-se \alert{$s\!:\!s(T, v)$}, tem-se termos em \alert{$dT$} e em \alert{$dv$}:
+
+        \begin{align*}
+            ds  &= 
+                \left(\frac{\partial s}{\partial T}\right)_v\,dT +
+                \left(\frac{\partial s}{\partial v}\right)_T\,dv.
+        \end{align*}
+
+        Tomando \alert{$du = Tds - Pdv$} e agrupando termos em \alert{$dT$} e em \alert{$dv$}:
+
+        \begin{align*}
+            du  &=
+                T\left(\frac{\partial s}{\partial T}\right)_v\,\alert{dT} +
+                \left[
+                    T\left(\frac{\partial s}{\partial v}\right)_T - P
+                \right]\,\alert{dv},
+            \qquad\mbox{que é}
+            \\[\medskipamount]
+            du  &=
+                c_v\,\alert{dT} +
+                \left(\frac{\partial u}{\partial v}\right)_T\,\alert{dv}.
+        \end{align*}
+
+        \pagebreak
+        Igualando os coeficientes de \alert{$dT$} e \alert{$dv$}:
+
+        \begin{align*}
+            \alert{\left(\frac{\partial s}{\partial T}\right)_v}
+            &\alert{= \frac{c_v}{T}},
+            \\[\medskipamount]
+            \left(\frac{\partial u}{\partial v}\right)_T
+            &= T\left(\frac{\partial s}{\partial v}\right)_T - P.
+        \end{align*}
+
+        \pagebreak
+        Finalmente, pela Equação de Maxwell baseada na energia de Helmholtz, tem-se:
+
+        \begin{align*}
+            \left(\frac{\partial u}{\partial v}\right)_T
+            &= T\alert{\left(\frac{\partial s}{\partial v}\right)_T} - P,
+            \\[\medskipamount]
+            &= T\alert{\left(\frac{\partial P}{\partial T}\right)_v} - P.
+        \end{align*}
+
+        O que conduz a
+
+        \begin{equation*}
+            \alert{
+                du = c_v\,dT +
+                \left[
+                    T\left(
+                        \frac{\partial P}{\partial T}
+                    \right)_v - P
+                \right]\,dv
+            }.
+        \end{equation*}
+
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Relações para a Energia Interna (cont.)}\vspace*{-2em}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Tópicos de Leitura}
+\subsection{Relações para Calores Específicos}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Relações de Outras Propriedades}
 %-----------------------------------------------------------------------------------------------
 
     %------------------------------------------------------------------------------------------
-    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura --}
         \begin{thebibliography}{Çengel, Y.~A., 2013}
             %-----
             \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
@@ -96,7 +162,7 @@
     %------------------------------------------------------------------------------------------
 
     % Finishes with stunning image, with credit
-    \ArtEndWSE{pexels-emiliano-arano-1295138}{jpg}{txt}
+    \ArtEndWSE{pexels-eugene-dorosh-739411}{jpg}{txt}
 
 %-----------------------------------------------------------------------------------------------
 \end{document}

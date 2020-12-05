@@ -434,6 +434,69 @@
 \section{Relações de Outras Propriedades}
 %-----------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Expoente de Expansão Isentrópica --}\vspace*{-0em}
+        Para \alert{$Pv^k = \mbox{const.}$}~em processo isentrópico, \alert{$P$} e \alert{$v$}
+        devem seguir:
+
+        \begin{equation*}
+            0 = \frac{dP}{P} + k\frac{dv}{v}.
+        \end{equation*}
+
+        Tomando-se \alert{$s\!:\!s(P, v)$}, para processo isentrópicos, \alert{$ds = 0$},
+        tem-se:
+
+        \begin{equation*}
+            ds = 0 =
+                \left(
+                    \frac{\partial s}{\partial P}
+                \right)_v\,dP +
+                \left(
+                    \frac{\partial s}{\partial v}
+                \right)_P\,dv = \alert{
+                -\left(
+                    \frac{\partial v}{\partial T}
+                \right)_s\,dP +
+                \left(
+                    \frac{\partial P}{\partial T}
+                \right)_s\,dv
+            },
+        \end{equation*}
+
+        \pagebreak
+        Tornando o coeficiente de \alert{$dP$} unitário, a definição apropriada de \alert{$k$}
+        é:
+
+        \begin{equation*}
+            \alert{
+                k \equiv
+                    \frac{-v}{P}
+                    \left(
+                        \frac{\partial P}{\partial v}
+                    \right)_s
+            }.
+        \end{equation*}\vspace*\medskipamount
+
+        Usando as relações \alert{cíclica}, de \alert{reciprocidade} e todas as \alert{4 de
+        Maxwell}, chega-se em:
+
+        \begin{equation*}
+            \alert{
+                k =
+                    \frac{-v}{P}
+                    \left(
+                        \frac{\partial P}{\partial v}
+                    \right)_T
+                    \frac{c_p}{c_v}
+            },
+        \end{equation*}
+
+        \noindent mostrando que \alert{em geral, $k \neq \gamma$}.
+
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
     %------------------------------------------------------------------------------------------
     \begin{frame}[allowframebreaks]{Tópicos de Leitura --}
         \begin{thebibliography}{Çengel, Y.~A., 2013}

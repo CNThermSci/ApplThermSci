@@ -226,7 +226,7 @@
             \alert{
                 \Delta h_{12} = h_2 - h_1 =
                     \int_{T_1}^{T_2}
-                        c_p\,dT +
+                        c_P\,dT +
                     \int_{P_1}^{P_2}
                         \left[
                             v - T\left(
@@ -276,7 +276,7 @@
         \begin{equation*}
             \alert{
                 ds = 
-                    \frac{c_p}{T}\,dT -
+                    \frac{c_P}{T}\,dT -
                     \left(
                         \frac{\partial v}{\partial T}
                     \right)_P\,dP
@@ -289,7 +289,7 @@
             \alert{
                 \Delta s_{12} = s_2 - s_1 =
                     \int_{T_1}^{T_2}
-                        \frac{c_p}{T}\,dT -
+                        \frac{c_P}{T}\,dT -
                     \int_{P_1}^{P_2}
                         \left(
                             \frac{\partial v}{\partial T}
@@ -336,7 +336,7 @@
 
         \begin{equation*}
             ds = 
-                \frac{c_p}{T}\,dT -
+                \frac{c_P}{T}\,dT -
                 \left(
                     \frac{\partial v}{\partial T}
                 \right)_P\,dP,
@@ -347,7 +347,7 @@
         \begin{equation*}
             \alert{
                 \left(
-                    \frac{\partial c_p}{\partial P}
+                    \frac{\partial c_P}{\partial P}
                 \right)_T =
                 -T\left(
                     \frac{\partial^2 v}{\partial T^2}
@@ -360,8 +360,8 @@
 
         \begin{equation*}
             dT =
-                \frac{T(\partial P/\partial T)_v}{c_p - c_v}\,dv +
-                \frac{T(\partial v/\partial T)_P}{c_p - c_v}\,dP;
+                \frac{T(\partial P/\partial T)_v}{c_P - c_v}\,dv +
+                \frac{T(\partial v/\partial T)_P}{c_P - c_v}\,dP;
         \end{equation*}\vspace*\medskipamount
 
         \noindent tomando-se \alert{$d[T\!:\!T(v, P)]$}, e equacionando coeficientes de
@@ -369,7 +369,7 @@
 
         \begin{equation*}
             \alert{
-                c_p - c_v =
+                c_P - c_v =
                     T\left(
                         \frac{\partial v}{\partial T}
                     \right)_P
@@ -390,9 +390,9 @@
         expansão volumétrica}, \alert{$\beta$}:
 
         \begin{equation*}
-            \alert{\gamma \equiv \frac{c_p}{c_v}},
+            \alert{\gamma \equiv \frac{c_P}{c_v}},
             \quad\mbox{e}\quad
-            \alert{\beta \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_p}.
+            \alert{\beta \equiv \frac{1}{v}\left(\frac{\partial v}{\partial T}\right)_P}.
         \end{equation*}\vspace*\medskipamount
 
         Sejam a \emph{compressibilidade isotérmica}, \alert{$\kappa_T$}, e \emph{isentrópica},
@@ -413,7 +413,7 @@
 
         \begin{equation*}
             \alert{
-                c_p - c_v =
+                c_P - c_v =
                     \frac{vT\beta^2}{\kappa_T}
             },
         \end{equation*}
@@ -421,10 +421,10 @@
         \noindent pela qual deduz-se:\vspace*\medskipamount
 
         \begin{enumerate}
-            \item \alert{$c_p \geqslant c_v$}, por $v$, $T$, $\kappa_T$ e $\beta^2$ serem
+            \item \alert{$c_P \geqslant c_v$}, por $v$, $T$, $\kappa_T$ e $\beta^2$ serem
                 positivos;
-            \item \alert{$c_p - c_v \to 0$ à medida em que $T \to 0$};
-            \item \alert{$c_p = c_v$ para substâncias incompressíveis}, $(dv = 0)$.
+            \item \alert{$c_P - c_v \to 0$ à medida em que $T \to 0$};
+            \item \alert{$c_P = c_v$ para substâncias incompressíveis}, $(dv = 0)$.
         \end{enumerate}
 
         \pagebreak
@@ -435,13 +435,13 @@
             \alert{= c_v\,dT + (T\beta/\kappa_T - P)\,dv},
             &\qquad &\mbox{e} \\[\medskipamount]
             \alert{dh}  &
-            \alert{= c_p\,dT + v(1 - T\beta)\,dP},
+            \alert{= c_P\,dT + v(1 - T\beta)\,dP},
             & &\mbox{e} \\[\medskipamount]
             \alert{ds}  &
             \alert{= (c_v/T)\,dT + (\beta/\kappa_T)\,dv},
             & &\mbox{e} \\[\medskipamount]
             \alert{ds}  &
-            \alert{= (c_p/T)\,dT - v\beta\,dP}.
+            \alert{= (c_P/T)\,dT - v\beta\,dP}.
         \end{alignat*}
 
     \end{frame}
@@ -509,7 +509,7 @@
                     \left(
                         \frac{\partial P}{\partial v}
                     \right)_T
-                    \frac{c_p}{c_v}
+                    \frac{c_P}{c_v}
             },
         \end{equation*}
 
@@ -594,21 +594,21 @@
         \end{itemize}
 
         \pagebreak
-        Fazendo \alert{$dh = 0$}, com \alert{$dh = c_p\,dT + v(1 - T\beta)\,dP$}, deduz-se:
+        Fazendo \alert{$dh = 0$}, com \alert{$dh = c_P\,dT + v(1 - T\beta)\,dP$}, deduz-se:
         \vspace*\medskipamount
 
         \begin{align*}
             \alert{\mu_{JT}} &
             \alert{
-                = \frac{1}{c_p}\left[
+                = \frac{v(T\beta - 1)}{c_P}
+            }
+            \qquad\rightharpoondown\\[\bigskipamount]
+            \alert{\mu_{JT}} &
+            \alert{
+                = \frac{1}{c_P}\left[
                     T\left(\frac{\partial v}{\partial T}\right)_P-v
                 \right]
             }
-            \qquad\rightharpoondown\\[\medskipamount]
-            \alert{\mu_{JT}} &
-            \alert{
-                = \frac{v(T\beta - 1)}{c_p}
-            }.
         \end{align*}
 
     \end{frame}

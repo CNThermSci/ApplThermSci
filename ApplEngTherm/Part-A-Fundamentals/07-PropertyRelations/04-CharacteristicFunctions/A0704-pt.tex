@@ -122,6 +122,28 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelagem via energia específica de Helmholtz}
+        Se \alert{$a\!:\!a(T, v)$} é uma função conhecida para uma substância, então:
+        %
+        \begin{alignat*}{3}
+            \uncover<1->{
+                \alert{P(T, v)}     &\alert{=      -\dxyz avT},             &   \qquad  & \mbox{e}\qquad        &   \alert{s(T, v)}     &\alert{= -\dxyz aTv},      \qquad\mbox{e}    \\
+            }
+            \uncover<2->{
+                \alert{u(T, v)}     &\alert{=      a(T, v) + Ts(T, v)},     &   \qquad  & \rightharpoondown     &   \alert{u(T, v)}     &\alert{=  a - T\dxyz aTv}, \qquad\mbox{e}    \\
+            }
+            \uncover<3->{
+                \alert{h(T, v)}     &\alert{=      u(T, v) + vP(T, v)},     &   \qquad  & \rightharpoondown     &   \alert{h(T, v)}     &\alert{=  a - T\dxyz aTv - v\dxyz avT}, \qquad\mbox{e}    \\
+            }
+            \uncover<4->{
+                \alert{g(T, v)}     &\alert{=      h(T, v) - Ts(T, v)},     &   \qquad  & \rightharpoondown     &   \alert{g(T, v)}     &\alert{=  a - v\dxyz avT}.
+            }
+        \end{alignat*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
 %-----------------------------------------------------------------------------------------------
 \section{Variáveis Reduzidas}
 %-----------------------------------------------------------------------------------------------

@@ -187,20 +187,18 @@
         \pagebreak
         Sejam as novas variáveis reduzidas:
         %
-        \begin{alignat}{5}
+        \begin{alignat*}{5}
             \alert{P_r} &\alert{\equiv P/P^\star} & \qquad & \qquad & \alert{T_r} &\alert{\equiv T/T^\star} & \qquad & \qquad & \alert{v_r} &\alert{\equiv v/v^\star}, \\
             \alert{s_r} &\alert{\equiv s/s^\star} & \qquad & \qquad & \alert{u_r} &\alert{\equiv u/u^\star} & \qquad & \qquad & \alert{a_r} &\alert{\equiv a/a^\star}. 
-        \end{alignat}
+        \end{alignat*}
 
-        Derivadas também podem ser adimensionalizadas:
+        Diferenciais e derivadas parciais também podem ser adimensionalizadas:
         %
-        \begin{align}
-            \partial P &= P^\star\partial P_r,\qquad\mbox{and}\qquad \partial T = T^\star\partial T_r\qquad\rightharpoondown \\
-            \dxyz PTv &= \frac{P^\star}{T^\star}\dxyz{P_r}{T_r}{v_r} = \frac{P_{cr}}{T_{cr}}\dxyz{P_r}{T_r}{v_r},
-            \label{eq:PTV.reduced}
-        \end{align}
-        %
-        \noindent since a process with constant $v$ is also a process with constant $v_r$.
+        \begin{align*}
+            \partial P &= P^\star\partial P_r,\qquad\mbox{e}\qquad \partial T = T^\star\partial T_r\qquad\rightharpoondown
+            \\[\medskipamount]
+            \alert{\dxyz PTv} &\alert{= \frac{P^\star}{T^\star}\dxyz{P_r}{T_r}{v_r} = \frac{P_{cr}}{T_{cr}}\dxyz{P_r}{T_r}{v_r}}.
+        \end{align*}
     \end{frame}
     %------------------------------------------------------------------------------------------
 

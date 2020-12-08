@@ -9,6 +9,9 @@
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
+\newcommand{\dxyz}[3]{\left(\frac{\partial {#1}}{\partial {#2}}\right)_{#3}} % Display (∂x/∂y)_z
+\newcommand{\lxyz}[3]{(\partial {#1}/\partial {#2})_{#3}}                    % Line (∂x/∂y)_z
+%-----------------------------------------------------------------------------------------------
 \title{A.07.01 -- Relações de Propriedades Termodinâmicas}
 \subtitle{Funções Características e Variáveis Reduzidas}
 \author{Prof.~C.~Naaktgeboren, PhD}
@@ -68,7 +71,15 @@
         \end{itemize}
 
         \pagebreak
-        \alert{Exemplo}: Suponha \alert{$u\!:\!u(s, v)$} seja conhecida para uma substância, então:
+        \alert{Exemplo}: Suponha \alert{$u\!:\!u(s, v)$} seja conhecida para uma substância,
+        então:
+        %
+        \begin{alignat*}{3}
+            \alert{P(s, v)}     &\alert{=      -\dxyz uvs},             &   \qquad  & \mbox{e}\qquad        &   T(s, v)     &=  \dxyz usv,      \qquad\mbox{e}    \\
+            \alert{h(s, v)}     &\alert{=      u(s, v) + P(s, v)v},     &   \qquad  & \rightharpoondown     &   h(s, v)     &=  u - \dxyz uvsv, \qquad\mbox{e}    \\
+            \alert{a(s, v)}     &\alert{=      u(s, v) - T(s, v)s},     &   \qquad  & \rightharpoondown     &   a(s, v)     &=  u - \dxyz usvs, \qquad\mbox{e}    \\
+            \alert{g(s, v)}     &\alert{=      h(s, v) - T(s, v)s},     &   \qquad  & \rightharpoondown     &   g(s, v)     &=  u - \dxyz uvsv - \dxyz usvs.
+        \end{alignat*}
 
     \end{frame}
     %-------------------------------------------------------------------------------------------

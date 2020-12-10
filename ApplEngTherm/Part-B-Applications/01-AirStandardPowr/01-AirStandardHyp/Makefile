@@ -24,6 +24,12 @@ cc/%.pdf: cc/%.svg
 		--export-filename=$@ \
 		$<
 
+www/%.jpg: www/%.url
+	wget \
+		--input-file=$< \
+		--output-document=$@
+	touch $@
+
 www/%.svg: www/%.url
 	wget \
 		--input-file=$< \

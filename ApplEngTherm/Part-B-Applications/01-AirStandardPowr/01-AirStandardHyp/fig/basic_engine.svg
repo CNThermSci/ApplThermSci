@@ -18,6 +18,35 @@
      id="defs1091">
     <marker
        style="overflow:visible;"
+       id="marker5658"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#2d1650;stroke-opacity:1;fill:#2d1650;fill-opacity:1"
+         id="path5656" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker5547"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#2d1650;stroke-opacity:1;fill:#2d1650;fill-opacity:1"
+         id="path5545" />
+    </marker>
+    <marker
+       style="overflow:visible;"
        id="marker5351"
        refX="0.0"
        refY="0.0"
@@ -145,11 +174,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.388"
-     inkscape:cx="401.55457"
-     inkscape:cy="148.36223"
+     inkscape:zoom="1.694"
+     inkscape:cx="510.24064"
+     inkscape:cy="148.82392"
      inkscape:document-units="px"
-     inkscape:current-layer="g4901"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -298,6 +327,12 @@
            d="m 520,290 h 10 v -50 h 20 v 120 h -20 v -50 h -10 z"
            id="path4088"
            transform="translate(50,-10)" />
+        <path
+           style="font-variation-settings:normal;vector-effect:none;fill:#cac2d6;fill-opacity:0.5;stroke:#2d1650;stroke-width:6.047;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+           d="m 530,240 h 20 v 80 h -20 z"
+           id="path5529"
+           transform="rotate(-90,495,215)"
+           sodipodi:nodetypes="ccccc" />
       </g>
       <text
          xml:space="preserve"
@@ -332,42 +367,76 @@
              style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">energia int.</tspan></text>
       </g>
     </g>
-    <text
-       xml:space="preserve"
-       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="70"
-       y="60"
-       id="text5062"
-       transform="translate(399.31641,187.61716)"><tspan
-         sodipodi:role="line"
-         id="tspan5060"
+    <g
+       id="g5930">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="70"
          y="60"
-         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">trabalho</tspan></text>
-    <g
-       id="g5505"
-       transform="translate(-60,-10)">
-      <path
-         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5159);stop-color:#000000"
-         d="m 280,90 v 20"
-         id="path5155"
-         sodipodi:nodetypes="cc"
-         transform="rotate(-90,530,30)" />
+         id="text5062"
+         transform="translate(394.96294,187.61716)"><tspan
+           sodipodi:role="line"
+           id="tspan5060"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">trabalho</tspan></text>
       <g
-         id="g5451"
-         transform="translate(-20,-25)">
+         id="g5505"
+         transform="translate(-20,-10)">
+        <path
+           style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5159);stop-color:#000000"
+           d="m 280,90 v 20"
+           id="path5155"
+           sodipodi:nodetypes="cc"
+           transform="rotate(-90,530,30)" />
+        <g
+           id="g5451"
+           transform="matrix(1.4285716,0,0,1,-281.42867,-25)"
+           style="stroke-width:0.83666">
+          <path
+             style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:5.05948;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+             d="m 280,40 v 70"
+             id="path5347"
+             sodipodi:nodetypes="cc"
+             transform="rotate(-90,540,40)" />
+          <path
+             style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:5.05948;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+             d="m 280,40 v 70"
+             id="path5447"
+             sodipodi:nodetypes="cc"
+             transform="rotate(-90,545,45)" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g5843">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text5539"
+         transform="translate(393.42581,69.617188)"><tspan
+           sodipodi:role="line"
+           id="tspan5537"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">calor</tspan></text>
+      <g
+         id="g5818">
+        <path
+           style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5547);stop-color:#000000"
+           d="m 280,90 v 20"
+           id="path5541"
+           sodipodi:nodetypes="cc"
+           transform="rotate(-90,432.5,-2.5)" />
         <path
            style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-           d="m 280,40 v 70"
-           id="path5347"
+           d="m 280,40 c 20,20 -20,40 0,60"
+           id="path5654"
            sodipodi:nodetypes="cc"
-           transform="rotate(-90,540,40)" />
-        <path
-           style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
-           d="m 280,40 v 70"
-           id="path5447"
-           sodipodi:nodetypes="cc"
-           transform="rotate(-90,545,45)" />
+           transform="rotate(-90,425,5)" />
       </g>
     </g>
   </g>

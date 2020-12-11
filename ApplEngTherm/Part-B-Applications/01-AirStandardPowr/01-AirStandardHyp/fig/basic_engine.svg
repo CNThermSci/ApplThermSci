@@ -188,11 +188,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.694"
-     inkscape:cx="350"
-     inkscape:cy="250"
+     inkscape:zoom="1.1978389"
+     inkscape:cx="494.52987"
+     inkscape:cy="173.81131"
      inkscape:document-units="px"
-     inkscape:current-layer="g5974"
+     inkscape:current-layer="g5930"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -265,49 +265,42 @@
     <g
        id="g4574"
        transform="translate(-150,-20)" />
-    <g
-       id="g4927"
-       transform="translate(-150,-20)">
-      <text
-         xml:space="preserve"
-         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="70"
+       y="60"
+       id="text4528"
+       transform="translate(18.88284,-22.60939)"><tspan
+         sodipodi:role="line"
+         id="tspan4526"
          x="70"
          y="60"
-         id="text4528"
-         transform="translate(168.88284,8.53124)"><tspan
-           sodipodi:role="line"
-           id="tspan4526"
-           x="70"
-           y="60"
-           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">ar</tspan></text>
-      <path
-         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000;stop-opacity:1"
-         d="m 280,40 v 70"
-         id="path4094"
-         sodipodi:nodetypes="cc" />
-    </g>
-    <g
-       id="g4950"
-       transform="translate(-150,-20)">
-      <text
-         xml:space="preserve"
-         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">ar</tspan></text>
+    <path
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000"
+       d="m 280,40 v 70"
+       id="path4094"
+       sodipodi:nodetypes="cc"
+       transform="translate(-150,-20)" />
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="70"
+       y="60"
+       id="text4658"
+       transform="translate(163.76042,-22.60939)"><tspan
+         sodipodi:role="line"
+         id="tspan4656"
          x="70"
          y="60"
-         id="text4658"
-         transform="translate(313.76042,13.61718)"><tspan
-           sodipodi:role="line"
-           id="tspan4656"
-           x="70"
-           y="60"
-           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">combustível</tspan></text>
-      <path
-         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000;stop-opacity:1"
-         d="m 280,40 v 70"
-         id="path4584"
-         transform="matrix(-1,0,0,1,655,0)"
-         sodipodi:nodetypes="cc" />
-    </g>
+         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">combustível</tspan></text>
+    <path
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000"
+       d="m 280,40 v 70"
+       id="path4584"
+       transform="matrix(-1,0,0,1,505,-20)"
+       sodipodi:nodetypes="cc" />
     <g
        id="g4916"
        transform="translate(-150,-20)">
@@ -389,7 +382,7 @@
          x="70"
          y="60"
          id="text5062"
-         transform="translate(394.96294,187.61716)"><tspan
+         transform="translate(394.9629,252.61716)"><tspan
            sodipodi:role="line"
            id="tspan5060"
            x="70"
@@ -425,7 +418,7 @@
     </g>
     <g
        id="g5843"
-       transform="translate(-10,-50)">
+       transform="translate(-90,280)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -454,37 +447,48 @@
            transform="rotate(-90,425,5)" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       x="590"
+       y="130"
+       id="text6088"><tspan
+         sodipodi:role="line"
+         id="tspan6086"
+         x="590"
+         y="130"></tspan></text>
     <g
-       id="g5974"
-       transform="rotate(-90,430,0)">
+       id="g6196">
       <text
          xml:space="preserve"
-         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="70"
          y="60"
          id="text5970"
-         transform="rotate(90,166.40886,140.1758)"><tspan
+         transform="translate(398.76062,127.39061)"><tspan
            sodipodi:role="line"
            id="tspan5968"
            x="70"
            y="60"
-           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">gases escape</tspan></text>
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">escape</tspan></text>
       <path
-         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5978);stop-color:#000000;stop-opacity:1"
+         style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5978);stop-color:#000000"
          d="m 280,40 v 70"
          id="path5972"
-         sodipodi:nodetypes="cc" />
+         sodipodi:nodetypes="cc"
+         transform="rotate(-90,430,0)" />
       <text
          xml:space="preserve"
-         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
-         x="590"
-         y="130"
-         id="text6088"
-         transform="rotate(90,430,0)"><tspan
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text6175"
+         transform="translate(398.88802,69.581164)"><tspan
            sodipodi:role="line"
-           id="tspan6086"
-           x="590"
-           y="130"></tspan></text>
+           id="tspan6173"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">gases de</tspan></text>
     </g>
   </g>
 </svg>

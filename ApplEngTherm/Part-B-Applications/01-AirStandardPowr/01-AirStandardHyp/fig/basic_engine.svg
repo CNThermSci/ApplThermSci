@@ -18,6 +18,20 @@
      id="defs1091">
     <marker
        style="overflow:visible;"
+       id="marker5978"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#2d1650;stroke-opacity:1;fill:#2d1650;fill-opacity:1"
+         id="path5976" />
+    </marker>
+    <marker
+       style="overflow:visible;"
        id="marker5658"
        refX="0.0"
        refY="0.0"
@@ -175,10 +189,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.694"
-     inkscape:cx="321.33863"
-     inkscape:cy="196.04942"
+     inkscape:cx="350"
+     inkscape:cy="250"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="g5974"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -411,7 +425,7 @@
     </g>
     <g
        id="g5843"
-       transform="translate(30,-12.000024)">
+       transform="translate(-10,-50)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -439,6 +453,38 @@
            sodipodi:nodetypes="cc"
            transform="rotate(-90,425,5)" />
       </g>
+    </g>
+    <g
+       id="g5974"
+       transform="rotate(-90,430,0)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text5970"
+         transform="rotate(90,166.40886,140.1758)"><tspan
+           sodipodi:role="line"
+           id="tspan5968"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">gases escape</tspan></text>
+      <path
+         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker5978);stop-color:#000000;stop-opacity:1"
+         d="m 280,40 v 70"
+         id="path5972"
+         sodipodi:nodetypes="cc" />
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+         x="590"
+         y="130"
+         id="text6088"
+         transform="rotate(90,430,0)"><tspan
+           sodipodi:role="line"
+           id="tspan6086"
+           x="590"
+           y="130"></tspan></text>
     </g>
   </g>
 </svg>

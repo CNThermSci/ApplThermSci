@@ -188,11 +188,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1978389"
-     inkscape:cx="494.52987"
-     inkscape:cy="173.81131"
+     inkscape:zoom="1.694"
+     inkscape:cx="350"
+     inkscape:cy="250"
      inkscape:document-units="px"
-     inkscape:current-layer="g5930"
+     inkscape:current-layer="layer2"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -418,7 +418,7 @@
     </g>
     <g
        id="g5843"
-       transform="translate(-90,280)">
+       transform="rotate(-30,382.67949,289.28203)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

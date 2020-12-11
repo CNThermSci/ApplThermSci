@@ -117,8 +117,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.694"
-     inkscape:cx="315.52178"
-     inkscape:cy="207.84632"
+     inkscape:cx="371.19889"
+     inkscape:cy="186.31331"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -191,53 +191,54 @@
      id="layer2"
      inkscape:label="Layer 2">
     <g
-       id="g4574" />
+       id="g4574"
+       transform="translate(-150,-20)" />
     <g
-       id="g4984">
-      <g
-         id="g4927">
-        <text
-           xml:space="preserve"
-           style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+       id="g4927"
+       transform="translate(-150,-20)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text4528"
+         transform="translate(168.88284,8.53124)"><tspan
+           sodipodi:role="line"
+           id="tspan4526"
            x="70"
            y="60"
-           id="text4528"
-           transform="translate(168.88284,8.53124)"><tspan
-             sodipodi:role="line"
-             id="tspan4526"
-             x="70"
-             y="60"
-             style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1;">ar</tspan></text>
-        <path
-           style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000;stop-opacity:1"
-           d="m 280,40 v 70"
-           id="path4094"
-           sodipodi:nodetypes="cc" />
-      </g>
-      <g
-         id="g4950">
-        <text
-           xml:space="preserve"
-           style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
-           x="70"
-           y="60"
-           id="text4658"
-           transform="translate(313.76042,13.61718)"><tspan
-             sodipodi:role="line"
-             id="tspan4656"
-             x="70"
-             y="60"
-             style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1;">combustível</tspan></text>
-        <path
-           style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000;stop-opacity:1"
-           d="m 280,40 v 70"
-           id="path4584"
-           transform="matrix(-1,0,0,1,655,0)"
-           sodipodi:nodetypes="cc" />
-      </g>
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">ar</tspan></text>
+      <path
+         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000;stop-opacity:1"
+         d="m 280,40 v 70"
+         id="path4094"
+         sodipodi:nodetypes="cc" />
     </g>
     <g
-       id="g4916">
+       id="g4950"
+       transform="translate(-150,-20)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text4658"
+         transform="translate(313.76042,13.61718)"><tspan
+           sodipodi:role="line"
+           id="tspan4656"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">combustível</tspan></text>
+      <path
+         style="font-variation-settings:normal;display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000;stop-opacity:1"
+         d="m 280,40 v 70"
+         id="path4584"
+         transform="matrix(-1,0,0,1,655,0)"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       id="g4916"
+       transform="translate(-150,-20)">
       <g
          id="g4901">
         <path
@@ -271,7 +272,7 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-size:48px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+         style="font-size:48px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="300"
          y="260"
          id="text4564"
@@ -283,14 +284,14 @@
       <g
          id="g4893">
         <path
-           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:0.5;stroke:#2d1650;stroke-width:1.27850814;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2.55701629,2.55701629;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:0.5;stroke:#2d1650;stroke-width:1.27851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2.55702, 2.55702;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
            d="m 280,220 c -0.98006,-10.84538 -5.85004,-18.83231 -20,-20 10.25745,-7.14664 8.79198,-13.74473 0,-20 11.70673,-1.90314 20.21282,-6.83131 20,-20 12.97273,16.72255 26.25262,19.20133 40,0 5.21564,5.10781 6.37691,6.36307 10,10 l 10,-10 c 13.63889,16.71511 27.00489,18.50213 40,0 2.72081,14.54135 9.4494,21.08444 20,20 -12.91669,7.55201 -13.60963,14.26618 0,20 -14.22749,-0.75821 -24.28404,2.57951 -20,20 -14.69158,-12.07952 -28.53803,-16.64293 -40,0 -5.693,-5.75021 -5.72446,-5.81533 -10,-10 l -10,10 c -14.57396,-16.55121 -27.94845,-17.10038 -40,0 z"
            id="path4839"
            sodipodi:nodetypes="ccccccccccccccc"
            transform="matrix(1.8549271,0,0,1.3192471,-241.97084,-51.079539)" />
         <text
            xml:space="preserve"
-           style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;"
+           style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;opacity:1;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="70"
            y="60"
            id="text4843"
@@ -299,7 +300,7 @@
              id="tspan4841"
              x="70"
              y="60"
-             style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1;">energia int.</tspan></text>
+             style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">energia int.</tspan></text>
       </g>
     </g>
   </g>

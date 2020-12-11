@@ -18,6 +18,20 @@
      id="defs1091">
     <marker
        style="overflow:visible"
+       id="marker6920"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2d1650;fill-opacity:1;fill-rule:evenodd;stroke:#2d1650;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path6918" />
+    </marker>
+    <marker
+       style="overflow:visible"
        id="marker5978"
        refX="0"
        refY="0"
@@ -267,7 +281,7 @@
        transform="translate(-150,-20)" />
     <text
        xml:space="preserve"
-       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.25;"
        x="70"
        y="60"
        id="text4528"
@@ -276,16 +290,16 @@
          id="tspan4526"
          x="70"
          y="60"
-         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">ar</tspan></text>
+         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1;">ar</tspan></text>
     <path
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000"
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4470);stop-color:#000000;opacity:0.25"
        d="m 280,40 v 70"
        id="path4094"
        sodipodi:nodetypes="cc"
        transform="translate(-150,-20)" />
     <text
        xml:space="preserve"
-       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;opacity:0.25;"
        x="70"
        y="60"
        id="text4658"
@@ -294,9 +308,9 @@
          id="tspan4656"
          x="70"
          y="60"
-         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">combustível</tspan></text>
+         style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1;">combustível</tspan></text>
     <path
-       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000"
+       style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4588);stop-color:#000000;opacity:0.25"
        d="m 280,40 v 70"
        id="path4584"
        transform="matrix(-1,0,0,1,505,-20)"
@@ -353,9 +367,10 @@
            x="300"
            y="260">motor</tspan></text>
       <g
-         id="g4893">
+         id="g4893"
+         style="opacity:0.25">
         <path
-           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:0.5;stroke:#2d1650;stroke-width:1.27851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2.55702, 2.55702;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
+           style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:0.5;stroke:#2d1650;stroke-width:1.27851;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:2.55702, 2.55702000000000007;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000;stop-opacity:1"
            d="m 280,220 c -0.98006,-10.84538 -5.85004,-18.83231 -20,-20 10.25745,-7.14664 8.79198,-13.74473 0,-20 11.70673,-1.90314 20.21282,-6.83131 20,-20 12.97273,16.72255 26.25262,19.20133 40,0 5.21564,5.10781 6.37691,6.36307 10,10 l 10,-10 c 13.63889,16.71511 27.00489,18.50213 40,0 2.72081,14.54135 9.4494,21.08444 20,20 -12.91669,7.55201 -13.60963,14.26618 0,20 -14.22749,-0.75821 -24.28404,2.57951 -20,20 -14.69158,-12.07952 -28.53803,-16.64293 -40,0 -5.693,-5.75021 -5.72446,-5.81533 -10,-10 l -10,10 c -14.57396,-16.55121 -27.94845,-17.10038 -40,0 z"
            id="path4839"
            sodipodi:nodetypes="ccccccccccccccc"
@@ -458,7 +473,8 @@
          x="590"
          y="130"></tspan></text>
     <g
-       id="g6196">
+       id="g6196"
+       style="opacity:0.25">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -489,6 +505,37 @@
            x="70"
            y="60"
            style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">gases de</tspan></text>
+    </g>
+    <g
+       id="g6916"
+       transform="rotate(90,375,-65)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text6908"
+         transform="translate(393.42581,69.617188)"><tspan
+           sodipodi:role="line"
+           id="tspan6906"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">calor</tspan></text>
+      <g
+         id="g6914">
+        <path
+           style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker6920);stop-color:#000000"
+           d="m 280,90 v 20"
+           id="path6910"
+           sodipodi:nodetypes="cc"
+           transform="rotate(-90,432.5,-2.5)" />
+        <path
+           style="font-variation-settings:normal;display:inline;vector-effect:none;fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:6.04724;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+           d="m 280,40 c 20,20 -20,40 0,60"
+           id="path6912"
+           sodipodi:nodetypes="cc"
+           transform="rotate(-90,425,5)" />
+      </g>
     </g>
   </g>
 </svg>

@@ -175,8 +175,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.694"
-     inkscape:cx="510.24064"
-     inkscape:cy="148.82392"
+     inkscape:cx="321.33863"
+     inkscape:cy="196.04942"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="true"
@@ -410,7 +410,8 @@
       </g>
     </g>
     <g
-       id="g5843">
+       id="g5843"
+       transform="translate(30,-12.000024)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

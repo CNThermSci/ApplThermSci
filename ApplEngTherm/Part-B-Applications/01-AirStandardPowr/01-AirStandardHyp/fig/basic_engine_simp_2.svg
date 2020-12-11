@@ -193,6 +193,21 @@
          style="fill:#2d1650;fill-opacity:1;fill-rule:evenodd;stroke:#2d1650;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          id="path10114" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="marker9660"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2d1650;fill-opacity:1;fill-rule:evenodd;stroke:#2d1650;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path9658" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -496,6 +511,39 @@
         <path
            style="opacity:1;fill:none;fill-opacity:0.2;stroke:#2d1650;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker10116)"
            id="path10108"
+           sodipodi:type="arc"
+           sodipodi:cx="355"
+           sodipodi:cy="275"
+           sodipodi:rx="35"
+           sodipodi:ry="35"
+           sodipodi:start="0"
+           sodipodi:end="5.7596534"
+           sodipodi:open="true"
+           sodipodi:arc-type="arc"
+           d="m 390,275 a 35,35 0 0 1 -30.43216,34.70065 35,35 0 0 1 -38.37555,-25.64311 35,35 0 0 1 20.41541,-41.394 35,35 0 0 1 43.70436,14.83849" />
+      </g>
+    </g>
+    <g
+       id="g9911"
+       transform="translate(0,-5)">
+      <text
+         xml:space="preserve"
+         style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="70"
+         y="60"
+         id="text9770"
+         transform="translate(269.33204,223.68619)"><tspan
+           sodipodi:role="line"
+           id="tspan9768"
+           x="70"
+           y="60"
+           style="font-size:37.3333px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">m</tspan></text>
+      <g
+         id="g9880"
+         transform="rotate(15,355,275)">
+        <path
+           style="opacity:1;fill:none;fill-opacity:0.2;stroke:#2d1650;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9660)"
+           id="path9474"
            sodipodi:type="arc"
            sodipodi:cx="355"
            sodipodi:cy="275"

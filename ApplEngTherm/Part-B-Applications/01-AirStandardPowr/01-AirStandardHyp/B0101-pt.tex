@@ -6,6 +6,7 @@
 \input{root/ApplEngTherm/theme-CNThermSci2.tex}
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/packages.tex}
+\usepackage{verbatim}
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
@@ -51,18 +52,19 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}{}\vspace*{-2em}
+        Máquinas que desempenham ciclo motores são complexas:
         \begin{columns}
-        \column{0.55\textwidth}
-            Coluna com 55\% de largura:\\[\smallskipamount]
-            \begin{itemize}
-                \item<1-> Item 1;
-                \item<2-> Item 2;
-                \item<3-> Item 3.
-            \end{itemize}
-        \column{0.45\textwidth}
-            Coluna com 45\% de largura.
+        \column{0.5\textwidth}
+            \begin{center}
+                \begin{figure}
+                    \fontsize{3.0}{4}\selectfont
+                    \includegraphics[width=0.975\textwidth]{www/1024px-J85_ge_17a_turbojet_engine.jpg}
+                    \\\vspace*{-2em}\verbatiminput{www/1024px-J85_ge_17a_turbojet_engine.url}
+                \end{figure}
+            \end{center}
+        \column{0.5\textwidth}
             \begin{figure}
-                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
+                \includegraphics[width=0.95\textwidth]{www/GE_H_series_Gas_Turbine.jpg}
             \end{figure}
         \end{columns}
     \end{frame}

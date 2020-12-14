@@ -51,6 +51,8 @@ fig/%.pdf: fig/%.svg
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		www/1024px-J85_ge_17a_turbojet_engine.jpg \
 		www/GE_H_series_Gas_Turbine.jpg \
+		www/5878426.jpg \
+		www/5883675.jpg \
 		fig/basic_engine.pdf \
 		fig/basic_engine_simp_1.pdf \
 		fig/basic_engine_simp_2.pdf \
@@ -62,6 +64,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		www/1024px-J85_ge_17a_turbojet_engine.jpg \
 		www/GE_H_series_Gas_Turbine.jpg \
+		www/5878426.jpg \
+		www/5883675.jpg \
 		fig/basic_engine.pdf \
 		fig/basic_engine_simp_1.pdf \
 		fig/basic_engine_simp_2.pdf \

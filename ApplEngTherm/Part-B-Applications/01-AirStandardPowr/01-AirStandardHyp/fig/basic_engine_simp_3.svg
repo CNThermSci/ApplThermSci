@@ -273,7 +273,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -559,7 +559,7 @@
          id="tspan10592"
          x="240.20102"
          y="60"
-         style="font-size:37.3333px;text-align:center;text-anchor:middle;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">ar: gás ideal</tspan><tspan
+         style="font-size:37.3333px;text-align:center;text-anchor:middle;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-opacity:1">gás ideal</tspan><tspan
          sodipodi:role="line"
          x="240.20102"
          y="93.599968"

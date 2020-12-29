@@ -777,9 +777,9 @@
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="64.871784"
-     inkscape:cx="84.412976"
-     inkscape:zoom="7.447619"
+     inkscape:cy="77.485201"
+     inkscape:cx="143.80651"
+     inkscape:zoom="2.6331309"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -1015,7 +1015,8 @@
       </g>
     </g>
     <g
-       id="g1449">
+       id="g1449"
+       transform="translate(3.7e-4,-12.905492)">
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"

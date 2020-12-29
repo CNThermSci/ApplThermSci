@@ -9,6 +9,9 @@
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
+\newcommand{\VPMS}{{\ensuremath V_{\mathrm{PMS}}}}
+\newcommand{\VPMI}{{\ensuremath V_{\mathrm{PMI}}}}
+%-----------------------------------------------------------------------------------------------
 \title{B.01.02 -- Ciclos de Potência Padrão a Ar}
 \subtitle{Básico de Motores Alternativos}
 \author{Prof.~C.~Naaktgeboren, PhD}
@@ -58,7 +61,27 @@
                 \uncover<1->{
                     \alert{r} &
                     = \frac{V_\mathrm{max}}{V_\mathrm{min}}
-                    = \frac{V_\mathrm{max}}{V_\mathrm{min}}
+                    \alert{= \frac{\VPMI}{\VPMS}},
+                    \\[\bigskipamount]
+                }
+                \uncover<2->{
+                    \alert{V_\mathrm{du}} &
+                    = V_\mathrm{max} - V_\mathrm{min}
+                    \alert{= \VPMI - \VPMS},
+                    \\[\bigskipamount]
+                }
+                \uncover<3->{
+                    \alert{\mathrm{PME}} &
+                    = \frac{W_\mathrm{liq}}{V_\mathrm{du}}
+                    \alert{= \frac{W_\mathrm{liq}}{\VPMI - \VPMS}}
+                    = \frac{W_\mathrm{liq}}{\VPMS(r-1)},
+                    \qquad\mbox{e}
+                    \\[\bigskipamount]
+                }
+                \uncover<4->{
+                    \alert{\eta_t} &
+                    \alert{= \frac{W_\mathrm{liq}}{Q_\mathrm{liq}}}
+                    = \frac{w_\mathrm{liq}}{q_\mathrm{liq}}.
                 }
             \end{align*}
         \column{0.30\textwidth}

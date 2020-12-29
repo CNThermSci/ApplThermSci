@@ -592,12 +592,14 @@
        ry="30"
        y="558.25"
        x="0"
-       height="180"
-       width="140"
+       height="200"
+       width="420"
        id="rect4537"
-       style="fill:#ffffff;fill-opacity:0.2;stroke:#d9daca;stroke-width:0.3;stroke-opacity:0.12549" />
+       style="fill:#ffffff;fill-opacity:0.2;stroke:#d9daca;stroke-width:0.3;stroke-opacity:0.12549"
+       rx="30" />
     <g
-       id="g1251">
+       id="g1251"
+       transform="translate(139.99963)">
       <g
          id="g1114">
         <path

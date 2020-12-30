@@ -68,28 +68,31 @@
                     \alert{V_\mathrm{du}} &
                     = V_\mathrm{max} - V_\mathrm{min}
                     \alert{= \VPMI - \VPMS},
-                    \\[\bigskipamount]
-                }
-                \uncover<3->{
-                    \alert{\mathrm{PME}} &
-                    = \frac{W_\mathrm{liq}}{V_\mathrm{du}}
-                    \alert{= \frac{W_\mathrm{liq}}{\VPMI - \VPMS}}
-                    = \frac{W_\mathrm{liq}}{\VPMS(r-1)},
                     \qquad\mbox{e}
                     \\[\bigskipamount]
                 }
-                \uncover<4->{
+                \uncover<3->{
                     \alert{\eta_t} &
                     \alert{= \frac{W_\mathrm{liq}}{Q_\mathrm{liq}}}
                     = \frac{w_\mathrm{liq}}{q_\mathrm{liq}}.
                 }
             \end{align*}
         \column{0.30\textwidth}
-            \alt<1,2>{
-                \figfigW{fig/MotoresAlt-02.pdf}
-            }{
-                \figfigW{fig/MotoresAlt-PME.pdf}
-            }
+            \figfigW{fig/MotoresAlt-02.pdf}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}
+        \figfigH{fig/MotoresAlt-PME.pdf}
+        \begin{align*}
+            \alert{\mathrm{PME}} &
+            = \frac{W_\mathrm{liq}}{V_\mathrm{du}}
+            \alert{= \frac{W_\mathrm{liq}}{\VPMI - \VPMS}}
+            = \frac{W_\mathrm{liq}}{\VPMS(r-1)}.
+        \end{align*}
         \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------

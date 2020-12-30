@@ -916,9 +916,9 @@
      showgrid="true"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="152.38278"
-     inkscape:cx="383.95423"
-     inkscape:zoom="3.9901025"
+     inkscape:cy="87.359294"
+     inkscape:cx="407.56231"
+     inkscape:zoom="1.9950513"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -1683,6 +1683,13 @@
        id="path1953"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <rect
+       style="opacity:0.5;fill:#01ffff;fill-opacity:0.747746;fill-rule:evenodd;stroke:none;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5"
+       id="rect2594"
+       width="150"
+       height="25"
+       x="320"
+       y="573.25" />
     <path
        inkscape:connector-curvature="0"
        id="path1955"
@@ -1788,5 +1795,28 @@
          id="path2590"
          inkscape:connector-curvature="0" />
     </g>
+    <path
+       style="fill:none;stroke:#00007e;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 470,573.24998 H 320"
+       id="path2598"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:3, 3;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 305,573.24998 H 515"
+       id="path2604"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none"
+       id="text2608"
+       y="578.65509"
+       x="272.54688"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';fill:#00007e;fill-opacity:1;stroke:none"
+         y="578.65509"
+         x="272.54688"
+         id="tspan2606"
+         sodipodi:role="line">PME</tspan></text>
   </g>
 </svg>

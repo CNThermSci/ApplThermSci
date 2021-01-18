@@ -1,9 +1,8 @@
-# Vapor passes
-# Heatings
-R
 # Closed/FWD Regens
 # Closed/BWD Regens
 # Open Regens
+# Vapor passes
+# Heatings
 S
 # Sequential
 -Rankine

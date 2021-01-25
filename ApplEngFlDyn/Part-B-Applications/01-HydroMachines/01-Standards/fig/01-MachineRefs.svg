@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.672"
-     inkscape:cx="350"
-     inkscape:cy="250"
+     inkscape:zoom="0.836"
+     inkscape:cx="753.78986"
+     inkscape:cy="111.15"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -232,5 +232,62 @@
          x="200"
          y="353.33337"
          id="tspan1430">de Fluxo</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="80"
+       y="60"
+       id="text1925"
+       transform="translate(28.782497,228.08592)"><tspan
+         sodipodi:role="line"
+         id="tspan1923"
+         x="80"
+         y="60"
+         style="font-size:18.6667px;fill:#000000;fill-opacity:1;stroke:none">Turbina</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="48.818954"
+       y="60"
+       id="text1953"
+       transform="translate(531.14459,648.08592)"><tspan
+         sodipodi:role="line"
+         id="tspan1951"
+         x="48.818954"
+         y="60"
+         style="font-size:18.6667px;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none">Bomba</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="260"
+       y="40"
+       id="text1957"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1955"
+         x="260"
+         y="40">Seção de entrada/saída</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="290"
+       y="70"
+       id="text1961"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1959"
+         x="290"
+         y="70">Seção de referência de alta pressão (1)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="320"
+       y="100"
+       id="text1965"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1963"
+         x="320"
+         y="100">Seção de medição de alta pressão (1')</tspan></text>
   </g>
 </svg>

@@ -81,9 +81,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.836"
-     inkscape:cx="753.78986"
-     inkscape:cy="111.15"
+     inkscape:zoom="0.59891944"
+     inkscape:cx="650.78195"
+     inkscape:cy="284.36776"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -266,7 +266,7 @@
          sodipodi:role="line"
          id="tspan1955"
          x="260"
-         y="40">Seção de entrada/saída</tspan></text>
+         y="40">Seção de entrada/saída de alta pressão</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -289,5 +289,38 @@
          id="tspan1963"
          x="320"
          y="100">Seção de medição de alta pressão (1')</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="390"
+       y="410"
+       id="text1969"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1967"
+         x="390"
+         y="410">Seção de medição de baixa pressão (2')</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="420"
+       y="440"
+       id="text1973"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1971"
+         x="420"
+         y="440">Seção de referência de baixa pressão (2)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.66667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="450"
+       y="470"
+       id="text1977"
+       transform="translate(0,238.24998)"><tspan
+         sodipodi:role="line"
+         id="tspan1975"
+         x="450"
+         y="470">Seção de entrada/saída de baixa pressão</tspan></text>
   </g>
 </svg>

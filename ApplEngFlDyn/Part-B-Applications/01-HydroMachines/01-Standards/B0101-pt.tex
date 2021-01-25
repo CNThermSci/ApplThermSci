@@ -1,0 +1,95 @@
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+\immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
+\makeatother
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/packages.tex}
+%-----------------------------------------------------------------------------------------------
+\input{root/ApplEngTherm/commands.tex}
+%-----------------------------------------------------------------------------------------------
+\title{A.00.00 -- Template}
+\subtitle{(Template)}
+\author{Prof.~C.~Naaktgeboren, PhD}
+\date{{\scriptsize\tt%
+    \includegraphics[height=6.0mm]{cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
+    https://github.com/CNThermSci/ApplThermSci\\
+    Compiled on \input{\jobname.info}
+}}
+%-----------------------------------------------------------------------------------------------
+\begin{document}
+%-----------------------------------------------------------------------------------------------
+\logo{%
+    \parbox{158mm}{% There's a 1mm gap on each side of the 160mm x 90mm slide logo line
+        \mode<beamer>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-D.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-A.pdf}%
+        }
+        \mode<handout>{
+            \includegraphics[height=6.0mm]{root/00-res/UTFPR/UTFPR-logo-W.pdf}\hfill%
+            \includegraphics[height=9.0mm]{root/00-res/logo/CNThermSci-logo-W.pdf}%
+        }
+    }
+} % The (delineated, alpha), or washed-out logos
+%-----------------------------------------------------------------------------------------------
+\frame{\titlepage}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\frame{\tableofcontents}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Modelo de Seção}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Modelo de Subseção}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Modelo de Slide}\vspace*{-2em}
+        \begin{columns}
+        \column{0.55\textwidth}
+            Coluna com 55\% de largura:\\[\smallskipamount]
+            \begin{itemize}
+                \item<1-> Item 1;
+                \item<2-> Item 2;
+                \item<3-> Item 3.
+            \end{itemize}
+        \column{0.45\textwidth}
+            Coluna com 45\% de largura.
+            \begin{figure}
+                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
+            \end{figure}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\section{Tópicos de Leitura}
+%-----------------------------------------------------------------------------------------------
+
+    %------------------------------------------------------------------------------------------
+    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
+        \begin{thebibliography}{Çengel, Y.~A., 2013}
+            \bibitem[Potter, M. C., 2015]{2015-PotterMC-Cengage}
+                Potter, M.~C., \textit{et al.\/}
+                \newblock{%
+                    {\em Mecânica dos Fluidos}.
+                    \alert{Seção~12-1.}
+                }
+                \newblock{\footnotesize Cengage. São Paulo. ISBN 978-85-221-1568-6.}
+        \end{thebibliography}
+    \end{frame}
+    %------------------------------------------------------------------------------------------
+
+    % Finishes with stunning image, with credit
+    \ArtEndWSE{pexels-mali-maeder-142497}{jpg}{txt}
+
+%-----------------------------------------------------------------------------------------------
+\end{document}
+%-----------------------------------------------------------------------------------------------
+

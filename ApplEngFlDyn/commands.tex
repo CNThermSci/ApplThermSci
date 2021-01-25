@@ -1,0 +1,112 @@
+%-----------------------------------------------------------------------------------------------
+% Mathematical
+%-----------------------------------------------------------------------------------------------
+\newcommand{\vet}[1]{\underline{{#1}}}
+\newcommand{\mat}[1]{\underline{\underline{{#1}}}}
+\newcommand{\cub}[1]{\underline{\underline{\underline{{#1}}}}}
+\newcommand{\eqdef}{{\ensuremath\stackrel{\text{\tiny def}}{=}}} % Equal to by definition
+\newcommand{\eqmod}{{\ensuremath\stackrel{\text{\tiny mod}}{=}}} % Equal to by modeling
+\newcommand{\eqconj}{{\ensuremath\stackrel{\text{\tiny conj}}{=}}} % Equal to by conjecture
+\newcommand{\smcpbb}[1]{\ensuremath\vstretch{0.64}{\hstretch{0.64}{\mathbb{#1}}}}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\bdc}{{\mbox{\scriptsize BDC}}}
+\newcommand{\tdc}{{\mbox{\scriptsize TDC}}}
+\newcommand{\pmi}{{\mbox{\scriptsize PMI}}}
+\newcommand{\pms}{{\mbox{\scriptsize PMS}}}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\NF}{\ensuremath{n_{\mbox{\scriptsize f}}}}
+\newcommand{\NA}{\ensuremath{n_{\mbox{\scriptsize air}}}}
+\newcommand{\NC}{\ensuremath{n_{\mbox{\scriptsize \ce{C}}}}}
+\newcommand{\NH}{\ensuremath{n_{\mbox{\scriptsize \ce{H}}}}}
+\newcommand{\NO}{\ensuremath{n_{\mbox{\scriptsize \ce{O}}}}}
+\newcommand{\NN}{\ensuremath{n_{\mbox{\scriptsize \ce{N}}}}}
+\newcommand{\NCO}{\ensuremath{n_{\mbox{\scriptsize \ce{CO}}}}}
+\newcommand{\NHH}{\ensuremath{n_{\mbox{\scriptsize \ce{H2}}}}}
+\newcommand{\NOO}{\ensuremath{n_{\mbox{\scriptsize \ce{O2}}}}}
+\newcommand{\NNN}{\ensuremath{n_{\mbox{\scriptsize \ce{N2}}}}}
+\newcommand{\NCOO}{\ensuremath{n_{\mbox{\scriptsize \ce{CO2}}}}}
+\newcommand{\NHHO}{\ensuremath{n_{\mbox{\scriptsize \ce{H2O}}}}}
+%-----------------------------------------------------------------------------------------------
+\newcommand{\MXAIR}{\mathbb{M}_{\mbox{\scriptsize\tt a}}}
+\newcommand{\MXFUE}{\mathbb{M}_{\mbox{\scriptsize\tt f}}}
+\newcommand{\MXAFU}{\mathbb{M}_{\mbox{\scriptsize\tt af}}}
+\newcommand{\MXPRO}{\mathbb{M}_{\mbox{\scriptsize\tt pr}}}
+\newcommand{\MXREA}{\mathbb{M}_{\mbox{\scriptsize\tt re}}}
+\newcommand{\MXSYS}{\mathbb{M}_{\mbox{\scriptsize\tt sys}}}
+\newcommand{\MXSYSi}{\mathbb{M}_{\mbox{\scriptsize\tt sys},i}}
+%-----------------------------------------------------------------------------------------------
+% Linguistic
+%-----------------------------------------------------------------------------------------------
+\newcommand{\GRtxt}[1]{\begin{otherlanguage}{greek}{{#1}}\end{otherlanguage}}
+\newcommand{\FRtxt}[1]{\begin{otherlanguage}{french}{{#1}}\end{otherlanguage}}
+%-----------------------------------------------------------------------------------------------
+% Presentation
+%-----------------------------------------------------------------------------------------------
+\newcommand{\BkgImgH}[1]{% Places an image centered on the slide background filling the height
+    \usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering\includegraphics[height=\paperheight]{{#1}}
+}}}
+\newcommand{\BkgImgW}[1]{% Places an image centered on the slide background filling the width
+    \usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering\includegraphics[width=\paperwidth]{{#1}}
+}}}
+\newcommand{\ArtEndH}[3]{{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
+    \BkgImgH{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \vspace*{72mm}\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}}
+\newcommand{\ArtEndW}[3]{{% Transitions to plain image (last) slide: #1:prefix #2,#3:extensions
+    \BkgImgW{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \vspace*{72mm}\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}}
+\newcommand{\ArtEndHSE}[3]{{% Same as \ArtEndH with SouthEast credit line
+    \BkgImgH{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \vspace*{72mm}\hfill\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}}
+\newcommand{\ArtEndWSE}[3]{{% Same as \ArtEndW with SouthEast credit line
+    \BkgImgW{root/../art/#1.#2}
+    \frame<handout:0>[plain]{%
+        \vspace*{72mm}\hfill\color{white}\scriptsize\bf\input{root/../art/#1.#3}}
+    \usebackgroundtemplate{\mbox{~}}
+}}
+\newcommand{\ImgColW}[3]{% Inserts a full-width image in a column
+    \includegraphics[width=\columnwidth]{fig/#1.#2}\\[-0.5\baselineskip]
+    \parbox{\columnwidth}{\tiny\hfill\scalebox{0.85}{\input{fig/#1.#3}}}
+}
+\newcommand{\txtpic}[1]{%
+    \fcolorbox{lightgray}{white!90!black}{{#1}} 
+}
+\newcommand{\wwwfig}[3]{%
+    \begin{center}
+        \begin{figure}
+            \fontsize{3.0}{4}\selectfont
+            \includegraphics[width=\textwidth]{www/#1.#2}
+            \\\vspace*{-2.5em}\verbatiminput{www/#1.#3}
+        \end{figure}
+    \end{center}
+}
+\newcommand{\figfigW}[1]{%
+    \begin{center}
+        \begin{figure}
+            \fontsize{3.0}{4}\selectfont
+            \includegraphics[width=\textwidth]{#1}
+            \\\vspace*{-2.5em}\texttt{autoria própria}
+        \end{figure}
+    \end{center}
+}
+\newcommand{\figfigH}[1]{%
+    \begin{center}
+        \begin{figure}
+            \fontsize{3.0}{4}\selectfont
+            \includegraphics[height=0.9\textheight]{#1}
+            \\\vspace*{-2.5em}\texttt{autoria própria}
+        \end{figure}
+    \end{center}
+}
+%-----------------------------------------------------------------------------------------------
+

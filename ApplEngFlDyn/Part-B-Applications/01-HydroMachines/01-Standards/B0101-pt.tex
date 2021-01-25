@@ -3,11 +3,11 @@
 \immediate\write18{datelog > \jobname.info} % site script for $(date '+%Y-%m-%d %Hh%Mm%Ss')
 \makeatother
 %-----------------------------------------------------------------------------------------------
-\input{root/ApplEngTherm/theme-CNThermSci2.tex}
+\input{root/ApplEngFlDyn/theme-CNThermSci2.tex}
 %-----------------------------------------------------------------------------------------------
-\input{root/ApplEngTherm/packages.tex}
+\input{root/ApplEngFlDyn/packages.tex}
 %-----------------------------------------------------------------------------------------------
-\input{root/ApplEngTherm/commands.tex}
+\input{root/ApplEngFlDyn/commands.tex}
 %-----------------------------------------------------------------------------------------------
 \title{B.01.01 -- Máquinas Hidráulicas de Fluxo}
 \subtitle{Normas e Grandezas Básicas}
@@ -103,6 +103,31 @@
             \item<1-> \alert{VIM} -- International vocabulary of basic and general terms in
                 metrology (ABNT ISO/IEC GUIA 99).
         \end{itemize}
+
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Definições -- IEC 60193}
+%-----------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Subscritos e Símbolos Pertinentes}\vspace*{-2em}
+
+        \setlength{\tabcolsep}{2mm}
+        \noindent\begin{longtable}{cp{110mm}}
+            Símbolo & Definição \\
+            \hline
+            $1$ &
+            Seção de referência de alta pressão \\
+            $2$ &
+            Seção de referência de baixa pressão \\
+            $1'$ &
+            Seção de medição de alta pressão \\
+            $2'$ &
+            Seção de medição de baixa pressão \\
+        \end{longtable}
 
     \end{frame}
     %-------------------------------------------------------------------------------------------

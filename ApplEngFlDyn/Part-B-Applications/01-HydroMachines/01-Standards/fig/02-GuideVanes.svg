@@ -96,9 +96,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.86942192"
-     inkscape:cx="442.09598"
-     inkscape:cy="233.06946"
+     inkscape:zoom="4.5345454"
+     inkscape:cx="629.6734"
+     inkscape:cy="365.80789"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="true"
@@ -663,5 +663,17 @@
         </g>
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.996;fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:1.067;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="550"
+       y="230"
+       id="text4664"
+       transform="translate(310.81744,51.4323)"><tspan
+         sodipodi:role="line"
+         id="tspan4662"
+         x="549.99994"
+         y="230"
+         style="fill:#000000;fill-opacity:1">Palhetas diretrizes: abertura, a, e ângulo de abertura, α.</tspan></text>
   </g>
 </svg>

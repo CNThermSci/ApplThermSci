@@ -24,10 +24,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="113.63044"
-     inkscape:cy="137.34957"
+     inkscape:cx="-205.20537"
+     inkscape:cy="153.62143"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer3"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -392,10 +392,10 @@
     </g>
     <g
        id="g3874"
-       transform="matrix(1.6413463,-0.28941364,0.17364818,0.98480775,-231.64903,79.04317)"
+       transform="matrix(1.5661544,-0.57003359,0.34202015,0.93969262,-263.04139,122.34376)"
        style="stroke-width:0.774597"
-       inkscape:transform-center-x="9.8480785"
-       inkscape:transform-center-y="-3.1081729">
+       inkscape:transform-center-x="9.3969288"
+       inkscape:transform-center-y="2.4451352">
       <path
          style="fill:none;stroke:#000000;stroke-width:2.06559;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 60,-20 0,-10 v 20 l 60,10"
@@ -437,10 +437,10 @@
        d="M -255.18349,70.021645 A 500,500 0 0 1 250.52058,67.288272" />
     <g
        id="g3888"
-       transform="matrix(1.510513,-0.70436378,0.42261827,0.90630779,-534.60916,179.95299)"
+       transform="matrix(1.3652534,-0.95596074,0.57357644,0.81915205,-553.72566,229.90204)"
        style="stroke-width:0.774597"
-       inkscape:transform-center-x="9.056631"
-       inkscape:transform-center-y="4.2220009">
+       inkscape:transform-center-x="8.1859057"
+       inkscape:transform-center-y="5.7305326">
       <path
          style="fill:none;stroke:#000000;stroke-width:2.06559;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 60,-20 0,-10 v 20 l 60,10"
@@ -468,10 +468,10 @@
     </g>
     <g
        id="g3900"
-       transform="matrix(1.6603245,0.14525957,-0.08715575,0.9961947,87.105561,59.98249)"
+       transform="matrix(1.6603245,-0.14525957,0.08715574,0.9961947,45.580691,93.692142)"
        style="stroke-width:0.774597"
-       inkscape:transform-center-x="9.9627301"
-       inkscape:transform-center-y="-1.6011998">
+       inkscape:transform-center-x="10.013431"
+       inkscape:transform-center-y="-5.2977435">
       <path
          style="fill:none;stroke:#000000;stroke-width:2.06559;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="M 60,-20 0,-10 v 20 l 60,10"
@@ -497,5 +497,20 @@
          id="path3896"
          transform="matrix(0.59999999,0,0,1,19.999999,238.24998)" />
     </g>
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.666667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M -30,0 H 330"
+       id="path3960"
+       transform="rotate(4.9999999,-3388.4373,1290.1188)" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.666667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M -30,0 H 330"
+       id="path3963"
+       transform="rotate(-10,1680.8474,1053.7759)" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:0.666667;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M -30,0 H 330"
+       id="path3966"
+       transform="rotate(-25,659.22462,1101.4061)" />
   </g>
 </svg>

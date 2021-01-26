@@ -18,6 +18,34 @@
      id="defs1091">
     <marker
        style="overflow:visible"
+       id="marker4803"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path4801" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker4731"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path4729" />
+    </marker>
+    <marker
+       style="overflow:visible"
        id="marker4343"
        refX="0"
        refY="0"
@@ -96,9 +124,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.5345454"
-     inkscape:cx="629.6734"
-     inkscape:cy="365.80789"
+     inkscape:zoom="1.1336364"
+     inkscape:cx="550"
+     inkscape:cy="275"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="true"
@@ -113,8 +141,8 @@
      inkscape:snap-intersection-paths="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:snap-grids="true"
-     inkscape:snap-to-guides="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false"
      inkscape:object-nodes="false"
      inkscape:snap-others="false">
     <inkscape:grid
@@ -216,6 +244,11 @@
        d="M 160,-40 V 40"
        id="path3898"
        transform="matrix(-0.03831582,-0.00335202,-0.0435802,0.49809725,266.8119,294.7884)" />
+    <path
+       style="opacity:0.996;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.067;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 612.2905,404.79017 86.08418,-47.62475"
+       id="path4666"
+       transform="translate(-2.781692,1.839431)" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -357,13 +390,14 @@
      id="layer3"
      inkscape:label="Layer 2">
     <rect
-       style="opacity:0.996;fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:1.067;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:0.996;fill:#fdfdfd;fill-opacity:0.2;stroke:none;stroke-width:1.067;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4660"
        width="1100"
        height="550"
        x="0"
        y="0"
-       ry="100" />
+       ry="100"
+       rx="100" />
     <g
        id="g4622"
        transform="translate(554.6035,85.347524)">
@@ -639,28 +673,6 @@
              x="-200"
              y="400"
              style="font-size:26.6667px;fill:#000000;fill-opacity:1;stroke:none">α</tspan></text>
-        <g
-           id="g4468">
-          <circle
-             style="opacity:0.996;fill:#999999;fill-opacity:1;stroke:#999999;stroke-width:0.845697;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             id="path4459"
-             cx="-85"
-             cy="135"
-             r="15"
-             transform="matrix(1.2612872,0,0,1.2612872,205.15681,127.19593)" />
-          <text
-             xml:space="preserve"
-             style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.996;fill:none;stroke:#0000ff;stroke-width:0.666667;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-             x="-200"
-             y="400"
-             id="text4463"
-             transform="translate(303.631,-96.488624)"><tspan
-               sodipodi:role="line"
-               id="tspan4461"
-               x="-200"
-               y="400"
-               style="font-size:26.6667px;fill:#000000;fill-opacity:1;stroke:none">a</tspan></text>
-        </g>
       </g>
     </g>
     <text
@@ -675,5 +687,41 @@
          x="549.99994"
          y="230"
          style="fill:#000000;fill-opacity:1">Palhetas diretrizes: abertura, a, e ângulo de abertura, α.</tspan></text>
+    <g
+       id="g4725">
+      <g
+         id="g4468"
+         transform="translate(554.6035,85.347524)">
+        <circle
+           style="opacity:0.996;fill:#999999;fill-opacity:1;stroke:#999999;stroke-width:0.845697;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4459"
+           cx="-85"
+           cy="135"
+           r="15"
+           transform="matrix(1.2612872,0,0,1.2612872,205.15681,127.19593)" />
+        <text
+           xml:space="preserve"
+           style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.996;fill:none;stroke:#0000ff;stroke-width:0.666667;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           x="-200"
+           y="400"
+           id="text4463"
+           transform="translate(303.631,-96.488624)"><tspan
+             sodipodi:role="line"
+             id="tspan4461"
+             x="-200"
+             y="400"
+             style="font-size:26.6667px;fill:#000000;fill-opacity:1;stroke:none">a</tspan></text>
+      </g>
+      <path
+         style="opacity:0.996;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.26757;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4731)"
+         d="m 612.2905,404.79017 86.08418,-47.62475"
+         id="path4727"
+         transform="matrix(0.294,0,0,0.294,429.4954,287.62129)" />
+      <path
+         style="opacity:0.992;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.26757;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4803)"
+         d="m 612.2905,404.79017 86.08418,-47.62475"
+         id="path4799"
+         transform="matrix(0.294,0,0,0.294,490.27083,253.99822)" />
+    </g>
   </g>
 </svg>

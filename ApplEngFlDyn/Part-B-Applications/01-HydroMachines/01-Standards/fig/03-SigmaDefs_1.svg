@@ -17,13 +17,70 @@
   <defs
      id="defs1091">
     <marker
+       style="overflow:visible;"
+       id="marker1591"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path1589" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1581"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1579" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker1571"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path1569" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker1561"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         id="path1559" />
+    </marker>
+    <marker
        style="overflow:visible"
        id="Arrow2Lstart"
        refX="0.0"
        refY="0.0"
        orient="auto"
        inkscape:stockid="Arrow2Lstart"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(1.1) translate(1,0)"
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
@@ -37,7 +94,8 @@
        refY="0.0"
        orient="auto"
        inkscape:stockid="Arrow1Mend"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(0.4) rotate(180) translate(10,0)"
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
@@ -51,7 +109,8 @@
        refY="0.0"
        orient="auto"
        inkscape:stockid="Arrow2Lend"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(1.1) rotate(180) translate(1,0)"
          d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
@@ -95,9 +154,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.694"
-     inkscape:cx="350"
-     inkscape:cy="250"
+     inkscape:zoom="3.388"
+     inkscape:cx="217.72425"
+     inkscape:cy="313.85509"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -111,7 +170,8 @@
      inkscape:snap-bbox="true"
      inkscape:bbox-paths="false"
      inkscape:bbox-nodes="true"
-     inkscape:snap-intersection-paths="true">
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-smooth-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid1646"
@@ -201,13 +261,13 @@
          y="50"
          style="fill:#000000;fill-opacity:1;stroke:none">σ</tspan></text>
     <path
-       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 560,60 H 260 c -40,0 -80,20 -120,60"
        id="path1011"
        transform="translate(0,258.24998)"
        sodipodi:nodetypes="ccc" />
     <path
-       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.66666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4,4;stroke-opacity:1;stroke-dashoffset:0"
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
        d="M 500,60 V 220"
        id="path1013"
        transform="translate(0,238.24998)" />
@@ -234,7 +294,7 @@
        transform="rotate(-90,434.12499,424.12499)"
        sodipodi:nodetypes="cc" />
     <path
-       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.06666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow2Lend);marker-start:url(#Arrow2Lstart)"
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.06667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow2Lstart);marker-end:url(#Arrow2Lend)"
        d="m 400,80 v 40"
        id="path1023"
        transform="translate(0,238.24998)" />
@@ -250,5 +310,177 @@
          x="7.6692305"
          y="50"
          style="text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none">1%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1367"
+       transform="translate(140.52867,420.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1365"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1369">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1375"
+       transform="translate(240.12665,420.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1373"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1371">0</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1381"
+       transform="translate(478.07847,420.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1379"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1377">i</tspan></tspan></text>
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:2.17732;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1571)"
+       d="M -6.6666667,260 H 100"
+       id="path1507"
+       transform="matrix(0,-1.5,1,0,-160,668.24998)"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:2.17732;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker1581)"
+       d="M 60,260 H 393.33333"
+       id="path1509"
+       transform="matrix(1.5,0,0,1,10,418.24998)"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="40"
+       y="50"
+       id="text1515"
+       transform="translate(40.347005,481.57028)"><tspan
+         sodipodi:role="line"
+         id="tspan1513"
+         x="40"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">η<tspan
+   style="font-size:65%;baseline-shift:sub;fill:#000000;fill-opacity:1;stroke:none"
+   id="tspan1511">h</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="40"
+       y="50"
+       id="text1519"
+       transform="translate(551.86199,660.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1517"
+         x="40"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ</tspan></text>
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#0000ff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 560,60 H 260 c -20,0 -20,-10 -40,-10 -20,0 -40,30 -80,70"
+       id="path1521"
+       transform="translate(0,498.24998)"
+       sodipodi:nodetypes="ccsc" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500,60 V 220"
+       id="path1523"
+       transform="translate(0,478.24998)" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500,60 V 220"
+       id="path1525"
+       transform="translate(-240,478.24998)" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500,60 V 220"
+       id="path1527"
+       transform="translate(-340,478.24998)" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500,80 V 250"
+       id="path1529"
+       transform="rotate(-90,534.12499,524.12499)"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.666667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 500,80 V 550"
+       id="path1531"
+       transform="rotate(-90,554.12499,544.12499)"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:0.992;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.06667;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker1561);marker-end:url(#marker1591)"
+       d="m 400,80 v 40"
+       id="path1533"
+       transform="translate(0,478.24998)" />
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:start;text-anchor:start;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="7.6692305"
+       y="50"
+       id="text1537"
+       transform="translate(400.27348,537.14322)"><tspan
+         sodipodi:role="line"
+         id="tspan1535"
+         x="7.6692305"
+         y="50"
+         style="text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none">1%</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1543"
+       transform="translate(140.52867,660.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1541"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1539">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1549"
+       transform="translate(240.12665,660.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1547"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1545">0</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:end;text-anchor:end;opacity:0.992;fill:#fdfdfd;fill-opacity:0.2;stroke:#000000;stroke-width:1.067;stroke-linejoin:round"
+       x="30.446602"
+       y="50"
+       id="text1555"
+       transform="translate(478.07847,660.39843)"><tspan
+         sodipodi:role="line"
+         id="tspan1553"
+         x="30.446602"
+         y="50"
+         style="fill:#000000;fill-opacity:1;stroke:none">σ<tspan
+   style="font-size:65%;text-align:center;baseline-shift:sub;text-anchor:middle"
+   id="tspan1551">i</tspan></tspan></text>
   </g>
 </svg>

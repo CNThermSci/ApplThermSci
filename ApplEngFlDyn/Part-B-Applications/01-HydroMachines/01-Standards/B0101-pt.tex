@@ -401,7 +401,41 @@
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
     \begin{frame}\vspace*{-1em}
-        \figfigH{fig/06-IEC-Adapted.pdf}
+        \begin{center}
+            \begin{figure}
+                \includegraphics[height=0.87\textheight]{fig/06-IEC-Adapted.pdf}
+            \end{figure}
+        \end{center}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Termos de Potência e Torque (Cont.)}\vspace*{-1em}
+        \begin{columns}
+            \column{0.50\textwidth}
+            Para turbinas:
+            \begin{align*}
+                q &= q^{'} + q^{''} \\
+                Q_1 &= Q_m + q \\
+                P_h &= E(\rho Q)_1 \\
+                P &= P_m - P_{Lm} \\
+                \eta_v &= \dfrac{Q_m}{Q_1} \\
+                \eta_h &= \dfrac{P_m}{P_h} \\
+                \eta &= \dfrac{P}{P_h}
+            \end{align*}
+            \column{0.50\textwidth}
+            Para bombas:
+            \begin{align*}
+                q &= q^{'} + q^{''} \\
+                Q_1 &= Q_m - q \\
+                P_h &= E(\rho Q)_1 \\
+                P &= P_m + P_{Lm} \\
+                \eta_v &= \dfrac{Q_1}{Q_m} \\
+                \eta_h &= \dfrac{P_h}{P_m} \\
+                \eta &= \dfrac{P_h}{P}
+            \end{align*}
+        \end{columns}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

@@ -48,6 +48,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/03-SigmaDefs_1.pdf \
 		fig/03-SigmaDefs_2.pdf \
 		fig/06-IEC-Adapted.pdf \
+		fig/06-IEC-Adapted-A.pdf \
+		fig/06-IEC-Adapted-B.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
@@ -58,6 +60,8 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/03-SigmaDefs_1.pdf \
 		fig/03-SigmaDefs_2.pdf \
 		fig/06-IEC-Adapted.pdf \
+		fig/06-IEC-Adapted-A.pdf \
+		fig/06-IEC-Adapted-B.pdf \
 		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+RAW="${1}"
+
+#----------------------------------------------------------------------#
+#                            Minimum Checks                            #
+#----------------------------------------------------------------------#
+
+function error(){
+    echo "ERROR: $@" >&2
+}
+
+if test -z "${RAW}"; then
+    error "Please provide a new directory name argument."
+    exit 1
+fi
+
+NEW="$(echo $RAW | sed 's/\([0-9]\{2\}-[a-zA-Z]*\).*/\1/g')"
+
+if test "${#NEW}" -lt 4; then
+    error 'New dir name MUST be in the format "##-Name", i.e., "[0-9]{2}-[a-zA-Z]*".'
+    exit 2
+fi
+
+if test -e "${NEW}"; then
+    error "${NEW} already exists. Aborting."
+    exit 3
+fi
+
+#----------------------------------------------------------------------#
+#                          Parsed Parameters                           #
+#----------------------------------------------------------------------#
+
+CUR="$(basename $(pwd))"
+CURNUM="${CUR:0:2}"
+CURNAM="${CUR:3}"
+
+PAR="$(basename $(pwd | sed 's|/'$CUR'||g'))"
+PARLET="${PAR:5:1}"
+
+NEWNUM="${NEW:0:2}"
+NEWNAM="${NEW:3}"
+
+PREFIX="${PARLET}${CURNUM}${NEWNUM}"
+
+echo "INFO: Creating new '$NEW' with the '$PREFIX' prefix."
+
+#----------------------------------------------------------------------#
+#                               Make New                               #
+#----------------------------------------------------------------------#
+
+mkdir "${NEW}"
+cd "${NEW}"
+
+tar jxvf ../../../Part-A-Fundamentals/00-Template/00-Template/template.tar.bz2
+
+for S in A0000*; do
+    D="${PREFIX}${S:5}"
+    mv -v "$S" "$D"
+done
+
+sed -i s/A0000/${PREFIX}/g *tex Makefile gitter
+

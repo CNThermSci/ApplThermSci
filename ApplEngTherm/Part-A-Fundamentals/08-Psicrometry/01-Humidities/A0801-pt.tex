@@ -50,39 +50,41 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
+    \newcommand{\THISFRAMECONTENTS}{
+        \begin{itemize}
+            \item<1-> \alert{Ar atmosférico} é uma mistura de \textcolor{black}{\ce{N2},
+                \ce{O2},} outros gases e \alert{vapor d'água};
+            \item<2-> A quantidade de outros gases e vapor d'água é pequena;
+            \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
+            \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
+                (ii)~\alert{vapor d'água};
+            \item<5-> Já que a composição do ar seco em tal modelo é estável;
+            \item<6-> E as interações \alert{energéticas} do \alert{vapor d'água} serem
+                \alert{importantes} e \alert{distintas}; \\[\smallskipamount]
+            \begin{itemize}
+                \item<7-> Maior \alert{calor específico}: $c_{P,v}$ é \alert{$81\%$ maior} que
+                    $c_{P,a}$ (base mássica): \\[\smallskipamount]
+                \item<8-> $c_{P,a} \simeq \unit{1,005}{\kilo\joule\per\kilogram}$
+                    $c_{P,v} \simeq \unit{1,82}{\kilo\joule\per\kilogram}$; \\[\smallskipamount]
+                \item<9-> \alert{Calor latente}: condensação e evaporação.
+            \end{itemize}
+        \end{itemize}
+    }
+    % Presentation
     {\usebackgroundtemplate{\parbox{\paperwidth}{%
         \vspace*{1sp}\centering
         \includegraphics[height=\paperheight]{root/../art/pexels-neosiam-601798.jpg}
     }}
     \begin{frame}<handout:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
-        \begin{itemize}
-            \item<1-> \alert{Ar atmosférico} é uma mistura de \ce{N2}, \ce{O2}, outros gases e
-                \alert{vapor d'água};
-            \item<2-> A quantidade de outros gases e vapor d'água é pequena;
-            \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
-            \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
-                (ii)~\alert{vapor d'água};
-            \item<5-> Já que a composição do ar seco em tal modelo é estável;
-            \item<6-> E as interações \alert{energéticas} do \alert{vapor d'água} serem
-                \alert{importantes} e \alert{distintas};
-        \end{itemize}
+        \THISFRAMECONTENTS
     \end{frame}}
+    % Handout
     {\usebackgroundtemplate{\parbox{\paperwidth}{%
         \vspace*{1sp}\centering
         \includegraphics[height=\paperheight]{root/../art/wo-pexels-neosiam-601798.jpg}
     }}
     \begin{frame}<beamer:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
-        \begin{itemize}
-            \item<1-> \alert{Ar atmosférico} é uma mistura de \ce{N2}, \ce{O2}, outros gases e
-                \alert{vapor d'água};
-            \item<2-> A quantidade de outros gases e vapor d'água é pequena;
-            \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
-            \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
-                (ii)~\alert{vapor d'água};
-            \item<5-> Já que a composição do ar seco em tal modelo é estável;
-            \item<6-> E as interações \alert{energéticas} do \alert{vapor d'água} serem
-                \alert{importantes} e \alert{distintas};
-        \end{itemize}
+        \THISFRAMECONTENTS
     \end{frame}}
     %-------------------------------------------------------------------------------------------
 

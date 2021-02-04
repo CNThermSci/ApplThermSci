@@ -41,31 +41,49 @@
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Modelo de Seção}
+\section{Definições}
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\subsection{Modelo de Subseção}
+\subsection{Ar Seco e Ar Atmosférico}
 %-----------------------------------------------------------------------------------------------
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de Slide}\vspace*{-2em}
-        \begin{columns}
-        \column{0.55\textwidth}
-            Coluna com 55\% de largura:\\[\smallskipamount]
-            \begin{itemize}
-                \item<1-> Item 1;
-                \item<2-> Item 2;
-                \item<3-> Item 3.
-            \end{itemize}
-        \column{0.45\textwidth}
-            Coluna com 45\% de largura.
-            \begin{figure}
-                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
-            \end{figure}
-        \end{columns}
-    \end{frame}
+    {\usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering
+        \includegraphics[height=\paperheight]{root/../art/pexels-neosiam-601798.jpg}
+    }}
+    \begin{frame}<handout:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
+        \begin{itemize}
+            \item<1-> \alert{Ar atmosférico} é uma mistura de \ce{N2}, \ce{O2}, outros gases e
+                \alert{vapor d'água};
+            \item<2-> A quantidade de outros gases e vapor d'água é pequena;
+            \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
+            \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
+                (ii)~\alert{vapor d'água};
+            \item<5-> Já que a composição do ar seco em tal modelo é estável;
+            \item<6-> E as interações \alert{energéticas} do \alert{vapor d'água} serem
+                \alert{importantes} e \alert{distintas};
+        \end{itemize}
+    \end{frame}}
+    {\usebackgroundtemplate{\parbox{\paperwidth}{%
+        \vspace*{1sp}\centering
+        \includegraphics[height=\paperheight]{root/../art/wo-pexels-neosiam-601798.jpg}
+    }}
+    \begin{frame}<beamer:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
+        \begin{itemize}
+            \item<1-> \alert{Ar atmosférico} é uma mistura de \ce{N2}, \ce{O2}, outros gases e
+                \alert{vapor d'água};
+            \item<2-> A quantidade de outros gases e vapor d'água é pequena;
+            \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
+            \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
+                (ii)~\alert{vapor d'água};
+            \item<5-> Já que a composição do ar seco em tal modelo é estável;
+            \item<6-> E as interações \alert{energéticas} do \alert{vapor d'água} serem
+                \alert{importantes} e \alert{distintas};
+        \end{itemize}
+    \end{frame}}
     %-------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
@@ -87,7 +105,7 @@
     %------------------------------------------------------------------------------------------
 
     % Finishes with stunning image, with credit
-    \ArtEndWSE{pexels-pixabay-268917}{jpg}{txt}
+    \ArtEndW{pexels-pixabay-268917}{jpg}{txt}
 
 %-----------------------------------------------------------------------------------------------
 \end{document}

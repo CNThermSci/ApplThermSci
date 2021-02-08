@@ -75,7 +75,7 @@
         \vspace*{1sp}\centering
         \includegraphics[height=\paperheight]{root/../art/pexels-neosiam-601798.jpg}
     }}
-    \begin{frame}<handout:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
+    \begin{frame}<handout:0>{Ar Seco e Ar Atmosférico}\vspace*{-0em}
         \THISFRAMECONTENTS
     \end{frame}}
     % Handout
@@ -83,13 +83,13 @@
         \vspace*{1sp}\centering
         \includegraphics[height=\paperheight]{root/../art/wo-pexels-neosiam-601798.jpg}
     }}
-    \begin{frame}<beamer:0>{Ar Seco e Ar Atmosférico}\vspace*{-2em}
+    \begin{frame}<beamer:0>{Ar Seco e Ar Atmosférico}\vspace*{-0em}
         \THISFRAMECONTENTS
     \end{frame}}
     %-------------------------------------------------------------------------------------------
 
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Ar Seco e Ar Atmosférico --- Aproximações}\vspace*{-2em}
+    \begin{frame}{Ar Seco e Ar Atmosférico --- Aproximações}\vspace*{-0em}
         Nas \alert{estreitas faixas de temperatura} pertinentes ao \alert{condicionamento de
         ar}, as seguintes aproximações são aceitáveis (na quais $\mathsf{T}$ estão em \celsius):
         \begin{align*}
@@ -114,8 +114,12 @@
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+%-----------------------------------------------------------------------------------------------
+\subsection{Pressão de Vapor}
+%-----------------------------------------------------------------------------------------------
+
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Pressão de Vapor}\vspace*{-2em}
+    \begin{frame}{Pressão de Vapor}\vspace*{-0em}
         Para \alert{comportamento $P-V-T$ ideal} da mistura, tem-se a \alert{pressão
         componente}:
         \begin{align*}
@@ -132,6 +136,56 @@
                 P = P_a + P_v
             }.
         \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
+\subsection{Umidade Específica e Relativa do Ar}
+%-----------------------------------------------------------------------------------------------
+
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Umidade Específica do Ar}\vspace*{-0em}
+        A razão entre as massas de vapor d'água pela de ar seco no ar atmosférico é chamada de
+        \alert{umidade absoluta} ou \alert{específica}\footnote{Esta razão também é chamada de
+        \alert{relação de umidade}.}:
+        \begin{align*}
+            \alert{\omega} &
+            \alert{\equiv\frac{m_v}{m_a}}
+            = \frac{P_vV/R_vT}{P_aV/R_aT} = \frac{R_a}{R_v}\frac{P_v}{P_a}
+            \\[\medskipamount]
+            \alert{\omega} &
+            \alert{= \frac{M_v}{M_a}\frac{P_v}{P_a}}
+            \simeq
+            \frac{\unit{18,015}{\kilogram\per\kilo\mole}}{\unit{28,97}{\kilogram\per\kilo\mole}}
+            \frac{P_v}{P_a}
+            \alert{\simeq 0,622\frac{P_v}{P_a}},
+        \end{align*}
+        ou, substituindo $P$ em $P_a$,
+        \begin{equation*}
+            \alert{
+                \omega = \frac{0,622P_v}{P-P_v}\qquad
+                \mbox{($\kilogram$ de vap.$/\kilogram$ de ar seco)}
+            }.
+        \end{equation*}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Umidade Relativa do Ar}\vspace*{-0em}
+        \begin{itemize}
+            \item<1-> A máxima umidade do ar a uma certa $T$ ocorre quando o vapor é
+                \alert{saturado};
+            \item<1-> A saber, quando \alert{$P_v = P_g = P_{\mathrm{sat}\,@\,T}$};
+            \item<1-> Na aplicação de \alert{conforto térmico}, a \alert{unidade relativa},
+                \alert{$\phi$} é mais significativa:
+        \end{itemize}
+        \begin{align*}
+            \alert{\phi} &
+            \alert{\equiv \frac{m_v}{m_g}}
+            \\[\medskipamount]
+            &
+            \alert{=\frac{P_vV/R_vT}{P_gV/R_vT} = \frac{P_v}{P_g}}.
+        \end{align*}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 

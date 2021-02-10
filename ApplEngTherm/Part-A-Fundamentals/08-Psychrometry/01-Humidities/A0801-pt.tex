@@ -234,11 +234,12 @@
 %-----------------------------------------------------------------------------------------------
 
     %-------------------------------------------------------------------------------------------
-    \begin{frame}[allowframebreaks]{Ar Atmosférico --- Em Grupos}\vspace*{-0em}
+    \begin{frame}[allowframebreaks]{Ar Atmosférico Seco -- Em Grupos -- }\vspace*{-0em}
         
         Este trabalho objetiva gerar \alert{ilustrações}, \alert{fidedignas em escala}, da
         composição média do \alert{ar seco} da atmosfera terrestre abaixo dos
-        \alert{$\unit{50}{\kilo\meter}$ de altitude}.\\[\medskipamount]
+        \alert{$\unit{50}{\kilo\meter}$ de altitude}, na forma de \alert{imagens}.
+        \\[\medskipamount]
 
         \begin{itemize}
             \item A \alert{Troposfera} vai do nível do mar \alert{até $\unit{8\mbox{ a }15}%
@@ -249,8 +250,9 @@
             \item {\scriptsize\tt
                 https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf}
             \item A parcela de \alert{Ozônio (\ce{O3})} será agregada de outra fonte;
-            \item A soma das frações deverá ser normalizada para $\unit{100}{\%}$;
-            \item Gerar um notebook aberto ({\tt CC-BY-NC}) que produza as ilustrações.
+            \item A soma das frações deverá ser \alert{normalizada para $\unit{100}{\%}$};
+            \item Gerar um \alert{notebook} aberto (\alert{\tt CC-BY-NC}) que produza as
+                ilustrações.
         \end{itemize}
 
         \pagebreak
@@ -259,9 +261,12 @@
             \column{0.6\textwidth}
             \begin{itemize}
                 \item Explicar o que são as \alert{Dobson Units (DU)};
-                \item A parcela de \alert{Ozônio (\ce{O3})} será obtida por integração:
-                \item A integração numérica deverá ser documentada em notebook aberto;
-                \item Utilizar método de Simpson 3/8 composto ou melhor.
+                \item A parcela de \alert{Ozônio (\ce{O3})} será obtida por \alert{integração}
+                    dos dados do gráfico ao lado;
+                \item A documentação \alert{concisa} da integração numérica constará do
+                    \alert{notebook aberto};
+                \item Por exemplo, na forma de uma \alert{função} modular documentada;
+                \item Utilizar método de \alert{Simpson 3/8 composto} ou melhor.
             \end{itemize}
             \column{0.4\textwidth}
             \wwwfig{1-01}{jpg}{url}
@@ -270,17 +275,30 @@
         \pagebreak
 
         \begin{columns}
-            \column{0.7\textwidth}
+            \column{0.70\textwidth}
             \begin{itemize}
-                \item Ref.~programação de \alert{imagens} e \alert{notebooks} no curso:
+                \item Referência de programação de \alert{imagens} com utilização de
+                    \alert{notebooks} encontram-se no curso abaixo:
                 \item {\scriptsize\tt https://computationalthinking.mit.edu/Fall20};
-                \item Inclui \alert{instalações} ({\tt Julia, Pluto}).
-                \item Notebook deve gerar ilustrações com gases \alert{agrupados} e
-                    \alert{dispersos}, e permitir \alert{seleção de camadas} da atmosfera (km
-                    inteiros).
+                \item O qual também inclui \alert{instalações} (linguagem {\tt Julia}, notebook
+                    {\tt Pluto}).
+                \item Notebook deve gerar imagens ilustrativas das proporções dos gases com
+                    gases \alert{agrupados} e \alert{dispersos}, assim como permitir
+                    \alert{seleção de camadas} da atmosfera (km inteiros).
             \end{itemize}
-            \column{0.3\textwidth}
-            \wwwfig{julia-logo}{pdf}{url}
+            \column{0.30\textwidth}
+            \begin{center}
+                \begin{figure}
+                    \fontsize{3.0}{4}\selectfont
+                    \includegraphics[width=0.8\textwidth]{www/julia-logo.pdf}
+                    \\\vspace*{-2.5em}\verbatiminput{www/julia-logo.url}
+                \end{figure}
+                \begin{figure}
+                    \fontsize{3.0}{4}\selectfont
+                    \includegraphics[width=0.8\textwidth]{www/pluto-logo.pdf}
+                    \\\vspace*{-2.5em}\verbatiminput{www/pluto-logo.url}
+                \end{figure}
+            \end{center}
         \end{columns}
 
     \end{frame}

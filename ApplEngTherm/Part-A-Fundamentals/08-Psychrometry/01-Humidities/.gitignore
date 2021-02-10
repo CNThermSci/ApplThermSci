@@ -21,4 +21,7 @@ www/*pdf
 
 # Downloaded figures
 www/*svg
+www/*jpg
+www/*jpeg
+www/*png
 

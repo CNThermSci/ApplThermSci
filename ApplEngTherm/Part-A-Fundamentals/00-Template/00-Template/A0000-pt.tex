@@ -41,6 +41,16 @@
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
+\frame{%
+    \hfill\par
+    % !bib LST 2>/dev/null | paste -s -d',' | sed 's|,|, |g' | j -i8 96 
+    Esta apresentação baseia-se nas referências~\cite{2013-CengelYA+BolesMA-AMGH},
+    \alert{Seções~14-1 a 14-2} (tópicos de leitura) e~\cite{2016-FentonDL-ASHRAE}.
+    \hfill
+}
+%-----------------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------------
 \section{Modelo de Seção}
 %-----------------------------------------------------------------------------------------------
 
@@ -69,20 +79,14 @@
     %-------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Tópicos de Leitura}
+\section{Referências e Tópicos de Leitura}
 %-----------------------------------------------------------------------------------------------
 
     %------------------------------------------------------------------------------------------
-    \begin{frame}[allowframebreaks]{Tópicos de Leitura}
-        \begin{thebibliography}{Çengel, Y.~A., 2013}
-            \bibitem[Çengel, Y.~A., 2013]{2013-CengelYA+BolesMA-AMGH}
-                Çengel, Y.~A. e Boles, M.~A.
-                \newblock{%
-                    {\em Termodinâmica $7^\mathrm{a}\!$ Edição\/}.
-                    \alert{Seções~0-0 a 0-0.}
-                }
-                \newblock{\footnotesize AMGH. Porto Alegre. ISBN 978-85-8055-200-3.}
-        \end{thebibliography}
+    \begin{frame}[allowframebreaks]{Referências -- }
+        \bibliographystyle{unsrt}
+        \setbeamertemplate{bibliography item}{\insertbiblabel}
+        \bibliography{bibfile.bib}
     \end{frame}
     %------------------------------------------------------------------------------------------
 

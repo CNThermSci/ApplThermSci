@@ -136,7 +136,7 @@ function _baseLinks() {
 }
 
 function _dbase() {
-    find -L $(baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+    find -L $(_baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
 }
 
 function dbase() {
@@ -154,7 +154,7 @@ function dbfiles() {
 }
 
 function keysOf() {
-    FULPTH="$(find -L $(baseLinks) -maxdepth 1 -name ${1}.bib)"
+    FULPTH="$(find -L $(_baseLinks) -maxdepth 1 -name ${1}.bib)"
     grep '^@' "${FULPTH}" |\
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
@@ -177,7 +177,7 @@ function addBib() {
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
                 done
-                cat $(find -L $(baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
+                cat $(find -L $(_baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
                 echo "" >> "${THEBIB}"
             fi
         done

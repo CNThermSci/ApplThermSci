@@ -40,12 +40,11 @@
 \frame{\tableofcontents}
 %-----------------------------------------------------------------------------------------------
 
-\frame{
+\frame{%
     \hfill\par
-    %\vspace*{0.5\textheight}
     % !bib LST 2>/dev/null | paste -s -d',' | sed 's|,|, |g' | j -i8 96 
     Esta apresentação baseia-se nas referências~\cite{2013-CengelYA+BolesMA-AMGH},
-    \alert{Seções~14-1 a 14-2}---tópicos de leitura---e~\cite{2016-FentonDL-ASHRAE}.
+    \alert{Seções~14-1 a 14-2} (tópicos de leitura) e~\cite{2016-FentonDL-ASHRAE}.
     \hfill
 }
 
@@ -62,7 +61,8 @@
     \newcommand{\THISFRAMECONTENTS}{
         \begin{itemize}
             \item<1-> \alert{Ar atmosférico} é uma mistura de \textcolor{black}{\ce{N2},
-                \ce{O2},} outros gases e \alert{vapor d'água};
+                \ce{O2},} outros gases~\cite{1976-NASA-TechRep-US_Std_Atm} e \alert{vapor
+                d'água};
             \item<2-> A quantidade de outros gases e vapor d'água é pequena;
             \item<3-> Ar \alert{isento} de vapor d'água é chamado de \alert{ar seco};
             \item<4-> Ar atmosférico é modelado como uma mistura de (i)~\alert{ar seco} e
@@ -254,11 +254,12 @@
         \\[\medskipamount]
 
         \begin{itemize}
-            \item A \alert{Troposfera} vai do nível do mar \alert{até $\unit{8\mbox{ a }15}%
-                {\kilo\meter}$};
-            \item A \alert{Estratosfera} vai da Troposfera \alert{até $\unit{50\mbox{ a }60}%
-                {\kilo\meter}$};
-            \item A composição \alert{majoritária} seguirá a \alert{Tabela~25} da ref.~abaixo:
+            \item A \alert{Troposfera} vai do nível do mar \alert{até $\unit{\sim{8}\mbox{ a
+                }15}{\kilo\meter}$};
+            \item A \alert{Estratosfera} vai da Troposfera \alert{até $\unit{\sim{50}\mbox{ a
+                }60}{\kilo\meter}$};
+            \item A composição \alert{majoritária} seguirá a \alert{Tabela~3} da
+                ref.~\cite{1976-NASA-TechRep-US_Std_Atm}:
             \item {\scriptsize\tt
                 https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf}
             \item A parcela de \alert{Ozônio (\ce{O3})} será agregada de outra fonte;

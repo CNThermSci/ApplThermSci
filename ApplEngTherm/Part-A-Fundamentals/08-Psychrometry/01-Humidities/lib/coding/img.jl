@@ -68,7 +68,11 @@ Basic image creation from data
 """
 
 # ╔═╡ 6a8a5acc-6c03-11eb-1397-5fc84ae82bc9
-[fill(red, (1, 3)) fill(gre, (1, 1)) fill(blu, (1, 2))]
+hcat(
+	fill(red, (1, 3)),
+	fill(gre, (1, 1)),
+	fill(blu, (1, 2))
+)
 
 # ╔═╡ 36fe3808-6c04-11eb-255c-5ba0ca56c2af
 begin
@@ -83,8 +87,9 @@ end
 # ╔═╡ 9605b172-6c02-11eb-282a-b9701d702104
 imgPars = Dict(
 	:col => Dict(
-		:O2 => (RGB(0.5, 0.5, 1.0), 0.21),
-		:N2 => (RGB(0.8, 0.8, 0.8), 0.79),
+		:N2 => (RGB(0.8, 0.8, 0.8), 0.78084),
+		:O2 => (RGB(0.5, 0.5, 1.0), 0.209476),
+		:Ar => (RGB(0.8, 0.5, 0.0), 0.00934),
 	),
 	:sx => 128,
 	:sy => 64,
@@ -101,7 +106,11 @@ begin
 		K => Int(round(imgPars[:col][K][2] * imgSiz / nFact))
 			for K in keys(imgPars[:col])
 	)
-	iPixs, imgSiz - sum(values(iPixs))
+	diff = sum(values(iPixs)) - imgSiz
+	if diff != 0
+		iPixs[:N2] -= diff
+	end
+	iPixs
 end
 
 # ╔═╡ 8a0775f2-6c07-11eb-180a-170ba9524c94

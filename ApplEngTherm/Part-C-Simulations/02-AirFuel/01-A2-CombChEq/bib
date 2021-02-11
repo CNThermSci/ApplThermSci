@@ -43,6 +43,7 @@ SYNOPSIS
                 Backs up  ./bibfile.bib  into  ./bibfile.bkp,  then  resets  the
                 ./bibfile.bib into an empty file.
             SORT
+                Sorts entries in ./bibfile.bib by key.
 
 AUTHOR
     Naaktgeboren, C.
@@ -130,8 +131,12 @@ function lstBib() {
     fi
 }
 
+function _baseLinks() {
+    find . -maxdepth 1 -type l -regex "./[A-Z]*" | sed 's|^./||g'
+}
+
 function _dbase() {
-    find -L stdRef -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+    find -L $(baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
 }
 
 function dbase() {
@@ -145,11 +150,11 @@ function dbase() {
 }
 
 function dbfiles() {
-    for i in $(dbase); do basename "${i}"; done
+    for i in $(dbase "$@"); do basename "${i}"; done
 }
 
 function keysOf() {
-    FULPTH="$(find -L stdRef -name ${1}.bib)"
+    FULPTH="$(find -L $(baseLinks) -maxdepth 1 -name ${1}.bib)"
     grep '^@' "${FULPTH}" |\
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
@@ -172,7 +177,7 @@ function addBib() {
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
                 done
-                cat $(find -L stdRef -name "${BIBSRC}.bib") >> "${THEBIB}"
+                cat $(find -L $(baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
                 echo "" >> "${THEBIB}"
             fi
         done

@@ -16,6 +16,7 @@ Generates images with scattered gas molecules
 """
 
 # ╔═╡ 0776e6f0-6c15-11eb-35db-8ff1771b8d60
+# Image background
 BG = RGB(0.0, 0.0, 0.0)
 
 # ╔═╡ 07560926-6c15-11eb-2366-b19e1dbe6538

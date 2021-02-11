@@ -105,7 +105,19 @@ begin
 end
 
 # ╔═╡ 8a0775f2-6c07-11eb-180a-170ba9524c94
+TMP = reshape(
+	reduce(
+		vcat, [
+			fill(imgPars[:col][GAS][1], iPixs[GAS])
+				for GAS in keys(imgPars[:col])
+		]
+	),
+	imgPars[:sy],
+	imgPars[:sx]
+)
 
+# ╔═╡ cc8f5572-6c0a-11eb-2923-65be641e0735
+shuffle(TMP)
 
 # ╔═╡ Cell order:
 # ╟─b31badd0-6bf7-11eb-266b-cb57b725746e
@@ -127,3 +139,4 @@ end
 # ╠═9605b172-6c02-11eb-282a-b9701d702104
 # ╠═dcc6362c-6c05-11eb-1c9f-01dca609ba05
 # ╠═8a0775f2-6c07-11eb-180a-170ba9524c94
+# ╠═cc8f5572-6c0a-11eb-2923-65be641e0735

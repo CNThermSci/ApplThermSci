@@ -13,35 +13,48 @@ SYNOPSIS
         where COMMAND is one of:
             help (no args)
                 Print this and exits.
-            LIST (no args)
-                Lists keys on the default bibfile: ./bibfile.bib.
-            LST (no args)
-                Machine-readable list of keys.
-            BASE (no args)
-                lists the accessible bibliography database, one file per line.
+            BASE [<args>]
+                Lists the accessible bibliography database, one file  per  line,
+                optionally filtering by <args>.
+            LIST [<args>]
+                Lists keys on the default bibfile ./bibfile.bib initializing  it
+                if needed, optionally filtering by <args>.
+            LST [<args>]
+                Generates a machine-readable list of keys from  default  bibfile
+                ./bibfile.bib initializing it if needed, optionally filtering by
+                <args>.
             ADD <bibpats>
-                Backs  up  ./bibfile.bib  into  ./bibfile.bkp,  then  adds   all
-                bibliographic entries  from  files  matching  each  one  of  the
-                <bibpats>  (no  wildcards),  if   existing,   to   the   default
-                ./bibfile.bib.
+                Adds all bibliographic entries from files matching each  one  of
+                the <bibpats>  (no  wildcards),  if  existing,  to  the  default
+                ./bibfile.bib, AFTER either (i) backing it up, if  existing,  or
+                (ii) restoring  it  from  its  backup,  if  existing,  or  (iii)
+                initializing both files if non-existent.
+            BACKUP
+                Either (i) backup the default  ./bibfile.bib,  if  existing,  or
+                (ii)  restore  it  from  its  backup,  if  existing,  or   (iii)
+                initialize both files if non-existent.
             REM <bibpats>
-                Backs up ./bibfile.bib into  ./bibfile.bkp,  then  rebuilds  the
-                default ./bibfile.bib from scratch from previous list  of  keys,
-                avoiding each one of the <bibpats> patterns (no  wildcards).
+                Rebuilds the default ./bibfile.bib from  scratch  from  previous
+                list of keys, avoiding each one of the  <bibpats>  patterns  (no
+                wildcards), AFTER either (i) backing it up, if existing, or (ii)
+                restoring it from its backup, if existing, or (iii) initializing
+                both files if non-existent.
             RESET
                 Backs up  ./bibfile.bib  into  ./bibfile.bkp,  then  resets  the
                 ./bibfile.bib into an empty file.
+            SORT
+                Sorts entries in ./bibfile.bib by key.
 
 AUTHOR
     Naaktgeboren, C.
 ____EOF
-    exit ${1:--1};
+    exit ${1:--1}
 }
 
 # Argument check
 if test "a${1}" == "a"; then
     echo -e "ERROR: not enough arguments.\n"
-    help -1;
+    help -1
 fi
 
 # Functionality
@@ -56,52 +69,88 @@ function hasBib() { test -f "${THEBIB}"; }
 function hasBkp() { test -f "${BKPBIB}"; }
 function hasBoth() { hasBib && hasBkp; }
 
-function letItBib() {
+function preQuery() {
     if hasBib; then
-        echo -e "INFO: Existing '${THEBIB}'";
+        echo -e "INFO: Existing '${THEBIB}'" 1>&2
     elif hasBkp; then
-        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'"
-        cp "${BKPBIB}" "${THEBIB}";
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'" 1>&2
+        cp -f "${BKPBIB}" "${THEBIB}" 1>&2
     else
-        echo -e "INFO: Created empty '${THEBIB}'"
-        touch "${THEBIB}";
-    fi;
+        echo -e "INFO: Created empty '${THEBIB}'" 1>&2
+        cp -f /dev/null "${THEBIB}" 1>&2
+    fi
+}
+
+function preChange() {
+    if hasBib; then
+        echo -e "INFO: Backing up existing '${THEBIB}' into '${BKPBIB}'" 1>&2
+        cp -f "${THEBIB}" "${BKPBIB}" 1>&2
+    elif hasBkp; then
+        echo -e "INFO: Restored missing '${THEBIB}' from '${BKPBIB}'" 1>&2
+        cp -f "${BKPBIB}" "${THEBIB}" 1>&2
+    else
+        echo -e "INFO: Missing '${THEBIB}' and '${BKPBIB}'. Created empty ones." 1>&2
+        cp -f /dev/null "${THEBIB}" 1>&2
+        cp -f /dev/null "${BKPBIB}" 1>&2
+    fi
+}
+
+function _listBib() {
+    uline "Key list for file '${THEBIB}':"
+    grep '^@' "${THEBIB}" |\
+        grep -v '^@Comment' |\
+        sort -n |\
+        sed 's|^|\t|g'
+}
+
+function _lstBib() {
+    grep '^@' "${THEBIB}" |\
+        grep -v '^@Comment' |\
+        sed 's|^.*{||g' |\
+        sed 's|, *$||g' |\
+        sort -n
 }
 
 function listBib() {
-    if hasBib; then
-        uline "Key list for file '${THEBIB}':"
-        grep '^@' "${THEBIB}" |\
-            grep -v '^@Comment' |\
-            sort -n |\
-            sed 's|^|\t|g';
+    if [ "$#" -lt 1 ]; then
+        _listBib
     else
-        exit -1;
-    fi;
+        p="$1"
+        shift
+        listBib | grep "$p"
+    fi
 }
 
 function lstBib() {
-    if hasBib; then
-        grep '^@' "${THEBIB}" |\
-            grep -v '^@Comment' |\
-            sed 's|^.*{||g' |\
-            sed 's|, *$||g' |\
-            sort -n;
+    if [ "$#" -lt 1 ]; then
+        _lstBib
     else
-        exit -1;
-    fi;
+        p="$1"
+        shift
+        lstBib "$@" | grep "$p"
+    fi
 }
 
-function baseLinks() {
+function _baseLinks() {
     find . -maxdepth 1 -type l -regex "./[A-Z]*" | sed 's|^./||g'
 }
 
-function dbase() {
+function _dbase() {
     find -L $(baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
 }
 
+function dbase() {
+    if [ "$#" -lt 1 ]; then
+        _dbase
+    else
+        p="$1"
+        shift
+        dbase "$@" | grep "$p"
+    fi
+}
+
 function dbfiles() {
-    for i in $(dbase); do basename "${i}"; done
+    for i in $(dbase "$@"); do basename "${i}"; done
 }
 
 function keysOf() {
@@ -110,26 +159,26 @@ function keysOf() {
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
         sed 's|, *$||g' |\
-        sort -n;
+        sort -n
 }
 
 function addBib() {
     if [ "$#" -lt 1 ]; then
-        echo -e "ERROR: Missing arguments to ADD.\n"
-        help -1;
+        echo -e "ERROR: Missing arguments to ADD.\n" 1>&2
+        help -1
     fi
     for BIBPAT in "$@"; do
         for BIBSRC in $(dbfiles | sed "s|\.bib$||g" | grep "${BIBPAT}"); do
-            if grep -q "$(keysOf ${BIBSRC})" "${THEBIB}"; then
+            if grep -q "$(keysOf ${BIBSRC} | sed 's|$|,|g')" "${THEBIB}"; then
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: x '${BIBKEY}' (from ${BIBSRC})."
-                done;
+                done
             else
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
-                done;
+                done
                 cat $(find -L $(baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
-                echo "" >> "${THEBIB}";
+                echo "" >> "${THEBIB}"
             fi
         done
     done
@@ -144,29 +193,56 @@ function remBib() {
     addBib "${DIFKEY}"
 }
 
+function sortBib() {
+    echo -e "INFO: Sorting '${THEBIB}'"
+    remBib "$(md5sum ${THEBIB} | cut -f1 -d' ')"
+}
+
 # MAIN - Parse commands
 COMM="${1}"
 shift
 case "${COMM}" in
+    #----------------------------------------------------------------------#
+    #                              No-DB opts                              #
+    #----------------------------------------------------------------------#
     "help" | "HELP")
         help 0;;
-    "LIST")
-        listBib;;
-    "LST")
-        lstBib;;
+    #----------------------------------------------------------------------#
+    #                           Remote DBs opts                            #
+    #----------------------------------------------------------------------#
     "BASE")
-        dbase;;
+        dbase "$@";;
+    #----------------------------------------------------------------------#
+    #                              Query opts                              #
+    #----------------------------------------------------------------------#
+    "LIST")
+        preQuery
+        listBib "$@";;
+    "LST")
+        preQuery
+        lstBib "$@";;
+    #----------------------------------------------------------------------#
+    #                            Local DB opts                             #
+    #----------------------------------------------------------------------#
     "ADD")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         addBib "$@";;
+    "BACKUP")
+        preChange;;
     "REM")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         remBib "$@";;
     "RESET")
-        cp "${THEBIB}" "${BKPBIB}"
+        preChange
         cp /dev/null "${THEBIB}";;
+    "SORT")
+        preChange
+        sortBib "$@";;
+    #----------------------------------------------------------------------#
+    #                               Invalid                                #
+    #----------------------------------------------------------------------#
     *)
-        echo -e "ERROR: invalid command: '${1}'.\n"
+        echo -e "ERROR: invalid command: '${1}'.\n" 1>&2
         help -1;;
 esac
 

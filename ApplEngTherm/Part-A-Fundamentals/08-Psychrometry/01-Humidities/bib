@@ -93,11 +93,11 @@ function lstBib() {
 }
 
 function baseLinks() {
-    find . -type l -regex "./[A-Z]*" | sed 's|^./||g'
+    find . -maxdepth 1 -type l -regex "./[A-Z]*" | sed 's|^./||g'
 }
 
 function dbase() {
-    find -L $(baseLinks) -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+    find -L $(baseLinks) -maxdepth 1 -name '*\.bib' | grep -v "${THEBIB}" | sort -n
 }
 
 function dbfiles() {
@@ -105,7 +105,7 @@ function dbfiles() {
 }
 
 function keysOf() {
-    FULPTH="$(find -L . -name ${1}.bib)"
+    FULPTH="$(find -L $(baseLinks) -maxdepth 1 -name ${1}.bib)"
     grep '^@' "${FULPTH}" |\
         grep -v '^@Comment' |\
         sed 's|^.*{||g' |\
@@ -128,7 +128,7 @@ function addBib() {
                 for BIBKEY in $(keysOf ${BIBSRC}); do
                     echo -e "INFO: + '${BIBKEY}' (from ${BIBSRC})."
                 done;
-                cat $(find -L . -name "${BIBSRC}.bib") >> "${THEBIB}"
+                cat $(find -L $(baseLinks) -maxdepth 1 -name "${BIBSRC}.bib") >> "${THEBIB}"
                 echo "" >> "${THEBIB}";
             fi
         done

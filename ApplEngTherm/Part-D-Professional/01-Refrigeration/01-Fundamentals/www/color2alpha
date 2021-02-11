@@ -3,14 +3,17 @@
 # HUGE thanks to Kurt Pfeifle, at https://stackoverflow.com/a/27194202/4038337
 
 IF="${1}"
-OF="${2}"
-COLOR="${3:-#001a33}"
+COLOR="${2:-#dfdfdf}"
 
-if test ! -f "${IF}" -o -z "${OF}" -o -f "${OF}"; then
+if test ! -f "${IF}"; then
     echo "Problem with arguments!"
-    echo "Please supply (i) existing input file, and (ii) non-existing output file names."
+    echo "Please supply (i) existing input file name."
     exit -1
 fi
+
+OF="${IF/.*/}-alpha-${COLOR:1:6}.png"
+
+echo "${IF} --> ${OF}"
 
 convert                        \
     "${IF}"                    \

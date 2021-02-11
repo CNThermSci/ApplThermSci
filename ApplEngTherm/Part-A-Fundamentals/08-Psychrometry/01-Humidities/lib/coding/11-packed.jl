@@ -19,9 +19,9 @@ Generates images with packed, image-filling, gas molecules.
 # Packed image parameters
 imgPars = Dict(
 	:col => Dict(
-		:N2  => (RGB(0.1, 0.1, 0.1), 0.78084),
-		:O2  => (RGB(0.1, 0.1, 0.2), 0.209476),
-		:Ar  => (RGB(0.1, 0.2, 0.1), 0.00934),
+		:_N2 => (RGB(0.1, 0.1, 0.1), 0.78084),
+		:_O2 => (RGB(0.1, 0.1, 0.2), 0.209476),
+		:_Ar => (RGB(0.1, 0.2, 0.1), 0.00934),
 		:CO2 => (RGB(1.0, 0.0, 0.0), 0.000314),
 	),
 	:sx   => 320,
@@ -41,7 +41,7 @@ begin
 	)
 	diff = sum(values(iPixs)) - imgSiz
 	if diff != 0
-		iPixs[:N2] -= diff
+		iPixs[:_N2] -= diff
 	end
 	iPixs
 end

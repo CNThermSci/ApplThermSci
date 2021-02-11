@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# HUGE thanks to Kurt Pfeifle, at https://stackoverflow.com/a/27194202/4038337
+
+IF="${1}"
+OF="${2}"
+COLOR="${3:-#ffffff}"
+
+if test -f "${IF}" -a -n "${OF}" -a ! -f "${OF}"; then
+    echo "Problem with arguments!"
+    echo "Please supply (i) existing input file, and (ii) non-existing output file names."
+    exit -1
+fi
+
+convert                        \
+    "${IF}"                    \
+    \(                         \
+       -clone 0                \
+       -fill "${COLOR}"        \
+       -colorize 100           \
+    \)                         \
+    \(                         \
+       -clone 0,1              \
+       -compose difference     \
+       -composite              \
+       -separate               \
+       +channel                \
+       -evaluate-sequence max  \
+       -auto-level             \
+    \)                         \
+     -delete 1                 \
+     -alpha off                \
+     -compose over             \
+     -compose copy_opacity     \
+     -composite                \
+    "${OF}"
+

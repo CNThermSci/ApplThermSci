@@ -84,49 +84,11 @@ begin
 	tmp, shuffle(tmp)
 end
 
-# ╔═╡ 9605b172-6c02-11eb-282a-b9701d702104
-imgPars = Dict(
-	:col => Dict(
-		:N2 => (RGB(0.8, 0.8, 0.8), 0.78084),
-		:O2 => (RGB(0.5, 0.5, 1.0), 0.209476),
-		:Ar => (RGB(0.8, 0.5, 0.0), 0.00934),
-	),
-	:sx => 128,
-	:sy => 64,
-)
-
-# ╔═╡ dcc6362c-6c05-11eb-1c9f-01dca609ba05
+# ╔═╡ b00b05d0-6c10-11eb-294b-0da528b5bfed
 begin
-	nFact = sum(
-		imgPars[:col][K][2]
-			for K in keys(imgPars[:col])
-	)
-	imgSiz = imgPars[:sx] * imgPars[:sy]
-	iPixs = Dict(
-		K => Int(round(imgPars[:col][K][2] * imgSiz / nFact))
-			for K in keys(imgPars[:col])
-	)
-	diff = sum(values(iPixs)) - imgSiz
-	if diff != 0
-		iPixs[:N2] -= diff
-	end
-	iPixs
+	save("01-example-01-ordered.png", tmp)
+	save("01-example-02-shuffled.png", shuffle(tmp))
 end
-
-# ╔═╡ 8a0775f2-6c07-11eb-180a-170ba9524c94
-TMP = reshape(
-	reduce(
-		vcat, [
-			fill(imgPars[:col][GAS][1], iPixs[GAS])
-				for GAS in keys(imgPars[:col])
-		]
-	),
-	imgPars[:sy],
-	imgPars[:sx]
-)
-
-# ╔═╡ cc8f5572-6c0a-11eb-2923-65be641e0735
-shuffle(TMP)
 
 # ╔═╡ Cell order:
 # ╟─b31badd0-6bf7-11eb-266b-cb57b725746e
@@ -145,7 +107,4 @@ shuffle(TMP)
 # ╠═6a8a5acc-6c03-11eb-1397-5fc84ae82bc9
 # ╠═f6f40b3c-6c03-11eb-3cbe-c5250ec680ca
 # ╠═36fe3808-6c04-11eb-255c-5ba0ca56c2af
-# ╠═9605b172-6c02-11eb-282a-b9701d702104
-# ╠═dcc6362c-6c05-11eb-1c9f-01dca609ba05
-# ╠═8a0775f2-6c07-11eb-180a-170ba9524c94
-# ╠═cc8f5572-6c0a-11eb-2923-65be641e0735
+# ╠═b00b05d0-6c10-11eb-294b-0da528b5bfed

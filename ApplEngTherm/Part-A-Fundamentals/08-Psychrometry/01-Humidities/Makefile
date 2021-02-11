@@ -30,6 +30,18 @@ www/%.jpg: www/%.url
 		--output-document=$@
 	touch $@
 
+www/%.jpeg: www/%.url
+	wget \
+		--input-file=$< \
+		--output-document=$@
+	touch $@
+
+www/%.png: www/%.url
+	wget \
+		--input-file=$< \
+		--output-document=$@
+	touch $@
+
 www/%.svg: www/%.url
 	wget \
 		--input-file=$< \

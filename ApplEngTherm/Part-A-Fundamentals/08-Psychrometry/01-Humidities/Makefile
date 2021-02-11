@@ -55,6 +55,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		lib/coding/21-scatrd-02-shuffled.png \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
+	bibtex ${PRES}
+	pdflatex --enable-write18 ${PRES}.tex
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
@@ -63,6 +65,8 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		www/pluto-logo.pdf \
 		lib/coding/21-scatrd-02-shuffled.png \
 		root/00-res/logo/CNThermSci-logo-W.pdf
+	pdflatex --enable-write18 ${HOUT}.tex
+	bibtex ${HOUT}
 	pdflatex --enable-write18 ${HOUT}.tex
 	pdflatex --enable-write18 ${HOUT}.tex
 

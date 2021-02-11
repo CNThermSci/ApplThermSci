@@ -92,8 +92,12 @@ function lstBib() {
     fi;
 }
 
+function baseLinks() {
+    find . -type l -regex "./[A-Z]*" | sed 's|^./||g'
+}
+
 function dbase() {
-    find -L . -name '*\.bib' | grep -v "${THEBIB}" | sort -n
+    find -L $(baseLinks) -name '*\.bib' | grep -v "${THEBIB}" | sort -n
 }
 
 function dbfiles() {

@@ -4,9 +4,9 @@
 
 IF="${1}"
 OF="${2}"
-COLOR="${3:-#ffffff}"
+COLOR="${3:-#001a33}"
 
-if test -f "${IF}" -a -n "${OF}" -a ! -f "${OF}"; then
+if test ! -f "${IF}" -o -z "${OF}" -o -f "${OF}"; then
     echo "Problem with arguments!"
     echo "Please supply (i) existing input file, and (ii) non-existing output file names."
     exit -1

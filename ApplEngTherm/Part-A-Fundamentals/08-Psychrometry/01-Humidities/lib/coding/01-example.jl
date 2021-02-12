@@ -77,9 +77,9 @@ hcat(
 # ╔═╡ 36fe3808-6c04-11eb-255c-5ba0ca56c2af
 begin
 	tmp = hcat(
-		fill(blu, (5, 2)),
-		fill(whi, (5, 2)),
-		fill(red, (5, 2)),
+		fill(blu, (200,  21)),
+		fill(whi, (200, 200)),
+		fill(red, (200,  79)),
 	)
 	tmp, shuffle(tmp)
 end

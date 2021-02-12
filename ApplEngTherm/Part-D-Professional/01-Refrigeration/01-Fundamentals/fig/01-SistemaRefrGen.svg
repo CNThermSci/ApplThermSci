@@ -17,6 +17,34 @@
    sodipodi:docname="01-SistemaRefrGen.svg">
   <defs
      id="defs1091">
+    <marker
+       style="overflow:visible"
+       id="marker2133"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#2d1650;fill-opacity:1;fill-rule:evenodd;stroke:#2d1650;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path2131" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(7.4, 1)"
+         style="fill-rule:evenodd;stroke:#2d1650;stroke-width:1pt;stroke-opacity:1;fill:#2d1650;fill-opacity:1"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path1895" />
+    </marker>
     <linearGradient
        inkscape:collect="always"
        id="linearGradient1817">
@@ -60,7 +88,8 @@
        refY="0"
        orient="auto"
        inkscape:stockid="Arrow2Mend"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          transform="scale(-0.6)"
          d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
@@ -138,7 +167,7 @@
      inkscape:cx="350"
      inkscape:cy="250"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer3"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -204,6 +233,11 @@
        x="200"
        y="200"
        transform="matrix(1.5,0,0,1,-100,238.24998)" />
+    <path
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 200,300 v 10 H 110 V 430 H 590 V 310 H 500 V 300 H 600 V 440 H 100 V 300 Z"
+       id="path1821"
+       transform="translate(0,238.24998)" />
     <rect
        style="fill:#339999;fill-opacity:0.5;stroke:#000000;stroke-width:0.806327;stroke-linejoin:round"
        id="rect1426"
@@ -380,5 +414,23 @@
          y="360"
          style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="tspan1434">Espaço refrigerado</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       x="300"
+       y="360"
+       id="text1825"
+       transform="translate(260,-82.49348)"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="360"
+         style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan1823">(isol.)</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DotM)"
+       d="m 560.00002,290 40,50"
+       id="path1829"
+       transform="translate(-5.00002,-5)"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

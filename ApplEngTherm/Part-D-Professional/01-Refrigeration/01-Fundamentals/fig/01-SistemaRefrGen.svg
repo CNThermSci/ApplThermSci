@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="700"
@@ -16,6 +17,18 @@
    sodipodi:docname="01-SistemaRefrGen.svg">
   <defs
      id="defs1091">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1624">
+      <stop
+         style="stop-color:#553399;stop-opacity:0.80000001"
+         offset="0"
+         id="stop1620" />
+      <stop
+         style="stop-color:#553399;stop-opacity:0"
+         offset="1"
+         id="stop1622" />
+    </linearGradient>
     <marker
        style="overflow:visible"
        id="marker1524"
@@ -45,6 +58,15 @@
          style="fill:#2d1650;fill-opacity:1;fill-rule:evenodd;stroke:#2d1650;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          id="path5545" />
     </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1624"
+       id="linearGradient1626"
+       x1="240"
+       y1="300"
+       x2="240"
+       y2="280"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -137,18 +159,14 @@
        id="path1428"
        transform="matrix(1.1666667,0,0,1.0500002,16.666661,228.24996)"
        sodipodi:nodetypes="cccc" />
-    <text
-       xml:space="preserve"
-       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       x="300"
-       y="360"
-       id="text1432"
-       transform="translate(50.139973,287.97657)"><tspan
-         sodipodi:role="line"
-         x="300"
-         y="360"
-         style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan1434">Espaço refrigerado</tspan></text>
+    <rect
+       style="fill:url(#linearGradient1626);fill-opacity:1;stroke:none;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1618"
+       width="300"
+       height="20"
+       x="200"
+       y="280"
+       transform="translate(0,238.24998)" />
     <g
        id="g5843"
        transform="rotate(-90,559.12499,359.12499)">
@@ -180,6 +198,30 @@
            transform="rotate(-90,425,5)" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       x="300"
+       y="360"
+       id="text1598"
+       transform="matrix(1.0000013,0,0,1,50.322043,-17.023433)"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="360"
+         style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan1596">Ambiente / Atmosfera</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       x="300"
+       y="360"
+       id="text1592"
+       transform="translate(49.713539,134.68228)"><tspan
+         sodipodi:role="line"
+         x="300"
+         y="360"
+         style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="tspan1590">Sistema de Refrigeração</tspan></text>
     <g
        id="g1520"
        transform="rotate(-90,634.12499,434.12499)">
@@ -216,24 +258,12 @@
        style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
        x="300"
        y="360"
-       id="text1592"
-       transform="translate(49.713539,134.68228)"><tspan
+       id="text1432"
+       transform="translate(50.139973,287.97657)"><tspan
          sodipodi:role="line"
          x="300"
          y="360"
          style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan1590">Sistema de Refrigeração</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:26.6667px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#ff0800;fill-opacity:0.2;stroke:#000000;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-       x="300"
-       y="360"
-       id="text1598"
-       transform="matrix(1.0000013,0,0,1,50.322043,-17.023433)"><tspan
-         sodipodi:role="line"
-         x="300"
-         y="360"
-         style="font-size:26.6667px;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.51181;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan1596">Ambiente / Atmosfera</tspan></text>
+         id="tspan1434">Espaço refrigerado</tspan></text>
   </g>
 </svg>

@@ -19,13 +19,25 @@
      id="defs1091">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient1743">
+      <stop
+         style="stop-color:#993333;stop-opacity:0.80000001"
+         offset="0"
+         id="stop1739" />
+      <stop
+         style="stop-color:#993333;stop-opacity:0;"
+         offset="1"
+         id="stop1741" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient1624">
       <stop
-         style="stop-color:#553399;stop-opacity:0.80000001"
+         style="stop-color:#333399;stop-opacity:0.80000001"
          offset="0"
          id="stop1620" />
       <stop
-         style="stop-color:#553399;stop-opacity:0"
+         style="stop-color:#333399;stop-opacity:0"
          offset="1"
          id="stop1622" />
     </linearGradient>
@@ -65,8 +77,19 @@
        x1="240"
        y1="300"
        x2="240"
-       y2="280"
-       gradientUnits="userSpaceOnUse" />
+       y2="270"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.66666667,0,100)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1743"
+       id="linearGradient1745"
+       x1="220"
+       y1="200"
+       x2="220"
+       y2="230"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.66666642,0,66.666718)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -75,7 +98,7 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.672"
+     inkscape:zoom="1.694"
      inkscape:cx="350"
      inkscape:cy="250"
      inkscape:document-units="px"
@@ -138,7 +161,7 @@
      id="layer1"
      transform="translate(0,-238.24998)">
     <rect
-       style="fill:#339999;fill-opacity:0.5;stroke:#000000;stroke-width:0.870928;stroke-linejoin:round"
+       style="fill:#c2d6c2;fill-opacity:0.5;stroke:#000000;stroke-width:0.870928;stroke-linejoin:round"
        id="rect1424"
        width="200"
        height="100"
@@ -146,7 +169,7 @@
        y="200"
        transform="matrix(1.5,0,0,1,-100,238.24998)" />
     <rect
-       style="fill:#333399;fill-opacity:0.5;stroke:#000000;stroke-width:0.806327;stroke-linejoin:round"
+       style="fill:#339999;fill-opacity:0.5;stroke:#000000;stroke-width:0.806327;stroke-linejoin:round"
        id="rect1426"
        width="400"
        height="100"
@@ -154,22 +177,35 @@
        y="300"
        transform="matrix(1.25,0,0,1.4,-25,118.24998)" />
     <path
-       style="fill:#993633;fill-opacity:0.5;stroke:#000000;stroke-width:0.963746;stroke-linejoin:round"
+       style="fill:#999933;fill-opacity:0.5;stroke:#000000;stroke-width:0.963746;stroke-linejoin:round"
        d="M 71.428574,66.666674 157.14286,199.99999 H 414.28572 L 500,66.666674"
        id="path1428"
        transform="matrix(1.1666667,0,0,1.0500002,16.666661,228.24996)"
        sodipodi:nodetypes="cccc" />
     <rect
-       style="fill:url(#linearGradient1626);fill-opacity:1;stroke:none;stroke-width:1.51181;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:url(#linearGradient1626);fill-opacity:1;stroke:none;stroke-width:1.23439;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1618"
        width="300"
        height="20"
        x="200"
        y="280"
-       transform="translate(0,238.24998)" />
+       transform="matrix(1,0,0,1.5,0,88.24998)" />
+    <rect
+       style="fill:url(#linearGradient1745);fill-opacity:1;stroke:none;stroke-width:1.23439;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1737"
+       width="300"
+       height="20"
+       x="200"
+       y="200"
+       transform="matrix(1,0,0,1.5000005,0,138.24987)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 2">
     <g
        id="g5843"
-       transform="rotate(-90,559.12499,359.12499)">
+       transform="rotate(-90,440,240)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.512;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -204,7 +240,7 @@
        x="300"
        y="360"
        id="text1598"
-       transform="matrix(1.0000013,0,0,1,50.322043,-17.023433)"><tspan
+       transform="matrix(1.0000013,0,0,1,50.322043,-255.27341)"><tspan
          sodipodi:role="line"
          x="300"
          y="360"
@@ -216,7 +252,7 @@
        x="300"
        y="360"
        id="text1592"
-       transform="translate(49.713539,134.68228)"><tspan
+       transform="translate(49.713539,-103.5677)"><tspan
          sodipodi:role="line"
          x="300"
          y="360"
@@ -224,7 +260,7 @@
          id="tspan1590">Sistema de Refrigeração</tspan></text>
     <g
        id="g1520"
-       transform="rotate(-90,634.12499,434.12499)">
+       transform="rotate(-90,515,315)">
       <text
          xml:space="preserve"
          style="font-size:37.3333px;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';display:inline;fill:#2d1650;fill-opacity:1;stroke:#2d1650;stroke-width:1.512;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -259,7 +295,7 @@
        x="300"
        y="360"
        id="text1432"
-       transform="translate(50.139973,287.97657)"><tspan
+       transform="translate(50.139973,49.72659)"><tspan
          sodipodi:role="line"
          x="300"
          y="360"

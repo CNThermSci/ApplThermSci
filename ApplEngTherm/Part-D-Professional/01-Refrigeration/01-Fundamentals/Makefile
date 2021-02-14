@@ -65,6 +65,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/0002-Refr-Vap-ID.pdf \
 		www/airplane-01.jpg \
 		www/airplane-02.jpg \
+		www/airplane-03.jpg \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	bibtex ${PRES}
@@ -76,6 +77,7 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/0002-Refr-Vap-ID.pdf \
 		www/airplane-01.jpg \
 		www/airplane-02.jpg \
+		www/airplane-03.jpg \
 		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	bibtex ${HOUT}

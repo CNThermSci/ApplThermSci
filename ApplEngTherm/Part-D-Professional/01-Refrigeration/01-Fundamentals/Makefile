@@ -70,6 +70,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		www/airplane-04.jpg \
 		www/ammonia-01.jpg \
 		www/ammonia-02.jpg \
+		www/ammonia-03.jpg \
+		www/ammonia-04.jpg \
 		fig/0004-Absorpt-Refr-H2O+NH3.pdf \
 		fig/0005-Absorpt-Refr-BrLi+H2O.pdf \
 		root/00-res/logo/CNThermSci-logo-A.pdf
@@ -88,6 +90,8 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		www/airplane-04.jpg \
 		www/ammonia-01.jpg \
 		www/ammonia-02.jpg \
+		www/ammonia-03.jpg \
+		www/ammonia-04.jpg \
 		fig/0004-Absorpt-Refr-H2O+NH3.pdf \
 		fig/0005-Absorpt-Refr-BrLi+H2O.pdf \
 		root/00-res/logo/CNThermSci-logo-W.pdf

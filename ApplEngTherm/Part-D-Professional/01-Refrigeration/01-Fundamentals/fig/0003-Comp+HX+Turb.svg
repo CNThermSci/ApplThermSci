@@ -237,7 +237,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -790,5 +790,19 @@
          sodipodi:role="line">q<tspan
    id="tspan8458"
    style="font-size:13.0002px;baseline-shift:sub;fill:#b00000;fill-opacity:1;stroke-width:1">leak</tspan></tspan></text>
+    <text
+       id="text1033"
+       y="-701.68146"
+       x="1140.2933"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#b00000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="matrix(1.0000044,0,0,1.0000044,-745.20631,1460.881)"><tspan
+         style="font-size:20.0001px;line-height:1.25;stroke-width:1"
+         y="-701.68146"
+         x="1140.2933"
+         id="tspan1031"
+         sodipodi:role="line">q̇<tspan
+   id="tspan1029"
+   style="font-size:13.0002px;baseline-shift:sub;fill:#b00000;fill-opacity:1;stroke-width:1">gen</tspan></tspan></text>
   </g>
 </svg>

@@ -61,6 +61,8 @@ fig/%.pdf: fig/%.svg
 		$<
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
+		www/vapor-01.jpg www/vapor-02.jpg www/vapor-03.jpg \
+		www/vapor-04.jpg www/vapor-05.jpg www/vapor-06.jpg \
 		fig/01-SistemaRefrGen.pdf \
 		fig/0002-Refr-Vap-ID.pdf \
 		fig/0003-Comp+HX+Turb.pdf \
@@ -92,6 +94,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
+		www/vapor-01.jpg www/vapor-02.jpg www/vapor-03.jpg \
+		www/vapor-04.jpg www/vapor-05.jpg www/vapor-06.jpg \
 		fig/01-SistemaRefrGen.pdf \
 		fig/0002-Refr-Vap-ID.pdf \
 		fig/0003-Comp+HX+Turb.pdf \

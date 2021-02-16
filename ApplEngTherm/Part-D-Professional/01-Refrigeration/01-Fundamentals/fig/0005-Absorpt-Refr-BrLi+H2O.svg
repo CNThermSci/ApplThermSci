@@ -230,7 +230,7 @@
      inkscape:cx="360"
      inkscape:cy="220"
      inkscape:document-units="px"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g7238"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -1060,7 +1060,7 @@
          transform="rotate(90,642.91665,-1018.8334)"
          sodipodi:nodetypes="ccccc" />
       <text
-         transform="matrix(0.99999651,0,0,0.99999651,-1026.428,1344.207)"
+         transform="matrix(0.99999651,0,0,0.99999651,-1027.0481,1344.3046)"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:150%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007e00;fill-opacity:1;stroke:none;stroke-width:1"
          x="1516.8458"
@@ -1070,11 +1070,9 @@
            x="1516.8458"
            y="-669.17126"
            style="font-size:19.9999px;text-align:center;text-anchor:middle;fill:#007e00;fill-opacity:1;stroke-width:1"
-           id="tspan6443">NH<tspan
+           id="tspan6443">H<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan6441">3</tspan>+H<tspan
-   style="font-size:65%;baseline-shift:sub"
-   id="tspan6453">2</tspan>O</tspan><tspan
+   id="tspan6453">2</tspan>O+LiBr</tspan><tspan
            sodipodi:role="line"
            x="1516.8458"
            y="-649.20251"
@@ -1092,7 +1090,7 @@
          transform="rotate(90,512.91663,-1168.8334)"
          sodipodi:nodetypes="ccccc" />
       <text
-         transform="matrix(0.99999651,0,0,0.99999651,-1306.9602,1321.8878)"
+         transform="matrix(0.99999651,0,0,0.99999651,-1306.9602,1322.1953)"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:150%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007e00;fill-opacity:1;stroke:none;stroke-width:1"
          x="1516.8458"
@@ -1107,9 +1105,9 @@
            x="1516.8458"
            y="-649.20251"
            style="font-size:19.9999px;text-align:center;text-anchor:middle;fill:#007e00;fill-opacity:1;stroke-width:1"
-           id="tspan6433">(NH<tspan
+           id="tspan6433">(H<tspan
    style="font-size:65%;baseline-shift:sub"
-   id="tspan6437">3</tspan>) only</tspan></text>
+   id="tspan6437">2</tspan>O) only</tspan></text>
     </g>
   </g>
 </svg>

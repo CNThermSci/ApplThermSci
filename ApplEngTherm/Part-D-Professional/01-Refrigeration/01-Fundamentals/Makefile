@@ -81,6 +81,10 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		www/thermoelectric-04.jpg \
 		www/thermoelectric-05.jpg \
 		www/thermoelectric-06.jpg \
+		www/evap-01.jpg www/evap-02.jpg www/evap-03.jpg \
+		www/evap-04.jpg www/evap-05.jpg www/evap-06.jpg \
+		www/evap-07.jpg www/evap-08.jpg www/evap-09.jpg \
+		www/evap-10.jpg www/evap-11.jpg www/evap-12.jpg \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	bibtex ${PRES}
@@ -108,6 +112,10 @@ ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		www/thermoelectric-04.jpg \
 		www/thermoelectric-05.jpg \
 		www/thermoelectric-06.jpg \
+		www/evap-01.jpg www/evap-02.jpg www/evap-03.jpg \
+		www/evap-04.jpg www/evap-05.jpg www/evap-06.jpg \
+		www/evap-07.jpg www/evap-08.jpg www/evap-09.jpg \
+		www/evap-10.jpg www/evap-11.jpg www/evap-12.jpg \
 		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	bibtex ${HOUT}

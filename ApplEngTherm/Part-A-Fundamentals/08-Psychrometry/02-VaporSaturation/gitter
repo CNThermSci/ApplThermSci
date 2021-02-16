@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for F in \
+        .gitignore \
+        Makefile \
+        bib \
+        bibfile.bib \
+        A0802-pt.tex \
+        A0802-pt-PRES.tex \
+        A0802-pt-HOUT.tex \
+        gitter; do
+    git add $F && git commit -m "ADD the $F"
+done
+
+git push
+

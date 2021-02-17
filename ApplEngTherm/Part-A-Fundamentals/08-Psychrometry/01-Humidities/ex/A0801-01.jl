@@ -100,13 +100,53 @@ md"""
 ## Resolução
 """
 
+# ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
+CP = pyimport("CoolProp.CoolProp")
+
+# ╔═╡ 40fff3aa-714f-11eb-0209-1d7ba5d8572f
+md"""
+(a) A pressão parcial do ar seco pode ser determinada via
+
+$P_a = P - P_v,$
+
+onde
+
+$P_v = \phi P_g = \phi P_{sat@T}$.
+"""
+
+# ╔═╡ 404d04ca-714f-11eb-1850-3d1384e2c747
+Pg = uconvert(
+	u"kPa",
+	CP.PropsSI(
+		"P",
+		"T", float(uconvert(u"K", uni_T).val),
+		"Q", 1.0,
+		"water"
+	) * u"Pa"
+)
+
+# ╔═╡ 6bac14d2-7150-11eb-1033-0d87d6791f79
+Pv = uni_ϕ * Pg
+
+# ╔═╡ 402def7c-714f-11eb-1311-ed5bef212eac
+
+
+# ╔═╡ de7d75cc-714e-11eb-050f-ab2c0d27961d
+st1 = CP.State("water", Dict("P" => 100.0, "Q" => 1.0))
+
+# ╔═╡ 1640a90a-714f-11eb-28d1-5db33840373a
+st1.s
+
+# ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
+
+
 # ╔═╡ Cell order:
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╠═44780316-7149-11eb-2c22-91b75023501a
 # ╠═b8e993e0-7149-11eb-1dbb-c52c4563e706
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─b7ce4e48-714a-11eb-3109-27d5146cf744
-# ╟─a25541c0-714a-11eb-21e5-8d9176713369
+# ╠═a25541c0-714a-11eb-21e5-8d9176713369
 # ╟─561163d6-714b-11eb-048c-77d095a73f07
 # ╟─5b194bc8-714b-11eb-1461-017e228eb6ae
 # ╟─5b009d6c-714b-11eb-23a7-b1dac4f0199f
@@ -121,3 +161,11 @@ md"""
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═59a271ac-714b-11eb-1167-dd8f89e98540
+# ╠═82207d6a-714e-11eb-302e-812ad2d704dd
+# ╟─40fff3aa-714f-11eb-0209-1d7ba5d8572f
+# ╠═404d04ca-714f-11eb-1850-3d1384e2c747
+# ╠═6bac14d2-7150-11eb-1033-0d87d6791f79
+# ╠═402def7c-714f-11eb-1311-ed5bef212eac
+# ╠═de7d75cc-714e-11eb-050f-ab2c0d27961d
+# ╠═1640a90a-714f-11eb-28d1-5db33840373a
+# ╠═161bc6c8-714f-11eb-34d4-798c68a07fe3

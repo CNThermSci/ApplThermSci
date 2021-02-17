@@ -74,12 +74,10 @@ Uma sala de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
 md"""
 ## Resolução
-### (a) pressão parcial do ar seco
-"""
 
-# ╔═╡ 40fff3aa-714f-11eb-0209-1d7ba5d8572f
-md"""
-(a) A pressão parcial do ar seco pode ser determinada via
+### (a) pressão parcial do ar seco
+
+A pressão parcial do ar seco pode ser determinada via
 
 $P_a = P - P_v,$ onde
 
@@ -87,32 +85,39 @@ $P_v = \phi P_g = \phi P_{sat@T}$
 """
 
 # ╔═╡ 404d04ca-714f-11eb-1850-3d1384e2c747
-Pg = CP.PropsSI(
-		"P",
-		"T", the_T + 273.15,
-		"Q", 1.0,
-		"water"
-	) * 1.0e-3 # kPa
-
-# ╔═╡ 6bac14d2-7150-11eb-1033-0d87d6791f79
-Pv = Pg * the_ϕ / 100.0 # kPa
-
-# ╔═╡ 402def7c-714f-11eb-1311-ed5bef212eac
-Pa = the_P - Pv # kPa
+begin
+	Pg = CP.PropsSI("P", "T", the_T + 273.15, "Q", 1.0, "water") * 1.0e-3 # kPa
+	Pv = Pg * the_ϕ / 100.0 # kPa
+	Pa = the_P - Pv # kPa
+	md""" $P_g$, $P_v$, $P_a$ = (
+	$(@sprintf(\"%.3f\",Pg)),
+	$(@sprintf(\"%.3f\",Pv)),
+	$(@sprintf(\"%.3f\",Pa))) kPa
+"""
+end
 
 # ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
 md"""
-(b) A umidade específica (absoluta) do ar pode ser determinada via
+### (b) umidade específica do ar
+
+A umidade específica (absoluta) pode ser determinada via
 
 $\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
 """
 
 # ╔═╡ a28b7c80-7153-11eb-1e4b-c9655dc6bf11
-ω = 0.622Pv/Pa
+begin
+	ω = 0.622Pv/Pa # kg/kg
+	md""" $\omega$ =
+	$(@sprintf(\"%.4f\", ω)) kg/kg
+	"""
+end
 
 # ╔═╡ a2731adc-7153-11eb-0521-5560c819c7a0
 md"""
-(c) a entalpia do ar por unidade de massa de ar seco é determinada via
+### (c) entalpia do ar por unidade de massa de ar seco
+
+A entalpia do ar por unidade de massa de ar seco é determinada via
 
 $h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
 """
@@ -126,31 +131,32 @@ begin
 	hv = stv.h
 	hg = stg.h
 	h = (ha + ω*hv, ha + ω*hg)
-	md"""
-	|Propriedade|Valor|
-	|:--------:|---------------:|
-	|ha        | $(round(ha, digits=2)) kJ/kg    |
-	|hg        | $(round(hg, digits=2)) kJ/kg    |
-	|hv        | $(round(hv, digits=2)) kJ/kg    |
-	|h (exato) | $(round(h[1], digits=2)) kJ/kg  |
-	|h (aprox) | $(round(h[2], digits=2)) kJ/kg  |
-	"""
+	md""" $h_a$, $h_v$, $h_g$, $h$ = (
+	$(@sprintf(\"%.2f\", ha)), $(@sprintf(\"%.2f\", hv)), $(@sprintf(\"%.2f\", hg)),
+	( $(@sprintf(\"%.2f\", h[1])), $(@sprintf(\"%.2f\", h[2])) )) kJ/kg"""
 end
 
 # ╔═╡ 6322df58-7169-11eb-2248-4b4bf3689197
 md"""
 ## Solução:
 
-|Letra|Propriedade|Valor|
-|:---:|:---------:|----:|
-|(a)|$P_a$     | $(@sprintf("%.2f", Pa)) kPa   |
-|(b)|$\omega$  | $(@sprintf("%.4f",  ω)) kg/kg |
-|(c)|$h$       | $(@sprintf("%.2f",  h)) kJ/kg |
-|(d)|$h$       | $(@sprintf("%.2f",  h)) kJ/kg |
+|Letra|Propriedade|Valor|Unid.|
+|:---:|:---------:|----:|:----|
+|(a)|$P_a$     | $(@sprintf(\"%.2f\",   Pa)) | kPa   |
+|(b)|$\omega$  | $(@sprintf(\"%.4f\",    ω)) | kg/kg |
+|(c)|$h$       | $(@sprintf(\"%.2f\", h[2])) | kJ/kg |
+|(d)|$m_a$     | $(@sprintf(\"%.2f\", h[1])) | kJ/kg |
+|(d)|$m_v$     | $(@sprintf(\"%.2f\", h[1])) | kJ/kg |
 """
 
 # ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
+md"""
+#### (d) massas de ar seco e de vapor na sala
 
+Tais massas podem ser calculadas pela equação de estado (de gás ideal):
+
+$m = \frac{PV}{RT}$
+"""
 
 # ╔═╡ Cell order:
 # ╠═44780316-7149-11eb-2c22-91b75023501a
@@ -166,12 +172,9 @@ md"""
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─6322df58-7169-11eb-2248-4b4bf3689197
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
-# ╟─40fff3aa-714f-11eb-0209-1d7ba5d8572f
-# ╠═404d04ca-714f-11eb-1850-3d1384e2c747
-# ╠═6bac14d2-7150-11eb-1033-0d87d6791f79
-# ╠═402def7c-714f-11eb-1311-ed5bef212eac
+# ╟─404d04ca-714f-11eb-1850-3d1384e2c747
 # ╟─161bc6c8-714f-11eb-34d4-798c68a07fe3
-# ╠═a28b7c80-7153-11eb-1e4b-c9655dc6bf11
+# ╟─a28b7c80-7153-11eb-1e4b-c9655dc6bf11
 # ╟─a2731adc-7153-11eb-0521-5560c819c7a0
-# ╠═0e85726a-7154-11eb-2ec4-4b45508a285e
-# ╠═0e040eaa-7154-11eb-08de-f76fe6ef358b
+# ╟─0e85726a-7154-11eb-2ec4-4b45508a285e
+# ╟─0e040eaa-7154-11eb-08de-f76fe6ef358b

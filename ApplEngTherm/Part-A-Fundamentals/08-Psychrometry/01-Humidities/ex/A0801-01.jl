@@ -14,10 +14,14 @@ macro bind(def, element)
 end
 
 # ╔═╡ 44780316-7149-11eb-2c22-91b75023501a
-using PlutoUI
+begin
+	using PlutoUI
+	using PyCall
+	using Printf
+end
 
-# ╔═╡ 59a271ac-714b-11eb-1167-dd8f89e98540
-using PyCall
+# ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
+CP = pyimport("CoolProp.CoolProp");
 
 # ╔═╡ fd91f76e-7147-11eb-04c9-011f7aa335b9
 md"""
@@ -25,26 +29,14 @@ md"""
 """
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
-prob = Dict(
-	:x => 3.00:0.5:10.00,	# Dimensão x, m
-	:y => 3.00:0.5:10.00,	# Dimensão y, m
-	:z => 3.00:0.5:10.00,	# Dimensão z, m
-	:T => 25.0:1.0:45.00,	# Temperatura, °C
-	:P => 80.0:5.0:120.0,	# Pressão, kPa
-	:ϕ => 0.00:5.0:100.0,	# Umidade relativa, %
-)
-
-# ╔═╡ b7ce4e48-714a-11eb-3109-27d5146cf744
-md"Dimensões x, y, e z, em m"
-
-# ╔═╡ a25541c0-714a-11eb-21e5-8d9176713369
-@bind the_x Slider(prob[:x], default=minimum(prob[:x]), show_value=true)
-
-# ╔═╡ 5b194bc8-714b-11eb-1461-017e228eb6ae
-@bind the_y Slider(prob[:y], default=minimum(prob[:y]), show_value=true)
-
-# ╔═╡ 5ae9231c-714b-11eb-1be0-117d2f7eb9a5
-@bind the_z Slider(prob[:z], default=minimum(prob[:z]), show_value=true)
+begin
+	the_x, the_y, the_z = 3.0, 3.0, 3.0
+	prob = Dict(
+		:T => 25.0:1.0:45.00,	# Temperatura, °C
+		:P => 80.0:5.0:120.0,	# Pressão, kPa
+		:ϕ => 0.00:5.0:100.0,	# Umidade relativa, %
+	)
+end
 
 # ╔═╡ 5ad04798-714b-11eb-205d-6529076d23d6
 md"Temperatura T, em °C"
@@ -71,18 +63,19 @@ md"""
 Uma sala de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the_P)kPa a uma umidade relativa de $(the_ϕ)%. Determine:
 
 (a) a pressão parcial do ar seco;
+
 (b) a umidade específica (absoluta);
+
 (c) a entalpia por unidade de massa de ar seco;
+
 (d) as massas de ar seco e de vapor d'água na sala.
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
 md"""
 ## Resolução
+### (a) pressão parcial do ar seco
 """
-
-# ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
-CP = pyimport("CoolProp.CoolProp")
 
 # ╔═╡ 40fff3aa-714f-11eb-0209-1d7ba5d8572f
 md"""
@@ -134,28 +127,36 @@ begin
 	hg = stg.h
 	h = (ha + ω*hv, ha + ω*hg)
 	md"""
-	ha = $(ha) kJ/kg
-	hg = $(hg) kJ/kg
-	hv = $(hv) kJ/kg
-	h (exato) = $(h[1]) kJ/kg 
-	h (aprox) = $(h[2]) kJ/kg
+	|Propriedade|Valor|
+	|:--------:|---------------:|
+	|ha        | $(round(ha, digits=2)) kJ/kg    |
+	|hg        | $(round(hg, digits=2)) kJ/kg    |
+	|hv        | $(round(hv, digits=2)) kJ/kg    |
+	|h (exato) | $(round(h[1], digits=2)) kJ/kg  |
+	|h (aprox) | $(round(h[2], digits=2)) kJ/kg  |
 	"""
 end
 
-# ╔═╡ 0e67c2f6-7154-11eb-07fa-43c5896aa1e0
+# ╔═╡ 6322df58-7169-11eb-2248-4b4bf3689197
+md"""
+## Solução:
 
+|Letra|Propriedade|Valor|
+|:---:|:---------:|----:|
+|(a)|$P_a$     | $(@sprintf("%.2f", Pa)) kPa   |
+|(b)|$\omega$  | $(@sprintf("%.4f",  ω)) kg/kg |
+|(c)|$h$       | $(@sprintf("%.2f",  h)) kJ/kg |
+|(d)|$h$       | $(@sprintf("%.2f",  h)) kJ/kg |
+"""
 
 # ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
 
 
 # ╔═╡ Cell order:
-# ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╠═44780316-7149-11eb-2c22-91b75023501a
+# ╠═82207d6a-714e-11eb-302e-812ad2d704dd
+# ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
-# ╠═b7ce4e48-714a-11eb-3109-27d5146cf744
-# ╟─a25541c0-714a-11eb-21e5-8d9176713369
-# ╟─5b194bc8-714b-11eb-1461-017e228eb6ae
-# ╟─5ae9231c-714b-11eb-1be0-117d2f7eb9a5
 # ╟─5ad04798-714b-11eb-205d-6529076d23d6
 # ╟─5ab790c2-714b-11eb-380a-4348d99eb993
 # ╟─5a9ba394-714b-11eb-16b1-2fca17e6adb8
@@ -163,9 +164,8 @@ end
 # ╟─5a62216e-714b-11eb-1014-47f7a212ccf7
 # ╟─5a478110-714b-11eb-3fdc-47936692af9b
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╟─6322df58-7169-11eb-2248-4b4bf3689197
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
-# ╠═59a271ac-714b-11eb-1167-dd8f89e98540
-# ╠═82207d6a-714e-11eb-302e-812ad2d704dd
 # ╟─40fff3aa-714f-11eb-0209-1d7ba5d8572f
 # ╠═404d04ca-714f-11eb-1850-3d1384e2c747
 # ╠═6bac14d2-7150-11eb-1033-0d87d6791f79
@@ -174,5 +174,4 @@ end
 # ╠═a28b7c80-7153-11eb-1e4b-c9655dc6bf11
 # ╟─a2731adc-7153-11eb-0521-5560c819c7a0
 # ╠═0e85726a-7154-11eb-2ec4-4b45508a285e
-# ╠═0e67c2f6-7154-11eb-07fa-43c5896aa1e0
 # ╠═0e040eaa-7154-11eb-08de-f76fe6ef358b

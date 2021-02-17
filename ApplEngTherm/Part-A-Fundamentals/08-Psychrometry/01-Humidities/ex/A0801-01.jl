@@ -111,8 +111,42 @@ Pa = the_P - Pv # kPa
 md"""
 (b) A umidade específica (absoluta) do ar pode ser determinada via
 
-$\omega = \frac{0,622 P_v}{P - P_v}$
+$\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
 """
+
+# ╔═╡ a28b7c80-7153-11eb-1e4b-c9655dc6bf11
+ω = 0.622Pv/Pa
+
+# ╔═╡ a2731adc-7153-11eb-0521-5560c819c7a0
+md"""
+(c) a entalpia do ar por unidade de massa de ar seco é determinada via
+
+$h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
+"""
+
+# ╔═╡ 0e85726a-7154-11eb-2ec4-4b45508a285e
+begin
+	cp = 1.005 # kJ/kg⋅°C
+	ha = cp * the_T # kJ/kg
+	stv = CP.State("water", Dict("P"=>Pv, "T"=>the_T+273.15))
+	stg = CP.State("water", Dict("Q"=>1.0, "T"=>the_T+273.15))
+	hv = stv.h
+	hg = stg.h
+	h = (ha + ω*hv, ha + ω*hg)
+	md"""
+	ha = $(ha) kJ/kg
+	hg = $(hg) kJ/kg
+	hv = $(hv) kJ/kg
+	h (exato) = $(h[1]) kJ/kg 
+	h (aprox) = $(h[2]) kJ/kg
+	"""
+end
+
+# ╔═╡ 0e67c2f6-7154-11eb-07fa-43c5896aa1e0
+
+
+# ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
+
 
 # ╔═╡ Cell order:
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
@@ -137,3 +171,8 @@ $\omega = \frac{0,622 P_v}{P - P_v}$
 # ╠═6bac14d2-7150-11eb-1033-0d87d6791f79
 # ╠═402def7c-714f-11eb-1311-ed5bef212eac
 # ╟─161bc6c8-714f-11eb-34d4-798c68a07fe3
+# ╠═a28b7c80-7153-11eb-1e4b-c9655dc6bf11
+# ╟─a2731adc-7153-11eb-0521-5560c819c7a0
+# ╠═0e85726a-7154-11eb-2ec4-4b45508a285e
+# ╠═0e67c2f6-7154-11eb-07fa-43c5896aa1e0
+# ╠═0e040eaa-7154-11eb-08de-f76fe6ef358b

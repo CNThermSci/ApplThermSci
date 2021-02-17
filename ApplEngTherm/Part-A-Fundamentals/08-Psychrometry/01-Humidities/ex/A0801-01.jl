@@ -88,38 +88,31 @@ CP = pyimport("CoolProp.CoolProp")
 md"""
 (a) A pressão parcial do ar seco pode ser determinada via
 
-$P_a = P - P_v,$
+$P_a = P - P_v,$ onde
 
-onde
-
-$P_v = \phi P_g = \phi P_{sat@T}$.
+$P_v = \phi P_g = \phi P_{sat@T}$
 """
 
 # ╔═╡ 404d04ca-714f-11eb-1850-3d1384e2c747
-Pg = uconvert(
-	u"kPa",
-	CP.PropsSI(
+Pg = CP.PropsSI(
 		"P",
-		"T", float(uconvert(u"K", uni_T).val),
+		"T", the_T + 273.15,
 		"Q", 1.0,
 		"water"
-	) * u"Pa"
-)
+	) * 1.0e-3 # kPa
 
 # ╔═╡ 6bac14d2-7150-11eb-1033-0d87d6791f79
-Pv = uni_ϕ * Pg
+Pv = Pg * the_ϕ / 100.0 # kPa
 
 # ╔═╡ 402def7c-714f-11eb-1311-ed5bef212eac
-
-
-# ╔═╡ de7d75cc-714e-11eb-050f-ab2c0d27961d
-st1 = CP.State("water", Dict("P" => 100.0, "Q" => 1.0))
-
-# ╔═╡ 1640a90a-714f-11eb-28d1-5db33840373a
-st1.s
+Pa = the_P - Pv # kPa
 
 # ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
+md"""
+(b) A umidade específica (absoluta) do ar pode ser determinada via
 
+$\omega = \frac{0,622 P_v}{P - P_v}$
+"""
 
 # ╔═╡ Cell order:
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
@@ -143,6 +136,4 @@ st1.s
 # ╠═404d04ca-714f-11eb-1850-3d1384e2c747
 # ╠═6bac14d2-7150-11eb-1033-0d87d6791f79
 # ╠═402def7c-714f-11eb-1311-ed5bef212eac
-# ╠═de7d75cc-714e-11eb-050f-ab2c0d27961d
-# ╠═1640a90a-714f-11eb-28d1-5db33840373a
-# ╠═161bc6c8-714f-11eb-34d4-798c68a07fe3
+# ╟─161bc6c8-714f-11eb-34d4-798c68a07fe3

@@ -21,7 +21,13 @@ begin
 end
 
 # ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
-CP = pyimport("CoolProp.CoolProp");
+begin
+	CP = pyimport("CoolProp.CoolProp")
+	Ra = CP.PropsSI("GAS_CONSTANT",   "air") / CP.PropsSI("M",   "air") * 1.0e-3
+	Rv = CP.PropsSI("GAS_CONSTANT", "water") / CP.PropsSI("M", "water") * 1.0e-3
+	Cψ = Ra/Rv # Psychrometric constant (usually rounded to 0.622)
+	md"Cψ = $(@sprintf(\"%.6f\", Cψ))"
+end
 
 # ╔═╡ fd91f76e-7147-11eb-04c9-011f7aa335b9
 md"""
@@ -158,6 +164,15 @@ Tais massas podem ser calculadas pela equação de estado (de gás ideal):
 $m = \frac{PV}{RT}$
 """
 
+# ╔═╡ 778fd34e-716e-11eb-2b04-39e78ece6e49
+begin
+	the_V = the_x * the_y * the_z
+	
+	ma = Pa * the_V / (Ra * the_T)
+	mv = Pv * the_V / (Rv * the_T)
+	
+end
+
 # ╔═╡ Cell order:
 # ╠═44780316-7149-11eb-2c22-91b75023501a
 # ╠═82207d6a-714e-11eb-302e-812ad2d704dd
@@ -178,3 +193,4 @@ $m = \frac{PV}{RT}$
 # ╟─a2731adc-7153-11eb-0521-5560c819c7a0
 # ╟─0e85726a-7154-11eb-2ec4-4b45508a285e
 # ╟─0e040eaa-7154-11eb-08de-f76fe6ef358b
+# ╠═778fd34e-716e-11eb-2b04-39e78ece6e49

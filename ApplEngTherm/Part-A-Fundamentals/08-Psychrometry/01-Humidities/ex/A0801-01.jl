@@ -36,9 +36,9 @@ md"""
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 begin
-	the_x, the_y, the_z = 3.0, 3.0, 3.0
+	the_x, the_y, the_z = 11.5, 11.5, 6.0
 	prob = Dict(
-		:T => 25.0:1.0:45.00,	# Temperatura, °C
+		:T => 5.00:1.0:45.00,	# Temperatura, °C
 		:P => 80.0:5.0:120.0,	# Pressão, kPa
 		:ϕ => 0.00:5.0:100.0,	# Umidade relativa, %
 	)
@@ -66,15 +66,7 @@ md"Umidade relativa ϕ, em %"
 md"""
 ## Enunciado:
 
-Uma sala de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the_P)kPa a uma umidade relativa de $(the_ϕ)%. Determine:
-
-(a) a pressão parcial do ar seco;
-
-(b) a umidade específica (absoluta);
-
-(c) a entalpia por unidade de massa de ar seco;
-
-(d) as massas de ar seco e de vapor d'água na sala.
+Um galpão de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the_P)kPa a uma umidade relativa de $(the_ϕ)%. Determine: **(a)** a pressão parcial do ar seco; **(b)** a umidade específica (absoluta); **(c)** a entalpia por unidade de massa de ar seco; **(d)** as massas de ar seco e de vapor d'água na sala.
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
@@ -113,7 +105,7 @@ $\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
 
 # ╔═╡ a28b7c80-7153-11eb-1e4b-c9655dc6bf11
 begin
-	ω = 0.622Pv/Pa # kg/kg
+	ω = Cψ * Pv / Pa # kg/kg
 	md""" $\omega$ =
 	$(@sprintf(\"%.4f\", ω)) kg/kg
 	"""
@@ -131,8 +123,9 @@ $h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
 # ╔═╡ 0e85726a-7154-11eb-2ec4-4b45508a285e
 begin
 	cp = 1.005 # kJ/kg⋅°C
+	minP = CP.PropsSI("PMIN", "water") * 1.00001e-3 # kPa
 	ha = cp * the_T # kJ/kg
-	stv = CP.State("water", Dict("P"=>Pv, "T"=>the_T+273.15))
+	stv = CP.State("water", Dict("P"=>(Pv<minP ? minP : Pv), "T"=>the_T+273.15))
 	stg = CP.State("water", Dict("Q"=>1.0, "T"=>the_T+273.15))
 	hv = stv.h
 	hg = stg.h
@@ -141,19 +134,6 @@ begin
 	$(@sprintf(\"%.2f\", ha)), $(@sprintf(\"%.2f\", hv)), $(@sprintf(\"%.2f\", hg)),
 	( $(@sprintf(\"%.2f\", h[1])), $(@sprintf(\"%.2f\", h[2])) )) kJ/kg"""
 end
-
-# ╔═╡ 6322df58-7169-11eb-2248-4b4bf3689197
-md"""
-## Solução:
-
-|Letra|Propriedade|Valor|Unid.|
-|:---:|:---------:|----:|:----|
-|(a)|$P_a$     | $(@sprintf(\"%.2f\",   Pa)) | kPa   |
-|(b)|$\omega$  | $(@sprintf(\"%.4f\",    ω)) | kg/kg |
-|(c)|$h$       | $(@sprintf(\"%.2f\", h[2])) | kJ/kg |
-|(d)|$m_a$     | $(@sprintf(\"%.2f\", h[1])) | kJ/kg |
-|(d)|$m_v$     | $(@sprintf(\"%.2f\", h[1])) | kJ/kg |
-"""
 
 # ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
 md"""
@@ -166,12 +146,28 @@ $m = \frac{PV}{RT}$
 
 # ╔═╡ 778fd34e-716e-11eb-2b04-39e78ece6e49
 begin
-	the_V = the_x * the_y * the_z
-	
-	ma = Pa * the_V / (Ra * the_T)
-	mv = Pv * the_V / (Rv * the_T)
-	
+	V = the_x * the_y * the_z
+	T = the_T + 273.15
+	ma = Pa * V / (Ra * T)
+	mv = Pv * V / (Rv * T)
+	md""" $m_a$, $m_v$, $\omega\cdot m_a$ =(
+	$(@sprintf(\"%.3f\", ma)),
+	$(@sprintf(\"%.5f\", mv)),
+	$(@sprintf(\"%.5f\", ω*ma))) kg"""
 end
+
+# ╔═╡ 6322df58-7169-11eb-2248-4b4bf3689197
+md"""
+## Solução:
+
+|Letra|Propriedade|Valor|Unid.|
+|:---:|:---------:|----:|:----|
+|(a)|$P_a$     | $(@sprintf(\"%.2f\",   Pa)) | kPa   |
+|(b)|$\omega$  | $(@sprintf(\"%.4f\",    ω)) | kg/kg |
+|(c)|$h$       | $(@sprintf(\"%.2f\", h[2])) | kJ/kg |
+|(d)|$m_a$     | $(@sprintf(\"%.2f\",   ma)) | kg |
+|(d)|$m_v$     | $(@sprintf(\"%.2f\",   mv)) | kg |
+"""
 
 # ╔═╡ Cell order:
 # ╠═44780316-7149-11eb-2c22-91b75023501a
@@ -193,4 +189,4 @@ end
 # ╟─a2731adc-7153-11eb-0521-5560c819c7a0
 # ╟─0e85726a-7154-11eb-2ec4-4b45508a285e
 # ╟─0e040eaa-7154-11eb-08de-f76fe6ef358b
-# ╠═778fd34e-716e-11eb-2b04-39e78ece6e49
+# ╟─778fd34e-716e-11eb-2b04-39e78ece6e49

@@ -21,11 +21,17 @@ begin
 	using Plots
 end
 
-# ╔═╡ fd91f76e-7147-11eb-04c9-011f7aa335b9
+# ╔═╡ 056da550-71fc-11eb-3940-5d1996cf5ec2
 md"""
-# Exercício A0801-01 – Massa de vapor d'água em um galpão fechado
+$(Resource("https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/logo/CNThermSci-logo-A.png", :width => 100))
 
-Adaptado do Exemplo 14-1 (ÇENGEL, Y. A., 7$^a$ Ed., 2013)
+# A08 – Misturas Gás-Vapor e Condicionamento de Ar
+
+## 01 – Ar Seco e Atmosférico e Medidas de Umidade
+
+### Exemplo `A0801-01` – Massa de vapor d'água em um galpão fechado
+
+Adaptado do Exemplo 14-1 (ÇENGEL, Y. A., 7a Ed., 2013)
 """
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
@@ -252,7 +258,7 @@ begin
 end
 
 # ╔═╡ Cell order:
-# ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
+# ╟─056da550-71fc-11eb-3940-5d1996cf5ec2
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e
 # ╟─5ad04798-714b-11eb-205d-6529076d23d6

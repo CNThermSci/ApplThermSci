@@ -204,7 +204,7 @@ end;
 begin
 	# Isobar @ Pv
 	if Pv > minP
-		plot(DOME[2], DOME[1], lw=3, size=(320, 180), legend=false)
+		_P = plot(DOME[2], DOME[1], lw=3, size=(320, 180), legend=false)
 		PO = CP.PropsSI("T", "P", Pv * 1.0e+3, "Q", 0.0, FL)
 		OL = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 0.0, FL) * 1.0e-3)
 		OV = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 1.0, FL) * 1.0e-3)
@@ -214,24 +214,26 @@ begin
 		ISOP = (
 			cat([OL[1], OV[1]], tIso, dims=1).-273.15,
 			cat([OL[2], OV[2]], sIso, dims=1))
-		plot!(ISOP[2], ISOP[1], lw=1)		
+		plot!(_P, ISOP[2], ISOP[1], lw=1)		
 		# Water vapor state
 		if the_ϕ < 100.0
-			plot!(
+			plot!(_P,
 				[CP.PropsSI("S", "T", the_T+273.15, "P", Pv*1.0e+3, FL)] .* 1.0e-3,
 				[the_T],
 				marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
 			)
 		else
-			plot!(
+			plot!(_P,
 				[CP.PropsSI("S", "T", the_T+273.15, "Q", 1.0, FL)] .* 1.0e-3,
 				[the_T],
 				marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
 			)
 		end
 	else
-		plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
+		_P = plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
 	end
+	savefig("A0801-01.svg")
+	_P
 end
 
 # ╔═╡ Cell order:

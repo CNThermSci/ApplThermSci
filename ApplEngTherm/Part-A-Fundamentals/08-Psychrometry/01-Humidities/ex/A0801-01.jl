@@ -18,6 +18,7 @@ begin
 	using PlutoUI
 	using PyCall
 	using Printf
+	using Plots
 end
 
 # ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
@@ -169,6 +170,48 @@ md"""
 |(d)|$m_v$     | $(@sprintf(\"%.2f\",   mv)) | kg |
 """
 
+# ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
+md"""
+## Gráfico - Estado do vapor d'água a $(P_v, T)$
+"""
+
+# ╔═╡ b4b97260-717e-11eb-25c3-ffcd02a2662e
+begin
+	# Basic constants
+	FL = "water"
+	TT = CP.PropsSI("Ttriple", FL)
+	TC = CP.PropsSI("Tcrit", FL)
+	TSTL = (TT, CP.PropsSI("S", "T", TT, "Q", 0.0, FL))
+	TSTV = (TT, CP.PropsSI("S", "T", TT, "Q", 1.0, FL))
+	TSCR = (TC, CP.PropsSI("S", "T", TC, "Q", 0.5, FL))
+	# Saturation dome
+	N = range(0.0, stop=1.0, length=20)
+	P = 1.0 .- (1.0 .- N).^2
+	tLiq = TT .+ (TC - TT) .* P
+	tVap = reverse(tLiq)[2:end]
+	sLiq = [CP.PropsSI("S", "T", _t, "Q", 0.0, FL) for _t in tLiq] .* 1.0e-3
+	sVap = [CP.PropsSI("S", "T", _t, "Q", 1.0, FL) for _t in tVap] .* 1.0e-3
+	DOME = (cat(tLiq, tVap, dims=1), cat(sLiq, sVap, dims=1))
+end;
+
+# ╔═╡ 98a9cb5c-7187-11eb-08f2-d53ad216d48e
+begin
+	plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
+	# Isobar @ Pv
+	PO = CP.PropsSI("T", "P", Pv * 1.0e+3, "Q", 0.0, FL)
+	OL = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 0.0, FL) * 1.0e-3)
+	OV = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 1.0, FL) * 1.0e-3)
+	tIso = range(PO, stop=TC, length=10)[2:end]
+	sIso = [CP.PropsSI("S", "T", _t, "P", Pv * 1.0e+3, FL) for _t in tIso] .* 1.0e-3
+	ISOP = (cat([OL[1], OV[1]], tIso, dims=1), cat([OL[2], OV[2]], sIso, dims=1))
+	plot!(ISOP[2], ISOP[1], lw=1)
+	plot!(
+		[CP.PropsSI("S", "T", the_T + 273.15, "P", Pv * 1.0e+3, FL)] .* 1.0e-3,
+		[the_T + 273.15],
+		marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
+	)
+end
+
 # ╔═╡ Cell order:
 # ╠═44780316-7149-11eb-2c22-91b75023501a
 # ╠═82207d6a-714e-11eb-302e-812ad2d704dd
@@ -190,3 +233,6 @@ md"""
 # ╟─0e85726a-7154-11eb-2ec4-4b45508a285e
 # ╟─0e040eaa-7154-11eb-08de-f76fe6ef358b
 # ╟─778fd34e-716e-11eb-2b04-39e78ece6e49
+# ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
+# ╠═b4b97260-717e-11eb-25c3-ffcd02a2662e
+# ╠═98a9cb5c-7187-11eb-08f2-d53ad216d48e

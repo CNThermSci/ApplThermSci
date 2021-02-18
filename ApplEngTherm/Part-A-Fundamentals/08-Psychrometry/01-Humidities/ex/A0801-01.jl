@@ -32,16 +32,18 @@ end
 
 # ╔═╡ fd91f76e-7147-11eb-04c9-011f7aa335b9
 md"""
-# Exercício A0801-01 – Massa de vapor d'água em sistema fechado
+# Exercício A0801-01 – Massa de vapor d'água em um galpão fechado
+
+Adaptado do Exemplo 14-1 (ÇENGEL, Y. A., 7$^a$ Ed., 2013)
 """
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 begin
 	the_x, the_y, the_z = 11.5, 11.5, 6.0
 	prob = Dict(
-		:T => 5.00:1.0:45.00,	# Temperatura, °C
+		:T => 15.0:1.0:60.00,	# Temperatura, °C
 		:P => 80.0:5.0:120.0,	# Pressão, kPa
-		:ϕ => 0.00:5.0:100.0,	# Umidade relativa, %
+		:ϕ => 15.0:5.0:100.0,	# Umidade relativa, %
 	)
 end
 
@@ -55,7 +57,7 @@ md"Temperatura T, em °C"
 md"Pressão P, em kPa"
 
 # ╔═╡ 5a7fa48c-714b-11eb-31cc-b1f8b9b2794d
-@bind the_P Slider(prob[:P], default=minimum(prob[:P]), show_value=true)
+@bind the_P Slider(prob[:P], default=100.0, show_value=true)
 
 # ╔═╡ 5a62216e-714b-11eb-1014-47f7a212ccf7
 md"Umidade relativa ϕ, em %"
@@ -196,20 +198,25 @@ end;
 
 # ╔═╡ 98a9cb5c-7187-11eb-08f2-d53ad216d48e
 begin
-	plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
 	# Isobar @ Pv
-	PO = CP.PropsSI("T", "P", Pv * 1.0e+3, "Q", 0.0, FL)
-	OL = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 0.0, FL) * 1.0e-3)
-	OV = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 1.0, FL) * 1.0e-3)
-	tIso = range(PO, stop=TC, length=10)[2:end]
-	sIso = [CP.PropsSI("S", "T", _t, "P", Pv * 1.0e+3, FL) for _t in tIso] .* 1.0e-3
-	ISOP = (cat([OL[1], OV[1]], tIso, dims=1), cat([OL[2], OV[2]], sIso, dims=1))
-	plot!(ISOP[2], ISOP[1], lw=1)
-	plot!(
-		[CP.PropsSI("S", "T", the_T + 273.15, "P", Pv * 1.0e+3, FL)] .* 1.0e-3,
-		[the_T + 273.15],
-		marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
-	)
+	if Pv > minP
+		plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
+		PO = CP.PropsSI("T", "P", Pv * 1.0e+3, "Q", 0.0, FL)
+		OL = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 0.0, FL) * 1.0e-3)
+		OV = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 1.0, FL) * 1.0e-3)
+		tIso = range(PO, stop=TC, length=10)[2:end]
+		sIso = [CP.PropsSI("S", "T", _t, "P", Pv * 1.0e+3, FL)
+			for _t in tIso] .* 1.0e-3
+		ISOP = (cat([OL[1], OV[1]], tIso, dims=1), cat([OL[2], OV[2]], sIso, dims=1))
+		plot!(ISOP[2], ISOP[1], lw=1)		
+		plot!(
+			[CP.PropsSI("S", "T", the_T + 273.15, "P", Pv * 1.0e+3, FL)] .* 1.0e-3,
+			[the_T + 273.15],
+			marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
+		)
+	else
+		plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
+	end
 end
 
 # ╔═╡ Cell order:
@@ -217,6 +224,7 @@ end
 # ╠═82207d6a-714e-11eb-302e-812ad2d704dd
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
+# ╠═98a9cb5c-7187-11eb-08f2-d53ad216d48e
 # ╟─5ad04798-714b-11eb-205d-6529076d23d6
 # ╟─5ab790c2-714b-11eb-380a-4348d99eb993
 # ╟─5a9ba394-714b-11eb-16b1-2fca17e6adb8
@@ -235,4 +243,3 @@ end
 # ╟─778fd34e-716e-11eb-2b04-39e78ece6e49
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╠═b4b97260-717e-11eb-25c3-ffcd02a2662e
-# ╠═98a9cb5c-7187-11eb-08f2-d53ad216d48e

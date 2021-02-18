@@ -21,17 +21,27 @@ begin
 	using Plots
 end
 
+# ╔═╡ 570e1fe8-7206-11eb-29d3-e1b68516ba96
+html"""
+<table style="width:100%">
+  <tr>
+    <td style="width:100px"><img src="https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/logo/CNThermSci-logo-A.png" alt="CNThermSci" style="width:100px"></td>
+    <td>Prof. C. Naaktgeboren, PhD<br>https://github.com/CNThermSci/ApplThermSci
+</td>
+    <td style="width:150px"><img src="https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/cc/by-nc-nd-88x31.svg" alt="CC-BY-NC-ND" style="width:150px"></td>
+  </tr>
+</table>
+"""
+
 # ╔═╡ 056da550-71fc-11eb-3940-5d1996cf5ec2
 md"""
-$(Resource("https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/logo/CNThermSci-logo-A.png", :width => 100))
-
 # A08 – Misturas Gás-Vapor e Condicionamento de Ar
 
 ## 01 – Ar Seco e Atmosférico e Medidas de Umidade
 
 ### Exemplo `A0801-01` – Massa de vapor d'água em um galpão fechado
 
-Adaptado do Exemplo 14-1 (ÇENGEL, Y. A., 7a Ed., 2013)
+Adaptado de: Exemplo 14-1 (ÇENGEL, Y. A., 7a Ed., 2013, pp. 734-735)
 """
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
@@ -258,6 +268,7 @@ begin
 end
 
 # ╔═╡ Cell order:
+# ╟─570e1fe8-7206-11eb-29d3-e1b68516ba96
 # ╟─056da550-71fc-11eb-3940-5d1996cf5ec2
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e

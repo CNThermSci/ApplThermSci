@@ -128,8 +128,12 @@ begin
 	cp = 1.005 # kJ/kg⋅°C
 	minP = CP.PropsSI("PMIN", "water") * 1.00001e-3 # kPa
 	ha = cp * the_T # kJ/kg
-	stv = CP.State("water", Dict("P"=>(Pv<minP ? minP : Pv), "T"=>the_T+273.15))
 	stg = CP.State("water", Dict("Q"=>1.0, "T"=>the_T+273.15))
+	if the_ϕ < 1
+		stv = CP.State("water", Dict("P"=>(Pv<minP ? minP : Pv), "T"=>the_T+273.15))
+	else
+		stv = stg
+	end
 	hv = stv.h
 	hg = stg.h
 	h = (ha + ω*hv, ha + ω*hg)
@@ -193,27 +197,38 @@ begin
 	tVap = reverse(tLiq)[2:end]
 	sLiq = [CP.PropsSI("S", "T", _t, "Q", 0.0, FL) for _t in tLiq] .* 1.0e-3
 	sVap = [CP.PropsSI("S", "T", _t, "Q", 1.0, FL) for _t in tVap] .* 1.0e-3
-	DOME = (cat(tLiq, tVap, dims=1), cat(sLiq, sVap, dims=1))
+	DOME = (cat(tLiq, tVap, dims=1).-273.15, cat(sLiq, sVap, dims=1))
 end;
 
 # ╔═╡ 98a9cb5c-7187-11eb-08f2-d53ad216d48e
 begin
 	# Isobar @ Pv
 	if Pv > minP
-		plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
+		plot(DOME[2], DOME[1], lw=3, size=(320, 180), legend=false)
 		PO = CP.PropsSI("T", "P", Pv * 1.0e+3, "Q", 0.0, FL)
 		OL = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 0.0, FL) * 1.0e-3)
 		OV = (PO, CP.PropsSI("S", "P", Pv * 1.0e+3, "Q", 1.0, FL) * 1.0e-3)
 		tIso = range(PO, stop=TC, length=10)[2:end]
 		sIso = [CP.PropsSI("S", "T", _t, "P", Pv * 1.0e+3, FL)
 			for _t in tIso] .* 1.0e-3
-		ISOP = (cat([OL[1], OV[1]], tIso, dims=1), cat([OL[2], OV[2]], sIso, dims=1))
+		ISOP = (
+			cat([OL[1], OV[1]], tIso, dims=1).-273.15,
+			cat([OL[2], OV[2]], sIso, dims=1))
 		plot!(ISOP[2], ISOP[1], lw=1)		
-		plot!(
-			[CP.PropsSI("S", "T", the_T + 273.15, "P", Pv * 1.0e+3, FL)] .* 1.0e-3,
-			[the_T + 273.15],
-			marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
-		)
+		# Water vapor state
+		if the_ϕ < 100.0
+			plot!(
+				[CP.PropsSI("S", "T", the_T+273.15, "P", Pv*1.0e+3, FL)] .* 1.0e-3,
+				[the_T],
+				marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
+			)
+		else
+			plot!(
+				[CP.PropsSI("S", "T", the_T+273.15, "Q", 1.0, FL)] .* 1.0e-3,
+				[the_T],
+				marker = (:hexagon, 2, 0.6, :green, stroke(3, 0.2, :black, :dot))
+			)
+		end
 	else
 		plot(DOME[2], DOME[1], lw=3, size=(300, 200), legend=false)
 	end
@@ -224,7 +239,7 @@ end
 # ╠═82207d6a-714e-11eb-302e-812ad2d704dd
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
-# ╠═98a9cb5c-7187-11eb-08f2-d53ad216d48e
+# ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e
 # ╟─5ad04798-714b-11eb-205d-6529076d23d6
 # ╟─5ab790c2-714b-11eb-380a-4348d99eb993
 # ╟─5a9ba394-714b-11eb-16b1-2fca17e6adb8

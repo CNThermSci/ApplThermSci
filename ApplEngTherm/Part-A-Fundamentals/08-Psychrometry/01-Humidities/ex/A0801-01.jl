@@ -26,9 +26,12 @@ html"""
 <table style="width:100%">
   <tr>
     <td style="width:100px"><img src="https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/logo/CNThermSci-logo-A.png" alt="CNThermSci" style="width:100px"></td>
-    <td>Prof. C. Naaktgeboren, PhD<br>https://github.com/CNThermSci/ApplThermSci
-</td>
-    <td style="width:150px"><img src="https://github.com/CNThermSci/ApplThermSci/raw/master/00-res/cc/by-nc-nd-88x31.svg" alt="CC-BY-NC-ND" style="width:150px"></td>
+    <td>
+      <b>Prof. C. Naaktgeboren, PhD</b>
+      <br>https://github.com/CNThermSci/ApplThermSci<br>
+      <small>This example is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA License</a>.</small>
+    </td>
+    <td style="width:125px"><img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC-BY-NC-SA" style="width:125px"></td>
   </tr>
 </table>
 """
@@ -76,7 +79,7 @@ md"Umidade relativa ϕ, em %"
 md"""
 ## Enunciado:
 
-Um galpão de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the_P)kPa a uma umidade relativa de $(the_ϕ)%. Determine: **(a)** a pressão parcial do ar seco; **(b)** a umidade específica (absoluta); **(c)** a entalpia por unidade de massa de ar seco; **(d)** as massas de ar seco e de vapor d'água na sala.
+Um galpão de $(the_x)m × $(the_y)m × $(the_z)m contém ar a $(the_T)°C e $(the_P)kPa a uma umidade relativa de $(the_ϕ)%. Determine: **(a)** a pressão parcial do ar seco; **(b)** a umidade específica (absoluta); **(c)** a entalpia por unidade de massa de ar seco; **(d)** as massas de ar seco e de vapor d'água no galpão.
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
@@ -85,20 +88,28 @@ md"""
 
 ### (a) pressão parcial do ar seco
 
-A pressão parcial do ar seco pode ser determinada via
+A pressão parcial do ar seco é determinada via
 
 $P_a = P - P_v,$ onde
 
-$P_v = \phi P_g = \phi P_{sat@T}$
+$P_v = \phi P_g = \phi P_{sat@T},$
+
+e $P_{sat@T}$ é obtida por meio da biblioteca [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl).
 """
 
 # ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
 md"""
 ### (b) umidade específica do ar
 
-A umidade específica (absoluta) pode ser determinada via
+A umidade específica (absoluta) é determinada via
 
-$\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
+$\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a},$
+
+com $P_v$ e $P_a$ obtidos no item anterior. Note que a constante psicrométrica
+
+$C_{\psi} = \frac{R_a}{R_v} \approx 0,621967$
+
+obtida por meio da biblioteca [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl) é utilizada nos cálculos ao invés do valor arredondado $0,622$.
 """
 
 # ╔═╡ a2731adc-7153-11eb-0521-5560c819c7a0
@@ -107,12 +118,14 @@ md"""
 
 A entalpia do ar por unidade de massa de ar seco é determinada via
 
-$h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
+$h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g,$
+
+Na qual $\mathsf{T}$ é a temperatura em °C.
 """
 
 # ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
 md"""
-#### (d) massas de ar seco e de vapor na sala
+#### (d) massas de ar seco e de vapor no galpão
 
 Tais massas podem ser calculadas pela equação de estado (de gás ideal):
 

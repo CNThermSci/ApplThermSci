@@ -21,15 +21,6 @@ begin
 	using Plots
 end
 
-# ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
-begin
-	CP = pyimport("CoolProp.CoolProp")
-	Ra = CP.PropsSI("GAS_CONSTANT",   "air") / CP.PropsSI("M",   "air") * 1.0e-3
-	Rv = CP.PropsSI("GAS_CONSTANT", "water") / CP.PropsSI("M", "water") * 1.0e-3
-	Cψ = Ra/Rv # Psychrometric constant (usually rounded to 0.622)
-	md"Cψ = $(@sprintf(\"%.6f\", Cψ))"
-end
-
 # ╔═╡ fd91f76e-7147-11eb-04c9-011f7aa335b9
 md"""
 # Exercício A0801-01 – Massa de vapor d'água em um galpão fechado
@@ -85,6 +76,57 @@ $P_a = P - P_v,$ onde
 $P_v = \phi P_g = \phi P_{sat@T}$
 """
 
+# ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
+md"""
+### (b) umidade específica do ar
+
+A umidade específica (absoluta) pode ser determinada via
+
+$\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
+"""
+
+# ╔═╡ a2731adc-7153-11eb-0521-5560c819c7a0
+md"""
+### (c) entalpia do ar por unidade de massa de ar seco
+
+A entalpia do ar por unidade de massa de ar seco é determinada via
+
+$h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
+"""
+
+# ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
+md"""
+#### (d) massas de ar seco e de vapor na sala
+
+Tais massas podem ser calculadas pela equação de estado (de gás ideal):
+
+$m = \frac{PV}{RT}$
+"""
+
+# ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
+md"""
+## Bibliotecas e Demais Recursos
+"""
+
+# ╔═╡ 0a3b27a8-71fa-11eb-32c4-517738939197
+md"""
+### Bibliotecas
+"""
+
+# ╔═╡ 22178e70-71fa-11eb-10d6-07a8d055d909
+md"""
+### Constantes
+"""
+
+# ╔═╡ 82207d6a-714e-11eb-302e-812ad2d704dd
+begin
+	CP = pyimport("CoolProp.CoolProp")
+	Ra = CP.PropsSI("GAS_CONSTANT",   "air") / CP.PropsSI("M",   "air") * 1.0e-3
+	Rv = CP.PropsSI("GAS_CONSTANT", "water") / CP.PropsSI("M", "water") * 1.0e-3
+	Cψ = Ra/Rv # Psychrometric constant (usually rounded to 0.622)
+	md"Cψ = $(@sprintf(\"%.6f\", Cψ))"
+end
+
 # ╔═╡ 404d04ca-714f-11eb-1850-3d1384e2c747
 begin
 	Pg = CP.PropsSI("P", "T", the_T + 273.15, "Q", 1.0, "water") * 1.0e-3 # kPa
@@ -97,15 +139,6 @@ begin
 """
 end
 
-# ╔═╡ 161bc6c8-714f-11eb-34d4-798c68a07fe3
-md"""
-### (b) umidade específica do ar
-
-A umidade específica (absoluta) pode ser determinada via
-
-$\omega = \frac{0,622 P_v}{P - P_v} = \frac{0,622 P_v}{P_a}$
-"""
-
 # ╔═╡ a28b7c80-7153-11eb-1e4b-c9655dc6bf11
 begin
 	ω = Cψ * Pv / Pa # kg/kg
@@ -113,15 +146,6 @@ begin
 	$(@sprintf(\"%.4f\", ω)) kg/kg
 	"""
 end
-
-# ╔═╡ a2731adc-7153-11eb-0521-5560c819c7a0
-md"""
-### (c) entalpia do ar por unidade de massa de ar seco
-
-A entalpia do ar por unidade de massa de ar seco é determinada via
-
-$h = h_a + \omega h_v \approx c_P\mathsf{T} + \omega h_g$
-"""
 
 # ╔═╡ 0e85726a-7154-11eb-2ec4-4b45508a285e
 begin
@@ -141,15 +165,6 @@ begin
 	$(@sprintf(\"%.2f\", ha)), $(@sprintf(\"%.2f\", hv)), $(@sprintf(\"%.2f\", hg)),
 	( $(@sprintf(\"%.2f\", h[1])), $(@sprintf(\"%.2f\", h[2])) )) kJ/kg"""
 end
-
-# ╔═╡ 0e040eaa-7154-11eb-08de-f76fe6ef358b
-md"""
-#### (d) massas de ar seco e de vapor na sala
-
-Tais massas podem ser calculadas pela equação de estado (de gás ideal):
-
-$m = \frac{PV}{RT}$
-"""
 
 # ╔═╡ 778fd34e-716e-11eb-2b04-39e78ece6e49
 begin
@@ -176,9 +191,9 @@ md"""
 |(d)|$m_v$     | $(@sprintf(\"%.2f\",   mv)) | kg |
 """
 
-# ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
+# ╔═╡ f96141a6-71f9-11eb-065a-69b0f4594921
 md"""
-## Gráfico - Estado do vapor d'água a $(P_v, T)$
+### Gráfico - Domo de Saturação da Água
 """
 
 # ╔═╡ b4b97260-717e-11eb-25c3-ffcd02a2662e
@@ -237,8 +252,6 @@ begin
 end
 
 # ╔═╡ Cell order:
-# ╠═44780316-7149-11eb-2c22-91b75023501a
-# ╠═82207d6a-714e-11eb-302e-812ad2d704dd
 # ╟─fd91f76e-7147-11eb-04c9-011f7aa335b9
 # ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e
@@ -259,4 +272,9 @@ end
 # ╟─0e040eaa-7154-11eb-08de-f76fe6ef358b
 # ╟─778fd34e-716e-11eb-2b04-39e78ece6e49
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
+# ╟─0a3b27a8-71fa-11eb-32c4-517738939197
+# ╠═44780316-7149-11eb-2c22-91b75023501a
+# ╟─22178e70-71fa-11eb-10d6-07a8d055d909
+# ╠═82207d6a-714e-11eb-302e-812ad2d704dd
+# ╟─f96141a6-71f9-11eb-065a-69b0f4594921
 # ╠═b4b97260-717e-11eb-25c3-ffcd02a2662e

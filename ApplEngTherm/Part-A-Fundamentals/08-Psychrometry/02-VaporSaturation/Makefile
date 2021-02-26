@@ -67,7 +67,7 @@ wwwFIG = 01-cold-dr-pepper \
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
 		$(foreach EXT,$(wwwEXT), \
-			$(foreach BAS,$(wwwFIG),www/$BAS.$EXT)) \
+			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	bibtex ${PRES}
@@ -77,7 +77,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
 		$(foreach EXT,$(wwwEXT), \
-			$(foreach BAS,$(wwwFIG),www/$BAS.$EXT)) \
+			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	bibtex ${HOUT}

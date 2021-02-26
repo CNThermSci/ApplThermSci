@@ -60,10 +60,14 @@ fig/%.pdf: fig/%.svg
 		--export-filename=$@ \
 		$<
 
+wwwEXT = jpg short
+wwwFIG = 01-cold-dr-pepper \
+		 02-cold-bottle
+
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
-		www/01-cold-dr-pepper.jpg \
-		www/02-cold-bottle.jpg \
+		$(foreach EXT,$(wwwEXT), \
+			$(foreach BAS,$(wwwFIG),www/$BAS.$EXT)) \
 		root/00-res/logo/CNThermSci-logo-A.pdf
 	pdflatex --enable-write18 ${PRES}.tex
 	bibtex ${PRES}
@@ -72,8 +76,8 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
-		www/01-cold-dr-pepper.jpg \
-		www/02-cold-bottle.jpg \
+		$(foreach EXT,$(wwwEXT), \
+			$(foreach BAS,$(wwwFIG),www/$BAS.$EXT)) \
 		root/00-res/logo/CNThermSci-logo-W.pdf
 	pdflatex --enable-write18 ${HOUT}.tex
 	bibtex ${HOUT}

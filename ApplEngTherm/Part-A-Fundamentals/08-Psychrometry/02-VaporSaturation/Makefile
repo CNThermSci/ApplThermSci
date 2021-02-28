@@ -69,7 +69,9 @@ wwwFIG = 01-cold-dr-pepper \
 		 02-cold-bottle \
 		 03-LN2 \
 		 04-windshield-ice \
-		 05-clouds-rain 
+		 05-clouds-rain \
+		 06-snow-storm \
+		 07-Sachseln-snow
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \

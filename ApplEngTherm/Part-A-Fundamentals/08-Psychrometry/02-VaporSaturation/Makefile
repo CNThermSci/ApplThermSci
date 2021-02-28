@@ -64,7 +64,8 @@ wwwEXT = jpg short
 wwwFIG = 01-cold-dr-pepper \
 		 02-cold-bottle \
 		 03-LN2 \
-		 04-windshield-ice
+		 04-windshield-ice \
+		 05-clouds-rain 
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \

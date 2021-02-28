@@ -63,7 +63,8 @@ fig/%.pdf: fig/%.svg
 wwwEXT = jpg short
 wwwFIG = 01-cold-dr-pepper \
 		 02-cold-bottle \
-		 03-LN2
+		 03-LN2 \
+		 04-windshield-ice
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \

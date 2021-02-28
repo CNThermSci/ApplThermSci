@@ -71,7 +71,8 @@ wwwFIG = 01-cold-dr-pepper \
 		 04-windshield-ice \
 		 05-clouds-rain \
 		 06-snow-storm \
-		 07-Sachseln-snow
+		 07-Sachseln-snow \
+		 08-sling-psychrometer
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \

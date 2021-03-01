@@ -76,7 +76,10 @@ wwwFIG = 01-cold-dr-pepper \
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
-		fig/adiabatic-saturation.pdf \
+		fig/adiabatic-saturation-0.pdf \
+		fig/adiabatic-saturation-1.pdf \
+		fig/adiabatic-saturation-2.pdf \
+		fig/adiabatic-saturation-3.pdf \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-A.pdf
@@ -87,7 +90,10 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
 		fig/T-po-in-Ts-diag.pdf \
-		fig/adiabatic-saturation.pdf \
+		fig/adiabatic-saturation-0.pdf \
+		fig/adiabatic-saturation-1.pdf \
+		fig/adiabatic-saturation-2.pdf \
+		fig/adiabatic-saturation-3.pdf \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-W.pdf

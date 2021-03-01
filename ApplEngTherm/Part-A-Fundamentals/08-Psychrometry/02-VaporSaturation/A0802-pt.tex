@@ -209,10 +209,9 @@
 
     % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Balanços de Massa e Energia}\vspace*{-2em}
+    \begin{frame}{Balanço de Massa}\vspace*{-2em}
         \begin{columns}
-            \column{0.50\textwidth}
-            \alert{\textit{Balanço de massa:}}
+            \column{0.60\textwidth}
             \begin{align*}
                 \uncover<1->{
                     \dot{m}_{a1} &= \dot{m}_{a2}
@@ -240,7 +239,61 @@
                     \alert{\dot{m}_{\ell}} &\alert{= \dot{m}_a(\omega_2 - \omega_1)}.
                 }
             \end{align*}
-            \column{0.50\textwidth}
+            \column{0.40\textwidth}
+            \figfigWID{fig/adiabatic-saturation-3.pdf}{1.00\textwidth}
+        \end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+    % !j 96 -i8
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Balanço de Energia (com $Q=W=0$)}\vspace*{-2em}
+        \begin{columns}
+            \column{0.60\textwidth}
+            \begin{align*}
+                \uncover<1->{
+                    \dot{E}_{ent} &= \dot{E}_{sai}
+                }
+                \uncover<2->{
+                    \qquad\rightharpoondown
+                    \\[\smallskipamount]
+                }
+                \uncover<3->{
+                    \dot{m}_ah_1 + \dot{m}_{\ell}h_{\ell} &= \dot{m}_ah_2
+                }
+                \uncover<4->{
+                    \qquad\rightharpoondown
+                    \\[\smallskipamount]
+                }
+                \uncover<5->{
+                    \dot{m}_ah_1 + \dot{m}_a(\omega_2 - \omega_1)h_{\ell} &= \dot{m}_ah_2
+                }
+                \uncover<6->{
+                    \qquad\rightharpoondown
+                    \\[\smallskipamount]
+                }
+                \uncover<7->{
+                    h_1 + (\omega_2 - \omega_1)h_{\ell} &= h_2
+                }
+                \uncover<8->{
+                    \qquad\rightharpoondown
+                    \\[\smallskipamount]
+                }
+                \uncover<9->{
+                    (c_P\mathsf{T}_1 + \omega_1h_{g1}) +
+                    (\omega_2 - \omega_1)h_{\ell} &=
+                    (c_P\mathsf{T}_2 + \omega_2h_{v2})
+                    \\[\smallskipamount]
+                }
+                \uncover<10->{
+                    \alert{\omega_2 = \frac{0,622P_g}{P-P_g}};
+                    \qquad
+                    \alert{\omega_1} &\alert{=
+                        \frac{c_P(T_2 - T_1)h_{\ell v2}}{h_{g1} - h_{\ell}}
+                    }.
+                }
+            \end{align*}
+            \column{0.40\textwidth}
             \figfigWID{fig/adiabatic-saturation-3.pdf}{1.00\textwidth}
         \end{columns}
     \end{frame}

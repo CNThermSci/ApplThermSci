@@ -14,7 +14,7 @@
    id="svg1097"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    sodipodi:docname="110-33-1-Rankine.svg"
-   inkscape:export-filename="/home/BACK/trendy/cloud/Dropbox/UTFPR/00-Disc/uqbk/comp/system/en/B3-vaporPowr/2211-Rankine-ID+SH+RG2+RH1.svg.png"
+   inkscape:export-filename="/home/BACK/trendy/local/dev/CNThermSci/ApplThermSci/ApplEngTherm/Part-B-Applications/02-VaporPower/fig/110-33-1-Rankine.svg.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96">
   <defs
@@ -1249,9 +1249,10 @@
        sodipodi:rx="10"
        sodipodi:ry="10"
        sodipodi:start="3.1379279"
-       sodipodi:end="6.2828569"
+       sodipodi:end="6.2827693"
        sodipodi:open="true"
-       d="m 290.00007,398.28665 a 10,10 0 0 1 4.97784,-8.68411 10,10 0 0 1 10.00961,-0.02 10,10 0 0 1 5.01248,8.66417" />
+       d="m 290.00007,398.28665 a 10,10 0 0 1 4.97759,-8.68397 10,10 0 0 1 10.00935,-0.0204 10,10 0 0 1 5.01299,8.66358"
+       sodipodi:arc-type="arc" />
     <path
        style="opacity:0.98999999;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.99999988;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none"
        d="m 200,398.25 h 90"

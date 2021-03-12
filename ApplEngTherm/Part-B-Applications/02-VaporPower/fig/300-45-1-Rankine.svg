@@ -410,10 +410,10 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-138.24998)">
+     id="layer2"
+     inkscape:label="Layer 0"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:0.048887;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
        id="rect949"
@@ -423,7 +423,13 @@
        y="0"
        ry="53.333332"
        rx="28.679245"
-       transform="matrix(2.7894737,0,0,1.5,0,138.24998)" />
+       transform="scale(2.7894737,1.5)" />
+  </g>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-138.24998)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#b00000;fill-opacity:1;stroke:none"

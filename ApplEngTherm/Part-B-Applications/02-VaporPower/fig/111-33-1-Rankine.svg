@@ -16,6 +16,21 @@
    sodipodi:docname="111-33-1-Rankine.svg">
   <defs
      id="defs1091">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker11791"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path11789"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
     <inkscape:path-effect
        effect="bspline"
        id="path-effect14120-8-8-1-6-4"
@@ -223,6 +238,37 @@
          style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-0-34-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path16774-8-5-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-0-34-3-7"
+       style="overflow:visible"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         inkscape:connector-curvature="0"
+         id="path16774-8-5-3-5"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -231,9 +277,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3234375"
-     inkscape:cx="480"
-     inkscape:cy="320"
+     inkscape:zoom="2.646875"
+     inkscape:cx="498.44953"
+     inkscape:cy="200.12298"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1714,5 +1760,74 @@
          x="392.54886"
          id="tspan15595-5-3-7"
          sodipodi:role="line">1-ζ-φ</tspan></text>
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#007000;fill-opacity:1;fill-rule:nonzero;stroke:#007000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Mend-0-34-3);enable-background:accumulate"
+       d="m 380,505.24992 h 70"
+       id="path15591-3-7-8-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       transform="translate(380,-46.99994)" />
+    <text
+       id="text15597-8-6-5-9"
+       y="523.76556"
+       x="412.54886"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="translate(380,-46.99994)"><tspan
+         style="font-size:20px;line-height:1.25;text-align:center;text-anchor:middle;fill:#007000;fill-opacity:1;stroke-width:1"
+         y="523.76556"
+         x="412.54886"
+         id="tspan15595-5-3-7-5"
+         sodipodi:role="line">1-ζ-φ-χ</tspan></text>
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#007000;fill-opacity:1;fill-rule:nonzero;stroke:#007000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Mend-0-34-3-7);enable-background:accumulate"
+       d="m 400,505.24992 h 40"
+       id="path15591-3-7-8-8-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       transform="rotate(90,538.49997,656.74995)" />
+    <text
+       id="text15597-8-6-5-9-5"
+       y="523.76556"
+       x="412.54886"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="translate(287.47556,11.486369)"><tspan
+         style="font-size:20px;line-height:1.25;text-align:center;text-anchor:middle;fill:#007000;fill-opacity:1;stroke-width:1"
+         y="523.76556"
+         x="412.54886"
+         id="tspan15595-5-3-7-5-6"
+         sodipodi:role="line">χ</tspan></text>
+    <path
+       style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00b7b8;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2495.0001,289.0833 v 30 h 10 v -30 z"
+       id="path11767"
+       inkscape:connector-curvature="0"
+       transform="translate(-1810.0001,229.16668)" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#007000;fill-opacity:1;fill-rule:nonzero;stroke:#007000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#marker11791);enable-background:accumulate"
+       d="m 400,505.24992 h 40"
+       id="path11781"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       transform="rotate(90,418.49997,436.74995)" />
+    <text
+       id="text11785"
+       y="523.76556"
+       x="412.54886"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="translate(-54.853546,-84.788045)"><tspan
+         style="font-size:20px;line-height:1.25;text-align:center;text-anchor:middle;fill:#007000;fill-opacity:1;stroke-width:1"
+         y="523.76556"
+         x="412.54886"
+         id="tspan11783"
+         sodipodi:role="line">ζ</tspan></text>
+    <path
+       style="display:inline;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#00b7b8;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 2495.0001,289.0833 v 30 h 10 v -30 z"
+       id="path11787"
+       inkscape:connector-curvature="0"
+       transform="translate(-2150.0001,129.16668)" />
   </g>
 </svg>

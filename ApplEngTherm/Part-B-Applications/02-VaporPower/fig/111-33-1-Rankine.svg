@@ -208,6 +208,21 @@
          style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend-0-34"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path16774-8-5-6"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#007000;fill-opacity:1;fill-rule:evenodd;stroke:#007000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -217,8 +232,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3234375"
-     inkscape:cx="309.41015"
-     inkscape:cy="259.80124"
+     inkscape:cx="480"
+     inkscape:cy="320"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1680,5 +1695,24 @@
          x="372.54883"
          id="tspan15595-5-3-1"
          sodipodi:role="line">1-ζ</tspan></text>
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#007000;fill-opacity:1;fill-rule:nonzero;stroke:#007000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#Arrow1Mend-0-34);enable-background:accumulate"
+       d="m 360,425.24992 h 70"
+       id="path15591-3-7-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       transform="translate(10,153.00006)" />
+    <text
+       id="text15597-8-6-5"
+       y="443.76556"
+       x="392.54886"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#007000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="translate(10,153.00006)"><tspan
+         style="font-size:20px;line-height:1.25;text-align:center;text-anchor:middle;fill:#007000;fill-opacity:1;stroke-width:1"
+         y="443.76556"
+         x="392.54886"
+         id="tspan15595-5-3-7"
+         sodipodi:role="line">1-ζ-φ</tspan></text>
   </g>
 </svg>

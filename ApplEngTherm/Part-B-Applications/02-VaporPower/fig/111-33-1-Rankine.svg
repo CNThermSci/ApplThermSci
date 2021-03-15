@@ -295,7 +295,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.3234375"
      inkscape:cx="480"
-     inkscape:cy="317.73318"
+     inkscape:cy="320"
      inkscape:document-units="px"
      inkscape:current-layer="layer3"
      showgrid="true"
@@ -341,12 +341,13 @@
      id="layer3"
      inkscape:label="Layer 0">
     <rect
-       style="fill:#005500;stroke:#005000;stroke-width:1.5;stop-color:#000000"
+       style="fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:1.5;stop-color:#000000"
        id="rect12126"
        width="960"
        height="640"
        x="0"
-       y="0" />
+       y="0"
+       ry="100" />
   </g>
   <g
      inkscape:label="Layer 1"

@@ -28,24 +28,28 @@ www/%.jpg: www/%.url
 	wget \
 		--input-file=$< \
 		--output-document=$@
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
 	touch $@
 
 www/%.jpeg: www/%.url
 	wget \
 		--input-file=$< \
 		--output-document=$@
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
 	touch $@
 
 www/%.png: www/%.url
 	wget \
 		--input-file=$< \
 		--output-document=$@
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
 	touch $@
 
 www/%.svg: www/%.url
 	wget \
 		--input-file=$< \
 		--output-document=$@
+		--user-agent="Mozilla/5.0 (X11; Linux x86_64)"
 	touch $@
 
 www/%.pdf: www/%.svg
@@ -64,6 +68,7 @@ wwwEXT = jpg short
 wwwFIG = 01-kitchen
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
+		fig/01-SistemaRefrGen.pdf \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-A.pdf
@@ -73,6 +78,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
+		fig/01-SistemaRefrGen.pdf \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-W.pdf

@@ -9,8 +9,8 @@
 %-----------------------------------------------------------------------------------------------
 \input{root/ApplEngTherm/commands.tex}
 %-----------------------------------------------------------------------------------------------
-\title{A.00.00 -- Template}
-\subtitle{(Template)}
+\title{B.04.01 -- Ciclos de Refrigeração}
+\subtitle{Ciclos de Compressão de Vapor de Simples Estágio}
 \author{Prof.~C.~Naaktgeboren, PhD}
 \date{{\scriptsize\tt%
     \includegraphics[height=6.0mm]{cc/by-nc-nd-88x31.pdf}\\[\smallskipamount]
@@ -44,42 +44,51 @@
 \frame{%
     \hfill\par
     % !bib LST 2>/dev/null | paste -s -d',' | sed 's|,|, |g' | j -i8 96 
-    Esta apresentação baseia-se nas referências~\cite{2013-CengelYA+BolesMA-AMGH},
-    \alert{Seções~14-1 a 14-2} (tópicos de leitura) e~\cite{2016-FentonDL-ASHRAE}.
-    \hfill
+    Esta apresentação baseia-se nas referências~\cite{2016-FentonDL-ASHRAE}, \alert{Capítulo~3,
+    pp.~45--50} e~\cite{2013-CengelYA+BolesMA-AMGH}, \alert{Seções~11-1, 3 a 11-7} (tópicos de
+    leitura).  \hfill
 }
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Modelo de Seção}
+\section{Tipos de Aplicações}
 %-----------------------------------------------------------------------------------------------
 
-%-----------------------------------------------------------------------------------------------
-\subsection{Modelo de Subseção}
-%-----------------------------------------------------------------------------------------------
-
-    % !j 96 -i8
     %-------------------------------------------------------------------------------------------
-    \begin{frame}{Modelo de Slide}\vspace*{-2em}
-        \begin{columns}
-        \column{0.55\textwidth}
-            Coluna com 55\% de largura:\\[\smallskipamount]
-            \begin{itemize}
-                \item<1-> Item 1;
-                \item<2-> Item 2;
-                \item<3-> Item 3.
-            \end{itemize}
-        \column{0.45\textwidth}
-            Coluna com 45\% de largura.
-            \begin{figure}
-                \includegraphics[width=0.5\textwidth]{cc/by-nc-nd-88x31.pdf}
-            \end{figure}
-        \end{columns}
+    \begin{frame}\vspace*{-0em}
+        \wwwfigHEI{01-kitchen}{jpg}{url}{0.8\textheight}
     \end{frame}
     %-------------------------------------------------------------------------------------------
 
+    %-------------------------------------------------------------------------------------------
+    \begin{frame}{Refrigeradores e Bombas de Calor}\vspace*{-0em}
+        \begin{columns}
+        \column{0.40\textwidth}
+            \begin{itemize}
+                \item<1-> O \alert{esquemático} ilustra um \alert{refrigerador genérico};
+                    \\[\bigskipamount]
+                \item<1-> \alert{Sistemas} e \alert{interações energéticas} são identificados;
+                    \\[\bigskipamount]
+                \item<2-> Se \alert{interesse}: $q_{ent}$, tem-se um \alert{refrigerador};
+					\\[\bigskipamount]
+                \item<2-> Se \alert{interesse}: $q_{sai}$, tem-se uma \alert{bomba de calor}.
+            \end{itemize}
+        \column{0.60\textwidth}
+            \begin{center}
+                \begin{figure}
+                    \fontsize{5.0}{5}\selectfont
+                    \includegraphics[height=0.8\textheight]{fig/01-SistemaRefrGen.pdf}
+                    \\\vspace*{-1em}\texttt{autoria própria}
+                \end{figure}
+            \end{center}
+            \vfill
+		\end{columns}
+    \end{frame}
+    %-------------------------------------------------------------------------------------------
+
+
 %-----------------------------------------------------------------------------------------------
-\section{Referências e Tópicos de Leitura}
+\section{Referências}
 %-----------------------------------------------------------------------------------------------
 
     %------------------------------------------------------------------------------------------
@@ -91,7 +100,7 @@
     %------------------------------------------------------------------------------------------
 
     % Finishes with stunning image, with credit
-    \ArtEndWSE{pexels-emiliano-arano-1295138}{jpg}{txt}
+    \ArtEndWSE{pexels-simon-berger-730614}{jpg}{txt}
 
 %-----------------------------------------------------------------------------------------------
 \end{document}

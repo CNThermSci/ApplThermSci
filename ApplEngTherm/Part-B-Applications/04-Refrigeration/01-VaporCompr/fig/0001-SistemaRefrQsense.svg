@@ -202,7 +202,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -212,7 +212,7 @@
      inkscape:label="Layer 0"
      sodipodi:insensitive="true">
     <rect
-       style="fill:#ffffff;fill-opacity:0.2;stroke:none;stroke-width:1.06667;stroke-linejoin:round"
+       style="fill:#ffffff;fill-opacity:0.4;stroke:none;stroke-width:1.06667;stroke-linejoin:round"
        id="rect1484"
        width="700"
        height="500"

@@ -67,7 +67,7 @@ fig/%.pdf: fig/%.svg
 wwwEXT = jpg short
 wwwFIG = 01-kitchen
 figFIG = 0001-SistemaRefrQsense \
-		 0002-Refr-Vap-ID
+		 0002-Refr-Vap-RE
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		$(foreach FIG,$(figFIG),fig/$(FIG).pdf) \

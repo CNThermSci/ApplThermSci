@@ -201,9 +201,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.2841181"
-     inkscape:cx="164.43837"
-     inkscape:cy="105.78082"
+     inkscape:zoom="2.3527778"
+     inkscape:cx="200"
+     inkscape:cy="180"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -214,7 +214,8 @@
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:document-rotation="0"
-     showborder="false">
+     showborder="false"
+     inkscape:snap-global="true">
     <inkscape:grid
        type="xygrid"
        id="grid1646"
@@ -923,10 +924,10 @@
        sodipodi:nodetypes="cc" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#005500;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#marker9833);enable-background:accumulate"
-       d="m 119.99998,698.24998 v -20 h 39.99995"
+       d="m 119.99998,698.24998 c 0,0 0,0 0,-10 0,-10 0,-10 9.99999,-10 9.99999,0 29.99996,0 29.99996,0"
        id="path9811"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc"
+       sodipodi:nodetypes="cccc"
        transform="matrix(1.0000011,0,0,1,29.99989,-210)" />
     <g
        id="g9829"

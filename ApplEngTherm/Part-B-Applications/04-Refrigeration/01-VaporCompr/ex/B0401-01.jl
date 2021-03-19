@@ -4,6 +4,15 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
 # ╔═╡ 44780316-7149-11eb-2c22-91b75023501a
 begin
 	using PlutoUI
@@ -40,12 +49,22 @@ Original.
 """
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
-begin
-	the_x, the_y, the_z = 11.5, 11.5, 6.0
-	prob = Dict(
-		:T => 15.0:1.0:60.00,	# Temperatura, °C
-		:P => 80.0:5.0:120.0,	# Pressão, kPa
-		:ϕ => 15.0:5.0:100.0,	# Umidade relativa, %
+prob = Dict(
+	:W_C	=>	  1.0:	0.25:	 3.0,	# Taxa de trabalho, kW
+	:η_C	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
+	:I_C	=>	 50.0:	5.00:	75.0,	# Irrev. perdida no compressor, %
+	:T_c	=>	 60.0:	5.00:	80.0,	# Temperatura de condensação, °C
+	:T_e	=>	-20.0:	5.00:	-5.0,	# Temperatura de evaporação, °C
+);
+
+# ╔═╡ 72413c5a-88f4-11eb-08d2-813542bed0f4
+@bind go Button("Recompute")
+
+# ╔═╡ 7b557108-88f4-11eb-386c-5de9519fa60a
+if go == "Recompute"
+	the = Dict(
+	   K => rand(prob[K])
+		   for K in keys(prob)
 	)
 end
 
@@ -53,38 +72,36 @@ end
 md"""
 ## Enunciado:
 
+Um ciclo de refrigeração por compressão de vapor, ilustrado abaixo, opera com entrada de potência de **$(the[:W_C])kW** no compressor, o qual possui eficiência isentrópica de **$(the[:η_C])%** e perde **$(the[:I_C])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. A temperatura de condensação é de **$(the[:T_c])°C** e a de evaporação é de **$(the[:T_e])°C**. Determine, considerando o emprego do **R134a**:
+
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0002-Refr-Vap-RE.png)
 
-Determine: **(a)** a pressão parcial do ar seco; **(b)** a umidade específica (absoluta); **(c)** a entalpia por unidade de massa de ar seco; **(d)** as massas de ar seco e de vapor d'água no galpão.
-"""
+**(a)** A vazão mássica de refrigerante, em kg/s
 
-# ╔═╡ 6322df58-7169-11eb-2248-4b4bf3689197
-md"""
-## Solução:
+**(b)** A taxa de rejeição de calor, em kW
 
-|Letra|Propriedade|Valor|Unid.|
-|:---:|:---------:|----:|:----|
-|(a)|$P_a$     | $(@sprintf(\"%.2f\",   Pa)) | kPa   |
-|(b)|$\omega$  | $(@sprintf(\"%.4f\",    ω)) | kg/kg |
-|(c)|$h$       | $(@sprintf(\"%.2f\", h[2])) | kJ/kg |
-|(d)|$m_a$     | $(@sprintf(\"%.2f\",   ma)) | kg |
-|(d)|$m_v$     | $(@sprintf(\"%.2f\",   mv)) | kg |
+**(c)** A capacidade de refrigeração, em ton
+
+**(d)** O COP do refrigerador, em %
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
 md"""
 ## Resolução
 
-### (a) pressão parcial do ar seco
+### (a) A vazão mássica de refrigerante, em kg/s
 
-A pressão parcial do ar seco é determinada via
+É determinada por meio da análise de energia no compressor, com eficiência isentrópica:
 
-$P_a = P - P_v,$ onde
+$\dot{W}_{ent} = \dot{m} w_{ent},$
 
-$P_v = \phi P_g = \phi P_{sat@T},$
+com $w_{ent}$ sendo o trabalho _real_.
 
-e $P_{sat@T}$ é obtida por meio da biblioteca [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl).
+A biblioteca de propriedades termofísicas utilizada é a [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl).
 """
+
+# ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
+
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
@@ -159,11 +176,13 @@ end
 # ╔═╡ Cell order:
 # ╟─570e1fe8-7206-11eb-29d3-e1b68516ba96
 # ╟─056da550-71fc-11eb-3940-5d1996cf5ec2
-# ╟─6dc92e96-7148-11eb-1cc3-cf2d65e8985b
-# ╠═98a9cb5c-7187-11eb-08f2-d53ad216d48e
-# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
-# ╠═6322df58-7169-11eb-2248-4b4bf3689197
+# ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
+# ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
+# ╟─7b557108-88f4-11eb-386c-5de9519fa60a
+# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╠═59f6ad1c-714b-11eb-1b85-0542622b8aba
+# ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
+# ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

@@ -64,6 +64,13 @@ fig/%.pdf: fig/%.svg
 		--export-filename=$@ \
 		$<
 
+fig/%.png: fig/%.svg
+	inkscape \
+		--export-type=png \
+		--export-dpi=96 \
+		--export-filename=$@ \
+		$<
+
 wwwEXT = jpg short
 wwwFIG = 01-kitchen
 figFIG = 0001-SistemaRefrQsense \

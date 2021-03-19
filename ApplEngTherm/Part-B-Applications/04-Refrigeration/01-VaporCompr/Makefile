@@ -68,7 +68,8 @@ wwwEXT = jpg short
 wwwFIG = 01-kitchen
 figFIG = 0001-SistemaRefrQsense \
 		 0002-Refr-Vap-RE \
-		 0003-Refr-Vap-RE+CHX+EHX
+		 0003-Refr-Vap-RE+CHX+EHX \
+		 0004-Refr-Vap-RE-REG+CHX+EHX
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 		$(foreach FIG,$(figFIG),fig/$(FIG).pdf) \

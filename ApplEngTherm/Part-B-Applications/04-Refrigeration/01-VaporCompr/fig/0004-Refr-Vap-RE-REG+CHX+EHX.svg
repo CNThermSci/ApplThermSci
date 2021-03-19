@@ -19,6 +19,20 @@
    inkscape:export-ydpi="96">
   <defs
      id="defs1091">
+    <marker
+       style="overflow:visible"
+       id="marker9183"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         id="path9181" />
+    </marker>
     <rect
        x="260"
        y="598.24998"
@@ -268,7 +282,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path15575-5"
-       d="M 160,558.25003 V 498.25005"
+       d="m 160,638.24998 0,-139.99993"
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#e0e0e0;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
     <path
        sodipodi:nodetypes="ccccc"
@@ -1114,5 +1128,45 @@
        xml:space="preserve"
        id="text9147"
        style="fill:#005500;font-size:16px;-inkscape-font-specification:'SBL BibLit';font-family:'SBL BibLit';stroke-width:1;stop-color:#000000;stroke:#005500;fill-opacity:1;stroke-opacity:1;text-align:start;stroke-miterlimit:4;stroke-dasharray:none;white-space:pre;shape-inside:url(#rect9149)" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;stop-color:#000000;stop-opacity:1"
+       d="m 180,100 h 80"
+       id="path9153"
+       transform="translate(0,378.24998)" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;stop-color:#000000;stop-opacity:1"
+       d="m 480,320 v 80"
+       id="path9155"
+       transform="translate(0,378.24998)" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;stop-color:#000000;stop-opacity:1"
+       d="M 460,420 H 380"
+       id="path9157"
+       transform="translate(0,378.24998)" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;stop-color:#000000;stop-opacity:1"
+       d="M 100,400 V 320"
+       id="path9159"
+       transform="translate(0,378.24998)" />
+    <text
+       id="text9177"
+       y="668.27234"
+       x="134.09651"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="matrix(1.0000055,0,0,1.0000044,264.95548,-25.5233)"><tspan
+         style="font-size:20.0001px;line-height:1.25;text-align:start;text-anchor:start;fill:#000000;stroke-width:1"
+         y="668.27234"
+         x="134.09651"
+         id="tspan9175"
+         sodipodi:role="line">ϵ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan9173">r</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#marker9183);stop-color:#000000;stop-opacity:1"
+       d="M 310,280 H 250"
+       id="path9179"
+       transform="matrix(1.0000011,0,0,1,79.999659,358.24998)"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

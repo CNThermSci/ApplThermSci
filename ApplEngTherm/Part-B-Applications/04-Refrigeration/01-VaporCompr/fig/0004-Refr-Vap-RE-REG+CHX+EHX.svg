@@ -20,6 +20,21 @@
   <defs
      id="defs1091">
     <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker9833"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path9831"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#005500;fill-opacity:1;fill-rule:evenodd;stroke:#005500;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <marker
        style="overflow:visible"
        id="marker9183"
        refX="0"
@@ -147,7 +162,8 @@
        refX="0"
        id="Arrow1Mend-0"
        style="overflow:visible"
-       inkscape:isstock="true">
+       inkscape:isstock="true"
+       inkscape:collect="always">
       <path
          inkscape:connector-curvature="0"
          id="path16774-8"
@@ -1080,5 +1096,61 @@
        d="M 350,220 V 200 L 450,100 h 30 v 100"
        id="path9387"
        transform="translate(0,378.24998)" />
+    <path
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#005500;fill-opacity:1;fill-rule:nonzero;stroke:#005500;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#marker9833);enable-background:accumulate"
+       d="m 100,678.24998 h 59.99993"
+       id="path9811"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       transform="matrix(1.0000011,0,0,1,69.99989,-210)" />
+    <g
+       id="g9829"
+       transform="matrix(1.0000011,0,0,1,54.453805,-180)"
+       style="fill:#005500">
+      <g
+         id="g9973"
+         transform="translate(-10.11652,-48.377535)">
+        <text
+           transform="scale(1.0000044)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#005500;fill-opacity:1;stroke:none;stroke-width:1"
+           x="146.4155"
+           y="687.49115"
+           id="text9817"><tspan
+             sodipodi:role="line"
+             id="tspan9815"
+             x="146.4155"
+             y="687.49115"
+             style="font-size:20.0001px;line-height:1.25;fill:#005500;fill-opacity:1;stroke-width:1">m<tspan
+   id="tspan9813"
+   style="font-size:65%;baseline-shift:sub;fill:#005500" /></tspan></text>
+        <text
+           transform="scale(1.0000044)"
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#005500;fill-opacity:1;stroke:none;stroke-width:1"
+           x="140.89789"
+           y="676.07715"
+           id="text9821"><tspan
+             sodipodi:role="line"
+             id="tspan9819"
+             x="140.89789"
+             y="676.07715"
+             style="font-size:20.0001px;line-height:1.25;fill:#005500;fill-opacity:1;stroke-width:1">.</tspan></text>
+        <text
+           id="text9827"
+           y="687.49115"
+           x="125.64732"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#005500;fill-opacity:1;stroke:none;stroke-width:1"
+           xml:space="preserve"
+           transform="matrix(1.0000044,0,0,1.0000044,4.0688896,0)"><tspan
+             style="font-size:20.0001px;line-height:1.25;text-align:start;text-anchor:start;fill:#005500;fill-opacity:1;stroke-width:1"
+             y="687.49115"
+             x="125.64732"
+             id="tspan9825"
+             sodipodi:role="line">m<tspan
+   id="tspan9823"
+   style="font-size:65%;text-align:start;baseline-shift:sub;text-anchor:start;fill:#005500">refr</tspan></tspan></text>
+      </g>
+    </g>
   </g>
 </svg>

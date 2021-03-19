@@ -20,6 +20,35 @@
   <defs
      id="defs1091">
     <marker
+       style="overflow:visible"
+       id="marker1566"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) translate(7.4, 1)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path1564" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="DotM"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotM"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4) translate(7.4, 1)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path1264" />
+    </marker>
+    <marker
        inkscape:stockid="Arrow1Mend4"
        orient="auto"
        refY="0"
@@ -121,6 +150,34 @@
          style="fill:#005500;fill-opacity:1;fill-rule:evenodd;stroke:#005500;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="matrix(-0.4,0,0,-0.4,-4,0)" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lstart"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lstart"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:#005500;fill-opacity:1;fill-rule:evenodd;stroke:#005500;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path927" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#005500;fill-opacity:1;fill-rule:evenodd;stroke:#005500;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path930" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -221,7 +278,8 @@
        x="30.19043"
        y="584.11682"
        id="text15583-7"
-       style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none"><tspan
+       style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none"
+       transform="translate(-5.8934301,-1.8824663)"><tspan
          sodipodi:role="line"
          id="tspan15581-1"
          x="30.19043"
@@ -772,5 +830,81 @@
    id="tspan5414-4"
    style="font-size:65%;baseline-shift:sub;fill:#005500">wc</tspan></tspan></text>
     </g>
+    <path
+       style="fill:none;fill-opacity:0.2;stroke:#005500;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 1;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lstart);marker-end:url(#Arrow1Lend)"
+       d="M 290,200 V 160 H 190 v -40"
+       id="path925"
+       transform="translate(0,398.24998)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16px;line-height:1.7;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#005500;fill-opacity:0.2;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       x="240"
+       y="160"
+       id="text1637"
+       transform="translate(0.10742,390.48592)"><tspan
+         sodipodi:role="line"
+         id="tspan1635"
+         x="240"
+         y="160"
+         style="font-size:16px;fill:#005500;fill-opacity:1;stroke:none">high-P</tspan><tspan
+         sodipodi:role="line"
+         x="240"
+         y="187.2"
+         id="tspan1639"
+         style="font-size:16px;fill:#005500;fill-opacity:1;stroke:none">low-P</tspan></text>
+    <text
+       id="text1138"
+       y="668.27234"
+       x="140.29771"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="matrix(1.0000044,0,0,1.0000044,-91.020851,-130.03511)"><tspan
+         style="font-size:20.0001px;line-height:1.25;fill:#000000;stroke-width:1"
+         y="668.27234"
+         x="140.29771"
+         id="tspan1136"
+         sodipodi:role="line">η<tspan
+   id="tspan1134"
+   style="font-size:13.0002px;baseline-shift:sub;fill:#000000;fill-opacity:1;stroke-width:1">C</tspan></tspan></text>
+    <text
+       id="text1196"
+       y="668.27234"
+       x="134.09651"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="matrix(1.0000044,0,0,1.0000044,184.95562,-5.523304)"><tspan
+         style="font-size:20.0001px;line-height:1.25;text-align:start;text-anchor:start;fill:#000000;stroke-width:1"
+         y="668.27234"
+         x="134.09651"
+         id="tspan1194"
+         sodipodi:role="line">ϵ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1542">e</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#DotM);stop-color:#000000;stop-opacity:1"
+       d="M 310,280 H 250"
+       id="path1198"
+       transform="translate(0,378.24998)"
+       sodipodi:nodetypes="cc" />
+    <text
+       id="text1560"
+       y="668.27234"
+       x="134.09651"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       xml:space="preserve"
+       transform="matrix(1.0000044,0,0,1.0000044,184.95562,-205.5233)"><tspan
+         style="font-size:20.0001px;line-height:1.25;text-align:start;text-anchor:start;fill:#000000;stroke-width:1"
+         y="668.27234"
+         x="134.09651"
+         id="tspan1558"
+         sodipodi:role="line">ϵ<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan1556">c</tspan></tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-end:url(#marker1566);stop-color:#000000;stop-opacity:1"
+       d="M 310,280 H 250"
+       id="path1562"
+       transform="translate(0,178.24998)"
+       sodipodi:nodetypes="cc" />
   </g>
 </svg>

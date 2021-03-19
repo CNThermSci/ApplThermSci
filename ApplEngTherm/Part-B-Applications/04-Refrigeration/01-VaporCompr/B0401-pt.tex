@@ -42,23 +42,23 @@
 
 %-----------------------------------------------------------------------------------------------
 \frame{%
-    \hfill\par
-    % !bib LST 2>/dev/null | paste -s -d',' | sed 's|,|, |g' | j -i8 96 
-    Esta apresentação baseia-se nas referências~\cite{2016-FentonDL-ASHRAE}, \alert{Capítulo~3,
-    pp.~45--50} e~\cite{2013-CengelYA+BolesMA-AMGH}, \alert{Seções~11-1, 3 a 11-7} (tópicos de
-    leitura).  \hfill
+    % !bib LST 2>/dev/null | paste -s -d',' | sed 's|,|, |g' | j -i8 96
+    \hspace{0.10\textwidth}
+    \begin{minipage}{0.80\textwidth}
+        Esta apresentação baseia-se nas seguintes referências / tópicos de leitura:
+        \\[\medskipamount]
+        \begin{itemize}
+            \item \cite{2016-FentonDL-ASHRAE}, \alert{Capítulo~3, pp.~45--50} e
+                \\[\bigskipamount]
+            \item \cite{2013-CengelYA+BolesMA-AMGH}, \alert{Seções~11-1, 3 a 11-7}.
+        \end{itemize}
+    \end{minipage}
 }
 %-----------------------------------------------------------------------------------------------
 
 %-----------------------------------------------------------------------------------------------
-\section{Tipos de Aplicações}
+\section{Ciclos de Refrigeração por Compressão de Vapor Simples Estágio}
 %-----------------------------------------------------------------------------------------------
-
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}\vspace*{-0em}
-        \wwwfigHEI{01-kitchen}{jpg}{url}{0.8\textheight}
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
 
     %-------------------------------------------------------------------------------------------
     \begin{frame}{Refrigeradores e Bombas de Calor}\vspace*{-0em}
@@ -86,7 +86,8 @@
 
     %------------------------------------------------------------------------------------------
     \begin{frame}[allowframebreaks]{Referências -- }
-        \bibliographystyle{unsrt}
+        %% \bibliographystyle{unsrt}
+        \bibliographystyle{apalike}
         \setbeamertemplate{bibliography item}{\insertbiblabel}
         \bibliography{bibfile.bib}
     \end{frame}

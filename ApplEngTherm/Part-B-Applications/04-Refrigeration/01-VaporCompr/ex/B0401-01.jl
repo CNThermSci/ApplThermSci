@@ -50,11 +50,11 @@ Original.
 
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 prob = Dict(
-	:W_C	=>	  1.0:	0.25:	 3.0,	# Taxa de trabalho, kW
-	:η_C	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
-	:I_C	=>	 50.0:	5.00:	75.0,	# Irrev. perdida no compressor, %
-	:T_c	=>	 60.0:	5.00:	80.0,	# Temperatura de condensação, °C
-	:T_e	=>	-20.0:	5.00:	-5.0,	# Temperatura de evaporação, °C
+	:WC	=>	  1.0:	0.25:	 3.0,	# Taxa de trabalho, kW
+	:ηC	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
+	:IC	=>	 50.0:	5.00:	75.0,	# Irrev. perdida no compressor, %
+	:Tc	=>	 60.0:	5.00:	80.0,	# Temperatura de condensação, °C
+	:Te	=>	-20.0:	5.00:	-5.0,	# Temperatura de evaporação, °C
 );
 
 # ╔═╡ 72413c5a-88f4-11eb-08d2-813542bed0f4
@@ -72,13 +72,13 @@ end
 md"""
 ## Enunciado:
 
-Um ciclo de refrigeração por compressão de vapor, ilustrado abaixo, opera com entrada de potência de **$(the[:W_C])kW** no compressor, o qual possui eficiência isentrópica de **$(the[:η_C])%** e perde **$(the[:I_C])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. A temperatura de condensação é de **$(the[:T_c])°C** e a de evaporação é de **$(the[:T_e])°C**. Determine, considerando o emprego do **R134a**:
+Um ciclo de refrigeração por compressão de vapor, ilustrado abaixo, opera com entrada de potência de **$(the[:WC])kW** no compressor, o qual possui eficiência isentrópica de **$(the[:ηC])%** e perde **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. A temperatura de condensação é de **$(the[:Tc])°C** e a de evaporação é de **$(the[:Te])°C**. Determine, considerando o emprego do **R134a**:
 
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0002-Refr-Vap-RE.png)
 
 **(a)** A vazão mássica de refrigerante, em kg/s
 
-**(b)** A taxa de rejeição de calor, em kW
+**(b)** A taxa de rejeição de calor (no condensador), em kW
 
 **(c)** A capacidade de refrigeração, em ton
 
@@ -89,19 +89,52 @@ Um ciclo de refrigeração por compressão de vapor, ilustrado abaixo, opera com
 md"""
 ## Resolução
 
-### (a) A vazão mássica de refrigerante, em kg/s
-
-É determinada por meio da análise de energia no compressor, com eficiência isentrópica:
-
-$\dot{W}_{ent} = \dot{m} w_{ent},$
-
-com $w_{ent}$ sendo o trabalho _real_.
-
-A biblioteca de propriedades termofísicas utilizada é a [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl).
+Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl) para propriedades termofísicas.
 """
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
+function solve(WC, ηC, IC, Tc, Te; FL="R134a")
+	# Cycle States
+	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K
+	St3 = CP.State(FL, Dict("T" => Tc, "Q" => 0))
+	S2s = CP.State(FL, Dict("P" => St3.p, "S" => St1.s))
+	wCs = S2s.h - St1.h	# Isentropic compressor work
+	wCr = wCs / ηC		# ηC normalized
+	IrC = wCr - wCs		# Irreversibility, normalized
+	qCs = IC * IrC		# Compressor heat loss
+	h_2 = St1.h + wCr - qCs		# Energy balance
+	St2 = CP.State(FL, Dict("P" => St3.p, "H" => h_2))
+	St4 = CP.State(FL, Dict("P" => St1.p, "H" => St3.h))
+	# Quantities of interest
+	md  = WC / wCr
+	q23 = St2.h - St3.h
+	q41 = St1.h - St4.h
+	COP = q41 / wCr
+	return (md, md * q23, md * q41, COP * 1.0e+2)
+end
 
+# ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
+begin
+	A, B, C, D = solve(
+		the[:WC],
+		the[:ηC] / 1.0e+2,
+		the[:IC] / 1.0e+2,
+		the[:Tc] + 273.15,
+		the[:Te] + 273.15,
+		FL = "R134a"
+	)
+	Markdown.parse(
+		@sprintf """
+**(a)** A vazão mássica de refrigerante é de **%.4g kg/s**
+
+**(b)** A taxa de rejeição de calor (no condensador) é de **%.4g kW**
+
+**(c)** A capacidade de refrigeração é de **%.4g ton** (= %.4g kW)
+
+**(d)** O COP do refrigerador é de **%.4g%%**
+	""" A B C/3.517 C D
+	)
+end
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
@@ -179,9 +212,10 @@ end
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
-# ╠═59f6ad1c-714b-11eb-1b85-0542622b8aba
+# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
+# ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400
 # ╟─98a9cb5c-7187-11eb-08f2-d53ad216d48e
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197

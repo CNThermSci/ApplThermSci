@@ -29,7 +29,7 @@
        inkscape:isstock="true">
       <path
          transform="scale(0.8) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#007e00;stroke-width:1pt;stroke-opacity:1;fill:#007e00;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#005500;stroke-width:1pt;stroke-opacity:1;fill:#005500;fill-opacity:1"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path927" />
     </marker>
@@ -57,7 +57,7 @@
        inkscape:isstock="true">
       <path
          transform="scale(0.8) rotate(180) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#007e00;stroke-width:1pt;stroke-opacity:1;fill:#007e00;fill-opacity:1"
+         style="fill-rule:evenodd;stroke:#005500;stroke-width:1pt;stroke-opacity:1;fill:#005500;fill-opacity:1"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path930" />
     </marker>
@@ -136,16 +136,16 @@
   </defs>
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#001a34"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.025"
      inkscape:cx="200"
      inkscape:cy="140"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:window-width="1920"
@@ -153,7 +153,8 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:document-rotation="0">
+     inkscape:document-rotation="0"
+     inkscape:pagecheckerboard="false">
     <inkscape:grid
        type="xygrid"
        id="grid1646"
@@ -180,16 +181,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Layer 0">
+     inkscape:label="Layer 0"
+     sodipodi:insensitive="true">
     <rect
-       style="fill:#ffffff;stroke:none;stroke-width:0.8;stroke-linejoin:round;stroke-dasharray:6, 1;fill-opacity:0.40000001"
+       style="fill:#ffffff;fill-opacity:0.4;stroke:none;stroke-width:0.8;stroke-linejoin:round;stroke-dasharray:6, 1"
        id="rect953"
        width="400"
        height="280"
@@ -231,7 +233,8 @@
        x="30.19043"
        y="644.11676"
        id="text15583-7"
-       style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none"><tspan
+       style="line-height:0%;display:inline;fill:#00007e;fill-opacity:1;stroke:none"
+       transform="translate(-5.8934301,-1.8824053)"><tspan
          sodipodi:role="line"
          id="tspan15581-1"
          x="30.19043"
@@ -244,7 +247,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:start;letter-spacing:0px;word-spacing:0px;text-anchor:start;display:inline;fill:#000000;fill-opacity:1;stroke:none"
        x="103.93555"
        y="622.63464"
-       id="text15589-9"><tspan
+       id="text15589-9"
+       transform="translate(0.02446406,1.0207031e-4)"><tspan
          sodipodi:role="line"
          id="tspan15587-8"
          x="103.93555"
@@ -482,13 +486,13 @@
    id="tspan15593-3"
    style="font-size:13.0002px;baseline-shift:sub;fill:#b00000;fill-opacity:1;stroke-width:1">esc</tspan></tspan></text>
     <path
-       style="fill:none;fill-opacity:0.2;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6,1;stroke:#007e00;stroke-opacity:1;stroke-dashoffset:0;marker-end:url(#Arrow1Lend);marker-start:url(#Arrow1Lstart)"
+       style="fill:none;fill-opacity:0.2;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 1;stroke:#005500;stroke-opacity:1;stroke-dashoffset:0;marker-end:url(#Arrow1Lend);marker-start:url(#Arrow1Lstart)"
        d="M 290,200 V 160 H 190 v -40"
        id="path925"
        transform="translate(0,458.24998)" />
     <text
        xml:space="preserve"
-       style="font-size:16px;line-height:1.7;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:none;fill-opacity:0.2;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-size:16px;line-height:1.7;font-family:'SBL BibLit';-inkscape-font-specification:'SBL BibLit';text-align:center;text-anchor:middle;fill:#005500;fill-opacity:0.2;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0;stroke-opacity:1;"
        x="240"
        y="160"
        id="text1637"
@@ -497,11 +501,25 @@
          id="tspan1635"
          x="240"
          y="160"
-         style="font-size:16px;fill:#007e00;fill-opacity:1;stroke:none">high-P</tspan><tspan
+         style="font-size:16px;fill:#005500;fill-opacity:1;stroke:none;">high-P</tspan><tspan
          sodipodi:role="line"
          x="240"
          y="187.2"
          id="tspan1639"
-         style="font-size:16px;fill:#007e00;fill-opacity:1;stroke:none">low-P</tspan></text>
+         style="font-size:16px;fill:#005500;fill-opacity:1;stroke:none;">low-P</tspan></text>
+    <text
+       id="text1138"
+       y="668.27234"
+       x="140.29771"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0001px;line-height:0%;font-family:'SBL Greek';-inkscape-font-specification:'SBL Greek';text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;"
+       xml:space="preserve"
+       transform="matrix(1.0000044,0,0,1.0000044,-91.020851,-70.035112)"><tspan
+         style="font-size:20.0001px;line-height:1.25;stroke-width:1;fill:#000000;"
+         y="668.27234"
+         x="140.29771"
+         id="tspan1136"
+         sodipodi:role="line">η<tspan
+   id="tspan1134"
+   style="font-size:13.0002px;baseline-shift:sub;fill:#000000;fill-opacity:1;stroke-width:1;">C</tspan></tspan></text>
   </g>
 </svg>

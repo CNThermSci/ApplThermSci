@@ -66,9 +66,11 @@ fig/%.pdf: fig/%.svg
 
 wwwEXT = jpg short
 wwwFIG = 01-kitchen
+figFIG = 0001-SistemaRefrQsense \
+		 0002-Refr-Vap-ID
 
 ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
-		fig/0001-SistemaRefrQsense.pdf \
+		$(foreach FIG,$(figFIG),fig/$(FIG).pdf) \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-A.pdf
@@ -78,7 +80,7 @@ ${PRES}.pdf: ${PRES}.tex ${PREF}.tex bibfile.bib \
 	pdflatex --enable-write18 ${PRES}.tex
 
 ${HOUT}.pdf: ${HOUT}.tex ${PREF}.tex bibfile.bib \
-		fig/0001-SistemaRefrQsense.pdf \
+		$(foreach FIG,$(figFIG),fig/$(FIG).pdf) \
 		$(foreach EXT,$(wwwEXT), \
 			$(foreach BAS,$(wwwFIG),www/$(BAS).$(EXT))) \
 		root/00-res/logo/CNThermSci-logo-W.pdf

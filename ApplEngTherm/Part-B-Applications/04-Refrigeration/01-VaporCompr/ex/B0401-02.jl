@@ -56,9 +56,9 @@ prob = Dict(
 	:ϵe =>   70.0:  5.00:   85.0,	# Efetividade do evaporador (%)
 	:T4 =>  -10.0:  10.0:    0.0,	# Temperatura do evaporador (°C)
 	:T3 =>   40.0:  10.0:   60.0,	# Temperatura do condensador (°C)
-	:Tℵ =>   15.0:  2.50:   25.0,	# Temperatura da água a aquecer (°C)
+	:Tℵ =>   10.0:  2.50:   20.0,	# Temperatura da água a aquecer (°C)
 	:ηC	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
-	:IC	=>	 50.0:	5.00:	75.0,	# Irrev. perdida no compressor, %
+	:IC	=>	 20.0:	5.00:	45.0,	# Irrev. perdida no compressor, %
 );
 
 # ╔═╡ 72413c5a-88f4-11eb-08d2-813542bed0f4
@@ -76,7 +76,7 @@ end
 md"""
 ## Enunciado:
 
-Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C**. Água quente a pressão atmosférica é produzida na corrente “ℵ-ℶ”, na qual água entra a **$(the[:Tℵ])°C**. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. Todos os trocadores de calor devem operar com capacidades térmicas _balanceadas_. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
+Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra em contra-corrente no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C**. Água quente a pressão atmosférica é produzida na contra-corrente “ℵ-ℶ” do condensador, no qual água entra a **$(the[:Tℵ])°C** e as correntes possuem capacidade balanceadas. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
 
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0003-Refr-Vap-RE+CHX+EHX.png)
 
@@ -162,7 +162,7 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400

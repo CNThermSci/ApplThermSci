@@ -52,6 +52,8 @@ prob = Dict(
 	:PR =>    1.5:  0.50:    4.5,	# Potência de Refrigeração (tons)
 	:Tα =>   15.0:  2.50:   25.0,	# Temperatura da água a resfriar (°C)
 	:Tβ =>    2.0:  1.00:    4.0,	# Temperatura de água fria (°C)
+	:ϵc =>   50.0:  5.00:   65.0,	# Efetividade do condensador (%)
+	:ϵe =>   70.0:  5.00:   85.0,	# Efetividade do evaporador (%)
 	:T4 =>  -10.0:  10.0:    0.0,	# Temperatura do evaporador (°C)
 	:T3 =>   40.0:  10.0:   60.0,	# Temperatura do condensador (°C)
 	:Tℵ =>   15.0:  2.50:   25.0,	# Temperatura da água a aquecer (°C)
@@ -74,7 +76,7 @@ end
 md"""
 ## Enunciado:
 
-Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C**. Água quente a pressão atmosférica é produzida na corrente “ℵ-ℶ”, na qual água entra a **$(the[:Tℵ])°C**. Todos os trocadores de calor devem operar com capacidades térmicas _balanceadas_. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
+Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C**. Água quente a pressão atmosférica é produzida na corrente “ℵ-ℶ”, na qual água entra a **$(the[:Tℵ])°C**. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. Todos os trocadores de calor devem operar com capacidades térmicas _balanceadas_. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
 
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0003-Refr-Vap-RE+CHX+EHX.png)
 
@@ -87,6 +89,10 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 **(d)** A temperatura da água produzida em “ℶ”, em °C
 
 **(e)** O COP do refrigerador, em %
+
+**(f)** O número de unidades de transferência, Ntu, do condensador
+
+**(g)** O número de unidades de transferência, Ntu, do evaporador
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
@@ -156,7 +162,7 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400

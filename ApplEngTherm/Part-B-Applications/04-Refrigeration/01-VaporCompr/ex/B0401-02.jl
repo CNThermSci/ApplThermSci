@@ -139,7 +139,19 @@ Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.co
 """
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
-function solve(PR, Tα, Tβ, ϵc, ϵe, T4, T3, Tℵ, ηC, IC; FL="R134a")
+function solve(
+		PR,			# Potência de refrigeração (kW)
+		Tα,			# Temperatura α (K)
+		Tβ,			# Temperatura β (K)
+		ϵc,			# Efetividade condensador (norm)
+		ϵe,			# Efetividade evaporador (norm)
+		T4,			# Temperatura 4 (K)
+		T3,			# Temperatura 3 (K)
+		Tℵ,			# Temperatura ℵ (K)
+		ηC,			# Eficiência isentrópica compr. (norm)
+		IC;			# Saída de irreversibilidade compr. (norm)
+		FL="R134a"	# Fluido de trabalho (nome CoolProp)
+	)
 	# Implement-me...
 	# Cycle States
 	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K

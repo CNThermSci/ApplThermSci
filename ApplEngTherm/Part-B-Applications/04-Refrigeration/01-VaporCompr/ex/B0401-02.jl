@@ -112,7 +112,7 @@ $\dot{C}_{min} \equiv \min(\dot{C}_q, \dot{C}_f),$
 
 e $\epsilon$ sendo a _efetividade_ do trocador de calor, definida como:
 
-$\epsilon \equiv \frac{\dot{Q}}{\dot{Q}_{max}} = \frac{\dot{Q}}{\dot{C}_{min}(\Delta T_{max})} = \frac{\dot{Q}}{\dot{C}_{min}(T_{q,ent}-T_{f,ent})}.$
+$\epsilon \equiv \frac{\dot{Q}}{\dot{Q}_{max}} = \frac{\pm(\dot{m}\Delta h)_{q,f}}{\dot{C}_{min}(\Delta T_{max})} = \frac{\pm(\dot{m}\Delta h)_{q,f}}{\dot{C}_{min}(T_{q,ent}-T_{f,ent})}.$
 
 Para trocadores em contra-corrente, tem-se:
 
@@ -139,7 +139,8 @@ Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.co
 """
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
-function solve(WC, ηC, IC, Tc, Te; FL="R134a")
+function solve(PR, Tα, Tβ, ϵc, ϵe, T4, T3, Tℵ, ηC, IC; FL="R134a")
+	# Implement-me...
 	# Cycle States
 	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K
 	St3 = CP.State(FL, Dict("T" => Tc, "Q" => 0))
@@ -161,13 +162,13 @@ end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
 begin
-	A, B, C, D = solve(
+	A, B, C, D, E, F, G, H = solve(
 		the[:WC],
 		the[:ηC] / 1.0e+2,
 		the[:IC] / 1.0e+2,
 		the[:Tc] + 273.15,
 		the[:Te] + 273.15,
-		FL = "R134a"
+		FL = "R22"
 	)
 	Markdown.parse(
 		@sprintf """
@@ -199,10 +200,10 @@ md"""
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
-# ╠═ccfcd50c-8abe-11eb-224a-d3120d448d2a
+# ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
-# ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400
+# ╠═9f4f1ef4-88fb-11eb-0b47-0568605b0400
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

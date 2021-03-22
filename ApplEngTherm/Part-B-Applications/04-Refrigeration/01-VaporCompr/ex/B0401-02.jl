@@ -112,7 +112,7 @@ $C_{min} \equiv \min(C_q, C_f),$
 
 e $\epsilon$ sendo a _efetividade_ do trocador de calor, definida como:
 
-$\epsilon \equiv \frac{q}{q_{max}} = \frac{q}{C_{min}(\Delta T_{max})} = \frac{q}{C_{min}(T_{q,ent}-T_{f,ent})}.$
+$\epsilon \equiv \frac{\dot{Q}}{\dot{Q}_{max}} = \frac{\dot{Q}}{C_{min}(\Delta T_{max})} = \frac{\dot{Q}}{C_{min}(T_{q,ent}-T_{f,ent})}.$
 
 Para trocadores em contra-corrente, tem-se:
 
@@ -199,7 +199,7 @@ md"""
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
-# ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
+# ╠═ccfcd50c-8abe-11eb-224a-d3120d448d2a
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400

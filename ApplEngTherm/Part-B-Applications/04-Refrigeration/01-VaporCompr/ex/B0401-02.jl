@@ -50,6 +50,11 @@ Original.
 # ╔═╡ 6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 prob = Dict(
 	:PR =>    1.5:  0.50:    4.5,	# Potência de Refrigeração (tons)
+	:Tα =>   15.0:  2.50:   25.0,	# Temperatura da água a resfriar (°C)
+	:Tβ =>    2.0:  1.00:    4.0,	# Temperatura de água fria (°C)
+	:me =>    0.9:  0.20:    1.5,	# Taxa de massa de água a resfriar (kg/s)
+	:T4 =>  -10.0:  10.0:    0.0,	# Temperatura do evaporador (°C)
+	
 	:WC	=>	  1.0:	0.25:	 3.0,	# Taxa de trabalho, kW
 	:ηC	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
 	:IC	=>	 50.0:	5.00:	75.0,	# Irrev. perdida no compressor, %
@@ -72,7 +77,7 @@ end
 md"""
 ## Enunciado:
 
-Deseja-se obter **$(the[:PR])** ton de refrigeração
+Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente α-β, na qual água entra no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C** com **$(the[:me]) kg/s**. Todos os trocadores de calor, i.e., tanto o evaporador quanto o condensador, devem operar com _capacidades térmicas balanceadas_. Utilizando fluido refrigerante **R22**
 
 Um ciclo de refrigeração por compressão de vapor, ilustrado abaixo, opera com entrada de potência de **$(the[:WC])kW** no compressor, o qual possui eficiência isentrópica de **$(the[:ηC])%** e perde **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. A temperatura de condensação é de **$(the[:Tc])°C** e a de evaporação é de **$(the[:Te])°C**. Determine, considerando o emprego do **R134a**:
 

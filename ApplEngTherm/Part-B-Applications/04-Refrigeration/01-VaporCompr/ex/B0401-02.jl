@@ -96,6 +96,18 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 
 ### Dados:
 
+O número de unidades de transferência, $NTU$, é definido como
+
+$NTU \equiv \frac{UA}{C_{min}},$
+
+onde $UA$ é o coeficiente global de transferência de calor do trocador de calor, e $C_{min}$ a menor das taxas de capacidade entre as correntes quente (h) e fria (c):
+
+$C_{min} \equiv \min(C_h, C_c),$
+
+e $\epsilon$ sendo a _efetividade_ do trocador de calor, definida como:
+
+$\epsilon \equiv \frac{q}{q_{max}} = \frac{q}{C_{min}(\Delta T_{max})}.$
+
 Para trocadores em contra-corrente, tem-se:
 
 $NTU = \frac{\ln\left(\dfrac{1-\epsilon\delta}{1-\epsilon}\right)}{1-\delta},$
@@ -106,11 +118,11 @@ $\delta \equiv \frac{C_{min}}{C_{max}}.$
 
 A relação inversa, $\epsilon(NTU)$, assume formas especiais para (i) trocadores _balanceados_ ($\delta=1$):
 
-$\epsilon = \frac{NTU}{1+NTU} \qquad (\delta=1),$
+$\epsilon = \frac{NTU}{1+NTU}, \qquad (\delta=1),$
 
 e para (ii) $C_{max} \to \infty$, a saber, quando uma das correntes não experimenta variação de temperatura, a exemplo de substância pura em troca de fase à pressão constante:
 
-$\epsilon = 1 - e^{-NTU} \qquad \left(\frac{C_{min}}{C_{max}} = 0\right).$
+$\epsilon = 1 - e^{-NTU}, \qquad \left(\frac{C_{min}}{C_{max}} = 0\right).$
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba

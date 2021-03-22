@@ -75,7 +75,7 @@ end
 md"""
 ## Enunciado:
 
-Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra em contra-corrente no evaporador a pressão atmosférica e **$(the[:Tα])°C**. Água quente a pressão atmosférica é produzida na contra-corrente “ℵ-ℶ” do condensador, no qual água entra a **$(the[:Tℵ])°C** e as correntes possuem capacidade balanceadas. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
+Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra em contra-corrente no evaporador a pressão atmosférica e **$(the[:Tα])°C**. Água quente a pressão atmosférica é produzida na contra-corrente “ℵ-ℶ” do condensador, no qual água entra a **$(the[:Tℵ])°C**. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
 
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0003-Refr-Vap-RE+CHX+EHX.png)
 
@@ -185,7 +185,10 @@ function solve(
 	h_ℶ = Stℵ.h + Q23 / ṁwc
 	Stℶ = CP.State("water", Dict("H" => h_ℶ, "P" => 101.35))
 	T_ℶ = Stℶ.T
-	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, (0.0 for i in 1:4)...)
+	# ---x---
+	q41 = Q41 / ṁ_r
+	COP = q41 / wCr
+	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, COP, (0.0 for i in 1:3)...)
 end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
@@ -221,7 +224,7 @@ begin
 **(h)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
 
 **(i)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
-	""" A B C-273.15 D E-273.15 F G H I
+	""" A B C-273.15 D E-273.15 F*1.0e+2 G H I
 	)
 end
 

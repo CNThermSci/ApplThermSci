@@ -188,6 +188,10 @@ function solve(
 	# ---x---
 	q41 = Q41 / ṁ_r
 	COP = q41 / wCr
+	# ---x---
+	Ċrc = ṁ_r * (St2.h - St3.h)
+	Ċwc = ṁwc * cpℵ * (T_ℶ - Tℵ)
+	@show δ_c = min(Ċrc, Ċwc) / max(Ċrc, Ċwc)
 	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, COP, (0.0 for i in 1:3)...)
 end
 

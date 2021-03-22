@@ -221,7 +221,7 @@ begin
 **(h)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
 
 **(i)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
-	""" A B C-273.15 D E F G H I
+	""" A B C-273.15 D E-273.15 F G H I
 	)
 end
 

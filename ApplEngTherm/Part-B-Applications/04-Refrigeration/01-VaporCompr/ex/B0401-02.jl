@@ -181,7 +181,11 @@ function solve(
 	Stℵ = CP.State("water", Dict("T" => Tℵ, "P" => 101.35))
 	cpℵ = Stℵ.cp
 	ṁwc = Qxc / (cpℵ * (St2.T - Tℵ))
-	return (ṁ_r, ṁwe, T_β, ṁwc, (0.0 for i in 1:5)...)
+	# ---x---
+	h_ℶ = Stℵ.h + Q23 / ṁwc
+	Stℶ = CP.State("water", Dict("H" => h_ℶ, "P" => 101.35))
+	T_ℶ = Stℶ.T
+	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, (0.0 for i in 1:4)...)
 end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400

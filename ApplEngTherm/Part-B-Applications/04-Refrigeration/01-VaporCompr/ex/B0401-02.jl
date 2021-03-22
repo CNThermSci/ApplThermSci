@@ -54,7 +54,7 @@ prob = Dict(
 	:Tβ =>    2.0:  1.00:    4.0,	# Temperatura de água fria (°C)
 	:ϵc =>   50.0:  5.00:   65.0,	# Efetividade do condensador (%)
 	:ϵe =>   70.0:  5.00:   85.0,	# Efetividade do evaporador (%)
-	:T4 =>  -10.0:  10.0:    0.0,	# Temperatura do evaporador (°C)
+	:T4 =>    0.5:  0.50:    1.0,	# Temperatura do evaporador (°C)
 	:T3 =>   40.0:  10.0:   60.0,	# Temperatura do condensador (°C)
 	:Tℵ =>   10.0:  2.50:   20.0,	# Temperatura da água a aquecer (°C)
 	:ηC	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
@@ -152,11 +152,9 @@ function solve(
 		IC;			# Saída de irreversibilidade compr. (norm)
 		FL="R134a"	# Fluido de trabalho (nome CoolProp)
 	)
-	# Implement-me...
-	return Tuple(0.0 for i in 1:9)
 	# Cycle States
-	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K
-	St3 = CP.State(FL, Dict("T" => Tc, "Q" => 0))
+	St1 = CP.State(FL, Dict("T" => T4, "Q" => 1))
+	St3 = CP.State(FL, Dict("T" => T3, "Q" => 0))
 	S2s = CP.State(FL, Dict("P" => St3.p, "S" => St1.s))
 	wCs = S2s.h - St1.h	# Isentropic compressor work
 	wCr = wCs / ηC		# ηC normalized
@@ -166,11 +164,17 @@ function solve(
 	St2 = CP.State(FL, Dict("P" => St3.p, "H" => h_2))
 	St4 = CP.State(FL, Dict("P" => St1.p, "H" => St3.h))
 	# Quantities of interest
-	md  = WC / wCr
-	q23 = St2.h - St3.h
-	q41 = St1.h - St4.h
-	COP = q41 / wCr
-	return (md, md * q23, md * q41, COP * 1.0e+2)
+	Q41 = PR			# Energy balance, adiabatic Evap
+	Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
+	Stα = Cp.State("water", Dict("T" => Tα, "P" => 101.35))
+	cpα = Stα.cp
+	ṁwe = Qxe / (cpα * (Tα - T4))	# Either ignore solidification OR T4 > 0°C
+	# ---x---
+	Stβ = Cp.State("water", Dict("T" => Tβ, "P" => 101.35))
+	ṁ_r = Q41 / (St1.h - St4.h)
+	ṁrf = ṁwe * (Stβ.h - Stα.h) / (St1.h - St4.h)
+	@show (ṁ_r, ṁrf)
+	return (ṁ_r, ṁwe, (0.0 for i in 1:7)...)
 end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400

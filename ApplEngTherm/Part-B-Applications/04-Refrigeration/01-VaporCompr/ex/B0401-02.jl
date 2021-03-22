@@ -143,7 +143,6 @@ Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.co
 function solve(
 		PR,			# Potência de refrigeração (kW)
 		Tα,			# Temperatura α (K)
-		Tβ,			# Temperatura β (K)
 		ϵc,			# Efetividade condensador (norm)
 		ϵe,			# Efetividade evaporador (norm)
 		T4,			# Temperatura 4 (K)
@@ -165,25 +164,31 @@ function solve(
 	St2 = CP.State(FL, Dict("P" => St3.p, "H" => h_2))
 	St4 = CP.State(FL, Dict("P" => St1.p, "H" => St3.h))
 	# Quantities of interest
-	@show Q41 = PR			# Energy balance, adiabatic Evap
-	@show Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
-	Stα = CP.State("water", Dict("T" => Tα, "P" => 101.35))
-	@show cpα = Stα.cp
-	@show ṁwe = Qxe / (cpα * (Tα - T4))	# Either ignore solidification OR T4 > 0°C
+	Q41 = PR			# Energy balance, adiabatic Evap
+	ṁ_r = Q41 / (St1.h - St4.h)
 	# ---x---
-	Stβ = CP.State("water", Dict("T" => Tβ, "P" => 101.35))
-	@show ṁ_r = Q41 / (St1.h - St4.h)
-	@show ṁrf = ṁwe * (Stα.h - Stβ.h) / (St1.h - St4.h)
-	@show (ṁ_r, ṁrf)
-	return (ṁ_r, ṁwe, (0.0 for i in 1:7)...)
+	Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
+	Stα = CP.State("water", Dict("T" => Tα, "P" => 101.35))
+	cpα = Stα.cp
+	ṁwe = Qxe / (cpα * (Tα - T4))	# Ignore solidification for T4 < 0°C
+	# ---x---
+	h_β = Stα.h - Q41 / ṁwe
+	Stβ = CP.State("water", Dict("H" => h_β, "P" => 101.35))
+	T_β = Stβ.T
+	# ---x---
+	Q23 = ṁ_r * (St2.h - St3.h)
+	Qxc = Q23 / ϵc 		# Max Cond Q from definition of ϵ = ṁwc * cpℵ * ΔTmax
+	Stℵ = CP.State("water", Dict("T" => Tℵ, "P" => 101.35))
+	cpℵ = Stℵ.cp
+	ṁwc = Qxc / (cpℵ * (St2.T - Tℵ))
+	return (ṁ_r, ṁwe, T_β, ṁwc, (0.0 for i in 1:5)...)
 end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
 begin
-	A, B, C, D, E, F, G, H = solve(
+	A, B, C, D, E, F, G, H, I = solve(
 		the[:PR] * 3.517,		# ton --> kW
 		the[:Tα] + 273.15,		# °C  --> K
-		the[:Tβ] + 273.15,		# °C  --> K
 		the[:ϵc] / 1.0e+2,		# %   --> norm
 		the[:ϵe] / 1.0e+2,		# %   --> norm
 		the[:T4] + 273.15,		# °C  --> K
@@ -199,18 +204,20 @@ begin
 
 **(b)** A vazão mássica de água gelada produzida em “β”, em kg/s, é de %.4g
 
-**(c)** A vazão mássica de água quente produzida em “ℶ”, em kg/s, é de %.4g
+**(c)** A temperatura da água produzida em “β”, em °C, é de %.4g
 
-**(d)** A temperatura da água produzida em “ℶ”, em °C, é de %.4g
+**(d)** A vazão mássica de água quente produzida em “ℶ”, em kg/s, é de %.4g
 
-**(e)** O COP do refrigerador, em %%, é de %.4g
+**(e)** A temperatura da água produzida em “ℶ”, em °C, é de %.4g
 
-**(f)** O número de unidades de transferência, NTU, do condensador, é de %.4g
+**(f)** O COP do refrigerador, em %%, é de %.4g
 
-**(g)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
+**(g)** O número de unidades de transferência, NTU, do condensador, é de %.4g
 
-**(h)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
-	""" A B C D E F G H
+**(h)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
+
+**(i)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
+	""" A B C-273.15 D E F G H I
 	)
 end
 
@@ -230,7 +237,7 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d

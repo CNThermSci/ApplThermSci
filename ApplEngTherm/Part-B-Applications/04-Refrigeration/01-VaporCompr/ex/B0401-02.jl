@@ -170,7 +170,7 @@ function solve(
 	cpα = Stα.cp
 	ṁwe = Qxe / (cpα * (Tα - T4))	# Either ignore solidification OR T4 > 0°C
 	# ---x---
-	Stβ = Cp.State("water", Dict("T" => Tβ, "P" => 101.35))
+	Stβ = CP.State("water", Dict("T" => Tβ, "P" => 101.35))
 	ṁ_r = Q41 / (St1.h - St4.h)
 	ṁrf = ṁwe * (Stβ.h - Stα.h) / (St1.h - St4.h)
 	@show (ṁ_r, ṁrf)

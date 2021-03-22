@@ -93,6 +93,24 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 **(f)** O número de unidades de transferência, Ntu, do condensador
 
 **(g)** O número de unidades de transferência, Ntu, do evaporador
+
+### Dados:
+
+Para trocadores em contra-corrente, tem-se:
+
+$NTU = \frac{\ln\left(\dfrac{1-\epsilon\delta}{1-\epsilon}\right)}{1-\delta},$
+
+com
+
+$\delta \equiv \frac{C_{min}}{C_{max}}.$
+
+A relação inversa, $\epsilon(NTU)$, assume formas especiais para (i) trocadores _balanceados_ ($\delta=1$):
+
+$\epsilon = \frac{NTU}{1+NTU} \qquad (\delta=1),$
+
+e para (ii) $C_{max} \to \infty$, a saber, quando uma das correntes não experimenta variação de temperatura, a exemplo de substância pura em troca de fase à pressão constante:
+
+$\epsilon = 1 - e^{-NTU} \qquad \left(\frac{C_{min}}{C_{max}} = 0\right).$
 """
 
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
@@ -162,7 +180,7 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400

@@ -51,10 +51,9 @@ Original.
 prob = Dict(
 	:PR =>    1.5:  0.50:    4.5,	# Potência de Refrigeração (tons)
 	:Tα =>   15.0:  2.50:   25.0,	# Temperatura da água a resfriar (°C)
-	:Tβ =>    2.0:  1.00:    4.0,	# Temperatura de água fria (°C)
 	:ϵc =>   50.0:  5.00:   65.0,	# Efetividade do condensador (%)
-	:ϵe =>   70.0:  5.00:   85.0,	# Efetividade do evaporador (%)
-	:T4 =>    0.5:  0.50:    1.0,	# Temperatura do evaporador (°C)
+	:ϵe =>   60.0:  5.00:   75.0,	# Efetividade do evaporador (%)
+	:T4 =>   -5.0:  5.00:    5.0,	# Temperatura do evaporador (°C)
 	:T3 =>   40.0:  10.0:   60.0,	# Temperatura do condensador (°C)
 	:Tℵ =>   10.0:  2.50:   20.0,	# Temperatura da água a aquecer (°C)
 	:ηC	=>	 75.0:	5.00:	90.0,	# Eficiência isentrópica, %
@@ -76,7 +75,7 @@ end
 md"""
 ## Enunciado:
 
-Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra em contra-corrente no evaporador a pressão atmosférica e **$(the[:Tα])°C**, devendo sair a **$(the[:Tβ])°C**. Água quente a pressão atmosférica é produzida na contra-corrente “ℵ-ℶ” do condensador, no qual água entra a **$(the[:Tℵ])°C** e as correntes possuem capacidade balanceadas. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
+Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gelada—corrente “α-β”, na qual água entra em contra-corrente no evaporador a pressão atmosférica e **$(the[:Tα])°C**. Água quente a pressão atmosférica é produzida na contra-corrente “ℵ-ℶ” do condensador, no qual água entra a **$(the[:Tℵ])°C** e as correntes possuem capacidade balanceadas. As efetividades do condensador e evaporador são, respectivamente, de **$(the[:ϵc])%** e **$(the[:ϵe])%**. O sistema de refrigeração opera com fluido refrigerante **R22**, temperatura de saída da válvula de expansão de **$(the[:T4])°C** e temperatura de condensação do lado do refrigerante de **$(the[:T3])°C**, eficiência isentrópica de compressão de **$(the[:ηC])%** com perda de **$(the[:IC])%** da taxa de irreversibilidade na forma de calor para o meio, conforme indicado. Determine:
 
 ![](https://github.com/CNThermSci/ApplThermSci/raw/master/ApplEngTherm/Part-B-Applications/04-Refrigeration/01-VaporCompr/fig/0003-Refr-Vap-RE+CHX+EHX.png)
 
@@ -84,17 +83,19 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 
 **(b)** A vazão mássica de água gelada produzida em “β”, em kg/s
 
-**(c)** A vazão mássica de água quente produzida em “ℶ”, em kg/s
+**(c)** A temperatura da água produzida em “β”, em °C
 
-**(d)** A temperatura da água produzida em “ℶ”, em °C
+**(d)** A vazão mássica de água quente produzida em “ℶ”, em kg/s
 
-**(e)** O COP do refrigerador, em %
+**(e)** A temperatura da água produzida em “ℶ”, em °C
 
-**(f)** O número de unidades de transferência, NTU, do condensador
+**(f)** O COP do refrigerador, em %
 
-**(g)** O número de unidades de transferência, NTU, do evaporador
+**(g)** O número de unidades de transferência, NTU, do condensador
 
-**(h)** O coeficiente global de transferência de calor, UA, do evaporador
+**(h)** O número de unidades de transferência, NTU, do evaporador
+
+**(i)** O coeficiente global de transferência de calor, UA, do evaporador
 """
 
 # ╔═╡ ccfcd50c-8abe-11eb-224a-d3120d448d2a
@@ -164,15 +165,15 @@ function solve(
 	St2 = CP.State(FL, Dict("P" => St3.p, "H" => h_2))
 	St4 = CP.State(FL, Dict("P" => St1.p, "H" => St3.h))
 	# Quantities of interest
-	Q41 = PR			# Energy balance, adiabatic Evap
-	Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
-	Stα = Cp.State("water", Dict("T" => Tα, "P" => 101.35))
-	cpα = Stα.cp
-	ṁwe = Qxe / (cpα * (Tα - T4))	# Either ignore solidification OR T4 > 0°C
+	@show Q41 = PR			# Energy balance, adiabatic Evap
+	@show Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
+	Stα = CP.State("water", Dict("T" => Tα, "P" => 101.35))
+	@show cpα = Stα.cp
+	@show ṁwe = Qxe / (cpα * (Tα - T4))	# Either ignore solidification OR T4 > 0°C
 	# ---x---
 	Stβ = CP.State("water", Dict("T" => Tβ, "P" => 101.35))
-	ṁ_r = Q41 / (St1.h - St4.h)
-	ṁrf = ṁwe * (Stβ.h - Stα.h) / (St1.h - St4.h)
+	@show ṁ_r = Q41 / (St1.h - St4.h)
+	@show ṁrf = ṁwe * (Stα.h - Stβ.h) / (St1.h - St4.h)
 	@show (ṁ_r, ṁrf)
 	return (ṁ_r, ṁwe, (0.0 for i in 1:7)...)
 end
@@ -229,7 +230,7 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d

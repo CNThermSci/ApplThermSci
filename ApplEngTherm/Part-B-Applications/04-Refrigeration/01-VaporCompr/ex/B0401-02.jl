@@ -93,6 +93,10 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 **(f)** O número de unidades de transferência, Ntu, do condensador
 
 **(g)** O número de unidades de transferência, Ntu, do evaporador
+"""
+
+# ╔═╡ ccfcd50c-8abe-11eb-224a-d3120d448d2a
+md"""
 
 ### Dados:
 
@@ -192,8 +196,9 @@ md"""
 # ╠═6dc92e96-7148-11eb-1cc3-cf2d65e8985b
 # ╟─72413c5a-88f4-11eb-08d2-813542bed0f4
 # ╟─7b557108-88f4-11eb-386c-5de9519fa60a
-# ╠═5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
-# ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
+# ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
+# ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
+# ╠═59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318

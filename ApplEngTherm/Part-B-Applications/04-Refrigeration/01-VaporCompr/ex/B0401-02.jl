@@ -153,6 +153,7 @@ function solve(
 		FL="R134a"	# Fluido de trabalho (nome CoolProp)
 	)
 	# Implement-me...
+	return Tuple(0.0 for i in 1:9)
 	# Cycle States
 	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K
 	St3 = CP.State(FL, Dict("T" => Tc, "Q" => 0))
@@ -175,23 +176,36 @@ end
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
 begin
 	A, B, C, D, E, F, G, H = solve(
-		the[:WC],
-		the[:ηC] / 1.0e+2,
-		the[:IC] / 1.0e+2,
-		the[:Tc] + 273.15,
-		the[:Te] + 273.15,
+		the[:PR] * 3.517,		# ton --> kW
+		the[:Tα] + 273.15,		# °C  --> K
+		the[:Tβ] + 273.15,		# °C  --> K
+		the[:ϵc] / 1.0e+2,		# %   --> norm
+		the[:ϵe] / 1.0e+2,		# %   --> norm
+		the[:T4] + 273.15,		# °C  --> K
+		the[:T3] + 273.15,		# °C  --> K
+		the[:Tℵ] + 273.15,		# °C  --> K
+		the[:ηC] / 1.0e+2,		# %   --> norm
+		the[:IC] / 1.0e+2,		# %   --> norm
 		FL = "R22"
 	)
 	Markdown.parse(
 		@sprintf """
-**(a)** A vazão mássica de refrigerante é de **%.4g kg/s**
+**(a)** A vazão mássica de refrigerante, em kg/s, é de %.4g
 
-**(b)** A taxa de rejeição de calor (no condensador) é de **%.4g kW**
+**(b)** A vazão mássica de água gelada produzida em “β”, em kg/s, é de %.4g
 
-**(c)** A capacidade de refrigeração é de **%.4g ton** (= %.4g kW)
+**(c)** A vazão mássica de água quente produzida em “ℶ”, em kg/s, é de %.4g
 
-**(d)** O COP do refrigerador é de **%.4g%%**
-	""" A B C/3.517 C D
+**(d)** A temperatura da água produzida em “ℶ”, em °C, é de %.4g
+
+**(e)** O COP do refrigerador, em %%, é de %.4g
+
+**(f)** O número de unidades de transferência, NTU, do condensador, é de %.4g
+
+**(g)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
+
+**(h)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
+	""" A B C D E F G H
 	)
 end
 

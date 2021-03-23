@@ -95,7 +95,7 @@ Deseja-se obter **$(the[:PR]) ton** de refrigeração na produção de água gel
 
 **(h)** O número de unidades de transferência, NTU, do evaporador
 
-**(i)** O coeficiente global de transferência de calor, UA, do evaporador
+**(i)** O coeficiente global de transferência de calor, UA, do evaporador, em kW/K
 """
 
 # ╔═╡ ccfcd50c-8abe-11eb-224a-d3120d448d2a
@@ -138,6 +138,9 @@ md"""
 
 Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.coolprop.org/index.html) via [Pycall.jl](https://github.com/JuliaPy/PyCall.jl) para propriedades termofísicas.
 """
+
+# ╔═╡ 178d697e-8b8c-11eb-1e8b-093bac07c2dd
+NTU(ϵ, δ) = δ ≈ 1.0 ? ϵ/(1-ϵ) : log((1-ϵ*δ)/(1-ϵ))/(1-δ)
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
 function solve(
@@ -189,10 +192,17 @@ function solve(
 	q41 = Q41 / ṁ_r
 	COP = q41 / wCr
 	# ---x---
-	Ċrc = ṁ_r * (St2.h - St3.h)
-	Ċwc = ṁwc * cpℵ * (T_ℶ - Tℵ)
-	@show δ_c = min(Ċrc, Ċwc) / max(Ċrc, Ċwc)
-	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, COP, (0.0 for i in 1:3)...)
+	Ċrc = ṁ_r * (St2.h - St3.h) / (St2.T - St3.T)
+	Ċwc = ṁwc * cpℵ
+	δc = min(Ċrc, Ċwc) / max(Ċrc, Ċwc)
+	Ntc = NTU(ϵc, δc)
+	# ---x---
+	# δ=0
+	Nte = NTU(ϵe, 0.0)
+	# ---x---
+	Ċwe = ṁwe * cpα 	# Cmin
+	UAe = Nte * Ċwe 	# By the definition of NTU
+	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, COP, Ntc, Nte, UAe)
 end
 
 # ╔═╡ 9f4f1ef4-88fb-11eb-0b47-0568605b0400
@@ -227,7 +237,7 @@ begin
 
 **(h)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
 
-**(i)** O coeficiente global de transferência de calor, UA, do evaporador, é de %.4g
+**(i)** O coeficiente global de transferência de calor, UA, do evaporador, em kW/K, é de %.4g
 	""" A B C-273.15 D E-273.15 F*1.0e+2 G H I
 	)
 end
@@ -251,6 +261,7 @@ md"""
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─ccfcd50c-8abe-11eb-224a-d3120d448d2a
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
+# ╠═178d697e-8b8c-11eb-1e8b-093bac07c2dd
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
 # ╠═9f4f1ef4-88fb-11eb-0b47-0568605b0400
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318

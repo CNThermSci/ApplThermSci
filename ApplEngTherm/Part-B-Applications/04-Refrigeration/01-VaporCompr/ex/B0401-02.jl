@@ -65,10 +65,7 @@ prob = Dict(
 
 # ╔═╡ 7b557108-88f4-11eb-386c-5de9519fa60a
 if go == "Recompute"
-	the = Dict(
-	   K => rand(prob[K])
-		   for K in keys(prob)
-	)
+	the = Dict( K => rand(prob[K]) for K in keys(prob) )
 end
 
 # ╔═╡ 5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
@@ -200,8 +197,8 @@ function solve(
 	# δ=0
 	Nte = NTU(ϵe, 0.0)
 	# ---x---
-	Ċwe = ṁwe * cpα 	# Cmin
-	UAe = Nte * Ċwe 	# By the definition of NTU
+	Ċwe = ṁwe * cpα	# Cmin
+	UAe = Nte * Ċwe	# By the definition of NTU
 	return (ṁ_r, ṁwe, T_β, ṁwc, T_ℶ, COP, Ntc, Nte, UAe)
 end
 

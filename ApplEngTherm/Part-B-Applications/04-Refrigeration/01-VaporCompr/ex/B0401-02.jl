@@ -221,23 +221,23 @@ begin
 	)
 	Markdown.parse(
 		@sprintf """
-**(a)** A vazão mássica de refrigerante, em kg/s, é de %.4g
+**(a)** A vazão mássica de refrigerante, em kg/s, é de **%.4g**
 
-**(b)** A vazão mássica de água gelada produzida em “β”, em kg/s, é de %.4g
+**(b)** A vazão mássica de água gelada produzida em “β”, em kg/s, é de **%.4g**
 
-**(c)** A temperatura da água produzida em “β”, em °C, é de %.4g
+**(c)** A temperatura da água produzida em “β”, em °C, é de **%.4g**
 
-**(d)** A vazão mássica de água quente produzida em “ℶ”, em kg/s, é de %.4g
+**(d)** A vazão mássica de água quente produzida em “ℶ”, em kg/s, é de **%.4g**
 
-**(e)** A temperatura da água produzida em “ℶ”, em °C, é de %.4g
+**(e)** A temperatura da água produzida em “ℶ”, em °C, é de **%.4g**
 
-**(f)** O COP do refrigerador, em %%, é de %.4g
+**(f)** O COP do refrigerador, em %%, é de **%.4g**
 
-**(g)** O número de unidades de transferência, NTU, do condensador, é de %.4g
+**(g)** O número de unidades de transferência, NTU, do condensador, é de **%.4g**
 
-**(h)** O número de unidades de transferência, NTU, do evaporador, é de %.4g
+**(h)** O número de unidades de transferência, NTU, do evaporador, é de **%.4g**
 
-**(i)** O coeficiente global de transferência de calor, UA, do evaporador, em kW/K, é de %.4g
+**(i)** O coeficiente global de transferência de calor, UA, do evaporador, em kW/K, é de **%.4g**.
 	""" A B C-273.15 D E-273.15 F*1.0e+2 G H I
 	)
 end

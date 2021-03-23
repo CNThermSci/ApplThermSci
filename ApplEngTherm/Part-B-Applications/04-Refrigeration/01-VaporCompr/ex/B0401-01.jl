@@ -92,7 +92,14 @@ Escreve-se uma função que resolve o ciclo, utilizando [CoolProp](http://www.co
 """
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d
-function solve(WC, ηC, IC, Tc, Te; FL="R134a")
+function solve(
+		WC, 		# Potência de compresssão, (kW)
+		ηC, 		# Eficiência isentrópica, (norm)
+		IC,			# Fração de perda de irrev. por calor, (norm)
+		Tc, 		# Temp. de condensação (K)
+		Te; 		# Temp. de evaporação (K)
+		FL="R134a"	# Fluido refrigerante (CoolProp name)
+	)
 	# Cycle States
 	St1 = CP.State(FL, Dict("T" => Te, "Q" => 1)) # All T's in K
 	St3 = CP.State(FL, Dict("T" => Tc, "Q" => 0))
@@ -154,7 +161,7 @@ md"""
 # ╟─5a2b3bd6-714b-11eb-0208-5f1b44e7cb4c
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═32a25170-88f8-11eb-2b1a-a74304a5c40d
-# ╟─9f4f1ef4-88fb-11eb-0b47-0568605b0400
+# ╠═9f4f1ef4-88fb-11eb-0b47-0568605b0400
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

@@ -173,7 +173,7 @@ function solve(
 	Q41 = PR			# Energy balance, adiabatic Evap
 	ṁ_r = Q41 / (St1.h - St4.h)
 	# ---x---
-	Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα * ΔTmax
+	Qxe = Q41 / ϵe 		# Max Evap Q from definition of ϵ = ṁwe * cpα / ΔTmax
 	Stα = CP.State("water", Dict("T" => Tα, "P" => 101.35))
 	cpα = Stα.cp
 	ṁwe = Qxe / (cpα * (Tα - T4))	# Ignore solidification for T4 < 0°C

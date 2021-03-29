@@ -139,8 +139,8 @@ Escreve-se funções que auxiliem na resolução e resolvam o ciclo, utilizando 
 # ╔═╡ 178d697e-8b8c-11eb-1e8b-093bac07c2dd
 """`NTU(ϵ, δ)`
 
-Retorna o valor de `NTU` dados valores de ϵ e de δ, a saber: a (i) efetividade e a
-(ii) relação entre taxas de capacidade, Ċmin/Ċmax; respectivamente."""
+Retorna o valor de `NTU` dados valores de `ϵ` e de `δ`, a saber: a (i) efetividade e a
+(ii) relação entre taxas de capacidade, \$Ċmin/Ċmax\$; respectivamente."""
 NTU(ϵ, δ) = δ ≈ 1.0 ? ϵ/(1-ϵ) : log((1-ϵ*δ)/(1-ϵ))/(1-δ)
 
 # ╔═╡ 32a25170-88f8-11eb-2b1a-a74304a5c40d

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.11.14
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -27,6 +27,9 @@ using BrowseTables
 
 # ╔═╡ 934ae304-f7ce-11ea-2b06-9b0f48cd9c22
 using CSV
+
+# ╔═╡ af562ff8-01f2-11eb-2a47-21cd32b12b14
+using Roots, ForwardDiff
 
 # ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
 md"# Biblioteca Simplificada de Gás Ideal
@@ -220,24 +223,6 @@ md"""
 Molar base? $(@bind exm CheckBox())
 """
 
-# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
-begin
-	exv = 𝐯(stdGas, exm, P=exP, T=exT)
-	if exm
-		md"""
-		`v =` $(ff(exv)) m³/kmol
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	else
-		md"""
-		`v =` $(ff(exv)) m³/kg
-		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
-		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
-		"""
-	end
-end
-
 # ╔═╡ 97faf1be-f7db-11ea-3e79-7f73efeaa19e
 md"## Funcionalidade – Comportamento Calórico"
 
@@ -375,9 +360,6 @@ begin
                :γ  => [round(γ(stdGas, T=i), digits=digs) for i in T]
        ))
 end
-
-# ╔═╡ af562ff8-01f2-11eb-2a47-21cd32b12b14
-using Roots, ForwardDiff
 
 # ╔═╡ 163b8bc4-fecd-11ea-2ce6-89661221500b
 md"## Funcionalidade – Funções inversas
@@ -656,6 +638,24 @@ begin
 		)
 	end
 
+end
+
+# ╔═╡ b2606fd8-f872-11ea-0dff-232b927a6ea9
+begin
+	exv = 𝐯(stdGas, exm, P=exP, T=exT)
+	if exm
+		md"""
+		`v =` $(ff(exv)) m³/kmol
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	else
+		md"""
+		`v =` $(ff(exv)) m³/kg
+		`; P =` $(ff(𝐏(stdGas, exm, T=exT, v=exv))) kPa
+		`; T =` $(ff(𝐓(stdGas, exm, P=exP, v=exv))) K.
+		"""
+	end
 end
 
 # ╔═╡ 1c4805f6-fed2-11ea-07cf-477715998303

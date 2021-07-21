@@ -1,8 +1,24 @@
+#==============================================================================#
+#                                   IGlib.jl                                   #
+#==============================================================================#
+
+module IGlib
+
+
+#------------------------------------------------------------------------------#
+#                                   Imports                                    #
+#------------------------------------------------------------------------------#
+
 using CSV
 using Roots, ForwardDiff
 
+
+#------------------------------------------------------------------------------#
+#                                  Constants                                   #
+#------------------------------------------------------------------------------#
+
 # Whether the molar base is the default one
-const MOLR = true;
+const MOLR = false;
 
 # Universal gas constant, with an optional precision argument
 R̄(𝕡=Float64) = 𝕡(8.314472); # ± 0.000015 # kJ/kmol⋅K
@@ -13,6 +29,13 @@ Tref(𝕡=Float64) = 𝕡(298.15); # K
 # Standard Pref - for the entropy
 Pref(𝕡=Float64) = 𝕡(100.00); # kPa
 
+export R̄
+
+
+#------------------------------------------------------------------------------#
+#                                   IG Type                                    #
+#------------------------------------------------------------------------------#
+
 # IG (Ideal Gas) structure: values for each gas instance
 struct IG
     MW                  # Molecular "Weight", kg/kmol
@@ -21,6 +44,13 @@ struct IG
     Tmax                # T_max, K
     sref                # s̄°ref, kJ/kmol·K
 end;
+
+export IG
+
+
+#------------------------------------------------------------------------------#
+#                                  Artifacts                                   #
+#------------------------------------------------------------------------------#
 
 gasRaw = CSV.File("IGTable.csv", normalizenames=true)
 
@@ -31,6 +61,13 @@ function rowToIG(row)
 end;
 
 gasLib = Dict(Symbol(r.Formula) => rowToIG(r) for r in gasRaw)
+
+export gasLib
+
+
+#------------------------------------------------------------------------------#
+#                               Basic Functions                                #
+#------------------------------------------------------------------------------#
 
 function inbounds(gas::IG, T)
 	𝕡 = typeof(AbstractFloat(T))
@@ -56,6 +93,15 @@ sref(gas::IG, 𝕡=Float64) = 𝕡(gas.sref)
 # Auxiliary function of promoted types (float types relate to precision bits)!
 prTy(A...) = promote_type(map(typeof, AbstractFloat.(A))...)
 
+export 𝐑
+export 𝐌
+export Tmin, Tmax, sref
+
+
+#------------------------------------------------------------------------------#
+#                             P - T - v  Functions                             #
+#------------------------------------------------------------------------------#
+
 # "𝐏" can be typed by \bfP<tab>
 𝐏(gas::IG, molr=true; T, v) = begin
 	𝕡 = prTy(T, v)
@@ -73,6 +119,15 @@ end
 	𝕡 = prTy(P, T)
 	𝐑(gas, molr, 𝕡) * T / P
 end
+
+export 𝐏
+export 𝐓
+export 𝐯
+
+
+#------------------------------------------------------------------------------#
+#                              Caloric Functions                               #
+#------------------------------------------------------------------------------#
 
 # If functions accound for integration factor, then only :cp, :cv are needed here
 function coef(gas::IG, kind::Symbol = :cp, molr=MOLR, 𝕡=Float64)
@@ -143,6 +198,16 @@ s°(gas::IG, molr=MOLR; T) =	begin
 		zero(𝕡)
 end
 
+export cp, cv, γ
+export 𝐮
+export 𝐡
+export s°
+
+
+#------------------------------------------------------------------------------#
+#                         Isentropic Process Functions                         #
+#------------------------------------------------------------------------------#
+
 Pr(gas::IG; T) = begin
 	𝕡 = typeof(T)
 	exp(s°(gas, true, T=T) / R̄(𝕡)) / exp(sref(gas, 𝕡) / R̄(𝕡))
@@ -158,37 +223,37 @@ vr(gas::IG; T) = T / Pr(gas, T=T)
 		zero(𝕡)
 end
 
+export Pr, vr
+export 𝐬
+
+
+#------------------------------------------------------------------------------#
+#                      Mini Property Labeling Type System                      #
+#------------------------------------------------------------------------------#
+
 # A Thermodynamic abstract type to hook all concrete property value types under it
 abstract type THERM end
 
-begin
-	# A type to LABEL values as internal energy ones:
-	struct uType <: THERM
-		val
-	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
-	(_u::uType)() = _u.val
-end
+struct uType <: THERM; val; end
+(_u::uType)() = _u.val
 
-begin
-	struct hType <: THERM; val; end
-	(_h::hType)() = _h.val
-end
+struct hType <: THERM; val; end
+(_h::hType)() = _h.val
 
-begin
-	struct prType <: THERM; val; end
-	(_p::prType)() = _p.val
-end
+struct prType <: THERM; val; end
+(_p::prType)() = _p.val
 
-begin
-	struct vrType <: THERM; val; end
-	(_v::vrType)() = _v.val
-end
+struct vrType <: THERM; val; end
+(_v::vrType)() = _v.val
+
+export THERM
+export uType, hType, prType, vrType
+
 
 #----------------------------------------------------------------------#
 #                             T(u) inverse                             #
 #----------------------------------------------------------------------#
+
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
 		gas::IG, uVal::uType, molr=true;
@@ -232,9 +297,11 @@ function 𝐓(
 	)
 end
 
+
 #----------------------------------------------------------------------#
 #                             T(h) inverse                             #
 #----------------------------------------------------------------------#
+
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
 		gas::IG, hVal::hType, molr=true;
@@ -278,9 +345,11 @@ function 𝐓(
 	)
 end
 
+
 #----------------------------------------------------------------------#
 #                            T(pr) inverse                             #
 #----------------------------------------------------------------------#
+
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
 		gas::IG, pVal::prType;
@@ -324,9 +393,11 @@ function 𝐓(
 	)
 end
 
+
 #----------------------------------------------------------------------#
 #                            T(vr) inverse                             #
 #----------------------------------------------------------------------#
+
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
 		gas::IG, vVal::vrType;
@@ -383,3 +454,5 @@ function 𝐓(
 		:FB  => FB
 	)
 end
+
+end # module

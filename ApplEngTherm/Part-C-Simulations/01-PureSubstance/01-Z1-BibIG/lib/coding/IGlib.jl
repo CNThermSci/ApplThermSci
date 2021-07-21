@@ -103,19 +103,19 @@ export Tmin, Tmax, sref
 #------------------------------------------------------------------------------#
 
 # "𝐏" can be typed by \bfP<tab>
-𝐏(gas::IG, molr=true; T, v) = begin
+𝐏(gas::IG, molr=MOLR; T, v) = begin
 	𝕡 = prTy(T, v)
 	𝐑(gas, molr, 𝕡) * T / v
 end
 
 # "𝐓" can be typed by \bfT<tab>
-𝐓(gas::IG, molr=true; P, v) = begin
+𝐓(gas::IG, molr=MOLR; P, v) = begin
 	𝕡 = prTy(P, v)
 	P * v / 𝐑(gas, molr, 𝕡)
 end
 
 # "𝐯" can be typed by \bfv<tab>
-𝐯(gas::IG, molr=true; P, T) = begin
+𝐯(gas::IG, molr=MOLR; P, T) = begin
 	𝕡 = prTy(P, T)
 	𝐑(gas, molr, 𝕡) * T / P
 end
@@ -256,7 +256,7 @@ export uType, hType, prType, vrType
 
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
-		gas::IG, uVal::uType, molr=true;
+		gas::IG, uVal::uType, molr=MOLR;
 		maxIt::Integer=0, epsTol::Integer=4
 	)
 	# Auxiliary function of whether to break due to iterations
@@ -304,7 +304,7 @@ end
 
 # "𝐓" can be typed by \bfT<tab>
 function 𝐓(
-		gas::IG, hVal::hType, molr=true;
+		gas::IG, hVal::hType, molr=MOLR;
 		maxIt::Integer=0, epsTol::Integer=4
 	)
 	# Auxiliary function of whether to break due to iterations

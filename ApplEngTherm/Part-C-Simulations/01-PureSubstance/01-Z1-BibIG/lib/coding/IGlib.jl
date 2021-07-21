@@ -376,6 +376,372 @@ begin
        ))
 end
 
+# ╔═╡ af562ff8-01f2-11eb-2a47-21cd32b12b14
+using Roots, ForwardDiff
+
+# ╔═╡ 163b8bc4-fecd-11ea-2ce6-89661221500b
+md"## Funcionalidade – Funções inversas
+
+Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
+
+# ╔═╡ 33fb541e-fecd-11ea-3160-83f06e069191
+md"### Definição de Tipos
+
+Como todas as funções inversas acima – 𝐓(u), 𝐓(h), etc. – possuem o mesmo *nome*, a diferenciação entre elas se dará via **`Multiple Dispatch`**, e assim, cada função `𝐓` será especializada com base nos **tipos** de seus **argumentos**.
+
+O objetivo de saber se o argumento é uma energia interna ou entalpia, etc., é para que se saiba (i) sua forma funcional **e** (ii) a forma funcional de sua derivada, a fim de ajustar o método numérico.
+
+Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus valores como \"energia interna\", \"entalpia\", etc.:
+"
+
+# ╔═╡ 4305c62e-fecd-11ea-0860-9b5c08589ef1
+# A Thermodynamic abstract type to hook all concrete property value types under it
+abstract type THERM end
+
+# ╔═╡ 42ed0c4c-fecd-11ea-0ba8-1f5896ef05b1
+begin
+	# A type to LABEL values as internal energy ones:
+	struct uType <: THERM
+		val
+	end
+	# Functor to extract the stored value `val`...
+	# ... thus avoiding further implementing the type:
+	(_u::uType)() = _u.val
+end
+
+# ╔═╡ 42c107f0-fecd-11ea-13ea-13f9c55afd8e
+begin
+	struct hType <: THERM; val; end
+	(_h::hType)() = _h.val
+end
+
+# ╔═╡ e64d8a8c-0405-11eb-2921-ebe084e91de3
+begin
+	struct prType <: THERM; val; end
+	(_p::prType)() = _p.val
+end
+
+# ╔═╡ 1991bdbe-0406-11eb-04e5-9b85aabdcc0f
+begin
+	struct vrType <: THERM; val; end
+	(_v::vrType)() = _v.val
+end
+
+# ╔═╡ 42a999c6-fecd-11ea-2349-c32da71d098f
+md"▷ Ilustração do conceito:"
+
+# ╔═╡ 5fcee0b0-fecd-11ea-1bf0-6b338cffd03b
+begin
+	# First METHOD definition for the function "example":
+	function example(x::uType, molr=MOLR)
+		molr ?
+			"ū = $(x()) kJ/kmol" :
+			"u = $(x()) kJ/kg"
+	end
+	# Second METHOD definition for the function "example":
+	function example(x::hType, molr=MOLR)
+		molr ?
+			"h̄ = $(x()) kJ/kmol" :
+			"h = $(x()) kJ/kg"
+	end
+	# Same function name "example" called: specialize based on argument(s) TYPE(s):
+	vcat(
+		example(uType(314.15)),			# uType argument
+		example(hType(314.15), false),	# htype argument
+		uType(3.14)() == hType(3.14)()	# Their _values_ are the same!
+	)
+end
+
+# ╔═╡ 428dda38-fecd-11ea-27cd-8df85d64aa87
+md"### Implementação"
+
+# ╔═╡ 7df3c0e0-fec7-11ea-135d-1d76890ccf84
+begin
+
+	#----------------------------------------------------------------------#
+	#                             T(u) inverse                             #
+	#----------------------------------------------------------------------#
+	# "𝐓" can be typed by \bfT<tab>
+	function 𝐓(
+			gas::IG, uVal::uType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
+		# Auxiliary function of whether to break due to iterations
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
+		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
+		𝑓 = x -> 𝐮(gas, molr, T=x)
+		𝑔 = x -> cv(gas, molr, T=x)
+		thef, symb = (uVal)(), "u"
+		ε, 𝕡 = eps(thef), typeof(thef)
+		# Get f bounds and check
+		TMin, TMax = Tmin(gas, 𝕡), Tmax(gas, 𝕡)
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
+		end
+		# Linear initial estimate and initializations
+		r = (thef - fMin) / (fMax - fMin)
+		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
+		f = [ 𝑓(T[end]) ]
+		why = :because
+		# Main loop
+		while true
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
+			if breakIt(length(T)-1)
+				why = :it; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δf; break
+			end
+		end
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
+		)
+	end
+
+	#----------------------------------------------------------------------#
+	#                             T(h) inverse                             #
+	#----------------------------------------------------------------------#
+	# "𝐓" can be typed by \bfT<tab>
+	function 𝐓(
+			gas::IG, hVal::hType, molr=true;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
+		# Auxiliary function of whether to break due to iterations
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
+		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
+		𝑓 = x -> 𝐡(gas, molr, T=x)
+		𝑔 = x -> cp(gas, molr, T=x)
+		thef, symb = (hVal)(), "h"
+		ε, 𝕡 = eps(thef), typeof(thef)
+		# Get f bounds and check
+		TMin, TMax = Tmin(gas, 𝕡), Tmax(gas, 𝕡)
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
+		end
+		# Linear initial estimate and initializations
+		r = (thef - fMin) / (fMax - fMin)
+		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
+		f = [ 𝑓(T[end]) ]
+		why = :because
+		# Main loop
+		while true
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
+			if breakIt(length(T)-1)
+				why = :it; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δf; break
+			end
+		end
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
+		)
+	end
+
+	#----------------------------------------------------------------------#
+	#                            T(pr) inverse                             #
+	#----------------------------------------------------------------------#
+	# "𝐓" can be typed by \bfT<tab>
+	function 𝐓(
+			gas::IG, pVal::prType;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
+		# Auxiliary function of whether to break due to iterations
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
+		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
+		𝑓 = x -> Pr(gas, T=x)
+		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
+		thef, symb = (pVal)(), "Pr"
+		ε, 𝕡 = eps(thef), typeof(thef)
+		# Get f bounds and check
+		TMin, TMax = Tmin(gas, 𝕡), Tmax(gas, 𝕡)
+		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
+		if !(fMin <= thef <= fMax)
+			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
+		end
+		# Linear initial estimate and initializations
+		r = (thef - fMin) / (fMax - fMin)
+		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
+		f = [ 𝑓(T[end]) ]
+		why = :because
+		# Main loop
+		while true
+			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
+			append!(f, 𝑓(T[end]))
+			if breakIt(length(T)-1)
+				why = :it; break
+			elseif abs(f[end] - thef) <= epsTol * ε
+				why = :Δf; break
+			end
+		end
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T)-1,
+			:Δf  => f .- thef,
+			:Ts  => T,
+			:fs  => f
+		)
+	end
+
+	#----------------------------------------------------------------------#
+	#                            T(vr) inverse                             #
+	#----------------------------------------------------------------------#
+	# "𝐓" can be typed by \bfT<tab>
+	function 𝐓(
+			gas::IG, vVal::vrType;
+			maxIt::Integer=0, epsTol::Integer=4
+		)
+		# Auxiliary function of whether to break due to iterations
+		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
+		# Set 𝑓(x) function
+		thef, symb = (vVal)(), "vr"
+		𝑓 = x -> vr(gas, T=x) - thef
+		ε, 𝕡 = eps(thef), typeof(thef)
+		# Get f bounds and check
+		TMin, TMax = Tmin(gas, 𝕡), Tmax(gas, 𝕡)
+		fMin, fMax = 𝑓(TMax), 𝑓(TMin)
+		if !(fMin <= zero(𝕡) <= fMax)
+			throw(
+				DomainError(
+					thef,
+					"out of bounds $(fMin+thef) ⩽ $(symb) ⩽ $(fMax+thef)."
+				)
+			)
+		end
+		# Bisection method initializations
+		TB = [ TMin, TMax ] # T bounds
+		FB = map(𝑓, TB)	 # 𝑓 bounds
+		T = 𝕡[ ] # Iterations are length(T)
+		f = 𝕡[ ]
+		𝑠 = map(signbit, FB)
+		why = :unbracketed
+		while !reduce(==, 𝑠)
+			# Main loop
+			append!(T, reduce(+, TB) / 2)
+			append!(f, 𝑓(T[end]))
+			sMid = signbit(f[end])
+			if sMid == 𝑠[1]
+				TB[1], FB[1] = T[end], f[end]
+			else
+				TB[2], FB[2] = T[end], f[end]
+			end
+			if breakIt(length(T))
+				why = :it; break
+			elseif abs(f[end]) <= epsTol * ε
+				why = :Δf; break
+			end
+		end
+		return Dict(
+			:sol => T[end],
+			:why => why,
+			:it  => length(T),
+			:Δf  => f,
+			:Ts  => T,
+			:fs  => f .+ thef,
+			:TB  => TB,
+			:FB  => FB
+		)
+	end
+
+end
+
+# ╔═╡ 1c4805f6-fed2-11ea-07cf-477715998303
+𝐓
+
+# ╔═╡ 675de6bc-fec8-11ea-1b59-e585e8cba51a
+Tu = 𝐓(
+	stdGas,
+	uType(
+		𝐮(
+			stdGas,
+			false,
+			T=300.0
+		)
+	),
+	false,
+	epsTol=2^26 # 2²⁶ = 67108864: don't care about the last 26 bits
+	#epsTol=2^16 # 2¹⁶ = 65536: don't care about the last 16 bits
+)
+
+# ╔═╡ 9deb79b4-fed0-11ea-0457-edc21cedbb88
+collect(sprintf1("%.$(16-3)f", i) for i in Tu[:Ts])
+
+# ╔═╡ 070c9262-04a2-11eb-2a2a-5b7bc3eee25c
+Tu₃₂ = 𝐓(
+	stdGas,
+	uType(
+		𝐮(
+			stdGas,
+			false,
+			T=300.0f0 # literal floats with "f0" are 32-bit, single-precision
+		)
+	),
+	false,
+	epsTol=1  # 2⁰ = 1: care about all bits
+)
+
+# ╔═╡ 601e1a7e-04a2-11eb-0685-53471b4bc6ce
+collect(sprintf1("%.$(7-3)f", i) for i in Tu₃₂[:Ts])
+
+# ╔═╡ b49b8540-fed1-11ea-17d7-49ff1deb2898
+Th = 𝐓(
+	stdGas,
+	hType(
+		𝐡(
+			stdGas,
+			false,
+			T=BigFloat(300.0)
+		)
+	),
+	false
+)
+
+# ╔═╡ 7065617c-fed2-11ea-3b30-4d4b5af934e7
+collect(sprintf1("%.$(78-3)f", i) for i in Th[:Ts])
+
+# ╔═╡ 81979e9c-0408-11eb-3fb5-2ddf52656a27
+Tp = 𝐓(
+	stdGas,
+	prType(
+		Pr(
+			stdGas,
+			T=300.0
+		)
+	),
+	epsTol=1
+)
+
+# ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
+collect(sprintf1("%+.$(16-3)f", i) for i in Tp[:Ts])
+
+# ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
+collect(sprintf1("%+.$(16-1)e", i) for i in Tp[:Δf])
+
+# ╔═╡ b3606444-0506-11eb-1123-270d773bd7c8
+Tv = 𝐓(
+	stdGas,
+	vrType(
+		vr(
+			stdGas,
+			T=300.0
+		)
+	),
+	epsTol=1
+)
+
 # ╔═╡ Cell order:
 # ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
 # ╠═b88b4f04-f851-11ea-32f0-45dc4ce93e42
@@ -436,394 +802,7 @@ end
 # ╠═2e53aa88-f7ec-11ea-1131-ff6f6b2a1001
 # ╟─9c488798-f7e4-11ea-3878-f32ab3a0abf8
 # ╟─970b5428-04a6-11eb-183a-23a2b8ed52c0
-### A Pluto.jl notebook ###
-# v0.11.14
-
-using Markdown
-using InteractiveUtils
-
-# ╔═╡ 410c4a3a-fed1-11ea-1686-658ce41086e8
-using PlutoUI, Formatting, DataFrames, BrowseTables
-
-# ╔═╡ af562ff8-01f2-11eb-2a47-21cd32b12b14
-using Roots, ForwardDiff
-
-# ╔═╡ e6313090-f7c0-11ea-0f25-5128ff9de54b
-md"# Extensão da Biblioteca de Gás Ideal"
-
-# ╔═╡ e18c6af8-fec5-11ea-0e6b-b981e5eb3c85
-module IGas
-	include("IGlib_0.jl")
-end
-
-# ╔═╡ 163b8bc4-fecd-11ea-2ce6-89661221500b
-md"## Funcionalidade – Funções inversas
-
-Métodos numéricos para 𝐓(u), 𝐓(h), 𝐓(pr), etc."
-
-# ╔═╡ 33fb541e-fecd-11ea-3160-83f06e069191
-md"### Definição de Tipos
-
-Como todas as funções inversas acima – 𝐓(u), 𝐓(h), etc. – possuem o mesmo *nome*, a diferenciação entre elas se dará via **`Multiple Dispatch`**, e assim, cada função `𝐓` será especializada com base nos **tipos** de seus **argumentos**.
-
-O objetivo de saber se o argumento é uma energia interna ou entalpia, etc., é para que se saiba (i) sua forma funcional **e** (ii) a forma funcional de sua derivada, a fim de ajustar o método numérico.
-
-Para tanto, é necessário a criação de novos **tipos**, que **rotulem** seus valores como \"energia interna\", \"entalpia\", etc.:
-"
-
-# ╔═╡ 4305c62e-fecd-11ea-0860-9b5c08589ef1
-# A Thermodynamic abstract type to hook all concrete property value types under it
-abstract type THERM end
-
-# ╔═╡ 42ed0c4c-fecd-11ea-0ba8-1f5896ef05b1
-begin
-	# A type to LABEL values as internal energy ones:
-	struct uType <: THERM
-		val
-	end
-	# Functor to extract the stored value `val`...
-	# ... thus avoiding further implementing the type:
-	(_u::uType)() = _u.val
-end
-
-# ╔═╡ 42c107f0-fecd-11ea-13ea-13f9c55afd8e
-begin
-	struct hType <: THERM; val; end
-	(_h::hType)() = _h.val
-end
-
-# ╔═╡ e64d8a8c-0405-11eb-2921-ebe084e91de3
-begin
-	struct prType <: THERM; val; end
-	(_p::prType)() = _p.val
-end
-
-# ╔═╡ 1991bdbe-0406-11eb-04e5-9b85aabdcc0f
-begin
-	struct vrType <: THERM; val; end
-	(_v::vrType)() = _v.val
-end
-
-# ╔═╡ 42a999c6-fecd-11ea-2349-c32da71d098f
-md"▷ Ilustração do conceito:"
-
-# ╔═╡ 5fcee0b0-fecd-11ea-1bf0-6b338cffd03b
-begin
-	# First METHOD definition for the function "example":
-	function example(x::uType, molr=IGas.MOLR)
-		molr ?
-			"ū = $(x()) kJ/kmol" :
-			"u = $(x()) kJ/kg"
-	end
-	# Second METHOD definition for the function "example":
-	function example(x::hType, molr=IGas.MOLR)
-		molr ?
-			"h̄ = $(x()) kJ/kmol" :
-			"h = $(x()) kJ/kg"
-	end
-	# Same function name "example" called: specialize based on argument(s) TYPE(s):
-	vcat(
-		example(uType(314.15)),			# uType argument
-		example(hType(314.15), false),	# htype argument
-		uType(3.14)() == hType(3.14)()	# Their _values_ are the same!
-	)
-end
-
-# ╔═╡ 428dda38-fecd-11ea-27cd-8df85d64aa87
-md"### Implementação"
-
-# ╔═╡ 7df3c0e0-fec7-11ea-135d-1d76890ccf84
-begin
-
-	#----------------------------------------------------------------------#
-	#                             T(u) inverse                             #
-	#----------------------------------------------------------------------#
-	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(
-			gas::IGas.IG, uVal::uType, molr=true;
-			maxIt::Integer=0, epsTol::Integer=4
-		)
-		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
-		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓 = x -> IGas.𝐮(gas, molr, T=x)
-		𝑔 = x -> IGas.cv(gas, molr, T=x)
-		thef, symb = (uVal)(), "u"
-		ε, 𝕡 = eps(thef), typeof(thef)
-		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
-		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
-		if !(fMin <= thef <= fMax)
-			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
-		end
-		# Linear initial estimate and initializations
-		r = (thef - fMin) / (fMax - fMin)
-		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		f = [ 𝑓(T[end]) ]
-		why = :because
-		# Main loop
-		while true
-			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
-			append!(f, 𝑓(T[end]))
-			if breakIt(length(T)-1)
-				why = :it; break
-			elseif abs(f[end] - thef) <= epsTol * ε
-				why = :Δf; break
-			end
-		end
-		return Dict(
-			:sol => T[end],
-			:why => why,
-			:it  => length(T)-1,
-			:Δf  => f .- thef,
-			:Ts  => T,
-			:fs  => f
-		)
-	end
-
-	#----------------------------------------------------------------------#
-	#                             T(h) inverse                             #
-	#----------------------------------------------------------------------#
-	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(
-			gas::IGas.IG, hVal::hType, molr=true;
-			maxIt::Integer=0, epsTol::Integer=4
-		)
-		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
-		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓 = x -> IGas.𝐡(gas, molr, T=x)
-		𝑔 = x -> IGas.cp(gas, molr, T=x)
-		thef, symb = (hVal)(), "h"
-		ε, 𝕡 = eps(thef), typeof(thef)
-		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
-		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
-		if !(fMin <= thef <= fMax)
-			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
-		end
-		# Linear initial estimate and initializations
-		r = (thef - fMin) / (fMax - fMin)
-		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		f = [ 𝑓(T[end]) ]
-		why = :because
-		# Main loop
-		while true
-			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
-			append!(f, 𝑓(T[end]))
-			if breakIt(length(T)-1)
-				why = :it; break
-			elseif abs(f[end] - thef) <= epsTol * ε
-				why = :Δf; break
-			end
-		end
-		return Dict(
-			:sol => T[end],
-			:why => why,
-			:it  => length(T)-1,
-			:Δf  => f .- thef,
-			:Ts  => T,
-			:fs  => f
-		)
-	end
-
-	#----------------------------------------------------------------------#
-	#                            T(pr) inverse                             #
-	#----------------------------------------------------------------------#
-	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(
-			gas::IGas.IG, pVal::prType;
-			maxIt::Integer=0, epsTol::Integer=4
-		)
-		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
-		# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-		𝑓 = x -> IGas.Pr(gas, T=x)
-		𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
-		thef, symb = (pVal)(), "Pr"
-		ε, 𝕡 = eps(thef), typeof(thef)
-		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
-		fMin, fMax = 𝑓(TMin), 𝑓(TMax)
-		if !(fMin <= thef <= fMax)
-			throw(DomainError(thef, "out of bounds $(fMin) ⩽ $(symb) ⩽ $(fMax)."))
-		end
-		# Linear initial estimate and initializations
-		r = (thef - fMin) / (fMax - fMin)
-		T = [ TMin + r * (TMax - TMin) ] # Iterations are length(T)-1
-		f = [ 𝑓(T[end]) ]
-		why = :because
-		# Main loop
-		while true
-			append!(T, T[end] + (thef - f[end]) / 𝑔(T[end]))
-			append!(f, 𝑓(T[end]))
-			if breakIt(length(T)-1)
-				why = :it; break
-			elseif abs(f[end] - thef) <= epsTol * ε
-				why = :Δf; break
-			end
-		end
-		return Dict(
-			:sol => T[end],
-			:why => why,
-			:it  => length(T)-1,
-			:Δf  => f .- thef,
-			:Ts  => T,
-			:fs  => f
-		)
-	end
-
-	#----------------------------------------------------------------------#
-	#                            T(vr) inverse                             #
-	#----------------------------------------------------------------------#
-	# "𝐓" can be typed by \bfT<tab>
-	function IGas.𝐓(
-			gas::IGas.IG, vVal::vrType;
-			maxIt::Integer=0, epsTol::Integer=4
-		)
-		# Auxiliary function of whether to break due to iterations
-		breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
-		# Set 𝑓(x) function
-		thef, symb = (vVal)(), "vr"
-		𝑓 = x -> IGas.vr(gas, T=x) - thef
-		ε, 𝕡 = eps(thef), typeof(thef)
-		# Get f bounds and check
-		TMin, TMax = IGas.Tmin(gas, 𝕡), IGas.Tmax(gas, 𝕡)
-		fMin, fMax = 𝑓(TMax), 𝑓(TMin)
-		if !(fMin <= zero(𝕡) <= fMax)
-			throw(
-				DomainError(
-					thef,
-					"out of bounds $(fMin+thef) ⩽ $(symb) ⩽ $(fMax+thef)."
-				)
-			)
-		end
-		# Bisection method initializations
-		TB = [ TMin, TMax ] # T bounds
-		FB = map(𝑓, TB)	 # 𝑓 bounds
-		T = 𝕡[ ] # Iterations are length(T)
-		f = 𝕡[ ]
-		𝑠 = map(signbit, FB)
-		why = :unbracketed
-		while !reduce(==, 𝑠)
-			# Main loop
-			append!(T, reduce(+, TB) / 2)
-			append!(f, 𝑓(T[end]))
-			sMid = signbit(f[end])
-			if sMid == 𝑠[1]
-				TB[1], FB[1] = T[end], f[end]
-			else
-				TB[2], FB[2] = T[end], f[end]
-			end
-			if breakIt(length(T))
-				why = :it; break
-			elseif abs(f[end]) <= epsTol * ε
-				why = :Δf; break
-			end
-		end
-		return Dict(
-			:sol => T[end],
-			:why => why,
-			:it  => length(T),
-			:Δf  => f,
-			:Ts  => T,
-			:fs  => f .+ thef,
-			:TB  => TB,
-			:FB  => FB
-		)
-	end
-
-end
-
-# ╔═╡ 1c4805f6-fed2-11ea-07cf-477715998303
-IGas.𝐓
-
-# ╔═╡ 675de6bc-fec8-11ea-1b59-e585e8cba51a
-Tu = IGas.𝐓(
-	IGas.stdGas,
-	uType(
-		IGas.𝐮(
-			IGas.stdGas,
-			false,
-			T=300.0
-		)
-	),
-	false,
-	epsTol=2^26 # 2²⁶ = 67108864: don't care about the last 26 bits
-	#epsTol=2^16 # 2¹⁶ = 65536: don't care about the last 16 bits
-)
-
-# ╔═╡ 9deb79b4-fed0-11ea-0457-edc21cedbb88
-collect(sprintf1("%.$(16-3)f", i) for i in Tu[:Ts])
-
-# ╔═╡ 070c9262-04a2-11eb-2a2a-5b7bc3eee25c
-Tu₃₂ = IGas.𝐓(
-	IGas.stdGas,
-	uType(
-		IGas.𝐮(
-			IGas.stdGas,
-			false,
-			T=300.0f0 # literal floats with "f0" are 32-bit, single-precision
-		)
-	),
-	false,
-	epsTol=1  # 2⁰ = 1: care about all bits
-)
-
-# ╔═╡ 601e1a7e-04a2-11eb-0685-53471b4bc6ce
-collect(sprintf1("%.$(7-3)f", i) for i in Tu₃₂[:Ts])
-
-# ╔═╡ b49b8540-fed1-11ea-17d7-49ff1deb2898
-Th = IGas.𝐓(
-	IGas.stdGas,
-	hType(
-		IGas.𝐡(
-			IGas.stdGas,
-			false,
-			T=BigFloat(300.0)
-		)
-	),
-	false
-)
-
-# ╔═╡ 7065617c-fed2-11ea-3b30-4d4b5af934e7
-collect(sprintf1("%.$(78-3)f", i) for i in Th[:Ts])
-
-# ╔═╡ 81979e9c-0408-11eb-3fb5-2ddf52656a27
-Tp = IGas.𝐓(
-	IGas.stdGas,
-	prType(
-		IGas.Pr(
-			IGas.stdGas,
-			T=300.0
-		)
-	),
-	epsTol=1
-)
-
-# ╔═╡ c4caedde-0408-11eb-042c-cf16b7a36d80
-collect(sprintf1("%+.$(16-3)f", i) for i in Tp[:Ts])
-
-# ╔═╡ 9bbd1672-04a0-11eb-372e-6790d9865826
-collect(sprintf1("%+.$(16-1)e", i) for i in Tp[:Δf])
-
-# ╔═╡ b3606444-0506-11eb-1123-270d773bd7c8
-Tv = IGas.𝐓(
-	IGas.stdGas,
-	vrType(
-		IGas.vr(
-			IGas.stdGas,
-			T=300.0
-		)
-	),
-	epsTol=1
-)
-
-# ╔═╡ Cell order:
-# ╟─e6313090-f7c0-11ea-0f25-5128ff9de54b
-# ╠═410c4a3a-fed1-11ea-1686-658ce41086e8
 # ╠═af562ff8-01f2-11eb-2a47-21cd32b12b14
-# ╠═e18c6af8-fec5-11ea-0e6b-b981e5eb3c85
 # ╟─163b8bc4-fecd-11ea-2ce6-89661221500b
 # ╟─33fb541e-fecd-11ea-3160-83f06e069191
 # ╠═4305c62e-fecd-11ea-0860-9b5c08589ef1

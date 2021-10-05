@@ -34,14 +34,41 @@ md"""
 md"""
 ## Introdução
 
-Conjuntos de experimentos com variação de parâmetro(s) frequentemente são feitos objetivando determinar o impacto do(s) parâmetro(s) variado(s) no(s) fenômeno(s) testado(s).
+Conjuntos de experimentos com *variação de parâmetro(s)* frequentemente são feitos objetivando determinar o *impacto* do(s) parâmetro(s) variado(s) no(s) fenômeno(s) testado(s).
 
-Suponha que um conjunto de experimentos tenha resultado nos dados abaixo, no qual o primeiro grupo de dados representa o parâmetro variado, e o segundo, o correspondente valor medido (nominal) à partir do experimento:
+Suponha que um *conjunto de experimentos* tenha resultado nos **dados abaixo**, no qual o primeiro grupo de dados representa o parâmetro variado, e o segundo, o correspondente valor medido (nominal) à partir do experimento:
 """
 
 # ╔═╡ 527d522f-2cb3-44cb-baa6-6ab48b3241ef
 md"""
-De forma visual, o correspondente gráfico de dispersão é mostrado abaixo, one as abscissas são os parâmetros variados e as ordenadas são as medições (nominais) de interesse:
+O correspondente *gráfico de dispersão* é mostrado abaixo, one as abscissas — as quais chamaremos de $x$ — são os parâmetros variados e as ordenadas — as quais chamaremos de $y$ — são as medições (nominais) de interesse:
+"""
+
+# ╔═╡ 19faac2d-f4e8-43f0-994e-ea29052a9122
+md"""
+A aparência do gráfico sugere a existência de uma **relação funcional** entre $x$ e $y$, com uma certa *sobreposição de ruído*, o qual pode ser oriúndo dos erros aleatórios associados ao experimento e às medições.
+
+Ainda, a aparência do gráfico sugere uma *relação linear* entre $y$ e $x$, ou seja: $y = a_0 + a_1x$.
+"""
+
+# ╔═╡ f66b9812-a42a-42f7-8bf6-eb49f321c38f
+md"""
+### Definição:
+
+A **modelagem de dados** é o procedimento que visa determinar *quantitativamente* **coeficientes** para certas *funções* **propostas**, tais que minimizem, de alguma forma, as diferenças entre a *relação funcional proposta* e os dados sob modelagem.
+"""
+
+# ╔═╡ 1c8c4311-dea0-4746-8c4e-510e864d7286
+md"""
+Neste exemplo, foi proposta:
+
+- Uma função *linear* entre $y$ e $x$, a saber: $y = a_0 + a_1x$;
+- A *modelagem de dados* visa determinar os coeficientes $a_0$ e $a_1$.
+
+Ainda, cabe observar que:
+
+- A modelagem **não** tem a função de *propor* a *relação funcional*!
+- Este é o papel do(a) *analista*!
 """
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
@@ -104,10 +131,23 @@ function newSet(;
 end
 
 # ╔═╡ 5142370c-a0b4-47a1-a74e-825d1cf41fc7
-expData = newSet()
+expData1 = newSet()
 
 # ╔═╡ de32cdc5-5690-428d-b776-b2526bdfbadc
-scatter(expData..., label="experiment", legend=:bottomright)
+sca1 = scatter(expData1...,
+	xlabel="parâmetro variado: x",
+	ylabel="medição: y",
+	label="experiment data 1",
+	legend=:bottomright
+)
+
+# ╔═╡ 6cc57148-5db3-40ab-8b5b-1e98222f8c7c
+sca2 = scatter(expData1...,
+	xlabel="x",
+	ylabel="y",
+	label="experiment data 1",
+	legend=:bottomright
+)
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -949,9 +989,13 @@ version = "0.9.1+5"
 # ╟─570e1fe8-7206-11eb-29d3-e1b68516ba96
 # ╟─056da550-71fc-11eb-3940-5d1996cf5ec2
 # ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
-# ╠═5142370c-a0b4-47a1-a74e-825d1cf41fc7
+# ╟─5142370c-a0b4-47a1-a74e-825d1cf41fc7
 # ╟─527d522f-2cb3-44cb-baa6-6ab48b3241ef
 # ╟─de32cdc5-5690-428d-b776-b2526bdfbadc
+# ╟─19faac2d-f4e8-43f0-994e-ea29052a9122
+# ╟─f66b9812-a42a-42f7-8bf6-eb49f321c38f
+# ╟─6cc57148-5db3-40ab-8b5b-1e98222f8c7c
+# ╟─1c8c4311-dea0-4746-8c4e-510e864d7286
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

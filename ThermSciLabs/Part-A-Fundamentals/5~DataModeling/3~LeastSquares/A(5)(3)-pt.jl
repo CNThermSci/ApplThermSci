@@ -33,6 +33,15 @@ md"""
 # ╔═╡ 59f6ad1c-714b-11eb-1b85-0542622b8aba
 md"""
 ## Introdução
+
+Conjuntos de experimentos com variação de parâmetro(s) frequentemente são feitos objetivando determinar o impacto do(s) parâmetro(s) variado(s) no(s) fenômeno(s) testado(s).
+
+Suponha que um conjunto de experimentos tenha resultado nos dados abaixo, no qual o primeiro grupo de dados representa o parâmetro variado, e o segundo, o correspondente valor medido (nominal) à partir do experimento:
+"""
+
+# ╔═╡ 527d522f-2cb3-44cb-baa6-6ab48b3241ef
+md"""
+De forma visual, o correspondente gráfico de dispersão é mostrado abaixo, one as abscissas são os parâmetros variados e as ordenadas são as medições (nominais) de interesse:
 """
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
@@ -939,8 +948,9 @@ version = "0.9.1+5"
 # ╔═╡ Cell order:
 # ╟─570e1fe8-7206-11eb-29d3-e1b68516ba96
 # ╟─056da550-71fc-11eb-3940-5d1996cf5ec2
-# ╠═59f6ad1c-714b-11eb-1b85-0542622b8aba
+# ╟─59f6ad1c-714b-11eb-1b85-0542622b8aba
 # ╠═5142370c-a0b4-47a1-a74e-825d1cf41fc7
+# ╟─527d522f-2cb3-44cb-baa6-6ab48b3241ef
 # ╟─de32cdc5-5690-428d-b776-b2526bdfbadc
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197

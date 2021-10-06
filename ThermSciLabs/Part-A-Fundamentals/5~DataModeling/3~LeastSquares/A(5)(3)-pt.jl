@@ -135,6 +135,60 @@ que em `Julia` é implementado pelo operador `\`:
 ```
 """
 
+# ╔═╡ 5ac23625-7142-4a1b-94ca-0e131370722f
+md"""
+## Exemplo: Mínimos Quadrados Genéricos em Julia:
+
+Considere o novo conjunto de dados abaixo:
+"""
+
+# ╔═╡ 334fcffa-5602-48bc-9e41-b6f057f90311
+md"""
+Propondo um polinômio do segundo grau como modelo, isto é:
+
+$$y(x) = a_0x^0 + a_1x + a_2x^2,$$
+
+tem-se: $X_0(x) = 1$, $X_1(x) = x$ e $X_2(x) = x^2$, e a matriz $𝗫$ é construída:
+"""
+
+# ╔═╡ 32491de7-0fd3-48e6-980a-29e88c9d6ca9
+MODELS = Dict(
+	"quadratic" => [
+		x -> one(x),
+		x -> x,
+		x -> x^2,
+		],
+	"cubic" => [
+		x -> one(x),
+		x -> x,
+		x -> x^2,
+		x -> x^3,
+		],
+	"linear+sin" => [
+		x -> one(x),
+		x -> x,
+		x -> sin(2π*x),
+		],
+	"inverse" => [
+		x -> one(x),
+		x -> inv(x),
+		],
+	"exponential" => [
+		# x -> one(x),
+		x -> exp(x),
+		],
+)
+
+# ╔═╡ 488c54e2-3809-4695-9103-28fd776956ce
+function leastSq(the_x, the_y, MODEL)
+	𝗫 = hcat([ F.(the_x) for F in MODEL ]...)
+	𝘆 = copy(the_y)
+	𝗮 = 𝗫 \ 𝘆
+end
+
+# ╔═╡ d0bd44b2-fc3b-4233-9116-e1c632a56081
+model(MOD, a, x) = sum(a .* [F.(x) for F in MOD])
+
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
 ## Bibliotecas e Demais Recursos
@@ -237,6 +291,37 @@ end
 let
 	(manu_a0, manu_a1)
 	append!(manu_soma_log, manu_soma())
+end
+
+# ╔═╡ 597d08a8-7705-4c90-9593-a62489402561
+expData2 = newSet(_lin=true, _cub=true)
+
+# ╔═╡ f99010c2-2482-4ac5-9807-326fbb414ebb
+scatter(expData2...,
+	xlabel="x",
+	ylabel="y",
+	label="experiment data 2",
+	legend=:bottomright
+)
+
+# ╔═╡ 7f139b92-1974-4c51-a27f-1dac0342f54a
+sols = collect((key.first, leastSq(expData2..., key.second)) for key in MODELS)
+
+# ╔═╡ 05b67fc4-1c3d-4c3d-9bfd-5441d55cc562
+begin
+	PLOT = scatter(expData2...,
+		xlabel="x",
+		ylabel="y",
+		label="experiment data 2",
+		legend=:bottomright)
+	for S in sols
+		PLOT = plot!(PLOT,
+			expData2[1],
+			model(MODELS[S[1]], S[2], expData2[1]),
+			label="$(S[1]) model"
+		)
+	end
+	PLOT
 end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
@@ -1095,6 +1180,15 @@ version = "0.9.1+5"
 # ╟─8f69a7fd-8d96-42a1-92fd-df1bddff71e4
 # ╟─e37641a3-8a36-42f2-99ee-a6de1efc95f8
 # ╟─d32eb1c7-4700-4b56-be06-3a197eccade1
+# ╟─5ac23625-7142-4a1b-94ca-0e131370722f
+# ╟─597d08a8-7705-4c90-9593-a62489402561
+# ╟─f99010c2-2482-4ac5-9807-326fbb414ebb
+# ╟─334fcffa-5602-48bc-9e41-b6f057f90311
+# ╠═32491de7-0fd3-48e6-980a-29e88c9d6ca9
+# ╠═488c54e2-3809-4695-9103-28fd776956ce
+# ╠═d0bd44b2-fc3b-4233-9116-e1c632a56081
+# ╠═7f139b92-1974-4c51-a27f-1dac0342f54a
+# ╟─05b67fc4-1c3d-4c3d-9bfd-5441d55cc562
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

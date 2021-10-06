@@ -65,6 +65,8 @@ md"""
 ### Definição:
 
 A **modelagem de dados** é o procedimento que visa determinar *quantitativamente* **coeficientes** para certas *funções* **propostas**, tais que minimizem, de alguma forma, as diferenças entre a *relação funcional proposta* e os dados sob modelagem.
+
+Tal procedimento é conhecido como *regressão* em português, ou *fit*, em inglês.
 """
 
 # ╔═╡ 1c8c4311-dea0-4746-8c4e-510e864d7286
@@ -80,11 +82,33 @@ Ainda, cabe observar que:
 - Este é o papel do(a) *analista*!
 """
 
+# ╔═╡ 09d6514f-0802-4c69-8603-10ee18446014
+md"""
+## Exemplo - Regressão Linear Manual
+
+Em *regressão linear* (ou regressão afim), ajusta-se dois parâmetros da função linear (afim) proposta, a saber: $a_0$ e $a_1$, tal que a função resultante melhor se aproxime dos dados modelados.
+
+Matematicamente, pode ser demonstrado que a "melhor" aproximação é aquela que **minimiza** a soma das diferenças (entre modelo e dados) **ao quadrado**, tal que desvios positivos não cancelem desvios negativos.
+
+Na ilustração abaixo, os valores de $a_0$ e $a_1$ estão associados ao *sliders*, podendo ser ajustados manualmente:
+"""
+
 # ╔═╡ cb19c8e6-9b6f-4cae-87c0-12a2c2296cf4
 @bind manu_a0 Slider(-0.5:0.0625:+0.5, show_value=true)
 
 # ╔═╡ 16e0d181-b9b8-4f1e-bffe-162fbd793c14
 @bind manu_a1 Slider(0.0:0.125:2.5, show_value=true)
+
+# ╔═╡ 4c712abc-89d0-4fee-b20b-630669d35aec
+manu_model(x) = manu_a0 + manu_a1 * x
+
+# ╔═╡ 8f69a7fd-8d96-42a1-92fd-df1bddff71e4
+manu_soma_log = Float64[ ]
+
+# ╔═╡ d32eb1c7-4700-4b56-be06-3a197eccade1
+md"""
+## Regressão Genérica em Julia
+"""
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
@@ -158,18 +182,36 @@ sca1 = scatter(expData1...,
 
 # ╔═╡ 6cc57148-5db3-40ab-8b5b-1e98222f8c7c
 begin
-	sca2 = scatter(expData1...,
+	MANU1 = scatter(expData1...,
 		xlabel="x",
 		ylabel="y",
 		label="experiment data 1",
-		legend=:bottomright
-	)
-	man_x1 = [__X[1], __X[end]]
-	man_y1 = map(x->manu_a0 + manu_a1*x, man_x1)
-	plot!(sca2,
+		legend=:bottomright)
+	man_x1 = __X
+	man_y1 = map(manu_model, man_x1)
+	MANU2 = plot!(MANU1,
 		man_x1, man_y1,
-		label="manual fit",
-	)
+		label="manual fit")
+	MANU3 = plot(manu_soma_log,
+		xlabel="history",
+		ylabel="∑(Δy)²",
+		yaxis=(:log,))
+	plot(MANU2, MANU3,
+		layout = grid(2, 1, heights=[0.7 ,0.3]))
+end
+
+# ╔═╡ 0533511d-edf7-4904-bb36-0e72731501e8
+function manu_soma()
+	data_x, data_y = expData1
+	modl_y = manu_model.(data_x)
+	deltSq = (data_y - modl_y).^2
+	sum(deltSq)
+end
+
+# ╔═╡ e37641a3-8a36-42f2-99ee-a6de1efc95f8
+let
+	(manu_a0, manu_a1)
+	append!(manu_soma_log, manu_soma())
 end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
@@ -1018,9 +1060,15 @@ version = "0.9.1+5"
 # ╟─19faac2d-f4e8-43f0-994e-ea29052a9122
 # ╟─f66b9812-a42a-42f7-8bf6-eb49f321c38f
 # ╟─1c8c4311-dea0-4746-8c4e-510e864d7286
+# ╟─09d6514f-0802-4c69-8603-10ee18446014
 # ╠═cb19c8e6-9b6f-4cae-87c0-12a2c2296cf4
 # ╠═16e0d181-b9b8-4f1e-bffe-162fbd793c14
 # ╟─6cc57148-5db3-40ab-8b5b-1e98222f8c7c
+# ╟─4c712abc-89d0-4fee-b20b-630669d35aec
+# ╟─0533511d-edf7-4904-bb36-0e72731501e8
+# ╟─8f69a7fd-8d96-42a1-92fd-df1bddff71e4
+# ╟─e37641a3-8a36-42f2-99ee-a6de1efc95f8
+# ╠═d32eb1c7-4700-4b56-be06-3a197eccade1
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

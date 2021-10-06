@@ -4,6 +4,15 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
 # ╔═╡ 44780316-7149-11eb-2c22-91b75023501a
 begin
 	using PlutoUI
@@ -70,6 +79,12 @@ Ainda, cabe observar que:
 - A modelagem **não** tem a função de *propor* a *relação funcional*!
 - Este é o papel do(a) *analista*!
 """
+
+# ╔═╡ cb19c8e6-9b6f-4cae-87c0-12a2c2296cf4
+@bind manu_a0 Slider(-0.5:0.0625:+0.5, show_value=true)
+
+# ╔═╡ 16e0d181-b9b8-4f1e-bffe-162fbd793c14
+@bind manu_a1 Slider(0.0:0.125:2.5, show_value=true)
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
@@ -142,12 +157,20 @@ sca1 = scatter(expData1...,
 )
 
 # ╔═╡ 6cc57148-5db3-40ab-8b5b-1e98222f8c7c
-sca2 = scatter(expData1...,
-	xlabel="x",
-	ylabel="y",
-	label="experiment data 1",
-	legend=:bottomright
-)
+begin
+	sca2 = scatter(expData1...,
+		xlabel="x",
+		ylabel="y",
+		label="experiment data 1",
+		legend=:bottomright
+	)
+	man_x1 = [__X[1], __X[end]]
+	man_y1 = map(x->manu_a0 + manu_a1*x, man_x1)
+	plot!(sca2,
+		man_x1, man_y1,
+		label="manual fit",
+	)
+end
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -994,8 +1017,10 @@ version = "0.9.1+5"
 # ╟─de32cdc5-5690-428d-b776-b2526bdfbadc
 # ╟─19faac2d-f4e8-43f0-994e-ea29052a9122
 # ╟─f66b9812-a42a-42f7-8bf6-eb49f321c38f
-# ╟─6cc57148-5db3-40ab-8b5b-1e98222f8c7c
 # ╟─1c8c4311-dea0-4746-8c4e-510e864d7286
+# ╠═cb19c8e6-9b6f-4cae-87c0-12a2c2296cf4
+# ╠═16e0d181-b9b8-4f1e-bffe-162fbd793c14
+# ╟─6cc57148-5db3-40ab-8b5b-1e98222f8c7c
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

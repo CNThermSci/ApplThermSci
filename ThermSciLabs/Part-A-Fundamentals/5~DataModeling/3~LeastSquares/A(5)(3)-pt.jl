@@ -16,6 +16,7 @@ end
 # ╔═╡ 44780316-7149-11eb-2c22-91b75023501a
 begin
 	using PlutoUI
+	using Random
 	using Plots
 end
 
@@ -113,8 +114,25 @@ Considere o seguinte modelo **genérico** $y(x)$:
 
 $$y(x) = \sum_{k=0}^{M-1} a_k X_k(x),$$
 
-onde $X_k(x), 0 \leqslant k \leqslant M-1$ são $M$ **funções-modelo** linearmente independentes entre si. O objetivo da regressão é determinar os valores dos $M$ coeficientes $a_k$.
+onde $X_k(x), 0 \leqslant k \leqslant M-1$ são $M$ **funções-base** do modelo linearmente independentes entre si para os $N$ valores de $y_i$ obtidos experimentalmente. O objetivo da regressão é determinar os valores dos $M$ coeficientes $a_k$.
 
+Seja $𝗫_{ij}$ uma matriz $M \times N$ com componentes construídos conforme as $M$ funções-base aplicadas aos $N$ valores do parâmetro $x$ variado nos experimentos, da seguinte forma:
+
+$$𝗫_{ij} = X_j(x_i).$$
+
+Ainda, o vetor $𝘆_i$, de $N$ componentes:
+
+$$𝘆_i = y_i.$$
+
+O vetor-coeficientes $𝗮_j$ que minimiza $||𝗫x-𝘆||^2$ é dado por:
+
+$$𝗮 = (𝗫^T𝗫)^{-1}𝗫^T𝘆,$$
+
+que em `Julia` é implementado pelo operador `\`:
+
+```julia
+𝗮 = 𝗫 \ 𝘆
+```
 """
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
@@ -226,6 +244,7 @@ PLUTO_PROJECT_TOML_CONTENTS = """
 [deps]
 Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
 PlutoUI = "7f904dfe-b85e-4ff6-b463-dae2292396a8"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [compat]
 Plots = "~1.22.4"
@@ -1075,7 +1094,7 @@ version = "0.9.1+5"
 # ╟─0533511d-edf7-4904-bb36-0e72731501e8
 # ╟─8f69a7fd-8d96-42a1-92fd-df1bddff71e4
 # ╟─e37641a3-8a36-42f2-99ee-a6de1efc95f8
-# ╠═d32eb1c7-4700-4b56-be06-3a197eccade1
+# ╟─d32eb1c7-4700-4b56-be06-3a197eccade1
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a

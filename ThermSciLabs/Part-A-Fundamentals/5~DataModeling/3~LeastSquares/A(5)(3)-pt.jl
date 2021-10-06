@@ -107,7 +107,14 @@ manu_soma_log = Float64[ ]
 
 # ╔═╡ d32eb1c7-4700-4b56-be06-3a197eccade1
 md"""
-## Regressão Genérica em Julia
+## Mínimos Quadrados Genérico em Julia
+
+Considere o seguinte modelo **genérico** $y(x)$:
+
+$$y(x) = \sum_{k=0}^{M-1} a_k X_k(x),$$
+
+onde $X_k(x), 0 \leqslant k \leqslant M-1$ são $M$ **funções-modelo** linearmente independentes entre si. O objetivo da regressão é determinar os valores dos $M$ coeficientes $a_k$.
+
 """
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318

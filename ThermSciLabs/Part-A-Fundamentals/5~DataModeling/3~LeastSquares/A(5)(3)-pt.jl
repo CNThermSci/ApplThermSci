@@ -190,7 +190,7 @@ MODELS = Dict(
 
 # ╔═╡ f148028e-9daa-4f5b-bf4d-aa29930a827c
 md"""
-Uma função de regressão por mínimos quadrados — em inglês, *least squares fit* — que recebe dados e um modelo, pode ser escrita de forma sucinta e genérica, como abaixo:
+Uma função de regressão por mínimos quadrados — em inglês, *least squares fit* — que recebe dados e um modelo, pode ser escrita de forma *sucinta* e *genérica*, como abaixo:
 """
 
 # ╔═╡ 488c54e2-3809-4695-9103-28fd776956ce
@@ -201,10 +201,22 @@ function leastSq(the_x, the_y, MODEL)
 end
 
 # ╔═╡ 02e088f3-f8a3-4b04-b03a-091535038a6a
-
+md"""
+Outra função representando o modelo $y(x)$ resolvido, pode ser codificada de forma *simples* e *genérica*, visando, por exemplo, a sua visualização em um gráfico:
+"""
 
 # ╔═╡ d0bd44b2-fc3b-4233-9116-e1c632a56081
 model(MOD, a, x) = sum(a .* [F.(x) for F in MOD])
+
+# ╔═╡ ca5133a8-5646-41a1-ad0b-752245508a7d
+md"""
+A coleta de soluções para cada modelo cadastrado em `MODELS` é feita como abaixo:
+"""
+
+# ╔═╡ fcd3214d-df0d-476d-9f07-9bf23047eaa1
+md"""
+Os resultados gráficos podem mostrar se um dado modelo é ou não adequado para descrever os dados sob modelagem:
+"""
 
 # ╔═╡ 96c9b986-717e-11eb-21d0-5d3bdcdaf318
 md"""
@@ -214,6 +226,11 @@ md"""
 # ╔═╡ 0a3b27a8-71fa-11eb-32c4-517738939197
 md"""
 ### Bibliotecas
+"""
+
+# ╔═╡ 294ae327-d232-4034-a6a3-31d7f124824c
+md"""
+### Demais Recursos
 """
 
 # ╔═╡ 9f1af8b4-3868-46fc-af51-846f64b82ef4
@@ -1205,13 +1222,16 @@ version = "0.9.1+5"
 # ╟─32491de7-0fd3-48e6-980a-29e88c9d6ca9
 # ╟─f148028e-9daa-4f5b-bf4d-aa29930a827c
 # ╠═488c54e2-3809-4695-9103-28fd776956ce
-# ╠═02e088f3-f8a3-4b04-b03a-091535038a6a
+# ╟─02e088f3-f8a3-4b04-b03a-091535038a6a
 # ╠═d0bd44b2-fc3b-4233-9116-e1c632a56081
+# ╟─ca5133a8-5646-41a1-ad0b-752245508a7d
 # ╠═7f139b92-1974-4c51-a27f-1dac0342f54a
+# ╟─fcd3214d-df0d-476d-9f07-9bf23047eaa1
 # ╟─05b67fc4-1c3d-4c3d-9bfd-5441d55cc562
 # ╟─96c9b986-717e-11eb-21d0-5d3bdcdaf318
 # ╟─0a3b27a8-71fa-11eb-32c4-517738939197
 # ╠═44780316-7149-11eb-2c22-91b75023501a
+# ╟─294ae327-d232-4034-a6a3-31d7f124824c
 # ╟─9f1af8b4-3868-46fc-af51-846f64b82ef4
 # ╟─f59a925b-2c1a-4837-984a-8ac63448fd01
 # ╟─00000000-0000-0000-0000-000000000001

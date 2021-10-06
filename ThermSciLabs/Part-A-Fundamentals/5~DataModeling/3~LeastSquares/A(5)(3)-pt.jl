@@ -118,13 +118,13 @@ onde $X_k(x), 0 \leqslant k \leqslant M-1$ são $M$ **funções-base** do modelo
 
 Seja $𝗫_{ij}$ uma matriz $M \times N$ com componentes construídos conforme as $M$ funções-base aplicadas aos $N$ valores do parâmetro $x$ variado nos experimentos, da seguinte forma:
 
-$$𝗫_{ij} = X_j(x_i).$$
+$$𝗫_{ik} = X_k(x_i).$$
 
 Ainda, o vetor $𝘆_i$, de $N$ componentes:
 
 $$𝘆_i = y_i.$$
 
-O vetor-coeficientes $𝗮_j$ que minimiza $||𝗫x-𝘆||^2$ é dado por:
+O vetor-coeficientes $𝗮_k$ que minimiza $||𝗫x-𝘆||^2$ é dado por:
 
 $$𝗮 = (𝗫^T𝗫)^{-1}𝗫^T𝘆,$$
 
@@ -144,11 +144,20 @@ Considere o novo conjunto de dados abaixo:
 
 # ╔═╡ 334fcffa-5602-48bc-9e41-b6f057f90311
 md"""
-Propondo um polinômio do segundo grau como modelo, isto é:
+Propondo-se, por exemplo, um polinômio do segundo grau como modelo, isto é:
 
 $$y(x) = a_0x^0 + a_1x + a_2x^2,$$
 
-tem-se: $X_0(x) = 1$, $X_1(x) = x$ e $X_2(x) = x^2$, e a matriz $𝗫$ é construída:
+tem-se:
+
+$$X_0(x) = 1,$$
+$$X_1(x) = x,$$
+$$X_2(x) = x^2.$$
+"""
+
+# ╔═╡ 7b094412-1bde-4c73-88ea-77df44c47d73
+md"""
+Um dicionário `MODELS` pode armazenar alguns modelos, indexados por nomes, como: "quadrático", "cúbico", etc., e soluções podem ser geradas para cada modelo disponível em `MODELS`:
 """
 
 # ╔═╡ 32491de7-0fd3-48e6-980a-29e88c9d6ca9
@@ -179,12 +188,20 @@ MODELS = Dict(
 		],
 )
 
+# ╔═╡ f148028e-9daa-4f5b-bf4d-aa29930a827c
+md"""
+Uma função de regressão por mínimos quadrados — em inglês, *least squares fit* — que recebe dados e um modelo, pode ser escrita de forma sucinta e genérica, como abaixo:
+"""
+
 # ╔═╡ 488c54e2-3809-4695-9103-28fd776956ce
 function leastSq(the_x, the_y, MODEL)
 	𝗫 = hcat([ F.(the_x) for F in MODEL ]...)
 	𝘆 = copy(the_y)
 	𝗮 = 𝗫 \ 𝘆
 end
+
+# ╔═╡ 02e088f3-f8a3-4b04-b03a-091535038a6a
+
 
 # ╔═╡ d0bd44b2-fc3b-4233-9116-e1c632a56081
 model(MOD, a, x) = sum(a .* [F.(x) for F in MOD])
@@ -1184,8 +1201,11 @@ version = "0.9.1+5"
 # ╟─597d08a8-7705-4c90-9593-a62489402561
 # ╟─f99010c2-2482-4ac5-9807-326fbb414ebb
 # ╟─334fcffa-5602-48bc-9e41-b6f057f90311
-# ╠═32491de7-0fd3-48e6-980a-29e88c9d6ca9
+# ╟─7b094412-1bde-4c73-88ea-77df44c47d73
+# ╟─32491de7-0fd3-48e6-980a-29e88c9d6ca9
+# ╟─f148028e-9daa-4f5b-bf4d-aa29930a827c
 # ╠═488c54e2-3809-4695-9103-28fd776956ce
+# ╠═02e088f3-f8a3-4b04-b03a-091535038a6a
 # ╠═d0bd44b2-fc3b-4233-9116-e1c632a56081
 # ╠═7f139b92-1974-4c51-a27f-1dac0342f54a
 # ╟─05b67fc4-1c3d-4c3d-9bfd-5441d55cc562

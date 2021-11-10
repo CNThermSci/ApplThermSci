@@ -234,89 +234,89 @@
     \end{frame}
     %------------------------------------------------------------------------------------------
 
-%-----------------------------------------------------------------------------------------------
-\section{Atividades}
-%-----------------------------------------------------------------------------------------------
-
-    %-------------------------------------------------------------------------------------------
-    \begin{frame}[allowframebreaks]{Ar Atmosférico Seco -- Em Grupos -- }\vspace*{-0em}
-        
-        Este trabalho objetiva gerar \alert{ilustrações}, \alert{fidedignas em escala}, da
-        composição média do \alert{ar seco} da atmosfera terrestre abaixo dos
-        \alert{$\unit{50}{\kilo\meter}$ de altitude}, na forma de \alert{imagens}.
-        \\[\medskipamount]
-
-        \begin{itemize}
-            \item A \alert{Troposfera} vai do nível do mar \alert{até $\unit{\sim{8}\mbox{ a
-                }15}{\kilo\meter}$};
-            \item A \alert{Estratosfera} vai da Troposfera \alert{até $\unit{\sim{50}\mbox{ a
-                }60}{\kilo\meter}$};
-            \item A composição \alert{majoritária} seguirá a \alert{Tabela~3} da
-                ref.~\cite{1976-NASA-TechRep-US_Std_Atm}, acessível em:
-            \item {\scriptsize\tt
-                https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf}
-            \item A parcela de \alert{Ozônio (\ce{O3})} será agregada de outra fonte;
-            \item A soma das frações deverá ser \alert{normalizada para $\unit{100}{\%}$};
-            \item Gerar um \alert{notebook} aberto (\alert{\tt CC-BY-NC}) que produza as
-                ilustrações.
-        \end{itemize}
-
-        \pagebreak
-
-        \begin{columns}
-            \column{0.6\textwidth}
-            \begin{itemize}
-                \item Explicar o que são as \alert{Dobson Units (DU)};
-                \item A parcela de \alert{Ozônio (\ce{O3})} será obtida por \alert{integração}
-                    dos dados do gráfico ao lado;
-                \item A documentação \alert{concisa} da integração numérica constará do
-                    \alert{notebook aberto};
-                \item Por exemplo, na forma de uma \alert{função} modular documentada;
-                \item Utilizar método de \alert{Simpson 3/8 composto} ou melhor.
-            \end{itemize}
-            \column{0.4\textwidth}
-            \wwwfig{1-01}{jpg}{url}
-        \end{columns}
-
-        \pagebreak
-
-        \begin{columns}
-            \column{0.70\textwidth}
-            \begin{itemize}
-                \item Referência de programação de \alert{imagens} com utilização de
-                    \alert{notebooks} encontram-se no curso abaixo:
-                \item {\scriptsize\tt https://computationalthinking.mit.edu/Fall20};
-                \item O qual também inclui \alert{instalações} (linguagem {\tt Julia}, notebook
-                    {\tt Pluto}).
-                \item Notebook deve gerar imagens ilustrativas das proporções dos gases com
-                    gases \alert{dispersos}, assim como permitir \alert{seleção de camadas} da
-                    atmosfera (km inteiros).
-            \end{itemize}
-            \column{0.30\textwidth}
-            \begin{center}
-                \begin{figure}
-                    \fontsize{3.0}{4}\selectfont
-                    \includegraphics[width=0.8\textwidth]{www/julia-logo.pdf}
-                    \\\vspace*{-2.5em}\verbatiminput{www/julia-logo.url}
-                \end{figure}
-                \begin{figure}
-                    \fontsize{3.0}{4}\selectfont
-                    \includegraphics[width=0.8\textwidth]{www/pluto-logo.pdf}
-                    \\\vspace*{-2.5em}\verbatiminput{www/pluto-logo.url}
-                \end{figure}
-            \end{center}
-        \end{columns}
-
-    \end{frame}
-    %-------------------------------------------------------------------------------------------
-
-    %------------------------------------------------------------------------------------------
-    {
-        \BkgImgH{lib/coding/21-scatrd-02-shuffled.png}
-        \frame<handout:0>[plain]{}
-        \usebackgroundtemplate{\mbox{~}}
-    }
-    %------------------------------------------------------------------------------------------
+%%-----------------------------------------------------------------------------------------------
+%\section{Atividades}
+%%-----------------------------------------------------------------------------------------------
+%
+%    %-------------------------------------------------------------------------------------------
+%    \begin{frame}[allowframebreaks]{Ar Atmosférico Seco -- Em Grupos -- }\vspace*{-0em}
+%        
+%        Este trabalho objetiva gerar \alert{ilustrações}, \alert{fidedignas em escala}, da
+%        composição média do \alert{ar seco} da atmosfera terrestre abaixo dos
+%        \alert{$\unit{50}{\kilo\meter}$ de altitude}, na forma de \alert{imagens}.
+%        \\[\medskipamount]
+%
+%        \begin{itemize}
+%            \item A \alert{Troposfera} vai do nível do mar \alert{até $\unit{\sim{8}\mbox{ a
+%                }15}{\kilo\meter}$};
+%            \item A \alert{Estratosfera} vai da Troposfera \alert{até $\unit{\sim{50}\mbox{ a
+%                }60}{\kilo\meter}$};
+%            \item A composição \alert{majoritária} seguirá a \alert{Tabela~3} da
+%                ref.~\cite{1976-NASA-TechRep-US_Std_Atm}, acessível em:
+%            \item {\scriptsize\tt
+%                https://ntrs.nasa.gov/api/citations/19770009539/downloads/19770009539.pdf}
+%            \item A parcela de \alert{Ozônio (\ce{O3})} será agregada de outra fonte;
+%            \item A soma das frações deverá ser \alert{normalizada para $\unit{100}{\%}$};
+%            \item Gerar um \alert{notebook} aberto (\alert{\tt CC-BY-NC}) que produza as
+%                ilustrações.
+%        \end{itemize}
+%
+%        \pagebreak
+%
+%        \begin{columns}
+%            \column{0.6\textwidth}
+%            \begin{itemize}
+%                \item Explicar o que são as \alert{Dobson Units (DU)};
+%                \item A parcela de \alert{Ozônio (\ce{O3})} será obtida por \alert{integração}
+%                    dos dados do gráfico ao lado;
+%                \item A documentação \alert{concisa} da integração numérica constará do
+%                    \alert{notebook aberto};
+%                \item Por exemplo, na forma de uma \alert{função} modular documentada;
+%                \item Utilizar método de \alert{Simpson 3/8 composto} ou melhor.
+%            \end{itemize}
+%            \column{0.4\textwidth}
+%            \wwwfig{1-01}{jpg}{url}
+%        \end{columns}
+%
+%        \pagebreak
+%
+%        \begin{columns}
+%            \column{0.70\textwidth}
+%            \begin{itemize}
+%                \item Referência de programação de \alert{imagens} com utilização de
+%                    \alert{notebooks} encontram-se no curso abaixo:
+%                \item {\scriptsize\tt https://computationalthinking.mit.edu/Fall20};
+%                \item O qual também inclui \alert{instalações} (linguagem {\tt Julia}, notebook
+%                    {\tt Pluto}).
+%                \item Notebook deve gerar imagens ilustrativas das proporções dos gases com
+%                    gases \alert{dispersos}, assim como permitir \alert{seleção de camadas} da
+%                    atmosfera (km inteiros).
+%            \end{itemize}
+%            \column{0.30\textwidth}
+%            \begin{center}
+%                \begin{figure}
+%                    \fontsize{3.0}{4}\selectfont
+%                    \includegraphics[width=0.8\textwidth]{www/julia-logo.pdf}
+%                    \\\vspace*{-2.5em}\verbatiminput{www/julia-logo.url}
+%                \end{figure}
+%                \begin{figure}
+%                    \fontsize{3.0}{4}\selectfont
+%                    \includegraphics[width=0.8\textwidth]{www/pluto-logo.pdf}
+%                    \\\vspace*{-2.5em}\verbatiminput{www/pluto-logo.url}
+%                \end{figure}
+%            \end{center}
+%        \end{columns}
+%
+%    \end{frame}
+%    %-------------------------------------------------------------------------------------------
+%
+%    %------------------------------------------------------------------------------------------
+%    {
+%        \BkgImgH{lib/coding/21-scatrd-02-shuffled.png}
+%        \frame<handout:0>[plain]{}
+%        \usebackgroundtemplate{\mbox{~}}
+%    }
+%    %------------------------------------------------------------------------------------------
 
     % Finishes with stunning image, with credit
     \ArtEndW{pexels-pixabay-268917}{jpg}{txt}

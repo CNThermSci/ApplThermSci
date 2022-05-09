@@ -10,7 +10,7 @@ module IGlib
 #------------------------------------------------------------------------------#
 
 using CSV
-using Roots, ForwardDiff
+using ForwardDiff
 
 
 #------------------------------------------------------------------------------#
@@ -70,7 +70,7 @@ export gasLib
 #------------------------------------------------------------------------------#
 
 function inbounds(gas::IG, T)
-	𝕡 = typeof(AbstractFloat(T))
+    if (𝕡 = try typeof(AbstractFloat(T)) catch; end) === nothing; 𝕡 = Float64; end
 	minT, maxT = map(𝕡, (gas.Tmin, gas.Tmax))
 	if !(minT <= T <= maxT)
 		throw(DomainError(T, "out of bounds $(minT) ⩽ T ⩽ $(maxT)."))
@@ -153,22 +153,22 @@ function apply(p::Symbol, T, rel=false)
 		vcat((f(T) for f in propF[p])...)
 end;
 
-cp(gas::IG, molr=MOLR; T) =	begin
+𝐜𝐩(gas::IG, molr=MOLR; T) =	begin
 	𝕡 = typeof(T)
 	inbounds(gas, T) ?
 		(coef(gas, :cp, molr, 𝕡) * apply(:c, T))[1] :
 		zero(𝕡)
 end
 
-cv(gas::IG, molr=MOLR; T) =	begin
+𝐜𝐯(gas::IG, molr=MOLR; T) =	begin
 	𝕡 = typeof(T)
 	inbounds(gas, T) ?
 		(coef(gas, :cv, molr, 𝕡) * apply(:c, T))[1] :
 		zero(𝕡)
 end
 
-# "γ" can be typed by \gamma<tab>
-γ(gas::IG; T) = cp(gas, true, T=T) / cv(gas, true, T=T)
+# "𝛄" can be typed by \bfgamma<tab>
+𝛄(gas::IG; T) = 𝐜𝐩(gas, true, T=T) / 𝐜𝐯(gas, true, T=T)
 
 # "𝐮" can be typed by \bfu<tab>
 𝐮(gas::IG, molr=MOLR; T) =	begin
@@ -189,7 +189,7 @@ end
 
 # "°" can be typed by \degree<tab>
 # "Partial" ideal gas entropy
-s°(gas::IG, molr=MOLR; T) =	begin
+𝐬°(gas::IG, molr=MOLR; T) =	begin
 	𝕡 = typeof(T)
 	inbounds(gas, T) ?
 		(coef(gas, :cp, molr, 𝕡) * apply(:s, T, true))[1] + (
@@ -198,32 +198,32 @@ s°(gas::IG, molr=MOLR; T) =	begin
 		zero(𝕡)
 end
 
-export cp, cv, γ
+export 𝐜𝐩, 𝐜𝐯, 𝛄
 export 𝐮
 export 𝐡
-export s°
+export 𝐬°
 
 
 #------------------------------------------------------------------------------#
 #                         Isentropic Process Functions                         #
 #------------------------------------------------------------------------------#
 
-Pr(gas::IG; T) = begin
+𝐏𝐫(gas::IG; T) = begin
 	𝕡 = typeof(T)
-	exp(s°(gas, true, T=T) / R̄(𝕡)) / exp(sref(gas, 𝕡) / R̄(𝕡))
+	exp(𝐬°(gas, true, T=T) / R̄(𝕡)) / exp(sref(gas, 𝕡) / R̄(𝕡))
 end
 
-vr(gas::IG; T) = T / Pr(gas, T=T)
+𝐯𝐫(gas::IG; T) = T / 𝐏𝐫(gas, T=T)
 
 # "𝐬" can be typed by \bfs<tab>
 𝐬(gas::IG, molr=MOLR; T, P) = begin
 	𝕡 = prTy(P, T)
 	inbounds(gas, T) ?
-		s°(gas, molr, T=T) - 𝐑(gas, molr, 𝕡) * log(P / Pref(𝕡)) :
+		𝐬°(gas, molr, T=T) - 𝐑(gas, molr, 𝕡) * log(P / Pref(𝕡)) :
 		zero(𝕡)
 end
 
-export Pr, vr
+export 𝐏𝐫, 𝐯𝐫
 export 𝐬
 
 
@@ -263,7 +263,7 @@ function 𝐓(
 	breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 	# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 	𝑓 = x -> 𝐮(gas, molr, T=x)
-	𝑔 = x -> cv(gas, molr, T=x)
+	𝑔 = x -> 𝐜𝐯(gas, molr, T=x)
 	thef, symb = (uVal)(), "u"
 	ε, 𝕡 = eps(thef), typeof(thef)
 	# Get f bounds and check
@@ -311,7 +311,7 @@ function 𝐓(
 	breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 	# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
 	𝑓 = x -> 𝐡(gas, molr, T=x)
-	𝑔 = x -> cp(gas, molr, T=x)
+	𝑔 = x -> 𝐜𝐩(gas, molr, T=x)
 	thef, symb = (hVal)(), "h"
 	ε, 𝕡 = eps(thef), typeof(thef)
 	# Get f bounds and check
@@ -358,7 +358,7 @@ function 𝐓(
 	# Auxiliary function of whether to break due to iterations
 	breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 	# Set functions 𝑓(x) and 𝑔(x) ≡ d𝑓/dx
-	𝑓 = x -> Pr(gas, T=x)
+	𝑓 = x -> 𝐏𝐫(gas, T=x)
 	𝑔 = x -> ForwardDiff.derivative(𝑓,float(x))
 	thef, symb = (pVal)(), "Pr"
 	ε, 𝕡 = eps(thef), typeof(thef)
@@ -407,7 +407,7 @@ function 𝐓(
 	breakIt(i) = maxIt > 0 ? i >= maxIt || i >= 128 : false
 	# Set 𝑓(x) function
 	thef, symb = (vVal)(), "vr"
-	𝑓 = x -> vr(gas, T=x) - thef
+	𝑓 = x -> 𝐯𝐫(gas, T=x) - thef
 	ε, 𝕡 = eps(thef), typeof(thef)
 	# Get f bounds and check
 	TMin, TMax = Tmin(gas, 𝕡), Tmax(gas, 𝕡)
